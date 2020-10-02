@@ -98,13 +98,13 @@ $ git init
 @x
 This creates a new subdirectory named `.git` that contains all of your necessary repository files -- a Git repository skeleton.
 At this point, nothing in your project is tracked yet.
-(See <<ch10-git-internals#ch10-git-internals>> for more information about exactly what files are contained in the `.git` directory you just created.)(((git commands, init)))
+See <<ch10-git-internals#ch10-git-internals>> for more information about exactly what files are contained in the `.git` directory you just created.(((git commands, init)))
 @y
 上のコマンドを実行すると `.git` という新しいサブディレクトリが生成されます。
 ここにはリポジトリに必要となるファイルがすべて収められています。
 いわばリポジトリのスケルトンです。
 この段階では、まだプロジェクトの内容は登録されていません。
-（ここで生成された `.git` ディレクトリに具体的にどのようなファイルがあるのか、その詳細は <<ch10-git-internals#ch10-git-internals>> の章を参照してください。
+ここで生成された `.git` ディレクトリに具体的にどのようなファイルがあるのか、その詳細は <<ch10-git-internals#ch10-git-internals>> の章を参照してください。
 (((git commands, init)))
 @z
 
@@ -122,14 +122,14 @@ You can accomplish that with a few `git add` commands that specify the files you
 ----
 $ git add *.c
 $ git add LICENSE
-$ git commit -m 'initial project version'
+$ git commit -m 'Initial project version'
 ----
 @y
 [source,端末]
 ----
 $ git add *.c
 $ git add LICENSE
-$ git commit -m 'initial project version'
+$ git commit -m 'Initial project version'
 ----
 @z
 

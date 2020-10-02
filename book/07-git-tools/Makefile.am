@@ -6,14 +6,14 @@ srcdir   = @srcdir@
 mysrcdir = $(shell cd $(srcdir) && pwd)
 abs_installdir = @abs_installdir@/$(thisdir)
 
-files = \
+copyfiles = \
 	git-credential-read-only
 
-copys = ${addprefix $(abs_installdir)/, $(files)}
+copies = ${addprefix $(abs_installdir)/, $(copyfiles)}
 
 .PHONY: all
-all: $(copys)
+all: $(copies)
 
 -include copyfiles.sub
-copyfiles.sub: $(top_srcdir)/bin/copymake.sh
-	@$^ copyfiles . $(files)
+copyfiles.sub: $(top_srcdir)/bin/copymake.sh $(top_builddir)/config.log
+	@$(top_srcdir)/bin/copymake.sh copyfiles $(abs_installdir) $(copyfiles)

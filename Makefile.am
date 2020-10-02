@@ -14,12 +14,14 @@ ALLASC=$(shell find $(abs_installdir) -type f -name '*.asc' -print)
 .DEFAULT_GOAL := build
 build:  all $(abs_installdir)/progit.html $(abs_installdir)/html.css $(abs_installdir)/attributes-ja.adoc
 
-$(abs_installdir)/progit.html: ctie $(trans) $(copys) $(ALLASC)
+$(abs_installdir)/progit.html: ctie $(trans) $(copys) $(abs_installdir)/attributes-ja.adoc $(ALLASC)
 	@(cd $(abs_installdir) && bundle exec asciidoctor progit.asc -o progit.html)
 	@(cd $(abs_installdir) && sed -i -e "s|THISDATE|$(thisdate)|" \
 					-e "s|HASHVALUE|$(hashvalue)|" progit.html)
+	cp $(abs_installdir)/progit.html $(srcdir)/index.html
 $(abs_installdir)/html.css: $(origdir)/theme/html/html.css
 	cp -p $^ $@
+	cp $(abs_installdir)/html.css $(srcdir)
 $(abs_installdir)/attributes-ja.adoc: $(srcdir)/attributes-ja.adoc
 	cp -p $^ $@
 
@@ -50,7 +52,7 @@ ch_ascs = $(bases:=.ch)  # ch means change files
 tr_ascs = $(bases:=.asc) # tr means translated files
 EXTRA_DIST = $(ch_ascs) bin/buildch.perl bin/copymake.sh bin/ctiemake.sh
 
-files = \
+copyfiles = \
 	.travis.yml \
 	atlas.json \
 	CONTRIBUTING.md \
@@ -61,7 +63,10 @@ files = \
 	TRANSLATING.md
 
 trans = ${addprefix $(abs_installdir)/, $(tr_ascs)}
-copys = ${addprefix $(abs_installdir)/, $(files)}
+copies = ${addprefix $(abs_installdir)/, $(copyfiles)}
+
+.PHONY: all
+all: $(trans) $(copies)
 
 -include Makefile.sub
 Makefile.sub: $(top_srcdir)/bin/ctiemake.sh $(top_builddir)/config.log
@@ -73,5 +78,5 @@ Makefile.sub: $(top_srcdir)/bin/ctiemake.sh $(top_builddir)/config.log
 @MAINT@	@if test ! -f $@; then $(top_srcdir)/bin/buildch.perl `echo $@ | sed -e "s|^$(mysrcdir)|$(origdir)|" -e "s|\.ch$$|.asc|"` $@; fi
 
 -include copyfiles.sub
-copyfiles.sub: $(top_srcdir)/bin/copymake.sh
-	@$^ copyfiles . $(files)
+copyfiles.sub: $(top_srcdir)/bin/copymake.sh $(top_builddir)/config.log
+	@$(top_srcdir)/bin/copymake.sh copyfiles $(abs_installdir) $(copyfiles)

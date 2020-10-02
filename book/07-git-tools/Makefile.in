@@ -275,10 +275,10 @@ SUBDIRS = sections
 thisdir = book/07-git-tools
 origdir = @abs_origdir@/$(thisdir)
 mysrcdir = $(shell cd $(srcdir) && pwd)
-files = \
+copyfiles = \
 	git-credential-read-only
 
-copys = ${addprefix $(abs_installdir)/, $(files)}
+copies = ${addprefix $(abs_installdir)/, $(copyfiles)}
 all: all-recursive
 
 .SUFFIXES:
@@ -588,11 +588,11 @@ uninstall-am:
 
 
 .PHONY: all
-all: $(copys)
+all: $(copies)
 
 -include copyfiles.sub
-copyfiles.sub: $(top_srcdir)/bin/copymake.sh
-	@$^ copyfiles . $(files)
+copyfiles.sub: $(top_srcdir)/bin/copymake.sh $(top_builddir)/config.log
+	@$(top_srcdir)/bin/copymake.sh copyfiles $(abs_installdir) $(copyfiles)
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

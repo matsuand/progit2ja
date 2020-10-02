@@ -4,7 +4,7 @@ srcdir   = @srcdir@
 mysrcdir = $(shell cd $(srcdir) && pwd)
 abs_installdir = @abs_installdir@
 
-files = \
+copyfiles = \
 	2fa-1.png \
 	account-settings.png \
 	advance-master.png \
@@ -307,12 +307,15 @@ files = \
 	zsh-oh-my.png \
 	zsh-prompt.png
 
-copys = ${addprefix $(abs_installdir)/images/, $(files)}
+copies  = ${addprefix $(abs_installdir)/images/, $(copyfiles)}
+copies2 = ${addprefix $(mysrcdir)/, $(copyfiles)}
 
 .PHONY: all
-all: $(copys)
+all: $(copies) $(copies2)
 
 -include copyfiles.sub
-copyfiles.sub: $(top_srcdir)/bin/copymake.sh
-	$(MKDIR_P) $(abs_installdir)/images
-	@$^ copyfiles images $(files)
+-include copyfiles2.sub
+copyfiles.sub: $(top_srcdir)/bin/copymake.sh $(top_builddir)/config.log
+	@$(top_srcdir)/bin/copymake.sh copyfiles $(abs_installdir) $(copyfiles)
+copyfiles2.sub: $(top_srcdir)/bin/copymake2.sh $(top_builddir)/config.log
+	@$(top_srcdir)/bin/copymake2.sh copyfiles2 $(origdir) $(mysrcdir) $(copyfiles)
