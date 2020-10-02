@@ -1,0 +1,360 @@
+%This is the change file for the original ProGit2's Documentation file.
+%This is part of Japanese translation version for ProGit2's Documantation.
+
+@x
+[[_setting_up_server]]
+=== Setting Up the Server
+@y
+[[_setting_up_server]]
+=== Setting Up the Server
+@z
+
+@x
+Let's walk through setting up SSH access on the server side.
+In this example, you'll use the `authorized_keys` method for authenticating your users.
+We also assume you're running a standard Linux distribution like Ubuntu.
+@y
+Let's walk through setting up SSH access on the server side.
+In this example, you'll use the `authorized_keys` method for authenticating your users.
+We also assume you're running a standard Linux distribution like Ubuntu.
+@z
+
+@x
+[NOTE]
+====
+A good deal of what is described here can be automated by using the `ssh-copy-id` command, rather than manually copying and installing public keys.
+====
+@y
+[NOTE]
+====
+A good deal of what is described here can be automated by using the `ssh-copy-id` command, rather than manually copying and installing public keys.
+====
+@z
+
+@x
+First, you create a `git` user account and a `.ssh` directory for that user.
+@y
+First, you create a `git` user account and a `.ssh` directory for that user.
+@z
+
+@x
+[source,console]
+----
+$ sudo adduser git
+$ su git
+$ cd
+$ mkdir .ssh && chmod 700 .ssh
+$ touch .ssh/authorized_keys && chmod 600 .ssh/authorized_keys
+----
+@y
+[source,console]
+----
+$ sudo adduser git
+$ su git
+$ cd
+$ mkdir .ssh && chmod 700 .ssh
+$ touch .ssh/authorized_keys && chmod 600 .ssh/authorized_keys
+----
+@z
+
+@x
+Next, you need to add some developer SSH public keys to the `authorized_keys` file for the `git` user.
+Let's assume you have some trusted public keys and have saved them to temporary files.
+Again, the public keys look something like this:
+@y
+Next, you need to add some developer SSH public keys to the `authorized_keys` file for the `git` user.
+Let's assume you have some trusted public keys and have saved them to temporary files.
+Again, the public keys look something like this:
+@z
+
+@x
+[source,console]
+----
+$ cat /tmp/id_rsa.john.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCB007n/ww+ouN4gSLKssMxXnBOvf9LGt4L
+ojG6rs6hPB09j9R/T17/x4lhJA0F3FR1rP6kYBRsWj2aThGw6HXLm9/5zytK6Ztg3RPKK+4k
+Yjh6541NYsnEAZuXz0jTTyAUfrtU3Z5E003C4oxOj6H0rfIF1kKI9MAQLMdpGW1GYEIgS9Ez
+Sdfd8AcCIicTDWbqLAcU4UpkaX8KyGlLwsNuuGztobF8m72ALC/nLF6JLtPofwFBlgc+myiv
+O7TCUSBdLQlgMVOFq1I2uPWQOkOWQAHukEOmfjy2jctxSDBQ220ymjaNsHT4kgtZg2AYYgPq
+dAv8JggJICUvax2T9va5 gsg-keypair
+----
+@y
+[source,console]
+----
+$ cat /tmp/id_rsa.john.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCB007n/ww+ouN4gSLKssMxXnBOvf9LGt4L
+ojG6rs6hPB09j9R/T17/x4lhJA0F3FR1rP6kYBRsWj2aThGw6HXLm9/5zytK6Ztg3RPKK+4k
+Yjh6541NYsnEAZuXz0jTTyAUfrtU3Z5E003C4oxOj6H0rfIF1kKI9MAQLMdpGW1GYEIgS9Ez
+Sdfd8AcCIicTDWbqLAcU4UpkaX8KyGlLwsNuuGztobF8m72ALC/nLF6JLtPofwFBlgc+myiv
+O7TCUSBdLQlgMVOFq1I2uPWQOkOWQAHukEOmfjy2jctxSDBQ220ymjaNsHT4kgtZg2AYYgPq
+dAv8JggJICUvax2T9va5 gsg-keypair
+----
+@z
+
+@x
+You just append them to the `git` user's `authorized_keys` file in its `.ssh` directory:
+@y
+You just append them to the `git` user's `authorized_keys` file in its `.ssh` directory:
+@z
+
+@x
+[source,console]
+----
+$ cat /tmp/id_rsa.john.pub >> ~/.ssh/authorized_keys
+$ cat /tmp/id_rsa.josie.pub >> ~/.ssh/authorized_keys
+$ cat /tmp/id_rsa.jessica.pub >> ~/.ssh/authorized_keys
+----
+@y
+[source,console]
+----
+$ cat /tmp/id_rsa.john.pub >> ~/.ssh/authorized_keys
+$ cat /tmp/id_rsa.josie.pub >> ~/.ssh/authorized_keys
+$ cat /tmp/id_rsa.jessica.pub >> ~/.ssh/authorized_keys
+----
+@z
+
+@x
+Now, you can set up an empty repository for them by running `git init` with the `--bare` option, which initializes the repository without a working directory:(((git commands, init, bare)))
+@y
+Now, you can set up an empty repository for them by running `git init` with the `--bare` option, which initializes the repository without a working directory:(((git commands, init, bare)))
+@z
+
+@x
+[source,console]
+----
+$ cd /srv/git
+$ mkdir project.git
+$ cd project.git
+$ git init --bare
+Initialized empty Git repository in /srv/git/project.git/
+----
+@y
+[source,console]
+----
+$ cd /srv/git
+$ mkdir project.git
+$ cd project.git
+$ git init --bare
+Initialized empty Git repository in /srv/git/project.git/
+----
+@z
+
+@x
+Then, John, Josie, or Jessica can push the first version of their project into that repository by adding it as a remote and pushing up a branch.
+Note that someone must shell onto the machine and create a bare repository every time you want to add a project.
+Let's use `gitserver` as the hostname of the server on which you've set up your `git` user and repository.
+If you're running it internally, and you set up DNS for `gitserver` to point to that server, then you can use the commands pretty much as is (assuming that `myproject` is an existing project with files in it):
+@y
+Then, John, Josie, or Jessica can push the first version of their project into that repository by adding it as a remote and pushing up a branch.
+Note that someone must shell onto the machine and create a bare repository every time you want to add a project.
+Let's use `gitserver` as the hostname of the server on which you've set up your `git` user and repository.
+If you're running it internally, and you set up DNS for `gitserver` to point to that server, then you can use the commands pretty much as is (assuming that `myproject` is an existing project with files in it):
+@z
+
+@x
+[source,console]
+----
+# on John's computer
+$ cd myproject
+$ git init
+$ git add .
+$ git commit -m 'Initial commit'
+$ git remote add origin git@gitserver:/srv/git/project.git
+$ git push origin master
+----
+@y
+[source,console]
+----
+# on John's computer
+$ cd myproject
+$ git init
+$ git add .
+$ git commit -m 'Initial commit'
+$ git remote add origin git@gitserver:/srv/git/project.git
+$ git push origin master
+----
+@z
+
+@x
+At this point, the others can clone it down and push changes back up just as easily:
+@y
+At this point, the others can clone it down and push changes back up just as easily:
+@z
+
+@x
+[source,console]
+----
+$ git clone git@gitserver:/srv/git/project.git
+$ cd project
+$ vim README
+$ git commit -am 'Fix for README file'
+$ git push origin master
+----
+@y
+[source,console]
+----
+$ git clone git@gitserver:/srv/git/project.git
+$ cd project
+$ vim README
+$ git commit -am 'Fix for README file'
+$ git push origin master
+----
+@z
+
+@x
+With this method, you can quickly get a read/write Git server up and running for a handful of developers.
+@y
+With this method, you can quickly get a read/write Git server up and running for a handful of developers.
+@z
+
+@x
+You should note that currently all these users can also log into the server and get a shell as the `git` user.
+If you want to restrict that, you will have to change the shell to something else in the `/etc/passwd` file.
+@y
+You should note that currently all these users can also log into the server and get a shell as the `git` user.
+If you want to restrict that, you will have to change the shell to something else in the `/etc/passwd` file.
+@z
+
+@x
+You can easily restrict the `git` user account to only Git-related activities with a limited shell tool called `git-shell` that comes with Git.
+If you set this as the `git` user account's login shell, then that account can't have normal shell access to your server.
+To use this, specify `git-shell` instead of `bash` or `csh` for that account's login shell.
+To do so, you must first add the full pathname of the `git-shell` command to `/etc/shells` if it's not already there:
+@y
+You can easily restrict the `git` user account to only Git-related activities with a limited shell tool called `git-shell` that comes with Git.
+If you set this as the `git` user account's login shell, then that account can't have normal shell access to your server.
+To use this, specify `git-shell` instead of `bash` or `csh` for that account's login shell.
+To do so, you must first add the full pathname of the `git-shell` command to `/etc/shells` if it's not already there:
+@z
+
+@x
+[source,console]
+----
+$ cat /etc/shells   # see if git-shell is already in there. If not...
+$ which git-shell   # make sure git-shell is installed on your system.
+$ sudo -e /etc/shells  # and add the path to git-shell from last command
+----
+@y
+[source,console]
+----
+$ cat /etc/shells   # see if git-shell is already in there. If not...
+$ which git-shell   # make sure git-shell is installed on your system.
+$ sudo -e /etc/shells  # and add the path to git-shell from last command
+----
+@z
+
+@x
+Now you can edit the shell for a user using `chsh <username> -s <shell>`:
+@y
+Now you can edit the shell for a user using `chsh <username> -s <shell>`:
+@z
+
+@x
+[source,console]
+----
+$ sudo chsh git -s $(which git-shell)
+----
+@y
+[source,console]
+----
+$ sudo chsh git -s $(which git-shell)
+----
+@z
+
+@x
+Now, the `git` user can still use the SSH connection to push and pull Git repositories but can't shell onto the machine.
+If you try, you'll see a login rejection like this:
+@y
+Now, the `git` user can still use the SSH connection to push and pull Git repositories but can't shell onto the machine.
+If you try, you'll see a login rejection like this:
+@z
+
+@x
+[source,console]
+----
+$ ssh git@gitserver
+fatal: Interactive git shell is not enabled.
+hint: ~/git-shell-commands should exist and have read and execute access.
+Connection to gitserver closed.
+----
+@y
+[source,console]
+----
+$ ssh git@gitserver
+fatal: Interactive git shell is not enabled.
+hint: ~/git-shell-commands should exist and have read and execute access.
+Connection to gitserver closed.
+----
+@z
+
+@x
+At this point, users are still able to use SSH port forwarding to access any host the git server is able to reach.
+If you want to prevent that, you can edit the `authorized_keys` file and prepend the following options to each key you'd like to restrict:
+@y
+At this point, users are still able to use SSH port forwarding to access any host the git server is able to reach.
+If you want to prevent that, you can edit the `authorized_keys` file and prepend the following options to each key you'd like to restrict:
+@z
+
+@x
+[source,console]
+----
+no-port-forwarding,no-X11-forwarding,no-agent-forwarding,no-pty
+----
+@y
+[source,console]
+----
+no-port-forwarding,no-X11-forwarding,no-agent-forwarding,no-pty
+----
+@z
+
+@x
+The result should look like this:
+@y
+The result should look like this:
+@z
+
+@x
+[source,console]
+----
+$ cat ~/.ssh/authorized_keys
+no-port-forwarding,no-X11-forwarding,no-agent-forwarding,no-pty ssh-rsa
+AAAAB3NzaC1yc2EAAAADAQABAAABAQCB007n/ww+ouN4gSLKssMxXnBOvf9LGt4LojG6rs6h
+PB09j9R/T17/x4lhJA0F3FR1rP6kYBRsWj2aThGw6HXLm9/5zytK6Ztg3RPKK+4kYjh6541N
+YsnEAZuXz0jTTyAUfrtU3Z5E003C4oxOj6H0rfIF1kKI9MAQLMdpGW1GYEIgS9EzSdfd8AcC
+IicTDWbqLAcU4UpkaX8KyGlLwsNuuGztobF8m72ALC/nLF6JLtPofwFBlgc+myivO7TCUSBd
+LQlgMVOFq1I2uPWQOkOWQAHukEOmfjy2jctxSDBQ220ymjaNsHT4kgtZg2AYYgPqdAv8JggJ
+ICUvax2T9va5 gsg-keypair
+@y
+[source,console]
+----
+$ cat ~/.ssh/authorized_keys
+no-port-forwarding,no-X11-forwarding,no-agent-forwarding,no-pty ssh-rsa
+AAAAB3NzaC1yc2EAAAADAQABAAABAQCB007n/ww+ouN4gSLKssMxXnBOvf9LGt4LojG6rs6h
+PB09j9R/T17/x4lhJA0F3FR1rP6kYBRsWj2aThGw6HXLm9/5zytK6Ztg3RPKK+4kYjh6541N
+YsnEAZuXz0jTTyAUfrtU3Z5E003C4oxOj6H0rfIF1kKI9MAQLMdpGW1GYEIgS9EzSdfd8AcC
+IicTDWbqLAcU4UpkaX8KyGlLwsNuuGztobF8m72ALC/nLF6JLtPofwFBlgc+myivO7TCUSBd
+LQlgMVOFq1I2uPWQOkOWQAHukEOmfjy2jctxSDBQ220ymjaNsHT4kgtZg2AYYgPqdAv8JggJ
+ICUvax2T9va5 gsg-keypair
+@z
+
+@x
+no-port-forwarding,no-X11-forwarding,no-agent-forwarding,no-pty ssh-rsa
+AAAAB3NzaC1yc2EAAAADAQABAAABAQDEwENNMomTboYI+LJieaAY16qiXiH3wuvENhBG...
+----
+@y
+no-port-forwarding,no-X11-forwarding,no-agent-forwarding,no-pty ssh-rsa
+AAAAB3NzaC1yc2EAAAADAQABAAABAQDEwENNMomTboYI+LJieaAY16qiXiH3wuvENhBG...
+----
+@z
+
+@x
+Now Git network commands will still work just fine but the users won't be able to get a shell.
+As the output states, you can also set up a directory in the `git` user's home directory that customizes the `git-shell` command a bit.
+For instance, you can restrict the Git commands that the server will accept or you can customize the message that users see if they try to SSH in like that.
+Run `git help shell` for more information on customizing the shell.(((git commands, help)))
+@y
+Now Git network commands will still work just fine but the users won't be able to get a shell.
+As the output states, you can also set up a directory in the `git` user's home directory that customizes the `git-shell` command a bit.
+For instance, you can restrict the Git commands that the server will accept or you can customize the message that users see if they try to SSH in like that.
+Run `git help shell` for more information on customizing the shell.(((git commands, help)))
+@z

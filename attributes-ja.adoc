@@ -1,0 +1,20 @@
+// Originally from https://github.com/asciidoctor/asciidoctor/blob/master/data/locale/attributes-ja.adoc as follows:
+// Japanese translation, courtesy of Takayuki Konishi <seannos.takayuki@gmail.com>
+// And modified some.
+:appendix-caption: 付録
+:appendix-refsig: {appendix-caption}
+:caution-caption: 注意
+:example-caption: 例
+:figure-caption: 図
+:important-caption: 重要
+:last-update-label: 最終更新
+ifdef::listing-caption[:listing-caption: リスト]
+:manname-title: 名前
+:note-caption: 情報
+ifdef::preface-title[:preface-title: まえがき]
+:table-caption: 表
+:tip-caption: ヒント
+:toc-title: もくじ
+:untitled-label: 無題
+:version-label: バージョン
+:warning-caption: 警告
