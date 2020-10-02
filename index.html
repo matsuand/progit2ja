@@ -464,7 +464,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_undoing">作業のやり直し</a></li>
 <li><a href="#_remote_repos">リモートリポジトリの操作</a></li>
 <li><a href="#_git_tagging">タグづけ</a></li>
-<li><a href="#_git_aliases">Git Aliases</a></li>
+<li><a href="#_git_aliases">Git エイリアス</a></li>
 <li><a href="#_まとめ_2">まとめ</a></li>
 </ul>
 </li>
@@ -4118,62 +4118,65 @@ Switched to a new branch 'version2'</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_git_aliases">Git Aliases</h3>
+<h3 id="_git_aliases">Git エイリアス</h3>
 <div class="paragraph">
 <p>
-Before we move on to the next chapter, we want to introduce a feature that can make your Git experience simpler, easier, and more familiar: aliases.
-For clarity&#8217;s sake, we won&#8217;t be using them anywhere else in this book, but if you go on to use Git with any regularity, aliases are something you should know about.</p>
+次の章に進む前に、Git 操作をより単純に簡単にする使い勝手のよい機能について説明しておきます。
+エイリアスです。
+わかりやすくするために、本書の他の場面で使うことはありませんが、Git を普段から使う方にとってエイリアスは知っておく必要があります。</p>
 </div>
 <div class="paragraph">
-<p>Git doesn&#8217;t automatically infer your command if you type it in partially.
-If you don&#8217;t want to type the entire text of each of the Git commands, you can easily set up an alias for each command using <code>git config</code>.
-Here are a couple of examples you may want to set up:</p>
+<p>Git ではコマンドを部分的に入力しても、自動的にコマンド内容を推測することはしません。
+Git コマンドの実行のたびに、コマンド文字をすべて入力したくない場合、<code>git config</code> を使えば、各コマンドに対するエイリアスを簡単に設定することができます。
+
+以下に設定したくなるような例をいくつか示します。</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-console" data-lang="console">$ git config --global alias.co checkout
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ git config --global alias.co checkout
 $ git config --global alias.br branch
 $ git config --global alias.ci commit
 $ git config --global alias.st status</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>This means that, for example, instead of typing <code>git commit</code>, you just need to type <code>git ci</code>.
-As you go on using Git, you&#8217;ll probably use other commands frequently as well; don&#8217;t hesitate to create new aliases.</p>
+<p>上が意味するのは、たとえば <code>git commit</code> と入力する代わりに、<code>git ci</code> と入力しさえすればよいということです。
+Git を使い続けていくうちには、同じように何度も利用するコマンドが出てくるはずです。
+そんなときには、ためらわずにエイリアスを作成しましょう。</p>
 </div>
 <div class="paragraph">
-<p>This technique can also be very useful in creating commands that you think should exist.
-For example, to correct the usability problem you encountered with unstaging a file, you can add your own unstage alias to Git:</p>
+<p>このやり方を使えば、存在していて欲しいと思うコマンドを作り出すことができるので便利です。
+たとえばファイルのステージングを解除する際に、コマンドが使いにくいと思ったら、独自にステージを解除するエイリアスを追加してしまえばよいわけです。</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-console" data-lang="console">$ git config --global alias.unstage 'reset HEAD --'</code></pre>
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ git config --global alias.unstage 'reset HEAD --'</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>This makes the following two commands equivalent:</p>
+<p>こうすることで以下の 2 つのコマンドが同じ意味になります。</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-console" data-lang="console">$ git unstage fileA
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ git unstage fileA
 $ git reset HEAD -- fileA</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>This seems a bit clearer.
-It&#8217;s also common to add a <code>last</code> command, like this:</p>
+<p>少しはわかりやすくなりました。
+<code>last</code> コマンドを使うこともよくあることなので、以下のようにしてみます。</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-console" data-lang="console">$ git config --global alias.last 'log -1 HEAD'</code></pre>
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ git config --global alias.last 'log -1 HEAD'</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>This way, you can see the last commit easily:</p>
+<p>こうして直近のコミットを簡単に確認できるようになりました。</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-console" data-lang="console">$ git last
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ git last
 commit 66938dae3329c7aebe598c2246a8e6af90d04646
 Author: Josh Goebel &lt;dreamer3@example.com&gt;
 Date:   Tue Aug 26 19:48:51 2008 +0800
@@ -4184,15 +4187,15 @@ Date:   Tue Aug 26 19:48:51 2008 +0800
 </div>
 </div>
 <div class="paragraph">
-<p>As you can tell, Git simply replaces the new command with whatever you alias it for.
-However, maybe you want to run an external command, rather than a Git subcommand.
-In that case, you start the command with a <code>!</code> character.
-This is useful if you write your own tools that work with a Git repository.
-We can demonstrate by aliasing <code>git visual</code> to run <code>gitk</code>:</p>
+<p>これまでからわかるように、Git は新たなコマンドをエイリアスで設定されたものに置き換えているだけです。
+ただ Git のサブコマンドでなく、外部コマンドも実行したいはずです。
+その場合は、コマンド名の先頭に <code>!</code> 文字をつけます。
+Git リポジトリ上で操作する独自ツールを書く場合に使えます。
+以下は <code>git visual</code> を <code>gitk</code> というエイリアスにする例です。</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-console" data-lang="console">$ git config --global alias.visual '!gitk'</code></pre>
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ git config --global alias.visual '!gitk'</code></pre>
 </div>
 </div>
 </div>
@@ -15677,7 +15680,7 @@ This is obviously a simplified example, but hopefully it gives you an idea of ho
 <h5 id="_useful_aliases">Useful Aliases</h5>
 <div class="paragraph">
 <p>You may want to set up some aliases for some of these commands as they can be quite long and you can&#8217;t set configuration options for most of them to make them defaults.
-We covered setting up Git aliases in <a href="#_git_aliases">Git Aliases</a>, but here is an example of what you may want to set up if you plan on working with submodules in Git a lot.</p>
+We covered setting up Git aliases in <a href="#_git_aliases">Git エイリアス</a>, but here is an example of what you may want to set up if you plan on working with submodules in Git a lot.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -25067,7 +25070,7 @@ There are several files this command will read from and write to so you can set 
 <p>In <a href="#_first_time">Git 導入直後の設定</a> we used it to specify our name, email address and editor preference before we even got started using Git.</p>
 </div>
 <div class="paragraph">
-<p>In <a href="#_git_aliases">Git Aliases</a> we showed how you could use it to create shorthand commands that expand to long option sequences so you don&#8217;t have to type them every time.</p>
+<p>In <a href="#_git_aliases">Git エイリアス</a> we showed how you could use it to create shorthand commands that expand to long option sequences so you don&#8217;t have to type them every time.</p>
 </div>
 <div class="paragraph">
 <p>In <a href="#_rebasing">Rebasing</a> we used it to make <code>--rebase</code> the default when you run <code>git pull</code>.</p>
