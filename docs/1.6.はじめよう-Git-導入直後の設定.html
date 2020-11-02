@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ja" class=" js fontface webkit chrome windows no-ie8">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <title>Git - Git 導入直後の設定</title>
+  <link href="https://git-scm.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link rel="stylesheet" media="screen" href="assets/application.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <script src="assets/modernize.js"></script>
+  <!--[if (gte IE 6)&(lte IE 8)]>
+  <script src="javascripts/selectivizr-min.js"></script>
+  <![endif]-->
+</head>
+<body id="documentation">
+
+  <div class="inner">
+    <header>
+      <a href="/"><img src="assets/images/logo@2x.png" width="110" height="46" alt="Git"></a>
+      <span id="tagline">素早いバージョン管理</span>
+      <script type="text/javascript">
+        var taglines = ["素早いバージョン管理","すべてはローカルで","作業が分散していなくても","簡単にローカルでブランチ","分散化は新たな中央管理"];
+        var tagline = taglines[Math.floor(Math.random() * taglines.length)];
+        document.getElementById('tagline').innerHTML = '--' + tagline;
+      </script>
+<!--
+      <form id="search" action="https://git-scm.com/search/results">
+        <input id="search-text" name="search" placeholder="サイト全体の検索..." autocomplete="off" type="text">
+      </form>
+      <div id="search-results"></div>
+-->
+    </header>
+  </div> <!-- .inner -->
+
+  <div class="inner">
+    <div id="content-wrapper">
+      <aside class="sidebar">
+  <p>progit2 別訳</p>
+<!--
+  <nav>
+    <ul>
+      <li>
+        <a href="https://git-scm.com/about">About</a>
+      </li>
+    </ul>
+  </nav>
+-->
+      </aside>
+    <div id="content">
+      <span class="light" id="edition">
+        第2版
+      </span>
+    </div>
+  </div>
+
+  <div id="main" class="book edition2">
+    <h1>1.6 はじめよう-Git 導入直後の設定</h1>
+
+  <div>
+
+<h2 id="_first_time">Git 導入直後の設定</h2>
+<div class="paragraph">
+<p>Git をインストールしましたので、Git 環境に対して設定を行います。
+この設定は、作業を行うコンピューターにおいて 1 回行えば済むものです。
+今後、Git をアップグレードしてもこの設定は残ります。
+その後に変更の必要があれば、同じコマンドを実行します。</p>
+</div>
+<div class="paragraph">
+<p>Git には <code>git config</code> というツールがあります。
+これは設定変数の参照や更新を行います。
+設定変数は Git の表示方法や動作を全般に制御するものです。
+
+以下に示すように、この変数を設定する場所は 3 つあります。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>[path]/etc/gitconfig</code> ファイル： システム上の全ユーザー、全リポジトリに対する設定。
+<code>git config`の実行時に</code>--system`オプションを指定すると、このファイルを対象として設定変数の読み書きを行います。
+このファイルはシステム全体に対しての設定ファイルであるため、このファイルの変更には管理者権限が必要になります。</p>
+</li>
+<li>
+<p><code>~/.gitconfig</code> ファイルまたは <code>~/.config/git/config</code> ファイル： 各ユーザー向けの設定。
+<code>--global</code> オプションを指定すれば、このファイルを対象として設定変数の読み書きを行います。
+この指定により、システム上にて自身が作業しているリポジトリをすべて制御することができます。</p>
+</li>
+<li>
+<p>現在利用中の Git ディレクトリ内の <code>config</code> ファイル（すなわち <code>.git/config</code>）： そのリポジトリのみに対する設定。
+<code>--local</code> オプションの指定によって、このファイルを対象として設定変数の読み書きを行います。
+これがデフォルトになります。
+当然のことながらこの設定を有効にするには、その Git リポジトリ内から実行する必要があります。</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>設定内容は上位レベルのものによって上書きされます。
+たとえば <code>.git/config</code> にある設定は <code>[path]/etc/gitconfig</code> ファイルのものよりも優先されます。</p>
+</div>
+<div class="paragraph">
+<p>Windows の場合、<code>.gitconfig</code> ファイルは <code>$HOME</code> ディレクトリ（普通は <code>C:\Users\$USER</code>）にあるものが参照されます。
+また <code>[path]/etc/gitconfig</code> も探しにいきますが、これは MSys のルートからの相対パスとなります。
+なお MSys ルートとは、インストーラーの操作時に Git のインストール先として指定したディレクトリのことです。
+Git for Windows のバージョン 2.x 以降を利用している場合、さらにシステムレベルの設定ファイルもあります。
+Windows XP の場合、<code>C:\Documents and Settings\All Users\Application Data\Git\config</code> であり、Windows Vista やそれ以降では <code>C:\ProgramData\Git\config</code> となります。
+この設定ファイルの変更には管理者権限が必要で、<code>git config -f &lt;file&gt;</code> を実行します。</p>
+</div>
+<div class="paragraph">
+<p>設定した内容をすべて確認するには以下を実行します。
+これによってその設定がどこで行われているかがわかります。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ git config --list --show-origin</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h3 id="_ユーザーの識別情報">ユーザーの識別情報</h3>
+<div class="paragraph">
+<p>Git のインストール後にまず行うのは、ユーザー名とメールアドレスの設定です。
+この設定は重要です。
+Git のコミット処理においては、ユーザー名、メールアドレスの情報が利用されます。
+コミットのたびにこの情報が書き込まれることになり、消えることはありません。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>--global</code> オプションをつけてこの設定を行ったのであれば、やはり設定は 1 回行うだけで済みます。
+Git はこの設定以降、このシステム上で行なわれる操作に対しては、必ずこの情報を利用するからです。
+別の Git プロジェクトでは、この設定でなく、別のユーザー名やメールアドレスを用いたい場合は、その Git プロジェクト内にて <code>--global</code> オプションをつけずにコマンド実行します。</p>
+</div>
+<div class="paragraph">
+<p>GUI ツールは、わかりやすく設定できるものが多いので、試してみるとよいでしょう。</p>
+</div>
+</div>
+<div class="sect3">
+<h3 id="_editor">利用するエディター</h3>
+<div class="paragraph">
+<p>識別情報の設定の次は、デフォルトのテキストエディターの設定です。
+Git の操作時において、テキスト入力が必要となるときに利用するエディターのことです。
+この設定が行われていない場合は、システムのデフォルトエディターが利用されます。</p>
+</div>
+<div class="paragraph">
+<p>例えばテキストエディターとして Emacs を使いたい場合は、以下のようにして設定します。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ git config --global core.editor emacs</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Windows において別のテキストエディターを利用する場合は、実行モジュールのフルパスを指定する必要があります。
+このパスはテキストエディターがどのようにして提供されているかにより異なります。</p>
+</div>
+<div class="paragraph">
+<p>よく聞くエディターの Notepad++ の場合、本文執筆時点では 64 ビット版がすべてのプラグインをサポートしていないため、32 ビット版を使いたいところでしょう。
+32 ビット Windows を利用している場合と、64 ビット Windows において 64 ビット版エディターを使う場合は、以下のように設定します。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">情報</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Vim、Emacs、Notepad++ といったテキストエディターは一般的なものなので、Unix ベースの Linux や macOS あるいは Windows において開発者がよく利用しています。
+これ以外のエディターや 32 ビット版のものを利用している場合、<a href="C.1.付録-C%3A-Git-Commands-Setup-and-Config.html#_core_editor"><code>core.editor</code></a> に示されているものであれば、その設定手順に従ってください。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">警告</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>ここのようなエディター設定を行っていない場合に、Git がエディターを起動してきて、どうしたらよいのか困ってしまうことがあります。
+Windows の場合、Git がエディターを起動し始めることによって、そのときの Git 操作が早々に中断してしまうようなこともあります。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h3 id="_デフォルトのブランチ名">デフォルトのブランチ名</h3>
+<div class="paragraph">
+<p>新規にリポジトリを <code>git init</code> により生成した際に作り出されるブランチは、デフォルトで <em>master</em> という名前です。
+Git バージョン 2.28 以降、この初期ブランチ名を別のものに設定できるようになりました。</p>
+</div>
+<div class="paragraph">
+<p>デフォルトブランチ名を <em>main</em> とする場合は、以下のようにします。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ git config --global init.defaultBranch main</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h3 id="_設定内容の確認">設定内容の確認</h3>
+<div class="paragraph">
+<p>設定を確認するには <code>git config --list</code> を実行します。
+その時点で Git に設定されている内容が一覧表示されます。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ git config --list
+user.name=John Doe
+user.email=johndoe@example.com
+color.status=auto
+color.branch=auto
+color.interactive=auto
+color.diff=auto
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>上において同一のキー項目が複数並ぶ場合があります。
+これは Git がそのキー項目を複数のファイル（たとえば <code>[path]/etc/gitconfig</code> と <code>~/.gitconfig</code>）から読み込むからです。
+このような場合、最後に示す設定が適用されます。</p>
+</div>
+<div class="paragraph">
+<p>また特定のキー項目がどのように設定されているかを知りたいときは、<code>git config &lt;キー項目&gt;</code> と入力します。
+</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ git config user.name
+John Doe</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">情報</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Git では 1 つの設定項目を複数の設定ファイルから読み込む場合があります。
+その場合、設定値が予期しないものになって、どうなっているのかわからなくなることも起きます。
+こういったときは Git に対して、正しい値はどれかを問い合わせることができます。
+以下のようにすることで、どの設定ファイルに従って設定値が定められているかがわかります。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ git config --show-origin rerere.autoUpdate
+file:/home/johndoe/.gitconfig	false</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="nav"><a href="1.5.はじめよう-Git-のインストール.html">前へ</a> | <a href="1.7.はじめよう-マニュアルヘルプを見る.html">次へ</a></div>  </div>
+
+</body></html>

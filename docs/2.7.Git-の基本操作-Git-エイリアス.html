@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja" class=" js fontface webkit chrome windows no-ie8">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <title>Git - Git エイリアス</title>
+  <link href="https://git-scm.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link rel="stylesheet" media="screen" href="assets/application.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <script src="assets/modernize.js"></script>
+  <!--[if (gte IE 6)&(lte IE 8)]>
+  <script src="javascripts/selectivizr-min.js"></script>
+  <![endif]-->
+</head>
+<body id="documentation">
+
+  <div class="inner">
+    <header>
+      <a href="/"><img src="assets/images/logo@2x.png" width="110" height="46" alt="Git"></a>
+      <span id="tagline">素早いバージョン管理</span>
+      <script type="text/javascript">
+        var taglines = ["素早いバージョン管理","すべてはローカルで","作業が分散していなくても","簡単にローカルでブランチ","分散化は新たな中央管理"];
+        var tagline = taglines[Math.floor(Math.random() * taglines.length)];
+        document.getElementById('tagline').innerHTML = '--' + tagline;
+      </script>
+<!--
+      <form id="search" action="https://git-scm.com/search/results">
+        <input id="search-text" name="search" placeholder="サイト全体の検索..." autocomplete="off" type="text">
+      </form>
+      <div id="search-results"></div>
+-->
+    </header>
+  </div> <!-- .inner -->
+
+  <div class="inner">
+    <div id="content-wrapper">
+      <aside class="sidebar">
+  <p>progit2 別訳</p>
+<!--
+  <nav>
+    <ul>
+      <li>
+        <a href="https://git-scm.com/about">About</a>
+      </li>
+    </ul>
+  </nav>
+-->
+      </aside>
+    <div id="content">
+      <span class="light" id="edition">
+        第2版
+      </span>
+    </div>
+  </div>
+
+  <div id="main" class="book edition2">
+    <h1>2.7 Git の基本操作-Git エイリアス</h1>
+
+  <div>
+
+<h2 id="_git_aliases">Git エイリアス</h2>
+<div class="paragraph">
+<p>
+次の章に進む前に、Git 操作をより単純に簡単にする使い勝手のよい機能について説明しておきます。
+エイリアスです。
+わかりやすくするために、本書の他の場面で使うことはありませんが、Git を普段から使う方にとってエイリアスは知っておく必要があります。</p>
+</div>
+<div class="paragraph">
+<p>Git ではコマンドを部分的に入力しても、自動的にコマンド内容を推測することはしません。
+Git コマンドの実行のたびに、コマンド文字をすべて入力したくない場合、<code>git config</code> を使えば、各コマンドに対するエイリアスを簡単に設定することができます。
+
+以下に設定したくなるような例をいくつか示します。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ git config --global alias.co checkout
+$ git config --global alias.br branch
+$ git config --global alias.ci commit
+$ git config --global alias.st status</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>上が意味するのは、たとえば <code>git commit</code> と入力する代わりに、<code>git ci</code> と入力しさえすればよいということです。
+Git を使い続けていくうちには、同じように何度も利用するコマンドが出てくるはずです。
+そんなときには、ためらわずにエイリアスを作成しましょう。</p>
+</div>
+<div class="paragraph">
+<p>このやり方を使えば、存在していて欲しいと思うコマンドを作り出すことができるので便利です。
+たとえばファイルのステージングを解除する際に、コマンドが使いにくいと思ったら、独自にステージを解除するエイリアスを追加してしまえばよいわけです。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ git config --global alias.unstage 'reset HEAD --'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>こうすることで以下の 2 つのコマンドが同じ意味になります。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ git unstage fileA
+$ git reset HEAD -- fileA</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>少しはわかりやすくなりました。
+<code>last</code> コマンドを使うこともよくあることなので、以下のようにしてみます。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ git config --global alias.last 'log -1 HEAD'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>こうして直近のコミットを簡単に確認できるようになりました。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ git last
+commit 66938dae3329c7aebe598c2246a8e6af90d04646
+Author: Josh Goebel &lt;dreamer3@example.com&gt;
+Date:   Tue Aug 26 19:48:51 2008 +0800
+
+    Test for current head
+
+    Signed-off-by: Scott Chacon &lt;schacon@example.com&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>これまでからわかるように、Git は新たなコマンドをエイリアスで設定されたものに置き換えているだけです。
+ただ Git のサブコマンドでなく、外部コマンドも実行したいはずです。
+その場合は、コマンド名の先頭に <code>!</code> 文字をつけます。
+Git リポジトリ上で操作する独自ツールを書く場合に使えます。
+以下は <code>git visual</code> を <code>gitk</code> というエイリアスにする例です。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ git config --global alias.visual '!gitk'</code></pre>
+</div>
+</div>
+<div id="nav"><a href="2.6.Git-の基本操作-タグづけ.html">前へ</a> | <a href="2.8.Git-の基本操作-まとめ.html">次へ</a></div>  </div>
+
+</body></html>

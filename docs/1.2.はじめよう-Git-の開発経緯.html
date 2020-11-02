@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja" class=" js fontface webkit chrome windows no-ie8">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <title>Git - Git の開発経緯</title>
+  <link href="https://git-scm.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link rel="stylesheet" media="screen" href="assets/application.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <script src="assets/modernize.js"></script>
+  <!--[if (gte IE 6)&(lte IE 8)]>
+  <script src="javascripts/selectivizr-min.js"></script>
+  <![endif]-->
+</head>
+<body id="documentation">
+
+  <div class="inner">
+    <header>
+      <a href="/"><img src="assets/images/logo@2x.png" width="110" height="46" alt="Git"></a>
+      <span id="tagline">素早いバージョン管理</span>
+      <script type="text/javascript">
+        var taglines = ["素早いバージョン管理","すべてはローカルで","作業が分散していなくても","簡単にローカルでブランチ","分散化は新たな中央管理"];
+        var tagline = taglines[Math.floor(Math.random() * taglines.length)];
+        document.getElementById('tagline').innerHTML = '--' + tagline;
+      </script>
+<!--
+      <form id="search" action="https://git-scm.com/search/results">
+        <input id="search-text" name="search" placeholder="サイト全体の検索..." autocomplete="off" type="text">
+      </form>
+      <div id="search-results"></div>
+-->
+    </header>
+  </div> <!-- .inner -->
+
+  <div class="inner">
+    <div id="content-wrapper">
+      <aside class="sidebar">
+  <p>progit2 別訳</p>
+<!--
+  <nav>
+    <ul>
+      <li>
+        <a href="https://git-scm.com/about">About</a>
+      </li>
+    </ul>
+  </nav>
+-->
+      </aside>
+    <div id="content">
+      <span class="light" id="edition">
+        第2版
+      </span>
+    </div>
+  </div>
+
+  <div id="main" class="book edition2">
+    <h1>1.2 はじめよう-Git の開発経緯</h1>
+
+  <div>
+
+<h2 id="_git_の開発経緯">Git の開発経緯</h2>
+<div class="paragraph">
+<p>人生には大きな出来事が多々あるものですが、Git もちょっとした創造的破壊と激論の中から始まりました。</p>
+</div>
+<div class="paragraph">
+<p>Linux カーネルは、広範囲を網羅するオープンソースソフトウェアです。
+
+Linux カーネルの開発期間の大半 (1991 年～ 2002 年) において、このソフトウェアに対する変更はパッチやアーカイブファイルを利用して行われていました。
+2002 年に Linux カーネルプロジェクトは、BitKeeper というソフトウェア製品の利用を始めます。
+</p>
+</div>
+<div class="paragraph">
+<p>2005 年に Linux を開発するコミュニティと BitKeeper を開発する企業との関係が崩れ、BitKeeper を無償利用できる条件が解消されます。
+Linux 開発コミュニティ（特に Linux の創始者である Linus Torvalds）はすぐさま、BitKeeper の利用から学んだ経験をもとに、独自ツールの開発に着手しました。
+
+その新しいシステムが目指したのは以下です。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>処理速度に優れていること</p>
+</li>
+<li>
+<p>シンプルな設計であること</p>
+</li>
+<li>
+<p>順序だった開発でなくても (同時並行で分散開発することが) 強力にサポートされること</p>
+</li>
+<li>
+<p>完全に分散化できること</p>
+</li>
+<li>
+<p>Linux カーネルのような大規模プロジェクトであっても (処理性能、データ容量のいずれの観点でも) 効率良く取り扱えること</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>2005 年に誕生して以来 Git は発展し続け、より扱いやすくなりました。当初の品質は今なお維持しています。
+処理速度は驚くほど速く、大規模プロジェクトも効率良く取り扱います。
+また分散開発に適したブランチ機能がとても優れています。
+（<a href="3.1.Git-のブランチ機能-Branches-in-a-Nutshell.html#ch03-git-branching">Git のブランチ機能</a> 参照）</p>
+</div>
+<div id="nav"><a href="1.1.はじめよう-バージョン管理について.html">前へ</a> | <a href="1.3.はじめよう-Git-とは何か？.html">次へ</a></div>  </div>
+
+</body></html>

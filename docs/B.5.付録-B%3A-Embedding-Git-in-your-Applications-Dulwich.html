@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja" class=" js fontface webkit chrome windows no-ie8">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <title>Git - Dulwich</title>
+  <link href="https://git-scm.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link rel="stylesheet" media="screen" href="assets/application.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <script src="assets/modernize.js"></script>
+  <!--[if (gte IE 6)&(lte IE 8)]>
+  <script src="javascripts/selectivizr-min.js"></script>
+  <![endif]-->
+</head>
+<body id="documentation">
+
+  <div class="inner">
+    <header>
+      <a href="/"><img src="assets/images/logo@2x.png" width="110" height="46" alt="Git"></a>
+      <span id="tagline">素早いバージョン管理</span>
+      <script type="text/javascript">
+        var taglines = ["素早いバージョン管理","すべてはローカルで","作業が分散していなくても","簡単にローカルでブランチ","分散化は新たな中央管理"];
+        var tagline = taglines[Math.floor(Math.random() * taglines.length)];
+        document.getElementById('tagline').innerHTML = '--' + tagline;
+      </script>
+<!--
+      <form id="search" action="https://git-scm.com/search/results">
+        <input id="search-text" name="search" placeholder="サイト全体の検索..." autocomplete="off" type="text">
+      </form>
+      <div id="search-results"></div>
+-->
+    </header>
+  </div> <!-- .inner -->
+
+  <div class="inner">
+    <div id="content-wrapper">
+      <aside class="sidebar">
+  <p>progit2 別訳</p>
+<!--
+  <nav>
+    <ul>
+      <li>
+        <a href="https://git-scm.com/about">About</a>
+      </li>
+    </ul>
+  </nav>
+-->
+      </aside>
+    <div id="content">
+      <span class="light" id="edition">
+        第2版
+      </span>
+    </div>
+  </div>
+
+  <div id="main" class="book edition2">
+    <h1>B.5 Dulwich</h1>
+
+  <div>
+
+<h2 id="_dulwich">Dulwich</h2>
+<div class="paragraph">
+<p>
+There is also a pure-Python Git implementation - Dulwich.
+The project is hosted under <a href="https://www.dulwich.io/" class="bare">https://www.dulwich.io/</a>
+It aims to provide an interface to git repositories (both local and remote) that doesn’t call out to git directly but instead uses pure Python.
+It has an optional C extensions though, that significantly improve the performance.</p>
+</div>
+<div class="paragraph">
+<p>Dulwich follows git design and separate two basic levels of API: plumbing and porcelain.</p>
+</div>
+<div class="paragraph">
+<p>Here is an example of using the lower level API to access the commit message of the last commit:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-python" data-lang="python">from dulwich.repo import Repo
+r = Repo('.')
+r.head()
+# '57fbe010446356833a6ad1600059d80b1e731e15'
+
+c = r[r.head()]
+c
+# &lt;Commit 015fc1267258458901a94d228e39f0a378370466&gt;
+
+c.message
+# 'Add note about encoding.\n'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To print a commit log using high-level porcelain API, one can use:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-python" data-lang="python">from dulwich import porcelain
+porcelain.log('.', max_entries=1)
+
+#commit: 57fbe010446356833a6ad1600059d80b1e731e15
+#Author: Jelmer Vernooĳ &lt;jelmer@jelmer.uk&gt;
+#Date:   Sat Apr 29 2017 23:57:34 +0000</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h3 id="_further_reading_4">Further Reading</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>The official API documentation is available at <a href="https://www.dulwich.io/apidocs/dulwich.html" class="bare">https://www.dulwich.io/apidocs/dulwich.html</a>.</p>
+</li>
+<li>
+<p>Official tutorial at <a href="https://www.dulwich.io/docs/tutorial" class="bare">https://www.dulwich.io/docs/tutorial</a> has many examples of how to do specific tasks with Dulwich.</p>
+</li>
+</ul>
+</div>
+</div>
+<div id="nav"><a href="B.4.付録-B%3A-Embedding-Git-in-your-Applications-go-git.html">前へ</a> | <a href="C.1.付録-C%3A-Git-Commands-Setup-and-Config.html">次へ</a></div>  </div>
+
+</body></html>

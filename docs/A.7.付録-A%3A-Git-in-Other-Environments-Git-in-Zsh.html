@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja" class=" js fontface webkit chrome windows no-ie8">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <title>Git - Git in Zsh</title>
+  <link href="https://git-scm.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link rel="stylesheet" media="screen" href="assets/application.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <script src="assets/modernize.js"></script>
+  <!--[if (gte IE 6)&(lte IE 8)]>
+  <script src="javascripts/selectivizr-min.js"></script>
+  <![endif]-->
+</head>
+<body id="documentation">
+
+  <div class="inner">
+    <header>
+      <a href="/"><img src="assets/images/logo@2x.png" width="110" height="46" alt="Git"></a>
+      <span id="tagline">素早いバージョン管理</span>
+      <script type="text/javascript">
+        var taglines = ["素早いバージョン管理","すべてはローカルで","作業が分散していなくても","簡単にローカルでブランチ","分散化は新たな中央管理"];
+        var tagline = taglines[Math.floor(Math.random() * taglines.length)];
+        document.getElementById('tagline').innerHTML = '--' + tagline;
+      </script>
+<!--
+      <form id="search" action="https://git-scm.com/search/results">
+        <input id="search-text" name="search" placeholder="サイト全体の検索..." autocomplete="off" type="text">
+      </form>
+      <div id="search-results"></div>
+-->
+    </header>
+  </div> <!-- .inner -->
+
+  <div class="inner">
+    <div id="content-wrapper">
+      <aside class="sidebar">
+  <p>progit2 別訳</p>
+<!--
+  <nav>
+    <ul>
+      <li>
+        <a href="https://git-scm.com/about">About</a>
+      </li>
+    </ul>
+  </nav>
+-->
+      </aside>
+    <div id="content">
+      <span class="light" id="edition">
+        第2版
+      </span>
+    </div>
+  </div>
+
+  <div id="main" class="book edition2">
+    <h1>A.7 Git in Zsh</h1>
+
+  <div>
+
+<h2 id="_git_in_zsh">Git in Zsh</h2>
+<div class="paragraph">
+<p>
+Zsh also ships with a tab-completion library for Git.
+To use it, simply run <code>autoload -Uz compinit &amp;&amp; compinit</code> in your <code>.zshrc</code>.
+Zsh’s interface is a bit more powerful than Bash’s:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-console" data-lang="console">$ git che&lt;tab&gt;
+check-attr        -- display gitattributes information
+check-ref-format  -- ensure that a reference name is well formed
+checkout          -- checkout branch or paths to working tree
+checkout-index    -- copy files from index to working directory
+cherry            -- find commits not merged upstream
+cherry-pick       -- apply changes introduced by some existing commits</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ambiguous tab-completions aren’t just listed; they have helpful descriptions, and you can graphically navigate the list by repeatedly hitting tab.
+This works with Git commands, their arguments, and names of things inside the repository (like refs and remotes), as well as filenames and all the other things Zsh knows how to tab-complete.</p>
+</div>
+<div class="paragraph">
+<p>Zsh ships with a framework for getting information from version control systems, called <code>vcs_info</code>.
+To include the branch name in the prompt on the right side, add these lines to your <code>~/.zshrc</code> file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-console" data-lang="console">autoload -Uz vcs_info
+precmd_vcs_info() { vcs_info }
+precmd_functions+=( precmd_vcs_info )
+setopt prompt_subst
+RPROMPT=\$vcs_info_msg_0_
+# PROMPT=\$vcs_info_msg_0_'%# '
+zstyle ':vcs_info:git:*' formats '%b'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This results in a display of the current branch on the right-hand side of the terminal window, whenever your shell is inside a Git repository.
+The left side is supported as well, of course; just uncomment the assignment to PROMPT.
+It looks a bit like this:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/images/zsh-prompt.png" alt="Customized `zsh` prompt">
+</div>
+<div class="title">図 161. Customized <code>zsh</code> prompt</div>
+</div>
+<div class="paragraph">
+<p>For more information on <code>vcs_info</code>, check out its documentation in the <code>zshcontrib(1)</code> manual page, or online at <a href="http://zsh.sourceforge.net/Doc/Release/User-Contributions.html#Version-Control-Information" class="bare">http://zsh.sourceforge.net/Doc/Release/User-Contributions.html#Version-Control-Information</a>.</p>
+</div>
+<div class="paragraph">
+<p>Instead of <code>vcs_info</code>, you might prefer the prompt customization script that ships with Git, called <code>git-prompt.sh</code>; see <a href="https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh" class="bare">https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh</a> for details.
+<code>git-prompt.sh</code> is compatible with both Bash and Zsh.</p>
+</div>
+<div class="paragraph">
+<p>Zsh is powerful enough that there are entire frameworks dedicated to making it better.
+One of them is called "oh-my-zsh", and it can be found at <a href="https://github.com/robbyrussell/oh-my-zsh" class="bare">https://github.com/robbyrussell/oh-my-zsh</a>.
+oh-my-zsh’s plugin system comes with powerful git tab-completion, and it has a variety of prompt "themes", many of which display version-control data.
+<a href="A.7.付録-A%3A-Git-in-Other-Environments-Git-in-Zsh.html#oh_my_zsh_git">An example of an oh-my-zsh theme</a> is just one example of what can be done with this system.</p>
+</div>
+<div id="oh_my_zsh_git" class="imageblock">
+<div class="content">
+<img src="assets/images/zsh-oh-my.png" alt="An example of an oh-my-zsh theme">
+</div>
+<div class="title">図 162. An example of an oh-my-zsh theme</div>
+</div>
+<div id="nav"><a href="A.6.付録-A%3A-Git-in-Other-Environments-Git-in-Bash.html">前へ</a> | <a href="A.8.付録-A%3A-Git-in-Other-Environments-PowerShell-における-Git.html">次へ</a></div>  </div>
+
+</body></html>

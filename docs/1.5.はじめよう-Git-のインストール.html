@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ja" class=" js fontface webkit chrome windows no-ie8">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <title>Git - Git のインストール</title>
+  <link href="https://git-scm.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link rel="stylesheet" media="screen" href="assets/application.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <script src="assets/modernize.js"></script>
+  <!--[if (gte IE 6)&(lte IE 8)]>
+  <script src="javascripts/selectivizr-min.js"></script>
+  <![endif]-->
+</head>
+<body id="documentation">
+
+  <div class="inner">
+    <header>
+      <a href="/"><img src="assets/images/logo@2x.png" width="110" height="46" alt="Git"></a>
+      <span id="tagline">素早いバージョン管理</span>
+      <script type="text/javascript">
+        var taglines = ["素早いバージョン管理","すべてはローカルで","作業が分散していなくても","簡単にローカルでブランチ","分散化は新たな中央管理"];
+        var tagline = taglines[Math.floor(Math.random() * taglines.length)];
+        document.getElementById('tagline').innerHTML = '--' + tagline;
+      </script>
+<!--
+      <form id="search" action="https://git-scm.com/search/results">
+        <input id="search-text" name="search" placeholder="サイト全体の検索..." autocomplete="off" type="text">
+      </form>
+      <div id="search-results"></div>
+-->
+    </header>
+  </div> <!-- .inner -->
+
+  <div class="inner">
+    <div id="content-wrapper">
+      <aside class="sidebar">
+  <p>progit2 別訳</p>
+<!--
+  <nav>
+    <ul>
+      <li>
+        <a href="https://git-scm.com/about">About</a>
+      </li>
+    </ul>
+  </nav>
+-->
+      </aside>
+    <div id="content">
+      <span class="light" id="edition">
+        第2版
+      </span>
+    </div>
+  </div>
+
+  <div id="main" class="book edition2">
+    <h1>1.5 はじめよう-Git のインストール</h1>
+
+  <div>
+
+<h2 id="_git_のインストール">Git のインストール</h2>
+<div class="paragraph">
+<p>Git を使うからには、まずコンピューター上に Git を導入して利用できるようにすることが必要です。
+すでにインストールされている場合は、最新バージョンに更新するのがよいでしょう。
+インストールする場合は、パッケージやインストーラーを使ってインストールします。
+あるいはソースコードを入手してコンパイルすることもできます。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">情報</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>本書は Git のバージョン <strong>2.8.0</strong> を用いて説明します。
+古いバージョンでもコマンド実行はできると思いますが、場合によっては動作しなかったり、動作が異なっていたりすることもあります。
+もっとも Git は下位互換性に優れているため、バージョン 2.8 以降であれば問題なく動作するはずです。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h3 id="_linux_へのインストール">Linux へのインストール</h3>
+<div class="paragraph">
+<p>
+Linux 上においてバイナリインストーラーを使って Git ツール類をインストールする場合は、利用しているディストリビューションが提供している標準的なパッケージ管理ツールを利用します。
+例えば Fedora を利用している場合（あるいは Fedora に類似し、RPM ベースのディストリビューションである RHEL や CentOS などの場合）<code>dnf</code> を利用します。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ sudo dnf install git-all</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>また Debian 系のディストリビューション、たとえば Ubuntu などを利用している場合は <code>apt</code> を使います。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ sudo apt install git-all</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Git のウェブサイト <a href="https://git-scm.com/download/linux" class="bare">https://git-scm.com/download/linux</a> には、これ以外の Unix 系システムに対するインストール手順を示しています。</p>
+</div>
+</div>
+<div class="sect3">
+<h3 id="_mac_へのインストール">Mac へのインストール</h3>
+<div class="paragraph">
+<p>
+Mac 上に Git をインストールする方法はいくつかあります。
+一番簡単なのは Xcode コマンドラインツールをインストールするものです。
+
+Mavericks (10.9) またはそれ以降では、ターミナルを開いていきなり <code>git</code> と入力するだけです。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ git --version</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>インストールされていない場合は、インストールが始まります。</p>
+</div>
+<div class="paragraph">
+<p>できるだけ最新バージョンを利用したいときは、バイナリインストーラーを使ってインストールすることができます。
+macOS Git インストーラーというものが提供されていて、Git のウェブサイト <a href="https://git-scm.com/download/mac" class="bare">https://git-scm.com/download/mac</a> から入手することができます。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/images/git-osx-installer.png" alt="Git macOS インストーラー">
+</div>
+<div class="title">図 7. Git macOS インストーラー</div>
+</div>
+<div class="paragraph">
+<p>macOS 用の GitHub をインストールすることにすれば、同時に Git もインストールされます。
+GUI ツールを利用して、コマンドラインツールをインストールすることもできます。
+この macOS 用 GitHub は <a href="https://desktop.github.com" class="bare">https://desktop.github.com</a> から入手できます。</p>
+</div>
+</div>
+<div class="sect3">
+<h3 id="_windows_へのインストール">Windows へのインストール</h3>
+<div class="paragraph">
+<p>Windows に Git をインストールする方法はいくつかあります。
+
+公式に提供されるものは Git のウェブサイトから入手できます。
+<a href="https://git-scm.com/download/win" class="bare">https://git-scm.com/download/win</a> にアクセスすれば、ダウンロードが自動的に始まります。
+ここでタウンロードするのは Git for Windows というプロジェクトの配布物であり、Git とは異なるものです。
+詳しくは <a href="https://gitforwindows.org" class="bare">https://gitforwindows.org</a> を参照してください。</p>
+</div>
+<div class="paragraph">
+<p><a href="https://chocolatey.org/packages/git">Git Chocolatey パッケージ</a> を使うと、自動化されたインストールを行うことができます。
+この Chocolatey パッケージは特定のコミュニティがメンテナンスしているものです。</p>
+</div>
+<div class="paragraph">
+<p>もう 1 つ GitHub Desktop というものもあります。
+このインストーラーからは、GUI だけでなくコマンドライン版もインストールされます。
+Powershell における動作に優れ、認証情報キャッシュや CRLFS 改行コードの設定も適正に行われます。
+
+これについては、もう少し後で説明しますが、こういった機能こそ、必要であるものに違いありません。
+これは <a href="https://desktop.github.com">GitHub Desktop ウェブサイト</a> から入手することができます。</p>
+</div>
+</div>
+<div class="sect3">
+<h3 id="_ソースからのインストール">ソースからのインストール</h3>
+<div class="paragraph">
+<p>Git をソースからインストールすることの方が使いやすいと言う人もいます。
+理由は最新バージョンを入手できるからです。
+バイナリインストーラーは、どうしてもバージョンが少し古くなってしまいます。
+それでも最近の Git は完成したものなので、さほどの違いはありません。</p>
+</div>
+<div class="paragraph">
+<p>ソースからインストールする場合は、Git が依存する以下のライブラリをインストールしておく必要があります。
+それは autotools、curl、zlib、openssl、expat、libiconv です。
+例えば Fedora のように <code>dnf</code> がある場合、あるいは Debian 系のように <code>apt-get</code> がある場合、以下のようなコマンドを実行します。
+これによって必要最小限の依存ライブラリがインストールされ、Git のコンパイルとインストールができるようになります。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ sudo dnf install dh-autoreconf curl-devel expat-devel gettext-devel \
+  openssl-devel perl-devel zlib-devel
+$ sudo apt-get install dh-autoreconf libcurl4-gnutls-dev libexpat1-dev \
+  gettext libz-dev libssl-dev</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>インストールの際にさまざまな形式のドキュメント（doc、html、info）も生成するには、以下のライブラリが必要となります。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ sudo dnf install asciidoc xmlto docbook2X
+$ sudo apt-get install asciidoc xmlto docbook2x</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">情報</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>RHEL とこれをベースとする CentOS や Scientific Linux を利用している場合は、依存パッケージの中の <code>docbook2X</code> をダウンロードするために、 <a href="https://fedoraproject.org/wiki/EPEL#How_can_I_use_these_extra_packages.3F">EPEL リポジトリを有効にする</a> ことが必要です。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Debian 系のディストリビューション（Debian、Ubuntu、Ubuntu の派生）を利用している場合は <code>install-info</code> パッケージも必要になります。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ sudo apt-get install install-info</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>RPM ベースのディストリビューション（Fedora、RHEL、RHEL の派生）を利用している場合は <code>getopt</code> パッケージも必要です。
+（Debian ベースのディストリビューションでは、すでにインストールされています。）</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ sudo dnf install getopt</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>さらに Fedora、RHEL、RHEL 派生のディストリビューションを利用している場合は、以下を実行することが必要です。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ sudo ln -s /usr/bin/db2x_docbook2texi /usr/bin/docbook2x-texi</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>これを行うのは実行モジュール名が異なっているからです。</p>
+</div>
+<div class="paragraph">
+<p>必要な依存ライブラリをインストールしたら、タグづけリリースされている最新の tarball を適当なサイトから入手します。
+たとえば kernel.org サイト <a href="https://www.kernel.org/pub/software/scm/git" class="bare">https://www.kernel.org/pub/software/scm/git</a> や GitHub ウェブサイト <a href="https://github.com/git/git/releases" class="bare">https://github.com/git/git/releases</a> のミラーサイトなどです。
+GitHub サイトでは、どれが最新であるかがわかりやすくなっています。
+一方、kernel.org サイトでは署名ファイルも提供されているので、ダウンロードの検証を必要とする場合はこちらを利用します。</p>
+</div>
+<div class="paragraph">
+<p>コンパイルとインストールを以下のようにして行います。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ tar -zxf git-2.8.0.tar.gz
+$ cd git-2.8.0
+$ make configure
+$ ./configure --prefix=/usr
+$ make all doc info
+$ sudo make install install-doc install-html install-info</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>上の作業を終えたら、その後は Git そのものを使って Git を更新することができます。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ git clone git://git.kernel.org/pub/scm/git/git.git</code></pre>
+</div>
+</div>
+</div>
+<div id="nav"><a href="1.4.はじめよう-コマンドラインツール.html">前へ</a> | <a href="1.6.はじめよう-Git-導入直後の設定.html">次へ</a></div>  </div>
+
+</body></html>

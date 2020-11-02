@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja" class=" js fontface webkit chrome windows no-ie8">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <title>Git - PowerShell における Git</title>
+  <link href="https://git-scm.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link rel="stylesheet" media="screen" href="assets/application.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <script src="assets/modernize.js"></script>
+  <!--[if (gte IE 6)&(lte IE 8)]>
+  <script src="javascripts/selectivizr-min.js"></script>
+  <![endif]-->
+</head>
+<body id="documentation">
+
+  <div class="inner">
+    <header>
+      <a href="/"><img src="assets/images/logo@2x.png" width="110" height="46" alt="Git"></a>
+      <span id="tagline">素早いバージョン管理</span>
+      <script type="text/javascript">
+        var taglines = ["素早いバージョン管理","すべてはローカルで","作業が分散していなくても","簡単にローカルでブランチ","分散化は新たな中央管理"];
+        var tagline = taglines[Math.floor(Math.random() * taglines.length)];
+        document.getElementById('tagline').innerHTML = '--' + tagline;
+      </script>
+<!--
+      <form id="search" action="https://git-scm.com/search/results">
+        <input id="search-text" name="search" placeholder="サイト全体の検索..." autocomplete="off" type="text">
+      </form>
+      <div id="search-results"></div>
+-->
+    </header>
+  </div> <!-- .inner -->
+
+  <div class="inner">
+    <div id="content-wrapper">
+      <aside class="sidebar">
+  <p>progit2 別訳</p>
+<!--
+  <nav>
+    <ul>
+      <li>
+        <a href="https://git-scm.com/about">About</a>
+      </li>
+    </ul>
+  </nav>
+-->
+      </aside>
+    <div id="content">
+      <span class="light" id="edition">
+        第2版
+      </span>
+    </div>
+  </div>
+
+  <div id="main" class="book edition2">
+    <h1>A.8 PowerShell における Git</h1>
+
+  <div>
+
+<h2 id="_git_powershell">PowerShell における Git</h2>
+<div class="paragraph">
+<p>
+</p>
+</div>
+<div class="paragraph">
+<p>Windows の古いコマンドライン端末（<code>cmd.exe</code>）には、Git をカスタマイズするための十分な機能はなく、現実には利用できません。
+PowerShell を利用しているのであれば安心です。
+Linux や macOS 上でも PowerShell Core を実行すれば PowerShell を動作させることができます。
+posh-git (<a href="https://github.com/dahlbyk/posh-git" class="bare">https://github.com/dahlbyk/posh-git</a>) というパッケージでは、強力なタブ補完機能が提供されています。
+さらに拡張プロンプトによってリポジトリの状態を常に確認できます。
+その様子を以下に示します。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/images/posh-git.png" alt="Posh-git を利用した PowerShell">
+</div>
+<div class="title">図 163. Posh-git を利用した PowerShell</div>
+</div>
+<div class="sect3">
+<h3 id="_インストール">インストール</h3>
+<div class="sect4">
+<h4 id="_前提条件_windows_のみ">前提条件 (Windows のみ)</h4>
+<div class="paragraph">
+<p>Before you’re able to run PowerShell scripts on your machine, you need to set your local <code>ExecutionPolicy</code> to <code>RemoteSigned</code> (basically, anything except <code>Undefined</code> and <code>Restricted</code>).
+If you choose <code>AllSigned</code> instead of <code>RemoteSigned</code>, also local scripts (your own) need to be digitally signed in order to be executed.
+With <code>RemoteSigned</code>, only scripts having the <code>ZoneIdentifier</code> set to <code>Internet</code> (were downloaded from the web) need to be signed, others not.
+If you’re an administrator and want to set it for all users on that machine, use <code>-Scope LocalMachine</code>.
+If you’re a normal user, without administrative rights, you can use <code>-Scope CurrentUser</code> to set it only for you.</p>
+</div>
+<div class="paragraph">
+<p>PowerShell のスコープ（scope）に関する詳細は <a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_scopes" class="bare">https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_scopes</a> を参照してください。</p>
+</div>
+<div class="paragraph">
+<p>PowerShell の実行ポリシー（ExecutionPolicy）については <a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy" class="bare">https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy</a> を参照してください。</p>
+</div>
+<div class="paragraph">
+<p>全ユーザーに対して <code>ExecutionPolicy</code> の値を <code>RemoteSigned</code> に設定する場合は、以下のコマンドを実行します。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-powershell" data-lang="powershell">&gt; Set-ExecutionPolicy -Scope LocalMachine -ExecutionPolicy RemoteSigned -Force</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h4 id="_powershell_ギャラリー">PowerShell ギャラリー</h4>
+<div class="paragraph">
+<p>If you have at least PowerShell 5 or PowerShell 4 with PackageManagement installed, you can use the package manager to install posh-git for you.</p>
+</div>
+<div class="paragraph">
+<p>PowerShell ギャラリー（Gallery）に関する詳細は <a href="https://docs.microsoft.com/en-us/powershell/scripting/gallery/overview" class="bare">https://docs.microsoft.com/en-us/powershell/scripting/gallery/overview</a> を参照してください。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-powershell" data-lang="powershell">&gt; Install-Module posh-git -Scope CurrentUser -Force
+&gt; Install-Module posh-git -Scope CurrentUser -AllowPrerelease -Force # Newer beta version with PowerShell Core support</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you want to install posh-git for all users, use <code>-Scope AllUsers</code> instead and execute the command from an elevated PowerShell console.
+If the second command fails with an error like <code>Module 'PowerShellGet' was not installed by using Install-Module</code>, you’ll need to run another command first:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-powershell" data-lang="powershell">&gt; Install-Module PowerShellGet -Force -SkipPublisherCheck</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then you can go back and try again.
+This happens, because the modules that ship with Windows PowerShell are signed with a different publishment certificate.</p>
+</div>
+</div>
+<div class="sect4">
+<h4 id="_update_powershell_prompt">Update PowerShell Prompt</h4>
+<div class="paragraph">
+<p>To include git information in your prompt, the posh-git module needs to be imported.
+To have posh-git imported every time PowerShell starts, execute the <code>Add-PoshGitToProfile</code> command which will add the import statement into your <code>$profile</code> script.
+This script is executed everytime you open a new PowerShell console.
+Keep in mind, that there are multiple <code>$profile</code> scripts.
+E. g. one for the console and a separate one for the ISE.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-powershell" data-lang="powershell">&gt; Import-Module posh-git
+&gt; Add-PoshGitToProfile -AllHosts</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h4 id="_from_source">From Source</h4>
+<div class="paragraph">
+<p>Just download a posh-git release from <a href="https://github.com/dahlbyk/posh-git/releases" class="bare">https://github.com/dahlbyk/posh-git/releases</a>, and uncompress it.
+Then import the module using the full path to the <code>posh-git.psd1</code> file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-powershell" data-lang="powershell">&gt; Import-Module &lt;path-to-uncompress-folder&gt;\src\posh-git.psd1
+&gt; Add-PoshGitToProfile -AllHosts</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will add the proper line to your <code>profile.ps1</code> file, and posh-git will be active the next time you open PowerShell.</p>
+</div>
+<div class="paragraph">
+<p>For a description of the Git status summary information displayed in the prompt see: <a href="https://github.com/dahlbyk/posh-git/blob/master/README.md#git-status-summary-information" class="bare">https://github.com/dahlbyk/posh-git/blob/master/README.md#git-status-summary-information</a>
+For more details on how to customize your posh-git prompt see: <a href="https://github.com/dahlbyk/posh-git/blob/master/README.md#customization-variables" class="bare">https://github.com/dahlbyk/posh-git/blob/master/README.md#customization-variables</a>.</p>
+</div>
+</div>
+</div>
+<div id="nav"><a href="A.7.付録-A%3A-Git-in-Other-Environments-Git-in-Zsh.html">前へ</a> | <a href="A.9.付録-A%3A-Git-in-Other-Environments-まとめ.html">次へ</a></div>  </div>
+
+</body></html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ja" class=" js fontface webkit chrome windows no-ie8">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <title>Git - Git とは何か？</title>
+  <link href="https://git-scm.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link rel="stylesheet" media="screen" href="assets/application.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <script src="assets/modernize.js"></script>
+  <!--[if (gte IE 6)&(lte IE 8)]>
+  <script src="javascripts/selectivizr-min.js"></script>
+  <![endif]-->
+</head>
+<body id="documentation">
+
+  <div class="inner">
+    <header>
+      <a href="/"><img src="assets/images/logo@2x.png" width="110" height="46" alt="Git"></a>
+      <span id="tagline">素早いバージョン管理</span>
+      <script type="text/javascript">
+        var taglines = ["素早いバージョン管理","すべてはローカルで","作業が分散していなくても","簡単にローカルでブランチ","分散化は新たな中央管理"];
+        var tagline = taglines[Math.floor(Math.random() * taglines.length)];
+        document.getElementById('tagline').innerHTML = '--' + tagline;
+      </script>
+<!--
+      <form id="search" action="https://git-scm.com/search/results">
+        <input id="search-text" name="search" placeholder="サイト全体の検索..." autocomplete="off" type="text">
+      </form>
+      <div id="search-results"></div>
+-->
+    </header>
+  </div> <!-- .inner -->
+
+  <div class="inner">
+    <div id="content-wrapper">
+      <aside class="sidebar">
+  <p>progit2 別訳</p>
+<!--
+  <nav>
+    <ul>
+      <li>
+        <a href="https://git-scm.com/about">About</a>
+      </li>
+    </ul>
+  </nav>
+-->
+      </aside>
+    <div id="content">
+      <span class="light" id="edition">
+        第2版
+      </span>
+    </div>
+  </div>
+
+  <div id="main" class="book edition2">
+    <h1>1.3 はじめよう-Git とは何か？</h1>
+
+  <div>
+
+<h2 id="what_is_git_section">Git とは何か？</h2>
+<div class="paragraph">
+<p>簡単に言って Git とは何なのか？
+This is an important section to absorb, because if you understand what Git is and the fundamentals of how it works, then using Git effectively will probably be much easier for you.
+As you learn Git, try to clear your mind of the things you may know about other VCSs, such as CVS, Subversion or Perforce — doing so will help you avoid subtle confusion when using the tool.
+Even though Git’s user interface is fairly similar to these other VCSs, Git stores and thinks about information in a very different way, and understanding these differences will help you avoid becoming confused while using it.</p>
+</div>
+<div class="sect3">
+<h3 id="_snapshots_not_differences">Snapshots, Not Differences</h3>
+<div class="paragraph">
+<p>The major difference between Git and any other VCS (Subversion and friends included) is the way Git thinks about its data.
+Conceptually, most other systems store information as a list of file-based changes.
+These other systems (CVS, Subversion, Perforce, Bazaar, and so on) think of the information they store as a set of files and the changes made to each file over time (this is commonly described as <em>delta-based</em> version control).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/images/deltas.png" alt="Storing data as changes to a base version of each file">
+</div>
+<div class="title">図 4. Storing data as changes to a base version of each file</div>
+</div>
+<div class="paragraph">
+<p>Git doesn’t think of or store its data this way.
+Instead, Git thinks of its data more like a series of snapshots of a miniature filesystem.
+With Git, every time you commit, or save the state of your project, Git basically takes a picture of what all your files look like at that moment and stores a reference to that snapshot.
+To be efficient, if files have not changed, Git doesn’t store the file again, just a link to the previous identical file it has already stored.
+Git thinks about its data more like a <strong>stream of snapshots</strong>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/images/snapshots.png" alt="Git stores data as snapshots of the project over time">
+</div>
+<div class="title">図 5. Storing data as snapshots of the project over time</div>
+</div>
+<div class="paragraph">
+<p>This is an important distinction between Git and nearly all other VCSs.
+It makes Git reconsider almost every aspect of version control that most other systems copied from the previous generation.
+This makes Git more like a mini filesystem with some incredibly powerful tools built on top of it, rather than simply a VCS.
+We’ll explore some of the benefits you gain by thinking of your data this way when we cover Git branching in <a href="3.1.Git-のブランチ機能-Branches-in-a-Nutshell.html#ch03-git-branching">Git のブランチ機能</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h3 id="_nearly_every_operation_is_local">Nearly Every Operation Is Local</h3>
+<div class="paragraph">
+<p>Most operations in Git need only local files and resources to operate — generally no information is needed from another computer on your network.
+If you’re used to a CVCS where most operations have that network latency overhead, this aspect of Git will make you think that the gods of speed have blessed Git with unworldly powers.
+Because you have the entire history of the project right there on your local disk, most operations seem almost instantaneous.</p>
+</div>
+<div class="paragraph">
+<p>For example, to browse the history of the project, Git doesn’t need to go out to the server to get the history and display it for you — it simply reads it directly from your local database.
+This means you see the project history almost instantly.
+If you want to see the changes introduced between the current version of a file and the file a month ago, Git can look up the file a month ago and do a local difference calculation, instead of having to either ask a remote server to do it or pull an older version of the file from the remote server to do it locally.</p>
+</div>
+<div class="paragraph">
+<p>This also means that there is very little you can’t do if you’re offline or off VPN.
+If you get on an airplane or a train and want to do a little work, you can commit happily (to your <em>local</em> copy, remember?) until you get to a network connection to upload.
+If you go home and can’t get your VPN client working properly, you can still work.
+In many other systems, doing so is either impossible or painful.
+In Perforce, for example, you can’t do much when you aren’t connected to the server; in Subversion and CVS, you can edit files, but you can’t commit changes to your database (because your database is offline).
+This may not seem like a huge deal, but you may be surprised what a big difference it can make.</p>
+</div>
+</div>
+<div class="sect3">
+<h3 id="_git_has_integrity">Git Has Integrity</h3>
+<div class="paragraph">
+<p>Everything in Git is checksummed before it is stored and is then referred to by that checksum.
+This means it’s impossible to change the contents of any file or directory without Git knowing about it.
+This functionality is built into Git at the lowest levels and is integral to its philosophy.
+You can’t lose information in transit or get file corruption without Git being able to detect it.</p>
+</div>
+<div class="paragraph">
+<p>The mechanism that Git uses for this checksumming is called a SHA-1 hash.
+This is a 40-character string composed of hexadecimal characters (0–9 and a–f) and calculated based on the contents of a file or directory structure in Git.
+A SHA-1 hash looks something like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>24b9da6552252987aa493b52f8696cd6d3b00373</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You will see these hash values all over the place in Git because it uses them so much.
+In fact, Git stores everything in its database not by file name but by the hash value of its contents.</p>
+</div>
+</div>
+<div class="sect3">
+<h3 id="_git_generally_only_adds_data">Git Generally Only Adds Data</h3>
+<div class="paragraph">
+<p>When you do actions in Git, nearly all of them only <em>add</em> data to the Git database.
+It is hard to get the system to do anything that is not undoable or to make it erase data in any way.
+As with any VCS, you can lose or mess up changes you haven’t committed yet, but after you commit a snapshot into Git, it is very difficult to lose, especially if you regularly push your database to another repository.</p>
+</div>
+<div class="paragraph">
+<p>This makes using Git a joy because we know we can experiment without the danger of severely screwing things up.
+For a more in-depth look at how Git stores its data and how you can recover data that seems lost, see <a href="2.4.Git-の基本操作-作業のやり直し.html#_undoing">作業のやり直し</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h3 id="_3_つの状態">3 つの状態</h3>
+<div class="paragraph">
+<p>ここからは注意して読んでください。
+here is the main thing to remember about Git if you want the rest of your learning process to go smoothly.
+Git has three main states that your files can reside in: <em>modified</em>, <em>staged</em>, and <em>committed</em>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Modified means that you have changed the file but have not committed it to your database yet.</p>
+</li>
+<li>
+<p>Staged means that you have marked a modified file in its current version to go into your next commit snapshot.</p>
+</li>
+<li>
+<p>Committed means that the data is safely stored in your local database.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This leads us to the three main sections of a Git project: the working tree, the staging area, and the Git directory.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/images/areas.png" alt="Working tree, staging area, and Git directory.">
+</div>
+<div class="title">図 6. Working tree, staging area, and Git directory</div>
+</div>
+<div class="paragraph">
+<p>The working tree is a single checkout of one version of the project.
+These files are pulled out of the compressed database in the Git directory and placed on disk for you to use or modify.</p>
+</div>
+<div class="paragraph">
+<p>The staging area is a file, generally contained in your Git directory, that stores information about what will go into your next commit.
+Its technical name in Git parlance is the “index”, but the phrase “staging area” works just as well.</p>
+</div>
+<div class="paragraph">
+<p>The Git directory is where Git stores the metadata and object database for your project.
+This is the most important part of Git, and it is what is copied when you <em>clone</em> a repository from another computer.</p>
+</div>
+<div class="paragraph">
+<p>The basic Git workflow goes something like this:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>You modify files in your working tree.</p>
+</li>
+<li>
+<p>You selectively stage just those changes you want to be part of your next commit, which adds <em>only</em> those changes to the staging area.</p>
+</li>
+<li>
+<p>You do a commit, which takes the files as they are in the staging area and stores that snapshot permanently to your Git directory.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>If a particular version of a file is in the Git directory, it’s considered <em>committed</em>.
+If it has been modified and was added to the staging area, it is <em>staged</em>.
+And if it was changed since it was checked out but has not been staged, it is <em>modified</em>.
+In <a href="2.1.Git-の基本操作-Git-リポジトリの作成.html#ch02-git-basics-chapter">Git の基本操作</a>, you’ll learn more about these states and how you can either take advantage of them or skip the staged part entirely.</p>
+</div>
+</div>
+<div id="nav"><a href="1.2.はじめよう-Git-の開発経緯.html">前へ</a> | <a href="1.4.はじめよう-コマンドラインツール.html">次へ</a></div>  </div>
+
+</body></html>
