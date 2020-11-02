@@ -124,7 +124,10 @@ include::book/09-git-and-other-scms/sections/import-custom.asc[]
 @x
 === Summary
 @y
+//////////////////////////
 === Summary
+//////////////////////////
+=== まとめ
 @z
 
 @x

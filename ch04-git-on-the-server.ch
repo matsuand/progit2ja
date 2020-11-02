@@ -112,7 +112,10 @@ include::book/04-git-server/sections/hosted.asc[]
 @x
 === Summary
 @y
+//////////////////////////
 === Summary
+//////////////////////////
+=== まとめ
 @z
 
 @x

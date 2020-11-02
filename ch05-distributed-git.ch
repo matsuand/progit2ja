@@ -46,7 +46,10 @@ include::book/05-distributed-git/sections/maintaining.asc[]
 @x
 === Summary
 @y
+//////////////////////////
 === Summary
+//////////////////////////
+=== まとめ
 @z
 
 @x

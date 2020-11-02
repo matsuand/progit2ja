@@ -5,6 +5,7 @@ origdir  = @abs_origdir@
 srcdir   = @srcdir@
 mysrcdir = $(shell cd $(srcdir) && pwd)
 abs_installdir = @abs_installdir@
+abs_thisdir = $(shell cd $(thisdir) && pwd)
 
 thisdate = `date +'%Y/%m/%d'`
 hashvalue = `(cd @abs_origdir@ && git log -1 --pretty=format:"%ad %h" --date=short) | sed "s|\-|/|g"`
@@ -12,18 +13,30 @@ hashvalue = `(cd @abs_origdir@ && git log -1 --pretty=format:"%ad %h" --date=sho
 ALLASC=$(shell find $(abs_installdir) -type f -name '*.asc' -print)
 
 .DEFAULT_GOAL := build
-build:  all $(abs_installdir)/progit.html $(abs_installdir)/html.css $(abs_installdir)/attributes-ja.adoc
-
+build:  all $(srcdir)/docs/index.html $(abs_installdir)/html.css
+$(srcdir)/docs/lindex.html: $(abs_installdir)/progit.html
+	@$(MKDIR_P) $(srcdir)/docs
+	cp -p $(abs_installdir)/progit.html $@
 $(abs_installdir)/progit.html: ctie $(trans) $(copys) $(abs_installdir)/attributes-ja.adoc $(ALLASC)
 	@(cd $(abs_installdir) && bundle exec asciidoctor progit.asc -o progit.html)
 	@(cd $(abs_installdir) && sed -i -e "s|THISDATE|$(thisdate)|" \
 					-e "s|HASHVALUE|$(hashvalue)|" progit.html)
-	cp $(abs_installdir)/progit.html $(srcdir)/index.html
 $(abs_installdir)/html.css: $(origdir)/theme/html/html.css
 	cp -p $^ $@
 	cp $(abs_installdir)/html.css $(srcdir)
 $(abs_installdir)/attributes-ja.adoc: $(srcdir)/attributes-ja.adoc
 	cp -p $^ $@
+
+@MAINT@.PHONY: git-scm
+@MAINT@git-scm: build $(GITSCMDIR)/lib/tasks/book2mod.rake
+@MAINT@	(cd $(GITSCMDIR) && GENLANG=ja GENPATH=$(abs_thisdir) rbenv exec rake local_genbook2)
+@MAINT@	@cp -p $(GITSCMDIR)/db/development.sqlite3 .
+@MAINT@$(GITSCMDIR)/lib/tasks/book2mod.rake: $(srcdir)/bin/book2mod.rake
+@MAINT@	@cp -p $^ $@
+
+@MAINT@.PHONY: dividedpages
+@MAINT@dividepages: #git-scm
+@MAINT@	@perl $(top_srcdir)/bin/getDividedPages.perl $(top_srcdir)
 
 ctie:
 	@$(MAKE) -C $(top_builddir)/$@ $@ >/dev/null

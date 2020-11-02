@@ -139,6 +139,7 @@ ECHO_N = @ECHO_N@
 ECHO_T = @ECHO_T@
 EGREP = @EGREP@
 EXEEXT = @EXEEXT@
+GITSCMDIR = @GITSCMDIR@
 GREP = @GREP@
 INSTALL = @INSTALL@
 INSTALLDIR = @INSTALLDIR@
@@ -168,7 +169,8 @@ SHELL = @SHELL@
 STRIP = @STRIP@
 VERSION = @VERSION@
 abs_builddir = @abs_builddir@
-abs_installdir = @abs_installdir@
+abs_gitscmdir = @abs_gitscmdir@
+abs_installdir = @abs_installdir@/$(thisdir)
 abs_origdir = @abs_origdir@
 abs_srcdir = @abs_srcdir@
 abs_top_builddir = @abs_top_builddir@
@@ -213,8 +215,10 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 thisdir = images
 origdir = @abs_origdir@/$(thisdir)
+top_origdir = @abs_origdir@
 mysrcdir = $(shell cd $(srcdir) && pwd)
-copyfiles = \
+abs_assetsdir = $(shell cd $(abs_top_srcdir)/docs/assets/images && pwd)
+images = \
 	2fa-1.png \
 	account-settings.png \
 	advance-master.png \
@@ -517,8 +521,13 @@ copyfiles = \
 	zsh-oh-my.png \
 	zsh-prompt.png
 
-copies = ${addprefix $(abs_installdir)/images/, $(copyfiles)}
-copies2 = ${addprefix $(mysrcdir)/, $(copyfiles)}
+images2 = \
+	logo@2x.png
+
+srcs = $(images)
+srcs_with_prefix = ${addprefix $(abs_assetsdir)/,$(srcs)}
+srcs2 = $(images2)
+srcs2_with_prefix = ${addprefix $(abs_assetsdir)/,$(srcs2)}
 all: all-am
 
 .SUFFIXES:
@@ -708,14 +717,18 @@ uninstall-am:
 
 
 .PHONY: all
-all: $(copies) $(copies2)
+all: tgtdir $(srcs_with_prefix) $(srcs2_with_prefix)
 
--include copyfiles.sub
--include copyfiles2.sub
-copyfiles.sub: $(top_srcdir)/bin/copymake.sh $(top_builddir)/config.log
-	@$(top_srcdir)/bin/copymake.sh copyfiles $(abs_installdir) $(copyfiles)
-copyfiles2.sub: $(top_srcdir)/bin/copymake2.sh $(top_builddir)/config.log
-	@$(top_srcdir)/bin/copymake2.sh copyfiles2 $(origdir) $(mysrcdir) $(copyfiles)
+.PHONY: tgtdir
+tgtdir:
+	@$(MKDIR_P) $(abs_assetsdir)
+
+-include copyimages.sub
+copyimages.sub: $(top_srcdir)/bin/copymake.sh $(top_builddir)/config.log
+	@$(top_srcdir)/bin/copymake.sh copyimages $(abs_assetsdir) $(srcs)
+-include copyimages2.sub
+copyimages2.sub: $(top_srcdir)/bin/copymake2.sh $(top_builddir)/config.log
+	@$(top_srcdir)/bin/copymake2.sh copyimages2 $(abs_gitscmdir)/public/images $(abs_assetsdir) $(srcs2)
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

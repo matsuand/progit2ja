@@ -110,7 +110,10 @@ include::book/07-git-tools/sections/credentials.asc[]
 @x
 === Summary
 @y
+//////////////////////////
 === Summary
+//////////////////////////
+=== まとめ
 @z
 
 @x

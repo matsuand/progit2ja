@@ -647,6 +647,8 @@ CFLAGS
 CC
 abs_installdir
 INSTALLDIR
+abs_gitscmdir
+GITSCMDIR
 abs_origdir
 ORIGDIR
 CTIE
@@ -725,6 +727,7 @@ enable_option_checking
 enable_silent_rules
 enable_maintainer_mode
 with_origdir
+with_gitscmdir
 with_installdir
 enable_dependency_tracking
 '
@@ -1364,7 +1367,8 @@ Optional Features:
 Optional Packages:
   --with-PACKAGE[=ARG]    use PACKAGE [ARG=yes]
   --without-PACKAGE       do not use PACKAGE (same as --with-PACKAGE=no)
-  --with-origdir=DIR      Specify ORIG sources directory [DIR=../progit2.git]
+  --with-origdir=DIR      Specify ORIG sources directory [DIR=../progit2]
+  --with-gitscmdir=DIR    Specify git-scm.com directory [DIR=../git-scm.com]
   --with-installdir=DIR    Specify build dir [INSTALLDIR=.]
 
 Some influential environment variables:
@@ -2852,7 +2856,7 @@ fi
 CTIE=ctie/ctie$EXEEXT
 
 
-ORIGDIR=../progit2.git
+ORIGDIR=../progit2
 
 # Check whether --with-origdir was given.
 if test "${with_origdir+set}" = set; then :
@@ -2877,6 +2881,33 @@ fi
 
 
 abs_origdir=`(cd $ORIGDIR && pwd)`
+
+
+GITSCMDIR=../git-scm.com
+
+# Check whether --with-gitscmdir was given.
+if test "${with_gitscmdir+set}" = set; then :
+  withval=$with_gitscmdir;
+  if test -d "${with_gitscmdir}" ; then
+    GITSCMDIR=${with_gitscmdir}
+  fi
+
+
+fi
+
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for the gitscm files" >&5
+$as_echo_n "checking for the gitscm files... " >&6; }
+if test ! -f "${GITSCMDIR}/lib/tasks/book2.rake"; then
+  { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+$as_echo "no" >&6; }
+  as_fn_error $? "The gitscm files not found in ${GITSCMDIR}" "$LINENO" 5
+else
+  { $as_echo "$as_me:${as_lineno-$LINENO}: result: ok" >&5
+$as_echo "ok" >&6; }
+fi
+
+
+abs_gitscmdir=`(cd $GITSCMDIR && pwd)`
 
 
 INSTALLDIR=.

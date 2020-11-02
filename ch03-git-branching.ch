@@ -3,19 +3,35 @@
 
 @x
 [[ch03-git-branching]]
-== Git Branching
 @y
 [[ch03-git-branching]]
+@z
+
+@x
 == Git Branching
+@y
+//////////////////////////
+== Git Branching
+//////////////////////////
+== Gitのブランチ機能
 @z
 
 @x
 (((branches)))
+@y
+(((branches)))
+@z
+
+@x
 Nearly every VCS has some form of branching support.
 Branching means you diverge from the main line of development and continue to do work without messing with that main line.
 In many VCS tools, this is a somewhat expensive process, often requiring you to create a new copy of your source code directory, which can take a long time for large projects.
 @y
-(((branches)))
+//////////////////////////
+Nearly every VCS has some form of branching support.
+Branching means you diverge from the main line of development and continue to do work without messing with that main line.
+In many VCS tools, this is a somewhat expensive process, often requiring you to create a new copy of your source code directory, which can take a long time for large projects.
+//////////////////////////
 Nearly every VCS has some form of branching support.
 Branching means you diverge from the main line of development and continue to do work without messing with that main line.
 In many VCS tools, this is a somewhat expensive process, often requiring you to create a new copy of your source code directory, which can take a long time for large projects.
@@ -28,6 +44,13 @@ The way Git branches is incredibly lightweight, making branching operations near
 Unlike many other VCSs, Git encourages workflows that branch and merge often, even multiple times in a day.
 Understanding and mastering this feature gives you a powerful and unique tool and can entirely change the way that you develop.
 @y
+//////////////////////////
+Some people refer to Git's branching model as its ``killer feature,'' and it certainly sets Git apart in the VCS community.
+Why is it so special?
+The way Git branches is incredibly lightweight, making branching operations nearly instantaneous, and switching back and forth between branches generally just as fast.
+Unlike many other VCSs, Git encourages workflows that branch and merge often, even multiple times in a day.
+Understanding and mastering this feature gives you a powerful and unique tool and can entirely change the way that you develop.
+//////////////////////////
 Some people refer to Git's branching model as its ``killer feature,'' and it certainly sets Git apart in the VCS community.
 Why is it so special?
 The way Git branches is incredibly lightweight, making branching operations nearly instantaneous, and switching back and forth between branches generally just as fast.
@@ -74,7 +97,10 @@ include::book/03-git-branching/sections/rebasing.asc[]
 @x
 === Summary
 @y
+//////////////////////////
 === Summary
+//////////////////////////
+=== まとめ
 @z
 
 @x
@@ -83,6 +109,12 @@ You should feel comfortable creating and switching to new branches, switching be
 You should also be able to share your branches by pushing them to a shared server, working with others on shared branches and rebasing your branches before they are shared.
 Next, we'll cover what you'll need to run your own Git repository-hosting server.
 @y
+//////////////////////////
+We've covered basic branching and merging in Git.
+You should feel comfortable creating and switching to new branches, switching between branches and merging local branches together.
+You should also be able to share your branches by pushing them to a shared server, working with others on shared branches and rebasing your branches before they are shared.
+Next, we'll cover what you'll need to run your own Git repository-hosting server.
+//////////////////////////
 We've covered basic branching and merging in Git.
 You should feel comfortable creating and switching to new branches, switching between branches and merging local branches together.
 You should also be able to share your branches by pushing them to a shared server, working with others on shared branches and rebasing your branches before they are shared.

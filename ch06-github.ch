@@ -84,7 +84,10 @@ include::book/06-github/sections/5-scripting.asc[]
 @x
 === Summary
 @y
+//////////////////////////
 === Summary
+//////////////////////////
+=== まとめ
 @z
 
 @x

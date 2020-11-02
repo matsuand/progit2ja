@@ -3,9 +3,15 @@
 
 @x
 [[_revision_selection]]
-=== Revision Selection
 @y
 [[_revision_selection]]
+@z
+
+@x
+=== Revision Selection
+@y
+//////////////////////////
+//////////////////////////
 === Revision Selection
 @z
 
@@ -13,6 +19,8 @@
 Git allows you to refer to a single commit, set of commits, or range of commits in a number of ways.
 They aren't necessarily obvious but are helpful to know.
 @y
+//////////////////////////
+//////////////////////////
 Git allows you to refer to a single commit, set of commits, or range of commits in a number of ways.
 They aren't necessarily obvious but are helpful to know.
 @z
@@ -20,6 +28,8 @@ They aren't necessarily obvious but are helpful to know.
 @x
 ==== Single Revisions
 @y
+//////////////////////////
+//////////////////////////
 ==== Single Revisions
 @z
 
@@ -27,6 +37,8 @@ They aren't necessarily obvious but are helpful to know.
 You can obviously refer to any single commit by its full, 40-character SHA-1 hash, but there are more human-friendly ways to refer to commits as well.
 This section outlines the various ways you can refer to any commit.
 @y
+//////////////////////////
+//////////////////////////
 You can obviously refer to any single commit by its full, 40-character SHA-1 hash, but there are more human-friendly ways to refer to commits as well.
 This section outlines the various ways you can refer to any commit.
 @z
@@ -34,18 +46,24 @@ This section outlines the various ways you can refer to any commit.
 @x
 ==== Short SHA-1
 @y
+//////////////////////////
+//////////////////////////
 ==== Short SHA-1
 @z
 
 @x
 Git is smart enough to figure out what commit you're referring to if you provide the first few characters of the SHA-1 hash, as long as that partial hash is at least four characters long and unambiguous; that is, no other object in the object database can have a hash that begins with the same prefix.
 @y
+//////////////////////////
+//////////////////////////
 Git is smart enough to figure out what commit you're referring to if you provide the first few characters of the SHA-1 hash, as long as that partial hash is at least four characters long and unambiguous; that is, no other object in the object database can have a hash that begins with the same prefix.
 @z
 
 @x
 For example, to examine a specific commit where you know you added certain functionality, you might first run the `git log` command to locate the commit:
 @y
+//////////////////////////
+//////////////////////////
 For example, to examine a specific commit where you know you added certain functionality, you might first run the `git log` command to locate the commit:
 @z
 
@@ -57,6 +75,8 @@ commit 734713bc047d87bf7eac9674765ae793478c50d3
 Author: Scott Chacon <schacon@gmail.com>
 Date:   Fri Jan 2 18:32:33 2009 -0800
 @y
+//////////////////////////
+//////////////////////////
 [source,console]
 ----
 $ git log
@@ -111,6 +131,8 @@ Date:   Thu Dec 11 14:58:32 2008 -0800
 In this case, say you're interested in the commit whose hash begins with `1c002dd...`.
 You can inspect that commit with any of the following variations of `git show` (assuming the shorter versions are unambiguous):
 @y
+//////////////////////////
+//////////////////////////
 In this case, say you're interested in the commit whose hash begins with `1c002dd...`.
 You can inspect that commit with any of the following variations of `git show` (assuming the shorter versions are unambiguous):
 @z
@@ -123,6 +145,8 @@ $ git show 1c002dd4b536e7479f
 $ git show 1c002d
 ----
 @y
+//////////////////////////
+//////////////////////////
 [source,console]
 ----
 $ git show 1c002dd4b536e7479fe34593e72e6c6c1819e53b
@@ -135,6 +159,8 @@ $ git show 1c002d
 Git can figure out a short, unique abbreviation for your SHA-1 values.
 If you pass `--abbrev-commit` to the `git log` command, the output will use shorter values but keep them unique; it defaults to using seven characters but makes them longer if necessary to keep the SHA-1 unambiguous:
 @y
+//////////////////////////
+//////////////////////////
 Git can figure out a short, unique abbreviation for your SHA-1 values.
 If you pass `--abbrev-commit` to the `git log` command, the output will use shorter values but keep them unique; it defaults to using seven characters but makes them longer if necessary to keep the SHA-1 unambiguous:
 @z
@@ -148,6 +174,8 @@ ca82a6d Change the version number
 a11bef0 Initial commit
 ----
 @y
+//////////////////////////
+//////////////////////////
 [source,console]
 ----
 $ git log --abbrev-commit --pretty=oneline
@@ -161,6 +189,8 @@ a11bef0 Initial commit
 Generally, eight to ten characters are more than enough to be unique within a project.
 For example, as of February 2019, the Linux kernel (which is a fairly sizable project) has over 875,000 commits and almost seven million objects in its object database, with no two objects whose SHA-1s are identical in the first 12 characters.
 @y
+//////////////////////////
+//////////////////////////
 Generally, eight to ten characters are more than enough to be unique within a project.
 For example, as of February 2019, the Linux kernel (which is a fairly sizable project) has over 875,000 commits and almost seven million objects in its object database, with no two objects whose SHA-1s are identical in the first 12 characters.
 @z
@@ -170,6 +200,8 @@ For example, as of February 2019, the Linux kernel (which is a fairly sizable pr
 .A SHORT NOTE ABOUT SHA-1
 ====
 @y
+//////////////////////////
+//////////////////////////
 [NOTE]
 .A SHORT NOTE ABOUT SHA-1
 ====
@@ -179,6 +211,8 @@ For example, as of February 2019, the Linux kernel (which is a fairly sizable pr
 A lot of people become concerned at some point that they will, by random happenstance, have two distinct objects in their repository that hash to the same SHA-1 value.
 What then?
 @y
+//////////////////////////
+//////////////////////////
 A lot of people become concerned at some point that they will, by random happenstance, have two distinct objects in their repository that hash to the same SHA-1 value.
 What then?
 @z
@@ -187,6 +221,8 @@ What then?
 If you do happen to commit an object that hashes to the same SHA-1 value as a previous _different_ object in your repository, Git will see the previous object already in your Git database, assume it was already written and simply reuse it.
 If you try to check out that object again at some point, you'll always get the data of the first object.
 @y
+//////////////////////////
+//////////////////////////
 If you do happen to commit an object that hashes to the same SHA-1 value as a previous _different_ object in your repository, Git will see the previous object already in your Git database, assume it was already written and simply reuse it.
 If you try to check out that object again at some point, you'll always get the data of the first object.
 @z
@@ -200,6 +236,8 @@ is 1.2 x 10^24^
 or 1 million billion billion.
 That's 1,200 times the number of grains of sand on the earth.
 @y
+//////////////////////////
+//////////////////////////
 However, you should be aware of how ridiculously unlikely this scenario is.
 The SHA-1 digest is 20 bytes or 160 bits.
 The number of randomly hashed objects needed to ensure a 50% probability of a single collision is about 2^80^
@@ -212,11 +250,16 @@ That's 1,200 times the number of grains of sand on the earth.
 @x
 Here's an example to give you an idea of what it would take to get a SHA-1 collision.
 If all 6.5 billion humans on Earth were programming, and every second, each one was producing code that was the equivalent of the entire Linux kernel history (6.5 million Git objects) and pushing it into one enormous Git repository, it would take roughly 2 years until that repository contained enough objects to have a 50% probability of a single SHA-1 object collision.
-Thus, a SHA-1 collision is less likely than every member of your programming team being attacked and killed by wolves in unrelated incidents on the same night.
+Thus, an organic SHA-1 collision is less likely than every member of your programming team being attacked and killed by wolves in unrelated incidents on the same night.
 @y
+//////////////////////////
 Here's an example to give you an idea of what it would take to get a SHA-1 collision.
 If all 6.5 billion humans on Earth were programming, and every second, each one was producing code that was the equivalent of the entire Linux kernel history (6.5 million Git objects) and pushing it into one enormous Git repository, it would take roughly 2 years until that repository contained enough objects to have a 50% probability of a single SHA-1 object collision.
-Thus, a SHA-1 collision is less likely than every member of your programming team being attacked and killed by wolves in unrelated incidents on the same night.
+Thus, an organic SHA-1 collision is less likely than every member of your programming team being attacked and killed by wolves in unrelated incidents on the same night.
+//////////////////////////
+Here's an example to give you an idea of what it would take to get a SHA-1 collision.
+If all 6.5 billion humans on Earth were programming, and every second, each one was producing code that was the equivalent of the entire Linux kernel history (6.5 million Git objects) and pushing it into one enormous Git repository, it would take roughly 2 years until that repository contained enough objects to have a 50% probability of a single SHA-1 object collision.
+Thus, an organic SHA-1 collision is less likely than every member of your programming team being attacked and killed by wolves in unrelated incidents on the same night.
 @z
 
 @x
@@ -227,9 +270,15 @@ Thus, a SHA-1 collision is less likely than every member of your programming tea
 
 @x
 [[_branch_references]]
+@y
+[[_branch_references]]
+@z
+
+@x
 ==== Branch References
 @y
-[[_branch_references]]
+//////////////////////////
+//////////////////////////
 ==== Branch References
 @z
 
@@ -237,6 +286,8 @@ Thus, a SHA-1 collision is less likely than every member of your programming tea
 One straightforward way to refer to a particular commit is if it's the commit at the tip of a branch; in that case, you can simply use the branch name in any Git command that expects a reference to a commit.
 For instance, if you want to examine the last commit object on a branch, the following commands are equivalent, assuming that the `topic1` branch points to commit `ca82a6d...`:
 @y
+//////////////////////////
+//////////////////////////
 One straightforward way to refer to a particular commit is if it's the commit at the tip of a branch; in that case, you can simply use the branch name in any Git command that expects a reference to a commit.
 For instance, if you want to examine the last commit object on a branch, the following commands are equivalent, assuming that the `topic1` branch points to commit `ca82a6d...`:
 @z
@@ -248,6 +299,8 @@ $ git show ca82a6dff817ec66f44342007202690a93763949
 $ git show topic1
 ----
 @y
+//////////////////////////
+//////////////////////////
 [source,console]
 ----
 $ git show ca82a6dff817ec66f44342007202690a93763949
@@ -261,6 +314,8 @@ You can see <<ch10-git-internals#ch10-git-internals>> for more information about
 However, it can be helpful sometimes when you need to see what's really going on.
 Here you can run `rev-parse` on your branch.
 @y
+//////////////////////////
+//////////////////////////
 If you want to see which specific SHA-1 a branch points to, or if you want to see what any of these examples boils down to in terms of SHA-1s, you can use a Git plumbing tool called `rev-parse`.
 You can see <<ch10-git-internals#ch10-git-internals>> for more information about plumbing tools; basically, `rev-parse` exists for lower-level operations and isn't designed to be used in day-to-day operations.
 However, it can be helpful sometimes when you need to see what's really going on.
@@ -274,6 +329,8 @@ $ git rev-parse topic1
 ca82a6dff817ec66f44342007202690a93763949
 ----
 @y
+//////////////////////////
+//////////////////////////
 [source,console]
 ----
 $ git rev-parse topic1
@@ -283,21 +340,31 @@ ca82a6dff817ec66f44342007202690a93763949
 
 @x
 [[_git_reflog]]
+@y
+[[_git_reflog]]
+@z
+
+@x
 ==== RefLog Shortnames
 @y
-[[_git_reflog]]
+//////////////////////////
+//////////////////////////
 ==== RefLog Shortnames
 @z
 
 @x
 One of the things Git does in the background while you're working away is keep a ``reflog'' -- a log of where your HEAD and branch references have been for the last few months.
 @y
+//////////////////////////
+//////////////////////////
 One of the things Git does in the background while you're working away is keep a ``reflog'' -- a log of where your HEAD and branch references have been for the last few months.
 @z
 
 @x
 You can see your reflog by using `git reflog`:
 @y
+//////////////////////////
+//////////////////////////
 You can see your reflog by using `git reflog`:
 @z
 
@@ -314,6 +381,8 @@ d921970 HEAD@{1}: merge phedders/rdocs: Merge made by the 'recursive' strategy.
 7e05da5 HEAD@{6}: rebase -i (pick): updating HEAD
 ----
 @y
+//////////////////////////
+//////////////////////////
 [source,console]
 ----
 $ git reflog
@@ -332,6 +401,8 @@ Every time your branch tip is updated for any reason, Git stores that informatio
 You can use your reflog data to refer to older commits as well.
 For example, if you want to see the fifth prior value of the HEAD of your repository, you can use the `@{5}` reference that you see in the reflog output:
 @y
+//////////////////////////
+//////////////////////////
 Every time your branch tip is updated for any reason, Git stores that information for you in this temporary history.
 You can use your reflog data to refer to older commits as well.
 For example, if you want to see the fifth prior value of the HEAD of your repository, you can use the `@{5}` reference that you see in the reflog output:
@@ -343,6 +414,8 @@ For example, if you want to see the fifth prior value of the HEAD of your reposi
 $ git show HEAD@{5}
 ----
 @y
+//////////////////////////
+//////////////////////////
 [source,console]
 ----
 $ git show HEAD@{5}
@@ -353,6 +426,8 @@ $ git show HEAD@{5}
 You can also use this syntax to see where a branch was some specific amount of time ago.
 For instance, to see where your `master` branch was yesterday, you can type:
 @y
+//////////////////////////
+//////////////////////////
 You can also use this syntax to see where a branch was some specific amount of time ago.
 For instance, to see where your `master` branch was yesterday, you can type:
 @z
@@ -363,6 +438,8 @@ For instance, to see where your `master` branch was yesterday, you can type:
 $ git show master@{yesterday}
 ----
 @y
+//////////////////////////
+//////////////////////////
 [source,console]
 ----
 $ git show master@{yesterday}
@@ -373,6 +450,8 @@ $ git show master@{yesterday}
 That would show you where tip of your `master` branch was yesterday.
 This technique only works for data that's still in your reflog, so you can't use it to look for commits older than a few months.
 @y
+//////////////////////////
+//////////////////////////
 That would show you where tip of your `master` branch was yesterday.
 This technique only works for data that's still in your reflog, so you can't use it to look for commits older than a few months.
 @z
@@ -380,6 +459,8 @@ This technique only works for data that's still in your reflog, so you can't use
 @x
 To see reflog information formatted like the `git log` output, you can run `git log -g`:
 @y
+//////////////////////////
+//////////////////////////
 To see reflog information formatted like the `git log` output, you can run `git log -g`:
 @z
 
@@ -393,6 +474,8 @@ Reflog message: commit: Fix refs handling, add gc auto, update tests
 Author: Scott Chacon <schacon@gmail.com>
 Date:   Fri Jan 2 18:32:33 2009 -0800
 @y
+//////////////////////////
+//////////////////////////
 [source,console]
 ----
 $ git log -g master
@@ -436,6 +519,8 @@ It's important to note that reflog information is strictly local -- it's a log o
 The references won't be the same on someone else's copy of the repository; also, right after you initially clone a repository, you'll have an empty reflog, as no activity has occurred yet in your repository.
 Running `git show HEAD@{2.months.ago}` will show you the matching commit only if you cloned the project at least two months ago -- if you cloned it any more recently than that, you'll see only your first local commit.
 @y
+//////////////////////////
+//////////////////////////
 It's important to note that reflog information is strictly local -- it's a log only of what _you've_ done in _your_ repository.
 The references won't be the same on someone else's copy of the repository; also, right after you initially clone a repository, you'll have an empty reflog, as no activity has occurred yet in your repository.
 Running `git show HEAD@{2.months.ago}` will show you the matching commit only if you cloned the project at least two months ago -- if you cloned it any more recently than that, you'll see only your first local commit.
@@ -448,6 +533,8 @@ Running `git show HEAD@{2.months.ago}` will show you the matching commit only if
 If you have a UNIX or Linux background, you can think of the reflog as Git's version of shell history, which emphasizes that what's there is clearly relevant only for you and your ``session'', and has nothing to do with anyone else who might be working on the same machine.
 ====
 @y
+//////////////////////////
+//////////////////////////
 [TIP]
 .Think of the reflog as Git's version of shell history
 ====
@@ -460,6 +547,8 @@ If you have a UNIX or Linux background, you can think of the reflog as Git's ver
 .Escaping braces in PowerShell
 ====
 @y
+//////////////////////////
+//////////////////////////
 [NOTE]
 .Escaping braces in PowerShell
 ====
@@ -469,6 +558,8 @@ If you have a UNIX or Linux background, you can think of the reflog as Git's ver
 When using PowerShell, braces like `{` and `}` are special characters and must be escaped.
 You can escape them with a backtick ` or put the commit reference in quotes:
 @y
+//////////////////////////
+//////////////////////////
 When using PowerShell, braces like `{` and `}` are special characters and must be escaped.
 You can escape them with a backtick ` or put the commit reference in quotes:
 @z
@@ -481,6 +572,8 @@ $ git show HEAD@`{0`}   # OK
 $ git show "HEAD@{0}"   # OK
 ----
 @y
+//////////////////////////
+//////////////////////////
 [source,console]
 ----
 $ git show HEAD@{0}     # will NOT work
@@ -498,6 +591,8 @@ $ git show "HEAD@{0}"   # OK
 @x
 ==== Ancestry References
 @y
+//////////////////////////
+//////////////////////////
 ==== Ancestry References
 @z
 
@@ -506,6 +601,8 @@ The other main way to specify a commit is via its ancestry.
 If you place a `^` (caret) at the end of a reference, Git resolves it to mean the parent of that commit.
 Suppose you look at the history of your project:
 @y
+//////////////////////////
+//////////////////////////
 The other main way to specify a commit is via its ancestry.
 If you place a `^` (caret) at the end of a reference, Git resolves it to mean the parent of that commit.
 Suppose you look at the history of your project:
@@ -525,6 +622,8 @@ $ git log --pretty=format:'%h %s' --graph
 * 9b29157 Add open3_detach to gemspec file list
 ----
 @y
+//////////////////////////
+//////////////////////////
 [source,console]
 ----
 $ git log --pretty=format:'%h %s' --graph
@@ -542,6 +641,8 @@ $ git log --pretty=format:'%h %s' --graph
 @x
 Then, you can see the previous commit by specifying `HEAD^`, which means ``the parent of HEAD'':
 @y
+//////////////////////////
+//////////////////////////
 Then, you can see the previous commit by specifying `HEAD^`, which means ``the parent of HEAD'':
 @z
 
@@ -554,6 +655,8 @@ Merge: 1c002dd... 35cfb2b...
 Author: Scott Chacon <schacon@gmail.com>
 Date:   Thu Dec 11 15:08:43 2008 -0800
 @y
+//////////////////////////
+//////////////////////////
 [source,console]
 ----
 $ git show HEAD^
@@ -576,6 +679,8 @@ Date:   Thu Dec 11 15:08:43 2008 -0800
 .Escaping the caret on Windows
 ====
 @y
+//////////////////////////
+//////////////////////////
 [NOTE]
 .Escaping the caret on Windows
 ====
@@ -585,6 +690,8 @@ Date:   Thu Dec 11 15:08:43 2008 -0800
 On Windows in `cmd.exe`, `^` is a special character and needs to be treated differently.
 You can either double it or put the commit reference in quotes:
 @y
+//////////////////////////
+//////////////////////////
 On Windows in `cmd.exe`, `^` is a special character and needs to be treated differently.
 You can either double it or put the commit reference in quotes:
 @z
@@ -597,6 +704,8 @@ $ git show HEAD^^    # OK
 $ git show "HEAD^"   # OK
 ----
 @y
+//////////////////////////
+//////////////////////////
 [source,console]
 ----
 $ git show HEAD^     # will NOT work on Windows
@@ -615,6 +724,8 @@ $ git show "HEAD^"   # OK
 You can also specify a number after the `^` to identify _which_ parent you want; for example, `d921970^2` means ``the second parent of d921970.''
 This syntax is useful only for merge commits, which have more than one parent -- the _first_ parent of a merge commit is from the branch you were on when you merged (frequently `master`), while the _second_ parent of a merge commit is from the branch that was merged (say, `topic`):
 @y
+//////////////////////////
+//////////////////////////
 You can also specify a number after the `^` to identify _which_ parent you want; for example, `d921970^2` means ``the second parent of d921970.''
 This syntax is useful only for merge commits, which have more than one parent -- the _first_ parent of a merge commit is from the branch you were on when you merged (frequently `master`), while the _second_ parent of a merge commit is from the branch that was merged (say, `topic`):
 @z
@@ -627,6 +738,8 @@ commit 1c002dd4b536e7479fe34593e72e6c6c1819e53b
 Author: Scott Chacon <schacon@gmail.com>
 Date:   Thu Dec 11 14:58:32 2008 -0800
 @y
+//////////////////////////
+//////////////////////////
 [source,console]
 ----
 $ git show d921970^
@@ -668,6 +781,8 @@ The difference becomes apparent when you specify a number.
 `HEAD~2` means ``the first parent of the first parent,'' or ``the grandparent'' -- it traverses the first parents the number of times you specify.
 For example, in the history listed earlier, `HEAD~3` would be:
 @y
+//////////////////////////
+//////////////////////////
 The other main ancestry specification is the `~` (tilde).
 This also refers to the first parent, so `HEAD~` and `HEAD^` are equivalent.
 The difference becomes apparent when you specify a number.
@@ -683,6 +798,8 @@ commit 1c3618887afb5fbcbea25b7c013f4e2114448b8d
 Author: Tom Preston-Werner <tom@mojombo.com>
 Date:   Fri Nov 7 13:47:59 2008 -0500
 @y
+//////////////////////////
+//////////////////////////
 [source,console]
 ----
 $ git show HEAD~3
@@ -702,6 +819,8 @@ Date:   Fri Nov 7 13:47:59 2008 -0500
 @x
 This can also be written `HEAD~~~`, which again is the first parent of the first parent of the first parent:
 @y
+//////////////////////////
+//////////////////////////
 This can also be written `HEAD~~~`, which again is the first parent of the first parent of the first parent:
 @z
 
@@ -713,6 +832,8 @@ commit 1c3618887afb5fbcbea25b7c013f4e2114448b8d
 Author: Tom Preston-Werner <tom@mojombo.com>
 Date:   Fri Nov 7 13:47:59 2008 -0500
 @y
+//////////////////////////
+//////////////////////////
 [source,console]
 ----
 $ git show HEAD~~~
@@ -732,14 +853,22 @@ Date:   Fri Nov 7 13:47:59 2008 -0500
 @x
 You can also combine these syntaxes -- you can get the second parent of the previous reference (assuming it was a merge commit) by using `HEAD~3^2`, and so on.
 @y
+//////////////////////////
+//////////////////////////
 You can also combine these syntaxes -- you can get the second parent of the previous reference (assuming it was a merge commit) by using `HEAD~3^2`, and so on.
 @z
 
 @x
 [[_commit_ranges]]
+@y
+[[_commit_ranges]]
+@z
+
+@x
 ==== Commit Ranges
 @y
-[[_commit_ranges]]
+//////////////////////////
+//////////////////////////
 ==== Commit Ranges
 @z
 
@@ -747,6 +876,8 @@ You can also combine these syntaxes -- you can get the second parent of the prev
 Now that you can specify individual commits, let's see how to specify ranges of commits.
 This is particularly useful for managing your branches -- if you have a lot of branches, you can use range specifications to answer questions such as, ``What work is on this branch that I haven't yet merged into my main branch?''
 @y
+//////////////////////////
+//////////////////////////
 Now that you can specify individual commits, let's see how to specify ranges of commits.
 This is particularly useful for managing your branches -- if you have a lot of branches, you can use range specifications to answer questions such as, ``What work is on this branch that I haven't yet merged into my main branch?''
 @z
@@ -754,6 +885,8 @@ This is particularly useful for managing your branches -- if you have a lot of b
 @x
 ===== Double Dot
 @y
+//////////////////////////
+//////////////////////////
 ===== Double Dot
 @z
 
@@ -762,6 +895,8 @@ The most common range specification is the double-dot syntax.
 This basically asks Git to resolve a range of commits that are reachable from one commit but aren't reachable from another.
 For example, say you have a commit history that looks like <<double_dot>>.
 @y
+//////////////////////////
+//////////////////////////
 The most common range specification is the double-dot syntax.
 This basically asks Git to resolve a range of commits that are reachable from one commit but aren't reachable from another.
 For example, say you have a commit history that looks like <<double_dot>>.
@@ -769,10 +904,16 @@ For example, say you have a commit history that looks like <<double_dot>>.
 
 @x
 [[double_dot]]
+@y
+[[double_dot]]
+@z
+
+@x
 .Example history for range selection
 image::images/double-dot.png[Example history for range selection]
 @y
-[[double_dot]]
+//////////////////////////
+//////////////////////////
 .Example history for range selection
 image::images/double-dot.png[Example history for range selection]
 @z
@@ -782,6 +923,8 @@ Say you want to see what is in your `experiment` branch that hasn't yet been mer
 You can ask Git to show you a log of just those commits with `master..experiment` -- that means ``all commits reachable from `experiment` that aren't reachable from `master`.''
 For the sake of brevity and clarity in these examples, the letters of the commit objects from the diagram are used in place of the actual log output in the order that they would display:
 @y
+//////////////////////////
+//////////////////////////
 Say you want to see what is in your `experiment` branch that hasn't yet been merged into your `master` branch.
 You can ask Git to show you a log of just those commits with `master..experiment` -- that means ``all commits reachable from `experiment` that aren't reachable from `master`.''
 For the sake of brevity and clarity in these examples, the letters of the commit objects from the diagram are used in place of the actual log output in the order that they would display:
@@ -795,6 +938,8 @@ D
 C
 ----
 @y
+//////////////////////////
+//////////////////////////
 [source,console]
 ----
 $ git log master..experiment
@@ -807,6 +952,8 @@ C
 If, on the other hand, you want to see the opposite -- all commits in `master` that aren't in `experiment` -- you can reverse the branch names.
 `experiment..master` shows you everything in `master` not reachable from `experiment`:
 @y
+//////////////////////////
+//////////////////////////
 If, on the other hand, you want to see the opposite -- all commits in `master` that aren't in `experiment` -- you can reverse the branch names.
 `experiment..master` shows you everything in `master` not reachable from `experiment`:
 @z
@@ -819,6 +966,8 @@ F
 E
 ----
 @y
+//////////////////////////
+//////////////////////////
 [source,console]
 ----
 $ git log experiment..master
@@ -831,6 +980,8 @@ E
 This is useful if you want to keep the `experiment` branch up to date and preview what you're about to merge.
 Another frequent use of this syntax is to see what you're about to push to a remote:
 @y
+//////////////////////////
+//////////////////////////
 This is useful if you want to keep the `experiment` branch up to date and preview what you're about to merge.
 Another frequent use of this syntax is to see what you're about to push to a remote:
 @z
@@ -841,6 +992,8 @@ Another frequent use of this syntax is to see what you're about to push to a rem
 $ git log origin/master..HEAD
 ----
 @y
+//////////////////////////
+//////////////////////////
 [source,console]
 ----
 $ git log origin/master..HEAD
@@ -853,6 +1006,8 @@ If you run a `git push` and your current branch is tracking `origin/master`, the
 You can also leave off one side of the syntax to have Git assume `HEAD`.
 For example, you can get the same results as in the previous example by typing `git log origin/master..` -- Git substitutes `HEAD` if one side is missing.
 @y
+//////////////////////////
+//////////////////////////
 This command shows you any commits in your current branch that aren't in the `master` branch on your `origin` remote.
 If you run a `git push` and your current branch is tracking `origin/master`, the commits listed by `git log origin/master..HEAD` are the commits that will be transferred to the server.
 You can also leave off one side of the syntax to have Git assume `HEAD`.
@@ -862,6 +1017,8 @@ For example, you can get the same results as in the previous example by typing `
 @x
 ===== Multiple Points
 @y
+//////////////////////////
+//////////////////////////
 ===== Multiple Points
 @z
 
@@ -870,6 +1027,8 @@ The double-dot syntax is useful as a shorthand, but perhaps you want to specify 
 Git allows you to do this by using either the `^` character or `--not` before any reference from which you don't want to see reachable commits.
 Thus, the following three commands are equivalent:
 @y
+//////////////////////////
+//////////////////////////
 The double-dot syntax is useful as a shorthand, but perhaps you want to specify more than two branches to indicate your revision, such as seeing what commits are in any of several branches that aren't in the branch you're currently on.
 Git allows you to do this by using either the `^` character or `--not` before any reference from which you don't want to see reachable commits.
 Thus, the following three commands are equivalent:
@@ -883,6 +1042,8 @@ $ git log ^refA refB
 $ git log refB --not refA
 ----
 @y
+//////////////////////////
+//////////////////////////
 [source,console]
 ----
 $ git log refA..refB
@@ -895,6 +1056,8 @@ $ git log refB --not refA
 This is nice because with this syntax you can specify more than two references in your query, which you cannot do with the double-dot syntax.
 For instance, if you want to see all commits that are reachable from `refA` or `refB` but not from `refC`, you can use either of:
 @y
+//////////////////////////
+//////////////////////////
 This is nice because with this syntax you can specify more than two references in your query, which you cannot do with the double-dot syntax.
 For instance, if you want to see all commits that are reachable from `refA` or `refB` but not from `refC`, you can use either of:
 @z
@@ -906,6 +1069,8 @@ $ git log refA refB ^refC
 $ git log refA refB --not refC
 ----
 @y
+//////////////////////////
+//////////////////////////
 [source,console]
 ----
 $ git log refA refB ^refC
@@ -916,14 +1081,22 @@ $ git log refA refB --not refC
 @x
 This makes for a very powerful revision query system that should help you figure out what is in your branches.
 @y
+//////////////////////////
+//////////////////////////
 This makes for a very powerful revision query system that should help you figure out what is in your branches.
 @z
 
 @x
 [[_triple_dot]]
+@y
+[[_triple_dot]]
+@z
+
+@x
 ===== Triple Dot
 @y
-[[_triple_dot]]
+//////////////////////////
+//////////////////////////
 ===== Triple Dot
 @z
 
@@ -932,6 +1105,8 @@ The last major range-selection syntax is the triple-dot syntax, which specifies 
 Look back at the example commit history in <<double_dot>>.
 If you want to see what is in `master` or `experiment` but not any common references, you can run:
 @y
+//////////////////////////
+//////////////////////////
 The last major range-selection syntax is the triple-dot syntax, which specifies all the commits that are reachable by _either_ of two references but not by both of them.
 Look back at the example commit history in <<double_dot>>.
 If you want to see what is in `master` or `experiment` but not any common references, you can run:
@@ -947,6 +1122,8 @@ D
 C
 ----
 @y
+//////////////////////////
+//////////////////////////
 [source,console]
 ----
 $ git log master...experiment
@@ -960,6 +1137,8 @@ C
 @x
 Again, this gives you normal `log` output but shows you only the commit information for those four commits, appearing in the traditional commit date ordering.
 @y
+//////////////////////////
+//////////////////////////
 Again, this gives you normal `log` output but shows you only the commit information for those four commits, appearing in the traditional commit date ordering.
 @z
 
@@ -967,6 +1146,8 @@ Again, this gives you normal `log` output but shows you only the commit informat
 A common switch to use with the `log` command in this case is `--left-right`, which shows you which side of the range each commit is in.
 This helps make the output more useful:
 @y
+//////////////////////////
+//////////////////////////
 A common switch to use with the `log` command in this case is `--left-right`, which shows you which side of the range each commit is in.
 This helps make the output more useful:
 @z
@@ -981,6 +1162,8 @@ $ git log --left-right master...experiment
 > C
 ----
 @y
+//////////////////////////
+//////////////////////////
 [source,console]
 ----
 $ git log --left-right master...experiment
@@ -994,5 +1177,7 @@ $ git log --left-right master...experiment
 @x
 With these tools, you can much more easily let Git know what commit or commits you want to inspect.
 @y
+//////////////////////////
+//////////////////////////
 With these tools, you can much more easily let Git know what commit or commits you want to inspect.
 @z

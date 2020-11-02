@@ -96,7 +96,10 @@ include::book/10-git-internals/sections/environment.asc[]
 @x
 === Summary
 @y
+//////////////////////////
 === Summary
+//////////////////////////
+=== まとめ
 @z
 
 @x

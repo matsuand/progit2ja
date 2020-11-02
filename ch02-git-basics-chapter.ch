@@ -3,10 +3,17 @@
 
 @x
 [[ch02-git-basics-chapter]]
-== Git Basics
 @y
 [[ch02-git-basics-chapter]]
-== Git の基本操作
+@z
+
+@x
+== Git Basics
+@y
+//////////////////////////
+== Git Basics
+//////////////////////////
+== Gitの基本操作
 @z
 
 @x
@@ -15,6 +22,12 @@ This chapter covers every basic command you need to do the vast majority of the 
 By the end of the chapter, you should be able to configure and initialize a repository, begin and stop tracking files, and stage and commit changes.
 We'll also show you how to set up Git to ignore certain files and file patterns, how to undo mistakes quickly and easily, how to browse the history of your project and view changes between commits, and how to push and pull from remote repositories.
 @y
+//////////////////////////
+If you can read only one chapter to get going with Git, this is it.
+This chapter covers every basic command you need to do the vast majority of the things you'll eventually spend your time doing with Git.
+By the end of the chapter, you should be able to configure and initialize a repository, begin and stop tracking files, and stage and commit changes.
+We'll also show you how to set up Git to ignore certain files and file patterns, how to undo mistakes quickly and easily, how to browse the history of your project and view changes between commits, and how to push and pull from remote repositories.
+//////////////////////////
 Git をはじめるにあたって 1 つの章だけを読めということなら本章になります。
 ここでは Git の基本的なコマンドをすべて説明しています。
 今後 Git を使って行う作業の大半は、このコマンドを使って実現していきます。
@@ -67,6 +80,9 @@ include::book/02-git-basics/sections/aliases.asc[]
 @x
 === Summary
 @y
+//////////////////////////
+=== Summary
+//////////////////////////
 === まとめ
 @z
 
@@ -74,6 +90,10 @@ include::book/02-git-basics/sections/aliases.asc[]
 At this point, you can do all the basic local Git operations -- creating or cloning a repository, making changes, staging and committing those changes, and viewing the history of all the changes the repository has been through.
 Next, we'll cover Git's killer feature: its branching model.
 @y
+//////////////////////////
+At this point, you can do all the basic local Git operations -- creating or cloning a repository, making changes, staging and committing those changes, and viewing the history of all the changes the repository has been through.
+Next, we'll cover Git's killer feature: its branching model.
+//////////////////////////
 At this point, you can do all the basic local Git operations -- creating or cloning a repository, making changes, staging and committing those changes, and viewing the history of all the changes the repository has been through.
 Next, we'll cover Git's killer feature: its branching model.
 @z

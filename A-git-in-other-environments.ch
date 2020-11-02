@@ -74,7 +74,10 @@ include::book/A-git-in-other-environments/sections/powershell.asc[]
 @x
 === Summary
 @y
+//////////////////////////
 === Summary
+//////////////////////////
+=== まとめ
 @z
 
 @x

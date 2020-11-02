@@ -46,7 +46,10 @@ include::book/08-customizing-git/sections/policy.asc[]
 @x
 === Summary
 @y
+//////////////////////////
 === Summary
+//////////////////////////
+=== まとめ
 @z
 
 @x

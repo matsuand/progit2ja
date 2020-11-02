@@ -1,9 +1,9 @@
 CTIE=ctie/ctie$EXEEXT
 AC_SUBST(CTIE)
 
-ORIGDIR=../progit2.git
+ORIGDIR=../progit2
 AC_ARG_WITH(origdir,
-[  --with-origdir=DIR      Specify ORIG sources directory [[DIR=../progit2.git]]],
+[  --with-origdir=DIR      Specify ORIG sources directory [[DIR=../progit2]]],
 [
   if test -d "${with_origdir}" ; then
     ORIGDIR=${with_origdir}
@@ -21,6 +21,27 @@ AC_SUBST(ORIGDIR)
 
 abs_origdir=`(cd $ORIGDIR && pwd)`
 AC_SUBST(abs_origdir)
+
+GITSCMDIR=../git-scm.com
+AC_ARG_WITH(gitscmdir,
+[  --with-gitscmdir=DIR    Specify git-scm.com directory [[DIR=../git-scm.com]]],
+[
+  if test -d "${with_gitscmdir}" ; then
+    GITSCMDIR=${with_gitscmdir}
+  fi
+]
+)
+AC_MSG_CHECKING([for the gitscm files])
+if test ! -f "${GITSCMDIR}/lib/tasks/book2.rake"; then
+  AC_MSG_RESULT([no])
+  AC_MSG_ERROR([The gitscm files not found in ${GITSCMDIR}])
+else
+  AC_MSG_RESULT([ok])
+fi
+AC_SUBST(GITSCMDIR)
+
+abs_gitscmdir=`(cd $GITSCMDIR && pwd)`
+AC_SUBST(abs_gitscmdir)
 
 INSTALLDIR=.
 AC_ARG_WITH(installdir,

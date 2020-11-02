@@ -1,10 +1,15 @@
 thisdir  = images
 origdir  = @abs_origdir@/$(thisdir)
+top_origdir = @abs_origdir@
 srcdir   = @srcdir@
 mysrcdir = $(shell cd $(srcdir) && pwd)
-abs_installdir = @abs_installdir@
+abs_installdir = @abs_installdir@/$(thisdir)
+abs_assetsdir  = $(shell cd $(abs_top_srcdir)/docs/assets/images && pwd)
 
-copyfiles = \
+.PHONY: all
+all: tgtdir $(srcs_with_prefix) $(srcs2_with_prefix)
+
+images = \
 	2fa-1.png \
 	account-settings.png \
 	advance-master.png \
@@ -306,16 +311,21 @@ copyfiles = \
 	your-profile.png \
 	zsh-oh-my.png \
 	zsh-prompt.png
+images2 = \
+	logo@2x.png
 
-copies  = ${addprefix $(abs_installdir)/images/, $(copyfiles)}
-copies2 = ${addprefix $(mysrcdir)/, $(copyfiles)}
+srcs = $(images)
+srcs_with_prefix = ${addprefix $(abs_assetsdir)/,$(srcs)}
+srcs2 = $(images2)
+srcs2_with_prefix = ${addprefix $(abs_assetsdir)/,$(srcs2)}
 
-.PHONY: all
-all: $(copies) $(copies2)
+.PHONY: tgtdir
+tgtdir:
+	@$(MKDIR_P) $(abs_assetsdir)
 
--include copyfiles.sub
--include copyfiles2.sub
-copyfiles.sub: $(top_srcdir)/bin/copymake.sh $(top_builddir)/config.log
-	@$(top_srcdir)/bin/copymake.sh copyfiles $(abs_installdir) $(copyfiles)
-copyfiles2.sub: $(top_srcdir)/bin/copymake2.sh $(top_builddir)/config.log
-	@$(top_srcdir)/bin/copymake2.sh copyfiles2 $(origdir) $(mysrcdir) $(copyfiles)
+-include copyimages.sub
+copyimages.sub: $(top_srcdir)/bin/copymake.sh $(top_builddir)/config.log
+	@$(top_srcdir)/bin/copymake.sh copyimages $(abs_assetsdir) $(srcs)
+-include copyimages2.sub
+copyimages2.sub: $(top_srcdir)/bin/copymake2.sh $(top_builddir)/config.log
+	@$(top_srcdir)/bin/copymake2.sh copyimages2 $(abs_gitscmdir)/public/images $(abs_assetsdir) $(srcs2)
