@@ -18,7 +18,7 @@ $select = $select."inner join xrefs B on A.id=B.section_id ";
 $select = $select."inner join chapters C on A.chapter_id=C.id ";
 $select = $select."where B.book_id=2 ";
 $select = $select."group by A.title,A.slug,A.number,C.chapter_number,C.chapter_type,C.title ";
-$select = $select."order by C.chapter_type desc,C.chapter_number,A.number ";
+$select = $select."order by C.chapter_type desc,cast(C.chapter_number as int),A.number ";
 
 my $dbh = DBI->connect("dbi:SQLite:dbname=development.sqlite3");
 my $sth = $dbh->prepare($select);
@@ -80,6 +80,12 @@ while (my @row = $sth->fetchrow_array) {
 $sth->finish;
 undef $sth;
 $dbh->disconnect;
+
+  open(OUT2,">"."htmls.txt");
+  foreach my $each (@html_files) {
+    print OUT2 $each,"\n";
+  }
+  close(OUT2);
 
 &setPrevNext;
 
