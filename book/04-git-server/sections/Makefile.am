@@ -12,13 +12,13 @@ ctie:
 
 bases = \
 	generating-ssh-key \
-	git-daemon \
-	git-on-a-server \
-	gitlab \
-	gitweb \
-	hosted \
-	protocols \
-	setting-up-server \
+	git-daemon         \
+	git-on-a-server    \
+	gitlab             \
+	gitweb             \
+	hosted             \
+	protocols          \
+	setting-up-server  \
 	smart-http
 
 ch_ascs = $(bases:=.ch)  # ch means change files

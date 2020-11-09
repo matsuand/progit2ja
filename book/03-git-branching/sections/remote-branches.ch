@@ -55,18 +55,18 @@ Git also gives you your own local `master` branch starting at the same place as 
 
 @x
 [NOTE]
-.``origin'' is not special
+."`origin`" is not special
 ====
-Just like the branch name ``master'' does not have any special meaning in Git, neither does ``origin''.
-While ``master'' is the default name for a starting branch when you run `git init` which is the only reason it's widely used, ``origin'' is the default name for a remote when you run `git clone`.
+Just like the branch name "`master`" does not have any special meaning in Git, neither does "`origin`".
+While "`master`" is the default name for a starting branch when you run `git init` which is the only reason it's widely used, "`origin`" is the default name for a remote when you run `git clone`.
 If you run `git clone -o booyah` instead, then you will have `booyah/master` as your default remote branch.(((origin)))
 ====
 @y
 [NOTE]
-.``origin'' is not special
+."`origin`" is not special
 ====
-Just like the branch name ``master'' does not have any special meaning in Git, neither does ``origin''.
-While ``master'' is the default name for a starting branch when you run `git init` which is the only reason it's widely used, ``origin'' is the default name for a remote when you run `git clone`.
+Just like the branch name "`master`" does not have any special meaning in Git, neither does "`origin`".
+While "`master`" is the default name for a starting branch when you run `git init` which is the only reason it's widely used, "`origin`" is the default name for a remote when you run `git clone`.
 If you run `git clone -o booyah` instead, then you will have `booyah/master` as your default remote branch.(((origin)))
 ====
 @z
@@ -97,10 +97,10 @@ image::images/remote-branches-2.png[Local and remote work can diverge]
 
 @x
 To synchronize your work with a given remote, you run a `git fetch <remote>` command (in our case, `git fetch origin`).
-This command looks up which server ``origin'' is (in this case, it's `git.ourcompany.com`), fetches any data from it that you don't yet have, and updates your local database, moving your `origin/master` pointer to its new, more up-to-date position.
+This command looks up which server "`origin`" is (in this case, it's `git.ourcompany.com`), fetches any data from it that you don't yet have, and updates your local database, moving your `origin/master` pointer to its new, more up-to-date position.
 @y
 To synchronize your work with a given remote, you run a `git fetch <remote>` command (in our case, `git fetch origin`).
-This command looks up which server ``origin'' is (in this case, it's `git.ourcompany.com`), fetches any data from it that you don't yet have, and updates your local database, moving your `origin/master` pointer to its new, more up-to-date position.
+This command looks up which server "`origin`" is (in this case, it's `git.ourcompany.com`), fetches any data from it that you don't yet have, and updates your local database, moving your `origin/master` pointer to its new, more up-to-date position.
 @z
 
 @x
@@ -203,16 +203,16 @@ To https://github.com/schacon/simplegit
 
 @x
 This is a bit of a shortcut.
-Git automatically expands the `serverfix` branchname out to `refs/heads/serverfix:refs/heads/serverfix`, which means, ``Take my `serverfix` local branch and push it to update the remote's `serverfix` branch.''
+Git automatically expands the `serverfix` branchname out to `refs/heads/serverfix:refs/heads/serverfix`, which means, "`Take my `serverfix` local branch and push it to update the remote's `serverfix` branch.`"
 We'll go over the `refs/heads/` part in detail in <<ch10-git-internals#ch10-git-internals>>, but you can generally leave it off.
-You can also do `git push origin serverfix:serverfix`, which does the same thing -- it says, ``Take my serverfix and make it the remote's serverfix.''
+You can also do `git push origin serverfix:serverfix`, which does the same thing -- it says, "`Take my serverfix and make it the remote's serverfix.`"
 You can use this format to push a local branch into a remote branch that is named differently.
 If you didn't want it to be called `serverfix` on the remote, you could instead run `git push origin serverfix:awesomebranch` to push your local `serverfix` branch to the `awesomebranch` branch on the remote project.
 @y
 This is a bit of a shortcut.
-Git automatically expands the `serverfix` branchname out to `refs/heads/serverfix:refs/heads/serverfix`, which means, ``Take my `serverfix` local branch and push it to update the remote's `serverfix` branch.''
+Git automatically expands the `serverfix` branchname out to `refs/heads/serverfix:refs/heads/serverfix`, which means, "`Take my `serverfix` local branch and push it to update the remote's `serverfix` branch.`"
 We'll go over the `refs/heads/` part in detail in <<ch10-git-internals#ch10-git-internals>>, but you can generally leave it off.
-You can also do `git push origin serverfix:serverfix`, which does the same thing -- it says, ``Take my serverfix and make it the remote's serverfix.''
+You can also do `git push origin serverfix:serverfix`, which does the same thing -- it says, "`Take my serverfix and make it the remote's serverfix.`"
 You can use this format to push a local branch into a remote branch that is named differently.
 If you didn't want it to be called `serverfix` on the remote, you could instead run `git push origin serverfix:awesomebranch` to push your local `serverfix` branch to the `awesomebranch` branch on the remote project.
 @z
@@ -232,10 +232,10 @@ By default it will prompt you on the terminal for this information so the server
 @z
 
 @x
-If you don't want to type it every single time you push, you can set up a ``credential cache''.
+If you don't want to type it every single time you push, you can set up a "`credential cache`".
 The simplest is just to keep it in memory for a few minutes, which you can easily set up by running `git config --global credential.helper cache`.
 @y
-If you don't want to type it every single time you push, you can set up a ``credential cache''.
+If you don't want to type it every single time you push, you can set up a "`credential cache`".
 The simplest is just to keep it in memory for a few minutes, which you can easily set up by running `git config --global credential.helper cache`.
 @z
 
@@ -325,12 +325,12 @@ This gives you a local branch that you can work on that starts where `origin/ser
 
 @x
 (((branches, tracking)))(((branches, upstream)))
-Checking out a local branch from a remote-tracking branch automatically creates what is called a ``tracking branch'' (and the branch it tracks is called an ``upstream branch'').
+Checking out a local branch from a remote-tracking branch automatically creates what is called a "`tracking branch`" (and the branch it tracks is called an "`upstream branch`").
 Tracking branches are local branches that have a direct relationship to a remote branch.
 If you're on a tracking branch and type `git pull`, Git automatically knows which server to fetch from and which branch to merge in.
 @y
 (((branches, tracking)))(((branches, upstream)))
-Checking out a local branch from a remote-tracking branch automatically creates what is called a ``tracking branch'' (and the branch it tracks is called an ``upstream branch'').
+Checking out a local branch from a remote-tracking branch automatically creates what is called a "`tracking branch`" (and the branch it tracks is called an "`upstream branch`").
 Tracking branches are local branches that have a direct relationship to a remote branch.
 If you're on a tracking branch and type `git pull`, Git automatically knows which server to fetch from and which branch to merge in.
 @z
@@ -480,12 +480,12 @@ $ git branch -vv
 @z
 
 @x
-So here we can see that our `iss53` branch is tracking `origin/iss53` and is ``ahead'' by two, meaning that we have two commits locally that are not pushed to the server.
+So here we can see that our `iss53` branch is tracking `origin/iss53` and is "`ahead`" by two, meaning that we have two commits locally that are not pushed to the server.
 We can also see that our `master` branch is tracking `origin/master` and is up to date.
 Next we can see that our `serverfix` branch is tracking the `server-fix-good` branch on our `teamone` server and is ahead by three and behind by one, meaning that there is one commit on the server we haven't merged in yet and three commits locally that we haven't pushed.
 Finally we can see that our `testing` branch is not tracking any remote branch.
 @y
-So here we can see that our `iss53` branch is tracking `origin/iss53` and is ``ahead'' by two, meaning that we have two commits locally that are not pushed to the server.
+So here we can see that our `iss53` branch is tracking `origin/iss53` and is "`ahead`" by two, meaning that we have two commits locally that are not pushed to the server.
 We can also see that our `master` branch is tracking `origin/master` and is up to date.
 Next we can see that our `serverfix` branch is tracking the `server-fix-good` branch on our `teamone` server and is ahead by three and behind by one, meaning that there is one commit on the server we haven't merged in yet and three commits locally that we haven't pushed.
 Finally we can see that our `testing` branch is not tracking any remote branch.

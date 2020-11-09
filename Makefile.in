@@ -303,39 +303,38 @@ mysrcdir = $(shell cd $(srcdir) && pwd)
 abs_thisdir = $(shell cd $(thisdir) && pwd)
 thisdate = `date +'%Y/%m/%d'`
 hashvalue = `(cd @abs_origdir@ && git log -1 --pretty=format:"%ad %h" --date=short) | sed "s|\-|/|g"`
-ALLASC = $(shell find $(abs_installdir) -type f -name '*.asc' -print)
 .DEFAULT_GOAL := build
 bases = \
-	A-git-in-other-environments \
+	A-git-in-other-environments          \
 	B-embedding-git-in-your-applications \
-	C-git-commands \
-	ch01-getting-started \
-	ch02-git-basics-chapter \
-	ch03-git-branching \
-	ch04-git-on-the-server \
-	ch05-distributed-git \
-	ch06-github \
-	ch07-git-tools \
-	ch08-customizing-git \
-	ch09-git-and-other-systems \
-	ch10-git-internals \
-	index \
-	LICENSE \
-	progit \
-	README \
+	C-git-commands                       \
+	ch01-getting-started                 \
+	ch02-git-basics-chapter              \
+	ch03-git-branching                   \
+	ch04-git-on-the-server               \
+	ch05-distributed-git                 \
+	ch06-github                          \
+	ch07-git-tools                       \
+	ch08-customizing-git                 \
+	ch09-git-and-other-systems           \
+	ch10-git-internals                   \
+	index                                \
+	LICENSE                              \
+	progit                               \
+	README                               \
 	TRANSLATION_NOTES
 
 ch_ascs = $(bases:=.ch)  # ch means change files
 tr_ascs = $(bases:=.asc) # tr means translated files
 EXTRA_DIST = $(ch_ascs) bin/buildch.perl bin/copymake.sh bin/ctiemake.sh
 copyfiles = \
-	.travis.yml \
-	atlas.json \
+	.travis.yml     \
+	atlas.json      \
 	CONTRIBUTING.md \
-	Gemfile \
-	Pro.ico \
-	Rakefile \
-	status.json \
+	Gemfile         \
+	Pro.ico         \
+	Rakefile        \
+	status.json     \
 	TRANSLATING.md
 
 trans = ${addprefix $(abs_installdir)/, $(tr_ascs)}
@@ -815,10 +814,10 @@ uninstall-am:
 .PRECIOUS: Makefile
 
 build:  all $(srcdir)/docs/index.html $(abs_installdir)/html.css
-$(srcdir)/docs/lindex.html: $(abs_installdir)/progit.html
+$(srcdir)/docs/index.html: $(abs_installdir)/progit.html
 	@$(MKDIR_P) $(srcdir)/docs
 	cp -p $(abs_installdir)/progit.html $@
-$(abs_installdir)/progit.html: ctie $(trans) $(copys) $(abs_installdir)/attributes-ja.adoc $(ALLASC)
+$(abs_installdir)/progit.html: ctie $(trans) $(copys) $(abs_installdir)/attributes-ja.adoc
 	@(cd $(abs_installdir) && bundle exec asciidoctor progit.asc -o progit.html)
 	@(cd $(abs_installdir) && sed -i -e "s|THISDATE|$(thisdate)|" \
 					-e "s|HASHVALUE|$(hashvalue)|" progit.html)
@@ -829,15 +828,14 @@ $(abs_installdir)/attributes-ja.adoc: $(srcdir)/attributes-ja.adoc
 	cp -p $^ $@
 
 @MAINT@.PHONY: git-scm
-@MAINT@git-scm: build $(GITSCMDIR)/lib/tasks/book2mod.rake
+@MAINT@git-scm: build
 @MAINT@	(cd $(GITSCMDIR) && GENLANG=ja GENPATH=$(abs_thisdir) rbenv exec rake local_genbook2)
 @MAINT@	@cp -p $(GITSCMDIR)/db/development.sqlite3 .
-@MAINT@$(GITSCMDIR)/lib/tasks/book2mod.rake: $(srcdir)/bin/book2mod.rake
-@MAINT@	@cp -p $^ $@
 
 @MAINT@.PHONY: dividedpages
 @MAINT@dividepages: #git-scm
 @MAINT@	@perl $(top_srcdir)/bin/getDividedPages.perl $(top_srcdir)
+@MAINT@	@find $(top_srcdir)/docs -name "*.html" -type f | xargs sed -i -f $(srcdir)/admon.sed
 
 ctie:
 	@$(MAKE) -C $(top_builddir)/$@ $@ >/dev/null

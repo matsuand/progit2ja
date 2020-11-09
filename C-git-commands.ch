@@ -4,17 +4,28 @@
 @x
 [[C-git-commands]]
 [appendix]
-== Git Commands
 @y
 [[C-git-commands]]
 [appendix]
+@z
+
+@x
 == Git Commands
+@y
+//////////////////////////
+== Git Commands
+//////////////////////////
+== Git コマンド
 @z
 
 @x
 Throughout the book we have introduced dozens of Git commands and have tried hard to introduce them within something of a narrative, adding more commands to the story slowly.
 However, this leaves us with examples of usage of the commands somewhat scattered throughout the whole book.
 @y
+//////////////////////////
+Throughout the book we have introduced dozens of Git commands and have tried hard to introduce them within something of a narrative, adding more commands to the story slowly.
+However, this leaves us with examples of usage of the commands somewhat scattered throughout the whole book.
+//////////////////////////
 Throughout the book we have introduced dozens of Git commands and have tried hard to introduce them within something of a narrative, adding more commands to the story slowly.
 However, this leaves us with examples of usage of the commands somewhat scattered throughout the whole book.
 @z
@@ -23,6 +34,10 @@ However, this leaves us with examples of usage of the commands somewhat scattere
 In this appendix, we'll go through all the Git commands we addressed throughout the book, grouped roughly by what they're used for.
 We'll talk about what each command very generally does and then point out where in the book you can find us having used it.
 @y
+//////////////////////////
+In this appendix, we'll go through all the Git commands we addressed throughout the book, grouped roughly by what they're used for.
+We'll talk about what each command very generally does and then point out where in the book you can find us having used it.
+//////////////////////////
 In this appendix, we'll go through all the Git commands we addressed throughout the book, grouped roughly by what they're used for.
 We'll talk about what each command very generally does and then point out where in the book you can find us having used it.
 @z
@@ -36,6 +51,15 @@ This only works when the letters after `--` are unique for one option.
 Do use the full option when writing scripts.
 ====
 @y
+//////////////////////////
+[TIP]
+====
+You can abbreviate long options.
+For example, you can type in `git commit --a`, which acts as if you typed `git commit --amend`.
+This only works when the letters after `--` are unique for one option.
+Do use the full option when writing scripts.
+====
+//////////////////////////
 [TIP]
 ====
 You can abbreviate long options.
@@ -48,12 +72,18 @@ Do use the full option when writing scripts.
 @x
 === Setup and Config
 @y
+//////////////////////////
+=== Setup and Config
+//////////////////////////
 === Setup and Config
 @z
 
 @x
 There are two commands that are used quite a lot, from the first invocations of Git to common every day tweaking and referencing, the `config` and `help` commands.
 @y
+//////////////////////////
+There are two commands that are used quite a lot, from the first invocations of Git to common every day tweaking and referencing, the `config` and `help` commands.
+//////////////////////////
 There are two commands that are used quite a lot, from the first invocations of Git to common every day tweaking and referencing, the `config` and `help` commands.
 @z
 
@@ -69,6 +99,12 @@ For a lot of these things, you can tell Git to default to doing them a different
 This involves everything from telling Git what your name is to specific terminal color preferences or what editor you use.
 There are several files this command will read from and write to so you can set values globally or down to specific repositories.
 @y
+//////////////////////////
+Git has a default way of doing hundreds of things.
+For a lot of these things, you can tell Git to default to doing them a different way, or set your preferences.
+This involves everything from telling Git what your name is to specific terminal color preferences or what editor you use.
+There are several files this command will read from and write to so you can set values globally or down to specific repositories.
+//////////////////////////
 Git has a default way of doing hundreds of things.
 For a lot of these things, you can tell Git to default to doing them a different way, or set your preferences.
 This involves everything from telling Git what your name is to specific terminal color preferences or what editor you use.
@@ -78,56 +114,74 @@ There are several files this command will read from and write to so you can set 
 @x
 The `git config` command has been used in nearly every chapter of the book.
 @y
+//////////////////////////
+//////////////////////////
 The `git config` command has been used in nearly every chapter of the book.
 @z
 
 @x
 In <<ch01-getting-started#_first_time>> we used it to specify our name, email address and editor preference before we even got started using Git.
 @y
+//////////////////////////
+//////////////////////////
 In <<ch01-getting-started#_first_time>> we used it to specify our name, email address and editor preference before we even got started using Git.
 @z
 
 @x
 In <<ch02-git-basics-chapter#_git_aliases>> we showed how you could use it to create shorthand commands that expand to long option sequences so you don't have to type them every time.
 @y
+//////////////////////////
+//////////////////////////
 In <<ch02-git-basics-chapter#_git_aliases>> we showed how you could use it to create shorthand commands that expand to long option sequences so you don't have to type them every time.
 @z
 
 @x
 In <<ch03-git-branching#_rebasing>> we used it to make `--rebase` the default when you run `git pull`.
 @y
+//////////////////////////
+//////////////////////////
 In <<ch03-git-branching#_rebasing>> we used it to make `--rebase` the default when you run `git pull`.
 @z
 
 @x
 In <<ch07-git-tools#_credential_caching>> we used it to set up a default store for your HTTP passwords.
 @y
+//////////////////////////
+//////////////////////////
 In <<ch07-git-tools#_credential_caching>> we used it to set up a default store for your HTTP passwords.
 @z
 
 @x
 In <<ch08-customizing-git#_keyword_expansion>> we showed how to set up smudge and clean filters on content coming in and out of Git.
 @y
+//////////////////////////
+//////////////////////////
 In <<ch08-customizing-git#_keyword_expansion>> we showed how to set up smudge and clean filters on content coming in and out of Git.
 @z
 
 @x
 Finally, basically the entirety of <<ch08-customizing-git#_git_config>> is dedicated to the command.
 @y
+//////////////////////////
+//////////////////////////
 Finally, basically the entirety of <<ch08-customizing-git#_git_config>> is dedicated to the command.
 @z
 
 @x
-[[_core_editor]]
+[[ch_core_editor]]
 ==== git config core.editor commands
 @y
-[[_core_editor]]
+//////////////////////////
+//////////////////////////
+[[ch_core_editor]]
 ==== git config core.editor commands
 @z
 
 @x
 Accompanying the configuration instructions in <<ch01-getting-started#_editor>>, many editors can be set as follows:
 @y
+//////////////////////////
+//////////////////////////
 Accompanying the configuration instructions in <<ch01-getting-started#_editor>>, many editors can be set as follows:
 @z
 
@@ -159,6 +213,8 @@ Accompanying the configuration instructions in <<ch01-getting-started#_editor>>,
 |Xi | `git config --global core.editor "xi --wait"`
 |==============================
 @y
+//////////////////////////
+//////////////////////////
 .Exhaustive list of `core.editor` configuration commands
 [cols="1,2",options="header"]
 |==============================
@@ -193,6 +249,8 @@ Accompanying the configuration instructions in <<ch01-getting-started#_editor>>,
 If you have a 32-bit editor on a Windows 64-bit system, the program will be installed in `C:\Program Files (x86)\` rather than `C:\Program Files\` as in the table above.
 ====
 @y
+//////////////////////////
+//////////////////////////
 [NOTE]
 ====
 If you have a 32-bit editor on a Windows 64-bit system, the program will be installed in `C:\Program Files (x86)\` rather than `C:\Program Files\` as in the table above.
@@ -209,6 +267,8 @@ If you have a 32-bit editor on a Windows 64-bit system, the program will be inst
 The `git help` command is used to show you all the documentation shipped with Git about any command.
 While we're giving a rough overview of most of the more popular ones in this appendix, for a full listing of all of the possible options and flags for every command, you can always run `git help <command>`.
 @y
+//////////////////////////
+//////////////////////////
 The `git help` command is used to show you all the documentation shipped with Git about any command.
 While we're giving a rough overview of most of the more popular ones in this appendix, for a full listing of all of the possible options and flags for every command, you can always run `git help <command>`.
 @z
@@ -216,12 +276,16 @@ While we're giving a rough overview of most of the more popular ones in this app
 @x
 We introduced the `git help` command in <<ch01-getting-started#_git_help>> and showed you how to use it to find more information about the `git shell` in <<ch04-git-on-the-server#_setting_up_server>>.
 @y
+//////////////////////////
+//////////////////////////
 We introduced the `git help` command in <<ch01-getting-started#_git_help>> and showed you how to use it to find more information about the `git shell` in <<ch04-git-on-the-server#_setting_up_server>>.
 @z
 
 @x
 === Getting and Creating Projects
 @y
+//////////////////////////
+//////////////////////////
 === Getting and Creating Projects
 @z
 
@@ -229,6 +293,8 @@ We introduced the `git help` command in <<ch01-getting-started#_git_help>> and s
 There are two ways to get a Git repository.
 One is to copy it from an existing repository on the network or elsewhere and the other is to create a new one in an existing directory.
 @y
+//////////////////////////
+//////////////////////////
 There are two ways to get a Git repository.
 One is to copy it from an existing repository on the network or elsewhere and the other is to create a new one in an existing directory.
 @z
@@ -242,30 +308,41 @@ One is to copy it from an existing repository on the network or elsewhere and th
 @x
 To take a directory and turn it into a new Git repository so you can start version controlling it, you can simply run `git init`.
 @y
+//////////////////////////
+//////////////////////////
 To take a directory and turn it into a new Git repository so you can start version controlling it, you can simply run `git init`.
 @z
 
 @x
 We first introduce this in <<ch02-git-basics-chapter#_getting_a_repo>>, where we show creating a brand new repository to start working with.
 @y
+//////////////////////////
+//////////////////////////
 We first introduce this in <<ch02-git-basics-chapter#_getting_a_repo>>, where we show creating a brand new repository to start working with.
 @z
 
 @x
-We talk briefly about how you can change the default branch name from ``master'' in <<ch03-git-branching#_remote_branches>>.
+We talk briefly about how you can change the default branch name from "`master`" in <<ch03-git-branching#_remote_branches>>.
 @y
-We talk briefly about how you can change the default branch name from ``master'' in <<ch03-git-branching#_remote_branches>>.
+//////////////////////////
+We talk briefly about how you can change the default branch name from "`master`" in <<ch03-git-branching#_remote_branches>>.
+//////////////////////////
+We talk briefly about how you can change the default branch name from "`master`" in <<ch03-git-branching#_remote_branches>>.
 @z
 
 @x
 We use this command to create an empty bare repository for a server in <<ch04-git-on-the-server#_bare_repo>>.
 @y
+//////////////////////////
+//////////////////////////
 We use this command to create an empty bare repository for a server in <<ch04-git-on-the-server#_bare_repo>>.
 @z
 
 @x
 Finally, we go through some of the details of what it actually does behind the scenes in <<ch10-git-internals#_plumbing_porcelain>>.
 @y
+//////////////////////////
+//////////////////////////
 Finally, we go through some of the details of what it actually does behind the scenes in <<ch10-git-internals#_plumbing_porcelain>>.
 @z
 
@@ -279,6 +356,8 @@ Finally, we go through some of the details of what it actually does behind the s
 The `git clone` command is actually something of a wrapper around several other commands.
 It creates a new directory, goes into it and runs `git init` to make it an empty Git repository, adds a remote (`git remote add`) to the URL that you pass it (by default named `origin`), runs a `git fetch` from that remote repository and then checks out the latest commit into your working directory with `git checkout`.
 @y
+//////////////////////////
+//////////////////////////
 The `git clone` command is actually something of a wrapper around several other commands.
 It creates a new directory, goes into it and runs `git init` to make it an empty Git repository, adds a remote (`git remote add`) to the URL that you pass it (by default named `origin`), runs a `git fetch` from that remote repository and then checks out the latest commit into your working directory with `git checkout`.
 @z
@@ -286,48 +365,64 @@ It creates a new directory, goes into it and runs `git init` to make it an empty
 @x
 The `git clone` command is used in dozens of places throughout the book, but we'll just list a few interesting places.
 @y
+//////////////////////////
+//////////////////////////
 The `git clone` command is used in dozens of places throughout the book, but we'll just list a few interesting places.
 @z
 
 @x
 It's basically introduced and explained in <<ch02-git-basics-chapter#_git_cloning>>, where we go through a few examples.
 @y
+//////////////////////////
+//////////////////////////
 It's basically introduced and explained in <<ch02-git-basics-chapter#_git_cloning>>, where we go through a few examples.
 @z
 
 @x
 In <<ch04-git-on-the-server#_getting_git_on_a_server>> we look at using the `--bare` option to create a copy of a Git repository with no working directory.
 @y
+//////////////////////////
+//////////////////////////
 In <<ch04-git-on-the-server#_getting_git_on_a_server>> we look at using the `--bare` option to create a copy of a Git repository with no working directory.
 @z
 
 @x
 In <<ch07-git-tools#_bundling>> we use it to unbundle a bundled Git repository.
 @y
+//////////////////////////
+//////////////////////////
 In <<ch07-git-tools#_bundling>> we use it to unbundle a bundled Git repository.
 @z
 
 @x
 Finally, in <<ch07-git-tools#_cloning_submodules>> we learn the `--recurse-submodules` option to make cloning a repository with submodules a little simpler.
 @y
+//////////////////////////
+//////////////////////////
 Finally, in <<ch07-git-tools#_cloning_submodules>> we learn the `--recurse-submodules` option to make cloning a repository with submodules a little simpler.
 @z
 
 @x
 Though it's used in many other places through the book, these are the ones that are somewhat unique or where it is used in ways that are a little different.
 @y
+//////////////////////////
+//////////////////////////
 Though it's used in many other places through the book, these are the ones that are somewhat unique or where it is used in ways that are a little different.
 @z
 
 @x
 === Basic Snapshotting
 @y
+//////////////////////////
+//////////////////////////
 === Basic Snapshotting
 @z
 
 @x
 For the basic workflow of staging content and committing it to your history, there are only a few basic commands.
 @y
+//////////////////////////
+//////////////////////////
 For the basic workflow of staging content and committing it to your history, there are only a few basic commands.
 @z
 
@@ -338,10 +433,14 @@ For the basic workflow of staging content and committing it to your history, the
 @z
 
 @x
-The `git add` command adds content from the working directory into the staging area (or ``index'') for the next commit.
+The `git add` command adds content from the working directory into the staging area (or "`index`") for the next commit.
 When the `git commit` command is run, by default it only looks at this staging area, so `git add` is used to craft what exactly you would like your next commit snapshot to look like.
 @y
-The `git add` command adds content from the working directory into the staging area (or ``index'') for the next commit.
+//////////////////////////
+The `git add` command adds content from the working directory into the staging area (or "`index`") for the next commit.
+When the `git commit` command is run, by default it only looks at this staging area, so `git add` is used to craft what exactly you would like your next commit snapshot to look like.
+//////////////////////////
+The `git add` command adds content from the working directory into the staging area (or "`index`") for the next commit.
 When the `git commit` command is run, by default it only looks at this staging area, so `git add` is used to craft what exactly you would like your next commit snapshot to look like.
 @z
 
@@ -349,6 +448,8 @@ When the `git commit` command is run, by default it only looks at this staging a
 This command is an incredibly important command in Git and is mentioned or used dozens of times in this book.
 We'll quickly cover some of the unique uses that can be found.
 @y
+//////////////////////////
+//////////////////////////
 This command is an incredibly important command in Git and is mentioned or used dozens of times in this book.
 We'll quickly cover some of the unique uses that can be found.
 @z
@@ -356,24 +457,32 @@ We'll quickly cover some of the unique uses that can be found.
 @x
 We first introduce and explain `git add` in detail in <<ch02-git-basics-chapter#_tracking_files>>.
 @y
+//////////////////////////
+//////////////////////////
 We first introduce and explain `git add` in detail in <<ch02-git-basics-chapter#_tracking_files>>.
 @z
 
 @x
 We mention how to use it to resolve merge conflicts in <<ch03-git-branching#_basic_merge_conflicts>>.
 @y
+//////////////////////////
+//////////////////////////
 We mention how to use it to resolve merge conflicts in <<ch03-git-branching#_basic_merge_conflicts>>.
 @z
 
 @x
 We go over using it to interactively stage only specific parts of a modified file in <<ch07-git-tools#_interactive_staging>>.
 @y
+//////////////////////////
+//////////////////////////
 We go over using it to interactively stage only specific parts of a modified file in <<ch07-git-tools#_interactive_staging>>.
 @z
 
 @x
 Finally, we emulate it at a low level in <<ch10-git-internals#_tree_objects>>, so you can get an idea of what it's doing behind the scenes.
 @y
+//////////////////////////
+//////////////////////////
 Finally, we emulate it at a low level in <<ch10-git-internals#_tree_objects>>, so you can get an idea of what it's doing behind the scenes.
 @z
 
@@ -388,6 +497,8 @@ The `git status` command will show you the different states of files in your wor
 Which files are modified and unstaged and which are staged but not yet committed.
 In its normal form, it also will show you some basic hints on how to move files between these stages.
 @y
+//////////////////////////
+//////////////////////////
 The `git status` command will show you the different states of files in your working directory and staging area.
 Which files are modified and unstaged and which are staged but not yet committed.
 In its normal form, it also will show you some basic hints on how to move files between these stages.
@@ -397,6 +508,8 @@ In its normal form, it also will show you some basic hints on how to move files 
 We first cover `status` in <<ch02-git-basics-chapter#_checking_status>>, both in its basic and simplified forms.
 While we use it throughout the book, pretty much everything you can do with the `git status` command is covered there.
 @y
+//////////////////////////
+//////////////////////////
 We first cover `status` in <<ch02-git-basics-chapter#_checking_status>>, both in its basic and simplified forms.
 While we use it throughout the book, pretty much everything you can do with the `git status` command is covered there.
 @z
@@ -411,6 +524,8 @@ While we use it throughout the book, pretty much everything you can do with the 
 The `git diff` command is used when you want to see differences between any two trees.
 This could be the difference between your working environment and your staging area (`git diff` by itself), between your staging area and your last commit (`git diff --staged`), or between two commits (`git diff master branchB`).
 @y
+//////////////////////////
+//////////////////////////
 The `git diff` command is used when you want to see differences between any two trees.
 This could be the difference between your working environment and your staging area (`git diff` by itself), between your staging area and your last commit (`git diff --staged`), or between two commits (`git diff master branchB`).
 @z
@@ -418,30 +533,40 @@ This could be the difference between your working environment and your staging a
 @x
 We first look at the basic uses of `git diff` in <<ch02-git-basics-chapter#_git_diff_staged>>, where we show how to see what changes are staged and which are not yet staged.
 @y
+//////////////////////////
+//////////////////////////
 We first look at the basic uses of `git diff` in <<ch02-git-basics-chapter#_git_diff_staged>>, where we show how to see what changes are staged and which are not yet staged.
 @z
 
 @x
 We use it to look for possible whitespace issues before committing with the `--check` option in <<ch05-distributed-git#_commit_guidelines>>.
 @y
+//////////////////////////
+//////////////////////////
 We use it to look for possible whitespace issues before committing with the `--check` option in <<ch05-distributed-git#_commit_guidelines>>.
 @z
 
 @x
 We see how to check the differences between branches more effectively with the `git diff A...B` syntax in <<ch05-distributed-git#_what_is_introduced>>.
 @y
+//////////////////////////
+//////////////////////////
 We see how to check the differences between branches more effectively with the `git diff A...B` syntax in <<ch05-distributed-git#_what_is_introduced>>.
 @z
 
 @x
 We use it to filter out whitespace differences with `-b` and how to compare different stages of conflicted files with `--theirs`, `--ours` and `--base` in <<ch07-git-tools#_advanced_merging>>.
 @y
+//////////////////////////
+//////////////////////////
 We use it to filter out whitespace differences with `-b` and how to compare different stages of conflicted files with `--theirs`, `--ours` and `--base` in <<ch07-git-tools#_advanced_merging>>.
 @z
 
 @x
 Finally, we use it to effectively compare submodule changes with `--submodule` in <<ch07-git-tools#_starting_submodules>>.
 @y
+//////////////////////////
+//////////////////////////
 Finally, we use it to effectively compare submodule changes with `--submodule` in <<ch07-git-tools#_starting_submodules>>.
 @z
 
@@ -454,12 +579,16 @@ Finally, we use it to effectively compare submodule changes with `--submodule` i
 @x
 The `git difftool` command simply launches an external tool to show you the difference between two trees in case you want to use something other than the built in `git diff` command.
 @y
+//////////////////////////
+//////////////////////////
 The `git difftool` command simply launches an external tool to show you the difference between two trees in case you want to use something other than the built in `git diff` command.
 @z
 
 @x
 We only briefly mention this in <<ch02-git-basics-chapter#_git_diff_staged>>.
 @y
+//////////////////////////
+//////////////////////////
 We only briefly mention this in <<ch02-git-basics-chapter#_git_diff_staged>>.
 @z
 
@@ -472,6 +601,8 @@ We only briefly mention this in <<ch02-git-basics-chapter#_git_diff_staged>>.
 @x
 The `git commit` command takes all the file contents that have been staged with `git add` and records a new permanent snapshot in the database and then moves the branch pointer on the current branch up to it.
 @y
+//////////////////////////
+//////////////////////////
 The `git commit` command takes all the file contents that have been staged with `git add` and records a new permanent snapshot in the database and then moves the branch pointer on the current branch up to it.
 @z
 
@@ -479,6 +610,8 @@ The `git commit` command takes all the file contents that have been staged with 
 We first cover the basics of committing in <<ch02-git-basics-chapter#_committing_changes>>.
 There we also demonstrate how to use the `-a` flag to skip the `git add` step in daily workflows and how to use the `-m` flag to pass a commit message in on the command line instead of firing up an editor.
 @y
+//////////////////////////
+//////////////////////////
 We first cover the basics of committing in <<ch02-git-basics-chapter#_committing_changes>>.
 There we also demonstrate how to use the `-a` flag to skip the `git add` step in daily workflows and how to use the `-m` flag to pass a commit message in on the command line instead of firing up an editor.
 @z
@@ -486,24 +619,32 @@ There we also demonstrate how to use the `-a` flag to skip the `git add` step in
 @x
 In <<ch02-git-basics-chapter#_undoing>> we cover using the `--amend` option to redo the most recent commit.
 @y
+//////////////////////////
+//////////////////////////
 In <<ch02-git-basics-chapter#_undoing>> we cover using the `--amend` option to redo the most recent commit.
 @z
 
 @x
 In <<ch03-git-branching#_git_branches_overview>>, we go into much more detail about what `git commit` does and why it does it like that.
 @y
+//////////////////////////
+//////////////////////////
 In <<ch03-git-branching#_git_branches_overview>>, we go into much more detail about what `git commit` does and why it does it like that.
 @z
 
 @x
 We looked at how to sign commits cryptographically with the `-S` flag in <<ch07-git-tools#_signing_commits>>.
 @y
+//////////////////////////
+//////////////////////////
 We looked at how to sign commits cryptographically with the `-S` flag in <<ch07-git-tools#_signing_commits>>.
 @z
 
 @x
 Finally, we take a look at what the `git commit` command does in the background and how it's actually implemented in <<ch10-git-internals#_git_commit_objects>>.
 @y
+//////////////////////////
+//////////////////////////
 Finally, we take a look at what the `git commit` command does in the background and how it's actually implemented in <<ch10-git-internals#_git_commit_objects>>.
 @z
 
@@ -518,6 +659,8 @@ The `git reset` command is primarily used to undo things, as you can possibly te
 It moves around the `HEAD` pointer and optionally changes the `index` or staging area and can also optionally change the working directory if you use `--hard`.
 This final option makes it possible for this command to lose your work if used incorrectly, so make sure you understand it before using it.
 @y
+//////////////////////////
+//////////////////////////
 The `git reset` command is primarily used to undo things, as you can possibly tell by the verb.
 It moves around the `HEAD` pointer and optionally changes the `index` or staging area and can also optionally change the working directory if you use `--hard`.
 This final option makes it possible for this command to lose your work if used incorrectly, so make sure you understand it before using it.
@@ -526,18 +669,24 @@ This final option makes it possible for this command to lose your work if used i
 @x
 We first effectively cover the simplest use of `git reset` in <<ch02-git-basics-chapter#_unstaging>>, where we use it to unstage a file we had run `git add` on.
 @y
+//////////////////////////
+//////////////////////////
 We first effectively cover the simplest use of `git reset` in <<ch02-git-basics-chapter#_unstaging>>, where we use it to unstage a file we had run `git add` on.
 @z
 
 @x
 We then cover it in quite some detail in <<ch07-git-tools#_git_reset>>, which is entirely devoted to explaining this command.
 @y
+//////////////////////////
+//////////////////////////
 We then cover it in quite some detail in <<ch07-git-tools#_git_reset>>, which is entirely devoted to explaining this command.
 @z
 
 @x
 We use `git reset --hard` to abort a merge in <<ch07-git-tools#_abort_merge>>, where we also use `git merge --abort`, which is a bit of a wrapper for the `git reset` command.
 @y
+//////////////////////////
+//////////////////////////
 We use `git reset --hard` to abort a merge in <<ch07-git-tools#_abort_merge>>, where we also use `git merge --abort`, which is a bit of a wrapper for the `git reset` command.
 @z
 
@@ -551,6 +700,8 @@ We use `git reset --hard` to abort a merge in <<ch07-git-tools#_abort_merge>>, w
 The `git rm` command is used to remove files from the staging area and working directory for Git.
 It is similar to `git add` in that it stages a removal of a file for the next commit.
 @y
+//////////////////////////
+//////////////////////////
 The `git rm` command is used to remove files from the staging area and working directory for Git.
 It is similar to `git add` in that it stages a removal of a file for the next commit.
 @z
@@ -558,6 +709,8 @@ It is similar to `git add` in that it stages a removal of a file for the next co
 @x
 We cover the `git rm` command in some detail in <<ch02-git-basics-chapter#_removing_files>>, including recursively removing files and only removing files from the staging area but leaving them in the working directory with `--cached`.
 @y
+//////////////////////////
+//////////////////////////
 We cover the `git rm` command in some detail in <<ch02-git-basics-chapter#_removing_files>>, including recursively removing files and only removing files from the staging area but leaving them in the working directory with `--cached`.
 @z
 
@@ -565,6 +718,8 @@ We cover the `git rm` command in some detail in <<ch02-git-basics-chapter#_remov
 The only other differing use of `git rm` in the book is in <<ch10-git-internals#_removing_objects>> where we briefly use and explain the `--ignore-unmatch` when running `git filter-branch`, which simply makes it not error out when the file we are trying to remove doesn't exist.
 This can be useful for scripting purposes.
 @y
+//////////////////////////
+//////////////////////////
 The only other differing use of `git rm` in the book is in <<ch10-git-internals#_removing_objects>> where we briefly use and explain the `--ignore-unmatch` when running `git filter-branch`, which simply makes it not error out when the file we are trying to remove doesn't exist.
 This can be useful for scripting purposes.
 @z
@@ -578,12 +733,16 @@ This can be useful for scripting purposes.
 @x
 The `git mv` command is a thin convenience command to move a file and then run `git add` on the new file and `git rm` on the old file.
 @y
+//////////////////////////
+//////////////////////////
 The `git mv` command is a thin convenience command to move a file and then run `git add` on the new file and `git rm` on the old file.
 @z
 
 @x
 We only briefly mention this command in <<ch02-git-basics-chapter#_git_mv>>.
 @y
+//////////////////////////
+//////////////////////////
 We only briefly mention this command in <<ch02-git-basics-chapter#_git_mv>>.
 @z
 
@@ -597,6 +756,8 @@ We only briefly mention this command in <<ch02-git-basics-chapter#_git_mv>>.
 The `git clean` command is used to remove unwanted files from your working directory.
 This could include removing temporary build artifacts or merge conflict files.
 @y
+//////////////////////////
+//////////////////////////
 The `git clean` command is used to remove unwanted files from your working directory.
 This could include removing temporary build artifacts or merge conflict files.
 @z
@@ -604,18 +765,24 @@ This could include removing temporary build artifacts or merge conflict files.
 @x
 We cover many of the options and scenarios in which you might used the clean command in <<ch07-git-tools#_git_clean>>.
 @y
+//////////////////////////
+//////////////////////////
 We cover many of the options and scenarios in which you might used the clean command in <<ch07-git-tools#_git_clean>>.
 @z
 
 @x
 === Branching and Merging
 @y
+//////////////////////////
+//////////////////////////
 === Branching and Merging
 @z
 
 @x
 There are just a handful of commands that implement most of the branching and merging functionality in Git.
 @y
+//////////////////////////
+//////////////////////////
 There are just a handful of commands that implement most of the branching and merging functionality in Git.
 @z
 
@@ -629,6 +796,8 @@ There are just a handful of commands that implement most of the branching and me
 The `git branch` command is actually something of a branch management tool.
 It can list the branches you have, create a new branch, delete branches and rename branches.
 @y
+//////////////////////////
+//////////////////////////
 The `git branch` command is actually something of a branch management tool.
 It can list the branches you have, create a new branch, delete branches and rename branches.
 @z
@@ -637,6 +806,8 @@ It can list the branches you have, create a new branch, delete branches and rena
 Most of <<ch03-git-branching#ch03-git-branching>> is dedicated to the `branch` command and it's used throughout the entire chapter.
 We first introduce it in <<ch03-git-branching#_create_new_branch>> and we go through most of its other features (listing and deleting) in <<ch03-git-branching#_branch_management>>.
 @y
+//////////////////////////
+//////////////////////////
 Most of <<ch03-git-branching#ch03-git-branching>> is dedicated to the `branch` command and it's used throughout the entire chapter.
 We first introduce it in <<ch03-git-branching#_create_new_branch>> and we go through most of its other features (listing and deleting) in <<ch03-git-branching#_branch_management>>.
 @z
@@ -644,12 +815,16 @@ We first introduce it in <<ch03-git-branching#_create_new_branch>> and we go thr
 @x
 In <<ch03-git-branching#_tracking_branches>> we use the `git branch -u` option to set up a tracking branch.
 @y
+//////////////////////////
+//////////////////////////
 In <<ch03-git-branching#_tracking_branches>> we use the `git branch -u` option to set up a tracking branch.
 @z
 
 @x
 Finally, we go through some of what it does in the background in <<ch10-git-internals#_git_refs>>.
 @y
+//////////////////////////
+//////////////////////////
 Finally, we go through some of what it does in the background in <<ch10-git-internals#_git_refs>>.
 @z
 
@@ -662,36 +837,48 @@ Finally, we go through some of what it does in the background in <<ch10-git-inte
 @x
 The `git checkout` command is used to switch branches and check content out into your working directory.
 @y
+//////////////////////////
+//////////////////////////
 The `git checkout` command is used to switch branches and check content out into your working directory.
 @z
 
 @x
 We first encounter the command in <<ch03-git-branching#_switching_branches>> along with the `git branch` command.
 @y
+//////////////////////////
+//////////////////////////
 We first encounter the command in <<ch03-git-branching#_switching_branches>> along with the `git branch` command.
 @z
 
 @x
 We see how to use it to start tracking branches with the `--track` flag in <<ch03-git-branching#_tracking_branches>>.
 @y
+//////////////////////////
+//////////////////////////
 We see how to use it to start tracking branches with the `--track` flag in <<ch03-git-branching#_tracking_branches>>.
 @z
 
 @x
 We use it to reintroduce file conflicts with `--conflict=diff3` in <<ch07-git-tools#_checking_out_conflicts>>.
 @y
+//////////////////////////
+//////////////////////////
 We use it to reintroduce file conflicts with `--conflict=diff3` in <<ch07-git-tools#_checking_out_conflicts>>.
 @z
 
 @x
 We go into closer detail on its relationship with `git reset` in <<ch07-git-tools#_git_reset>>.
 @y
+//////////////////////////
+//////////////////////////
 We go into closer detail on its relationship with `git reset` in <<ch07-git-tools#_git_reset>>.
 @z
 
 @x
 Finally, we go into some implementation detail in <<ch10-git-internals#ref_the_ref>>.
 @y
+//////////////////////////
+//////////////////////////
 Finally, we go into some implementation detail in <<ch10-git-internals#ref_the_ref>>.
 @z
 
@@ -705,6 +892,8 @@ Finally, we go into some implementation detail in <<ch10-git-internals#ref_the_r
 The `git merge` tool is used to merge one or more branches into the branch you have checked out.
 It will then advance the current branch to the result of the merge.
 @y
+//////////////////////////
+//////////////////////////
 The `git merge` tool is used to merge one or more branches into the branch you have checked out.
 It will then advance the current branch to the result of the merge.
 @z
@@ -713,6 +902,8 @@ It will then advance the current branch to the result of the merge.
 The `git merge` command was first introduced in <<ch03-git-branching#_basic_branching>>.
 Though it is used in various places in the book, there are very few variations of the `merge` command -- generally just `git merge <branch>` with the name of the single branch you want to merge in.
 @y
+//////////////////////////
+//////////////////////////
 The `git merge` command was first introduced in <<ch03-git-branching#_basic_branching>>.
 Though it is used in various places in the book, there are very few variations of the `merge` command -- generally just `git merge <branch>` with the name of the single branch you want to merge in.
 @z
@@ -720,24 +911,32 @@ Though it is used in various places in the book, there are very few variations o
 @x
 We covered how to do a squashed merge (where Git merges the work but pretends like it's just a new commit without recording the history of the branch you're merging in) at the very end of <<ch05-distributed-git#_public_project>>.
 @y
+//////////////////////////
+//////////////////////////
 We covered how to do a squashed merge (where Git merges the work but pretends like it's just a new commit without recording the history of the branch you're merging in) at the very end of <<ch05-distributed-git#_public_project>>.
 @z
 
 @x
 We went over a lot about the merge process and command, including the `-Xignore-space-change` command and the `--abort` flag to abort a problem merge in <<ch07-git-tools#_advanced_merging>>.
 @y
+//////////////////////////
+//////////////////////////
 We went over a lot about the merge process and command, including the `-Xignore-space-change` command and the `--abort` flag to abort a problem merge in <<ch07-git-tools#_advanced_merging>>.
 @z
 
 @x
 We learned how to verify signatures before merging if your project is using GPG signing in <<ch07-git-tools#_signing_commits>>.
 @y
+//////////////////////////
+//////////////////////////
 We learned how to verify signatures before merging if your project is using GPG signing in <<ch07-git-tools#_signing_commits>>.
 @z
 
 @x
 Finally, we learned about Subtree merging in <<ch07-git-tools#_subtree_merge>>.
 @y
+//////////////////////////
+//////////////////////////
 Finally, we learned about Subtree merging in <<ch07-git-tools#_subtree_merge>>.
 @z
 
@@ -750,12 +949,16 @@ Finally, we learned about Subtree merging in <<ch07-git-tools#_subtree_merge>>.
 @x
 The `git mergetool` command simply launches an external merge helper in case you have issues with a merge in Git.
 @y
+//////////////////////////
+//////////////////////////
 The `git mergetool` command simply launches an external merge helper in case you have issues with a merge in Git.
 @z
 
 @x
 We mention it quickly in <<ch03-git-branching#_basic_merge_conflicts>> and go into detail on how to implement your own external merge tool in <<ch08-customizing-git#_external_merge_tools>>.
 @y
+//////////////////////////
+//////////////////////////
 We mention it quickly in <<ch03-git-branching#_basic_merge_conflicts>> and go into detail on how to implement your own external merge tool in <<ch08-customizing-git#_external_merge_tools>>.
 @z
 
@@ -770,6 +973,8 @@ The `git log` command is used to show the reachable recorded history of a projec
 By default it will only show the history of the branch you're currently on, but can be given different or even multiple heads or branches from which to traverse.
 It is also often used to show differences between two or more branches at the commit level.
 @y
+//////////////////////////
+//////////////////////////
 The `git log` command is used to show the reachable recorded history of a project from the most recent commit snapshot backwards.
 By default it will only show the history of the branch you're currently on, but can be given different or even multiple heads or branches from which to traverse.
 It is also often used to show differences between two or more branches at the commit level.
@@ -778,6 +983,8 @@ It is also often used to show differences between two or more branches at the co
 @x
 This command is used in nearly every chapter of the book to demonstrate the history of a project.
 @y
+//////////////////////////
+//////////////////////////
 This command is used in nearly every chapter of the book to demonstrate the history of a project.
 @z
 
@@ -785,6 +992,8 @@ This command is used in nearly every chapter of the book to demonstrate the hist
 We introduce the command and cover it in some depth in <<ch02-git-basics-chapter#_viewing_history>>.
 There we look at the `-p` and `--stat` option to get an idea of what was introduced in each commit and the `--pretty` and `--oneline` options to view the history more concisely, along with some simple date and author filtering options.
 @y
+//////////////////////////
+//////////////////////////
 We introduce the command and cover it in some depth in <<ch02-git-basics-chapter#_viewing_history>>.
 There we look at the `-p` and `--stat` option to get an idea of what was introduced in each commit and the `--pretty` and `--oneline` options to view the history more concisely, along with some simple date and author filtering options.
 @z
@@ -792,6 +1001,8 @@ There we look at the `-p` and `--stat` option to get an idea of what was introdu
 @x
 In <<ch03-git-branching#_create_new_branch>> we use it with the `--decorate` option to easily visualize where our branch pointers are located and we also use the `--graph` option to see what divergent histories look like.
 @y
+//////////////////////////
+//////////////////////////
 In <<ch03-git-branching#_create_new_branch>> we use it with the `--decorate` option to easily visualize where our branch pointers are located and we also use the `--graph` option to see what divergent histories look like.
 @z
 
@@ -799,6 +1010,8 @@ In <<ch03-git-branching#_create_new_branch>> we use it with the `--decorate` opt
 In <<ch05-distributed-git#_private_team>> and <<ch07-git-tools#_commit_ranges>> we cover the `branchA..branchB` syntax to use the `git log` command to see what commits are unique to a branch relative to another branch.
 In <<ch07-git-tools#_commit_ranges>> we go through this fairly extensively.
 @y
+//////////////////////////
+//////////////////////////
 In <<ch05-distributed-git#_private_team>> and <<ch07-git-tools#_commit_ranges>> we cover the `branchA..branchB` syntax to use the `git log` command to see what commits are unique to a branch relative to another branch.
 In <<ch07-git-tools#_commit_ranges>> we go through this fairly extensively.
 @z
@@ -807,6 +1020,8 @@ In <<ch07-git-tools#_commit_ranges>> we go through this fairly extensively.
 In <<ch07-git-tools#_merge_log>> and <<ch07-git-tools#_triple_dot>> we cover using the `branchA...branchB` format and the `--left-right` syntax to see what is in one branch or the other but not in both.
 In <<ch07-git-tools#_merge_log>> we also look at how to use the `--merge` option to help with merge conflict debugging as well as using the `--cc` option to look at merge commit conflicts in your history.
 @y
+//////////////////////////
+//////////////////////////
 In <<ch07-git-tools#_merge_log>> and <<ch07-git-tools#_triple_dot>> we cover using the `branchA...branchB` format and the `--left-right` syntax to see what is in one branch or the other but not in both.
 In <<ch07-git-tools#_merge_log>> we also look at how to use the `--merge` option to help with merge conflict debugging as well as using the `--cc` option to look at merge commit conflicts in your history.
 @z
@@ -1025,11 +1240,11 @@ This can help you be very specific about what work you wish to share.
 
 @x
 The `git remote` command is a management tool for your record of remote repositories.
-It allows you to save long URLs as short handles, such as ``origin'' so you don't have to type them out all the time.
+It allows you to save long URLs as short handles, such as "`origin`" so you don't have to type them out all the time.
 You can have several of these and the `git remote` command is used to add, change and delete them.
 @y
 The `git remote` command is a management tool for your record of remote repositories.
-It allows you to save long URLs as short handles, such as ``origin'' so you don't have to type them out all the time.
+It allows you to save long URLs as short handles, such as "`origin`" so you don't have to type them out all the time.
 You can have several of these and the `git remote` command is used to add, change and delete them.
 @z
 
@@ -1534,9 +1749,9 @@ If you're administering a Git repository or need to fix something in a big way, 
 @z
 
 @x
-The `git gc` command runs ``garbage collection'' on your repository, removing unnecessary files in your database and packing up the remaining files into a more efficient format.
+The `git gc` command runs "`garbage collection`" on your repository, removing unnecessary files in your database and packing up the remaining files into a more efficient format.
 @y
-The `git gc` command runs ``garbage collection'' on your repository, removing unnecessary files in your database and packing up the remaining files into a more efficient format.
+The `git gc` command runs "`garbage collection`" on your repository, removing unnecessary files in your database and packing up the remaining files into a more efficient format.
 @z
 
 @x

@@ -21,25 +21,25 @@ Now that our account is set up, let's walk through some details that could be us
 
 @x
 (((forking)))
-If you want to contribute to an existing project to which you don't have push access, you can ``fork'' the project.
-When you ``fork'' a project, GitHub will make a copy of the project that is entirely yours; it lives in your namespace, and you can push to it.
+If you want to contribute to an existing project to which you don't have push access, you can "`fork`" the project.
+When you "`fork`" a project, GitHub will make a copy of the project that is entirely yours; it lives in your namespace, and you can push to it.
 @y
 (((forking)))
-If you want to contribute to an existing project to which you don't have push access, you can ``fork'' the project.
-When you ``fork'' a project, GitHub will make a copy of the project that is entirely yours; it lives in your namespace, and you can push to it.
+If you want to contribute to an existing project to which you don't have push access, you can "`fork`" the project.
+When you "`fork`" a project, GitHub will make a copy of the project that is entirely yours; it lives in your namespace, and you can push to it.
 @z
 
 @x
 [NOTE]
 ====
-Historically, the term ``fork'' has been somewhat negative in context, meaning that someone took an open source project in a different direction, sometimes creating a competing project and splitting the contributors.
-In GitHub, a ``fork'' is simply the same project in your own namespace, allowing you to make changes to a project publicly as a way to contribute in a more open manner.
+Historically, the term "`fork`" has been somewhat negative in context, meaning that someone took an open source project in a different direction, sometimes creating a competing project and splitting the contributors.
+In GitHub, a "`fork`" is simply the same project in your own namespace, allowing you to make changes to a project publicly as a way to contribute in a more open manner.
 ====
 @y
 [NOTE]
 ====
-Historically, the term ``fork'' has been somewhat negative in context, meaning that someone took an open source project in a different direction, sometimes creating a competing project and splitting the contributors.
-In GitHub, a ``fork'' is simply the same project in your own namespace, allowing you to make changes to a project publicly as a way to contribute in a more open manner.
+Historically, the term "`fork`" has been somewhat negative in context, meaning that someone took an open source project in a different direction, sometimes creating a competing project and splitting the contributors.
+In GitHub, a "`fork`" is simply the same project in your own namespace, allowing you to make changes to a project publicly as a way to contribute in a more open manner.
 ====
 @z
 
@@ -54,17 +54,17 @@ This opens up a discussion thread with code review, and the owner and the contri
 @z
 
 @x
-To fork a project, visit the project page and click the ``Fork'' button at the top-right of the page.
+To fork a project, visit the project page and click the "`Fork`" button at the top-right of the page.
 @y
-To fork a project, visit the project page and click the ``Fork'' button at the top-right of the page.
+To fork a project, visit the project page and click the "`Fork`" button at the top-right of the page.
 @z
 
 @x
-.The ``Fork'' button
-image::images/forkbutton.png[The ``Fork'' button]
+.The "`Fork`" button
+image::images/forkbutton.png[The "`Fork`" button]
 @y
-.The ``Fork'' button
-image::images/forkbutton.png[The ``Fork'' button]
+.The "`Fork`" button
+image::images/forkbutton.png[The "`Fork`" button]
 @z
 
 @x
@@ -179,11 +179,11 @@ So let's improve the program and submit it back to the project as a proposed cha
 
 @x
 First, we click the 'Fork' button as mentioned earlier to get our own copy of the project.
-Our user name here is ``tonychacon'' so our copy of this project is at `https://github.com/tonychacon/blink` and that's where we can edit it.
+Our user name here is "`tonychacon`" so our copy of this project is at `https://github.com/tonychacon/blink` and that's where we can edit it.
 We will clone it locally, create a topic branch, make the code change and finally push that change back up to GitHub.
 @y
 First, we click the 'Fork' button as mentioned earlier to get our own copy of the project.
-Our user name here is ``tonychacon'' so our copy of this project is at `https://github.com/tonychacon/blink` and that's where we can edit it.
+Our user name here is "`tonychacon`" so our copy of this project is at `https://github.com/tonychacon/blink` and that's where we can edit it.
 We will clone it locally, create a topic branch, make the code change and finally push that change back up to GitHub.
 @z
 
@@ -308,9 +308,9 @@ Now if we go back to our fork on GitHub, we can see that GitHub noticed that we 
 @z
 
 @x
-You can alternatively go to the ``Branches'' page at `https://github.com/<user>/<project>/branches` to locate your branch and open a new Pull Request from there.
+You can alternatively go to the "`Branches`" page at `https://github.com/<user>/<project>/branches` to locate your branch and open a new Pull Request from there.
 @y
-You can alternatively go to the ``Branches'' page at `https://github.com/<user>/<project>/branches` to locate your branch and open a new Pull Request from there.
+You can alternatively go to the "`Branches`" page at `https://github.com/<user>/<project>/branches` to locate your branch and open a new Pull Request from there.
 @z
 
 @x
@@ -332,9 +332,9 @@ It is almost always worthwhile to put some effort into this, since a good descri
 @z
 
 @x
-We also see a list of the commits in our topic branch that are ``ahead'' of the `master` branch (in this case, just the one) and a unified diff of all the changes that will be made should this branch get merged by the project owner.
+We also see a list of the commits in our topic branch that are "`ahead`" of the `master` branch (in this case, just the one) and a unified diff of all the changes that will be made should this branch get merged by the project owner.
 @y
-We also see a list of the commits in our topic branch that are ``ahead'' of the `master` branch (in this case, just the one) and a unified diff of all the changes that will be made should this branch get merged by the project owner.
+We also see a list of the commits in our topic branch that are "`ahead`" of the `master` branch (in this case, just the one) and a unified diff of all the changes that will be made should this branch get merged by the project owner.
 @z
 
 @x
@@ -462,11 +462,11 @@ image::images/blink-06-final.png[PR final]
 @z
 
 @x
-An interesting thing to notice is that if you click on the ``Files Changed'' tab on this Pull Request, you'll get the ``unified'' diff -- that is, the total aggregate difference that would be introduced to your main branch if this topic branch was merged in.
+An interesting thing to notice is that if you click on the "`Files Changed`" tab on this Pull Request, you'll get the "`unified`" diff -- that is, the total aggregate difference that would be introduced to your main branch if this topic branch was merged in.
 In `git diff` terms, it basically automatically shows you `git diff master...<branch>` for the branch this Pull Request is based on.
 See <<ch05-distributed-git#_what_is_introduced>> for more about this type of diff.
 @y
-An interesting thing to notice is that if you click on the ``Files Changed'' tab on this Pull Request, you'll get the ``unified'' diff -- that is, the total aggregate difference that would be introduced to your main branch if this topic branch was merged in.
+An interesting thing to notice is that if you click on the "`Files Changed`" tab on this Pull Request, you'll get the "`unified`" diff -- that is, the total aggregate difference that would be introduced to your main branch if this topic branch was merged in.
 In `git diff` terms, it basically automatically shows you `git diff master...<branch>` for the branch this Pull Request is based on.
 See <<ch05-distributed-git#_what_is_introduced>> for more about this type of diff.
 @z
@@ -474,11 +474,11 @@ See <<ch05-distributed-git#_what_is_introduced>> for more about this type of dif
 @x
 The other thing you'll notice is that GitHub checks to see if the Pull Request merges cleanly and provides a button to do the merge for you on the server.
 This button only shows up if you have write access to the repository and a trivial merge is possible.
-If you click it GitHub will perform a ``non-fast-forward'' merge, meaning that even if the merge *could* be a fast-forward, it will still create a merge commit.
+If you click it GitHub will perform a "`non-fast-forward`" merge, meaning that even if the merge *could* be a fast-forward, it will still create a merge commit.
 @y
 The other thing you'll notice is that GitHub checks to see if the Pull Request merges cleanly and provides a button to do the merge for you on the server.
 This button only shows up if you have write access to the repository and a trivial merge is possible.
-If you click it GitHub will perform a ``non-fast-forward'' merge, meaning that even if the merge *could* be a fast-forward, it will still create a merge commit.
+If you click it GitHub will perform a "`non-fast-forward`" merge, meaning that even if the merge *could* be a fast-forward, it will still create a merge commit.
 @z
 
 @x
@@ -555,12 +555,12 @@ When code is proposed with a Pull Request and the maintainers or community sugge
 For instance, if you go back and look again at <<_pr_final>>, you'll notice that the contributor did not rebase his commit and send another Pull Request.
 Instead they added new commits and pushed them to the existing branch.
 This way if you go back and look at this Pull Request in the future, you can easily find all of the context of why decisions were made.
-Pushing the ``Merge'' button on the site purposefully creates a merge commit that references the Pull Request so that it's easy to go back and research the original conversation if necessary.
+Pushing the "`Merge`" button on the site purposefully creates a merge commit that references the Pull Request so that it's easy to go back and research the original conversation if necessary.
 @y
 For instance, if you go back and look again at <<_pr_final>>, you'll notice that the contributor did not rebase his commit and send another Pull Request.
 Instead they added new commits and pushed them to the existing branch.
 This way if you go back and look at this Pull Request in the future, you can easily find all of the context of why decisions were made.
-Pushing the ``Merge'' button on the site purposefully creates a merge commit that references the Pull Request so that it's easy to go back and research the original conversation if necessary.
+Pushing the "`Merge`" button on the site purposefully creates a merge commit that references the Pull Request so that it's easy to go back and research the original conversation if necessary.
 @z
 
 @x
@@ -616,10 +616,10 @@ If you want to merge in the target branch to make your Pull Request mergeable, y
 @z
 
 @x
-For example, let's say that in the ``tonychacon'' example we were using before, the original author made a change that would create a conflict in the Pull Request.
+For example, let's say that in the "`tonychacon`" example we were using before, the original author made a change that would create a conflict in the Pull Request.
 Let's go through those steps.
 @y
-For example, let's say that in the ``tonychacon'' example we were using before, the original author made a change that would create a conflict in the Pull Request.
+For example, let's say that in the "`tonychacon`" example we were using before, the original author made a change that would create a conflict in the Pull Request.
 Let's go through those steps.
 @z
 
@@ -754,24 +754,24 @@ Instead, push the rebased branch to a new branch on GitHub and open a brand new 
 @z
 
 @x
-Your next question may be ``How do I reference the old Pull Request?''.
+Your next question may be "`How do I reference the old Pull Request?`".
 It turns out there are many, many ways to reference other things almost anywhere you can write in GitHub.
 @y
-Your next question may be ``How do I reference the old Pull Request?''.
+Your next question may be "`How do I reference the old Pull Request?`".
 It turns out there are many, many ways to reference other things almost anywhere you can write in GitHub.
 @z
 
 @x
 Let's start with how to cross-reference another Pull Request or an Issue.
 All Pull Requests and Issues are assigned numbers and they are unique within the project.
-For example, you can't have Pull Request #3 _and_ Issue #3.
-If you want to reference any Pull Request or Issue from any other one, you can simply put `#<num>` in any comment or description.
+For example, you can't have Pull Request +#3+ _and_ Issue +#3+.
+If you want to reference any Pull Request or Issue from any other one, you can simply put `+#<num>+` in any comment or description.
 You can also be more specific if the Issue or Pull request lives somewhere else; write `username#<num>` if you're referring to an Issue or Pull Request in a fork of the repository you're in, or `username/repo#<num>` to reference something in another repository.
 @y
 Let's start with how to cross-reference another Pull Request or an Issue.
 All Pull Requests and Issues are assigned numbers and they are unique within the project.
-For example, you can't have Pull Request #3 _and_ Issue #3.
-If you want to reference any Pull Request or Issue from any other one, you can simply put `#<num>` in any comment or description.
+For example, you can't have Pull Request +#3+ _and_ Issue +#3+.
+If you want to reference any Pull Request or Issue from any other one, you can simply put `+#<num>+` in any comment or description.
 You can also be more specific if the Issue or Pull request lives somewhere else; write `username#<num>` if you're referring to an Issue or Pull Request in a fork of the repository you're in, or `username/repo#<num>` to reference something in another repository.
 @z
 
@@ -857,11 +857,11 @@ Again, you can reference commits in forks or other repositories in the same way 
 
 @x
 Linking to other Issues is just the beginning of interesting things you can do with almost any text box on GitHub.
-In  Issue and Pull Request descriptions, comments, code comments and more, you can use what is called ``GitHub Flavored Markdown''.
+In  Issue and Pull Request descriptions, comments, code comments and more, you can use what is called "`GitHub Flavored Markdown`".
 Markdown is like writing in plain text but which is rendered richly.
 @y
 Linking to other Issues is just the beginning of interesting things you can do with almost any text box on GitHub.
-In  Issue and Pull Request descriptions, comments, code comments and more, you can use what is called ``GitHub Flavored Markdown''.
+In  Issue and Pull Request descriptions, comments, code comments and more, you can use what is called "`GitHub Flavored Markdown`".
 Markdown is like writing in plain text but which is rendered richly.
 @z
 
@@ -996,9 +996,9 @@ This is also often used to add example code of what is not working or what this 
 @z
 
 @x
-To add a snippet of code you have to ``fence'' it in backticks.
+To add a snippet of code you have to "`fence`" it in backticks.
 @y
-To add a snippet of code you have to ``fence'' it in backticks.
+To add a snippet of code you have to "`fence`" it in backticks.
 @z
 
 @x
@@ -1232,10 +1232,10 @@ image::images/markdown-08-drag-drop.png[Drag and drop images]
 @z
 
 @x
-If you look at <<_md_drag>>, you can see a small ``Parsed as Markdown'' hint above the text area.
+If you look at <<_md_drag>>, you can see a small "`Parsed as Markdown`" hint above the text area.
 Clicking on that will give you a full cheat sheet of everything you can do with Markdown on GitHub.
 @y
-If you look at <<_md_drag>>, you can see a small ``Parsed as Markdown'' hint above the text area.
+If you look at <<_md_drag>>, you can see a small "`Parsed as Markdown`" hint above the text area.
 Clicking on that will give you a full cheat sheet of everything you can do with Markdown on GitHub.
 @z
 

@@ -264,13 +264,13 @@ Fast-forward
 @z
 
 @x
-You'll notice the phrase ``fast-forward'' in that merge.
+You'll notice the phrase "`fast-forward`" in that merge.
 Because the commit `C4` pointed to by the branch `hotfix` you merged in was directly ahead of the commit `C2` you're on, Git simply moves the pointer forward.
-To phrase that another way, when you try to merge one commit with a commit that can be reached by following the first commit's history, Git simplifies things by moving the pointer forward because there is no divergent work to merge together -- this is called a ``fast-forward.''
+To phrase that another way, when you try to merge one commit with a commit that can be reached by following the first commit's history, Git simplifies things by moving the pointer forward because there is no divergent work to merge together -- this is called a "`fast-forward.`"
 @y
-You'll notice the phrase ``fast-forward'' in that merge.
+You'll notice the phrase "`fast-forward`" in that merge.
 Because the commit `C4` pointed to by the branch `hotfix` you merged in was directly ahead of the commit `C2` you're on, Git simply moves the pointer forward.
-To phrase that another way, when you try to merge one commit with a commit that can be reached by following the first commit's history, Git simplifies things by moving the pointer forward because there is no divergent work to merge together -- this is called a ``fast-forward.''
+To phrase that another way, when you try to merge one commit with a commit that can be reached by following the first commit's history, Git simplifies things by moving the pointer forward because there is no divergent work to merge together -- this is called a "`fast-forward.`"
 @z
 
 @x
@@ -656,10 +656,10 @@ Hit return to start merge resolution tool (opendiff):
 @z
 
 @x
-If you want to use a merge tool other than the default (Git chose `opendiff` in this case because the command was run on a Mac), you can see all the supported tools listed at the top after ``one of the following tools.''
+If you want to use a merge tool other than the default (Git chose `opendiff` in this case because the command was run on a Mac), you can see all the supported tools listed at the top after "`one of the following tools.`"
 Just type the name of the tool you'd rather use.
 @y
-If you want to use a merge tool other than the default (Git chose `opendiff` in this case because the command was run on a Mac), you can see all the supported tools listed at the top after ``one of the following tools.''
+If you want to use a merge tool other than the default (Git chose `opendiff` in this case because the command was run on a Mac), you can see all the supported tools listed at the top after "`one of the following tools.`"
 Just type the name of the tool you'd rather use.
 @z
 

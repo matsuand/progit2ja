@@ -10,11 +10,11 @@
 @x
 (((GitHub, user accounts)))
 The first thing you need to do is set up a free user account.
-Simply visit https://github.com[], choose a user name that isn't already taken, provide an email address and a password, and click the big green ``Sign up for GitHub'' button.
+Simply visit https://github.com[], choose a user name that isn't already taken, provide an email address and a password, and click the big green "`Sign up for GitHub`" button.
 @y
 (((GitHub, user accounts)))
 The first thing you need to do is set up a free user account.
-Simply visit https://github.com[], choose a user name that isn't already taken, provide an email address and a password, and click the big green ``Sign up for GitHub'' button.
+Simply visit https://github.com[], choose a user name that isn't already taken, provide an email address and a password, and click the big green "`Sign up for GitHub`" button.
 @z
 
 @x
@@ -90,31 +90,31 @@ Open up your account settings using the link at the top-right of the window:
 @z
 
 @x
-.The ``Account settings'' link
-image::images/account-settings.png[The ``Account settings'' link]
+.The "`Account settings`" link
+image::images/account-settings.png[The "`Account settings`" link]
 @y
-.The ``Account settings'' link
-image::images/account-settings.png[The ``Account settings'' link]
+.The "`Account settings`" link
+image::images/account-settings.png[The "`Account settings`" link]
 @z
 
 @x
-Then select the ``SSH keys'' section along the left-hand side.
+Then select the "`SSH keys`" section along the left-hand side.
 @y
-Then select the ``SSH keys'' section along the left-hand side.
+Then select the "`SSH keys`" section along the left-hand side.
 @z
 
 @x
-.The ``SSH keys'' link
-image::images/ssh-keys.png[The ``SSH keys'' link]
+.The "`SSH keys`" link.
+image::images/ssh-keys.png[The "`SSH keys`" link]
 @y
-.The ``SSH keys'' link
-image::images/ssh-keys.png[The ``SSH keys'' link]
+.The "`SSH keys`" link.
+image::images/ssh-keys.png[The "`SSH keys`" link]
 @z
 
 @x
-From there, click the "`Add an SSH key`" button, give your key a name, paste the contents of your `~/.ssh/id_rsa.pub` (or whatever you named it) public-key file into the text area, and click ``Add key''.
+From there, click the "`Add an SSH key`" button, give your key a name, paste the contents of your `~/.ssh/id_rsa.pub` (or whatever you named it) public-key file into the text area, and click "`Add key`".
 @y
-From there, click the "`Add an SSH key`" button, give your key a name, paste the contents of your `~/.ssh/id_rsa.pub` (or whatever you named it) public-key file into the text area, and click ``Add key''.
+From there, click the "`Add an SSH key`" button, give your key a name, paste the contents of your `~/.ssh/id_rsa.pub` (or whatever you named it) public-key file into the text area, and click "`Add key`".
 @z
 
 @x
@@ -141,18 +141,18 @@ You can name each of your keys (e.g. "My Laptop" or "Work Account") so that if y
 
 @x
 Next, if you wish, you can replace the avatar that is generated for you with an image of your choosing.
-First go to the ``Profile'' tab (above the SSH Keys tab) and click ``Upload new picture''.
+First go to the "`Profile`" tab (above the SSH Keys tab) and click "`Upload new picture`".
 @y
 Next, if you wish, you can replace the avatar that is generated for you with an image of your choosing.
-First go to the ``Profile'' tab (above the SSH Keys tab) and click ``Upload new picture''.
+First go to the "`Profile`" tab (above the SSH Keys tab) and click "`Upload new picture`".
 @z
 
 @x
-.The ``Profile'' link
-image::images/your-profile.png[The ``Profile'' link]
+.The "`Profile`" link
+image::images/your-profile.png[The "`Profile`" link]
 @y
-.The ``Profile'' link
-image::images/your-profile.png[The ``Profile'' link]
+.The "`Profile`" link
+image::images/your-profile.png[The "`Profile`" link]
 @z
 
 @x
@@ -226,11 +226,11 @@ If GitHub sees any of these in commit messages in any repository on the site, it
 @z
 
 @x
-Finally, for extra security, you should definitely set up Two-factor Authentication or ``2FA''.
+Finally, for extra security, you should definitely set up Two-factor Authentication or "`2FA`".
 Two-factor Authentication is an authentication mechanism that is becoming more and more popular recently to mitigate the risk of your account being compromised if your password is stolen somehow.
 Turning it on will make GitHub ask you for two different methods of authentication, so that if one of them is compromised, an attacker will not be able to access your account.
 @y
-Finally, for extra security, you should definitely set up Two-factor Authentication or ``2FA''.
+Finally, for extra security, you should definitely set up Two-factor Authentication or "`2FA`".
 Two-factor Authentication is an authentication mechanism that is becoming more and more popular recently to mitigate the risk of your account being compromised if your password is stolen somehow.
 Turning it on will make GitHub ask you for two different methods of authentication, so that if one of them is compromised, an attacker will not be able to access your account.
 @z
@@ -250,9 +250,9 @@ image::images/2fa-1.png[2FA in the Security Tab]
 @z
 
 @x
-If you click on the ``Set up two-factor authentication'' button, it will take you to a configuration page where you can choose to use a phone app to generate your secondary code (a ``time based one-time password''), or you can have GitHub send you a code via SMS each time you need to log in.
+If you click on the "`Set up two-factor authentication`" button, it will take you to a configuration page where you can choose to use a phone app to generate your secondary code (a "`time based one-time password`"), or you can have GitHub send you a code via SMS each time you need to log in.
 @y
-If you click on the ``Set up two-factor authentication'' button, it will take you to a configuration page where you can choose to use a phone app to generate your secondary code (a ``time based one-time password''), or you can have GitHub send you a code via SMS each time you need to log in.
+If you click on the "`Set up two-factor authentication`" button, it will take you to a configuration page where you can choose to use a phone app to generate your secondary code (a "`time based one-time password`"), or you can have GitHub send you a code via SMS each time you need to log in.
 @z
 
 @x

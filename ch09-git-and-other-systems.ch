@@ -3,9 +3,16 @@
 
 @x
 [[ch09-git-and-other-systems]]
-== Git and Other Systems
 @y
 [[ch09-git-and-other-systems]]
+@z
+
+@x
+== Git and Other Systems
+@y
+//////////////////////////
+== Git and Other Systems
+//////////////////////////
 == Git and Other Systems
 @z
 
@@ -15,6 +22,12 @@ Usually, you can't immediately switch every project you come in contact with to 
 Sometimes you're stuck on a project using another VCS, and wish it was Git.
 We'll spend the first part of this chapter learning about ways to use Git as a client when the project you're working on is hosted in a different system.
 @y
+//////////////////////////
+The world isn't perfect.
+Usually, you can't immediately switch every project you come in contact with to Git.
+Sometimes you're stuck on a project using another VCS, and wish it was Git.
+We'll spend the first part of this chapter learning about ways to use Git as a client when the project you're working on is hosted in a different system.
+//////////////////////////
 The world isn't perfect.
 Usually, you can't immediately switch every project you come in contact with to Git.
 Sometimes you're stuck on a project using another VCS, and wish it was Git.
@@ -25,6 +38,8 @@ We'll spend the first part of this chapter learning about ways to use Git as a c
 At some point, you may want to convert your existing project to Git.
 The second part of this chapter covers how to migrate your project into Git from several specific systems, as well as a method that will work if no pre-built import tool exists.
 @y
+//////////////////////////
+//////////////////////////
 At some point, you may want to convert your existing project to Git.
 The second part of this chapter covers how to migrate your project into Git from several specific systems, as well as a method that will work if no pre-built import tool exists.
 @z
@@ -32,18 +47,29 @@ The second part of this chapter covers how to migrate your project into Git from
 @x
 === Git as a Client
 @y
+//////////////////////////
+//////////////////////////
 === Git as a Client
 @z
 
 @x
 (((Git as a client)))
-Git provides such a nice experience for developers that many people have figured out how to use it on their workstation, even if the rest of their team is using an entirely different VCS.
-There are a number of these adapters, called ``bridges,'' available.
-Here we'll cover the ones you're most likely to run into in the wild.
 @y
 (((Git as a client)))
+@z
+
+@x
 Git provides such a nice experience for developers that many people have figured out how to use it on their workstation, even if the rest of their team is using an entirely different VCS.
-There are a number of these adapters, called ``bridges,'' available.
+There are a number of these adapters, called "`bridges,`" available.
+Here we'll cover the ones you're most likely to run into in the wild.
+@y
+//////////////////////////
+Git provides such a nice experience for developers that many people have figured out how to use it on their workstation, even if the rest of their team is using an entirely different VCS.
+There are a number of these adapters, called "`bridges,`" available.
+Here we'll cover the ones you're most likely to run into in the wild.
+//////////////////////////
+Git provides such a nice experience for developers that many people have figured out how to use it on their workstation, even if the rest of their team is using an entirely different VCS.
+There are a number of these adapters, called "`bridges,`" available.
 Here we'll cover the ones you're most likely to run into in the wild.
 @z
 
@@ -75,6 +101,8 @@ include::book/09-git-and-other-scms/sections/client-p4.asc[]
 [[_migrating]]
 === Migrating to Git
 @y
+//////////////////////////
+//////////////////////////
 [[_migrating]]
 === Migrating to Git
 @z
@@ -85,6 +113,8 @@ If you have an existing codebase in another VCS but you've decided to start usin
 This section goes over some importers for common systems, and then demonstrates how to develop your own custom importer.
 You'll learn how to import data from several of the bigger professionally used SCM systems, because they make up the majority of users who are switching, and because high-quality tools for them are easy to come by.
 @y
+//////////////////////////
+//////////////////////////
 (((Migrating to Git)))
 If you have an existing codebase in another VCS but you've decided to start using Git, you must migrate your project one way or another.
 This section goes over some importers for common systems, and then demonstrates how to develop your own custom importer.
@@ -134,6 +164,8 @@ include::book/09-git-and-other-scms/sections/import-custom.asc[]
 You should feel comfortable using Git as a client for other version-control systems, or importing nearly any existing repository into Git without losing data.
 In the next chapter, we'll cover the raw internals of Git so you can craft every single byte, if need be.
 @y
+//////////////////////////
+//////////////////////////
 You should feel comfortable using Git as a client for other version-control systems, or importing nearly any existing repository into Git without losing data.
 In the next chapter, we'll cover the raw internals of Git so you can craft every single byte, if need be.
 @z

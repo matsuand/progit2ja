@@ -22,7 +22,7 @@ You typically obtain a Git repository in one of two ways:
 //////////////////////////
 You typically obtain a Git repository in one of two ways:
 //////////////////////////
-Git リポジトリを作り出すには、以下の 2 つの方法があります。 
+Git リポジトリを作り出すには以下の 2 つの方法があります。 
 @z
 
 @x
@@ -156,7 +156,7 @@ At this point, nothing in your project is tracked yet.
 See <<ch10-git-internals#ch10-git-internals>> for more information about exactly what files are contained in the `.git` directory you just created.(((git commands, init)))
 //////////////////////////
 上のコマンドを実行すると `.git` という新しいサブディレクトリが生成されます。
-ここにはリポジトリに必要となるファイルがすべて収められています。
+ここにはリポジトリに必要となるファイルがすべて収められます。
 いわばリポジトリのスケルトンです。
 この段階では、まだプロジェクトの内容は登録されていません。
 ここで生成された `.git` ディレクトリに具体的にどのようなファイルがあるのか、その詳細は <<ch10-git-internals#ch10-git-internals>> の章を参照してください。

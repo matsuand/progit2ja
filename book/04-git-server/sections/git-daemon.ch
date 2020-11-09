@@ -9,12 +9,12 @@
 
 @x
 (((serving repositories, git protocol)))
-Next we'll set up a daemon serving repositories using the ``Git'' protocol.
+Next we'll set up a daemon serving repositories using the "`Git`" protocol.
 This is a common choice for fast, unauthenticated access to your Git data.
 Remember that since this is not an authenticated service, anything you serve over this protocol is public within its network.
 @y
 (((serving repositories, git protocol)))
-Next we'll set up a daemon serving repositories using the ``Git'' protocol.
+Next we'll set up a daemon serving repositories using the "`Git`" protocol.
 This is a common choice for fast, unauthenticated access to your Git data.
 Remember that since this is not an authenticated service, anything you serve over this protocol is public within its network.
 @z

@@ -207,14 +207,14 @@ Wouldn't it be nice if Git could store one of them in full but then the second o
 
 @x
 It turns out that it can.
-The initial format in which Git saves objects on disk is called a ``loose'' object format.
-However, occasionally Git packs up several of these objects into a single binary file called a ``packfile'' in order to save space and be more efficient.
+The initial format in which Git saves objects on disk is called a "`loose`" object format.
+However, occasionally Git packs up several of these objects into a single binary file called a "`packfile`" in order to save space and be more efficient.
 Git does this if you have too many loose objects around, if you run the `git gc` command manually, or if you push to a remote server.
 To see what happens, you can manually ask Git to pack up the objects by calling the `git gc` command:
 @y
 It turns out that it can.
-The initial format in which Git saves objects on disk is called a ``loose'' object format.
-However, occasionally Git packs up several of these objects into a single binary file called a ``packfile'' in order to save space and be more efficient.
+The initial format in which Git saves objects on disk is called a "`loose`" object format.
+However, occasionally Git packs up several of these objects into a single binary file called a "`packfile`" in order to save space and be more efficient.
 Git does this if you have too many loose objects around, if you run the `git gc` command manually, or if you push to a remote server.
 To see what happens, you can manually ask Git to pack up the objects by calling the `git gc` command:
 @z
@@ -270,10 +270,10 @@ $ find .git/objects -type f
 @z
 
 @x
-The objects that remain are the blobs that aren't pointed to by any commit -- in this case, the ``what is up, doc?'' example and the ``test content'' example blobs you created earlier.
+The objects that remain are the blobs that aren't pointed to by any commit -- in this case, the "`what is up, doc?`" example and the "`test content`" example blobs you created earlier.
 Because you never added them to any commits, they're considered dangling and aren't packed up in your new packfile.
 @y
-The objects that remain are the blobs that aren't pointed to by any commit -- in this case, the ``what is up, doc?'' example and the ``test content'' example blobs you created earlier.
+The objects that remain are the blobs that aren't pointed to by any commit -- in this case, the "`what is up, doc?`" example and the "`test content`" example blobs you created earlier.
 Because you never added them to any commits, they're considered dangling and aren't packed up in your new packfile.
 @z
 

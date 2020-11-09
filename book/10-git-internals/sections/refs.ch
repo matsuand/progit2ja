@@ -18,10 +18,10 @@ Instead, it would be easier if you had a file in which you could store that SHA-
 @z
 
 @x
-In Git, these simple names are called ``references'' or ``refs''; you can find the files that contain those SHA-1 values in the `.git/refs` directory.
+In Git, these simple names are called "`references`" or "`refs`"; you can find the files that contain those SHA-1 values in the `.git/refs` directory.
 In the current project, this directory contains no files, but it does contain a simple structure:
 @y
-In Git, these simple names are called ``references'' or ``refs''; you can find the files that contain those SHA-1 values in the `.git/refs` directory.
+In Git, these simple names are called "`references`" or "`refs`"; you can find the files that contain those SHA-1 values in the `.git/refs` directory.
 In the current project, this directory contains no files, but it does contain a simple structure:
 @z
 

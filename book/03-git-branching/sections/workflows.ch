@@ -65,12 +65,12 @@ It's generally easier to think about them as work silos, where sets of commits g
 
 @x
 [[lrbranch_b]]
-.A ``silo'' view of progressive-stability branching
-image::images/lr-branches-2.png[A ``silo'' view of progressive-stability branching]
+.A "`silo`" view of progressive-stability branching
+image::images/lr-branches-2.png[A "`silo`" view of progressive-stability branching]
 @y
 [[lrbranch_b]]
-.A ``silo'' view of progressive-stability branching
-image::images/lr-branches-2.png[A ``silo'' view of progressive-stability branching]
+.A "`silo`" view of progressive-stability branching
+image::images/lr-branches-2.png[A "`silo`" view of progressive-stability branching]
 @z
 
 @x

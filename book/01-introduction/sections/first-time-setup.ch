@@ -26,7 +26,7 @@ Now that you have Git on your system, you'll want to do a few things to customiz
 You should have to do these things only once on any given computer; they'll stick around between upgrades.
 You can also change them at any time by running through the commands again.
 //////////////////////////
-Git をインストールしましたので、Git 環境に対して設定を行います。
+Git をインストールしたので、Git 環境に対して設定を行います。
 この設定は、作業を行うコンピューターにおいて 1 回行えば済むものです。
 今後、Git をアップグレードしてもこの設定は残ります。
 その後に変更の必要があれば、同じコマンドを実行します。
@@ -68,7 +68,7 @@ Git には `git config` というツールがあります。
   Unsurprisingly, you need to be located somewhere in a Git repository for this option to work properly.
 //////////////////////////
 1. `[path]/etc/gitconfig` ファイル： システム上の全ユーザー、全リポジトリに対する設定。
-  `git config`の実行時に`--system`オプションを指定すると、このファイルを対象として設定変数の読み書きを行います。
+  `git config` の実行時に `--system` オプションを指定すると、このファイルを対象として設定変数の読み書きを行います。
   このファイルはシステム全体に対しての設定ファイルであるため、このファイルの変更には管理者権限が必要になります。
 2. `~/.gitconfig` ファイルまたは `~/.config/git/config` ファイル： 各ユーザー向けの設定。
   `--global` オプションを指定すれば、このファイルを対象として設定変数の読み書きを行います。
@@ -192,7 +192,7 @@ Again, you need to do this only once if you pass the `--global` option, because 
 If you want to override this with a different name or email address for specific projects, you can run the command without the `--global` option when you're in that project.
 //////////////////////////
 `--global` オプションをつけてこの設定を行ったのであれば、やはり設定は 1 回行うだけで済みます。
-Git はこの設定以降、このシステム上で行なわれる操作に対しては、必ずこの情報を利用するからです。
+Git はこの設定以降、このシステム上で行なわれる操作に対して、必ずこの情報を利用するからです。
 別の Git プロジェクトでは、この設定でなく、別のユーザー名やメールアドレスを用いたい場合は、その Git プロジェクト内にて `--global` オプションをつけずにコマンド実行します。
 @z
 
@@ -202,7 +202,7 @@ Many of the GUI tools will help you do this when you first run them.
 //////////////////////////
 Many of the GUI tools will help you do this when you first run them.
 //////////////////////////
-GUI ツールは、わかりやすく設定できるものが多いので、試してみるとよいでしょう。
+GUI ツールはわかりやすく設定できるものが多いので、試してみるとよいでしょう。
 @z
 
 @x
@@ -229,7 +229,7 @@ Now that your identity is set up, you can configure the default text editor that
 If not configured, Git uses your system's default editor.
 //////////////////////////
 識別情報の設定の次は、デフォルトのテキストエディターの設定です。
-Git の操作時において、テキスト入力が必要となるときに利用するエディターのことです。
+Git を操作する際に、テキスト入力が必要となるときに利用するエディターのことです。
 この設定が行われていない場合は、システムのデフォルトエディターが利用されます。
 @z
 
@@ -239,7 +239,7 @@ If you want to use a different text editor, such as Emacs, you can do the follow
 //////////////////////////
 If you want to use a different text editor, such as Emacs, you can do the following:
 //////////////////////////
-例えばテキストエディターとして Emacs を使いたい場合は、以下のようにして設定します。
+例えばテキストエディターとして Emacs を使いたい場合は、以下のように設定します。
 @z
 
 @x
@@ -306,20 +306,20 @@ $ git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -m
 [NOTE]
 ====
 Vim, Emacs and Notepad++ are popular text editors often used by developers on Unix-based systems like Linux and macOS or a Windows system.
-If you are using another editor, or a 32-bit version, please find specific instructions for how to set up your favorite editor with Git in <<C-git-commands#_core_editor>>.
+If you are using another editor, or a 32-bit version, please find specific instructions for how to set up your favorite editor with Git in <<C-git-commands#ch_core_editor>>.
 ====
 @y
 //////////////////////////
 [NOTE]
 ====
 Vim, Emacs and Notepad++ are popular text editors often used by developers on Unix-based systems like Linux and macOS or a Windows system.
-If you are using another editor, or a 32-bit version, please find specific instructions for how to set up your favorite editor with Git in <<C-git-commands#_core_editor>>.
+If you are using another editor, or a 32-bit version, please find specific instructions for how to set up your favorite editor with Git in <<C-git-commands#ch_core_editor>>.
 ====
 //////////////////////////
 [NOTE]
 ====
 Vim、Emacs、Notepad++ といったテキストエディターは一般的なものなので、Unix ベースの Linux や macOS あるいは Windows において開発者がよく利用しています。
-これ以外のエディターや 32 ビット版のものを利用している場合、<<C-git-commands#_core_editor>> に示されているものであれば、その設定手順に従ってください。
+これ以外のエディターや 32 ビット版のものを利用している場合、<<C-git-commands#ch_core_editor>> に示されているものであれば、その設定手順に従ってください。
 ====
 @z
 
@@ -362,7 +362,7 @@ By default Git will create a branch called _master_ when you create a new reposi
 From Git version 2.28 onwards, you can set a different name for the initial branch.
 //////////////////////////
 新規にリポジトリを `git init` により生成した際に作り出されるブランチは、デフォルトで _master_ という名前です。
-Git バージョン 2.28 以降、この初期ブランチ名を別のものに設定できるようになりました。
+Git バージョン 2.28 以降では、この初期ブランチ名を別のものに設定できるようになりました。
 @z
 
 @x

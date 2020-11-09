@@ -25,11 +25,11 @@ To be sure, its features and constraints are well-suited to several specific pro
 
 @x
 There are two options if you'd like to mix your use of Perforce and Git.
-The first one we'll cover is the ``Git Fusion'' bridge from the makers of Perforce, which lets you expose subtrees of your Perforce depot as read-write Git repositories.
+The first one we'll cover is the "`Git Fusion`" bridge from the makers of Perforce, which lets you expose subtrees of your Perforce depot as read-write Git repositories.
 The second is git-p4, a client-side bridge that lets you use Git as a Perforce client, without requiring any reconfiguration of the Perforce server.
 @y
 There are two options if you'd like to mix your use of Perforce and Git.
-The first one we'll cover is the ``Git Fusion'' bridge from the makers of Perforce, which lets you expose subtrees of your Perforce depot as read-write Git repositories.
+The first one we'll cover is the "`Git Fusion`" bridge from the makers of Perforce, which lets you expose subtrees of your Perforce depot as read-write Git repositories.
 The second is git-p4, a client-side bridge that lets you use Git as a Perforce client, without requiring any reconfiguration of the Perforce server.
 @z
 
@@ -82,12 +82,12 @@ image::images/git-fusion-boot.png[The Git Fusion virtual machine boot screen]
 @x
 You should take note of the IP address that's shown here, we'll be using it later on.
 Next, we'll create a Perforce user.
-Select the ``Login'' option at the bottom and press enter (or SSH to the machine), and log in as `root`.
+Select the "`Login`" option at the bottom and press enter (or SSH to the machine), and log in as `root`.
 Then use these commands to create a user:
 @y
 You should take note of the IP address that's shown here, we'll be using it later on.
 Next, we'll create a Perforce user.
-Select the ``Login'' option at the bottom and press enter (or SSH to the machine), and log in as `root`.
+Select the "`Login`" option at the bottom and press enter (or SSH to the machine), and log in as `root`.
 Then use these commands to create a user:
 @z
 
@@ -450,11 +450,11 @@ Note that the email addresses and full names should be unique, unless you want a
 @x
 Perforce Git Fusion is a two-way bridge between Perforce and Git version control.
 Let's have a look at how it feels to work from the Git side.
-We'll assume we've mapped in the ``Jam'' project using a configuration file as shown above, which we can clone like this:
+We'll assume we've mapped in the "`Jam`" project using a configuration file as shown above, which we can clone like this:
 @y
 Perforce Git Fusion is a two-way bridge between Perforce and Git version control.
 Let's have a look at how it feels to work from the Git side.
-We'll assume we've mapped in the ``Jam'' project using a configuration file as shown above, which we can clone like this:
+We'll assume we've mapped in the "`Jam`" project using a configuration file as shown above, which we can clone like this:
 @z
 
 @x
@@ -697,11 +697,11 @@ The rest of the view is given to the details view for the selected revision (`2`
 
 @x
 One thing to notice is that the graph looks exactly like the one in Git's history.
-Perforce didn't have a named branch to store the `1` and `2` commits, so it made an ``anonymous'' branch in the `.git-fusion` directory to hold it.
+Perforce didn't have a named branch to store the `1` and `2` commits, so it made an "`anonymous`" branch in the `.git-fusion` directory to hold it.
 This will also happen for named Git branches that don't correspond to a named Perforce branch (and you can later map them to a Perforce branch using the configuration file).
 @y
 One thing to notice is that the graph looks exactly like the one in Git's history.
-Perforce didn't have a named branch to store the `1` and `2` commits, so it made an ``anonymous'' branch in the `.git-fusion` directory to hold it.
+Perforce didn't have a named branch to store the `1` and `2` commits, so it made an "`anonymous`" branch in the `.git-fusion` directory to hold it.
 This will also happen for named Git branches that don't correspond to a named Perforce branch (and you can later map them to a Perforce branch using the configuration file).
 @z
 
@@ -834,10 +834,10 @@ Doing initial import of //depot/www/live/ from revision #head into refs/remotes/
 @z
 
 @x
-This creates what in Git terms is a ``shallow'' clone; only the very latest Perforce revision is imported into Git; remember, Perforce isn't designed to give every revision to every user.
+This creates what in Git terms is a "`shallow`" clone; only the very latest Perforce revision is imported into Git; remember, Perforce isn't designed to give every revision to every user.
 This is enough to use Git as a Perforce client, but for other purposes it's not enough.
 @y
-This creates what in Git terms is a ``shallow'' clone; only the very latest Perforce revision is imported into Git; remember, Perforce isn't designed to give every revision to every user.
+This creates what in Git terms is a "`shallow`" clone; only the very latest Perforce revision is imported into Git; remember, Perforce isn't designed to give every revision to every user.
 This is enough to use Git as a Perforce client, but for other purposes it's not enough.
 @z
 
@@ -864,10 +864,10 @@ $ git log --oneline --all --graph --decorate
 @z
 
 @x
-Note how there's a ``p4'' remote for the Perforce server, but everything else looks like a standard clone.
+Note how there's a "`p4`" remote for the Perforce server, but everything else looks like a standard clone.
 Actually, that's a bit misleading; there isn't actually a remote there.
 @y
-Note how there's a ``p4'' remote for the Perforce server, but everything else looks like a standard clone.
+Note how there's a "`p4`" remote for the Perforce server, but everything else looks like a standard clone.
 Actually, that's a bit misleading; there isn't actually a remote there.
 @z
 
@@ -1500,10 +1500,10 @@ $ cd project; git log --oneline --all --graph --decorate
 @z
 
 @x
-Note the ``@all'' specifier in the depot path; that tells git-p4 to clone not just the latest changeset for that subtree, but all changesets that have ever touched those paths.
+Note the "`@all`" specifier in the depot path; that tells git-p4 to clone not just the latest changeset for that subtree, but all changesets that have ever touched those paths.
 This is closer to Git's concept of a clone, but if you're working on a project with a long history, it could take a while.
 @y
-Note the ``@all'' specifier in the depot path; that tells git-p4 to clone not just the latest changeset for that subtree, but all changesets that have ever touched those paths.
+Note the "`@all`" specifier in the depot path; that tells git-p4 to clone not just the latest changeset for that subtree, but all changesets that have ever touched those paths.
 This is closer to Git's concept of a clone, but if you're working on a project with a long history, it could take a while.
 @z
 
@@ -1536,9 +1536,9 @@ $ git clone --detect-branches //depot/project@all .
 @z
 
 @x
-Setting the `git-p4.branchList` configuration variable to `main:dev` tells git-p4 that ``main'' and ``dev'' are both branches, and the second one is a child of the first one.
+Setting the `git-p4.branchList` configuration variable to `main:dev` tells git-p4 that "`main`" and "`dev`" are both branches, and the second one is a child of the first one.
 @y
-Setting the `git-p4.branchList` configuration variable to `main:dev` tells git-p4 that ``main'' and ``dev'' are both branches, and the second one is a child of the first one.
+Setting the `git-p4.branchList` configuration variable to `main:dev` tells git-p4 that "`main`" and "`dev`" are both branches, and the second one is a child of the first one.
 @z
 
 @x

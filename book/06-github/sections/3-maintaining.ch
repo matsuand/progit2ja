@@ -23,50 +23,50 @@ Now that we're comfortable contributing to a project, let's look at the other si
 
 @x
 Let's create a new repository to share our project code with.
-Start by clicking the ``New repository'' button on the right-hand side of the dashboard, or from the `+` button in the top toolbar next to your username as seen in <<_new_repo_dropdown>>.
+Start by clicking the "`New repository`" button on the right-hand side of the dashboard, or from the `+` button in the top toolbar next to your username as seen in <<_new_repo_dropdown>>.
 @y
 Let's create a new repository to share our project code with.
-Start by clicking the ``New repository'' button on the right-hand side of the dashboard, or from the `+` button in the top toolbar next to your username as seen in <<_new_repo_dropdown>>.
+Start by clicking the "`New repository`" button on the right-hand side of the dashboard, or from the `+` button in the top toolbar next to your username as seen in <<_new_repo_dropdown>>.
 @z
 
 @x
-.The ``Your repositories'' area
-image::images/newrepo.png[The ``Your repositories'' area]
+.The "`Your repositories`" area
+image::images/newrepo.png[The "`Your repositories`" area]
 @y
-.The ``Your repositories'' area
-image::images/newrepo.png[The ``Your repositories'' area]
+.The "`Your repositories`" area
+image::images/newrepo.png[The "`Your repositories`" area]
 @z
 
 @x
 [[_new_repo_dropdown]]
-.The ``New repository'' dropdown
-image::images/new-repo.png[The ``new repository'' dropdown]
+.The "`New repository`" dropdown
+image::images/new-repo.png[The "`new repository`" dropdown]
 @y
 [[_new_repo_dropdown]]
-.The ``New repository'' dropdown
-image::images/new-repo.png[The ``new repository'' dropdown]
+.The "`New repository`" dropdown
+image::images/new-repo.png[The "`new repository`" dropdown]
 @z
 
 @x
-This takes you to the ``new repository'' form:
+This takes you to the "`new repository`" form:
 @y
-This takes you to the ``new repository'' form:
+This takes you to the "`new repository`" form:
 @z
 
 @x
-.The ``new repository'' form
-image::images/newrepoform.png[The ``new repository'' form]
+.The "`new repository`" form
+image::images/newrepoform.png[The "`new repository`" form]
 @y
-.The ``new repository'' form
-image::images/newrepoform.png[The ``new repository'' form]
+.The "`new repository`" form
+image::images/newrepoform.png[The "`new repository`" form]
 @z
 
 @x
 All you really have to do here is provide a project name; the rest of the fields are completely optional.
-For now, just click the ``Create Repository'' button, and boom – you have a new repository on GitHub, named `<user>/<project_name>`.
+For now, just click the "`Create Repository`" button, and boom – you have a new repository on GitHub, named `<user>/<project_name>`.
 @y
 All you really have to do here is provide a project name; the rest of the fields are completely optional.
-For now, just click the ``Create Repository'' button, and boom – you have a new repository on GitHub, named `<user>/<project_name>`.
+For now, just click the "`Create Repository`" button, and boom – you have a new repository on GitHub, named `<user>/<project_name>`.
 @z
 
 @x
@@ -110,19 +110,19 @@ The HTTPS one is also exactly the same URL they would paste into a browser to vi
 @z
 
 @x
-If you're working with other people who you want to give commit access to, you need to add them as ``collaborators''.
+If you're working with other people who you want to give commit access to, you need to add them as "`collaborators`".
 If Ben, Jeff, and Louise all sign up for accounts on GitHub, and you want to give them push access to your repository, you can add them to your project.
-Doing so will give them ``push'' access, which means they have both read and write access to the project and Git repository.
+Doing so will give them "`push`" access, which means they have both read and write access to the project and Git repository.
 @y
-If you're working with other people who you want to give commit access to, you need to add them as ``collaborators''.
+If you're working with other people who you want to give commit access to, you need to add them as "`collaborators`".
 If Ben, Jeff, and Louise all sign up for accounts on GitHub, and you want to give them push access to your repository, you can add them to your project.
-Doing so will give them ``push'' access, which means they have both read and write access to the project and Git repository.
+Doing so will give them "`push`" access, which means they have both read and write access to the project and Git repository.
 @z
 
 @x
-Click the ``Settings'' link at the bottom of the right-hand sidebar.
+Click the "`Settings`" link at the bottom of the right-hand sidebar.
 @y
-Click the ``Settings'' link at the bottom of the right-hand sidebar.
+Click the "`Settings`" link at the bottom of the right-hand sidebar.
 @z
 
 @x
@@ -134,15 +134,15 @@ image::images/reposettingslink.png[The repository settings link]
 @z
 
 @x
-Then select ``Collaborators'' from the menu on the left-hand side.
-Then, just type a username into the box, and click ``Add collaborator.''
+Then select "`Collaborators`" from the menu on the left-hand side.
+Then, just type a username into the box, and click "`Add collaborator.`"
 You can repeat this as many times as you like to grant access to everyone you like.
-If you need to revoke access, just click the ``X'' on the right-hand side of their row.
+If you need to revoke access, just click the "`X`" on the right-hand side of their row.
 @y
-Then select ``Collaborators'' from the menu on the left-hand side.
-Then, just type a username into the box, and click ``Add collaborator.''
+Then select "`Collaborators`" from the menu on the left-hand side.
+Then, just type a username into the box, and click "`Add collaborator.`"
 You can repeat this as many times as you like to grant access to everyone you like.
-If you need to revoke access, just click the ``X'' on the right-hand side of their row.
+If you need to revoke access, just click the "`X`" on the right-hand side of their row.
 @z
 
 @x
@@ -174,9 +174,9 @@ The only difference is that the ones in a fork are often from people where you c
 @z
 
 @x
-For these examples, let's assume you are ``tonychacon'' and you've created a new Arduino code project named ``fade''.
+For these examples, let's assume you are "`tonychacon`" and you've created a new Arduino code project named "`fade`".
 @y
-For these examples, let's assume you are ``tonychacon'' and you've created a new Arduino code project named ``fade''.
+For these examples, let's assume you are "`tonychacon`" and you've created a new Arduino code project named "`fade`".
 @z
 
 @x
@@ -284,13 +284,13 @@ Once the code is in a place you like and want to merge it in, you can either pul
 @z
 
 @x
-If the merge is trivial, you can also just hit the ``Merge'' button on the GitHub site.
-This will do a ``non-fast-forward'' merge, creating a merge commit even if a fast-forward merge was possible.
+If the merge is trivial, you can also just hit the "`Merge`" button on the GitHub site.
+This will do a "`non-fast-forward`" merge, creating a merge commit even if a fast-forward merge was possible.
 This means that no matter what, every time you hit the merge button, a merge commit is created.
 As you can see in <<_merge_button>>, GitHub gives you all of this information if you click the hint link.
 @y
-If the merge is trivial, you can also just hit the ``Merge'' button on the GitHub site.
-This will do a ``non-fast-forward'' merge, creating a merge commit even if a fast-forward merge was possible.
+If the merge is trivial, you can also just hit the "`Merge`" button on the GitHub site.
+This will do a "`non-fast-forward`" merge, creating a merge commit even if a fast-forward merge was possible.
 This means that no matter what, every time you hit the merge button, a merge commit is created.
 As you can see in <<_merge_button>>, GitHub gives you all of this information if you click the hint link.
 @z
@@ -336,17 +336,17 @@ By default you don't get them when you clone, but they are there in an obscured 
 @z
 
 @x
-To demonstrate this, we're going to use a low-level command (often referred to as a ``plumbing'' command, which we'll read about more in <<ch10-git-internals#_plumbing_porcelain>>) called `ls-remote`.
+To demonstrate this, we're going to use a low-level command (often referred to as a "`plumbing`" command, which we'll read about more in <<ch10-git-internals#_plumbing_porcelain>>) called `ls-remote`.
 This command is generally not used in day-to-day Git operations but it's useful to show us what references are present on the server.
 @y
-To demonstrate this, we're going to use a low-level command (often referred to as a ``plumbing'' command, which we'll read about more in <<ch10-git-internals#_plumbing_porcelain>>) called `ls-remote`.
+To demonstrate this, we're going to use a low-level command (often referred to as a "`plumbing`" command, which we'll read about more in <<ch10-git-internals#_plumbing_porcelain>>) called `ls-remote`.
 This command is generally not used in day-to-day Git operations but it's useful to show us what references are present on the server.
 @z
 
 @x
-If we run this command against the ``blink'' repository we were using earlier, we will get a list of all the branches and tags and other references in the repository.
+If we run this command against the "`blink`" repository we were using earlier, we will get a list of all the branches and tags and other references in the repository.
 @y
-If we run this command against the ``blink'' repository we were using earlier, we will get a list of all the branches and tags and other references in the repository.
+If we run this command against the "`blink`" repository we were using earlier, we will get a list of all the branches and tags and other references in the repository.
 @z
 
 @x
@@ -424,12 +424,12 @@ From https://github.com/libgit2/libgit2
 @z
 
 @x
-This tells Git, ``Connect to the `origin` remote, and download the ref named `refs/pull/958/head`.''
+This tells Git, "`Connect to the `origin` remote, and download the ref named `refs/pull/958/head`.`"
 Git happily obeys, and downloads everything you need to construct that ref, and puts a pointer to the commit you want under `.git/FETCH_HEAD`.
 You can follow that up with `git merge FETCH_HEAD` into a branch you want to test it in, but that merge commit message looks a bit weird.
 Also, if you're reviewing a *lot* of pull requests, this gets tedious.
 @y
-This tells Git, ``Connect to the `origin` remote, and download the ref named `refs/pull/958/head`.''
+This tells Git, "`Connect to the `origin` remote, and download the ref named `refs/pull/958/head`.`"
 Git happily obeys, and downloads everything you need to construct that ref, and puts a pointer to the commit you want under `.git/FETCH_HEAD`.
 You can follow that up with `git merge FETCH_HEAD` into a branch you want to test it in, but that merge commit message looks a bit weird.
 Also, if you're reviewing a *lot* of pull requests, this gets tedious.
@@ -462,12 +462,12 @@ It should look a bit like this:
 @z
 
 @x
-That line that begins with `fetch =` is a ``refspec.''
+That line that begins with `fetch =` is a "`refspec.`"
 It's a way of mapping names on the remote with names in your local `.git` directory.
 This particular one tells Git, "the things on the remote that are under `refs/heads` should go in my local repository under `refs/remotes/origin`."
 You can modify this section to add another refspec:
 @y
-That line that begins with `fetch =` is a ``refspec.''
+That line that begins with `fetch =` is a "`refspec.`"
 It's a way of mapping names on the remote with names in your local `.git` directory.
 This particular one tells Git, "the things on the remote that are under `refs/heads` should go in my local repository under `refs/remotes/origin`."
 You can modify this section to add another refspec:
@@ -492,10 +492,10 @@ You can modify this section to add another refspec:
 @z
 
 @x
-That last line tells Git, ``All the refs that look like `refs/pull/123/head` should be stored locally like `refs/remotes/origin/pr/123`.''
+That last line tells Git, "`All the refs that look like `refs/pull/123/head` should be stored locally like `refs/remotes/origin/pr/123`.`"
 Now, if you save that file, and do a `git fetch`:
 @y
-That last line tells Git, ``All the refs that look like `refs/pull/123/head` should be stored locally like `refs/remotes/origin/pr/123`.''
+That last line tells Git, "`All the refs that look like `refs/pull/123/head` should be stored locally like `refs/remotes/origin/pr/123`.`"
 Now, if you save that file, and do a `git fetch`:
 @z
 
@@ -549,11 +549,11 @@ Switched to a new branch 'pr/2'
 
 @x
 The eagle-eyed among you would note the `head` on the end of the remote portion of the refspec.
-There's also a `refs/pull/#/merge` ref on the GitHub side, which represents the commit that would result if you push the ``merge'' button on the site.
+There's also a `refs/pull/#/merge` ref on the GitHub side, which represents the commit that would result if you push the "`merge`" button on the site.
 This can allow you to test the merge before even hitting the button.
 @y
 The eagle-eyed among you would note the `head` on the end of the remote portion of the refspec.
-There's also a `refs/pull/#/merge` ref on the GitHub side, which represents the commit that would result if you push the ``merge'' button on the site.
+There's also a `refs/pull/#/merge` ref on the GitHub side, which represents the commit that would result if you push the "`merge`" button on the site.
 This can allow you to test the merge before even hitting the button.
 @z
 
@@ -579,10 +579,10 @@ If you see a Pull Request that is moving in the right direction and you have an 
 
 @x
 When you go to open a Pull Request, there is a box at the top of the page that specifies which branch you're requesting to pull to and which you're requesting to pull from.
-If you hit the ``Edit'' button at the right of that box you can change not only the branches but also which fork.
+If you hit the "`Edit`" button at the right of that box you can change not only the branches but also which fork.
 @y
 When you go to open a Pull Request, there is a box at the top of the page that specifies which branch you're requesting to pull to and which you're requesting to pull from.
-If you hit the ``Edit'' button at the right of that box you can change not only the branches but also which fork.
+If you hit the "`Edit`" button at the right of that box you can change not only the branches but also which fork.
 @z
 
 @x
@@ -644,13 +644,13 @@ Very often in  Pull Requests on GitHub people will pull in other people on their
 @z
 
 @x
-If someone gets mentioned on a Pull Request or Issue, they will be ``subscribed'' to it and will continue getting notifications any time some activity occurs on it.
+If someone gets mentioned on a Pull Request or Issue, they will be "`subscribed`" to it and will continue getting notifications any time some activity occurs on it.
 You will also be subscribed to something if you opened it, if you're watching the repository or if you comment on something.
-If you no longer wish to receive notifications, there is an ``Unsubscribe'' button on the page you can click to stop receiving updates on it.
+If you no longer wish to receive notifications, there is an "`Unsubscribe`" button on the page you can click to stop receiving updates on it.
 @y
-If someone gets mentioned on a Pull Request or Issue, they will be ``subscribed'' to it and will continue getting notifications any time some activity occurs on it.
+If someone gets mentioned on a Pull Request or Issue, they will be "`subscribed`" to it and will continue getting notifications any time some activity occurs on it.
 You will also be subscribed to something if you opened it, if you're watching the repository or if you comment on something.
-If you no longer wish to receive notifications, there is an ``Unsubscribe'' button on the page you can click to stop receiving updates on it.
+If you no longer wish to receive notifications, there is an "`Unsubscribe`" button on the page you can click to stop receiving updates on it.
 @z
 
 @x
@@ -668,11 +668,11 @@ image::images/maint-06-unsubscribe.png[Unsubscribe]
 @z
 
 @x
-When we mention ``notifications'' here with respect to GitHub, we mean a specific way that GitHub tries to get in touch with you when events happen and there are a few different ways you can configure them.
-If you go to the ``Notification center'' tab from the settings page, you can see some of the options you have.
+When we mention "`notifications`" here with respect to GitHub, we mean a specific way that GitHub tries to get in touch with you when events happen and there are a few different ways you can configure them.
+If you go to the "`Notification center`" tab from the settings page, you can see some of the options you have.
 @y
-When we mention ``notifications'' here with respect to GitHub, we mean a specific way that GitHub tries to get in touch with you when events happen and there are a few different ways you can configure them.
-If you go to the ``Notification center'' tab from the settings page, you can see some of the options you have.
+When we mention "`notifications`" here with respect to GitHub, we mean a specific way that GitHub tries to get in touch with you when events happen and there are a few different ways you can configure them.
+If you go to the "`Notification center`" tab from the settings page, you can see some of the options you have.
 @z
 
 @x
@@ -684,9 +684,9 @@ image::images/maint-07-notifications.png[Notification center]
 @z
 
 @x
-The two choices are to get notifications over ``Email'' and over ``Web'' and you can choose either, neither or both for when you actively participate in things and for activity on repositories you are watching.
+The two choices are to get notifications over "`Email`" and over "`Web`" and you can choose either, neither or both for when you actively participate in things and for activity on repositories you are watching.
 @y
-The two choices are to get notifications over ``Email'' and over ``Web'' and you can choose either, neither or both for when you actively participate in things and for activity on repositories you are watching.
+The two choices are to get notifications over "`Email`" and over "`Web`" and you can choose either, neither or both for when you actively participate in things and for activity on repositories you are watching.
 @z
 
 @x
@@ -794,19 +794,19 @@ X-GitHub-Recipient-Address: tchacon@example.com
 @x
 There are a couple of interesting things here.
 If you want to highlight or re-route emails to this particular project or even Pull Request, the information in `Message-ID` gives you all the data in `<user>/<project>/<type>/<id>` format.
-If this were an issue, for example, the `<type>` field would have been ``issues'' rather than ``pull''.
+If this were an issue, for example, the `<type>` field would have been "`issues`" rather than "`pull`".
 @y
 There are a couple of interesting things here.
 If you want to highlight or re-route emails to this particular project or even Pull Request, the information in `Message-ID` gives you all the data in `<user>/<project>/<type>/<id>` format.
-If this were an issue, for example, the `<type>` field would have been ``issues'' rather than ``pull''.
+If this were an issue, for example, the `<type>` field would have been "`issues`" rather than "`pull`".
 @z
 
 @x
-The `List-Post` and `List-Unsubscribe` fields mean that if you have a mail client that understands those, you can easily post to the list or ``Unsubscribe'' from the thread.
-That would be essentially the same as clicking the ``mute'' button on the web version of the notification or ``Unsubscribe'' on the Issue or Pull Request page itself.
+The `List-Post` and `List-Unsubscribe` fields mean that if you have a mail client that understands those, you can easily post to the list or "`Unsubscribe`" from the thread.
+That would be essentially the same as clicking the "`mute`" button on the web version of the notification or "`Unsubscribe`" on the Issue or Pull Request page itself.
 @y
-The `List-Post` and `List-Unsubscribe` fields mean that if you have a mail client that understands those, you can easily post to the list or ``Unsubscribe'' from the thread.
-That would be essentially the same as clicking the ``mute'' button on the web version of the notification or ``Unsubscribe'' on the Issue or Pull Request page itself.
+The `List-Post` and `List-Unsubscribe` fields mean that if you have a mail client that understands those, you can easily post to the list or "`Unsubscribe`" from the thread.
+That would be essentially the same as clicking the "`mute`" button on the web version of the notification or "`Unsubscribe`" on the Issue or Pull Request page itself.
 @z
 
 @x
@@ -922,9 +922,9 @@ Generally there are not a lot of administrative things you can do with a single 
 @z
 
 @x
-If you are using a branch other than ``master'' as your default branch that you want people to open Pull Requests on or see by default, you can change that in your repository's settings page under the ``Options'' tab.
+If you are using a branch other than "`master`" as your default branch that you want people to open Pull Requests on or see by default, you can change that in your repository's settings page under the "`Options`" tab.
 @y
-If you are using a branch other than ``master'' as your default branch that you want people to open Pull Requests on or see by default, you can change that in your repository's settings page under the ``Options'' tab.
+If you are using a branch other than "`master`" as your default branch that you want people to open Pull Requests on or see by default, you can change that in your repository's settings page under the "`Options`" tab.
 @z
 
 @x
@@ -950,9 +950,9 @@ Simply change the default branch in the dropdown and that will be the default fo
 @z
 
 @x
-If you would like to transfer a project to another user or an organization in GitHub, there is a ``Transfer ownership'' option at the bottom of the same ``Options'' tab of your repository settings page that allows you to do this.
+If you would like to transfer a project to another user or an organization in GitHub, there is a "`Transfer ownership`" option at the bottom of the same "`Options`" tab of your repository settings page that allows you to do this.
 @y
-If you would like to transfer a project to another user or an organization in GitHub, there is a ``Transfer ownership'' option at the bottom of the same ``Options'' tab of your repository settings page that allows you to do this.
+If you would like to transfer a project to another user or an organization in GitHub, there is a "`Transfer ownership`" option at the bottom of the same "`Options`" tab of your repository settings page that allows you to do this.
 @z
 
 @x

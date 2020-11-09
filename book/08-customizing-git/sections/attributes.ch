@@ -154,13 +154,13 @@ Put the following line in your `.gitattributes` file:
 @z
 
 @x
-This tells Git that any file that matches this pattern (`.docx`) should use the ``word'' filter when you try to view a diff that contains changes.
-What is the ``word'' filter?
+This tells Git that any file that matches this pattern (`.docx`) should use the "`word`" filter when you try to view a diff that contains changes.
+What is the "`word`" filter?
 You have to set it up.
 Here you'll configure Git to use the `docx2txt` program to convert Word documents into readable text files, which it will then diff properly.
 @y
-This tells Git that any file that matches this pattern (`.docx`) should use the ``word'' filter when you try to view a diff that contains changes.
-What is the ``word'' filter?
+This tells Git that any file that matches this pattern (`.docx`) should use the "`word`" filter when you try to view a diff that contains changes.
+What is the "`word`" filter?
 You have to set it up.
 Here you'll configure Git to use the `docx2txt` program to convert Word documents into readable text files, which it will then diff properly.
 @z
@@ -212,10 +212,10 @@ $ git config diff.word.textconv docx2txt
 @z
 
 @x
-Now Git knows that if it tries to do a diff between two snapshots, and any of the files end in `.docx`, it should run those files through the ``word'' filter, which is defined as the `docx2txt` program.
+Now Git knows that if it tries to do a diff between two snapshots, and any of the files end in `.docx`, it should run those files through the "`word`" filter, which is defined as the `docx2txt` program.
 This effectively makes nice text-based versions of your Word files before attempting to diff them.
 @y
-Now Git knows that if it tries to do a diff between two snapshots, and any of the files end in `.docx`, it should run those files through the ``word'' filter, which is defined as the `docx2txt` program.
+Now Git knows that if it tries to do a diff between two snapshots, and any of the files end in `.docx`, it should run those files through the "`word`" filter, which is defined as the `docx2txt` program.
 This effectively makes nice text-based versions of your Word files before attempting to diff them.
 @z
 
@@ -266,10 +266,10 @@ index 0b013ca..ba25db5 100644
 @z
 
 @x
-Git successfully and succinctly tells us that we added the string ``Testing: 1, 2, 3.'', which is correct.
+Git successfully and succinctly tells us that we added the string "`Testing: 1, 2, 3.`", which is correct.
 It's not perfect – formatting changes wouldn't show up here – but it certainly works.
 @y
-Git successfully and succinctly tells us that we added the string ``Testing: 1, 2, 3.'', which is correct.
+Git successfully and succinctly tells us that we added the string "`Testing: 1, 2, 3.`", which is correct.
 It's not perfect – formatting changes wouldn't show up here – but it certainly works.
 @z
 
@@ -471,42 +471,42 @@ If you've used keyword substitution in CVS or Subversion, you can include a date
 
 @x
 It turns out that you can write your own filters for doing substitutions in files on commit/checkout.
-These are called ``clean'' and ``smudge'' filters.
-In the `.gitattributes` file, you can set a filter for particular paths and then set up scripts that will process files just before they're checked out (``smudge'', see <<filters_a>>) and just before they're staged (``clean'', see <<filters_b>>).
+These are called "`clean`" and "`smudge`" filters.
+In the `.gitattributes` file, you can set a filter for particular paths and then set up scripts that will process files just before they're checked out ("`smudge`", see <<filters_a>>) and just before they're staged ("`clean`", see <<filters_b>>).
 These filters can be set to do all sorts of fun things.
 @y
 It turns out that you can write your own filters for doing substitutions in files on commit/checkout.
-These are called ``clean'' and ``smudge'' filters.
-In the `.gitattributes` file, you can set a filter for particular paths and then set up scripts that will process files just before they're checked out (``smudge'', see <<filters_a>>) and just before they're staged (``clean'', see <<filters_b>>).
+These are called "`clean`" and "`smudge`" filters.
+In the `.gitattributes` file, you can set a filter for particular paths and then set up scripts that will process files just before they're checked out ("`smudge`", see <<filters_a>>) and just before they're staged ("`clean`", see <<filters_b>>).
 These filters can be set to do all sorts of fun things.
 @z
 
 @x
 [[filters_a]]
-.The ``smudge'' filter is run on checkout
-image::images/smudge.png[The ``smudge'' filter is run on checkout]
+.The "`smudge`" filter is run on checkout
+image::images/smudge.png[The "`smudge`" filter is run on checkout]
 @y
 [[filters_a]]
-.The ``smudge'' filter is run on checkout
-image::images/smudge.png[The ``smudge'' filter is run on checkout]
+.The "`smudge`" filter is run on checkout
+image::images/smudge.png[The "`smudge`" filter is run on checkout]
 @z
 
 @x
 [[filters_b]]
-.The ``clean'' filter is run when files are staged
-image::images/clean.png[The ``clean'' filter is run when files are staged]
+.The "`clean`" filter is run when files are staged
+image::images/clean.png[The "`clean`" filter is run when files are staged]
 @y
 [[filters_b]]
-.The ``clean'' filter is run when files are staged
-image::images/clean.png[The ``clean'' filter is run when files are staged]
+.The "`clean`" filter is run when files are staged
+image::images/clean.png[The "`clean`" filter is run when files are staged]
 @z
 
 @x
 The original commit message for this feature gives a simple example of running all your C source code through the `indent` program before committing.
-You can set it up by setting the filter attribute in your `.gitattributes` file to filter `*.c` files with the ``indent'' filter:
+You can set it up by setting the filter attribute in your `.gitattributes` file to filter `*.c` files with the "`indent`" filter:
 @y
 The original commit message for this feature gives a simple example of running all your C source code through the `indent` program before committing.
-You can set it up by setting the filter attribute in your `.gitattributes` file to filter `*.c` files with the ``indent'' filter:
+You can set it up by setting the filter attribute in your `.gitattributes` file to filter `*.c` files with the "`indent`" filter:
 @z
 
 @x
@@ -522,9 +522,9 @@ You can set it up by setting the filter attribute in your `.gitattributes` file 
 @z
 
 @x
-Then, tell Git what the ``indent'' filter does on smudge and clean:
+Then, tell Git what the "`indent`" filter does on smudge and clean:
 @y
-Then, tell Git what the ``indent'' filter does on smudge and clean:
+Then, tell Git what the "`indent`" filter does on smudge and clean:
 @z
 
 @x

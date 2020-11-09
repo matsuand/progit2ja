@@ -14,13 +14,13 @@
 In addition to single-user accounts, GitHub has what are called Organizations.
 Like personal accounts, Organizational accounts have a namespace where all their projects exist, but many other things are different.
 These accounts represent a group of people with shared ownership of projects, and there are many tools to manage subgroups of those people.
-Normally these accounts are used for Open Source groups (such as ``perl'' or ``rails'') or companies (such as ``google'' or ``twitter'').
+Normally these accounts are used for Open Source groups (such as "`perl`" or "`rails`") or companies (such as "`google`" or "`twitter`").
 @y
 (((GitHub, organizations)))
 In addition to single-user accounts, GitHub has what are called Organizations.
 Like personal accounts, Organizational accounts have a namespace where all their projects exist, but many other things are different.
 These accounts represent a group of people with shared ownership of projects, and there are many tools to manage subgroups of those people.
-Normally these accounts are used for Open Source groups (such as ``perl'' or ``rails'') or companies (such as ``google'' or ``twitter'').
+Normally these accounts are used for Open Source groups (such as "`perl`" or "`rails`") or companies (such as "`google`" or "`twitter`").
 @z
 
 @x
@@ -30,17 +30,17 @@ Normally these accounts are used for Open Source groups (such as ``perl'' or ``r
 @z
 
 @x
-An organization is pretty easy to create; just click on the ``+'' icon at the top-right of any GitHub page, and select ``New organization'' from the menu.
+An organization is pretty easy to create; just click on the "`+`" icon at the top-right of any GitHub page, and select "`New organization`" from the menu.
 @y
-An organization is pretty easy to create; just click on the ``+'' icon at the top-right of any GitHub page, and select ``New organization'' from the menu.
+An organization is pretty easy to create; just click on the "`+`" icon at the top-right of any GitHub page, and select "`New organization`" from the menu.
 @z
 
 @x
-.The ``New organization'' menu item
-image::images/neworg.png[The ``New organization'' menu item]
+.The "`New organization`" menu item
+image::images/neworg.png[The "`New organization`" menu item]
 @y
-.The ``New organization'' menu item
-image::images/neworg.png[The ``New organization'' menu item]
+.The "`New organization`" menu item
+image::images/neworg.png[The "`New organization`" menu item]
 @z
 
 @x
@@ -62,11 +62,11 @@ Like personal accounts, organizations are free if everything you plan to store t
 @x
 As an owner in an organization, when you fork a repository, you'll have the choice of forking it to your organization's namespace.
 When you create new repositories you can create them either under your personal account or under any of the organizations that you are an owner in.
-You also automatically ``watch'' any new repository created under these organizations.
+You also automatically "`watch`" any new repository created under these organizations.
 @y
 As an owner in an organization, when you fork a repository, you'll have the choice of forking it to your organization's namespace.
 When you create new repositories you can create them either under your personal account or under any of the organizations that you are an owner in.
-You also automatically ``watch'' any new repository created under these organizations.
+You also automatically "`watch`" any new repository created under these organizations.
 @z
 
 @x
@@ -125,12 +125,12 @@ image::images/orgs-01-page.png[The Organization page]
 To manage your Teams, you can click on the Teams sidebar on the right hand side of the page in <<_org_page>>.
 This will bring you to a page you can use to add members to the team, add repositories to the team or manage the settings and access control levels for the team.
 Each team can have read only, read/write or administrative access to the repositories.
-You can change that level by clicking the ``Settings'' button in <<_team_page>>.
+You can change that level by clicking the "`Settings`" button in <<_team_page>>.
 @y
 To manage your Teams, you can click on the Teams sidebar on the right hand side of the page in <<_org_page>>.
 This will bring you to a page you can use to add members to the team, add repositories to the team or manage the settings and access control levels for the team.
 Each team can have read only, read/write or administrative access to the repositories.
-You can change that level by clicking the ``Settings'' button in <<_team_page>>.
+You can change that level by clicking the "`Settings`" button in <<_team_page>>.
 @z
 
 @x

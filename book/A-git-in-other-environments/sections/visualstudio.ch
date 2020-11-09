@@ -50,11 +50,11 @@ This is a hub for performing Git actions; when you're _writing_ code, you'll pro
 @x
 [[vs_home]]
 .The "Home" view for a Git repository in Visual Studio
-image::images/vs-2.png[The ``Home'' view for a Git repository in Visual Studio]
+image::images/vs-2.png[The "`Home`" view for a Git repository in Visual Studio]
 @y
 [[vs_home]]
 .The "Home" view for a Git repository in Visual Studio
-image::images/vs-2.png[The ``Home'' view for a Git repository in Visual Studio]
+image::images/vs-2.png[The "`Home`" view for a Git repository in Visual Studio]
 @z
 
 @x

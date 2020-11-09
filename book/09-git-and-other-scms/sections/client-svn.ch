@@ -889,10 +889,10 @@ $ git branch opera remotes/origin/opera
 
 @x
 Now, if you want to merge your `opera` branch into `trunk` (your `master` branch), you can do so with a normal `git merge`.
-But you need to provide a descriptive commit message (via `-m`), or the merge will say ``Merge branch opera'' instead of something useful.
+But you need to provide a descriptive commit message (via `-m`), or the merge will say "`Merge branch opera`" instead of something useful.
 @y
 Now, if you want to merge your `opera` branch into `trunk` (your `master` branch), you can do so with a normal `git merge`.
-But you need to provide a descriptive commit message (via `-m`), or the merge will say ``Merge branch opera'' instead of something useful.
+But you need to provide a descriptive commit message (via `-m`), or the merge will say "`Merge branch opera`" instead of something useful.
 @z
 
 @x

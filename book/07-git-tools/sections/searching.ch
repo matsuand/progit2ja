@@ -149,10 +149,10 @@ As you can see, the `gmtime_r` routine is called from both the `match_multi_numb
 
 @x
 You can also search for complex combinations of strings with the `--and` flag, which ensures that multiple matches must occur in the same line of text.
-For instance, let's look for any lines that define a constant whose name contains _either_ of the substrings ``LINK'' or ``BUF_MAX'', specifically in an older version of the Git codebase represented by the tag `v1.8.0` (we'll throw in the `--break` and `--heading` options which help split up the output into a more readable format):
+For instance, let's look for any lines that define a constant whose name contains _either_ of the substrings "`LINK`" or "`BUF_MAX`", specifically in an older version of the Git codebase represented by the tag `v1.8.0` (we'll throw in the `--break` and `--heading` options which help split up the output into a more readable format):
 @y
 You can also search for complex combinations of strings with the `--and` flag, which ensures that multiple matches must occur in the same line of text.
-For instance, let's look for any lines that define a constant whose name contains _either_ of the substrings ``LINK'' or ``BUF_MAX'', specifically in an older version of the Git codebase represented by the tag `v1.8.0` (we'll throw in the `--break` and `--heading` options which help split up the output into a more readable format):
+For instance, let's look for any lines that define a constant whose name contains _either_ of the substrings "`LINK`" or "`BUF_MAX`", specifically in an older version of the Git codebase represented by the tag `v1.8.0` (we'll throw in the `--break` and `--heading` options which help split up the output into a more readable format):
 @z
 
 @x
@@ -242,9 +242,9 @@ The `git log` command has a number of powerful tools for finding specific commit
 @z
 
 @x
-If, for example, we want to find out when the `ZLIB_BUF_MAX` constant was originally introduced, we can use the `-S` option (colloquially referred to as the Git ``pickaxe'' option) to tell Git to show us only those commits that changed the number of occurrences of that string.
+If, for example, we want to find out when the `ZLIB_BUF_MAX` constant was originally introduced, we can use the `-S` option (colloquially referred to as the Git "`pickaxe`" option) to tell Git to show us only those commits that changed the number of occurrences of that string.
 @y
-If, for example, we want to find out when the `ZLIB_BUF_MAX` constant was originally introduced, we can use the `-S` option (colloquially referred to as the Git ``pickaxe'' option) to tell Git to show us only those commits that changed the number of occurrences of that string.
+If, for example, we want to find out when the `ZLIB_BUF_MAX` constant was originally introduced, we can use the `-S` option (colloquially referred to as the Git "`pickaxe`" option) to tell Git to show us only those commits that changed the number of occurrences of that string.
 @z
 
 @x

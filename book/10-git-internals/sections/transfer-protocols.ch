@@ -8,10 +8,10 @@
 @z
 
 @x
-Git can transfer data between two repositories in two major ways: the ``dumb'' protocol and the ``smart'' protocol.
+Git can transfer data between two repositories in two major ways: the "`dumb`" protocol and the "`smart`" protocol.
 This section will quickly cover how these two main protocols operate.
 @y
-Git can transfer data between two repositories in two major ways: the ``dumb'' protocol and the ``smart'' protocol.
+Git can transfer data between two repositories in two major ways: the "`dumb`" protocol and the "`smart`" protocol.
 This section will quickly cover how these two main protocols operate.
 @z
 
@@ -23,10 +23,10 @@ This section will quickly cover how these two main protocols operate.
 
 @x
 If you're setting up a repository to be served read-only over HTTP, the dumb protocol is likely what will be used.
-This protocol is called ``dumb'' because it requires no Git-specific code on the server side during the transport process; the fetch process is a series of HTTP `GET` requests, where the client can assume the layout of the Git repository on the server.
+This protocol is called "`dumb`" because it requires no Git-specific code on the server side during the transport process; the fetch process is a series of HTTP `GET` requests, where the client can assume the layout of the Git repository on the server.
 @y
 If you're setting up a repository to be served read-only over HTTP, the dumb protocol is likely what will be used.
-This protocol is called ``dumb'' because it requires no Git-specific code on the server side during the transport process; the fetch process is a series of HTTP `GET` requests, where the client can assume the layout of the Git repository on the server.
+This protocol is called "`dumb`" because it requires no Git-specific code on the server side during the transport process; the fetch process is a series of HTTP `GET` requests, where the client can assume the layout of the Git repository on the server.
 @z
 
 @x
@@ -608,13 +608,13 @@ In addition, it sends back what HEAD points to (`symref=HEAD:refs/heads/master`)
 @z
 
 @x
-At this point, the `fetch-pack` process looks at what objects it has and responds with the objects that it needs by sending ``want'' and then the SHA-1 it wants.
-It sends all the objects it already has with ``have'' and then the SHA-1.
-At the end of this list, it writes ``done'' to initiate the `upload-pack` process to begin sending the packfile of the data it needs:
+At this point, the `fetch-pack` process looks at what objects it has and responds with the objects that it needs by sending "`want`" and then the SHA-1 it wants.
+It sends all the objects it already has with "`have`" and then the SHA-1.
+At the end of this list, it writes "`done`" to initiate the `upload-pack` process to begin sending the packfile of the data it needs:
 @y
-At this point, the `fetch-pack` process looks at what objects it has and responds with the objects that it needs by sending ``want'' and then the SHA-1 it wants.
-It sends all the objects it already has with ``have'' and then the SHA-1.
-At the end of this list, it writes ``done'' to initiate the `upload-pack` process to begin sending the packfile of the data it needs:
+At this point, the `fetch-pack` process looks at what objects it has and responds with the objects that it needs by sending "`want`" and then the SHA-1 it wants.
+It sends all the objects it already has with "`have`" and then the SHA-1.
+At the end of this list, it writes "`done`" to initiate the `upload-pack` process to begin sending the packfile of the data it needs:
 @z
 
 @x

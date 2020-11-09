@@ -16,14 +16,14 @@ Though we've covered the common ways to transfer Git data over a network (HTTP, 
 @z
 
 @x
-Git is capable of ``bundling'' its data into a single file.
+Git is capable of "`bundling`" its data into a single file.
 This can be useful in various scenarios.
 Maybe your network is down and you want to send changes to your co-workers.
 Perhaps you're working somewhere offsite and don't have access to the local network for security reasons.
 Maybe your wireless/ethernet card just broke.
 Maybe you don't have access to a shared server for the moment, you want to email someone updates and you don't want to transfer 40 commits via `format-patch`.
 @y
-Git is capable of ``bundling'' its data into a single file.
+Git is capable of "`bundling`" its data into a single file.
 This can be useful in various scenarios.
 Maybe your network is down and you want to send changes to your co-workers.
 Perhaps you're working somewhere offsite and don't have access to the local network for security reasons.

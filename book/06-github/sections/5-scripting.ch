@@ -42,11 +42,11 @@ The Hooks and Services section of GitHub repository administration is the easies
 @x
 First we'll take a look at Services.
 Both the Hooks and Services integrations can be found in the Settings section of your repository, where we previously looked at adding Collaborators and changing the default branch of your project.
-Under the ``Webhooks and Services'' tab you will see something like <<_services_hooks>>.
+Under the "`Webhooks and Services`" tab you will see something like <<_services_hooks>>.
 @y
 First we'll take a look at Services.
 Both the Hooks and Services integrations can be found in the Settings section of your repository, where we previously looked at adding Collaborators and changing the default branch of your project.
-Under the ``Webhooks and Services'' tab you will see something like <<_services_hooks>>.
+Under the "`Webhooks and Services`" tab you will see something like <<_services_hooks>>.
 @z
 
 @x
@@ -63,12 +63,12 @@ image::images/scripting-01-services.png[Services and hooks]
 There are dozens of services you can choose from, most of them integrations into other commercial and open source systems.
 Most of them are for Continuous Integration services, bug and issue trackers, chat room systems and documentation systems.
 We'll walk through setting up a very simple one, the Email hook.
-If you choose ``email'' from the ``Add Service'' dropdown, you'll get a configuration screen like <<_service_config>>.
+If you choose "`email`" from the "`Add Service`" dropdown, you'll get a configuration screen like <<_service_config>>.
 @y
 There are dozens of services you can choose from, most of them integrations into other commercial and open source systems.
 Most of them are for Continuous Integration services, bug and issue trackers, chat room systems and documentation systems.
 We'll walk through setting up a very simple one, the Email hook.
-If you choose ``email'' from the ``Add Service'' dropdown, you'll get a configuration screen like <<_service_config>>.
+If you choose "`email`" from the "`Add Service`" dropdown, you'll get a configuration screen like <<_service_config>>.
 @z
 
 @x
@@ -82,10 +82,10 @@ image::images/scripting-02-email-service.png[Email service]
 @z
 
 @x
-In this case, if we hit the ``Add service'' button, the email address we specified will get an email every time someone pushes to the repository.
+In this case, if we hit the "`Add service`" button, the email address we specified will get an email every time someone pushes to the repository.
 Services can listen for lots of different types of events, but most only listen for push events and then do something with that data.
 @y
-In this case, if we hit the ``Add service'' button, the email address we specified will get an email every time someone pushes to the repository.
+In this case, if we hit the "`Add service`" button, the email address we specified will get an email every time someone pushes to the repository.
 Services can listen for lots of different types of events, but most only listen for push events and then do something with that data.
 @z
 
@@ -120,10 +120,10 @@ Generally the way this works is you can setup a small web service to listen for 
 @z
 
 @x
-To enable a hook, you click the ``Add webhook'' button in <<_services_hooks>>.
+To enable a hook, you click the "`Add webhook`" button in <<_services_hooks>>.
 This will bring you to a page that looks like <<_web_hook>>.
 @y
-To enable a hook, you click the ``Add webhook'' button in <<_services_hooks>>.
+To enable a hook, you click the "`Add webhook`" button in <<_services_hooks>>.
 This will bring you to a page that looks like <<_web_hook>>.
 @z
 
@@ -139,11 +139,11 @@ image::images/scripting-03-webhook.png[Web hook]
 
 @x
 The configuration for a web hook is pretty simple.
-In most cases you simply enter a URL and a secret key and hit ``Add webhook''.
+In most cases you simply enter a URL and a secret key and hit "`Add webhook`".
 There are a few options for which events you want GitHub to send you a payload for -- the default is to only get a payload for the `push` event, when someone pushes new code to any branch of your repository.
 @y
 The configuration for a web hook is pretty simple.
-In most cases you simply enter a URL and a secret key and hit ``Add webhook''.
+In most cases you simply enter a URL and a secret key and hit "`Add webhook`".
 There are a few options for which events you want GitHub to send you a payload for -- the default is to only get a payload for the `push` event, when someone pushes new code to any branch of your repository.
 @z
 
@@ -320,11 +320,11 @@ In this section we'll learn how to authenticate and connect to the API, how to c
 @x
 The most basic thing you can do is a simple GET request on an endpoint that doesn't require authentication.
 This could be a user or read-only information on an open source project.
-For example, if we want to know more about a user named ``schacon'', we can run something like this:
+For example, if we want to know more about a user named "`schacon`", we can run something like this:
 @y
 The most basic thing you can do is a simple GET request on an endpoint that doesn't require authentication.
 This could be a user or read-only information on an open source project.
-For example, if we want to know more about a user named ``schacon'', we can run something like this:
+For example, if we want to know more about a user named "`schacon`", we can run something like this:
 @z
 
 @x
@@ -434,20 +434,20 @@ However, if you want to do an action on the website such as comment on an Issue 
 @x
 There are several ways to authenticate.
 You can use basic authentication with just your username and password, but generally it's a better idea to use a personal access token.
-You can generate this from the ``Applications'' tab of your settings page.
+You can generate this from the "`Applications`" tab of your settings page.
 @y
 There are several ways to authenticate.
 You can use basic authentication with just your username and password, but generally it's a better idea to use a personal access token.
-You can generate this from the ``Applications'' tab of your settings page.
+You can generate this from the "`Applications`" tab of your settings page.
 @z
 
 @x
 [[_access_token]]
-.Generate your access token from the ``Applications'' tab of your settings page
+.Generate your access token from the "`Applications`" tab of your settings page
 image::images/scripting-05-access-token.png[Access Token]
 @y
 [[_access_token]]
-.Generate your access token from the ``Applications'' tab of your settings page
+.Generate your access token from the "`Applications`" tab of your settings page
 image::images/scripting-05-access-token.png[Access Token]
 @z
 
@@ -692,11 +692,11 @@ In this web hook handler we look through each commit that was just pushed, we lo
 @z
 
 @x
-In this case you can send a state ('success', 'failure', 'error'), a description of what happened, a target URL the user can go to for more information and a ``context'' in case there are multiple statuses for a single commit.
-For example, a testing service may provide a status and a validation service like this may also provide a status -- the ``context'' field is how they're differentiated.
+In this case you can send a state ('success', 'failure', 'error'), a description of what happened, a target URL the user can go to for more information and a "`context`" in case there are multiple statuses for a single commit.
+For example, a testing service may provide a status and a validation service like this may also provide a status -- the "`context`" field is how they're differentiated.
 @y
-In this case you can send a state ('success', 'failure', 'error'), a description of what happened, a target URL the user can go to for more information and a ``context'' in case there are multiple statuses for a single commit.
-For example, a testing service may provide a status and a validation service like this may also provide a status -- the ``context'' field is how they're differentiated.
+In this case you can send a state ('success', 'failure', 'error'), a description of what happened, a target URL the user can go to for more information and a "`context`" in case there are multiple statuses for a single commit.
+For example, a testing service may provide a status and a validation service like this may also provide a status -- the "`context`" field is how they're differentiated.
 @z
 
 @x
@@ -716,11 +716,11 @@ image::images/scripting-07-status.png[Commit status]
 @z
 
 @x
-You can now see a little green check mark next to the commit that has a ``Signed-off-by'' string in the message and a red cross through the one where the author forgot to sign off.
+You can now see a little green check mark next to the commit that has a "`Signed-off-by`" string in the message and a red cross through the one where the author forgot to sign off.
 You can also see that the Pull Request takes the status of the last commit on the branch and warns you if it is a failure.
 This is really useful if you're using this API for test results so you don't accidentally merge something where the last commit is failing tests.
 @y
-You can now see a little green check mark next to the commit that has a ``Signed-off-by'' string in the message and a red cross through the one where the author forgot to sign off.
+You can now see a little green check mark next to the commit that has a "`Signed-off-by`" string in the message and a red cross through the one where the author forgot to sign off.
 You can also see that the Pull Request takes the status of the last commit on the branch and warns you if it is a failure.
 This is really useful if you're using this API for test results so you don't accidentally merge something where the last commit is failing tests.
 @z

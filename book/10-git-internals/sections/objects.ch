@@ -536,12 +536,12 @@ $ git cat-file -p 0155eb4229851634a0f03eb265b69f5a2d56f341
 @z
 
 @x
-Notice that this tree has both file entries and also that the `test.txt` SHA-1 is the ``version 2'' SHA-1 from earlier (`1f7a7a`).
+Notice that this tree has both file entries and also that the `test.txt` SHA-1 is the "`version 2`" SHA-1 from earlier (`1f7a7a`).
 Just for fun, you'll add the first tree as a subdirectory into this one.
 You can read trees into your staging area by calling `git read-tree`.
 In this case, you can read an existing tree into your staging area as a subtree by using the `--prefix` option with this command:
 @y
-Notice that this tree has both file entries and also that the `test.txt` SHA-1 is the ``version 2'' SHA-1 from earlier (`1f7a7a`).
+Notice that this tree has both file entries and also that the `test.txt` SHA-1 is the "`version 2`" SHA-1 from earlier (`1f7a7a`).
 Just for fun, you'll add the first tree as a subdirectory into this one.
 You can read trees into your staging area by calling `git read-tree`.
 In this case, you can read an existing tree into your staging area as a subtree by using the `--prefix` option with this command:
@@ -862,11 +862,11 @@ image::images/data-model-3.png[All the reachable objects in your Git directory]
 @x
 We mentioned earlier that there is a header stored with every object you commit to your Git object database.
 Let's take a minute to see how Git stores its objects.
-You'll see how to store a blob object -- in this case, the string ``what is up, doc?'' -- interactively in the Ruby scripting language.
+You'll see how to store a blob object -- in this case, the string "`what is up, doc?`" -- interactively in the Ruby scripting language.
 @y
 We mentioned earlier that there is a header stored with every object you commit to your Git object database.
 Let's take a minute to see how Git stores its objects.
-You'll see how to store a blob object -- in this case, the string ``what is up, doc?'' -- interactively in the Ruby scripting language.
+You'll see how to store a blob object -- in this case, the string "`what is up, doc?`" -- interactively in the Ruby scripting language.
 @z
 
 @x

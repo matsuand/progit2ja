@@ -126,10 +126,10 @@ $ hg clone http://selenic.com/repo/hello /tmp/hello
 @z
 
 @x
-Now that we have a suitable ``server-side'' repository, we can go through a typical workflow.
+Now that we have a suitable "`server-side`" repository, we can go through a typical workflow.
 As you'll see, these two systems are similar enough that there isn't much friction.
 @y
-Now that we have a suitable ``server-side'' repository, we can go through a typical workflow.
+Now that we have a suitable "`server-side`" repository, we can go through a typical workflow.
 As you'll see, these two systems are similar enough that there isn't much friction.
 @z
 
@@ -230,12 +230,12 @@ $ tree .git/refs
 @x
 Git-remote-hg is trying to make things more idiomatically Git-esque, but under the hood it's managing the conceptual mapping between two slightly different systems.
 The `refs/hg` directory is where the actual remote refs are stored.
-For example, the `refs/hg/origin/branches/default` is a Git ref file that contains the SHA-1 starting with ``ac7955c'', which is the commit that `master` points to.
+For example, the `refs/hg/origin/branches/default` is a Git ref file that contains the SHA-1 starting with "`ac7955c`", which is the commit that `master` points to.
 So the `refs/hg` directory is kind of like a fake `refs/remotes/origin`, but it has the added distinction between bookmarks and branches.
 @y
 Git-remote-hg is trying to make things more idiomatically Git-esque, but under the hood it's managing the conceptual mapping between two slightly different systems.
 The `refs/hg` directory is where the actual remote refs are stored.
-For example, the `refs/hg/origin/branches/default` is a Git ref file that contains the SHA-1 starting with ``ac7955c'', which is the commit that `master` points to.
+For example, the `refs/hg/origin/branches/default` is a Git ref file that contains the SHA-1 starting with "`ac7955c`", which is the commit that `master` points to.
 So the `refs/hg` directory is kind of like a fake `refs/remotes/origin`, but it has the added distinction between bookmarks and branches.
 @z
 
@@ -300,11 +300,11 @@ $ git cat-file -p ac9117f
 @x
 So `refs/notes/hg` points to a tree, which in the Git object database is a list of other objects with names.
 `git ls-tree` outputs the mode, type, object hash, and filename for items inside a tree.
-Once we dig down to one of the tree items, we find that inside it is a blob named ``ac9117f'' (the SHA-1 hash of the commit pointed to by `master`), with contents ``0a04b98'' (which is the ID of the Mercurial changeset at the tip of the `default` branch).
+Once we dig down to one of the tree items, we find that inside it is a blob named "`ac9117f`" (the SHA-1 hash of the commit pointed to by `master`), with contents "`0a04b98`" (which is the ID of the Mercurial changeset at the tip of the `default` branch).
 @y
 So `refs/notes/hg` points to a tree, which in the Git object database is a list of other objects with names.
 `git ls-tree` outputs the mode, type, object hash, and filename for items inside a tree.
-Once we dig down to one of the tree items, we find that inside it is a blob named ``ac9117f'' (the SHA-1 hash of the commit pointed to by `master`), with contents ``0a04b98'' (which is the ID of the Mercurial changeset at the tip of the `default` branch).
+Once we dig down to one of the tree items, we find that inside it is a blob named "`ac9117f`" (the SHA-1 hash of the commit pointed to by `master`), with contents "`0a04b98`" (which is the ID of the Mercurial changeset at the tip of the `default` branch).
 @z
 
 @x
@@ -422,11 +422,11 @@ $ git log --oneline --graph --decorate --all
 @z
 
 @x
-Since we used the `--all` flag, we see the ``notes'' refs that are used internally by git-remote-hg, but we can ignore them.
+Since we used the `--all` flag, we see the "`notes`" refs that are used internally by git-remote-hg, but we can ignore them.
 The rest is what we expected; `origin/master` has advanced by one commit, and our history has now diverged.
 Unlike the other systems we work with in this chapter, Mercurial is capable of handling merges, so we're not going to do anything fancy.
 @y
-Since we used the `--all` flag, we see the ``notes'' refs that are used internally by git-remote-hg, but we can ignore them.
+Since we used the `--all` flag, we see the "`notes`" refs that are used internally by git-remote-hg, but we can ignore them.
 The rest is what we expected; `origin/master` has advanced by one commit, and our history has now diverged.
 Unlike the other systems we work with in this chapter, Mercurial is capable of handling merges, so we're not going to do anything fancy.
 @z
@@ -561,18 +561,18 @@ The changeset numbered _2_ was made by Mercurial, and the changesets numbered _3
 
 @x
 Git has only one kind of branch: a reference that moves when commits are made.
-In Mercurial, this kind of a reference is called a ``bookmark,'' and it behaves in much the same way as a Git branch.
+In Mercurial, this kind of a reference is called a "`bookmark,`" and it behaves in much the same way as a Git branch.
 @y
 Git has only one kind of branch: a reference that moves when commits are made.
-In Mercurial, this kind of a reference is called a ``bookmark,'' and it behaves in much the same way as a Git branch.
+In Mercurial, this kind of a reference is called a "`bookmark,`" and it behaves in much the same way as a Git branch.
 @z
 
 @x
-Mercurial's concept of a ``branch'' is more heavyweight.
+Mercurial's concept of a "`branch`" is more heavyweight.
 The branch that a changeset is made on is recorded _with the changeset_, which means it will always be in the repository history.
 Here's an example of a commit that was made on the `develop` branch:
 @y
-Mercurial's concept of a ``branch'' is more heavyweight.
+Mercurial's concept of a "`branch`" is more heavyweight.
 The branch that a changeset is made on is recorded _with the changeset_, which means it will always be in the repository history.
 Here's an example of a commit that was made on the `develop` branch:
 @z
@@ -602,10 +602,10 @@ summary:     More documentation
 @z
 
 @x
-Note the line that begins with ``branch''.
+Note the line that begins with "`branch`".
 Git can't really replicate this (and doesn't need to; both types of branch can be represented as a Git ref), but git-remote-hg needs to understand the difference, because Mercurial cares.
 @y
-Note the line that begins with ``branch''.
+Note the line that begins with "`branch`".
 Git can't really replicate this (and doesn't need to; both types of branch can be represented as a Git ref), but git-remote-hg needs to understand the difference, because Mercurial cares.
 @z
 
@@ -710,9 +710,9 @@ These act exactly like Git branches on the Git side, with one exception: you can
 @z
 
 @x
-You can work on a ``heavyweight'' Mercurial branch also: just put a branch in the `branches` namespace:
+You can work on a "`heavyweight`" Mercurial branch also: just put a branch in the `branches` namespace:
 @y
-You can work on a ``heavyweight'' Mercurial branch also: just put a branch in the `branches` namespace:
+You can work on a "`heavyweight`" Mercurial branch also: just put a branch in the `branches` namespace:
 @z
 
 @x
@@ -810,9 +810,9 @@ o    changeset:   5:bd5ac26f11f9
 @z
 
 @x
-The branch name ``permanent'' was recorded with the changeset marked _7_.
+The branch name "`permanent`" was recorded with the changeset marked _7_.
 @y
-The branch name ``permanent'' was recorded with the changeset marked _7_.
+The branch name "`permanent`" was recorded with the changeset marked _7_.
 @z
 
 @x

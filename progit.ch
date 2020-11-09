@@ -2,8 +2,7 @@
 %This is part of Japanese translation version for ProGit2's Documantation.
 
 @x
-Pro Git
-=======
+= Pro Git
 Scott Chacon; Ben Straub
 :doctype: book
 :docinfo:
@@ -13,8 +12,7 @@ Scott Chacon; Ben Straub
 :front-cover-image: image:book/cover.png[width=1050,height=1600]
 :icons: font
 @y
-Pro Git
-=======
+= Pro Git
 Scott Chacon; Ben Straub; 日本語訳 THISDATE (HASHVALUE 対応)
 :doctype: book
 :docinfo:
@@ -25,12 +23,6 @@ Scott Chacon; Ben Straub; 日本語訳 THISDATE (HASHVALUE 対応)
 :icons: font
 :lang: ja
 include::attributes-ja.adoc[]
-@z
-
-@x
-ifdef::ebook-format[:leveloffset: -1]
-@y
-ifdef::ebook-format[:leveloffset: -1]
 @z
 
 @x

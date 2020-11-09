@@ -212,10 +212,10 @@ $ git rebase --onto master server client
 @z
 
 @x
-This basically says, ``Take the `client` branch, figure out the patches since it diverged from the `server` branch, and replay these patches in the `client` branch as if it was based directly off the `master` branch instead.''
+This basically says, "`Take the `client` branch, figure out the patches since it diverged from the `server` branch, and replay these patches in the `client` branch as if it was based directly off the `master` branch instead.`"
 It's a bit complex, but the result is pretty cool.
 @y
-This basically says, ``Take the `client` branch, figure out the patches since it diverged from the `server` branch, and replay these patches in the `client` branch as if it was based directly off the `master` branch instead.''
+This basically says, "`Take the `client` branch, figure out the patches since it diverged from the `server` branch, and replay these patches in the `client` branch as if it was based directly off the `master` branch instead.`"
 It's a bit complex, but the result is pretty cool.
 @z
 
@@ -479,10 +479,10 @@ If someone on your team force pushes changes that overwrite work that you've bas
 
 @x
 It turns out that in addition to the commit SHA-1 checksum, Git also calculates a checksum that is based just on the patch introduced with the commit.
-This is called a ``patch-id''.
+This is called a "`patch-id`".
 @y
 It turns out that in addition to the commit SHA-1 checksum, Git also calculates a checksum that is based just on the patch introduced with the commit.
-This is called a ``patch-id''.
+This is called a "`patch-id`".
 @z
 
 @x

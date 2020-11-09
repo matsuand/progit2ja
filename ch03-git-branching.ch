@@ -32,30 +32,33 @@ Nearly every VCS has some form of branching support.
 Branching means you diverge from the main line of development and continue to do work without messing with that main line.
 In many VCS tools, this is a somewhat expensive process, often requiring you to create a new copy of your source code directory, which can take a long time for large projects.
 //////////////////////////
-Nearly every VCS has some form of branching support.
-Branching means you diverge from the main line of development and continue to do work without messing with that main line.
-In many VCS tools, this is a somewhat expensive process, often requiring you to create a new copy of your source code directory, which can take a long time for large projects.
+ほぼすべての VCS には、ブランチ機能に相当するものがあります。
+ブランチ機能というものがあると、メインの開発作業から分岐して、メイン作業をわずらわすことなく作業を進めていくことができます。
+VCS ツールにおいて、この作業はわりと面倒である場合が多く、たいていはソースコードディレクトリのコピーを新たに作り出す必要があります。
+大きなプロジェクトでは、こういった作業に時間を取られます。
 @z
 
 @x
-Some people refer to Git's branching model as its ``killer feature,'' and it certainly sets Git apart in the VCS community.
+Some people refer to Git's branching model as its "`killer feature,`" and it certainly sets Git apart in the VCS community.
 Why is it so special?
 The way Git branches is incredibly lightweight, making branching operations nearly instantaneous, and switching back and forth between branches generally just as fast.
 Unlike many other VCSs, Git encourages workflows that branch and merge often, even multiple times in a day.
 Understanding and mastering this feature gives you a powerful and unique tool and can entirely change the way that you develop.
 @y
 //////////////////////////
-Some people refer to Git's branching model as its ``killer feature,'' and it certainly sets Git apart in the VCS community.
+Some people refer to Git's branching model as its "`killer feature,`" and it certainly sets Git apart in the VCS community.
 Why is it so special?
 The way Git branches is incredibly lightweight, making branching operations nearly instantaneous, and switching back and forth between branches generally just as fast.
 Unlike many other VCSs, Git encourages workflows that branch and merge often, even multiple times in a day.
 Understanding and mastering this feature gives you a powerful and unique tool and can entirely change the way that you develop.
 //////////////////////////
-Some people refer to Git's branching model as its ``killer feature,'' and it certainly sets Git apart in the VCS community.
-Why is it so special?
-The way Git branches is incredibly lightweight, making branching operations nearly instantaneous, and switching back and forth between branches generally just as fast.
-Unlike many other VCSs, Git encourages workflows that branch and merge often, even multiple times in a day.
-Understanding and mastering this feature gives you a powerful and unique tool and can entirely change the way that you develop.
+Git のブランチモデルは「決定的にすぐれた機能」という方がいます。
+たしかにこれがあることで、Git は VCS コミュニティの中でも際立っています。
+では何がすぐれているのでしょう？
+Git のブランチ機能は圧倒的に軽量です。
+ブランチ操作はあっという間にでき、ブランチ切り替えもほぼ瞬時にできます。
+他のVCS とは違って Git では、ブランチによって作業を分岐させ、しかも 1 日のうちに何度でもマージすることを推奨しています。
+この機能を理解して活用していけば、他にはない強力なツールとして、開発作業全体を一変させることができます。
 @z
 
 @x

@@ -260,12 +260,12 @@ In short, do as we say, not as we do.
 @x
 (((contributing, private small team)))
 The simplest setup you're likely to encounter is a private project with one or two other developers.
-``Private,'' in this context, means closed-source -- not accessible to the outside world.
+"`Private,`" in this context, means closed-source -- not accessible to the outside world.
 You and the other developers all have push access to the repository.
 @y
 (((contributing, private small team)))
 The simplest setup you're likely to encounter is a private project with one or two other developers.
-``Private,'' in this context, means closed-source -- not accessible to the outside world.
+"`Private,`" in this context, means closed-source -- not accessible to the outside world.
 You and the other developers all have push access to the repository.
 @z
 
@@ -818,11 +818,11 @@ You'll learn how to work in an environment where small groups collaborate on fea
 @z
 
 @x
-Let's say that John and Jessica are working together on one feature (call this ``featureA''), while Jessica and a third developer, Josie, are working on a second (say, ``featureB'').
+Let's say that John and Jessica are working together on one feature (call this "`featureA`"), while Jessica and a third developer, Josie, are working on a second (say, "`featureB`").
 In this case, the company is using a type of integration-manager workflow where the work of the individual groups is integrated only by certain engineers, and the `master` branch of the main repo can be updated only by those engineers.
 In this scenario, all work is done in team-based branches and pulled together by the integrators later.
 @y
-Let's say that John and Jessica are working together on one feature (call this ``featureA''), while Jessica and a third developer, Josie, are working on a second (say, ``featureB'').
+Let's say that John and Jessica are working together on one feature (call this "`featureA`"), while Jessica and a third developer, Josie, are working on a second (say, "`featureB`").
 In this case, the company is using a type of integration-manager workflow where the work of the individual groups is integrated only by certain engineers, and the `master` branch of the main repo can be updated only by those engineers.
 In this scenario, all work is done in team-based branches and pulled together by the integrators later.
 @z
@@ -962,11 +962,11 @@ image::images/managed-team-1.png[Jessica's initial commit history]
 @z
 
 @x
-She's ready to push her work, but gets an email from Josie that a branch with some initial ``featureB'' work on it was already pushed to the server as the `featureBee` branch.
+She's ready to push her work, but gets an email from Josie that a branch with some initial "`featureB`" work on it was already pushed to the server as the `featureBee` branch.
 Jessica needs to merge those changes with her own before she can push her work to the server.
 Jessica first fetches Josie's changes with `git fetch`:
 @y
-She's ready to push her work, but gets an email from Josie that a branch with some initial ``featureB'' work on it was already pushed to the server as the `featureBee` branch.
+She's ready to push her work, but gets an email from Josie that a branch with some initial "`featureB`" work on it was already pushed to the server as the `featureBee` branch.
 Jessica needs to merge those changes with her own before she can push her work to the server.
 Jessica first fetches Josie's changes with `git fetch`:
 @z
@@ -1016,10 +1016,10 @@ Merge made by the 'recursive' strategy.
 @z
 
 @x
-At this point, Jessica wants to push all of this merged ``featureB'' work back to the server, but she doesn't want to simply push her own `featureB` branch.
+At this point, Jessica wants to push all of this merged "`featureB`" work back to the server, but she doesn't want to simply push her own `featureB` branch.
 Rather, since Josie has already started an upstream `featureBee` branch, Jessica wants to push to _that_ branch, which she does with:
 @y
-At this point, Jessica wants to push all of this merged ``featureB'' work back to the server, but she doesn't want to simply push her own `featureB` branch.
+At this point, Jessica wants to push all of this merged "`featureB`" work back to the server, but she doesn't want to simply push her own `featureB` branch.
 Rather, since Josie has already started an upstream `featureBee` branch, Jessica wants to push to _that_ branch, which she does with:
 @z
 
@@ -1284,10 +1284,10 @@ You may want to use `rebase -i` to squash your work down to a single commit, or 
 @z
 
 @x
-When your branch work is finished and you're ready to contribute it back to the maintainers, go to the original project page and click the ``Fork'' button, creating your own writable fork of the project.
+When your branch work is finished and you're ready to contribute it back to the maintainers, go to the original project page and click the "`Fork`" button, creating your own writable fork of the project.
 You then need to add this repository URL as a new remote of your local repository; in this example, let's call it `myfork`:
 @y
-When your branch work is finished and you're ready to contribute it back to the maintainers, go to the original project page and click the ``Fork'' button, creating your own writable fork of the project.
+When your branch work is finished and you're ready to contribute it back to the maintainers, go to the original project page and click the "`Fork`" button, creating your own writable fork of the project.
 You then need to add this repository URL as a new remote of your local repository; in this example, let's call it `myfork`:
 @z
 
@@ -1336,11 +1336,11 @@ $ git push -u myfork featureA
 @x
 (((git commands, request-pull)))
 Once your work has been pushed to your fork of the repository, you need to notify the maintainers of the original project that you have work you'd like them to merge.
-This is often called a _pull request_, and you typically generate such a request either via the website -- GitHub has its own ``Pull Request'' mechanism that we'll go over in <<ch06-github#ch06-github>> -- or you can run the `git request-pull` command and email the subsequent output to the project maintainer manually.
+This is often called a _pull request_, and you typically generate such a request either via the website -- GitHub has its own "`Pull Request`" mechanism that we'll go over in <<ch06-github#ch06-github>> -- or you can run the `git request-pull` command and email the subsequent output to the project maintainer manually.
 @y
 (((git commands, request-pull)))
 Once your work has been pushed to your fork of the repository, you need to notify the maintainers of the original project that you have work you'd like them to merge.
-This is often called a _pull request_, and you typically generate such a request either via the website -- GitHub has its own ``Pull Request'' mechanism that we'll go over in <<ch06-github#ch06-github>> -- or you can run the `git request-pull` command and email the subsequent output to the project maintainer manually.
+This is often called a _pull request_, and you typically generate such a request either via the website -- GitHub has its own "`Pull Request`" mechanism that we'll go over in <<ch06-github#ch06-github>> -- or you can run the `git request-pull` command and email the subsequent output to the project maintainer manually.
 @z
 
 @x
@@ -1727,12 +1727,12 @@ If you add text between the `---` line and the beginning of the patch (the `diff
 
 @x
 To email this to a mailing list, you can either paste the file into your email program or send it via a command-line program.
-Pasting the text often causes formatting issues, especially with ``smarter'' clients that don't preserve newlines and other whitespace appropriately.
+Pasting the text often causes formatting issues, especially with "`smarter`" clients that don't preserve newlines and other whitespace appropriately.
 Luckily, Git provides a tool to help you send properly formatted patches via IMAP, which may be easier for you.
 We'll demonstrate how to send a patch via Gmail, which happens to be the email agent we know best; you can read detailed instructions for a number of mail programs at the end of the aforementioned `Documentation/SubmittingPatches` file in the Git source code.
 @y
 To email this to a mailing list, you can either paste the file into your email program or send it via a command-line program.
-Pasting the text often causes formatting issues, especially with ``smarter'' clients that don't preserve newlines and other whitespace appropriately.
+Pasting the text often causes formatting issues, especially with "`smarter`" clients that don't preserve newlines and other whitespace appropriately.
 Luckily, Git provides a tool to help you send properly formatted patches via IMAP, which may be easier for you.
 We'll demonstrate how to send a patch via Gmail, which happens to be the email agent we know best; you can read detailed instructions for a number of mail programs at the end of the aforementioned `Documentation/SubmittingPatches` file in the Git source code.
 @z

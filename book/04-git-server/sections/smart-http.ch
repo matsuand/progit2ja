@@ -129,10 +129,10 @@ Finally you'll want to tell Apache to allow requests to `git-http-backend` and m
 
 @x
 That will require you to create a `.htpasswd` file containing the passwords of all the valid users.
-Here is an example of adding a ``schacon'' user to the file:
+Here is an example of adding a "`schacon`" user to the file:
 @y
 That will require you to create a `.htpasswd` file containing the passwords of all the valid users.
-Here is an example of adding a ``schacon'' user to the file:
+Here is an example of adding a "`schacon`" user to the file:
 @z
 
 @x

@@ -68,9 +68,9 @@ If you don't specify which level you want to work with, this is the default.
 @z
 
 @x
-Each of these ``levels'' (system, global, local) overwrites values in the previous level, so values in `.git/config` trump those in `[path]/etc/gitconfig`, for instance.
+Each of these "`levels`" (system, global, local) overwrites values in the previous level, so values in `.git/config` trump those in `[path]/etc/gitconfig`, for instance.
 @y
-Each of these ``levels'' (system, global, local) overwrites values in the previous level, so values in `.git/config` trump those in `[path]/etc/gitconfig`, for instance.
+Each of these "`levels`" (system, global, local) overwrites values in the previous level, so values in `.git/config` trump those in `[path]/etc/gitconfig`, for instance.
 @z
 
 @x
@@ -490,11 +490,11 @@ in 0.1 seconds automatically...
 @z
 
 @x
-Note that ``0.1 seconds'' business.
+Note that "`0.1 seconds`" business.
 `help.autocorrect` is actually an integer which represents tenths of a second.
 So if you set it to 50, Git will give you 5 seconds to change your mind before executing the autocorrected command.
 @y
-Note that ``0.1 seconds'' business.
+Note that "`0.1 seconds`" business.
 `help.autocorrect` is actually an integer which represents tenths of a second.
 So if you set it to 50, Git will give you 5 seconds to change your mind before executing the autocorrected command.
 @z

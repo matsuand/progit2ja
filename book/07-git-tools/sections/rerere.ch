@@ -11,10 +11,10 @@
 
 @x
 The `git rerere` functionality is a bit of a hidden feature.
-The name stands for ``reuse recorded resolution'' and, as the name implies, it allows you to ask Git to remember how you've resolved a hunk conflict so that the next time it sees the same conflict, Git can resolve it for you automatically.
+The name stands for "`reuse recorded resolution`" and, as the name implies, it allows you to ask Git to remember how you've resolved a hunk conflict so that the next time it sees the same conflict, Git can resolve it for you automatically.
 @y
 The `git rerere` functionality is a bit of a hidden feature.
-The name stands for ``reuse recorded resolution'' and, as the name implies, it allows you to ask Git to remember how you've resolved a hunk conflict so that the next time it sees the same conflict, Git can resolve it for you automatically.
+The name stands for "`reuse recorded resolution`" and, as the name implies, it allows you to ask Git to remember how you've resolved a hunk conflict so that the next time it sees the same conflict, Git can resolve it for you automatically.
 @z
 
 @x
@@ -100,9 +100,9 @@ end
 @z
 
 @x
-In one branch we change the word ``hello'' to ``hola'', then in another branch we change the ``world'' to ``mundo'', just like before.
+In one branch we change the word "`hello`" to "`hola`", then in another branch we change the "`world`" to "`mundo`", just like before.
 @y
-In one branch we change the word ``hello'' to ``hola'', then in another branch we change the ``world'' to ``mundo'', just like before.
+In one branch we change the word "`hello`" to "`hola`", then in another branch we change the "`world`" to "`mundo`", just like before.
 @z
 
 @x
@@ -318,9 +318,9 @@ $ git rerere diff
 @z
 
 @x
-So that basically says, when Git sees a hunk conflict in a `hello.rb` file that has ``hello mundo'' on one side and ``hola world'' on the other, it will resolve it to ``hola mundo''.
+So that basically says, when Git sees a hunk conflict in a `hello.rb` file that has "`hello mundo`" on one side and "`hola world`" on the other, it will resolve it to "`hola mundo`".
 @y
-So that basically says, when Git sees a hunk conflict in a `hello.rb` file that has ``hello mundo'' on one side and ``hola world'' on the other, it will resolve it to ``hola mundo''.
+So that basically says, when Git sees a hunk conflict in a `hello.rb` file that has "`hello mundo`" on one side and "`hola world`" on the other, it will resolve it to "`hola mundo`".
 @z
 
 @x

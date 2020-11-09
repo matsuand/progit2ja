@@ -71,22 +71,22 @@ For more information read the https://gitlab.com/gitlab-org/gitlab-foss/-/blob/m
 GitLab's administration interface is accessed over the web.
 Simply point your browser to the hostname or IP address where GitLab is installed, and log in as the admin user.
 The default username is `admin@local.host`, and the default password is `5iveL!fe` (which you must change right away).
-After you've logged in, click the ``Admin area'' icon in the menu at the top right.
+After you've logged in, click the "`Admin area`" icon in the menu at the top right.
 @y
 GitLab's administration interface is accessed over the web.
 Simply point your browser to the hostname or IP address where GitLab is installed, and log in as the admin user.
 The default username is `admin@local.host`, and the default password is `5iveL!fe` (which you must change right away).
-After you've logged in, click the ``Admin area'' icon in the menu at the top right.
+After you've logged in, click the "`Admin area`" icon in the menu at the top right.
 @z
 
 @x
 [[gitlab_menu]]
-.The ``Admin area'' item in the GitLab menu
-image::images/gitlab-menu.png[The ``Admin area'' item in the GitLab menu]
+.The "`Admin area`" item in the GitLab menu
+image::images/gitlab-menu.png[The `"Admin area`" item in the GitLab menu]
 @y
 [[gitlab_menu]]
-.The ``Admin area'' item in the GitLab menu
-image::images/gitlab-menu.png[The ``Admin area'' item in the GitLab menu]
+.The "`Admin area`" item in the GitLab menu
+image::images/gitlab-menu.png[The `"Admin area`" item in the GitLab menu]
 @z
 
 @x
@@ -119,18 +119,18 @@ image::images/gitlab-users.png[The GitLab user administration screen]
 
 @x
 You can remove a user account in two ways:
-``Blocking'' a user prevents them from logging into the GitLab instance, but all of the data under that user's namespace will be preserved, and commits signed with that user's email address will still link back to their profile.
+"`Blocking`" a user prevents them from logging into the GitLab instance, but all of the data under that user's namespace will be preserved, and commits signed with that user's email address will still link back to their profile.
 @y
 You can remove a user account in two ways:
-``Blocking'' a user prevents them from logging into the GitLab instance, but all of the data under that user's namespace will be preserved, and commits signed with that user's email address will still link back to their profile.
+"`Blocking`" a user prevents them from logging into the GitLab instance, but all of the data under that user's namespace will be preserved, and commits signed with that user's email address will still link back to their profile.
 @z
 
 @x
-``Destroying'' a user, on the other hand, completely removes them from the database and filesystem.
+"`Destroying`" a user, on the other hand, completely removes them from the database and filesystem.
 All projects and data in their namespace is removed, and any groups they own will also be removed.
 This is obviously a much more permanent and destructive action, and you will rarely need it.
 @y
-``Destroying'' a user, on the other hand, completely removes them from the database and filesystem.
+"`Destroying`" a user, on the other hand, completely removes them from the database and filesystem.
 All projects and data in their namespace is removed, and any groups they own will also be removed.
 This is obviously a much more permanent and destructive action, and you will rarely need it.
 @z
@@ -163,11 +163,11 @@ image::images/gitlab-groups.png[The GitLab group administration screen]
 
 @x
 Each group is associated with a number of users, each of which has a level of permissions for the group's projects and the group itself.
-These range from ``Guest'' (issues and chat only) to ``Owner'' (full control of the group, its members, and its projects).
+These range from "`Guest`" (issues and chat only) to "`Owner`" (full control of the group, its members, and its projects).
 The types of permissions are too numerous to list here, but GitLab has a helpful link on the administration screen.
 @y
 Each group is associated with a number of users, each of which has a level of permissions for the group's projects and the group itself.
-These range from ``Guest'' (issues and chat only) to ``Owner'' (full control of the group, its members, and its projects).
+These range from "`Guest`" (issues and chat only) to "`Owner`" (full control of the group, its members, and its projects).
 The types of permissions are too numerous to list here, but GitLab has a helpful link on the administration screen.
 @z
 
@@ -223,16 +223,16 @@ This is a great way to connect your Git repositories and GitLab instance to the 
 
 @x
 The first thing you'll want to do with GitLab is create a new project.
-You can do this by clicking on the ``+'' icon on the toolbar.
+You can do this by clicking on the "`+`" icon on the toolbar.
 You'll be asked for the project's name, which namespace it should belong to, and what its visibility level should be.
 Most of what you specify here isn't permanent, and can be changed later through the settings interface.
-Click ``Create Project'', and you're done.
+Click "`Create Project`", and you're done.
 @y
 The first thing you'll want to do with GitLab is create a new project.
-You can do this by clicking on the ``+'' icon on the toolbar.
+You can do this by clicking on the "`+`" icon on the toolbar.
 You'll be asked for the project's name, which namespace it should belong to, and what its visibility level should be.
 Most of what you specify here isn't permanent, and can be changed later through the settings interface.
-Click ``Create Project'', and you're done.
+Click "`Create Project`", and you're done.
 @z
 
 @x
@@ -293,25 +293,25 @@ Each project's home page shows recent activity, and links along the top will lea
 
 @x
 The simplest way of working together on a GitLab project is by giving each user direct push access to the Git repository.
-You can add a user to a project by going to the ``Members'' section of that project's settings, and associating the new user with an access level (the different access levels are discussed a bit in <<_gitlab_groups_section>>).
-By giving a user an access level of ``Developer'' or above, that user can push commits and branches directly to the repository.
+You can add a user to a project by going to the "`Members`" section of that project's settings, and associating the new user with an access level (the different access levels are discussed a bit in <<_gitlab_groups_section>>).
+By giving a user an access level of "`Developer`" or above, that user can push commits and branches directly to the repository.
 @y
 The simplest way of working together on a GitLab project is by giving each user direct push access to the Git repository.
-You can add a user to a project by going to the ``Members'' section of that project's settings, and associating the new user with an access level (the different access levels are discussed a bit in <<_gitlab_groups_section>>).
-By giving a user an access level of ``Developer'' or above, that user can push commits and branches directly to the repository.
+You can add a user to a project by going to the "`Members`" section of that project's settings, and associating the new user with an access level (the different access levels are discussed a bit in <<_gitlab_groups_section>>).
+By giving a user an access level of "`Developer`" or above, that user can push commits and branches directly to the repository.
 @z
 
 @x
 Another, more decoupled way of collaboration is by using merge requests.
 This feature enables any user that can see a project to contribute to it in a controlled way.
 Users with direct access can simply create a branch, push commits to it, and open a merge request from their branch back into `master` or any other branch.
-Users who don't have push permissions for a repository can ``fork'' it to create their own copy, push commits to _their_ copy, and open a merge request from their fork back to the main project.
+Users who don't have push permissions for a repository can "`fork`" it to create their own copy, push commits to _their_ copy, and open a merge request from their fork back to the main project.
 This model allows the owner to be in full control of what goes into the repository and when, while allowing contributions from untrusted users.
 @y
 Another, more decoupled way of collaboration is by using merge requests.
 This feature enables any user that can see a project to contribute to it in a controlled way.
 Users with direct access can simply create a branch, push commits to it, and open a merge request from their branch back into `master` or any other branch.
-Users who don't have push permissions for a repository can ``fork'' it to create their own copy, push commits to _their_ copy, and open a merge request from their fork back to the main project.
+Users who don't have push permissions for a repository can "`fork`" it to create their own copy, push commits to _their_ copy, and open a merge request from their fork back to the main project.
 This model allows the owner to be in full control of what goes into the repository and when, while allowing contributions from untrusted users.
 @z
 

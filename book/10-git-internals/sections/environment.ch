@@ -140,20 +140,20 @@ If you happen to have a lot of projects with large files that have the exact sam
 @z
 
 @x
-A ``pathspec'' refers to how you specify paths to things in Git, including the use of wildcards.
+A "`pathspec`" refers to how you specify paths to things in Git, including the use of wildcards.
 These are used in the `.gitignore` file, but also on the command-line (`git add *.c`).
 @y
-A ``pathspec'' refers to how you specify paths to things in Git, including the use of wildcards.
+A "`pathspec`" refers to how you specify paths to things in Git, including the use of wildcards.
 These are used in the `.gitignore` file, but also on the command-line (`git add *.c`).
 @z
 
 @x
 *`GIT_GLOB_PATHSPECS`* and *`GIT_NOGLOB_PATHSPECS`* control the default behavior of wildcards in pathspecs.
-If `GIT_GLOB_PATHSPECS` is set to 1, wildcard characters act as wildcards (which is the default); if `GIT_NOGLOB_PATHSPECS` is set to 1, wildcard characters only match themselves, meaning something like `*.c` would only match a file _named_ ``*.c'', rather than any file whose name ends with `.c`.
+If `GIT_GLOB_PATHSPECS` is set to 1, wildcard characters act as wildcards (which is the default); if `GIT_NOGLOB_PATHSPECS` is set to 1, wildcard characters only match themselves, meaning something like `*.c` would only match a file _named_ "`*.c`", rather than any file whose name ends with `.c`.
 You can override this in individual cases by starting the pathspec with `:(glob)` or `:(literal)`, as in `:(glob)*.c`.
 @y
 *`GIT_GLOB_PATHSPECS`* and *`GIT_NOGLOB_PATHSPECS`* control the default behavior of wildcards in pathspecs.
-If `GIT_GLOB_PATHSPECS` is set to 1, wildcard characters act as wildcards (which is the default); if `GIT_NOGLOB_PATHSPECS` is set to 1, wildcard characters only match themselves, meaning something like `*.c` would only match a file _named_ ``*.c'', rather than any file whose name ends with `.c`.
+If `GIT_GLOB_PATHSPECS` is set to 1, wildcard characters act as wildcards (which is the default); if `GIT_NOGLOB_PATHSPECS` is set to 1, wildcard characters only match themselves, meaning something like `*.c` would only match a file _named_ "`*.c`", rather than any file whose name ends with `.c`.
 You can override this in individual cases by starting the pathspec with `:(glob)` or `:(literal)`, as in `:(glob)*.c`.
 @z
 
@@ -182,39 +182,39 @@ The final creation of a Git commit object is usually done by `git-commit-tree`, 
 @z
 
 @x
-*`GIT_AUTHOR_NAME`* is the human-readable name in the ``author'' field.
+*`GIT_AUTHOR_NAME`* is the human-readable name in the "`author`" field.
 @y
-*`GIT_AUTHOR_NAME`* is the human-readable name in the ``author'' field.
+*`GIT_AUTHOR_NAME`* is the human-readable name in the "`author`" field.
 @z
 
 @x
-*`GIT_AUTHOR_EMAIL`* is the email for the ``author'' field.
+*`GIT_AUTHOR_EMAIL`* is the email for the "`author`" field.
 @y
-*`GIT_AUTHOR_EMAIL`* is the email for the ``author'' field.
+*`GIT_AUTHOR_EMAIL`* is the email for the "`author`" field.
 @z
 
 @x
-*`GIT_AUTHOR_DATE`* is the timestamp used for the ``author'' field.
+*`GIT_AUTHOR_DATE`* is the timestamp used for the "`author`" field.
 @y
-*`GIT_AUTHOR_DATE`* is the timestamp used for the ``author'' field.
+*`GIT_AUTHOR_DATE`* is the timestamp used for the "`author`" field.
 @z
 
 @x
-*`GIT_COMMITTER_NAME`* sets the human name for the ``committer'' field.
+*`GIT_COMMITTER_NAME`* sets the human name for the "`committer`" field.
 @y
-*`GIT_COMMITTER_NAME`* sets the human name for the ``committer'' field.
+*`GIT_COMMITTER_NAME`* sets the human name for the "`committer`" field.
 @z
 
 @x
-*`GIT_COMMITTER_EMAIL`* is the email address for the ``committer'' field.
+*`GIT_COMMITTER_EMAIL`* is the email address for the "`committer`" field.
 @y
-*`GIT_COMMITTER_EMAIL`* is the email address for the ``committer'' field.
+*`GIT_COMMITTER_EMAIL`* is the email address for the "`committer`" field.
 @z
 
 @x
-*`GIT_COMMITTER_DATE`* is used for the timestamp in the ``committer'' field.
+*`GIT_COMMITTER_DATE`* is used for the timestamp in the "`committer`" field.
 @y
-*`GIT_COMMITTER_DATE`* is used for the timestamp in the ``committer'' field.
+*`GIT_COMMITTER_DATE`* is used for the timestamp in the "`committer`" field.
 @z
 
 @x
@@ -340,10 +340,10 @@ The possible values of these variables are as follows:
 @z
 
 @x
-* ``true'', ``1'', or ``2'' – the trace category is written to stderr.
+* "`true`", "`1`", or "`2`" – the trace category is written to stderr.
 * An absolute path starting with `/` – the trace output will be written to that file.
 @y
-* ``true'', ``1'', or ``2'' – the trace category is written to stderr.
+* "`true`", "`1`", or "`2`" – the trace category is written to stderr.
 * An absolute path starting with `/` – the trace output will be written to that file.
 @z
 

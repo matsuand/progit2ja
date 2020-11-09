@@ -22,12 +22,12 @@ But plain text isn't the best choice for all tasks; sometimes a visual represent
 @x
 It's important to note that different interfaces are tailored for different workflows.
 Some clients expose only a carefully curated subset of Git functionality, in order to support a specific way of working that the author considers effective.
-When viewed in this light, none of these tools can be called ``better'' than any of the others, they're simply more fit for their intended purpose.
+When viewed in this light, none of these tools can be called "`better`" than any of the others, they're simply more fit for their intended purpose.
 Also note that there's nothing these graphical clients can do that the command-line client can't; the command-line is still where you'll have the most power and control when working with your repositories.
 @y
 It's important to note that different interfaces are tailored for different workflows.
 Some clients expose only a carefully curated subset of Git functionality, in order to support a specific way of working that the author considers effective.
-When viewed in this light, none of these tools can be called ``better'' than any of the others, they're simply more fit for their intended purpose.
+When viewed in this light, none of these tools can be called "`better`" than any of the others, they're simply more fit for their intended purpose.
 Also note that there's nothing these graphical clients can do that the command-line client can't; the command-line is still where you'll have the most power and control when working with your repositories.
 @z
 
@@ -157,14 +157,14 @@ You can stage individual hunks (or individual lines) by right-clicking in this a
 
 @x
 At the bottom right is the message and action area.
-Type your message into the text box and click ``Commit'' to do something similar to `git commit`.
-You can also choose to amend the last commit by choosing the ``Amend'' radio button, which will update the ``Staged Changes'' area with the contents of the last commit.
-Then you can simply stage or unstage some changes, alter the commit message, and click ``Commit'' again to replace the old commit with a new one.
+Type your message into the text box and click "`Commit`" to do something similar to `git commit`.
+You can also choose to amend the last commit by choosing the "`Amend`" radio button, which will update the "`Staged Changes`" area with the contents of the last commit.
+Then you can simply stage or unstage some changes, alter the commit message, and click "`Commit`" again to replace the old commit with a new one.
 @y
 At the bottom right is the message and action area.
-Type your message into the text box and click ``Commit'' to do something similar to `git commit`.
-You can also choose to amend the last commit by choosing the ``Amend'' radio button, which will update the ``Staged Changes'' area with the contents of the last commit.
-Then you can simply stage or unstage some changes, alter the commit message, and click ``Commit'' again to replace the old commit with a new one.
+Type your message into the text box and click "`Commit`" to do something similar to `git commit`.
+You can also choose to amend the last commit by choosing the "`Amend`" radio button, which will update the "`Staged Changes`" area with the contents of the last commit.
+Then you can simply stage or unstage some changes, alter the commit message, and click "`Commit`" again to replace the old commit with a new one.
 @z
 
 @x
@@ -211,24 +211,24 @@ image::images/github_win.png[GitHub for Windows]
 
 @x
 They are designed to look and work very much alike, so we'll treat them like a single product in this chapter.
-We won't be doing a detailed rundown of these tools (they have their own documentation), but a quick tour of the ``changes'' view (which is where you'll spend most of your time) is in order.
+We won't be doing a detailed rundown of these tools (they have their own documentation), but a quick tour of the "`changes`" view (which is where you'll spend most of your time) is in order.
 @y
 They are designed to look and work very much alike, so we'll treat them like a single product in this chapter.
-We won't be doing a detailed rundown of these tools (they have their own documentation), but a quick tour of the ``changes'' view (which is where you'll spend most of your time) is in order.
+We won't be doing a detailed rundown of these tools (they have their own documentation), but a quick tour of the "`changes`" view (which is where you'll spend most of your time) is in order.
 @z
 
 @x
-* On the left is the list of repositories the client is tracking; you can add a repository (either by cloning or attaching locally) by clicking the ``+'' icon at the top of this area.
+* On the left is the list of repositories the client is tracking; you can add a repository (either by cloning or attaching locally) by clicking the "`+`" icon at the top of this area.
 * In the center is a commit-input area, which lets you input a commit message, and select which files should be included.
   On Windows, the commit history is displayed directly below this; on macOS, it's on a separate tab.
 * On the right is a diff view, which shows what's changed in your working directory, or which changes were included in the selected commit.
-* The last thing to notice is the ``Sync'' button at the top-right, which is the primary way you interact over the network.
+* The last thing to notice is the "`Sync`" button at the top-right, which is the primary way you interact over the network.
 @y
-* On the left is the list of repositories the client is tracking; you can add a repository (either by cloning or attaching locally) by clicking the ``+'' icon at the top of this area.
+* On the left is the list of repositories the client is tracking; you can add a repository (either by cloning or attaching locally) by clicking the "`+`" icon at the top of this area.
 * In the center is a commit-input area, which lets you input a commit message, and select which files should be included.
   On Windows, the commit history is displayed directly below this; on macOS, it's on a separate tab.
 * On the right is a diff view, which shows what's changed in your working directory, or which changes were included in the selected commit.
-* The last thing to notice is the ``Sync'' button at the top-right, which is the primary way you interact over the network.
+* The last thing to notice is the "`Sync`" button at the top-right, which is the primary way you interact over the network.
 @z
 
 @x
@@ -260,11 +260,11 @@ When the applications are first run, they walk you through all the first-time Gi
 @z
 
 @x
-Both are ``evergreen'' – updates are downloaded and installed in the background while the applications are open.
+Both are "`evergreen`" – updates are downloaded and installed in the background while the applications are open.
 This helpfully includes a bundled version of Git, which means you probably won't have to worry about manually updating it again.
 On Windows, the client includes a shortcut to launch PowerShell with Posh-git, which we'll talk more about later in this chapter.
 @y
-Both are ``evergreen'' – updates are downloaded and installed in the background while the applications are open.
+Both are "`evergreen`" – updates are downloaded and installed in the background while the applications are open.
 This helpfully includes a bundled version of Git, which means you probably won't have to worry about manually updating it again.
 On Windows, the client includes a shortcut to launch PowerShell with Posh-git, which we'll talk more about later in this chapter.
 @z
@@ -287,11 +287,11 @@ If you already have a local repository, just drag its directory from the Finder 
 
 @x
 Once it's installed and configured, you can use the GitHub client for many common Git tasks.
-The intended workflow for this tool is sometimes called the ``GitHub Flow.''
+The intended workflow for this tool is sometimes called the "`GitHub Flow.`"
 We cover this in more detail in <<ch06-github#ch06-github_flow>>, but the general gist is that (a) you'll be committing to a branch, and (b) you'll be syncing up with a remote repository fairly regularly.
 @y
 Once it's installed and configured, you can use the GitHub client for many common Git tasks.
-The intended workflow for this tool is sometimes called the ``GitHub Flow.''
+The intended workflow for this tool is sometimes called the "`GitHub Flow.`"
 We cover this in more detail in <<ch06-github#ch06-github_flow>>, but the general gist is that (a) you'll be committing to a branch, and (b) you'll be syncing up with a remote repository fairly regularly.
 @z
 
@@ -304,11 +304,11 @@ On macOS, there's a button at the top of the window for creating a new branch:
 @z
 
 @x
-.``Create Branch'' button on macOS
-image::images/branch_widget_mac.png[``Create Branch'' button on macOS]
+."`Create Branch`" button on macOS
+image::images/branch_widget_mac.png["`Create Branch`" button on macOS]
 @y
-.``Create Branch'' button on macOS
-image::images/branch_widget_mac.png[``Create Branch'' button on macOS]
+."`Create Branch`" button on macOS
+image::images/branch_widget_mac.png["`Create Branch`" button on macOS]
 @z
 
 @x
@@ -328,19 +328,19 @@ image::images/branch_widget_win.png[Creating a branch on Windows]
 @x
 Once your branch is created, making new commits is fairly straightforward.
 Make some changes in your working directory, and when you switch to the GitHub client window, it will show you which files changed.
-Enter a commit message, select the files you'd like to include, and click the ``Commit'' button (ctrl-enter or ⌘-enter).
+Enter a commit message, select the files you'd like to include, and click the "`Commit`" button (ctrl-enter or ⌘-enter).
 @y
 Once your branch is created, making new commits is fairly straightforward.
 Make some changes in your working directory, and when you switch to the GitHub client window, it will show you which files changed.
-Enter a commit message, select the files you'd like to include, and click the ``Commit'' button (ctrl-enter or ⌘-enter).
+Enter a commit message, select the files you'd like to include, and click the "`Commit`" button (ctrl-enter or ⌘-enter).
 @z
 
 @x
-The main way you interact with other repositories over the network is through the ``Sync'' feature.
+The main way you interact with other repositories over the network is through the "`Sync`" feature.
 Git internally has separate operations for pushing, fetching, merging, and rebasing, but the GitHub clients collapse all of these into one multi-step feature.
 Here's what happens when you click the Sync button:
 @y
-The main way you interact with other repositories over the network is through the ``Sync'' feature.
+The main way you interact with other repositories over the network is through the "`Sync`" feature.
 Git internally has separate operations for pushing, fetching, merging, and rebasing, but the GitHub clients collapse all of these into one multi-step feature.
 Here's what happens when you click the Sync button:
 @z

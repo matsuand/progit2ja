@@ -427,10 +427,10 @@ Each time, Git will stop, let you amend the commit, and continue when you're fin
 
 @x
 You can also use interactive rebases to reorder or remove commits entirely.
-If you want to remove the ``Add cat-file'' commit and change the order in which the other two commits are introduced, you can change the rebase script from this:
+If you want to remove the "`Add cat-file`" commit and change the order in which the other two commits are introduced, you can change the rebase script from this:
 @y
 You can also use interactive rebases to reorder or remove commits entirely.
-If you want to remove the ``Add cat-file'' commit and change the order in which the other two commits are introduced, you can change the rebase script from this:
+If you want to remove the "`Add cat-file`" commit and change the order in which the other two commits are introduced, you can change the rebase script from this:
 @z
 
 @x
@@ -471,10 +471,10 @@ pick f7f3f6d Change my name a bit
 
 @x
 When you save and exit the editor, Git rewinds your branch to the parent of these commits, applies `310154e` and then `f7f3f6d`, and then stops.
-You effectively change the order of those commits and remove the ``Add cat-file'' commit completely.
+You effectively change the order of those commits and remove the "`Add cat-file`" commit completely.
 @y
 When you save and exit the editor, Git rewinds your branch to the parent of these commits, applies `310154e` and then `f7f3f6d`, and then stops.
-You effectively change the order of those commits and remove the ``Add cat-file'' commit completely.
+You effectively change the order of those commits and remove the "`Add cat-file`" commit completely.
 @z
 
 @x
@@ -552,10 +552,10 @@ The script puts helpful instructions in the rebase message:
 @z
 
 @x
-If, instead of ``pick'' or ``edit'', you specify ``squash'', Git applies both that change and the change directly before it and makes you merge the commit messages together.
+If, instead of "`pick`" or "`edit`", you specify "`squash`", Git applies both that change and the change directly before it and makes you merge the commit messages together.
 So, if you want to make a single commit from these three commits, you make the script look like this:
 @y
-If, instead of ``pick'' or ``edit'', you specify ``squash'', Git applies both that change and the change directly before it and makes you merge the commit messages together.
+If, instead of "`pick`" or "`edit`", you specify "`squash`", Git applies both that change and the change directly before it and makes you merge the commit messages together.
 So, if you want to make a single commit from these three commits, you make the script look like this:
 @z
 
@@ -636,13 +636,13 @@ When you save that, you have a single commit that introduces the changes of all 
 @x
 Splitting a commit undoes a commit and then partially stages and commits as many times as commits you want to end up with.
 For example, suppose you want to split the middle commit of your three commits.
-Instead of ``Update README formatting and add blame'', you want to split it into two commits: ``Update README formatting'' for the first, and ``Add blame'' for the second.
-You can do that in the `rebase -i` script by changing the instruction on the commit you want to split to ``edit'':
+Instead of "`Update README formatting and add blame`", you want to split it into two commits: "`Update README formatting`" for the first, and "`Add blame`" for the second.
+You can do that in the `rebase -i` script by changing the instruction on the commit you want to split to "`edit`":
 @y
 Splitting a commit undoes a commit and then partially stages and commits as many times as commits you want to end up with.
 For example, suppose you want to split the middle commit of your three commits.
-Instead of ``Update README formatting and add blame'', you want to split it into two commits: ``Update README formatting'' for the first, and ``Add blame'' for the second.
-You can do that in the `rebase -i` script by changing the instruction on the commit you want to split to ``edit'':
+Instead of "`Update README formatting and add blame`", you want to split it into two commits: "`Update README formatting`" for the first, and "`Add blame`" for the second.
+You can do that in the `rebase -i` script by changing the instruction on the commit you want to split to "`edit`":
 @z
 
 @x
@@ -724,11 +724,11 @@ f7f3f6d Change my name a bit
 @x
 This changes the SHA-1s of the three most recent commits in your list, so make sure no changed commit shows up in that list that you've already pushed to a shared repository.
 Notice that the last commit (`f7f3f6d`) in the list is unchanged.
-Despite this commit being shown in the script, because it was marked as ``pick'' and was applied prior to any rebase changes, Git leaves the commit unmodified.
+Despite this commit being shown in the script, because it was marked as "`pick`" and was applied prior to any rebase changes, Git leaves the commit unmodified.
 @y
 This changes the SHA-1s of the three most recent commits in your list, so make sure no changed commit shows up in that list that you've already pushed to a shared repository.
 Notice that the last commit (`f7f3f6d`) in the list is unchanged.
-Despite this commit being shown in the script, because it was marked as ``pick'' and was applied prior to any rebase changes, Git leaves the commit unmodified.
+Despite this commit being shown in the script, because it was marked as "`pick`" and was applied prior to any rebase changes, Git leaves the commit unmodified.
 @z
 
 @x
@@ -739,10 +739,10 @@ Despite this commit being shown in the script, because it was marked as ``pick''
 
 @x
 If you want to get rid of a commit, you can delete it using the `rebase -i` script.
-In the list of commits, put the word ``drop'' before the commit you want to delete (or just delete that line from the rebase script):
+In the list of commits, put the word "`drop`" before the commit you want to delete (or just delete that line from the rebase script):
 @y
 If you want to get rid of a commit, you can delete it using the `rebase -i` script.
-In the list of commits, put the word ``drop'' before the commit you want to delete (or just delete that line from the rebase script):
+In the list of commits, put the word "`drop`" before the commit you want to delete (or just delete that line from the rebase script):
 @z
 
 @x

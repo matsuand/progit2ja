@@ -352,14 +352,14 @@ These files are pulled out of the compressed database in the Git directory and p
 
 @x
 The staging area is a file, generally contained in your Git directory, that stores information about what will go into your next commit.
-Its technical name in Git parlance is the ``index'', but the phrase ``staging area'' works just as well.
+Its technical name in Git parlance is the "`index`", but the phrase "`staging area`" works just as well.
 @y
 //////////////////////////
 The staging area is a file, generally contained in your Git directory, that stores information about what will go into your next commit.
-Its technical name in Git parlance is the ``index'', but the phrase ``staging area'' works just as well.
+Its technical name in Git parlance is the "`index`", but the phrase "`staging area`" works just as well.
 //////////////////////////
 The staging area is a file, generally contained in your Git directory, that stores information about what will go into your next commit.
-Its technical name in Git parlance is the ``index'', but the phrase ``staging area'' works just as well.
+Its technical name in Git parlance is the "`index`", but the phrase "`staging area`" works just as well.
 @z
 
 @x

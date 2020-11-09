@@ -53,11 +53,11 @@ The `update` hook runs once per branch being pushed and takes three arguments:
 
 @x
 You also have access to the user doing the pushing if the push is being run over SSH.
-If you've allowed everyone to connect with a single user (like ``git'') via public-key authentication, you may have to give that user a shell wrapper that determines which user is connecting based on the public key, and set an environment variable accordingly.
+If you've allowed everyone to connect with a single user (like "`git`") via public-key authentication, you may have to give that user a shell wrapper that determines which user is connecting based on the public key, and set an environment variable accordingly.
 Here we'll assume the connecting user is in the `$USER` environment variable, so your update script begins by gathering all the information you need:
 @y
 You also have access to the user doing the pushing if the push is being run over SSH.
-If you've allowed everyone to connect with a single user (like ``git'') via public-key authentication, you may have to give that user a shell wrapper that determines which user is connecting based on the public key, and set an environment variable accordingly.
+If you've allowed everyone to connect with a single user (like "`git`") via public-key authentication, you may have to give that user a shell wrapper that determines which user is connecting based on the public key, and set an environment variable accordingly.
 Here we'll assume the connecting user is in the `$USER` environment variable, so your update script begins by gathering all the information you need:
 @z
 
@@ -111,11 +111,11 @@ Don't judge – it's easier to demonstrate this way.
 
 @x
 Your first challenge is to enforce that each commit message adheres to a particular format.
-Just to have a target, assume that each message has to include a string that looks like ``ref: 1234'' because you want each commit to link to a work item in your ticketing system.
+Just to have a target, assume that each message has to include a string that looks like "`ref: 1234`" because you want each commit to link to a work item in your ticketing system.
 You must look at each commit being pushed up, see if that string is in the commit message, and, if the string is absent from any of the commits, exit non-zero so the push is rejected.
 @y
 Your first challenge is to enforce that each commit message adheres to a particular format.
-Just to have a target, assume that each message has to include a string that looks like ``ref: 1234'' because you want each commit to link to a work item in your ticketing system.
+Just to have a target, assume that each message has to include a string that looks like "`ref: 1234`" because you want each commit to link to a work item in your ticketing system.
 You must look at each commit being pushed up, see if that string is in the commit message, and, if the string is absent from any of the commits, exit non-zero so the push is rejected.
 @z
 

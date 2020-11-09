@@ -100,7 +100,7 @@ With Git's branching model, it's possible for hundreds of developers to successf
 @x
 (((workflows, integration manager)))
 Because Git allows you to have multiple remote repositories, it's possible to have a workflow where each developer has write access to their own public repository and read access to everyone else's.
-This scenario often includes a canonical repository that represents the ``official'' project.
+This scenario often includes a canonical repository that represents the "`official`" project.
 To contribute to that project, you create your own public clone of the project and push your changes to it.
 Then, you can send a request to the maintainer of the main project to pull in your changes.
 The maintainer can then add your repository as a remote, test your changes locally, merge them into their branch, and push back to their repository.
@@ -108,7 +108,7 @@ The process works as follows (see <<wfdiag_b>>):
 @y
 (((workflows, integration manager)))
 Because Git allows you to have multiple remote repositories, it's possible to have a workflow where each developer has write access to their own public repository and read access to everyone else's.
-This scenario often includes a canonical repository that represents the ``official'' project.
+This scenario often includes a canonical repository that represents the "`official`" project.
 To contribute to that project, you create your own public clone of the project and push your changes to it.
 Then, you can send a request to the maintainer of the main project to pull in your changes.
 The maintainer can then add your repository as a remote, test your changes locally, merge them into their branch, and push back to their repository.

@@ -29,11 +29,11 @@ For this, we recommend a simple metaphor.
 
 @x
 An easier way to think about `reset` and `checkout` is through the mental frame of Git being a content manager of three different trees.
-By ``tree'' here, we really mean ``collection of files'', not specifically the data structure.
+By "`tree`" here, we really mean "`collection of files`", not specifically the data structure.
 There are a few cases where the index doesn't exactly act like a tree, but for our purposes it is easier to think about it this way for now.
 @y
 An easier way to think about `reset` and `checkout` is through the mental frame of Git being a content manager of three different trees.
-By ``tree'' here, we really mean ``collection of files'', not specifically the data structure.
+By "`tree`" here, we really mean "`collection of files`", not specifically the data structure.
 There are a few cases where the index doesn't exactly act like a tree, but for our purposes it is easier to think about it this way for now.
 @z
 
@@ -122,9 +122,9 @@ $ git ls-tree -r HEAD
 @z
 
 @x
-The Git `cat-file` and `ls-tree` commands are ``plumbing'' commands that are used for lower level things and not really used in day-to-day work, but they help us see what's going on here.
+The Git `cat-file` and `ls-tree` commands are "`plumbing`" commands that are used for lower level things and not really used in day-to-day work, but they help us see what's going on here.
 @y
-The Git `cat-file` and `ls-tree` commands are ``plumbing'' commands that are used for lower level things and not really used in day-to-day work, but they help us see what's going on here.
+The Git `cat-file` and `ls-tree` commands are "`plumbing`" commands that are used for lower level things and not really used in day-to-day work, but they help us see what's going on here.
 @z
 
 @x
@@ -137,10 +137,10 @@ The Git `cat-file` and `ls-tree` commands are ``plumbing'' commands that are use
 
 @x
 The _index_ is your *proposed next commit*.
-We've also been referring to this concept as Git's ``Staging Area'' as this is what Git looks at when you run `git commit`.
+We've also been referring to this concept as Git's "`Staging Area`" as this is what Git looks at when you run `git commit`.
 @y
 The _index_ is your *proposed next commit*.
-We've also been referring to this concept as Git's ``Staging Area'' as this is what Git looks at when you run `git commit`.
+We've also been referring to this concept as Git's "`Staging Area`" as this is what Git looks at when you run `git commit`.
 @z
 
 @x
@@ -188,12 +188,12 @@ The index is not technically a tree structure -- it's actually implemented as a 
 @z
 
 @x
-Finally, you have your _working directory_ (also commonly referred to as the ``working tree'').
+Finally, you have your _working directory_ (also commonly referred to as the "`working tree`").
 The other two trees store their content in an efficient but inconvenient manner, inside the `.git` folder.
 The working directory unpacks them into actual files, which makes it much easier for you to edit them.
 Think of the working directory as a *sandbox*, where you can try changes out before committing them to your staging area (index) and then to history.
 @y
-Finally, you have your _working directory_ (also commonly referred to as the ``working tree'').
+Finally, you have your _working directory_ (also commonly referred to as the "`working tree`").
 The other two trees store their content in an efficient but inconvenient manner, inside the `.git` folder.
 The working directory unpacks them into actual files, which makes it much easier for you to edit them.
 Think of the working directory as a *sandbox*, where you can try changes out before committing them to your staging area (index) and then to history.
@@ -314,10 +314,10 @@ image::images/reset-ex4.png[]
 @z
 
 @x
-If we run `git status` right now, we'll see the file in red as ``Changes not staged for commit'', because that entry differs between the index and the working directory.
+If we run `git status` right now, we'll see the file in red as "`Changes not staged for commit`", because that entry differs between the index and the working directory.
 Next we run `git add` on it to stage it into our index.
 @y
-If we run `git status` right now, we'll see the file in red as ``Changes not staged for commit'', because that entry differs between the index and the working directory.
+If we run `git status` right now, we'll see the file in red as "`Changes not staged for commit`", because that entry differs between the index and the working directory.
 Next we run `git add` on it to stage it into our index.
 @z
 
@@ -328,10 +328,10 @@ image::images/reset-ex5.png[]
 @z
 
 @x
-At this point, if we run `git status`, we will see the file in green under ``Changes to be committed'' because the index and HEAD differ -- that is, our proposed next commit is now different from our last commit.
+At this point, if we run `git status`, we will see the file in green under "`Changes to be committed`" because the index and HEAD differ -- that is, our proposed next commit is now different from our last commit.
 Finally, we run `git commit` to finalize the commit.
 @y
-At this point, if we run `git status`, we will see the file in green under ``Changes to be committed'' because the index and HEAD differ -- that is, our proposed next commit is now different from our last commit.
+At this point, if we run `git status`, we will see the file in green under "`Changes to be committed`" because the index and HEAD differ -- that is, our proposed next commit is now different from our last commit.
 Finally, we run `git commit` to finalize the commit.
 @z
 
@@ -600,10 +600,10 @@ This is why the output of the `git status` command suggests that you run this to
 @z
 
 @x
-We could just as easily not let Git assume we meant ``pull the data from HEAD'' by specifying a specific commit to pull that file version from.
+We could just as easily not let Git assume we meant "`pull the data from HEAD`" by specifying a specific commit to pull that file version from.
 We would just run something like `git reset eb43bf file.txt`.
 @y
-We could just as easily not let Git assume we meant ``pull the data from HEAD'' by specifying a specific commit to pull that file version from.
+We could just as easily not let Git assume we meant "`pull the data from HEAD`" by specifying a specific commit to pull that file version from.
 We would just run something like `git reset eb43bf file.txt`.
 @z
 
@@ -642,11 +642,11 @@ Let's look at how to do something interesting with this newfound power -- squash
 @z
 
 @x
-Say you have a series of commits with messages like ``oops.'', ``WIP'' and ``forgot this file''.
+Say you have a series of commits with messages like "`oops.`", "`WIP`" and "`forgot this file`".
 You can use `reset` to quickly and easily squash them into a single commit that makes you look really smart.
 <<_squashing>> shows another way to do this, but in this example it's simpler to use `reset`.
 @y
-Say you have a series of commits with messages like ``oops.'', ``WIP'' and ``forgot this file''.
+Say you have a series of commits with messages like "`oops.`", "`WIP`" and "`forgot this file`".
 You can use `reset` to quickly and easily squash them into a single commit that makes you look really smart.
 <<_squashing>> shows another way to do this, but in this example it's simpler to use `reset`.
 @z
@@ -803,11 +803,11 @@ Hopefully now you understand and feel more comfortable with the `reset` command,
 
 @x
 Here's a cheat-sheet for which commands affect which trees.
-The ``HEAD'' column reads ``REF'' if that command moves the reference (branch) that HEAD points to, and ``HEAD'' if it moves HEAD itself.
+The "`HEAD`" column reads "`REF`" if that command moves the reference (branch) that HEAD points to, and "`HEAD`" if it moves HEAD itself.
 Pay especial attention to the 'WD Safe?' column -- if it says *NO*, take a second to think before running that command.
 @y
 Here's a cheat-sheet for which commands affect which trees.
-The ``HEAD'' column reads ``REF'' if that command moves the reference (branch) that HEAD points to, and ``HEAD'' if it moves HEAD itself.
+The "`HEAD`" column reads "`REF`" if that command moves the reference (branch) that HEAD points to, and "`HEAD`" if it moves HEAD itself.
 Pay especial attention to the 'WD Safe?' column -- if it says *NO*, take a second to think before running that command.
 @z
 

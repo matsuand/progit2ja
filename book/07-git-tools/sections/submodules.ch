@@ -6,7 +6,7 @@
 === Submodules
 @y
 [[_git_submodules]]
-=== サブモジュール
+=== Submodules
 @z
 
 @x
@@ -62,11 +62,11 @@ We'll walk through developing a simple project that has been split up into a mai
 @x
 Let's start by adding an existing Git repository as a submodule of the repository that we're working on.
 To add a new submodule you use the `git submodule add` command with the absolute or relative URL of the project you would like to start tracking.
-In this example, we'll add a library called ``DbConnector''.
+In this example, we'll add a library called "`DbConnector`".
 @y
 Let's start by adding an existing Git repository as a submodule of the repository that we're working on.
 To add a new submodule you use the `git submodule add` command with the absolute or relative URL of the project you would like to start tracking.
-In this example, we'll add a library called ``DbConnector''.
+In this example, we'll add a library called "`DbConnector`".
 @z
 
 @x
@@ -81,7 +81,7 @@ Unpacking objects: 100% (11/11), done.
 Checking connectivity... done.
 ----
 @y
-[source,端末]
+[source,console]
 ----
 $ git submodule add https://github.com/chaconinc/DbConnector
 Cloning into 'DbConnector'...
@@ -94,10 +94,10 @@ Checking connectivity... done.
 @z
 
 @x
-By default, submodules will add the subproject into a directory named the same as the repository, in this case ``DbConnector''.
+By default, submodules will add the subproject into a directory named the same as the repository, in this case "`DbConnector`".
 You can add a different path at the end of the command if you want it to go elsewhere.
 @y
-By default, submodules will add the subproject into a directory named the same as the repository, in this case ``DbConnector''.
+By default, submodules will add the subproject into a directory named the same as the repository, in this case "`DbConnector`".
 You can add a different path at the end of the command if you want it to go elsewhere.
 @z
 
@@ -114,7 +114,7 @@ $ git status
 On branch master
 Your branch is up-to-date with 'origin/master'.
 @y
-[source,端末]
+[source,console]
 ----
 $ git status
 On branch master
@@ -214,7 +214,7 @@ index 0000000..c3f01dc
 +Subproject commit c3f01dc8862123d317dd46284b05b6892c7b29bc
 ----
 @y
-[source,端末]
+[source,console]
 ----
 $ git diff --cached DbConnector
 diff --git a/DbConnector b/DbConnector
@@ -257,7 +257,7 @@ index 0000000..71fc376
 Submodule DbConnector 0000000...c3f01dc (new submodule)
 ----
 @y
-[source,端末]
+[source,console]
 ----
 $ git diff --cached --submodule
 diff --git a/.gitmodules b/.gitmodules
@@ -289,7 +289,7 @@ $ git commit -am 'Add DbConnector module'
  create mode 160000 DbConnector
 ----
 @y
-[source,端末]
+[source,console]
 ----
 $ git commit -am 'Add DbConnector module'
 [master fb9093c] Add DbConnector module
@@ -319,7 +319,7 @@ Lastly, push these changes:
 $ git push origin master
 ----
 @y
-[source,端末]
+[source,console]
 ----
 $ git push origin master
 ----
@@ -368,7 +368,7 @@ $ ls
 $
 ----
 @y
-[source,端末]
+[source,console]
 ----
 $ git clone https://github.com/chaconinc/MainProject
 Cloning into 'MainProject'...
@@ -418,7 +418,7 @@ Checking connectivity... done.
 Submodule path 'DbConnector': checked out 'c3f01dc8862123d317dd46284b05b6892c7b29bc'
 ----
 @y
-[source,端末]
+[source,console]
 ----
 $ git submodule init
 Submodule 'DbConnector' (https://github.com/chaconinc/DbConnector) registered for path 'DbConnector'
@@ -467,7 +467,7 @@ Checking connectivity... done.
 Submodule path 'DbConnector': checked out 'c3f01dc8862123d317dd46284b05b6892c7b29bc'
 ----
 @y
-[source,端末]
+[source,console]
 ----
 $ git clone --recurse-submodules https://github.com/chaconinc/MainProject
 Cloning into 'MainProject'...
@@ -541,7 +541,7 @@ Fast-forward
  2 files changed, 2 insertions(+)
 ----
 @y
-[source,端末]
+[source,console]
 ----
 $ git fetch
 From https://github.com/chaconinc/DbConnector
@@ -557,10 +557,10 @@ Fast-forward
 
 @x
 Now if you go back into the main project and run `git diff --submodule` you can see that the submodule was updated and get a list of commits that were added to it.
-If you don't want to type `--submodule` every time you run `git diff`, you can set it as the default format by setting the `diff.submodule` config value to ``log''.
+If you don't want to type `--submodule` every time you run `git diff`, you can set it as the default format by setting the `diff.submodule` config value to "`log`".
 @y
 Now if you go back into the main project and run `git diff --submodule` you can see that the submodule was updated and get a list of commits that were added to it.
-If you don't want to type `--submodule` every time you run `git diff`, you can set it as the default format by setting the `diff.submodule` config value to ``log''.
+If you don't want to type `--submodule` every time you run `git diff`, you can set it as the default format by setting the `diff.submodule` config value to "`log`".
 @z
 
 @x
@@ -573,7 +573,7 @@ Submodule DbConnector c3f01dc..d0354fc:
   > better connection routine
 ----
 @y
-[source,端末]
+[source,console]
 ----
 $ git config --global diff.submodule log
 $ git diff
@@ -610,7 +610,7 @@ From https://github.com/chaconinc/DbConnector
 Submodule path 'DbConnector': checked out 'd0354fc054692d3906c85c3af05ddce39a1c0644'
 ----
 @y
-[source,端末]
+[source,console]
 ----
 $ git submodule update --remote DbConnector
 remote: Counting objects: 4, done.
@@ -626,12 +626,12 @@ Submodule path 'DbConnector': checked out 'd0354fc054692d3906c85c3af05ddce39a1c0
 @x
 This command will by default assume that you want to update the checkout to the `master` branch of the submodule repository.
 You can, however, set this to something different if you want.
-For example, if you want to have the DbConnector submodule track that repository's ``stable'' branch, you can set it in either your `.gitmodules` file (so everyone else also tracks it), or just in your local `.git/config` file.
+For example, if you want to have the DbConnector submodule track that repository's "`stable`" branch, you can set it in either your `.gitmodules` file (so everyone else also tracks it), or just in your local `.git/config` file.
 Let's set it in the `.gitmodules` file:
 @y
 This command will by default assume that you want to update the checkout to the `master` branch of the submodule repository.
 You can, however, set this to something different if you want.
-For example, if you want to have the DbConnector submodule track that repository's ``stable'' branch, you can set it in either your `.gitmodules` file (so everyone else also tracks it), or just in your local `.git/config` file.
+For example, if you want to have the DbConnector submodule track that repository's "`stable`" branch, you can set it in either your `.gitmodules` file (so everyone else also tracks it), or just in your local `.git/config` file.
 Let's set it in the `.gitmodules` file:
 @z
 
@@ -640,7 +640,7 @@ Let's set it in the `.gitmodules` file:
 ----
 $ git config -f .gitmodules submodule.DbConnector.branch stable
 @y
-[source,端末]
+[source,console]
 ----
 $ git config -f .gitmodules submodule.DbConnector.branch stable
 @z
@@ -674,9 +674,9 @@ If you leave off the `-f .gitmodules` it will only make the change for you, but 
 @z
 
 @x
-When we run `git status` at this point, Git will show us that we have ``new commits'' on the submodule.
+When we run `git status` at this point, Git will show us that we have "`new commits`" on the submodule.
 @y
-When we run `git status` at this point, Git will show us that we have ``new commits'' on the submodule.
+When we run `git status` at this point, Git will show us that we have "`new commits`" on the submodule.
 @z
 
 @x
@@ -686,7 +686,7 @@ $ git status
 On branch master
 Your branch is up-to-date with 'origin/master'.
 @y
-[source,端末]
+[source,console]
 ----
 $ git status
 On branch master
@@ -730,7 +730,7 @@ If you set the configuration setting `status.submodulesummary`, Git will also sh
 ----
 $ git config status.submodulesummary 1
 @y
-[source,端末]
+[source,console]
 ----
 $ git config status.submodulesummary 1
 @z
@@ -805,7 +805,7 @@ index 6fc0b3d..fd1cc29 100644
   > better connection routine
 ----
 @y
-[source,端末]
+[source,console]
 ----
 $ git diff
 diff --git a/.gitmodules b/.gitmodules
@@ -841,7 +841,7 @@ commit 0a24cfc121a8a3c118e0105ae4ae4c00281cf7ae
 Author: Scott Chacon <schacon@gmail.com>
 Date:   Wed Sep 17 16:37:02 2014 +0200
 @y
-[source,端末]
+[source,console]
 ----
 $ git log -p --submodule
 commit 0a24cfc121a8a3c118e0105ae4ae4c00281cf7ae
@@ -926,7 +926,7 @@ Fast-forward
  DbConnector         | 2 +-
  2 files changed, 2 insertions(+), 2 deletions(-)
 @y
-[source,端末]
+[source,console]
 ----
 $ git pull
 From https://github.com/chaconinc/MainProject
@@ -994,13 +994,13 @@ no changes added to commit (use "git add" and/or "git commit -a")
 @x
 By default, the  `git pull` command recursively fetches submodules changes, as we can see in the output of the first command above.
 However, it does not *update* the submodules.
-This is shown by the output of the `git status` command, which shows the submodule is ``modified'', and has ``new commits''.
+This is shown by the output of the `git status` command, which shows the submodule is "`modified`", and has "`new commits`".
 What's more, the brackets showing the new commits point left (<), indicating that these commits are recorded in MainProject but are not present in the local DbConnector checkout.
 To finalize the update, you need to run `git submodule update`:
 @y
 By default, the  `git pull` command recursively fetches submodules changes, as we can see in the output of the first command above.
 However, it does not *update* the submodules.
-This is shown by the output of the `git status` command, which shows the submodule is ``modified'', and has ``new commits''.
+This is shown by the output of the `git status` command, which shows the submodule is "`modified`", and has "`new commits`".
 What's more, the brackets showing the new commits point left (<), indicating that these commits are recorded in MainProject but are not present in the local DbConnector checkout.
 To finalize the update, you need to run `git submodule update`:
 @z
@@ -1011,7 +1011,7 @@ To finalize the update, you need to run `git submodule update`:
 $ git submodule update --init --recursive
 Submodule path 'vendor/plugins/demo': checked out '48679c6302815f6c76f1fe30625d795d9e55fc56'
 @y
-[source,端末]
+[source,console]
 ----
 $ git submodule update --init --recursive
 Submodule path 'vendor/plugins/demo': checked out '48679c6302815f6c76f1fe30625d795d9e55fc56'
@@ -1070,7 +1070,7 @@ $ git submodule sync --recursive
 $ git submodule update --init --recursive
 ----
 @y
-[source,端末]
+[source,console]
 ----
 # copy the new URL to your local config
 $ git submodule sync --recursive
@@ -1100,12 +1100,12 @@ So now let's go through an example of making changes to the submodule at the sam
 @z
 
 @x
-So far, when we've run the `git submodule update` command to fetch changes from the submodule repositories, Git would get the changes and update the files in the subdirectory but will leave the sub-repository in what's called a ``detached HEAD'' state.
+So far, when we've run the `git submodule update` command to fetch changes from the submodule repositories, Git would get the changes and update the files in the subdirectory but will leave the sub-repository in what's called a "`detached HEAD`" state.
 This means that there is no local working branch (like `master`, for example) tracking changes.
 With no working branch tracking changes, that means even if you commit changes to the submodule, those changes will quite possibly be lost the next time you run `git submodule update`.
 You have to do some extra steps if you want changes in a submodule to be tracked.
 @y
-So far, when we've run the `git submodule update` command to fetch changes from the submodule repositories, Git would get the changes and update the files in the subdirectory but will leave the sub-repository in what's called a ``detached HEAD'' state.
+So far, when we've run the `git submodule update` command to fetch changes from the submodule repositories, Git would get the changes and update the files in the subdirectory but will leave the sub-repository in what's called a "`detached HEAD`" state.
 This means that there is no local working branch (like `master`, for example) tracking changes.
 With no working branch tracking changes, that means even if you commit changes to the submodule, those changes will quite possibly be lost the next time you run `git submodule update`.
 You have to do some extra steps if you want changes in a submodule to be tracked.
@@ -1137,7 +1137,7 @@ $ git checkout stable
 Switched to branch 'stable'
 ----
 @y
-[source,端末]
+[source,console]
 ----
 $ cd DbConnector/
 $ git checkout stable
@@ -1146,11 +1146,11 @@ Switched to branch 'stable'
 @z
 
 @x
-Let's try updating our submodule with the ``merge'' option.
+Let's try updating our submodule with the "`merge`" option.
 To specify it manually, we can just add the `--merge` option to our `update` call.
 Here we'll see that there was a change on the server for this submodule and it gets merged in.
 @y
-Let's try updating our submodule with the ``merge'' option.
+Let's try updating our submodule with the "`merge`" option.
 To specify it manually, we can just add the `--merge` option to our `update` call.
 Here we'll see that there was a change on the server for this submodule and it gets merged in.
 @z
@@ -1173,7 +1173,7 @@ Fast-forward
 Submodule path 'DbConnector': merged in '92c7337b30ef9e0893e758dac2459d07362ab5ea'
 ----
 @y
-[source,端末]
+[source,console]
 ----
 $ cd ..
 $ git submodule update --remote --merge
@@ -1209,7 +1209,7 @@ $ git commit -am 'Unicode support'
  1 file changed, 1 insertion(+)
 ----
 @y
-[source,端末]
+[source,console]
 ----
 $ cd DbConnector/
 $ vim src/db.c
@@ -1235,7 +1235,7 @@ Applying: Unicode support
 Submodule path 'DbConnector': rebased into '5d60ef9bbebf5a0c1c1050f242ceeb54ad58da94'
 ----
 @y
-[source,端末]
+[source,console]
 ----
 $ cd ..
 $ git submodule update --remote --rebase
@@ -1258,7 +1258,7 @@ $ git submodule update --remote
 Submodule path 'DbConnector': checked out '5d60ef9bbebf5a0c1c1050f242ceeb54ad58da94'
 ----
 @y
-[source,端末]
+[source,console]
 ----
 $ git submodule update --remote
 Submodule path 'DbConnector': checked out '5d60ef9bbebf5a0c1c1050f242ceeb54ad58da94'
@@ -1294,7 +1294,7 @@ Aborting
 Unable to checkout 'c75e92a2b3855c9e5b66f915308390d9db204aca' in submodule path 'DbConnector'
 ----
 @y
-[source,端末]
+[source,console]
 ----
 $ git submodule update --remote
 remote: Counting objects: 4, done.
@@ -1328,7 +1328,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 Unable to merge 'c75e92a2b3855c9e5b66f915308390d9db204aca' in submodule path 'DbConnector'
 ----
 @y
-[source,端末]
+[source,console]
 ----
 $ git submodule update --remote --merge
 Auto-merging scripts/setup.sh
@@ -1373,7 +1373,7 @@ Submodule DbConnector c87d55d..82d2ad3:
   > Add new option for conn pooling
 ----
 @y
-[source,端末]
+[source,console]
 ----
 $ git diff
 Submodule DbConnector c87d55d..82d2ad3:
@@ -1395,12 +1395,12 @@ Those changes will only exist on our local copy.
 
 @x
 In order to make sure this doesn't happen, you can ask Git to check that all your submodules have been pushed properly before pushing the main project.
-The `git push` command takes the `--recurse-submodules` argument which can be set to either ``check'' or ``on-demand''.
-The ``check'' option will make `push` simply fail if any of the committed submodule changes haven't been pushed.
+The `git push` command takes the `--recurse-submodules` argument which can be set to either "`check`" or "`on-demand`".
+The "`check`" option will make `push` simply fail if any of the committed submodule changes haven't been pushed.
 @y
 In order to make sure this doesn't happen, you can ask Git to check that all your submodules have been pushed properly before pushing the main project.
-The `git push` command takes the `--recurse-submodules` argument which can be set to either ``check'' or ``on-demand''.
-The ``check'' option will make `push` simply fail if any of the committed submodule changes haven't been pushed.
+The `git push` command takes the `--recurse-submodules` argument which can be set to either "`check`" or "`on-demand`".
+The "`check`" option will make `push` simply fail if any of the committed submodule changes haven't been pushed.
 @z
 
 @x
@@ -1411,7 +1411,7 @@ The following submodule paths contain changes that can
 not be found on any remote:
   DbConnector
 @y
-[source,端末]
+[source,console]
 ----
 $ git push --recurse-submodules=check
 The following submodule paths contain changes that can
@@ -1462,9 +1462,9 @@ If you want the check behavior to happen for all pushes, you can make this behav
 @z
 
 @x
-The other option is to use the ``on-demand'' value, which will try to do this for you.
+The other option is to use the "`on-demand`" value, which will try to do this for you.
 @y
-The other option is to use the ``on-demand'' value, which will try to do this for you.
+The other option is to use the "`on-demand`" value, which will try to do this for you.
 @z
 
 @x
@@ -1488,7 +1488,7 @@ To https://github.com/chaconinc/MainProject
    3d6d338..9a377d1  master -> master
 ----
 @y
-[source,端末]
+[source,console]
 ----
 $ git push --recurse-submodules=on-demand
 Pushing submodule 'DbConnector'
@@ -1564,7 +1564,7 @@ CONFLICT (submodule): Merge conflict in DbConnector
 Automatic merge failed; fix conflicts and then commit the result.
 ----
 @y
-[source,端末]
+[source,console]
 ----
 $ git pull
 remote: Counting objects: 2, done.
@@ -1583,10 +1583,10 @@ Automatic merge failed; fix conflicts and then commit the result.
 
 @x
 So basically what has happened here is that Git has figured out that the two branches record points in the submodule's history that are divergent and need to be merged.
-It explains it as ``merge following commits not found'', which is confusing but we'll explain why that is in a bit.
+It explains it as "`merge following commits not found`", which is confusing but we'll explain why that is in a bit.
 @y
 So basically what has happened here is that Git has figured out that the two branches record points in the submodule's history that are divergent and need to be merged.
-It explains it as ``merge following commits not found'', which is confusing but we'll explain why that is in a bit.
+It explains it as "`merge following commits not found`", which is confusing but we'll explain why that is in a bit.
 @z
 
 @x
@@ -1611,7 +1611,7 @@ index eb41d76,c771610..0000000
 +++ b/DbConnector
 ----
 @y
-[source,端末]
+[source,console]
 ----
 $ git diff
 diff --cc DbConnector
@@ -1644,9 +1644,9 @@ We would suggest the latter, even if only to make a nicer merge commit message.
 @z
 
 @x
-So, we will go into our submodule directory, create a branch named ``try-merge'' based on that second SHA-1 from `git diff`, and manually merge.
+So, we will go into our submodule directory, create a branch named "`try-merge`" based on that second SHA-1 from `git diff`, and manually merge.
 @y
-So, we will go into our submodule directory, create a branch named ``try-merge'' based on that second SHA-1 from `git diff`, and manually merge.
+So, we will go into our submodule directory, create a branch named "`try-merge`" based on that second SHA-1 from `git diff`, and manually merge.
 @z
 
 @x
@@ -1654,7 +1654,7 @@ So, we will go into our submodule directory, create a branch named ``try-merge''
 ----
 $ cd DbConnector
 @y
-[source,端末]
+[source,console]
 ----
 $ cd DbConnector
 @z
@@ -1704,7 +1704,7 @@ $ git commit -am 'merged our changes'
 Recorded resolution for 'src/main.c'.
 [master 9fd905e] merged our changes
 @y
-[source,端末]
+[source,console]
 ----
 $ vim src/main.c <1>
 $ git add src/main.c
@@ -1780,10 +1780,10 @@ It sees that at some point in the submodule project, someone merged branches con
 @z
 
 @x
-This is why the error message from before was ``merge following commits not found'', because it could not do *this*.
+This is why the error message from before was "`merge following commits not found`", because it could not do *this*.
 It's confusing because who would expect it to *try* to do this?
 @y
-This is why the error message from before was ``merge following commits not found'', because it could not do *this*.
+This is why the error message from before was "`merge following commits not found`", because it could not do *this*.
 It's confusing because who would expect it to *try* to do this?
 @z
 
@@ -1803,7 +1803,7 @@ Found a possible merge resolution for the submodule:
 If this is correct simply add it to the index for example
 by using:
 @y
-[source,端末]
+[source,console]
 ----
 $ git merge origin/master
 warning: Failed to merge submodule DbConnector (not fast-forward)
@@ -1851,7 +1851,7 @@ $ git merge 9fd905e
 Updating eb41d76..9fd905e
 Fast-forward
 @y
-[source,端末]
+[source,console]
 ----
 $ cd DbConnector/
 $ git merge 9fd905e
@@ -1922,7 +1922,7 @@ Saved working directory and index state WIP on stable: 82d2ad3 Merge from origin
 HEAD is now at 82d2ad3 Merge from origin/stable
 ----
 @y
-[source,端末]
+[source,console]
 ----
 $ git submodule foreach 'git stash'
 Entering 'CryptoLibrary'
@@ -1949,7 +1949,7 @@ Entering 'DbConnector'
 Switched to a new branch 'featureA'
 ----
 @y
-[source,端末]
+[source,console]
 ----
 $ git submodule foreach 'git checkout -b featureA'
 Entering 'CryptoLibrary'
@@ -1978,7 +1978,7 @@ index 210f1ae..1f0acdc 100644
 +++ b/src/main.c
 @@ -245,6 +245,8 @@ static int handle_alias(int *argcp, const char ***argv)
 @y
-[source,端末]
+[source,console]
 ----
 $ git diff; git submodule foreach 'git diff'
 Submodule DbConnector contains modified content
@@ -2077,7 +2077,7 @@ $ git config alias.spush 'push --recurse-submodules=on-demand'
 $ git config alias.supdate 'submodule update --remote --merge'
 ----
 @y
-[source,端末]
+[source,console]
 ----
 $ git config alias.sdiff '!'"git diff && git submodule foreach 'git diff'"
 $ git config alias.spush 'push --recurse-submodules=on-demand'
@@ -2123,7 +2123,7 @@ If you create a new branch, add a submodule there, and then switch back to a bra
 $ git --version
 git version 2.12.2
 @y
-[source,端末]
+[source,console]
 ----
 $ git --version
 git version 2.12.2
@@ -2217,7 +2217,7 @@ If you do remove it and then switch back to the branch that has that submodule, 
 $ git clean -ffdx
 Removing CryptoLibrary/
 @y
-[source,端末]
+[source,console]
 ----
 $ git clean -ffdx
 Removing CryptoLibrary/
@@ -2273,7 +2273,7 @@ Newer Git versions (Git >= 2.13) simplify all this by adding the `--recurse-subm
 $ git --version
 git version 2.13.3
 @y
-[source,端末]
+[source,console]
 ----
 $ git --version
 git version 2.13.3
@@ -2339,11 +2339,11 @@ nothing to commit, working tree clean
 
 @x
 Using the `--recurse-submodules` flag of `git checkout` can also be useful when you work on several branches in the superproject, each having your submodule pointing at different commits.
-Indeed, if you switch between branches that record the submodule at different commits, upon executing `git status` the submodule will appear as ``modified'', and indicate ``new commits''.
+Indeed, if you switch between branches that record the submodule at different commits, upon executing `git status` the submodule will appear as "`modified`", and indicate "`new commits`".
 That is because the submodule state is by default not carried over when switching branches.
 @y
 Using the `--recurse-submodules` flag of `git checkout` can also be useful when you work on several branches in the superproject, each having your submodule pointing at different commits.
-Indeed, if you switch between branches that record the submodule at different commits, upon executing `git status` the submodule will appear as ``modified'', and indicate ``new commits''.
+Indeed, if you switch between branches that record the submodule at different commits, upon executing `git status` the submodule will appear as "`modified`", and indicate "`new commits`".
 That is because the submodule state is by default not carried over when switching branches.
 @z
 
@@ -2389,7 +2389,7 @@ $ git submodule add https://github.com/chaconinc/CryptoLibrary
 'CryptoLibrary' already exists in the index
 ----
 @y
-[source,端末]
+[source,console]
 ----
 $ rm -Rf CryptoLibrary/
 $ git submodule add https://github.com/chaconinc/CryptoLibrary
@@ -2418,7 +2418,7 @@ Unpacking objects: 100% (11/11), done.
 Checking connectivity... done.
 ----
 @y
-[source,端末]
+[source,console]
 ----
 $ git rm -r CryptoLibrary
 $ git submodule add https://github.com/chaconinc/CryptoLibrary
@@ -2451,7 +2451,7 @@ Please move or remove them before you can switch branches.
 Aborting
 ----
 @y
-[source,端末]
+[source,console]
 ----
 $ git checkout master
 error: The following untracked working tree files would be overwritten by checkout:
@@ -2477,7 +2477,7 @@ warning: unable to rmdir CryptoLibrary: Directory not empty
 Switched to branch 'master'
 ----
 @y
-[source,端末]
+[source,console]
 ----
 $ git checkout -f master
 warning: unable to rmdir CryptoLibrary: Directory not empty

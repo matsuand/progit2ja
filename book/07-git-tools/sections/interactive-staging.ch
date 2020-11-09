@@ -66,9 +66,9 @@ It lists the changes you've staged on the left and unstaged changes on the right
 @z
 
 @x
-After this comes a ``Commands'' section, which allows you to do a number of things like staging and unstaging files, staging parts of files, adding untracked files, and displaying diffs of what has been staged.
+After this comes a "`Commands`" section, which allows you to do a number of things like staging and unstaging files, staging parts of files, adding untracked files, and displaying diffs of what has been staged.
 @y
-After this comes a ``Commands'' section, which allows you to do a number of things like staging and unstaging files, staging parts of files, adding untracked files, and displaying diffs of what has been staged.
+After this comes a "`Commands`" section, which allows you to do a number of things like staging and unstaging files, staging parts of files, adding untracked files, and displaying diffs of what has been staged.
 @z
 
 @x
