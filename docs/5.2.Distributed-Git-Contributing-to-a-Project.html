@@ -6,7 +6,7 @@
   <title>Git - Contributing to a Project</title>
   <link href="https://git-scm.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
   <link rel="stylesheet" media="screen" href="assets/application.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="assets/modernize.js"></script>
   <!--[if (gte IE 6)&(lte IE 8)]>
   <script src="javascripts/selectivizr-min.js"></script>
@@ -167,7 +167,7 @@ The Git project has well-formatted commit messages — try running <code>git
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="情報"></i>
+<div class="title">注記</div>
 </td>
 <td class="content">
 <div class="title">Do as we say, not as we do.</div>
@@ -195,7 +195,7 @@ You and the other developers all have push access to the repository.</p>
 You still get the advantages of things like offline committing and vastly simpler branching and merging, but the workflow can be very similar; the main difference is that merges happen client-side rather than on the server at commit time.
 Let’s see what it might look like when two developers start to work together with a shared repository.
 The first developer, John, clones the repository, makes a change, and commits locally.
-The protocol messages have been replaced with <code>...</code> in these examples to shorten them somewhat.</p>
+The protocol messages have been replaced with <code>…​</code> in these examples to shorten them somewhat.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -240,7 +240,7 @@ To jessica@githost:simplegit.git
 </div>
 <div class="paragraph">
 <p>The last line of the output above shows a useful return message from the push operation.
-The basic format is <code>&lt;oldref&gt;..&lt;newref&gt; fromref -&gt; toref</code>, where <code>oldref</code> means the old reference, <code>newref</code> means the new reference, <code>fromref</code> is the name of the local reference being pushed, and <code>toref</code> is the name of the remote reference being updated.
+The basic format is <code>&lt;oldref&gt;..&lt;newref&gt; fromref → toref</code>, where <code>oldref</code> means the old reference, <code>newref</code> means the new reference, <code>fromref</code> is the name of the local reference being pushed, and <code>toref</code> is the name of the remote reference being updated.
 You’ll see similar output like this below in the discussions, so having a basic idea of the meaning will help in understanding the various states of the repositories.
 More details are available in the documentation for <a href="https://git-scm.com/docs/git-push">git-push</a>.</p>
 </div>
@@ -576,7 +576,7 @@ To jessica@githost:simplegit.git
 </div>
 <div class="paragraph">
 <p>This is called a <em>refspec</em>.
-See <a href="10.5.Git-Internals-The-Refspec.html#_refspec">The Refspec</a> for a more detailed discussion of Git refspecs and different things you can do with them.
+See <a href="10.5.Git-の内部-The-Refspec.html#_refspec">The Refspec</a> for a more detailed discussion of Git refspecs and different things you can do with them.
 Also notice the <code>-u</code> flag; this is short for <code>--set-upstream</code>, which configures the branches for easier pushing and pulling later.</p>
 </div>
 <div class="paragraph">
@@ -692,7 +692,7 @@ $ git commit</code></pre>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="情報"></i>
+<div class="title">注記</div>
 </td>
 <td class="content">
 <div class="paragraph">

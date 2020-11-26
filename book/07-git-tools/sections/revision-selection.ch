@@ -704,9 +704,9 @@ Date:   Fri Nov 7 13:47:59 2008 -0500
 @z
 
 @x
-This can also be written `HEAD~~~`, which again is the first parent of the first parent of the first parent:
+This can also be written `HEAD\~~~`, which again is the first parent of the first parent of the first parent:
 @y
-This can also be written `HEAD~~~`, which again is the first parent of the first parent of the first parent:
+This can also be written `HEAD\~~~`, which again is the first parent of the first parent of the first parent:
 @z
 
 @x

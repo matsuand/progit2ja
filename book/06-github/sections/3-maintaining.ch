@@ -31,20 +31,20 @@ Start by clicking the "`New repository`" button on the right-hand side of the da
 
 @x
 .The "`Your repositories`" area
-image::images/newrepo.png[The "`Your repositories`" area]
+image::images/newrepo.png[The “Your repositories” area]
 @y
 .The "`Your repositories`" area
-image::images/newrepo.png[The "`Your repositories`" area]
+image::images/newrepo.png[The “Your repositories” area]
 @z
 
 @x
 [[_new_repo_dropdown]]
 .The "`New repository`" dropdown
-image::images/new-repo.png[The "`new repository`" dropdown]
+image::images/new-repo.png[The “new repository” dropdown]
 @y
 [[_new_repo_dropdown]]
 .The "`New repository`" dropdown
-image::images/new-repo.png[The "`new repository`" dropdown]
+image::images/new-repo.png[The “new repository” dropdown]
 @z
 
 @x
@@ -55,10 +55,10 @@ This takes you to the "`new repository`" form:
 
 @x
 .The "`new repository`" form
-image::images/newrepoform.png[The "`new repository`" form]
+image::images/newrepoform.png[The “new repository” form]
 @y
 .The "`new repository`" form
-image::images/newrepoform.png[The "`new repository`" form]
+image::images/newrepoform.png[The “new repository” form]
 @z
 
 @x
@@ -79,11 +79,11 @@ We won't belabor this here; if you need a refresher, check out <<ch02-git-basics
 
 @x
 Now that your project is hosted on GitHub, you can give the URL to anyone you want to share your project with.
-Every project on GitHub is accessible over HTTPS as `https://github.com/<user>/<project_name>`, and over SSH as `git@github.com:<user>/<project_name>`.
+Every project on GitHub is accessible over HTTPS as `\https://github.com/<user>/<project_name>`, and over SSH as `\git@github.com:<user>/<project_name>`.
 Git can fetch from and push to both of these URLs, but they are access-controlled based on the credentials of the user connecting to them.
 @y
 Now that your project is hosted on GitHub, you can give the URL to anyone you want to share your project with.
-Every project on GitHub is accessible over HTTPS as `https://github.com/<user>/<project_name>`, and over SSH as `git@github.com:<user>/<project_name>`.
+Every project on GitHub is accessible over HTTPS as `\https://github.com/<user>/<project_name>`, and over SSH as `\git@github.com:<user>/<project_name>`.
 Git can fetch from and push to both of these URLs, but they are access-controlled based on the credentials of the user connecting to them.
 @z
 

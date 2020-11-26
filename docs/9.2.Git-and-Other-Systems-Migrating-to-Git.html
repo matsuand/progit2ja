@@ -6,7 +6,7 @@
   <title>Git - Migrating to Git</title>
   <link href="https://git-scm.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
   <link rel="stylesheet" media="screen" href="assets/application.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="assets/modernize.js"></script>
   <!--[if (gte IE 6)&(lte IE 8)]>
   <script src="javascripts/selectivizr-min.js"></script>
@@ -105,7 +105,7 @@ Then, redirect that output into your <code>users.txt</code> file so you can add 
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="情報"></i>
+<div class="title">注記</div>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -126,7 +126,7 @@ This can bloat your Git log and might make it a bit unclear.</p>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="情報"></i>
+<div class="title">注記</div>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -605,7 +605,7 @@ To set up your client, you must export the P4PORT environment variable to point 
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="情報"></i>
+<div class="title">注記</div>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -703,7 +703,7 @@ Date:   Tue Jul 7 01:35:51 2009 -0800
 If your system isn’t one of the above, you should look for an importer online – quality importers are available for many other systems, including CVS, Clear Case, Visual Source Safe, even a directory of archives.
 If none of these tools works for you, you have a more obscure tool, or you otherwise need a more custom importing process, you should use <code>git fast-import</code>.
 This command reads simple instructions from stdin to write specific Git data.
-It’s much easier to create Git objects this way than to run the raw Git commands or try to write the raw objects (see <a href="10.1.Git-Internals-Plumbing-and-Porcelain.html#ch10-git-internals">Git Internals</a> for more information).
+It’s much easier to create Git objects this way than to run the raw Git commands or try to write the raw objects (see <a href="10.1.Git-の内部-Plumbing-and-Porcelain.html#ch10-git-internals">Git の内部</a> for more information).
 This way, you can write an import script that reads the necessary information out of the system you’re importing from and prints straightforward instructions to stdout.
 You can then run this program and pipe its output through <code>git fast-import</code>.</p>
 </div>
@@ -908,7 +908,7 @@ end</code></pre>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="情報"></i>
+<div class="title">注記</div>
 </td>
 <td class="content">
 <div class="paragraph">

@@ -16,7 +16,8 @@ my $select = "select A.title section_title,A.slug,A.html,A.number,C.chapter_numb
 $select = $select."from sections A ";
 $select = $select."inner join xrefs B on A.id=B.section_id ";
 $select = $select."inner join chapters C on A.chapter_id=C.id ";
-$select = $select."where B.book_id=2 ";
+$select = $select."inner join books D on C.book_id=D.id ";
+$select = $select."where D.code='ja' ";
 $select = $select."group by A.title,A.slug,A.number,C.chapter_number,C.chapter_type,C.title ";
 $select = $select."order by C.chapter_type desc,cast(C.chapter_number as int),A.number ";
 
@@ -132,7 +133,8 @@ sub getXrefs {
   $select2 = $select2."from sections A ";
   $select2 = $select2."inner join xrefs B on A.id=B.section_id ";
   $select2 = $select2."inner join chapters C on A.chapter_id=C.id ";
-  $select2 = $select2."where B.book_id=2 ";
+  $select2 = $select2."inner join books D on C.book_id=D.id ";
+  $select2 = $select2."where D.code='ja' ";
   $select2 = $select2."order by C.chapter_type desc,C.chapter_number,A.number ";
 
   my $sth2 = $dbh->prepare($select2);

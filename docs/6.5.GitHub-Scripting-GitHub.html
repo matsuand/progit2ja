@@ -6,7 +6,7 @@
   <title>Git - Scripting GitHub</title>
   <link href="https://git-scm.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
   <link rel="stylesheet" media="screen" href="assets/application.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="assets/modernize.js"></script>
   <!--[if (gte IE 6)&(lte IE 8)]>
   <script src="javascripts/selectivizr-min.js"></script>
@@ -386,10 +386,10 @@ end</code></pre>
 </div>
 <div class="paragraph">
 <p>Hopefully this is fairly simple to follow.
-In this web hook handler we look through each commit that was just pushed, we look for the string <em>Signed-off-by</em> in the commit message and finally we POST via HTTP to the <code>/repos/&lt;user&gt;/&lt;repo&gt;/statuses/&lt;commit_sha&gt;</code> API endpoint with the status.</p>
+In this web hook handler we look through each commit that was just pushed, we look for the string 'Signed-off-by' in the commit message and finally we POST via HTTP to the <code>/repos/&lt;user&gt;/&lt;repo&gt;/statuses/&lt;commit_sha&gt;</code> API endpoint with the status.</p>
 </div>
 <div class="paragraph">
-<p>In this case you can send a state (<em>success</em>, <em>failure</em>, <em>error</em>), a description of what happened, a target URL the user can go to for more information and a “context” in case there are multiple statuses for a single commit.
+<p>In this case you can send a state ('success', 'failure', 'error'), a description of what happened, a target URL the user can go to for more information and a “context” in case there are multiple statuses for a single commit.
 For example, a testing service may provide a status and a validation service like this may also provide a status — the “context” field is how they’re differentiated.</p>
 </div>
 <div class="paragraph">

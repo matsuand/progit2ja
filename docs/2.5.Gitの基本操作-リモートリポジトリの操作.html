@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ja" class=" js fontface webkit chrome windows no-ie8">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <title>Git - リモートリポジトリの操作</title>
+  <link href="https://git-scm.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link rel="stylesheet" media="screen" href="assets/application.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="assets/modernize.js"></script>
+  <!--[if (gte IE 6)&(lte IE 8)]>
+  <script src="javascripts/selectivizr-min.js"></script>
+  <![endif]-->
+</head>
+<body id="documentation">
+
+  <div class="inner">
+    <header>
+      <a href="/"><img src="assets/images/logo@2x.png" width="110" height="46" alt="Git"></a>
+      <span id="tagline">素早いバージョン管理</span>
+      <script type="text/javascript">
+        var taglines = ["素早いバージョン管理","すべてはローカルで","作業が分散していなくても","簡単にローカルでブランチ","分散化は新たな中央管理"];
+        var tagline = taglines[Math.floor(Math.random() * taglines.length)];
+        document.getElementById('tagline').innerHTML = '--' + tagline;
+      </script>
+<!--
+      <form id="search" action="https://git-scm.com/search/results">
+        <input id="search-text" name="search" placeholder="サイト全体の検索..." autocomplete="off" type="text">
+      </form>
+      <div id="search-results"></div>
+-->
+    </header>
+  </div> <!-- .inner -->
+
+  <div class="inner">
+    <div id="content-wrapper">
+      <aside class="sidebar">
+  <p>progit2 別訳</p>
+<!--
+  <nav>
+    <ul>
+      <li>
+        <a href="https://git-scm.com/about">About</a>
+      </li>
+    </ul>
+  </nav>
+-->
+      </aside>
+    <div id="content">
+      <span class="light" id="edition">
+        第2版
+      </span>
+    </div>
+  </div>
+
+  <div id="main" class="book edition2">
+    <h1>2.5 Gitの基本操作-リモートリポジトリの操作</h1>
+
+  <div>
+
+<h2 id="_remote_repos">リモートリポジトリの操作</h2>
+<div class="paragraph">
+<p>他の Git プロジェクトと共同で作業していくためには、リモートリポジトリの操作方法を覚える必要があります。
+リモートリポジトリとは、自分のプロジェクトの一部が、インターネット上あるいはネットワーク上のどこか別のところで管理されているものです。
+リモートリポジトリは複数持つことが可能です。
+リポジトリごとに読み取り専用、読み書き可能という設定を行うことができます。
+いろいろなリポジトリを使って共同作業を行うということは、そのリモートリポジトリを管理していくことであり、共同作業の際に必要に応じてデータをプルしたりプッシュしたりすることになります。
+そこでリモートリポジトリ管理のために、リポジトリの追加方法を学んでいきます。
+もはや実作業に合わないなら削除することもあるでしょう。
+リモート上のブランチを管理したり、あるいはそういったものを定義した上で追跡したりしなかったりと、さまざまなことが必要になっていきます。
+この節では、そういったリモートリポジトリ管理方法を説明していきます。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">注記</div>
+</td>
+<td class="content">
+<div class="title">リモートリポジトリはローカルマシン上にあってもかまわない.</div>
+<div class="paragraph">
+<p>リモートリポジトリは、今作業をしているまさに同一のホスト上におくこともできます。
+この「リモート」という語は、それがネットワーク上やインターネット上のどこか別の場所にあるという意味ではなく、単に「どこか」という意味しかありません。
+このリモートリポジトリはどれに対しても、標準的なプッシュ、プル、フェッチの操作を行っていくことになります。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h3 id="_リモートリポジトリの表示">リモートリポジトリの表示</h3>
+<div class="paragraph">
+<p>リモートリポジトリとして設定したものを確認するには <code>git remote</code> コマンドを使います。
+
+このコマンドは設定されたリモートハンドルの短縮した名前を一覧表示します。
+リポジトリをクローンしている場合は、少なくとも <code>origin</code> が一覧に表示されます。
+<code>origin</code> は、クローンしたサーバーに対して与えられるデフォルト名です。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ git clone https://github.com/schacon/ticgit
+Cloning into 'ticgit'...
+remote: Reusing existing pack: 1857, done.
+remote: Total 1857 (delta 0), reused 0 (delta 0)
+Receiving objects: 100% (1857/1857), 374.35 KiB | 268.00 KiB/s, done.
+Resolving deltas: 100% (772/772), done.
+Checking connectivity... done.
+$ cd ticgit
+$ git remote
+origin</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>-v</code> オプションをつけることもできます。
+そのときには、短縮した名前に対応づいて保持されている URL 名が表示されます。
+この URL はリモートリポジトリに対しての読み取り、書き込みの際に用いられます。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ git remote -v
+origin	https://github.com/schacon/ticgit (fetch)
+origin	https://github.com/schacon/ticgit (push)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>複数のリモートを設定している場合は、それらがすべて表示されます。
+1 つのリモートリポジトリに複数のリポジトリが含まれていて共同作業を行っている場合は、たとえば以下のように表示されます。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ cd grit
+$ git remote -v
+bakkdoor  https://github.com/bakkdoor/grit (fetch)
+bakkdoor  https://github.com/bakkdoor/grit (push)
+cho45     https://github.com/cho45/grit (fetch)
+cho45     https://github.com/cho45/grit (push)
+defunkt   https://github.com/defunkt/grit (fetch)
+defunkt   https://github.com/defunkt/grit (push)
+koke      git://github.com/koke/grit.git (fetch)
+koke      git://github.com/koke/grit.git (push)
+origin    git@github.com:mojombo/grit.git (fetch)
+origin    git@github.com:mojombo/grit.git (push)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>こうなっていると、各ユーザーからのプル操作が極めて容易になります。
+また個々のリポジトリに対してのプッシュ権限を持つこともできます。
+なおそういった情報は上では示されません。</p>
+</div>
+<div class="paragraph">
+<p>リモートリポジトリには、さまざまなプロトコルが利用されます。
+このことについては「<a href="4.2.サーバーとしての-Git-Git-サーバーの用意.html#_getting_git_on_a_server">Git サーバーの用意</a>」の章において説明します。</p>
+</div>
+</div>
+<div class="sect3">
+<h3 id="_リモートリポジトリの追加">リモートリポジトリの追加</h3>
+<div class="paragraph">
+<p>これまでの利用例において説明してきたことですが、<code>git clone</code> コマンドを実行するとリモートリポジトリの <code>origin</code> が暗に取得されます。
+ここでは明示的に新しいリモートリポジトリを加える方法を示します。
+
+新たなリモートリポジトリを加える際には、参照しやすいような短い名前（shortname）をつけて <code>git remote add &lt;shortname&gt; &lt;url&gt;</code> を実行します。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ git remote
+origin
+$ git remote add pb https://github.com/paulboone/ticgit
+$ git remote -v
+origin	https://github.com/schacon/ticgit (fetch)
+origin	https://github.com/schacon/ticgit (push)
+pb	https://github.com/paulboone/ticgit (fetch)
+pb	https://github.com/paulboone/ticgit (push)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>こうしてコマンドライン上では <code>pb</code> という文字列が利用できるようになったので、URL 文字列をすべて入力する必要はなくなります。
+たとえば他ユーザーであるポールさん（Paul）だけが持っていて、まだローカルリポジトリ内に入手していない情報があるとします。
+これをフェッチしたい場合は <code>git fetch pb</code> を実行します。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ git fetch pb
+remote: Counting objects: 43, done.
+remote: Compressing objects: 100% (36/36), done.
+remote: Total 43 (delta 10), reused 31 (delta 5)
+Unpacking objects: 100% (43/43), done.
+From https://github.com/paulboone/ticgit
+ * [new branch]      master     -&gt; pb/master
+ * [new branch]      ticgit     -&gt; pb/ticgit</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ポールさんが持っていた master ブランチは、これ以降はローカルの <code>pb/master</code> としてアクセスできます。
+これを元々あるブランチにマージさせることもできます。
+またその時点での中身を調べてみたいということで、ローカルブランチの 1 つとしてチェックアウトすることもできます。
+ブランチがどういうものであり、どのように利用していくかについては「<a href="3.1.Gitのブランチ機能-ブランチと言えば.html#ch03-git-branching">Gitのブランチ機能</a>」の章にて細かく説明します。</p>
+</div>
+</div>
+<div class="sect3">
+<h3 id="_fetching_and_pulling">リモートリポジトリからのフェッチとプル</h3>
+<div class="paragraph">
+<p>まさに上で見たように、リモートのプロジェクトからデータを取得するには以下を実行します。
+</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ git fetch &lt;remote&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>このコマンドはそのリモートプロジェクトから、まだ取得していないデータをすべてプルして取得します。
+この後は、このリモートリポジトリのブランチはすべて参照できることになります。
+また、これをマージしたり調べたりすることがいつでもできます。</p>
+</div>
+<div class="paragraph">
+<p>リポジトリをクローンしたとき、リモートリポジトリには “origin” という名前を自動的につけます。
+そこで <code>git fetch origin</code> とコマンド入力すると、クローンした時点（あるいは最後にフェッチした時点）から現時点までにプッシュされた内容が、すべてフェッチされてくることになります。
+ここで重要なことですが、<code>git fetch</code> コマンドは単にデータをダウンロードして、ローカルリポジトリに取り込むだけです。
+自動的に作業中のファイルとのマージを行ったり、編集中のファイルを修正したりするようなことはありません。
+このような場合は、準備を整えてから自分でマージを行う必要があります。</p>
+</div>
+<div class="paragraph">
+<p>現在作業中のブランチが、リモートブランチを追跡するように設定されている場合（詳しくは次節や <a href="3.1.Gitのブランチ機能-ブランチと言えば.html#ch03-git-branching">Gitのブランチ機能</a> の章を参照）、<code>git pull</code> コマンドを使えば自動的にフェッチとマージを行って、ローカルのブランチ内にリモートブランチの内容を取り込みます。
+
+このコマンドを用いるのが簡単で楽な方法です。
+そもそも <code>git clone</code> コマンドはデフォルトの動作として、クローンを取ろうとしているそのリモートの <code>master</code> ブランチを（あるいは名前はどうであれ、デフォルトのブランチを）ローカルの <code>master</code> ブランチとして取り込むものです。
+<code>git pull</code> を実行するということは、元々クローンを取得していたサーバーからデータをフェッチし、マージを試みて作業中のファイルに取り入れま
+す。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">注記</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>From git version 2.27 onward, <code>git pull</code> will give a warning if the <code>pull.rebase</code> variable is not set.
+Git will keep warning you until you set the variable.</p>
+</div>
+<div class="paragraph">
+<p>If you want the default behavior of git (fast-forward if possible, else create a merge commit):
+<code>git config --global pull.rebase "false"</code></p>
+</div>
+<div class="paragraph">
+<p>If you want to rebase when pulling:
+<code>git config --global pull.rebase "true"</code></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h3 id="_pushing_remotes">リモートリポジトリへのプッシュ</h3>
+<div class="paragraph">
+<p>自身のプロジェクトを共有させたいと思ったら、上流にプッシュすることになります。
+これは <code>git push &lt;リモート&gt; &lt;ブランチ&gt;</code> という簡単なコマンドで実行できます。
+
+今 <code>master</code> ブランチを <code>origin</code> サーバーにプッシュしたい場合は（繰り返しますが、クローンを行った際に、<code>master</code> と <code>origin</code> という名称は、ともに自動的に生成されています）、そこまでにコミットした内容がすべてサーバーにプッシュされることになります。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ git push origin master</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>このコマンドが正常に動作するのは、クローンを取得したそのサーバーに対しての書き込み権限があった上で、それまでに誰もプッシュしていない場合に限ります。
+他にだれかが同じタイミングでクローンを取得していて、すでにプッシュを行っていた場合、そこにあとからプッシュしようとしても確実に拒否されます。
+この場合はプッシュされた内容をまずフェッチし、自身のファイル内容に取り入れてから、初めてプッシュできるようになります。
+リモートサーバーへのプッシュ方法に関して、より詳しくは <a href="3.1.Gitのブランチ機能-ブランチと言えば.html#ch03-git-branching">Gitのブランチ機能</a> を参照してください。</p>
+</div>
+</div>
+<div class="sect3">
+<h3 id="_inspecting_remote">リモートサーバーの確認</h3>
+<div class="paragraph">
+<p>リモートサーバーに関する情報をさらに詳しく調べるには、コマンド <code>git remote show &lt;リモート&gt;</code> を実行します。
+
+これを <code>origin</code> のような特定のリモートリポジトリに対して実行すると、以下のような結果が得られます。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ git remote show origin
+* remote origin
+  Fetch URL: https://github.com/schacon/ticgit
+  Push  URL: https://github.com/schacon/ticgit
+  HEAD branch: master
+  Remote branches:
+    master                               tracked
+    dev-branch                           tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>一覧には、リモートリポジトリの URL と追跡対象となっているブランチの情報が示されます。
+The command helpfully tells you that if you’re on the <code>master</code> branch and you run <code>git pull</code>, it will automatically merge in the <code>master</code> branch on the remote after it fetches all the remote references.
+It also lists all the remote references it has pulled down.</p>
+</div>
+<div class="paragraph">
+<p>このような例は、よく見かけるものでしょう。
+もっとも Git をもっと使い込んでいくと、<code>git remote show</code> からはもっと多くの情報が得られると思います。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ git remote show origin
+* remote origin
+  URL: https://github.com/my-org/complex-project
+  Fetch URL: https://github.com/my-org/complex-project
+  Push  URL: https://github.com/my-org/complex-project
+  HEAD branch: master
+  Remote branches:
+    master                           tracked
+    dev-branch                       tracked
+    markdown-strip                   tracked
+    issue-43                         new (next fetch will store in remotes/origin)
+    issue-45                         new (next fetch will store in remotes/origin)
+    refs/remotes/origin/issue-11     stale (use 'git remote prune' to remove)
+  Local branches configured for 'git pull':
+    dev-branch merges with remote dev-branch
+    master     merges with remote master
+  Local refs configured for 'git push':
+    dev-branch                     pushes to dev-branch                     (up to date)
+    markdown-strip                 pushes to markdown-strip                 (up to date)
+    master                         pushes to master                         (up to date)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This command shows which branch is automatically pushed to when you run <code>git push</code> while on certain branches.
+It also shows you which remote branches on the server you don’t yet have, which remote branches you have that have been removed from the server, and multiple local branches that are able to merge automatically with their remote-tracking branch when you run <code>git pull</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h3 id="_リモートサーバーの名称変更と削除">リモートサーバーの名称変更と削除</h3>
+<div class="paragraph">
+<p>You can run <code>git remote rename</code> to change a remote’s shortname.
+For instance, if you want to rename <code>pb</code> to <code>paul</code>, you can do so with <code>git remote rename</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ git remote rename pb paul
+$ git remote
+origin
+paul</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It’s worth mentioning that this changes all your remote-tracking branch names, too.
+What used to be referenced at <code>pb/master</code> is now at <code>paul/master</code>.</p>
+</div>
+<div class="paragraph">
+<p>If you want to remove a remote for some reason — you’ve moved the server or are no longer using a particular mirror, or perhaps a contributor isn’t contributing anymore — you can either use <code>git remote remove</code> or <code>git remote rm</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ git remote remove paul
+$ git remote
+origin</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Once you delete the reference to a remote this way, all remote-tracking branches and configuration settings associated with that remote are also deleted.</p>
+</div>
+</div>
+<div id="nav"><a href="2.4.Gitの基本操作-作業のやり直し.html">前へ</a> | <a href="2.6.Gitの基本操作-タグづけ.html">次へ</a></div>  </div>
+
+</body></html>

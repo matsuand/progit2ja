@@ -837,16 +837,16 @@ The rules for the patterns you can put in the `.gitignore` file are as follows:
 
 @x
 Glob patterns are like simplified regular expressions that shells use.
-An asterisk (`*`) matches zero or more characters; `[abc]` matches any character inside the brackets (in this case a, b, or c); a question mark (`?`) matches a single character; and brackets enclosing characters separated by a hyphen (`[0-9]`) matches any character between them (in this case 0 through 9).
+An asterisk (`\*`) matches zero or more characters; `[abc]` matches any character inside the brackets (in this case a, b, or c); a question mark (`?`) matches a single character; and brackets enclosing characters separated by a hyphen (`[0-9]`) matches any character between them (in this case 0 through 9).
 You can also use two asterisks to match nested directories; `a/**/z` would match `a/z`, `a/b/z`, `a/b/c/z`, and so on.
 @y
 //////////////////////////
 Glob patterns are like simplified regular expressions that shells use.
-An asterisk (`*`) matches zero or more characters; `[abc]` matches any character inside the brackets (in this case a, b, or c); a question mark (`?`) matches a single character; and brackets enclosing characters separated by a hyphen (`[0-9]`) matches any character between them (in this case 0 through 9).
+An asterisk (`\*`) matches zero or more characters; `[abc]` matches any character inside the brackets (in this case a, b, or c); a question mark (`?`) matches a single character; and brackets enclosing characters separated by a hyphen (`[0-9]`) matches any character between them (in this case 0 through 9).
 You can also use two asterisks to match nested directories; `a/**/z` would match `a/z`, `a/b/z`, `a/b/c/z`, and so on.
 //////////////////////////
 glob パターンとは、シェルにおいて用いられている単純な正規表現に似ています。
-アスタリスク（`*`）は 0 個以上の文字にマッチします。
+アスタリスク（`\*`）は 0 個以上の文字にマッチします。
 `[abc]` は、ブラケット内のいずれか（この例では a、b、c のどれか）にマッチします。
 疑問符（`?`）は1 文字にマッチします。
 ブラケットに囲まれた文字がハイフンで区切られている場合（`[0-9]`）は、その範囲の文字いずれか（この例では 0 から 9）にマッチします。

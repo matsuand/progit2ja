@@ -6,7 +6,7 @@
   <title>Git - Account Setup and Configuration</title>
   <link href="https://git-scm.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
   <link rel="stylesheet" media="screen" href="assets/application.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="assets/modernize.js"></script>
   <!--[if (gte IE 6)&(lte IE 8)]>
   <script src="javascripts/selectivizr-min.js"></script>
@@ -83,7 +83,7 @@ Go ahead and do this; it’s pretty important (as we’ll see later).</p>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="情報"></i>
+<div class="title">注記</div>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -102,7 +102,7 @@ To get more information about available plans and their comparison, visit <a hre
 You’re now ready to use GitHub.</p>
 </div>
 <div class="sect3">
-<h3 id="_ssh_access_2">SSH Access</h3>
+<h3 id="_ssh_access">SSH Access</h3>
 <div class="paragraph">
 <p>
 As of right now, you’re fully able to connect with Git repositories using the <code>https://</code> protocol, authenticating with the username and password you just set up.
@@ -110,12 +110,12 @@ However, to simply clone public projects, you don’t even need to sign up - the
 </div>
 <div class="paragraph">
 <p>If you’d like to use SSH remotes, you’ll need to configure a public key.
-If you don’t already have one, see <a href="4.3.Git-on-the-Server-Generating-Your-SSH-Public-Key.html#_generate_ssh_key">Generating Your SSH Public Key</a>.
+If you don’t already have one, see <a href="4.3.サーバーとしての-Git-Generating-Your-SSH-Public-Key.html#_generate_ssh_key">Generating Your SSH Public Key</a>.
 Open up your account settings using the link at the top-right of the window:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="assets/images/account-settings.png" alt="The ``Account settings'' link">
+<img src="assets/images/account-settings.png" alt="The “Account settings” link">
 </div>
 <div class="title">図 82. The “Account settings” link</div>
 </div>
@@ -124,18 +124,18 @@ Open up your account settings using the link at the top-right of the window:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="assets/images/ssh-keys.png" alt="The ``SSH keys'' link">
+<img src="assets/images/ssh-keys.png" alt="The “SSH keys” link">
 </div>
-<div class="title">図 83. The “SSH keys” link</div>
+<div class="title">図 83. The “SSH keys” link.</div>
 </div>
 <div class="paragraph">
-<p>From there, click the "<code>Add an SSH key</code>" button, give your key a name, paste the contents of your <code>~/.ssh/id_rsa.pub</code> (or whatever you named it) public-key file into the text area, and click “Add key”.</p>
+<p>From there, click the “Add an SSH key” button, give your key a name, paste the contents of your <code>~/.ssh/id_rsa.pub</code> (or whatever you named it) public-key file into the text area, and click “Add key”.</p>
 </div>
 <div class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="情報"></i>
+<div class="title">注記</div>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -155,7 +155,7 @@ First go to the “Profile” tab (above the SSH Keys tab) and click “Upload n
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="assets/images/your-profile.png" alt="The ``Profile'' link">
+<img src="assets/images/your-profile.png" alt="The “Profile” link">
 </div>
 <div class="title">図 84. The “Profile” link</div>
 </div>

@@ -149,12 +149,12 @@ These are used in the `.gitignore` file, but also on the command-line (`git add 
 
 @x
 *`GIT_GLOB_PATHSPECS`* and *`GIT_NOGLOB_PATHSPECS`* control the default behavior of wildcards in pathspecs.
-If `GIT_GLOB_PATHSPECS` is set to 1, wildcard characters act as wildcards (which is the default); if `GIT_NOGLOB_PATHSPECS` is set to 1, wildcard characters only match themselves, meaning something like `*.c` would only match a file _named_ "`*.c`", rather than any file whose name ends with `.c`.
-You can override this in individual cases by starting the pathspec with `:(glob)` or `:(literal)`, as in `:(glob)*.c`.
+If `GIT_GLOB_PATHSPECS` is set to 1, wildcard characters act as wildcards (which is the default); if `GIT_NOGLOB_PATHSPECS` is set to 1, wildcard characters only match themselves, meaning something like `\*.c` would only match a file _named_ "`\*.c`", rather than any file whose name ends with `.c`.
+You can override this in individual cases by starting the pathspec with `:(glob)` or `:(literal)`, as in `:(glob)\*.c`.
 @y
 *`GIT_GLOB_PATHSPECS`* and *`GIT_NOGLOB_PATHSPECS`* control the default behavior of wildcards in pathspecs.
-If `GIT_GLOB_PATHSPECS` is set to 1, wildcard characters act as wildcards (which is the default); if `GIT_NOGLOB_PATHSPECS` is set to 1, wildcard characters only match themselves, meaning something like `*.c` would only match a file _named_ "`*.c`", rather than any file whose name ends with `.c`.
-You can override this in individual cases by starting the pathspec with `:(glob)` or `:(literal)`, as in `:(glob)*.c`.
+If `GIT_GLOB_PATHSPECS` is set to 1, wildcard characters act as wildcards (which is the default); if `GIT_NOGLOB_PATHSPECS` is set to 1, wildcard characters only match themselves, meaning something like `\*.c` would only match a file _named_ "`\*.c`", rather than any file whose name ends with `.c`.
+You can override this in individual cases by starting the pathspec with `:(glob)` or `:(literal)`, as in `:(glob)\*.c`.
 @z
 
 @x

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja" class=" js fontface webkit chrome windows no-ie8">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <title>Git - Git サーバーの用意</title>
+  <link href="https://git-scm.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link rel="stylesheet" media="screen" href="assets/application.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="assets/modernize.js"></script>
+  <!--[if (gte IE 6)&(lte IE 8)]>
+  <script src="javascripts/selectivizr-min.js"></script>
+  <![endif]-->
+</head>
+<body id="documentation">
+
+  <div class="inner">
+    <header>
+      <a href="/"><img src="assets/images/logo@2x.png" width="110" height="46" alt="Git"></a>
+      <span id="tagline">素早いバージョン管理</span>
+      <script type="text/javascript">
+        var taglines = ["素早いバージョン管理","すべてはローカルで","作業が分散していなくても","簡単にローカルでブランチ","分散化は新たな中央管理"];
+        var tagline = taglines[Math.floor(Math.random() * taglines.length)];
+        document.getElementById('tagline').innerHTML = '--' + tagline;
+      </script>
+<!--
+      <form id="search" action="https://git-scm.com/search/results">
+        <input id="search-text" name="search" placeholder="サイト全体の検索..." autocomplete="off" type="text">
+      </form>
+      <div id="search-results"></div>
+-->
+    </header>
+  </div> <!-- .inner -->
+
+  <div class="inner">
+    <div id="content-wrapper">
+      <aside class="sidebar">
+  <p>progit2 別訳</p>
+<!--
+  <nav>
+    <ul>
+      <li>
+        <a href="https://git-scm.com/about">About</a>
+      </li>
+    </ul>
+  </nav>
+-->
+      </aside>
+    <div id="content">
+      <span class="light" id="edition">
+        第2版
+      </span>
+    </div>
+  </div>
+
+  <div id="main" class="book edition2">
+    <h1>4.2 サーバーとしての Git-Git サーバーの用意</h1>
+
+  <div>
+
+<h2 id="_getting_git_on_a_server">Git サーバーの用意</h2>
+<div class="paragraph">
+<p>Now we’ll cover setting up a Git service running these protocols on your own server.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">注記</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Here we’ll be demonstrating the commands and steps needed to do basic, simplified installations on a Linux-based server, though it’s also possible to run these services on macOS or Windows servers.
+Actually setting up a production server within your infrastructure will certainly entail differences in security measures or operating system tools, but hopefully this will give you the general idea of what’s involved.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>In order to initially set up any Git server, you have to export an existing repository into a new bare repository — a repository that doesn’t contain a working directory.
+This is generally straightforward to do.
+In order to clone your repository to create a new bare repository, you run the clone command with the <code>--bare</code> option.
+ベアリポジトリ名は、慣例ではサフィックスとして <code>.git</code> をつけます。
+たとえば以下のようにします。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ git clone --bare my_project my_project.git
+Cloning into bare repository 'my_project.git'...
+done.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You should now have a copy of the Git directory data in your <code>my_project.git</code> directory.</p>
+</div>
+<div class="paragraph">
+<p>これはおおざっぱに言えば、以下を実行することと同じです。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ cp -Rf my_project/.git my_project.git</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>There are a couple of minor differences in the configuration file but, for your purpose, this is close to the same thing.
+It takes the Git repository by itself, without a working directory, and creates a directory specifically for it alone.</p>
+</div>
+<div class="sect3">
+<h3 id="_bare_repo">サーバー上でのベアリポジトリの設置</h3>
+<div class="paragraph">
+<p>Now that you have a bare copy of your repository, all you need to do is put it on a server and set up your protocols.
+Let’s say you’ve set up a server called <code>git.example.com</code> to which you have SSH access, and you want to store all your Git repositories under the <code>/srv/git</code> directory.
+Assuming that <code>/srv/git</code> exists on that server, you can set up your new repository by copying your bare repository over:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ scp -r my_project.git user@git.example.com:/srv/git</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>At this point, other users who have SSH-based read access to the <code>/srv/git</code> directory on that server can clone your repository by running:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ git clone user@git.example.com:/srv/git/my_project.git</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If a user SSHs into a server and has write access to the <code>/srv/git/my_project.git</code> directory, they will also automatically have push access.</p>
+</div>
+<div class="paragraph">
+<p>Git will automatically add group write permissions to a repository properly if you run the <code>git init</code> command with the <code>--shared</code> option.
+Note that by running this command, you will not destroy any commits, refs, etc. in the process.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-端末" data-lang="端末">$ ssh user@git.example.com
+$ cd /srv/git/my_project.git
+$ git init --bare --shared</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You see how easy it is to take a Git repository, create a bare version, and place it on a server to which you and your collaborators have SSH access.
+Now you’re ready to collaborate on the same project.</p>
+</div>
+<div class="paragraph">
+<p>It’s important to note that this is literally all you need to do to run a useful Git server to which several people have access — just add SSH-able accounts on a server, and stick a bare repository somewhere that all those users have read and write access to.
+You’re ready to go — nothing else needed.</p>
+</div>
+<div class="paragraph">
+<p>In the next few sections, you’ll see how to expand to more sophisticated setups.
+This discussion will include not having to create user accounts for each user, adding public read access to repositories, setting up web UIs and more.
+However, keep in mind that to collaborate with a couple of people on a private project, all you <em>need</em> is an SSH server and a bare repository.</p>
+</div>
+</div>
+<div class="sect3">
+<h3 id="_small_setups">Small Setups</h3>
+<div class="paragraph">
+<p>If you’re a small outfit or are just trying out Git in your organization and have only a few developers, things can be simple for you.
+One of the most complicated aspects of setting up a Git server is user management.
+If you want some repositories to be read-only for certain users and read/write for others, access and permissions can be a bit more difficult to arrange.</p>
+</div>
+<div class="sect4">
+<h4 id="_sshアクセス">SSHアクセス</h4>
+<div class="paragraph">
+<p></p>
+</div>
+<div class="paragraph">
+<p>If you have a server to which all your developers already have SSH access, it’s generally easiest to set up your first repository there, because you have to do almost no work (as we covered in the last section).
+If you want more complex access control type permissions on your repositories, you can handle them with the normal filesystem permissions of your server’s operating system.</p>
+</div>
+<div class="paragraph">
+<p>If you want to place your repositories on a server that doesn’t have accounts for everyone on your team for whom you want to grant write access, then you must set up SSH access for them.
+We assume that if you have a server with which to do this, you already have an SSH server installed, and that’s how you’re accessing the server.</p>
+</div>
+<div class="paragraph">
+<p>There are a few ways you can give access to everyone on your team.
+The first is to set up accounts for everybody, which is straightforward but can be cumbersome.
+You may not want to run <code>adduser</code> (or the possible alternative <code>useradd</code>) and have to set temporary passwords for every new user.</p>
+</div>
+<div class="paragraph">
+<p>A second method is to create a single 'git' user account on the machine, ask every user who is to have write access to send you an SSH public key, and add that key to the <code>~/.ssh/authorized_keys</code> file of that new 'git' account.
+At that point, everyone will be able to access that machine via the 'git' account.
+This doesn’t affect the commit data in any way — the SSH user you connect as doesn’t affect the commits you’ve recorded.</p>
+</div>
+<div class="paragraph">
+<p>Another way to do it is to have your SSH server authenticate from an LDAP server or some other centralized authentication source that you may already have set up.
+As long as each user can get shell access on the machine, any SSH authentication mechanism you can think of should work.</p>
+</div>
+</div>
+</div>
+<div id="nav"><a href="4.1.サーバーとしての-Git-プロトコル.html">前へ</a> | <a href="4.3.サーバーとしての-Git-Generating-Your-SSH-Public-Key.html">次へ</a></div>  </div>
+
+</body></html>

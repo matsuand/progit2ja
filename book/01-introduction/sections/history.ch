@@ -16,7 +16,7 @@ As with many great things in life, Git began with a bit of creative destruction 
 //////////////////////////
 As with many great things in life, Git began with a bit of creative destruction and fiery controversy.
 //////////////////////////
-人生には大きな出来事が多々あるものですが、Git もちょっとした創造的破壊と激論の中から始まりました。
+人生には大きな出来事がたくさんありますが、Git もちょっとした創造的破壊と激論の中から始まりました。
 @z
 
 @x

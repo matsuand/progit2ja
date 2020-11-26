@@ -6,7 +6,7 @@
   <title>Git - stash と clean</title>
   <link href="https://git-scm.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
   <link rel="stylesheet" media="screen" href="assets/application.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="assets/modernize.js"></script>
   <!--[if (gte IE 6)&(lte IE 8)]>
   <script src="javascripts/selectivizr-min.js"></script>
@@ -75,7 +75,7 @@
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="情報"></i>
+<div class="title">注記</div>
 </td>
 <td class="content">
 <div class="title">
@@ -260,6 +260,8 @@ M  index.html
  M lib/simplegit.rb
 ?? new-file.txt
 
+//////////////////////////
+//////////////////////////
 $ git stash -u
 Saved working directory and index state WIP on master: 1b65b17 added the index file
 HEAD is now at 1b65b17 added the index file
@@ -343,7 +345,7 @@ A safer option is to run <code>git stash --all</code> to remove everything but s
 <div class="paragraph">
 <p>Assuming you do want to remove cruft files or clean your working directory, you can do so with <code>git clean</code>.
 To remove all the untracked files in your working directory, you can run <code>git clean -f -d</code>, which removes any files and also any subdirectories that become empty as a result.
-The <code>-f</code> means <em>force</em> or “really do this,” and is required if the Git configuration variable <code>clean.requireForce</code> is not explicitly set to false.</p>
+The <code>-f</code> means 'force' or “really do this,” and is required if the Git configuration variable <code>clean.requireForce</code> is not explicitly set to false.</p>
 </div>
 <div class="paragraph">
 <p>If you ever want to see what it would do, you can run the command with the <code>--dry-run</code> (or <code>-n</code>) option, which means “do a dry run and tell me what you <em>would</em> have removed”.</p>
@@ -402,7 +404,7 @@ What now&gt;</code></pre>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="情報"></i>
+<div class="title">注記</div>
 </td>
 <td class="content">
 <div class="paragraph">

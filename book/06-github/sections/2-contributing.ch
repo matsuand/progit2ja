@@ -61,10 +61,10 @@ To fork a project, visit the project page and click the "`Fork`" button at the t
 
 @x
 .The "`Fork`" button
-image::images/forkbutton.png[The "`Fork`" button]
+image::images/forkbutton.png[The “Fork” button]
 @y
 .The "`Fork`" button
-image::images/forkbutton.png[The "`Fork`" button]
+image::images/forkbutton.png[The “Fork” button]
 @z
 
 @x
@@ -308,9 +308,9 @@ Now if we go back to our fork on GitHub, we can see that GitHub noticed that we 
 @z
 
 @x
-You can alternatively go to the "`Branches`" page at `https://github.com/<user>/<project>/branches` to locate your branch and open a new Pull Request from there.
+You can alternatively go to the "`Branches`" page at `\https://github.com/<user>/<project>/branches` to locate your branch and open a new Pull Request from there.
 @y
-You can alternatively go to the "`Branches`" page at `https://github.com/<user>/<project>/branches` to locate your branch and open a new Pull Request from there.
+You can alternatively go to the "`Branches`" page at `\https://github.com/<user>/<project>/branches` to locate your branch and open a new Pull Request from there.
 @z
 
 @x

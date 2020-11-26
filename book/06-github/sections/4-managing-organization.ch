@@ -37,10 +37,10 @@ An organization is pretty easy to create; just click on the "`+`" icon at the to
 
 @x
 .The "`New organization`" menu item
-image::images/neworg.png[The "`New organization`" menu item]
+image::images/neworg.png[The “New organization” menu item]
 @y
 .The "`New organization`" menu item
-image::images/neworg.png[The "`New organization`" menu item]
+image::images/neworg.png[The “New organization” menu item]
 @z
 
 @x

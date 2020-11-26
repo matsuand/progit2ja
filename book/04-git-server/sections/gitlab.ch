@@ -82,11 +82,11 @@ After you've logged in, click the "`Admin area`" icon in the menu at the top rig
 @x
 [[gitlab_menu]]
 .The "`Admin area`" item in the GitLab menu
-image::images/gitlab-menu.png[The `"Admin area`" item in the GitLab menu]
+image::images/gitlab-menu.png[The “Admin area” item in the GitLab menu]
 @y
 [[gitlab_menu]]
 .The "`Admin area`" item in the GitLab menu
-image::images/gitlab-menu.png[The `"Admin area`" item in the GitLab menu]
+image::images/gitlab-menu.png[The “Admin area” item in the GitLab menu]
 @z
 
 @x

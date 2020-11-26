@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.11">
-<meta name="author" content="Scott Chacon, Ben Straub, 日本語訳 2020/11/09 (2020/11/08 651fda5 対応)">
+<meta name="generator" content="Asciidoctor 2.0.12">
+<meta name="author" content="Scott Chacon, Ben Straub, 日本語訳 2020/11/26 (2020/11/25 e0b6ebc 対応)">
 <title>Pro Git</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -104,12 +104,12 @@ h1{font-size:2.75em}
 h2{font-size:2.3125em}
 h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
 h4{font-size:1.4375em}}
-table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
+table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede;word-wrap:normal}
 table thead,table tfoot{background:#f7f8f7}
 table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
 table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
 table tr.even,table tr.alt{background:#f8f8f7}
-table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{line-height:1.6}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
 h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
 .center{margin-left:auto;margin-right:auto}
@@ -207,7 +207,7 @@ table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font
 .admonitionblock>table td.icon{text-align:center;width:80px}
 .admonitionblock>table td.icon img{max-width:none}
 .admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
-.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6)}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
 .exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
 .exampleblock>.content>:first-child{margin-top:0}
@@ -263,9 +263,8 @@ pre.pygments .lineno::before{content:"";margin-right:-.125em}
 .quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
 .quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
 .quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;text-align:left;margin-right:0}
-table.tableblock{max-width:100%}
 p.tableblock:last-child{margin-bottom:0}
-td.tableblock>.content{margin-bottom:1.25em}
+td.tableblock>.content{margin-bottom:1.25em;word-wrap:anywhere}
 td.tableblock>.content>:last-child{margin-bottom:-1.25em}
 table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
 table.grid-all>*>tr>*{border-width:1px}
@@ -286,7 +285,7 @@ th.valign-top,td.valign-top{vertical-align:top}
 th.valign-bottom,td.valign-bottom{vertical-align:bottom}
 th.valign-middle,td.valign-middle{vertical-align:middle}
 table thead th,table tfoot th{font-weight:bold}
-tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
+tbody tr th{background:#f7f8f7}
 tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
 p.tableblock>code:only-child{background:none;padding:0}
 p.tableblock{font-size:1em}
@@ -315,6 +314,7 @@ ol.lowergreek{list-style-type:lower-greek}
 .hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
 td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
 td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+td.hdlist2{word-wrap:anywhere}
 .literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
 .colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
 .colist td:not([class]):first-child img{max-width:none}
@@ -446,7 +446,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="details">
 <span id="author" class="author">Scott Chacon</span><br>
 <span id="author2" class="author">Ben Straub</span><br>
-<span id="author3" class="author">日本語訳 2020/11/09 (2020/11/08 651fda5 対応)</span><br>
+<span id="author3" class="author">日本語訳 2020/11/26 (2020/11/25 e0b6ebc 対応)</span><br>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">もくじ</div>
@@ -798,7 +798,7 @@ If you want to know where in the book we used any specific Git command you can l
 <p>この章から Git をはじめていきます。
 まずはバージョン管理ツールのこれまでについて説明します。
 次にシステム上で Git を動かす方法、作業を進めていくにあたってのセットアップ方法を示していきます。
-この章を読み終えたときには、なぜ Git が活用されているのか、なぜこれを使うのがよいのか理解できていて、すぐに作業に取りかかれるはずです。</p>
+この章を読み終えたときには、なぜ Git が活用されているのか、なぜこれを使うのがよいのかが理解できているはずなので、すぐに作業に取りかかれるはずです。</p>
 </div>
 <div class="sect2">
 <h3 id="_バージョン管理について">バージョン管理について</h3>
@@ -809,21 +809,21 @@ If you want to know where in the book we used any specific Git command you can l
 <p>
 「バージョン管理 (version control)」とは何でしょう？
 なぜ気にする必要があるのでしょう？
-バージョン管理とは、ファイルに対してある程度の期間にわたって、変更内容を記録するためのシステムです。
+バージョン管理とは、ある程度の期間にわたってファイルの変更内容を記録するためのシステムです。
 これにより、いつでも特定の時期のバージョンを取り出すことができます。
 本書では、ソフトウェアのソースコードをバージョン管理していく例を取り上げますが、実際にはコンピューター上にて扱う、どのような種類のファイルでも対象とすることができます。</p>
 </div>
 <div class="paragraph">
-<p>あなたがグラフィックデザイナーかウェブデザイナーであるとして、画像やレイアウトのあらゆるバージョンを管理したいとします。
-(そういったものこそ、管理したいのが実際でしょう。)
+<p>あなたがグラフィックデザイナーやウェブデザイナーであるとして、画像やレイアウトの全バージョンを管理したいとします。
+(そういったものこそ管理したいのが現実でしょう。)
 こういうときには、バージョン管理システム (Version Control System; VCS) を選ぶのが賢明です。
 これを使うと、ファイルの状態を以前のものに戻すことができます。
 プロジェクト全体を戻すこともできます。
 いつの時点のものであっても違いを比較することができます。
 問題が発生したときには、最後に修正した人がだれであるか、だれが問題を引き起こしたかも確認できます。
 できることは、まだまだあります。
-VCS を使えば、仮にファイルがめちゃくちゃになってしまったり、失ってしまっても、簡単に元に戻すことができます。
-しかもこういった作業は、たいした手間をかけずにできることです。</p>
+VCS を使えば、仮にファイルがめちゃくちゃになってしまったり失ってしまっても、簡単に元に戻すことができます。
+しかもこういった作業は、たいした手間をかけずにできます。</p>
 </div>
 <div class="sect3">
 <h4 id="_ローカル型のバージョン管理システム">ローカル型のバージョン管理システム</h4>
@@ -836,7 +836,7 @@ VCS を使えば、仮にファイルがめちゃくちゃになってしまっ�
 賢い方は日時を含めたディレクトリ名を用いるでしょう。
 このやり方はよく行われますが、なぜかと言えば簡単にできるからです。
 ただ一方で、誤りが必ず起きるやり方でもあります。
-今どのディレクトリにいるのかなんて、すぐ分からなくなります。
+今どのディレクトリにいるのかなんて、すぐわからなくなります。
 うっかりして別のファイルを書き換えてしまったり、そのつもりがないのにファイルを上書きコピーしてしまうこともあります。</p>
 </div>
 <div class="paragraph">
@@ -845,7 +845,7 @@ VCS を使えば、仮にファイルがめちゃくちゃになってしまっ�
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/local.png" alt="ローカル型バージョン管理の概要図">
+<<img src="assets/images/local.png" alt="ローカル型バージョン管理の概要図">
 </div>
 <div class="title">図 1. ローカル型バージョン管理</div>
 </div>
@@ -873,7 +873,7 @@ CVS、Subversion、Perforce というものがこれにあたります。
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/centralized.png" alt="集中型バージョン管理の概要図">
+<<img src="assets/images/centralized.png" alt="集中型バージョン管理の概要図">
 </div>
 <div class="title">図 2. 集中型バージョン管理</div>
 </div>
@@ -908,7 +908,7 @@ DVCS である Git、Mercurial、Bazaar、Darcs などにおいて、クライ�
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/distributed.png" alt="分散型バージョン管理の概要図">
+<<img src="assets/images/distributed.png" alt="分散型バージョン管理の概要図">
 </div>
 <div class="title">図 3. 分散型バージョン管理</div>
 </div>
@@ -921,7 +921,7 @@ DVCS である Git、Mercurial、Bazaar、Darcs などにおいて、クライ�
 <div class="sect2">
 <h3 id="_git_の開発経緯">Git の開発経緯</h3>
 <div class="paragraph">
-<p>人生には大きな出来事が多々あるものですが、Git もちょっとした創造的破壊と激論の中から始まりました。</p>
+<p>人生には大きな出来事がたくさんありますが、Git もちょっとした創造的破壊と激論の中から始まりました。</p>
 </div>
 <div class="paragraph">
 <p>Linux カーネルは、広範囲を網羅するオープンソースソフトウェアです。
@@ -965,36 +965,43 @@ Linux 開発コミュニティ（特に Linux の創始者である Linus Torval
 <div class="sect2">
 <h3 id="what_is_git_section">Git とは何か？</h3>
 <div class="paragraph">
-<p>簡単に言って Git とは何なのか？
-This is an important section to absorb, because if you understand what Git is and the fundamentals of how it works, then using Git effectively will probably be much easier for you.
-As you learn Git, try to clear your mind of the things you may know about other VCSs, such as CVS, Subversion or Perforce&#8201;&#8212;&#8201;doing so will help you avoid subtle confusion when using the tool.
-Even though Git&#8217;s user interface is fairly similar to these other VCSs, Git stores and thinks about information in a very different way, and understanding these differences will help you avoid becoming confused while using it.</p>
+<p>簡単に言って Git とは何なのでしょう？
+ここは理解しておくべき重要な節です。
+Git がどのようなものであるか、またその基本的な動作がどのようなものかを理解しておけば、Git を効果的に利用していくことが簡単にできます。
+Git を学んでいくにあたっては、他の VCS、たとえば CVS、Subversion、Perforce について知っていることがあったとしても、それは忘れることにしてください。
+このツールを使っていく上で、ちょっとした混同を避けることができるからです。
+たとえ Git のユーザーインターフェースが他の VCS と非常によく似ていたとしても、Git における情報の保存や管理の仕方は全く異なります。
+そのような違いを理解しておくと、利用していく際に混乱を避けることができます。
+</p>
 </div>
 <div class="sect3">
-<h4 id="_snapshots_not_differences">Snapshots, Not Differences</h4>
+<h4 id="_差分ではなくスナップショット">差分ではなくスナップショット</h4>
 <div class="paragraph">
-<p>The major difference between Git and any other VCS (Subversion and friends included) is the way Git thinks about its data.
-Conceptually, most other systems store information as a list of file-based changes.
-These other systems (CVS, Subversion, Perforce, Bazaar, and so on) think of the information they store as a set of files and the changes made to each file over time (this is commonly described as <em>delta-based</em> version control).</p>
+<p>Git とその他の VCS（Subversion など）との大きな違いは、Git がデータをどのように捉えているかという点です。
+考え方として他のシステムのほとんどでは、ファイルを基準とした変更情報の一覧を保存しています。
+つまりそういったシステム（CVS、Subversion、Perforce、Bazaar など）において保存する情報は、ファイル一式であり、またそれに対して時間の経過とともに加えられる変更です。
+（これはよく <strong>デルタベース</strong> のバージョン管理と表現されます。）</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/deltas.png" alt="Storing data as changes to a base version of each file">
+<<img src="assets/images/deltas.png" alt="Storing data as changes to a base version of each file">
 </div>
 <div class="title">図 4. Storing data as changes to a base version of each file</div>
 </div>
 <div class="paragraph">
-<p>Git doesn&#8217;t think of or store its data this way.
-Instead, Git thinks of its data more like a series of snapshots of a miniature filesystem.
-With Git, every time you commit, or save the state of your project, Git basically takes a picture of what all your files look like at that moment and stores a reference to that snapshot.
-To be efficient, if files have not changed, Git doesn&#8217;t store the file again, just a link to the previous identical file it has already stored.
-Git thinks about its data more like a <strong>stream of snapshots</strong>.</p>
+<p>Git ではデータとその保存をこのようには考えません。
+そうではなく Git ではデータのことを、小さなファイルシステムに対するスナップショットを集めたもののように扱います。
+Git におけるコミットは、プロジェクトの状態を保存するという操作です。
+これを行うと、ファイル一式がどのように見えているかをその時点ごとに保存します。
+これはまさに写真を撮るようなものであって、そのスナップショットを見ている状態を保存するものです。効率性を考えて Git ではファイルが変更されなかった場合は、そのファイルを保存し直すようなことはしません。
+それまで保存されていた以前のファイルの状態を示すリンクを保持するだけです。
+Git ではむしろ <strong>連続したスナップショット</strong> としてデータを捉えています。</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/snapshots.png" alt="Git stores data as snapshots of the project over time">
+<<img src="assets/images/snapshots.png" alt="時間の経過とともにプロジェクトデータをスナップショットのように保存">
 </div>
-<div class="title">図 5. Storing data as snapshots of the project over time</div>
+<div class="title">図 5. 時間の経過とともにプロジェクトデータをスナップショットのように保存</div>
 </div>
 <div class="paragraph">
 <p>This is an important distinction between Git and nearly all other VCSs.
@@ -1084,7 +1091,7 @@ Git has three main states that your files can reside in: <em>modified</em>, <em>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/areas.png" alt="Working tree, staging area, and Git directory.">
+<<img src="assets/images/areas.png" alt="Working tree, staging area, and Git directory.">
 </div>
 <div class="title">図 6. Working tree, staging area, and Git directory</div>
 </div>
@@ -1215,7 +1222,7 @@ macOS Git インストーラーというものが提供されていて、Git の
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/git-osx-installer.png" alt="Git macOS インストーラー">
+<<img src="assets/images/git-osx-installer.png" alt="Git macOS インストーラー">
 </div>
 <div class="title">図 7. Git macOS インストーラー</div>
 </div>
@@ -1621,9 +1628,9 @@ usage: git add [&lt;options&gt;] [--] &lt;pathspec&gt;...
 <div class="sect2">
 <h3 id="_まとめ">まとめ</h3>
 <div class="paragraph">
-<p>Git とは何であるか、これまで使ってきた集中型バージョン管理システムとの違いはどういうものか、ここで理解できたものと思います。
+<p>Git とは何であるのか、これまで使ってきた集中型バージョン管理システムとの違いはどういうものか、ここで理解できたものと思います。
 そして手元のコンピューターに Git のインストールを行い、ユーザー設定も終えたはずです。
-ここから Git の基本操作について学んでいきましょう。</p>
+ここから Git の基本操作について学んでいきます。</p>
 </div>
 </div>
 </div>
@@ -1799,7 +1806,7 @@ Git がファイルを取り出した直後であって、だれも手をつけ�
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/lifecycle.png" alt="ファイル状態のライフサイクル">
+<<img src="assets/images/lifecycle.png" alt="ファイル状態のライフサイクル">
 </div>
 <div class="title">図 8. ファイル状態のライフサイクル</div>
 </div>
@@ -2063,12 +2070,12 @@ M  lib/simplegit.rb
 </div>
 <div class="paragraph">
 <p>glob パターンとは、シェルにおいて用いられている単純な正規表現に似ています。
-アスタリスク（<code><strong></code>）は 0 個以上の文字にマッチします。
+アスタリスク（<code>*</code>）は 0 個以上の文字にマッチします。
 <code>[abc]</code> は、ブラケット内のいずれか（この例では a、b、c のどれか）にマッチします。
 疑問符（<code>?</code>）は1 文字にマッチします。
 ブラケットに囲まれた文字がハイフンで区切られている場合（<code>[0-9]</code>）は、その範囲の文字いずれか（この例では 0 から 9）にマッチします。
 アスタリスクを 2 つ用いると、階層化したディレクトリにマッチします。
-例えば <code>a/</strong>*/z</code> は <code>a/z</code>、<code>a/b/z</code>、<code>a/b/c/z</code> のいずれにもマッチします。</p>
+例えば <code>a/**/z</code> は <code>a/z</code>、<code>a/b/z</code>、<code>a/b/c/z</code> のいずれにもマッチします。</p>
 </div>
 <div class="paragraph">
 <p><code>.gitignore</code> ファイルのもう 1 つの例です。</p>
@@ -3301,9 +3308,9 @@ Git において修正した内容をコミットしていれば、それはほ�
 <div class="sect3">
 <h4 id="undoing_git_restore">Undoing things with git restore</h4>
 <div class="paragraph">
-<p>Git version 2.25.0 introduced a new command: <code>git restore</code>.
+<p>Git version 2.23.0 introduced a new command: <code>git restore</code>.
 It&#8217;s basically an alternative to <code>git reset</code> which we just covered.
-From Git version 2.25.0 onwards, Git will use <code>git restore</code> instead of <code>git reset</code> for many undo operations.</p>
+From Git version 2.23.0 onwards, Git will use <code>git restore</code> instead of <code>git reset</code> for many undo operations.</p>
 </div>
 <div class="paragraph">
 <p>Let&#8217;s retrace our steps, and undo things with <code>git restore</code> instead of <code>git reset</code>.</p>
@@ -4207,7 +4214,7 @@ Git then creates a commit object that has the metadata and a pointer to the root
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/commit-and-tree.png" alt="A commit and its tree">
+<<img src="assets/images/commit-and-tree.png" alt="A commit and its tree">
 </div>
 <div class="title">図 9. A commit and its tree</div>
 </div>
@@ -4216,7 +4223,7 @@ Git then creates a commit object that has the metadata and a pointer to the root
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/commits-and-parents.png" alt="Commits and their parents">
+<<img src="assets/images/commits-and-parents.png" alt="Commits and their parents">
 </div>
 <div class="title">図 10. Commits and their parents</div>
 </div>
@@ -4244,7 +4251,7 @@ The only reason nearly every repository has one is that the <code>git init</code
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/branch-and-history.png" alt="A branch and its commit history">
+<<img src="assets/images/branch-and-history.png" alt="A branch and its commit history">
 </div>
 <div class="title">図 11. A branch and its commit history</div>
 </div>
@@ -4267,7 +4274,7 @@ You do this with the <code>git branch</code> command:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/two-branches.png" alt="Two branches pointing into the same series of commits">
+<<img src="assets/images/two-branches.png" alt="Two branches pointing into the same series of commits">
 </div>
 <div class="title">図 12. Two branches pointing into the same series of commits</div>
 </div>
@@ -4281,7 +4288,7 @@ The <code>git branch</code> command only <em>created</em> a new branch&#8201;&#8
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/head-to-master.png" alt="HEAD pointing to a branch">
+<<img src="assets/images/head-to-master.png" alt="HEAD pointing to a branch">
 </div>
 <div class="title">図 13. HEAD pointing to a branch</div>
 </div>
@@ -4318,7 +4325,7 @@ Let&#8217;s switch to the new <code>testing</code> branch:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/head-to-testing.png" alt="HEAD points to the current branch">
+<<img src="assets/images/head-to-testing.png" alt="HEAD points to the current branch">
 </div>
 <div class="title">図 14. HEAD points to the current branch</div>
 </div>
@@ -4334,7 +4341,7 @@ $ git commit -a -m 'made a change'</code></pre>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/advance-testing.png" alt="The HEAD branch moves forward when a commit is made">
+<<img src="assets/images/advance-testing.png" alt="The HEAD branch moves forward when a commit is made">
 </div>
 <div class="title">図 15. The HEAD branch moves forward when a commit is made</div>
 </div>
@@ -4372,7 +4379,7 @@ To show all of the branches, add <code>--all</code> to your <code>git log</code>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/checkout-master.png" alt="HEAD moves when you checkout">
+<<img src="assets/images/checkout-master.png" alt="HEAD moves when you checkout">
 </div>
 <div class="title">図 16. HEAD moves when you checkout</div>
 </div>
@@ -4416,7 +4423,7 @@ And you did all that with simple <code>branch</code>, <code>checkout</code>, and
 </div>
 <div id="divergent_history" class="imageblock">
 <div class="content">
-<img src="images/advance-master.png" alt="Divergent history">
+<<img src="assets/images/advance-master.png" alt="Divergent history">
 </div>
 <div class="title">図 17. Divergent history</div>
 </div>
@@ -4539,7 +4546,7 @@ First, let&#8217;s say you&#8217;re working on your project and have a couple of
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/basic-branching-1.png" alt="A simple commit history">
+<<img src="assets/images/basic-branching-1.png" alt="A simple commit history">
 </div>
 <div class="title">図 18. A simple commit history</div>
 </div>
@@ -4564,7 +4571,7 @@ $ git checkout iss53</code></pre>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/basic-branching-2.png" alt="Creating a new branch pointer">
+<<img src="assets/images/basic-branching-2.png" alt="Creating a new branch pointer">
 </div>
 <div class="title">図 19. Creating a new branch pointer</div>
 </div>
@@ -4580,7 +4587,7 @@ $ git commit -a -m 'Create new footer [issue 53]'</code></pre>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/basic-branching-3.png" alt="The `iss53` branch has moved forward with your work">
+<<img src="assets/images/basic-branching-3.png" alt="The `iss53` branch has moved forward with your work">
 </div>
 <div class="title">図 20. The <code>iss53</code> branch has moved forward with your work</div>
 </div>
@@ -4622,7 +4629,7 @@ $ git commit -a -m 'Fix broken email address'
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/basic-branching-4.png" alt="Hotfix branch based on `master`">
+<<img src="assets/images/basic-branching-4.png" alt="Hotfix branch based on `master`">
 </div>
 <div class="title">図 21. Hotfix branch based on <code>master</code></div>
 </div>
@@ -4650,7 +4657,7 @@ To phrase that another way, when you try to merge one commit with a commit that 
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/basic-branching-5.png" alt="`master` is fast-forwarded to `hotfix`">
+<<img src="assets/images/basic-branching-5.png" alt="`master` is fast-forwarded to `hotfix`">
 </div>
 <div class="title">図 22. <code>master</code> is fast-forwarded to <code>hotfix</code></div>
 </div>
@@ -4680,7 +4687,7 @@ $ git commit -a -m 'Finish the new footer [issue 53]'
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/basic-branching-6.png" alt="Work continues on `iss53`">
+<<img src="assets/images/basic-branching-6.png" alt="Work continues on `iss53`">
 </div>
 <div class="title">図 23. Work continues on <code>iss53</code></div>
 </div>
@@ -4715,7 +4722,7 @@ In this case, Git does a simple three-way merge, using the two snapshots pointed
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/basic-merging-1.png" alt="Three snapshots used in a typical merge">
+<<img src="assets/images/basic-merging-1.png" alt="Three snapshots used in a typical merge">
 </div>
 <div class="title">図 24. Three snapshots used in a typical merge</div>
 </div>
@@ -4725,7 +4732,7 @@ This is referred to as a merge commit, and is special in that it has more than o
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/basic-merging-2.png" alt="A merge commit">
+<<img src="assets/images/basic-merging-2.png" alt="A merge commit">
 </div>
 <div class="title">図 25. A merge commit</div>
 </div>
@@ -5171,7 +5178,7 @@ The stable branches are farther down the line in your commit history, and the bl
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/lr-branches-1.png" alt="A linear view of progressive-stability branching">
+<<img src="assets/images/lr-branches-1.png" alt="A linear view of progressive-stability branching">
 </div>
 <div class="title">図 26. A linear view of progressive-stability branching</div>
 </div>
@@ -5180,7 +5187,7 @@ The stable branches are farther down the line in your commit history, and the bl
 </div>
 <div id="lrbranch_b" class="imageblock">
 <div class="content">
-<img src="images/lr-branches-2.png" alt="A &quot;`silo`&quot; view of progressive-stability branching">
+<<img src="assets/images/lr-branches-2.png" alt="A &quot;`silo`&quot; view of progressive-stability branching">
 </div>
 <div class="title">図 27. A &#8220;silo&#8221; view of progressive-stability branching</div>
 </div>
@@ -5212,7 +5219,7 @@ Your commit history will look something like this:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/topic-branches-1.png" alt="Multiple topic branches">
+<<img src="assets/images/topic-branches-1.png" alt="Multiple topic branches">
 </div>
 <div class="title">図 28. Multiple topic branches</div>
 </div>
@@ -5223,7 +5230,7 @@ Your history then looks like this:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/topic-branches-2.png" alt="History after merging `dumbidea` and `iss91v2`">
+<<img src="assets/images/topic-branches-2.png" alt="History after merging `dumbidea` and `iss91v2`">
 </div>
 <div class="title">図 29. History after merging <code>dumbidea</code> and <code>iss91v2</code></div>
 </div>
@@ -5279,7 +5286,7 @@ If you run <code>git clone -o booyah</code> instead, then you will have <code>bo
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/remote-branches-1.png" alt="Server and local repositories after cloning.">
+<<img src="assets/images/remote-branches-1.png" alt="Server and local repositories after cloning.">
 </div>
 <div class="title">図 30. Server and local repositories after cloning</div>
 </div>
@@ -5289,7 +5296,7 @@ Also, as long as you stay out of contact with your <code>origin</code> server, y
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/remote-branches-2.png" alt="Local and remote work can diverge">
+<<img src="assets/images/remote-branches-2.png" alt="Local and remote work can diverge">
 </div>
 <div class="title">図 31. Local and remote work can diverge</div>
 </div>
@@ -5299,7 +5306,7 @@ This command looks up which server &#8220;origin&#8221; is (in this case, it&#82
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/remote-branches-3.png" alt="`git fetch` updates your remote references">
+<<img src="assets/images/remote-branches-3.png" alt="`git fetch` updates your remote references">
 </div>
 <div class="title">図 32. <code>git fetch</code> updates your remote-tracking branches</div>
 </div>
@@ -5311,7 +5318,7 @@ Name this remote <code>teamone</code>, which will be your shortname for that who
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/remote-branches-4.png" alt="Adding another server as a remote">
+<<img src="assets/images/remote-branches-4.png" alt="Adding another server as a remote">
 </div>
 <div class="title">図 33. Adding another server as a remote</div>
 </div>
@@ -5321,7 +5328,7 @@ Because that server has a subset of the data your <code>origin</code> server has
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/remote-branches-5.png" alt="Remote tracking branch for `teamone/master`">
+<<img src="assets/images/remote-branches-5.png" alt="Remote tracking branch for `teamone/master`">
 </div>
 <div class="title">図 34. Remote-tracking branch for <code>teamone/master</code></div>
 </div>
@@ -5562,7 +5569,7 @@ In this section you&#8217;ll learn what rebasing is, how to do it, why it&#8217;
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/basic-rebase-1.png" alt="Simple divergent history">
+<<img src="assets/images/basic-rebase-1.png" alt="Simple divergent history">
 </div>
 <div class="title">図 35. Simple divergent history</div>
 </div>
@@ -5572,7 +5579,7 @@ It performs a three-way merge between the two latest branch snapshots (<code>C3<
 </div>
 <div id="rebasing-merging-example" class="imageblock">
 <div class="content">
-<img src="images/basic-rebase-2.png" alt="Merging to integrate diverged work history">
+<<img src="assets/images/basic-rebase-2.png" alt="Merging to integrate diverged work history">
 </div>
 <div class="title">図 36. Merging to integrate diverged work history</div>
 </div>
@@ -5597,7 +5604,7 @@ Applying: added staged command</code></pre>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/basic-rebase-3.png" alt="Rebasing the change introduced in `C4` onto `C3`">
+<<img src="assets/images/basic-rebase-3.png" alt="Rebasing the change introduced in `C4` onto `C3`">
 </div>
 <div class="title">図 37. Rebasing the change introduced in <code>C4</code> onto <code>C3</code></div>
 </div>
@@ -5612,7 +5619,7 @@ $ git merge experiment</code></pre>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/basic-rebase-4.png" alt="Fast-forwarding the `master` branch">
+<<img src="assets/images/basic-rebase-4.png" alt="Fast-forwarding the `master` branch">
 </div>
 <div class="title">図 38. Fast-forwarding the <code>master</code> branch</div>
 </div>
@@ -5642,7 +5649,7 @@ Finally, you went back to your server branch and did a few more commits.</p>
 </div>
 <div id="rbdiag_e" class="imageblock">
 <div class="content">
-<img src="images/interesting-rebase-1.png" alt="A history with a topic branch off another topic branch">
+<<img src="assets/images/interesting-rebase-1.png" alt="A history with a topic branch off another topic branch">
 </div>
 <div class="title">図 39. A history with a topic branch off another topic branch</div>
 </div>
@@ -5661,7 +5668,7 @@ It&#8217;s a bit complex, but the result is pretty cool.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/interesting-rebase-2.png" alt="Rebasing a topic branch off another topic branch">
+<<img src="assets/images/interesting-rebase-2.png" alt="Rebasing a topic branch off another topic branch">
 </div>
 <div class="title">図 40. Rebasing a topic branch off another topic branch</div>
 </div>
@@ -5676,7 +5683,7 @@ $ git merge client</code></pre>
 </div>
 <div id="rbdiag_g" class="imageblock">
 <div class="content">
-<img src="images/interesting-rebase-3.png" alt="Fast-forwarding your `master` branch to include the client branch changes">
+<<img src="assets/images/interesting-rebase-3.png" alt="Fast-forwarding your `master` branch to include the client branch changes">
 </div>
 <div class="title">図 41. Fast-forwarding your <code>master</code> branch to include the client branch changes</div>
 </div>
@@ -5694,7 +5701,7 @@ You can rebase the <code>server</code> branch onto the <code>master</code> branc
 </div>
 <div id="rbdiag_h" class="imageblock">
 <div class="content">
-<img src="images/interesting-rebase-4.png" alt="Rebasing your server branch on top of your `master` branch">
+<<img src="assets/images/interesting-rebase-4.png" alt="Rebasing your server branch on top of your `master` branch">
 </div>
 <div class="title">図 42. Rebasing your server branch on top of your <code>master</code> branch</div>
 </div>
@@ -5718,7 +5725,7 @@ $ git branch -d server</code></pre>
 </div>
 <div id="rbdiag_i" class="imageblock">
 <div class="content">
-<img src="images/interesting-rebase-5.png" alt="Final commit history">
+<<img src="assets/images/interesting-rebase-5.png" alt="Final commit history">
 </div>
 <div class="title">図 43. Final commit history</div>
 </div>
@@ -5747,7 +5754,7 @@ Your commit history looks like this:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/perils-of-rebasing-1.png" alt="Clone a repository, and base some work on it.">
+<<img src="assets/images/perils-of-rebasing-1.png" alt="Clone a repository, and base some work on it.">
 </div>
 <div class="title">図 44. Clone a repository, and base some work on it</div>
 </div>
@@ -5757,7 +5764,7 @@ You fetch it and merge the new remote branch into your work, making your history
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/perils-of-rebasing-2.png" alt="Fetch more commits, and merge them into your work.">
+<<img src="assets/images/perils-of-rebasing-2.png" alt="Fetch more commits, and merge them into your work.">
 </div>
 <div class="title">図 45. Fetch more commits, and merge them into your work</div>
 </div>
@@ -5767,7 +5774,7 @@ You then fetch from that server, bringing down the new commits.</p>
 </div>
 <div id="_pre_merge_rebase_work" class="imageblock">
 <div class="content">
-<img src="images/perils-of-rebasing-3.png" alt="Someone pushes rebased commits, abandoning commits you&#8217;ve based your work on.">
+<<img src="assets/images/perils-of-rebasing-3.png" alt="Someone pushes rebased commits, abandoning commits you&#8217;ve based your work on.">
 </div>
 <div class="title">図 46. Someone pushes rebased commits, abandoning commits you&#8217;ve based your work on</div>
 </div>
@@ -5777,7 +5784,7 @@ If you do a <code>git pull</code>, you&#8217;ll create a merge commit which incl
 </div>
 <div id="_merge_rebase_work" class="imageblock">
 <div class="content">
-<img src="images/perils-of-rebasing-4.png" alt="You merge in the same work again into a new merge commit">
+<<img src="assets/images/perils-of-rebasing-4.png" alt="You merge in the same work again into a new merge commit">
 </div>
 <div class="title">図 47. You merge in the same work again into a new merge commit</div>
 </div>
@@ -5824,7 +5831,7 @@ This is called a &#8220;patch-id&#8221;.</p>
 </div>
 <div id="_rebase_rebase_work" class="imageblock">
 <div class="content">
-<img src="images/perils-of-rebasing-5.png" alt="Rebase on top of force-pushed rebase work">
+<<img src="assets/images/perils-of-rebasing-5.png" alt="Rebase on top of force-pushed rebase work">
 </div>
 <div class="title">図 48. Rebase on top of force-pushed rebase work</div>
 </div>
@@ -6736,7 +6743,7 @@ Git comes with a CGI script called GitWeb that is sometimes used for this.</p>
 </div>
 <div id="gitweb" class="imageblock">
 <div class="content">
-<img src="images/git-instaweb.png" alt="The GitWeb web-based user interface">
+<<img src="assets/images/git-instaweb.png" alt="The GitWeb web-based user interface">
 </div>
 <div class="title">図 49. The GitWeb web-based user interface</div>
 </div>
@@ -6856,7 +6863,7 @@ After you&#8217;ve logged in, click the &#8220;Admin area&#8221; icon in the men
 </div>
 <div id="gitlab_menu" class="imageblock">
 <div class="content">
-<img src="images/gitlab-menu.png" alt="The `&quot;Admin area`&quot; item in the GitLab menu">
+<<img src="assets/images/gitlab-menu.png" alt="The “Admin area” item in the GitLab menu">
 </div>
 <div class="title">図 50. The &#8220;Admin area&#8221; item in the GitLab menu</div>
 </div>
@@ -6870,7 +6877,7 @@ If the user jane had a project named project, that project&#8217;s url would be 
 </div>
 <div id="gitlab_users" class="imageblock">
 <div class="content">
-<img src="images/gitlab-users.png" alt="The GitLab user administration screen">
+<<img src="assets/images/gitlab-users.png" alt="The GitLab user administration screen">
 </div>
 <div class="title">図 51. The GitLab user administration screen</div>
 </div>
@@ -6892,7 +6899,7 @@ Each group has a project namespace (the same way that users do), so if the group
 </div>
 <div id="gitlab_groups" class="imageblock">
 <div class="content">
-<img src="images/gitlab-groups.png" alt="The GitLab group administration screen">
+<<img src="assets/images/gitlab-groups.png" alt="The GitLab group administration screen">
 </div>
 <div class="title">図 52. The GitLab group administration screen</div>
 </div>
@@ -7044,7 +7051,7 @@ A number of developers are nodes&#8201;&#8212;&#8201;consumers of that hub&#8201
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/centralized_workflow.png" alt="Centralized workflow">
+<<img src="assets/images/centralized_workflow.png" alt="Centralized workflow">
 </div>
 <div class="title">図 53. Centralized workflow</div>
 </div>
@@ -7104,7 +7111,7 @@ The process works as follows (see <a href="#wfdiag_b">Integration-manager workfl
 </div>
 <div id="wfdiag_b" class="imageblock">
 <div class="content">
-<img src="images/integration-manager.png" alt="Integration-manager workflow">
+<<img src="assets/images/integration-manager.png" alt="Integration-manager workflow">
 </div>
 <div class="title">図 54. Integration-manager workflow</div>
 </div>
@@ -7145,7 +7152,7 @@ The <code>master</code> branch is that of the reference repository to which the 
 </div>
 <div id="wfdiag_c" class="imageblock">
 <div class="content">
-<img src="images/benevolent-dictator.png" alt="Benevolent dictator workflow">
+<<img src="assets/images/benevolent-dictator.png" alt="Benevolent dictator workflow">
 </div>
 <div class="title">図 55. Benevolent dictator workflow</div>
 </div>
@@ -7235,7 +7242,7 @@ Git provides an easy way to check for this&#8201;&#8212;&#8201;before you commit
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/git-diff-check.png" alt="Output of `git diff --check`">
+<<img src="assets/images/git-diff-check.png" alt="Output of `git diff --check`">
 </div>
 <div class="title">図 56. Output of <code>git diff --check</code></div>
 </div>
@@ -7405,7 +7412,7 @@ From john@githost:simplegit
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/small-team-1.png" alt="John&#8217;s divergent history">
+<<img src="assets/images/small-team-1.png" alt="John&#8217;s divergent history">
 </div>
 <div class="title">図 57. John&#8217;s divergent history</div>
 </div>
@@ -7425,7 +7432,7 @@ Merge made by the 'recursive' strategy.
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/small-team-2.png" alt="John&#8217;s repository after merging `origin/master`">
+<<img src="assets/images/small-team-2.png" alt="John&#8217;s repository after merging `origin/master`">
 </div>
 <div class="title">図 58. John&#8217;s repository after merging <code>origin/master</code></div>
 </div>
@@ -7445,7 +7452,7 @@ To john@githost:simplegit.git
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/small-team-3.png" alt="John&#8217;s history after pushing to the `origin` server">
+<<img src="assets/images/small-team-3.png" alt="John&#8217;s history after pushing to the `origin` server">
 </div>
 <div class="title">図 59. John&#8217;s history after pushing to the <code>origin</code> server</div>
 </div>
@@ -7455,7 +7462,7 @@ She hasn&#8217;t fetched John&#8217;s changes yet, so her commit history looks l
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/small-team-4.png" alt="Jessica&#8217;s topic branch">
+<<img src="assets/images/small-team-4.png" alt="Jessica&#8217;s topic branch">
 </div>
 <div class="title">図 60. Jessica&#8217;s topic branch</div>
 </div>
@@ -7477,7 +7484,7 @@ Jessica&#8217;s history now looks like this:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/small-team-5.png" alt="Jessica&#8217;s history after fetching John&#8217;s changes">
+<<img src="assets/images/small-team-5.png" alt="Jessica&#8217;s history after fetching John&#8217;s changes">
 </div>
 <div class="title">図 61. Jessica&#8217;s history after fetching John&#8217;s changes</div>
 </div>
@@ -7549,7 +7556,7 @@ Merge made by the 'recursive' strategy.
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/small-team-6.png" alt="Jessica&#8217;s history after merging John&#8217;s changes">
+<<img src="assets/images/small-team-6.png" alt="Jessica&#8217;s history after merging John&#8217;s changes">
 </div>
 <div class="title">図 62. Jessica&#8217;s history after merging John&#8217;s changes</div>
 </div>
@@ -7569,7 +7576,7 @@ To jessica@githost:simplegit.git
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/small-team-7.png" alt="Jessica&#8217;s history after pushing all changes back to the server">
+<<img src="assets/images/small-team-7.png" alt="Jessica&#8217;s history after pushing all changes back to the server">
 </div>
 <div class="title">図 63. Jessica&#8217;s history after pushing all changes back to the server</div>
 </div>
@@ -7581,7 +7588,7 @@ The general sequence is something like this:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/small-team-flow.png" alt="General sequence of events for a simple multiple-developer Git workflow">
+<<img src="assets/images/small-team-flow.png" alt="General sequence of events for a simple multiple-developer Git workflow">
 </div>
 <div class="title">図 64. General sequence of events for a simple multiple-developer Git workflow</div>
 </div>
@@ -7659,7 +7666,7 @@ $ git commit -am 'Add ls-files'
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/managed-team-1.png" alt="Jessica&#8217;s initial commit history">
+<<img src="assets/images/managed-team-1.png" alt="Jessica&#8217;s initial commit history">
 </div>
 <div class="title">図 65. Jessica&#8217;s initial commit history</div>
 </div>
@@ -7763,7 +7770,7 @@ To jessica@githost:simplegit.git
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/managed-team-2.png" alt="Jessica&#8217;s history after committing on a feature branch">
+<<img src="assets/images/managed-team-2.png" alt="Jessica&#8217;s history after committing on a feature branch">
 </div>
 <div class="title">図 66. Jessica&#8217;s history after committing on a feature branch</div>
 </div>
@@ -7773,7 +7780,7 @@ After the integrators merge these branches into the mainline, a fetch will bring
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/managed-team-3.png" alt="Jessica&#8217;s history after merging both her topic branches">
+<<img src="assets/images/managed-team-3.png" alt="Jessica&#8217;s history after merging both her topic branches">
 </div>
 <div class="title">図 67. Jessica&#8217;s history after merging both her topic branches</div>
 </div>
@@ -7784,7 +7791,7 @@ The sequence for the workflow you saw here is something like this:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/managed-team-flow.png" alt="Basic sequence of this managed-team workflow">
+<<img src="assets/images/managed-team-flow.png" alt="Basic sequence of this managed-team workflow">
 </div>
 <div class="title">図 68. Basic sequence of this managed-team workflow</div>
 </div>
@@ -7903,7 +7910,7 @@ $ git fetch origin</code></pre>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/public-small-1.png" alt="Initial commit history with `featureB` work">
+<<img src="assets/images/public-small-1.png" alt="Initial commit history with `featureB` work">
 </div>
 <div class="title">図 69. Initial commit history with <code>featureB</code> work</div>
 </div>
@@ -7923,7 +7930,7 @@ $ git push -f myfork featureA</code></pre>
 </div>
 <div id="psp_b" class="imageblock">
 <div class="content">
-<img src="images/public-small-2.png" alt="Commit history after `featureA` work">
+<<img src="assets/images/public-small-2.png" alt="Commit history after `featureA` work">
 </div>
 <div class="title">図 70. Commit history after <code>featureA</code> work</div>
 </div>
@@ -7958,7 +7965,7 @@ Also the <code>--no-commit</code> option can be useful to delay the merge commit
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/public-small-3.png" alt="Commit history after `featureBv2` work">
+<<img src="assets/images/public-small-3.png" alt="Commit history after `featureBv2` work">
 </div>
 <div class="title">図 71. Commit history after <code>featureBv2</code> work</div>
 </div>
@@ -8511,13 +8518,13 @@ When you have work in a topic branch that you think you&#8217;ve completed, or w
 </div>
 <div id="merwf_a" class="imageblock">
 <div class="content">
-<img src="images/merging-workflows-1.png" alt="History with several topic branches">
+<<img src="assets/images/merging-workflows-1.png" alt="History with several topic branches">
 </div>
 <div class="title">図 72. History with several topic branches</div>
 </div>
 <div id="merwf_b" class="imageblock">
 <div class="content">
-<img src="images/merging-workflows-2.png" alt="After a topic branch merge">
+<<img src="assets/images/merging-workflows-2.png" alt="After a topic branch merge">
 </div>
 <div class="title">図 73. After a topic branch merge</div>
 </div>
@@ -8532,19 +8539,19 @@ Each time you have a new topic branch to merge in (<a href="#merwf_c">Before a t
 </div>
 <div id="merwf_c" class="imageblock">
 <div class="content">
-<img src="images/merging-workflows-3.png" alt="Before a topic branch merge">
+<<img src="assets/images/merging-workflows-3.png" alt="Before a topic branch merge">
 </div>
 <div class="title">図 74. Before a topic branch merge</div>
 </div>
 <div id="merwf_d" class="imageblock">
 <div class="content">
-<img src="images/merging-workflows-4.png" alt="After a topic branch merge">
+<<img src="assets/images/merging-workflows-4.png" alt="After a topic branch merge">
 </div>
 <div class="title">図 75. After a topic branch merge</div>
 </div>
 <div id="merwf_e" class="imageblock">
 <div class="content">
-<img src="images/merging-workflows-5.png" alt="After a topic branch release">
+<<img src="assets/images/merging-workflows-5.png" alt="After a topic branch release">
 </div>
 <div class="title">図 76. After a project release</div>
 </div>
@@ -8565,7 +8572,7 @@ If they&#8217;re safe, they&#8217;re merged into <code>next</code>, and that bra
 </div>
 <div id="merwf_f" class="imageblock">
 <div class="content">
-<img src="images/large-merges-1.png" alt="Managing a complex series of parallel contributed topic branches">
+<<img src="assets/images/large-merges-1.png" alt="Managing a complex series of parallel contributed topic branches">
 </div>
 <div class="title">図 77. Managing a complex series of parallel contributed topic branches</div>
 </div>
@@ -8577,7 +8584,7 @@ This means <code>master</code> almost always moves forward, <code>next</code> is
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/large-merges-2.png" alt="Merging contributed topic branches into long-term integration branches">
+<<img src="assets/images/large-merges-2.png" alt="Merging contributed topic branches into long-term integration branches">
 </div>
 <div class="title">図 78. Merging contributed topic branches into long-term integration branches</div>
 </div>
@@ -8607,7 +8614,7 @@ For example, suppose you have a project that looks like this:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/rebasing-1.png" alt="Example history before a cherry-pick">
+<<img src="assets/images/rebasing-1.png" alt="Example history before a cherry-pick">
 </div>
 <div class="title">図 79. Example history before a cherry-pick</div>
 </div>
@@ -8628,7 +8635,7 @@ Now your history looks like this:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/rebasing-2.png" alt="History after cherry-picking a commit on a topic branch">
+<<img src="assets/images/rebasing-2.png" alt="History after cherry-picking a commit on a topic branch">
 </div>
 <div class="title">図 80. History after cherry-picking a commit on a topic branch</div>
 </div>
@@ -8862,7 +8869,7 @@ Simply visit <a href="https://github.com" class="bare">https://github.com</a>, c
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/signup.png" alt="The GitHub sign-up form">
+<<img src="assets/images/signup.png" alt="The GitHub sign-up form">
 </div>
 <div class="title">図 81. The GitHub sign-up form</div>
 </div>
@@ -8907,7 +8914,7 @@ Open up your account settings using the link at the top-right of the window:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/account-settings.png" alt="The &quot;`Account settings`&quot; link">
+<<img src="assets/images/account-settings.png" alt="The “Account settings” link">
 </div>
 <div class="title">図 82. The &#8220;Account settings&#8221; link</div>
 </div>
@@ -8916,7 +8923,7 @@ Open up your account settings using the link at the top-right of the window:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/ssh-keys.png" alt="The &quot;`SSH keys`&quot; link">
+<<img src="assets/images/ssh-keys.png" alt="The “SSH keys” link">
 </div>
 <div class="title">図 83. The &#8220;SSH keys&#8221; link.</div>
 </div>
@@ -8947,7 +8954,7 @@ First go to the &#8220;Profile&#8221; tab (above the SSH Keys tab) and click &#8
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/your-profile.png" alt="The &quot;`Profile`&quot; link">
+<<img src="assets/images/your-profile.png" alt="The “Profile” link">
 </div>
 <div class="title">図 84. The &#8220;Profile&#8221; link</div>
 </div>
@@ -8956,7 +8963,7 @@ First go to the &#8220;Profile&#8221; tab (above the SSH Keys tab) and click &#8
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/avatar-crop.png" alt="Crop your uploaded avatar">
+<<img src="assets/images/avatar-crop.png" alt="Crop your uploaded avatar">
 </div>
 <div class="title">図 85. Crop your avatar</div>
 </div>
@@ -8975,7 +8982,7 @@ If you use multiple email addresses in your commits and you want GitHub to link 
 </div>
 <div id="_add_email_addresses" class="imageblock">
 <div class="content">
-<img src="images/email-settings.png" alt="Add all your email addresses">
+<<img src="assets/images/email-settings.png" alt="Add all your email addresses">
 </div>
 <div class="title">図 86. Add email addresses</div>
 </div>
@@ -8999,7 +9006,7 @@ Turning it on will make GitHub ask you for two different methods of authenticati
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/2fa-1.png" alt="2FA in the Security Tab">
+<<img src="assets/images/2fa-1.png" alt="2FA in the Security Tab">
 </div>
 <div class="title">図 87. 2FA in the Security Tab</div>
 </div>
@@ -9048,7 +9055,7 @@ This opens up a discussion thread with code review, and the owner and the contri
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/forkbutton.png" alt="The &quot;`Fork`&quot; button">
+<<img src="assets/images/forkbutton.png" alt="The “Fork” button">
 </div>
 <div class="title">図 88. The &#8220;Fork&#8221; button</div>
 </div>
@@ -9124,7 +9131,7 @@ Go to the <a href="https://cli.github.com/">GitHub CLI homepage</a> for installa
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/blink-01-start.png" alt="The project we want to contribute to">
+<<img src="assets/images/blink-01-start.png" alt="The project we want to contribute to">
 </div>
 <div class="title">図 89. The project we want to contribute to</div>
 </div>
@@ -9213,11 +9220,11 @@ To https://github.com/tonychacon/blink
 <p>Now if we go back to our fork on GitHub, we can see that GitHub noticed that we pushed a new topic branch up and presents us with a big green button to check out our changes and open a Pull Request to the original project.</p>
 </div>
 <div class="paragraph">
-<p>You can alternatively go to the &#8220;Branches&#8221; page at <code><a href="https://github.com/&lt;user&gt;/&lt;project&gt;/branches" class="bare">https://github.com/&lt;user&gt;/&lt;project&gt;/branches</a></code> to locate your branch and open a new Pull Request from there.</p>
+<p>You can alternatively go to the &#8220;Branches&#8221; page at <code>https://github.com/&lt;user&gt;/&lt;project&gt;/branches</code> to locate your branch and open a new Pull Request from there.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/blink-02-pr.png" alt="Pull Request button">
+<<img src="assets/images/blink-02-pr.png" alt="Pull Request button">
 </div>
 <div class="title">図 90. Pull Request button</div>
 </div>
@@ -9231,7 +9238,7 @@ It is almost always worthwhile to put some effort into this, since a good descri
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/blink-03-pull-request-open.png" alt="Pull Request creation">
+<<img src="assets/images/blink-03-pull-request-open.png" alt="Pull Request creation">
 </div>
 <div class="title">図 91. Pull Request creation page</div>
 </div>
@@ -9266,7 +9273,7 @@ The project owner can review the unified diff and leave a comment by clicking on
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/blink-04-pr-comment.png" alt="PR line comment">
+<<img src="assets/images/blink-04-pr-comment.png" alt="PR line comment">
 </div>
 <div class="title">図 92. Comment on a specific line of code in a Pull Request</div>
 </div>
@@ -9276,7 +9283,7 @@ We&#8217;ll go over customizing this later, but if he had email notifications tu
 </div>
 <div id="_email_notification" class="imageblock">
 <div class="content">
-<img src="images/blink-04-email.png" alt="Email notification">
+<<img src="assets/images/blink-04-email.png" alt="Email notification">
 </div>
 <div class="title">図 93. Comments sent as email notifications</div>
 </div>
@@ -9287,7 +9294,7 @@ You can see that the code comments are brought into the conversation as well.</p
 </div>
 <div id="_pr_discussion" class="imageblock">
 <div class="content">
-<img src="images/blink-05-general-comment.png" alt="PR discussion page">
+<<img src="assets/images/blink-05-general-comment.png" alt="PR discussion page">
 </div>
 <div class="title">図 94. Pull Request discussion page</div>
 </div>
@@ -9302,7 +9309,7 @@ In <a href="#_pr_final">Pull Request final</a> you can also see that the old cod
 </div>
 <div id="_pr_final" class="imageblock">
 <div class="content">
-<img src="images/blink-06-final.png" alt="PR final">
+<<img src="assets/images/blink-06-final.png" alt="PR final">
 </div>
 <div class="title">図 95. Pull Request final</div>
 </div>
@@ -9374,7 +9381,7 @@ GitHub will test this for you and let you know at the bottom of every Pull Reque
 </div>
 <div id="_pr_fail" class="imageblock">
 <div class="content">
-<img src="images/pr-01-fail.png" alt="PR merge failure">
+<<img src="assets/images/pr-01-fail.png" alt="PR merge failure">
 </div>
 <div class="title">図 96. Pull Request does not merge cleanly</div>
 </div>
@@ -9458,7 +9465,7 @@ To https://github.com/tonychacon/blink
 </div>
 <div id="_pr_merge_fix" class="imageblock">
 <div class="content">
-<img src="images/pr-02-merge-fix.png" alt="PR fixed">
+<<img src="assets/images/pr-02-merge-fix.png" alt="PR fixed">
 </div>
 <div class="title">図 97. Pull Request now merges cleanly</div>
 </div>
@@ -9493,7 +9500,7 @@ We can fill out the description just like <a href="#_pr_references">Cross refere
 </div>
 <div id="_pr_references" class="imageblock">
 <div class="content">
-<img src="images/mentions-01-syntax.png" alt="PR references">
+<<img src="assets/images/mentions-01-syntax.png" alt="PR references">
 </div>
 <div class="title">図 98. Cross references in a Pull Request</div>
 </div>
@@ -9502,7 +9509,7 @@ We can fill out the description just like <a href="#_pr_references">Cross refere
 </div>
 <div id="_pr_references_render" class="imageblock">
 <div class="content">
-<img src="images/mentions-02-render.png" alt="PR references rendered">
+<<img src="assets/images/mentions-02-render.png" alt="PR references rendered">
 </div>
 <div class="title">図 99. Cross references rendered in a Pull Request</div>
 </div>
@@ -9516,7 +9523,7 @@ The link will look something like <a href="#_pr_closed">Link back to the new Pul
 </div>
 <div id="_pr_closed" class="imageblock">
 <div class="content">
-<img src="images/mentions-03-closed.png" alt="PR closed">
+<<img src="assets/images/mentions-03-closed.png" alt="PR closed">
 </div>
 <div class="title">図 100. Link back to the new Pull Request in the closed Pull Request timeline</div>
 </div>
@@ -9539,7 +9546,7 @@ Markdown is like writing in plain text but which is rendered richly.</p>
 </div>
 <div id="_example_markdown" class="imageblock">
 <div class="content">
-<img src="images/markdown-01-example.png" alt="Example Markdown">
+<<img src="assets/images/markdown-01-example.png" alt="Example Markdown">
 </div>
 <div class="title">図 101. An example of GitHub Flavored Markdown as written and as rendered</div>
 </div>
@@ -9569,7 +9576,7 @@ Putting them into an Issue or Pull Request normally indicates things that you wa
 </div>
 <div id="_eg_task_lists" class="imageblock">
 <div class="content">
-<img src="images/markdown-02-tasks.png" alt="Example Task List">
+<<img src="assets/images/markdown-02-tasks.png" alt="Example Task List">
 </div>
 <div class="title">図 102. Task lists rendered in a Markdown comment</div>
 </div>
@@ -9585,7 +9592,7 @@ You can see an example of this in <a href="#_task_list_progress">Task list summa
 </div>
 <div id="_task_list_progress" class="imageblock">
 <div class="content">
-<img src="images/markdown-03-task-summary.png" alt="Example Task List">
+<<img src="assets/images/markdown-03-task-summary.png" alt="Example Task List">
 </div>
 <div class="title">図 103. Task list summary in the Pull Request list</div>
 </div>
@@ -9619,7 +9626,7 @@ In the case of the above example, it would end up rendering like <a href="#_md_c
 </div>
 <div id="_md_code" class="imageblock">
 <div class="content">
-<img src="images/markdown-04-fenced-code.png" alt="Rendered fenced code">
+<<img src="assets/images/markdown-04-fenced-code.png" alt="Rendered fenced code">
 </div>
 <div class="title">図 104. Rendered fenced code example</div>
 </div>
@@ -9647,7 +9654,7 @@ How big are these slings and in particular, these arrows?</code></pre>
 </div>
 <div id="_md_quote" class="imageblock">
 <div class="content">
-<img src="images/markdown-05-quote.png" alt="Rendered quoting">
+<<img src="assets/images/markdown-05-quote.png" alt="Rendered quoting">
 </div>
 <div class="title">図 105. Rendered quoting example</div>
 </div>
@@ -9662,7 +9669,7 @@ If you are typing a comment and you start with a <code>:</code> character, an au
 </div>
 <div id="_md_emoji_auto" class="imageblock">
 <div class="content">
-<img src="images/markdown-06-emoji-complete.png" alt="Emoji autocompleter">
+<<img src="assets/images/markdown-06-emoji-complete.png" alt="Emoji autocompleter">
 </div>
 <div class="title">図 106. Emoji autocompleter in action</div>
 </div>
@@ -9686,7 +9693,7 @@ For instance, you could write something like this:</p>
 </div>
 <div id="_md_emoji" class="imageblock">
 <div class="content">
-<img src="images/markdown-07-emoji.png" alt="Emoji">
+<<img src="assets/images/markdown-07-emoji.png" alt="Emoji">
 </div>
 <div class="title">図 107. Heavy emoji commenting</div>
 </div>
@@ -9720,7 +9727,7 @@ In addition to adding Markdown image links to comments, which can be difficult t
 </div>
 <div id="_md_drag" class="imageblock">
 <div class="content">
-<img src="images/markdown-08-drag-drop.png" alt="Drag and drop images">
+<<img src="assets/images/markdown-08-drag-drop.png" alt="Drag and drop images">
 </div>
 <div class="title">図 108. Drag and drop images to upload them and auto-embed them</div>
 </div>
@@ -9846,13 +9853,13 @@ Start by clicking the &#8220;New repository&#8221; button on the right-hand side
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/newrepo.png" alt="The &quot;`Your repositories`&quot; area">
+<<img src="assets/images/newrepo.png" alt="The “Your repositories” area">
 </div>
 <div class="title">図 109. The &#8220;Your repositories&#8221; area</div>
 </div>
 <div id="_new_repo_dropdown" class="imageblock">
 <div class="content">
-<img src="images/new-repo.png" alt="The &quot;`new repository`&quot; dropdown">
+<<img src="assets/images/new-repo.png" alt="The “new repository” dropdown">
 </div>
 <div class="title">図 110. The &#8220;New repository&#8221; dropdown</div>
 </div>
@@ -9861,7 +9868,7 @@ Start by clicking the &#8220;New repository&#8221; button on the right-hand side
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/newrepoform.png" alt="The &quot;`new repository`&quot; form">
+<<img src="assets/images/newrepoform.png" alt="The “new repository” form">
 </div>
 <div class="title">図 111. The &#8220;new repository&#8221; form</div>
 </div>
@@ -9875,7 +9882,7 @@ We won&#8217;t belabor this here; if you need a refresher, check out <a href="#c
 </div>
 <div class="paragraph">
 <p>Now that your project is hosted on GitHub, you can give the URL to anyone you want to share your project with.
-Every project on GitHub is accessible over HTTPS as <code><a href="https://github.com/&lt;user&gt;/&lt;project_name&gt" class="bare">https://github.com/&lt;user&gt;/&lt;project_name&gt</a>;</code>, and over SSH as <code>git@github.com:&lt;user&gt;/&lt;project_name&gt;</code>.
+Every project on GitHub is accessible over HTTPS as <code>https://github.com/&lt;user&gt;/&lt;project_name&gt;</code>, and over SSH as <code>git@github.com:&lt;user&gt;/&lt;project_name&gt;</code>.
 Git can fetch from and push to both of these URLs, but they are access-controlled based on the credentials of the user connecting to them.</p>
 </div>
 <div class="admonitionblock note">
@@ -9907,7 +9914,7 @@ Doing so will give them &#8220;push&#8221; access, which means they have both re
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/reposettingslink.png" alt="The repository settings link">
+<<img src="assets/images/reposettingslink.png" alt="The repository settings link">
 </div>
 <div class="title">図 112. The repository settings link</div>
 </div>
@@ -9919,7 +9926,7 @@ If you need to revoke access, just click the &#8220;X&#8221; on the right-hand s
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/collaborators.png" alt="The repository collaborators box">
+<<img src="assets/images/collaborators.png" alt="The repository collaborators box">
 </div>
 <div class="title">図 113. Repository collaborators</div>
 </div>
@@ -9944,7 +9951,7 @@ You should get an email notifying you about the new Pull Request and it should l
 </div>
 <div id="_email_pr" class="imageblock">
 <div class="content">
-<img src="images/maint-01-email.png" alt="Pull Request email notification">
+<<img src="assets/images/maint-01-email.png" alt="Pull Request email notification">
 </div>
 <div class="title">図 114. Email notification of a new Pull Request</div>
 </div>
@@ -9981,7 +9988,7 @@ They will each have a link to the Pull Request where the activity is happening a
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/maint-03-email-resp.png" alt="Email response">
+<<img src="assets/images/maint-03-email-resp.png" alt="Email response">
 </div>
 <div class="title">図 115. Responses to emails are included in the thread</div>
 </div>
@@ -9996,7 +10003,7 @@ As you can see in <a href="#_merge_button">Merge button and instructions for mer
 </div>
 <div id="_merge_button" class="imageblock">
 <div class="content">
-<img src="images/maint-02-merge.png" alt="Merge button">
+<<img src="assets/images/maint-02-merge.png" alt="Merge button">
 </div>
 <div class="title">図 116. Merge button and instructions for merging a Pull Request manually</div>
 </div>
@@ -10135,7 +10142,7 @@ If you hit the &#8220;Edit&#8221; button at the right of that box you can change
 </div>
 <div id="_pr_targets" class="imageblock">
 <div class="content">
-<img src="images/maint-04-target.png" alt="PR targets">
+<<img src="assets/images/maint-04-target.png" alt="PR targets">
 </div>
 <div class="title">図 117. Manually change the Pull Request target fork and branch</div>
 </div>
@@ -10154,7 +10161,7 @@ If you hit the &#8220;Edit&#8221; button at the right of that box you can change
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/maint-05-mentions.png" alt="Mentions">
+<<img src="assets/images/maint-05-mentions.png" alt="Mentions">
 </div>
 <div class="title">図 118. Start typing @ to mention someone</div>
 </div>
@@ -10173,7 +10180,7 @@ If you no longer wish to receive notifications, there is an &#8220;Unsubscribe&#
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/maint-06-unsubscribe.png" alt="Unsubscribe">
+<<img src="assets/images/maint-06-unsubscribe.png" alt="Unsubscribe">
 </div>
 <div class="title">図 119. Unsubscribe from an Issue or Pull Request</div>
 </div>
@@ -10185,7 +10192,7 @@ If you go to the &#8220;Notification center&#8221; tab from the settings page, y
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/maint-07-notifications.png" alt="Notification center">
+<<img src="assets/images/maint-07-notifications.png" alt="Notification center">
 </div>
 <div class="title">図 120. Notification center options</div>
 </div>
@@ -10200,7 +10207,7 @@ If you have this option selected in your preferences and a notification is trigg
 </div>
 <div id="_not_center" class="imageblock">
 <div class="content">
-<img src="images/maint-08-notifications-page.png" alt="Notification center">
+<<img src="assets/images/maint-08-notifications-page.png" alt="Notification center">
 </div>
 <div class="title">図 121. Notification center</div>
 </div>
@@ -10305,7 +10312,7 @@ If you have a file named <code>CONTRIBUTING</code> with any file extension, GitH
 </div>
 <div id="_contrib_file" class="imageblock">
 <div class="content">
-<img src="images/maint-09-contrib.png" alt="Contributing notice">
+<<img src="assets/images/maint-09-contrib.png" alt="Contributing notice">
 </div>
 <div class="title">図 122. Opening a Pull Request when a CONTRIBUTING file exists</div>
 </div>
@@ -10326,7 +10333,7 @@ This way people may actually read the guidelines before opening the Pull Request
 </div>
 <div id="_default_branch" class="imageblock">
 <div class="content">
-<img src="images/maint-10-default-branch.png" alt="Default branch">
+<<img src="assets/images/maint-10-default-branch.png" alt="Default branch">
 </div>
 <div class="title">図 123. Change the default branch for a project</div>
 </div>
@@ -10341,7 +10348,7 @@ This way people may actually read the guidelines before opening the Pull Request
 </div>
 <div id="_transfer_project" class="imageblock">
 <div class="content">
-<img src="images/maint-11-transfer.png" alt="Transfer">
+<<img src="assets/images/maint-11-transfer.png" alt="Transfer">
 </div>
 <div class="title">図 124. Transfer a project to another GitHub user or Organization</div>
 </div>
@@ -10371,7 +10378,7 @@ Normally these accounts are used for Open Source groups (such as &#8220;perl&#82
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/neworg.png" alt="The &quot;`New organization`&quot; menu item">
+<<img src="assets/images/neworg.png" alt="The “New organization” menu item">
 </div>
 <div class="title">図 125. The &#8220;New organization&#8221; menu item</div>
 </div>
@@ -10411,7 +10418,7 @@ Teams make this easy, without having to manage the collaborators for every indiv
 </div>
 <div id="_org_page" class="imageblock">
 <div class="content">
-<img src="images/orgs-01-page.png" alt="The Organization page">
+<<img src="assets/images/orgs-01-page.png" alt="The Organization page">
 </div>
 <div class="title">図 126. The Organization page</div>
 </div>
@@ -10423,7 +10430,7 @@ You can change that level by clicking the &#8220;Settings&#8221; button in <a hr
 </div>
 <div id="_team_page" class="imageblock">
 <div class="content">
-<img src="images/orgs-02-teams.png" alt="The Team page">
+<<img src="assets/images/orgs-02-teams.png" alt="The Team page">
 </div>
 <div class="title">図 127. The Team page</div>
 </div>
@@ -10447,7 +10454,7 @@ You can go to the 'Audit Log' tab and see what events have happened at an organi
 </div>
 <div id="_the_audit_log" class="imageblock">
 <div class="content">
-<img src="images/orgs-03-audit.png" alt="The Audit log">
+<<img src="assets/images/orgs-03-audit.png" alt="The Audit log">
 </div>
 <div class="title">図 128. The Audit log</div>
 </div>
@@ -10479,7 +10486,7 @@ Under the &#8220;Webhooks and Services&#8221; tab you will see something like <a
 </div>
 <div id="_services_hooks" class="imageblock">
 <div class="content">
-<img src="images/scripting-01-services.png" alt="Services and hooks">
+<<img src="assets/images/scripting-01-services.png" alt="Services and hooks">
 </div>
 <div class="title">図 129. Services and Hooks configuration section</div>
 </div>
@@ -10491,7 +10498,7 @@ If you choose &#8220;email&#8221; from the &#8220;Add Service&#8221; dropdown, y
 </div>
 <div id="_service_config" class="imageblock">
 <div class="content">
-<img src="images/scripting-02-email-service.png" alt="Email service">
+<<img src="assets/images/scripting-02-email-service.png" alt="Email service">
 </div>
 <div class="title">図 130. Email service configuration</div>
 </div>
@@ -10520,7 +10527,7 @@ This will bring you to a page that looks like <a href="#_web_hook">Web hook conf
 </div>
 <div id="_web_hook" class="imageblock">
 <div class="content">
-<img src="images/scripting-03-webhook.png" alt="Web hook">
+<<img src="assets/images/scripting-03-webhook.png" alt="Web hook">
 </div>
 <div class="title">図 131. Web hook configuration</div>
 </div>
@@ -10583,7 +10590,7 @@ This makes it incredibly easy to test and debug your hooks.</p>
 </div>
 <div id="_web_hook_debug" class="imageblock">
 <div class="content">
-<img src="images/scripting-04-webhook-debug.png" alt="Webhook debug">
+<<img src="assets/images/scripting-04-webhook-debug.png" alt="Webhook debug">
 </div>
 <div class="title">図 132. Web hook debugging information</div>
 </div>
@@ -10669,7 +10676,7 @@ You can generate this from the &#8220;Applications&#8221; tab of your settings p
 </div>
 <div id="_access_token" class="imageblock">
 <div class="content">
-<img src="images/scripting-05-access-token.png" alt="Access Token">
+<<img src="assets/images/scripting-05-access-token.png" alt="Access Token">
 </div>
 <div class="title">図 133. Generate your access token from the &#8220;Applications&#8221; tab of your settings page</div>
 </div>
@@ -10719,7 +10726,7 @@ To do so we have to do an HTTP POST request to <code>repos/&lt;user&gt;/&lt;repo
 </div>
 <div id="_api_comment" class="imageblock">
 <div class="content">
-<img src="images/scripting-06-comment.png" alt="API Comment">
+<<img src="assets/images/scripting-06-comment.png" alt="API Comment">
 </div>
 <div class="title">図 134. A comment posted from the GitHub API</div>
 </div>
@@ -10796,7 +10803,7 @@ For example, a testing service may provide a status and a validation service lik
 </div>
 <div id="_commit_status" class="imageblock">
 <div class="content">
-<img src="images/scripting-07-status.png" alt="Commit status">
+<<img src="assets/images/scripting-07-status.png" alt="Commit status">
 </div>
 <div class="title">図 135. Commit status via the API</div>
 </div>
@@ -11180,7 +11187,7 @@ Date:   Fri Nov 7 13:47:59 2008 -0500
 </div>
 </div>
 <div class="paragraph">
-<p>This can also be written <code>HEAD<sub>~</sub></code>, which again is the first parent of the first parent of the first parent:</p>
+<p>This can also be written <code>HEAD~~~</code>, which again is the first parent of the first parent of the first parent:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -11211,7 +11218,7 @@ For example, say you have a commit history that looks like <a href="#double_dot"
 </div>
 <div id="double_dot" class="imageblock">
 <div class="content">
-<img src="images/double-dot.png" alt="Example history for range selection">
+<<img src="assets/images/double-dot.png" alt="Example history for range selection">
 </div>
 <div class="title">図 136. Example history for range selection</div>
 </div>
@@ -12923,7 +12930,7 @@ Think of the working directory as a <strong>sandbox</strong>, where you can try 
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/reset-workflow.png" alt="reset workflow">
+<<img src="assets/images/reset-workflow.png" alt="reset workflow">
 </div>
 </div>
 <div class="paragraph">
@@ -12933,7 +12940,7 @@ Now we run <code>git init</code>, which will create a Git repository with a HEAD
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/reset-ex1.png" alt="reset ex1">
+<<img src="assets/images/reset-ex1.png" alt="reset ex1">
 </div>
 </div>
 <div class="paragraph">
@@ -12944,7 +12951,7 @@ Now we run <code>git init</code>, which will create a Git repository with a HEAD
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/reset-ex2.png" alt="reset ex2">
+<<img src="assets/images/reset-ex2.png" alt="reset ex2">
 </div>
 </div>
 <div class="paragraph">
@@ -12952,7 +12959,7 @@ Now we run <code>git init</code>, which will create a Git repository with a HEAD
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/reset-ex3.png" alt="reset ex3">
+<<img src="assets/images/reset-ex3.png" alt="reset ex3">
 </div>
 </div>
 <div class="paragraph">
@@ -12965,7 +12972,7 @@ Let&#8217;s call this <strong>v2</strong> of the file, and indicate it in red.</
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/reset-ex4.png" alt="reset ex4">
+<<img src="assets/images/reset-ex4.png" alt="reset ex4">
 </div>
 </div>
 <div class="paragraph">
@@ -12974,7 +12981,7 @@ Next we run <code>git add</code> on it to stage it into our index.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/reset-ex5.png" alt="reset ex5">
+<<img src="assets/images/reset-ex5.png" alt="reset ex5">
 </div>
 </div>
 <div class="paragraph">
@@ -12983,7 +12990,7 @@ Finally, we run <code>git commit</code> to finalize the commit.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/reset-ex6.png" alt="reset ex6">
+<<img src="assets/images/reset-ex6.png" alt="reset ex6">
 </div>
 </div>
 <div class="paragraph">
@@ -13005,7 +13012,7 @@ So now our history looks like this:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/reset-start.png" alt="reset start">
+<<img src="assets/images/reset-start.png" alt="reset start">
 </div>
 </div>
 <div class="paragraph">
@@ -13022,7 +13029,7 @@ This means if HEAD is set to the <code>master</code> branch (i.e. you&#8217;re c
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/reset-soft.png" alt="reset soft">
+<<img src="assets/images/reset-soft.png" alt="reset soft">
 </div>
 </div>
 <div class="paragraph">
@@ -13046,7 +13053,7 @@ You could now update the index and run <code>git commit</code> again to accompli
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/reset-mixed.png" alt="reset mixed">
+<<img src="assets/images/reset-mixed.png" alt="reset mixed">
 </div>
 </div>
 <div class="paragraph">
@@ -13066,7 +13073,7 @@ If you use the <code>--hard</code> option, it will continue to this stage.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/reset-hard.png" alt="reset hard">
+<<img src="assets/images/reset-hard.png" alt="reset hard">
 </div>
 </div>
 <div class="paragraph">
@@ -13126,7 +13133,7 @@ This form (since you did not specify a commit SHA-1 or branch, and you didn&#821
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/reset-path1.png" alt="reset path1">
+<<img src="assets/images/reset-path1.png" alt="reset path1">
 </div>
 </div>
 <div class="paragraph">
@@ -13135,7 +13142,7 @@ If we look at the diagram for that command and think about what <code>git add</c
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/reset-path2.png" alt="reset path2">
+<<img src="assets/images/reset-path2.png" alt="reset path2">
 </div>
 </div>
 <div class="paragraph">
@@ -13147,7 +13154,7 @@ We would just run something like <code>git reset eb43bf file.txt</code>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/reset-path3.png" alt="reset path3">
+<<img src="assets/images/reset-path3.png" alt="reset path3">
 </div>
 </div>
 <div class="paragraph">
@@ -13175,7 +13182,7 @@ The second commit was a work in progress and you want to squash it down.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/reset-squash-r1.png" alt="reset squash r1">
+<<img src="assets/images/reset-squash-r1.png" alt="reset squash r1">
 </div>
 </div>
 <div class="paragraph">
@@ -13183,7 +13190,7 @@ The second commit was a work in progress and you want to squash it down.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/reset-squash-r2.png" alt="reset squash r2">
+<<img src="assets/images/reset-squash-r2.png" alt="reset squash r2">
 </div>
 </div>
 <div class="paragraph">
@@ -13191,7 +13198,7 @@ The second commit was a work in progress and you want to squash it down.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/reset-squash-r3.png" alt="reset squash r3">
+<<img src="assets/images/reset-squash-r3.png" alt="reset squash r3">
 </div>
 </div>
 <div class="paragraph">
@@ -13231,7 +13238,7 @@ HEAD will now point to <code>master</code>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/reset-checkout.png" alt="reset checkout">
+<<img src="assets/images/reset-checkout.png" alt="reset checkout">
 </div>
 </div>
 </div>
@@ -13379,7 +13386,7 @@ hello()</code></pre>
 </div>
 <div class="paragraph">
 <p>In our repository, we create a new branch named <code>whitespace</code> and proceed to change all the Unix line endings to DOS line endings, essentially changing every line of the file, but just with whitespace.
-Then we change the line <code>hello world'' to </code>hello mundo''.</p>
+Then we change the line &#8220;hello world&#8221; to &#8220;hello mundo&#8221;.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -13524,8 +13531,8 @@ Then we want to fix up either their side or our side and re-try the merge again 
 </div>
 <div class="paragraph">
 <p>Getting the three file versions is actually pretty easy.
-Git stores all of these versions in the index under <code>stages'' which each have numbers associated with them.
-Stage 1 is the common ancestor, stage 2 is your version and stage 3 is from the <code>MERGE_HEAD</code>, the version you&#8217;re merging in (</code>theirs'').</p>
+Git stores all of these versions in the index under &#8220;stages&#8221; which each have numbers associated with them.
+Stage 1 is the common ancestor, stage 2 is your version and stage 3 is from the <code>MERGE_HEAD</code>, the version you&#8217;re merging in (&#8220;theirs&#8221;).</p>
 </div>
 <div class="paragraph">
 <p>You can extract a copy of each of these versions of the conflicted file with the <code>git show</code> command and a special syntax.</p>
@@ -13737,7 +13744,7 @@ This can be useful if you want to reset the markers and try to resolve them agai
 </div>
 <div class="paragraph">
 <p>You can pass <code>--conflict</code> either <code>diff3</code> or <code>merge</code> (which is the default).
-If you pass it <code>diff3</code>, Git will use a slightly different version of conflict markers, not only giving you the <code>ours'' and </code>theirs'' versions, but also the ``base'' version inline to give you more context.</p>
+If you pass it <code>diff3</code>, Git will use a slightly different version of conflict markers, not only giving you the &#8220;ours&#8221; and &#8220;theirs&#8221; versions, but also the &#8220;base&#8221; version inline to give you more context.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -13931,7 +13938,7 @@ Let&#8217;s say you started work on a topic branch, accidentally merged it into 
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/undomerge-start.png" alt="Accidental merge commit">
+<<img src="assets/images/undomerge-start.png" alt="Accidental merge commit">
 </div>
 <div class="title">図 137. Accidental merge commit</div>
 </div>
@@ -13946,7 +13953,7 @@ In most cases, if you follow the errant <code>git merge</code> with <code>git re
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/undomerge-reset.png" alt="History after `git reset --hard HEAD~`">
+<<img src="assets/images/undomerge-reset.png" alt="History after `git reset --hard HEAD~`">
 </div>
 <div class="title">図 138. History after <code>git reset --hard HEAD~</code></div>
 </div>
@@ -13996,13 +14003,13 @@ In this case, we want to undo all the changes introduced by merging in parent #2
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/undomerge-revert.png" alt="History after `git revert -m 1`">
+<<img src="assets/images/undomerge-revert.png" alt="History after `git revert -m 1`">
 </div>
 <div class="title">図 139. History after <code>git revert -m 1</code></div>
 </div>
 <div class="paragraph">
-<p>The new commit <code>^M</code> has exactly the same contents as <code>C6</code>, so starting from here it&#8217;s as if the merge never happened, except that the now-unmerged commits are still in <code>HEAD&#8217;s history.
-Git will get confused if you try to merge `topic</code> into <code>master</code> again:</p>
+<p>The new commit <code>^M</code> has exactly the same contents as <code>C6</code>, so starting from here it&#8217;s as if the merge never happened, except that the now-unmerged commits are still in <code>HEAD</code>’s history.
+Git will get confused if you try to merge <code>topic</code> into <code>master</code> again:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -14016,7 +14023,7 @@ What&#8217;s worse, if you add work to <code>topic</code> and merge again, Git w
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/undomerge-revert2.png" alt="History with a bad merge">
+<<img src="assets/images/undomerge-revert2.png" alt="History with a bad merge">
 </div>
 <div class="title">図 140. History with a bad merge</div>
 </div>
@@ -14032,7 +14039,7 @@ $ git merge topic</code></pre>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/undomerge-revert3.png" alt="History after re-merging a reverted merge">
+<<img src="assets/images/undomerge-revert3.png" alt="History after re-merging a reverted merge">
 </div>
 <div class="title">図 141. History after re-merging a reverted merge</div>
 </div>
@@ -14291,7 +14298,7 @@ end</code></pre>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/rerere1.png" alt="rerere1">
+<<img src="assets/images/rerere1.png" alt="rerere1">
 </div>
 </div>
 <div class="paragraph">
@@ -14408,7 +14415,7 @@ Recorded resolution for 'hello.rb'.
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/rerere2.png" alt="rerere2">
+<<img src="assets/images/rerere2.png" alt="rerere2">
 </div>
 </div>
 <div class="paragraph">
@@ -14477,7 +14484,7 @@ index a440db6,54336ba..0000000
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/rerere3.png" alt="rerere3">
+<<img src="assets/images/rerere3.png" alt="rerere3">
 </div>
 </div>
 <div class="paragraph">
@@ -16097,7 +16104,7 @@ The second line will just be commits four and five - that will be the recent his
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/replace1.png" alt="replace1">
+<<img src="assets/images/replace1.png" alt="replace1">
 </div>
 </div>
 <div class="paragraph">
@@ -16116,7 +16123,7 @@ c1822cf First commit</code></pre>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/replace2.png" alt="replace2">
+<<img src="assets/images/replace2.png" alt="replace2">
 </div>
 </div>
 <div class="paragraph">
@@ -16185,7 +16192,7 @@ You can read more about plumbing commands in <a href="#_plumbing_porcelain">Plum
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/replace3.png" alt="replace3">
+<<img src="assets/images/replace3.png" alt="replace3">
 </div>
 </div>
 <div class="paragraph">
@@ -16202,7 +16209,7 @@ Applying: fifth commit</code></pre>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/replace4.png" alt="replace4">
+<<img src="assets/images/replace4.png" alt="replace4">
 </div>
 </div>
 <div class="paragraph">
@@ -16273,7 +16280,7 @@ c1822cf First commit</code></pre>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/replace5.png" alt="replace5">
+<<img src="assets/images/replace5.png" alt="replace5">
 </div>
 </div>
 <div class="paragraph">
@@ -17069,7 +17076,7 @@ $ git config --global diff.external extDiff</code></pre>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/p4merge.png" alt="P4Merge">
+<<img src="assets/images/p4merge.png" alt="P4Merge">
 </div>
 <div class="title">図 142. P4Merge</div>
 </div>
@@ -17525,19 +17532,19 @@ These filters can be set to do all sorts of fun things.</p>
 </div>
 <div id="filters_a" class="imageblock">
 <div class="content">
-<img src="images/smudge.png" alt="The &quot;`smudge`&quot; filter is run on checkout">
+<<img src="assets/images/smudge.png" alt="The “smudge” filter is run on checkout">
 </div>
 <div class="title">図 143. The &#8220;smudge&#8221; filter is run on checkout</div>
 </div>
 <div id="filters_b" class="imageblock">
 <div class="content">
-<img src="images/clean.png" alt="The &quot;`clean`&quot; filter is run when files are staged">
+<<img src="assets/images/clean.png" alt="The “clean” filter is run when files are staged">
 </div>
 <div class="title">図 144. The &#8220;clean&#8221; filter is run when files are staged</div>
 </div>
 <div class="paragraph">
 <p>The original commit message for this feature gives a simple example of running all your C source code through the <code>indent</code> program before committing.
-You can set it up by setting the filter attribute in your <code>.gitattributes</code> file to filter <code>*.c</code> files with the &#8220;indent&#8221; filter:</p>
+You can set it up by setting the filter attribute in your <code>.gitattributes</code> file to filter <code>\*.c</code> files with the &#8220;indent&#8221; filter:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -18546,7 +18553,7 @@ Subversion has to clone one revision at a time and then push it back into anothe
 <div class="paragraph">
 <p>Now that you have a Subversion repository to which you have write access, you can go through a typical workflow.
 You&#8217;ll start with the <code>git svn clone</code> command, which imports an entire Subversion repository into a local Git repository.
-Remember that if you&#8217;re importing from a real hosted Subversion repository, you should replace the <code><a href="file:///tmp/test-svn" class="bare">file:///tmp/test-svn</a></code> here with the URL of your Subversion repository:</p>
+Remember that if you&#8217;re importing from a real hosted Subversion repository, you should replace the <code>file:///tmp/test-svn</code> here with the URL of your Subversion repository:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -19677,7 +19684,7 @@ When that has all completed, you&#8217;ll see this:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/git-fusion-boot.png" alt="The Git Fusion virtual machine boot screen">
+<<img src="assets/images/git-fusion-boot.png" alt="The Git Fusion virtual machine boot screen">
 </div>
 <div class="title">図 145. The Git Fusion virtual machine boot screen</div>
 </div>
@@ -19964,7 +19971,7 @@ Let&#8217;s take a look at the history of the <code>README</code> file from Perf
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/git-fusion-perforce-graph.png" alt="Perforce revision graph resulting from Git push">
+<<img src="assets/images/git-fusion-perforce-graph.png" alt="Perforce revision graph resulting from Git push">
 </div>
 <div class="title">図 146. Perforce revision graph resulting from Git push</div>
 </div>
@@ -21706,7 +21713,7 @@ When using PowerShell, parameters using {} characters have to be quoted to avoid
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/data-model-1.png" alt="Simple version of the Git data model">
+<<img src="assets/images/data-model-1.png" alt="Simple version of the Git data model">
 </div>
 <div class="title">図 147. Simple version of the Git data model</div>
 </div>
@@ -21798,7 +21805,7 @@ You can think of the data that Git contains for these structures as being like t
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/data-model-2.png" alt="The content structure of your current Git data">
+<<img src="assets/images/data-model-2.png" alt="The content structure of your current Git data">
 </div>
 <div class="title">図 148. The content structure of your current Git data</div>
 </div>
@@ -21926,7 +21933,7 @@ Here are all the objects in the example directory now, commented with what they 
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/data-model-3.png" alt="All the reachable objects in your Git directory">
+<<img src="assets/images/data-model-3.png" alt="All the reachable objects in your Git directory">
 </div>
 <div class="title">図 149. All the reachable objects in your Git directory</div>
 </div>
@@ -22102,7 +22109,7 @@ fdf4fc3344e67ab068f836878b6c4951e3b15f3d First commit</code></pre>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/data-model-4.png" alt="Git directory objects with branch head references included">
+<<img src="assets/images/data-model-4.png" alt="Git directory objects with branch head references included">
 </div>
 <div class="title">図 150. Git directory objects with branch head references included</div>
 </div>
@@ -23441,8 +23448,8 @@ These are used in the <code>.gitignore</code> file, but also on the command-line
 </div>
 <div class="paragraph">
 <p><strong><code>GIT_GLOB_PATHSPECS</code></strong> and <strong><code>GIT_NOGLOB_PATHSPECS</code></strong> control the default behavior of wildcards in pathspecs.
-If <code>GIT_GLOB_PATHSPECS</code> is set to 1, wildcard characters act as wildcards (which is the default); if <code>GIT_NOGLOB_PATHSPECS</code> is set to 1, wildcard characters only match themselves, meaning something like <code><strong>.c</code> would only match a file <em>named</em> &#8220;</strong>.c&#8221;, rather than any file whose name ends with <code>.c</code>.
-You can override this in individual cases by starting the pathspec with <code>:(glob)</code> or <code>:(literal)</code>, as in <code>:(glob)*.c</code>.</p>
+If <code>GIT_GLOB_PATHSPECS</code> is set to 1, wildcard characters act as wildcards (which is the default); if <code>GIT_NOGLOB_PATHSPECS</code> is set to 1, wildcard characters only match themselves, meaning something like <code>*.c</code> would only match a file <em>named</em> &#8220;\*.c&#8221;, rather than any file whose name ends with <code>.c</code>.
+You can override this in individual cases by starting the pathspec with <code>:(glob)</code> or <code>:(literal)</code>, as in <code>:(glob)\*.c</code>.</p>
 </div>
 <div class="paragraph">
 <p><strong><code>GIT_LITERAL_PATHSPECS</code></strong> disables both of the above behaviors; no wildcard characters will work, and the override prefixes are disabled as well.</p>
@@ -23745,7 +23752,7 @@ Gitk&#8217;s interface looks like this:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/gitk.png" alt="The `gitk` history viewer">
+<<img src="assets/images/gitk.png" alt="The `gitk` history viewer">
 </div>
 <div class="title">図 151. The <code>gitk</code> history viewer</div>
 </div>
@@ -23769,7 +23776,7 @@ It, too, is easiest to invoke from the command line:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/git-gui.png" alt="The `git-gui` commit tool">
+<<img src="assets/images/git-gui.png" alt="The `git-gui` commit tool">
 </div>
 <div class="title">図 152. The <code>git-gui</code> commit tool</div>
 </div>
@@ -23802,13 +23809,13 @@ They look like this:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/github_mac.png" alt="GitHub for macOS">
+<<img src="assets/images/github_mac.png" alt="GitHub for macOS">
 </div>
 <div class="title">図 153. GitHub for macOS</div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/github_win.png" alt="GitHub for Windows">
+<<img src="assets/images/github_win.png" alt="GitHub for Windows">
 </div>
 <div class="title">図 154. GitHub for Windows</div>
 </div>
@@ -23878,7 +23885,7 @@ On macOS, there&#8217;s a button at the top of the window for creating a new bra
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/branch_widget_mac.png" alt="`Create Branch`" width="button on macOS">
+<<img src="assets/images/branch_widget_mac.png" alt="“Create Branch” button on macOS">
 </div>
 <div class="title">図 155. &#8220;Create Branch&#8221; button on macOS</div>
 </div>
@@ -23887,7 +23894,7 @@ On macOS, there&#8217;s a button at the top of the window for creating a new bra
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/branch_widget_win.png" alt="Creating a branch on Windows">
+<<img src="assets/images/branch_widget_win.png" alt="Creating a branch on Windows">
 </div>
 <div class="title">図 156. Creating a branch on Windows</div>
 </div>
@@ -23948,7 +23955,7 @@ You&#8217;ll see the "Connect" view, which looks a bit like this:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/vs-1.png" alt="Connecting to a Git repository from Team Explorer">
+<<img src="assets/images/vs-1.png" alt="Connecting to a Git repository from Team Explorer">
 </div>
 <div class="title">図 157. Connecting to a Git repository from Team Explorer</div>
 </div>
@@ -23960,7 +23967,7 @@ This is a hub for performing Git actions; when you&#8217;re <em>writing</em> cod
 </div>
 <div id="vs_home" class="imageblock">
 <div class="content">
-<img src="images/vs-2.png" alt="The &quot;`Home`&quot; view for a Git repository in Visual Studio">
+<<img src="assets/images/vs-2.png" alt="The “Home” view for a Git repository in Visual Studio">
 </div>
 <div class="title">図 158. The "Home" view for a Git repository in Visual Studio</div>
 </div>
@@ -24033,7 +24040,7 @@ You will need to have git version 2.0.0 (or newer) installed.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/jb.png" alt="JetBrains IDE 内のバージョン管理ツールウィンドウ">
+<<img src="assets/images/jb.png" alt="JetBrains IDE 内のバージョン管理ツールウィンドウ">
 </div>
 <div class="title">図 159. JetBrains IDE 内のバージョン管理ツールウィンドウ</div>
 </div>
@@ -24120,7 +24127,7 @@ Now your bash prompt will look like this when you&#8217;re anywhere inside a Git
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/git-bash.png" alt="Customized `bash` prompt">
+<<img src="assets/images/git-bash.png" alt="Customized `bash` prompt">
 </div>
 <div class="title">図 160. Customized <code>bash</code> prompt</div>
 </div>
@@ -24173,7 +24180,7 @@ It looks a bit like this:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/zsh-prompt.png" alt="Customized `zsh` prompt">
+<<img src="assets/images/zsh-prompt.png" alt="Customized `zsh` prompt">
 </div>
 <div class="title">図 161. Customized <code>zsh</code> prompt</div>
 </div>
@@ -24192,7 +24199,7 @@ oh-my-zsh&#8217;s plugin system comes with powerful git tab-completion, and it h
 </div>
 <div id="oh_my_zsh_git" class="imageblock">
 <div class="content">
-<img src="images/zsh-oh-my.png" alt="An example of an oh-my-zsh theme">
+<<img src="assets/images/zsh-oh-my.png" alt="An example of an oh-my-zsh theme">
 </div>
 <div class="title">図 162. An example of an oh-my-zsh theme</div>
 </div>
@@ -24213,7 +24220,7 @@ posh-git (<a href="https://github.com/dahlbyk/posh-git" class="bare">https://git
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/posh-git.png" alt="Posh-git を利用した PowerShell">
+<<img src="assets/images/posh-git.png" alt="Posh-git を利用した PowerShell">
 </div>
 <div class="title">図 163. Posh-git を利用した PowerShell</div>
 </div>
@@ -25006,7 +25013,7 @@ porcelain.log('.', max_entries=1)
 <div class="ulist">
 <ul>
 <li>
-<p>The official API documentation is available at <a href="https://www.dulwich.io/apidocs/dulwich.html" class="bare">https://www.dulwich.io/apidocs/dulwich.html</a>.</p>
+<p>The official API documentation is available at <a href="https://www.dulwich.io/docs/api/" class="bare">https://www.dulwich.io/docs/api/</a>.</p>
 </li>
 <li>
 <p>Official tutorial at <a href="https://www.dulwich.io/docs/tutorial" class="bare">https://www.dulwich.io/docs/tutorial</a> has many examples of how to do specific tasks with Dulwich.</p>
@@ -25148,7 +25155,7 @@ There are several files this command will read from and write to so you can set 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TextEdit (macOS)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>git config --global --add core.editor "open -W -n"</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>git config --global core.editor "open --wait-apps --new -e"</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Textmate</p></td>
@@ -25937,7 +25944,7 @@ We tried to avoid use of them throughout most of the rest of the book.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-最終更新 2020-11-09 10:15:21 +0900
+最終更新 2020-11-26 14:47:39 +0900
 </div>
 </div>
 </body>

@@ -198,11 +198,11 @@ Subversion has to clone one revision at a time and then push it back into anothe
 @x
 Now that you have a Subversion repository to which you have write access, you can go through a typical workflow.
 You'll start with the `git svn clone` command, which imports an entire Subversion repository into a local Git repository.
-Remember that if you're importing from a real hosted Subversion repository, you should replace the `file:///tmp/test-svn` here with the URL of your Subversion repository:
+Remember that if you're importing from a real hosted Subversion repository, you should replace the `\file:///tmp/test-svn` here with the URL of your Subversion repository:
 @y
 Now that you have a Subversion repository to which you have write access, you can go through a typical workflow.
 You'll start with the `git svn clone` command, which imports an entire Subversion repository into a local Git repository.
-Remember that if you're importing from a real hosted Subversion repository, you should replace the `file:///tmp/test-svn` here with the URL of your Subversion repository:
+Remember that if you're importing from a real hosted Subversion repository, you should replace the `\file:///tmp/test-svn` here with the URL of your Subversion repository:
 @z
 
 @x

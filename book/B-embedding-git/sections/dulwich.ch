@@ -106,9 +106,9 @@ porcelain.log('.', max_entries=1)
 @z
 
 @x
- * The official API documentation is available at https://www.dulwich.io/apidocs/dulwich.html[].
+ * The official API documentation is available at https://www.dulwich.io/docs/api/[].
  * Official tutorial at https://www.dulwich.io/docs/tutorial[] has many examples of how to do specific tasks with Dulwich.
 @y
- * The official API documentation is available at https://www.dulwich.io/apidocs/dulwich.html[].
+ * The official API documentation is available at https://www.dulwich.io/docs/api/[].
  * Official tutorial at https://www.dulwich.io/docs/tutorial[] has many examples of how to do specific tasks with Dulwich.
 @z

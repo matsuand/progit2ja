@@ -29,7 +29,7 @@ At the end of this chapter you should understand why Git is around, why you shou
 この章から Git をはじめていきます。
 まずはバージョン管理ツールのこれまでについて説明します。
 次にシステム上で Git を動かす方法、作業を進めていくにあたってのセットアップ方法を示していきます。
-この章を読み終えたときには、なぜ Git が活用されているのか、なぜこれを使うのがよいのか理解できていて、すぐに作業に取りかかれるはずです。
+この章を読み終えたときには、なぜ Git が活用されているのか、なぜこれを使うのがよいのかが理解できているはずなので、すぐに作業に取りかかれるはずです。
 @z
 
 @x
@@ -93,7 +93,7 @@ You should have a basic understanding of what Git is and how it's different from
 You should also now have a working version of Git on your system that's set up with your personal identity.
 It's now time to learn some Git basics.
 //////////////////////////
-Git とは何であるか、これまで使ってきた集中型バージョン管理システムとの違いはどういうものか、ここで理解できたものと思います。
+Git とは何であるのか、これまで使ってきた集中型バージョン管理システムとの違いはどういうものか、ここで理解できたものと思います。
 そして手元のコンピューターに Git のインストールを行い、ユーザー設定も終えたはずです。
-ここから Git の基本操作について学んでいきましょう。
+ここから Git の基本操作について学んでいきます。
 @z

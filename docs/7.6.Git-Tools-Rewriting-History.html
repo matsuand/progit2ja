@@ -6,7 +6,7 @@
   <title>Git - Rewriting History</title>
   <link href="https://git-scm.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
   <link rel="stylesheet" media="screen" href="assets/application.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="assets/modernize.js"></script>
   <!--[if (gte IE 6)&(lte IE 8)]>
   <script src="javascripts/selectivizr-min.js"></script>
@@ -72,7 +72,7 @@ This can involve changing the order of the commits, changing messages or modifyi
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="情報"></i>
+<div class="title">注記</div>
 </td>
 <td class="content">
 <div class="title">Don’t push your work until you’re happy with it</div>
@@ -213,7 +213,7 @@ It lists the oldest at the top, rather than the newest, because that’s the fir
 </div>
 <div class="paragraph">
 <p>You need to edit the script so that it stops at the commit you want to edit.
-To do so, change the word ‘pick’ to the word ‘edit’ for each of the commits you want the script to stop after.
+To do so, change the word `pick' to the word `edit' for each of the commits you want the script to stop after.
 For example, to modify only the third commit message, you change the file to look like this:</p>
 </div>
 <div class="listingblock">
@@ -429,13 +429,13 @@ Type <code>git rebase --abort</code>, and your repo will be returned to the stat
 </div>
 <div class="paragraph">
 <p>If you finish a rebase and decide it’s not what you want, you can use <code>git reflog</code> to recover an earlier version of your branch.
-See <a href="10.7.Git-Internals-Maintenance-and-Data-Recovery.html#_data_recovery">Data Recovery</a> for more information on the <code>reflog</code> command.</p>
+See <a href="10.7.Git-の内部-Maintenance-and-Data-Recovery.html#_data_recovery">Data Recovery</a> for more information on the <code>reflog</code> command.</p>
 </div>
 <div class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="情報"></i>
+<div class="title">注記</div>
 </td>
 <td class="content">
 <div class="paragraph">

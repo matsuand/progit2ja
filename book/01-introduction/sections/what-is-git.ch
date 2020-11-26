@@ -22,10 +22,14 @@ This is an important section to absorb, because if you understand what Git is an
 As you learn Git, try to clear your mind of the things you may know about other VCSs, such as CVS, Subversion or Perforce -- doing so will help you avoid subtle confusion when using the tool.
 Even though Git's user interface is fairly similar to these other VCSs, Git stores and thinks about information in a very different way, and understanding these differences will help you avoid becoming confused while using it.(((Subversion)))(((Perforce)))
 //////////////////////////
-簡単に言って Git とは何なのか？
-This is an important section to absorb, because if you understand what Git is and the fundamentals of how it works, then using Git effectively will probably be much easier for you.
-As you learn Git, try to clear your mind of the things you may know about other VCSs, such as CVS, Subversion or Perforce -- doing so will help you avoid subtle confusion when using the tool.
-Even though Git's user interface is fairly similar to these other VCSs, Git stores and thinks about information in a very different way, and understanding these differences will help you avoid becoming confused while using it.(((Subversion)))(((Perforce)))
+簡単に言って Git とは何なのでしょう？
+ここは理解しておくべき重要な節です。
+Git がどのようなものであるか、またその基本的な動作がどのようなものかを理解しておけば、Git を効果的に利用していくことが簡単にできます。
+Git を学んでいくにあたっては、他の VCS、たとえば CVS、Subversion、Perforce について知っていることがあったとしても、それは忘れることにしてください。
+このツールを使っていく上で、ちょっとした混同を避けることができるからです。
+たとえ Git のユーザーインターフェースが他の VCS と非常によく似ていたとしても、Git における情報の保存や管理の仕方は全く異なります。
+そのような違いを理解しておくと、利用していく際に混乱を避けることができます。
+(((Subversion)))(((Perforce)))
 @z
 
 @x
@@ -34,7 +38,7 @@ Even though Git's user interface is fairly similar to these other VCSs, Git stor
 //////////////////////////
 ==== Snapshots, Not Differences
 //////////////////////////
-==== Snapshots, Not Differences
+==== 差分ではなくスナップショット
 @z
 
 @x
@@ -47,9 +51,10 @@ The major difference between Git and any other VCS (Subversion and friends inclu
 Conceptually, most other systems store information as a list of file-based changes.
 These other systems (CVS, Subversion, Perforce, Bazaar, and so on) think of the information they store as a set of files and the changes made to each file over time (this is commonly described as _delta-based_ version control).
 //////////////////////////
-The major difference between Git and any other VCS (Subversion and friends included) is the way Git thinks about its data.
-Conceptually, most other systems store information as a list of file-based changes.
-These other systems (CVS, Subversion, Perforce, Bazaar, and so on) think of the information they store as a set of files and the changes made to each file over time (this is commonly described as _delta-based_ version control).
+Git とその他の VCS（Subversion など）との大きな違いは、Git がデータをどのように捉えているかという点です。
+考え方として他のシステムのほとんどでは、ファイルを基準とした変更情報の一覧を保存しています。
+つまりそういったシステム（CVS、Subversion、Perforce、Bazaar など）において保存する情報は、ファイル一式であり、またそれに対して時間の経過とともに加えられる変更です。
+（これはよく **デルタベース** のバージョン管理と表現されます。）
 @z
 
 @x
@@ -78,11 +83,13 @@ With Git, every time you commit, or save the state of your project, Git basicall
 To be efficient, if files have not changed, Git doesn't store the file again, just a link to the previous identical file it has already stored.
 Git thinks about its data more like a *stream of snapshots*.
 //////////////////////////
-Git doesn't think of or store its data this way.
-Instead, Git thinks of its data more like a series of snapshots of a miniature filesystem.
-With Git, every time you commit, or save the state of your project, Git basically takes a picture of what all your files look like at that moment and stores a reference to that snapshot.
-To be efficient, if files have not changed, Git doesn't store the file again, just a link to the previous identical file it has already stored.
-Git thinks about its data more like a *stream of snapshots*.
+Git ではデータとその保存をこのようには考えません。
+そうではなく Git ではデータのことを、小さなファイルシステムに対するスナップショットを集めたもののように扱います。
+Git におけるコミットは、プロジェクトの状態を保存するという操作です。
+これを行うと、ファイル一式がどのように見えているかをその時点ごとに保存します。
+これはまさに写真を撮るようなものであって、そのスナップショットを見ている状態を保存するものです。効率性を考えて Git ではファイルが変更されなかった場合は、そのファイルを保存し直すようなことはしません。
+それまで保存されていた以前のファイルの状態を示すリンクを保持するだけです。
+Git ではむしろ *連続したスナップショット* としてデータを捉えています。
 @z
 
 @x
@@ -93,8 +100,8 @@ image::images/snapshots.png[Git stores data as snapshots of the project over tim
 .Storing data as snapshots of the project over time
 image::images/snapshots.png[Git stores data as snapshots of the project over time]
 //////////////////////////
-.Storing data as snapshots of the project over time
-image::images/snapshots.png[Git stores data as snapshots of the project over time]
+.時間の経過とともにプロジェクトデータをスナップショットのように保存
+image::images/snapshots.png[時間の経過とともにプロジェクトデータをスナップショットのように保存]
 @z
 
 @x

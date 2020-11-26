@@ -6,7 +6,7 @@
   <title>Git - Maintaining a Project</title>
   <link href="https://git-scm.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
   <link rel="stylesheet" media="screen" href="assets/application.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="assets/modernize.js"></script>
   <!--[if (gte IE 6)&(lte IE 8)]>
   <script src="javascripts/selectivizr-min.js"></script>
@@ -70,13 +70,13 @@ Start by clicking the “New repository” button on the right-hand side of the 
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="assets/images/newrepo.png" alt="The ``Your repositories'' area">
+<img src="assets/images/newrepo.png" alt="The “Your repositories” area">
 </div>
 <div class="title">図 109. The “Your repositories” area</div>
 </div>
 <div id="_new_repo_dropdown" class="imageblock">
 <div class="content">
-<img src="assets/images/new-repo.png" alt="The ``new repository'' dropdown">
+<img src="assets/images/new-repo.png" alt="The “new repository” dropdown">
 </div>
 <div class="title">図 110. The “New repository” dropdown</div>
 </div>
@@ -85,7 +85,7 @@ Start by clicking the “New repository” button on the right-hand side of the 
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="assets/images/newrepoform.png" alt="The ``new repository'' form">
+<img src="assets/images/newrepoform.png" alt="The “new repository” form">
 </div>
 <div class="title">図 111. The “new repository” form</div>
 </div>
@@ -95,7 +95,7 @@ For now, just click the “Create Repository” button, and boom – you have a 
 </div>
 <div class="paragraph">
 <p>Since you have no code there yet, GitHub will show you instructions for how to create a brand-new Git repository, or connect an existing Git project.
-We won’t belabor this here; if you need a refresher, check out <a href="2.1.Git-の基本操作-Git-リポジトリの作成.html#ch02-git-basics-chapter">Git の基本操作</a>.</p>
+We won’t belabor this here; if you need a refresher, check out <a href="2.1.Gitの基本操作-Git-リポジトリの作成.html#ch02-git-basics-chapter">Gitの基本操作</a>.</p>
 </div>
 <div class="paragraph">
 <p>Now that your project is hosted on GitHub, you can give the URL to anyone you want to share your project with.
@@ -106,7 +106,7 @@ Git can fetch from and push to both of these URLs, but they are access-controlle
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="情報"></i>
+<div class="title">注記</div>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -232,14 +232,14 @@ As you can see in <a href="6.3.GitHub-Maintaining-a-Project.html#_merge_button">
 <h4 id="_pr_refs">Pull Request Refs</h4>
 <div class="paragraph">
 <p>If you’re dealing with a <strong>lot</strong> of Pull Requests and don’t want to add a bunch of remotes or do one time pulls every time, there is a neat trick that GitHub allows you to do.
-This is a bit of an advanced trick and we’ll go over the details of this a bit more in <a href="10.5.Git-Internals-The-Refspec.html#_refspec">The Refspec</a>, but it can be pretty useful.</p>
+This is a bit of an advanced trick and we’ll go over the details of this a bit more in <a href="10.5.Git-の内部-The-Refspec.html#_refspec">The Refspec</a>, but it can be pretty useful.</p>
 </div>
 <div class="paragraph">
 <p>GitHub actually advertises the Pull Request branches for a repository as sort of pseudo-branches on the server.
 By default you don’t get them when you clone, but they are there in an obscured way and you can access them pretty easily.</p>
 </div>
 <div class="paragraph">
-<p>To demonstrate this, we’re going to use a low-level command (often referred to as a “plumbing” command, which we’ll read about more in <a href="10.1.Git-Internals-Plumbing-and-Porcelain.html#_plumbing_porcelain">Plumbing and Porcelain</a>) called <code>ls-remote</code>.
+<p>To demonstrate this, we’re going to use a low-level command (often referred to as a “plumbing” command, which we’ll read about more in <a href="10.1.Git-の内部-Plumbing-and-Porcelain.html#_plumbing_porcelain">Plumbing and Porcelain</a>) called <code>ls-remote</code>.
 This command is generally not used in day-to-day Git operations but it’s useful to show us what references are present on the server.</p>
 </div>
 <div class="paragraph">

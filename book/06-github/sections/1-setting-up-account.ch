@@ -91,10 +91,10 @@ Open up your account settings using the link at the top-right of the window:
 
 @x
 .The "`Account settings`" link
-image::images/account-settings.png[The "`Account settings`" link]
+image::images/account-settings.png[The “Account settings” link]
 @y
 .The "`Account settings`" link
-image::images/account-settings.png[The "`Account settings`" link]
+image::images/account-settings.png[The “Account settings” link]
 @z
 
 @x
@@ -105,10 +105,10 @@ Then select the "`SSH keys`" section along the left-hand side.
 
 @x
 .The "`SSH keys`" link.
-image::images/ssh-keys.png[The "`SSH keys`" link]
+image::images/ssh-keys.png[The “SSH keys” link]
 @y
 .The "`SSH keys`" link.
-image::images/ssh-keys.png[The "`SSH keys`" link]
+image::images/ssh-keys.png[The “SSH keys” link]
 @z
 
 @x
@@ -149,10 +149,10 @@ First go to the "`Profile`" tab (above the SSH Keys tab) and click "`Upload new 
 
 @x
 .The "`Profile`" link
-image::images/your-profile.png[The "`Profile`" link]
+image::images/your-profile.png[The “Profile” link]
 @y
 .The "`Profile`" link
-image::images/your-profile.png[The "`Profile`" link]
+image::images/your-profile.png[The “Profile” link]
 @z
 
 @x

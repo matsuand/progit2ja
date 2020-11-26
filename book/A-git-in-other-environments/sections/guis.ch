@@ -305,10 +305,10 @@ On macOS, there's a button at the top of the window for creating a new branch:
 
 @x
 ."`Create Branch`" button on macOS
-image::images/branch_widget_mac.png["`Create Branch`" button on macOS]
+image::images/branch_widget_mac.png[“Create Branch” button on macOS]
 @y
 ."`Create Branch`" button on macOS
-image::images/branch_widget_mac.png["`Create Branch`" button on macOS]
+image::images/branch_widget_mac.png[“Create Branch” button on macOS]
 @z
 
 @x

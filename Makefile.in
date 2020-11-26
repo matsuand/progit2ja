@@ -303,6 +303,7 @@ mysrcdir = $(shell cd $(srcdir) && pwd)
 abs_thisdir = $(shell cd $(thisdir) && pwd)
 thisdate = `date +'%Y/%m/%d'`
 hashvalue = `(cd @abs_origdir@ && git log -1 --pretty=format:"%ad %h" --date=short) | sed "s|\-|/|g"`
+ALLSUBS = $(shell find book -type f -name '*.asc' -print)
 .DEFAULT_GOAL := build
 bases = \
 	A-git-in-other-environments          \
@@ -817,8 +818,9 @@ build:  all $(srcdir)/docs/index.html $(abs_installdir)/html.css
 $(srcdir)/docs/index.html: $(abs_installdir)/progit.html
 	@$(MKDIR_P) $(srcdir)/docs
 	cp -p $(abs_installdir)/progit.html $@
-$(abs_installdir)/progit.html: ctie $(trans) $(copys) $(abs_installdir)/attributes-ja.adoc
-	@(cd $(abs_installdir) && bundle exec asciidoctor progit.asc -o progit.html)
+	@sed -i -e "s#\<img src\=\"images/#\<img src\=\"assets/images/#g" $@
+$(abs_installdir)/progit.html: ctie $(trans) $(copys) $(ALLSUBS) $(abs_installdir)/attributes-ja.adoc
+	@(cd $(abs_installdir) && rbenv exec asciidoctor progit.asc -o progit.html)
 	@(cd $(abs_installdir) && sed -i -e "s|THISDATE|$(thisdate)|" \
 					-e "s|HASHVALUE|$(hashvalue)|" progit.html)
 $(abs_installdir)/html.css: $(origdir)/theme/html/html.css
@@ -829,6 +831,7 @@ $(abs_installdir)/attributes-ja.adoc: $(srcdir)/attributes-ja.adoc
 
 @MAINT@.PHONY: git-scm
 @MAINT@git-scm: build
+@MAINT@	(cd $(GITSCMDIR) && sqlite3 ./db/development.sqlite3 "delete from sections;delete from chapters;delete from xrefs;")
 @MAINT@	(cd $(GITSCMDIR) && GENLANG=ja GENPATH=$(abs_thisdir) rbenv exec rake local_genbook2)
 @MAINT@	@cp -p $(GITSCMDIR)/db/development.sqlite3 .
 

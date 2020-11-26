@@ -99,10 +99,10 @@ hello()
 
 @x
 In our repository, we create a new branch named `whitespace` and proceed to change all the Unix line endings to DOS line endings, essentially changing every line of the file, but just with whitespace.
-Then we change the line ``hello world'' to ``hello mundo''.
+Then we change the line "`hello world`" to "`hello mundo`".
 @y
 In our repository, we create a new branch named `whitespace` and proceed to change all the Unix line endings to DOS line endings, essentially changing every line of the file, but just with whitespace.
-Then we change the line ``hello world'' to ``hello mundo''.
+Then we change the line "`hello world`" to "`hello mundo`".
 @z
 
 @x
@@ -425,12 +425,12 @@ Then we want to fix up either their side or our side and re-try the merge again 
 
 @x
 Getting the three file versions is actually pretty easy.
-Git stores all of these versions in the index under ``stages'' which each have numbers associated with them.
-Stage 1 is the common ancestor, stage 2 is your version and stage 3 is from the `MERGE_HEAD`, the version you're merging in (``theirs'').
+Git stores all of these versions in the index under "`stages`" which each have numbers associated with them.
+Stage 1 is the common ancestor, stage 2 is your version and stage 3 is from the `MERGE_HEAD`, the version you're merging in ("`theirs`").
 @y
 Getting the three file versions is actually pretty easy.
-Git stores all of these versions in the index under ``stages'' which each have numbers associated with them.
-Stage 1 is the common ancestor, stage 2 is your version and stage 3 is from the `MERGE_HEAD`, the version you're merging in (``theirs'').
+Git stores all of these versions in the index under "`stages`" which each have numbers associated with them.
+Stage 1 is the common ancestor, stage 2 is your version and stage 3 is from the `MERGE_HEAD`, the version you're merging in ("`theirs`").
 @z
 
 @x
@@ -895,10 +895,10 @@ This can be useful if you want to reset the markers and try to resolve them agai
 
 @x
 You can pass `--conflict` either `diff3` or `merge` (which is the default).
-If you pass it `diff3`, Git will use a slightly different version of conflict markers, not only giving you the ``ours'' and ``theirs'' versions, but also the ``base'' version inline to give you more context.
+If you pass it `diff3`, Git will use a slightly different version of conflict markers, not only giving you the "`ours`" and "`theirs`" versions, but also the "`base`" version inline to give you more context.
 @y
 You can pass `--conflict` either `diff3` or `merge` (which is the default).
-If you pass it `diff3`, Git will use a slightly different version of conflict markers, not only giving you the ``ours'' and ``theirs'' versions, but also the ``base'' version inline to give you more context.
+If you pass it `diff3`, Git will use a slightly different version of conflict markers, not only giving you the "`ours`" and "`theirs`" versions, but also the "`base`" version inline to give you more context.
 @z
 
 @x
@@ -1008,9 +1008,9 @@ Reviewing a little bit of history to remember why two lines of development were 
 @z
 
 @x
-To get a full list of all of the unique commits that were included in either branch involved in this merge, we can use the ``triple dot'' syntax that we learned in <<ch07-git-tools#_triple_dot>>.
+To get a full list of all of the unique commits that were included in either branch involved in this merge, we can use the "`triple dot`" syntax that we learned in <<ch07-git-tools#_triple_dot>>.
 @y
-To get a full list of all of the unique commits that were included in either branch involved in this merge, we can use the ``triple dot'' syntax that we learned in <<ch07-git-tools#_triple_dot>>.
+To get a full list of all of the unique commits that were included in either branch involved in this merge, we can use the "`triple dot`" syntax that we learned in <<ch07-git-tools#_triple_dot>>.
 @z
 
 @x
@@ -1144,11 +1144,11 @@ index 0399cd5,59727f0..0000000
 @z
 
 @x
-The format is called ``Combined Diff'' and gives you two columns of data next to each line.
-The first column shows you if that line is different (added or removed) between the ``ours'' branch and the file in your working directory and the second column does the same between the ``theirs'' branch and your working directory copy.
+The format is called "`Combined Diff`" and gives you two columns of data next to each line.
+The first column shows you if that line is different (added or removed) between the "`ours`" branch and the file in your working directory and the second column does the same between the "`theirs`" branch and your working directory copy.
 @y
-The format is called ``Combined Diff'' and gives you two columns of data next to each line.
-The first column shows you if that line is different (added or removed) between the ``ours'' branch and the file in your working directory and the second column does the same between the ``theirs'' branch and your working directory copy.
+The format is called "`Combined Diff`" and gives you two columns of data next to each line.
+The first column shows you if that line is different (added or removed) between the "`ours`" branch and the file in your working directory and the second column does the same between the "`theirs`" branch and your working directory copy.
 @z
 
 @x
@@ -1212,10 +1212,10 @@ index 0399cd5,59727f0..0000000
 @z
 
 @x
-This shows us that ``hola world'' was in our side but not in the working copy, that ``hello mundo'' was in their side but not in the working copy and finally that ``hola mundo'' was not in either side but is now in the working copy.
+This shows us that "`hola world`" was in our side but not in the working copy, that "`hello mundo`" was in their side but not in the working copy and finally that "`hola mundo`" was not in either side but is now in the working copy.
 This can be useful to review before committing the resolution.
 @y
-This shows us that ``hola world'' was in our side but not in the working copy, that ``hello mundo'' was in their side but not in the working copy and finally that ``hola mundo'' was not in either side but is now in the working copy.
+This shows us that "`hola world`" was in our side but not in the working copy, that "`hello mundo`" was in their side but not in the working copy and finally that "`hola mundo`" was not in either side but is now in the working copy.
 This can be useful to review before committing the resolution.
 @z
 
@@ -1397,10 +1397,10 @@ This approach also won't work if any other commits have been created since the m
 
 @x
 If moving the branch pointers around isn't going to work for you, Git gives you the option of making a new commit which undoes all the changes from an existing one.
-Git calls this operation a ``revert'', and in this particular scenario, you'd invoke it like this:
+Git calls this operation a "`revert`", and in this particular scenario, you'd invoke it like this:
 @y
 If moving the branch pointers around isn't going to work for you, Git gives you the option of making a new commit which undoes all the changes from an existing one.
-Git calls this operation a ``revert'', and in this particular scenario, you'd invoke it like this:
+Git calls this operation a "`revert`", and in this particular scenario, you'd invoke it like this:
 @z
 
 @x
@@ -1418,11 +1418,11 @@ $ git revert -m 1 HEAD
 @z
 
 @x
-The `-m 1` flag indicates which parent is the ``mainline'' and should be kept.
+The `-m 1` flag indicates which parent is the "`mainline`" and should be kept.
 When you invoke a merge into `HEAD` (`git merge topic`), the new commit has two parents: the first one is `HEAD` (`C6`), and the second is the tip of the branch being merged in (`C4`).
 In this case, we want to undo all the changes introduced by merging in parent #2 (`C4`), while keeping all the content from parent #1 (`C6`).
 @y
-The `-m 1` flag indicates which parent is the ``mainline'' and should be kept.
+The `-m 1` flag indicates which parent is the "`mainline`" and should be kept.
 When you invoke a merge into `HEAD` (`git merge topic`), the new commit has two parents: the first one is `HEAD` (`C6`), and the second is the tip of the branch being merged in (`C4`).
 In this case, we want to undo all the changes introduced by merging in parent #2 (`C4`), while keeping all the content from parent #1 (`C6`).
 @z
@@ -1442,10 +1442,10 @@ image::images/undomerge-revert.png[History after `git revert -m 1`]
 @z
 
 @x
-The new commit `^M` has exactly the same contents as `C6`, so starting from here it's as if the merge never happened, except that the now-unmerged commits are still in `HEAD`'s history.
+The new commit `^M` has exactly the same contents as `C6`, so starting from here it's as if the merge never happened, except that the now-unmerged commits are still in `HEAD`’s history.
 Git will get confused if you try to merge `topic` into `master` again:
 @y
-The new commit `^M` has exactly the same contents as `C6`, so starting from here it's as if the merge never happened, except that the now-unmerged commits are still in `HEAD`'s history.
+The new commit `^M` has exactly the same contents as `C6`, so starting from here it's as if the merge never happened, except that the now-unmerged commits are still in `HEAD`’s history.
 Git will get confused if you try to merge `topic` into `master` again:
 @z
 
@@ -1524,11 +1524,11 @@ In this example, `M` and `^M` cancel out.
 @z
 
 @x
-So far we've covered the normal merge of two branches, normally handled with what is called the ``recursive'' strategy of merging.
+So far we've covered the normal merge of two branches, normally handled with what is called the "`recursive`" strategy of merging.
 There are other ways to merge branches together however.
 Let's cover a few of them quickly.
 @y
-So far we've covered the normal merge of two branches, normally handled with what is called the ``recursive'' strategy of merging.
+So far we've covered the normal merge of two branches, normally handled with what is called the "`recursive`" strategy of merging.
 There are other ways to merge branches together however.
 Let's cover a few of them quickly.
 @z
@@ -1540,10 +1540,10 @@ Let's cover a few of them quickly.
 @z
 
 @x
-First of all, there is another useful thing we can do with the normal ``recursive'' mode of merging.
+First of all, there is another useful thing we can do with the normal "`recursive`" mode of merging.
 We've already seen the `ignore-all-space` and `ignore-space-change` options which are passed with a `-X` but we can also tell Git to favor one side or the other when it sees a conflict.
 @y
-First of all, there is another useful thing we can do with the normal ``recursive'' mode of merging.
+First of all, there is another useful thing we can do with the normal "`recursive`" mode of merging.
 We've already seen the `ignore-all-space` and `ignore-space-change` options which are passed with a `-X` but we can also tell Git to favor one side or the other when it sees a conflict.
 @z
 
@@ -1566,9 +1566,9 @@ Any differences that conflict, it will simply choose the side you specify in who
 @z
 
 @x
-If we go back to the ``hello world'' example we were using before, we can see that merging in our branch causes conflicts.
+If we go back to the "`hello world`" example we were using before, we can see that merging in our branch causes conflicts.
 @y
-If we go back to the ``hello world'' example we were using before, we can see that merging in our branch causes conflicts.
+If we go back to the "`hello world`" example we were using before, we can see that merging in our branch causes conflicts.
 @z
 
 @x
@@ -1622,10 +1622,10 @@ Merge made by the 'recursive' strategy.
 @z
 
 @x
-In that case, instead of getting conflict markers in the file with ``hello mundo'' on one side and ``hola world'' on the other, it will simply pick ``hola world''.
+In that case, instead of getting conflict markers in the file with "`hello mundo`" on one side and "`hola world`" on the other, it will simply pick "`hola world`".
 However, all the other non-conflicting changes on that branch are merged successfully in.
 @y
-In that case, instead of getting conflict markers in the file with ``hello mundo'' on one side and ``hola world'' on the other, it will simply pick ``hola world''.
+In that case, instead of getting conflict markers in the file with "`hello mundo`" on one side and "`hola world`" on the other, it will simply pick "`hola world`".
 However, all the other non-conflicting changes on that branch are merged successfully in.
 @z
 
@@ -1636,11 +1636,11 @@ This option can also be passed to the `git merge-file` command we saw earlier by
 @z
 
 @x
-If you want to do something like this but not have Git even try to merge changes from the other side in, there is a more draconian option, which is the ``ours'' merge _strategy_.
-This is different from the ``ours'' recursive merge _option_.
+If you want to do something like this but not have Git even try to merge changes from the other side in, there is a more draconian option, which is the "`ours`" merge _strategy_.
+This is different from the "`ours`" recursive merge _option_.
 @y
-If you want to do something like this but not have Git even try to merge changes from the other side in, there is a more draconian option, which is the ``ours'' merge _strategy_.
-This is different from the ``ours'' recursive merge _option_.
+If you want to do something like this but not have Git even try to merge changes from the other side in, there is a more draconian option, which is the "`ours`" merge _strategy_.
+This is different from the "`ours`" recursive merge _option_.
 @z
 
 @x

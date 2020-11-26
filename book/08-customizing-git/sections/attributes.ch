@@ -484,29 +484,29 @@ These filters can be set to do all sorts of fun things.
 @x
 [[filters_a]]
 .The "`smudge`" filter is run on checkout
-image::images/smudge.png[The "`smudge`" filter is run on checkout]
+image::images/smudge.png[The “smudge” filter is run on checkout]
 @y
 [[filters_a]]
 .The "`smudge`" filter is run on checkout
-image::images/smudge.png[The "`smudge`" filter is run on checkout]
+image::images/smudge.png[The “smudge” filter is run on checkout]
 @z
 
 @x
 [[filters_b]]
 .The "`clean`" filter is run when files are staged
-image::images/clean.png[The "`clean`" filter is run when files are staged]
+image::images/clean.png[The “clean” filter is run when files are staged]
 @y
 [[filters_b]]
 .The "`clean`" filter is run when files are staged
-image::images/clean.png[The "`clean`" filter is run when files are staged]
+image::images/clean.png[The “clean” filter is run when files are staged]
 @z
 
 @x
 The original commit message for this feature gives a simple example of running all your C source code through the `indent` program before committing.
-You can set it up by setting the filter attribute in your `.gitattributes` file to filter `*.c` files with the "`indent`" filter:
+You can set it up by setting the filter attribute in your `.gitattributes` file to filter `\*.c` files with the "`indent`" filter:
 @y
 The original commit message for this feature gives a simple example of running all your C source code through the `indent` program before committing.
-You can set it up by setting the filter attribute in your `.gitattributes` file to filter `*.c` files with the "`indent`" filter:
+You can set it up by setting the filter attribute in your `.gitattributes` file to filter `\*.c` files with the "`indent`" filter:
 @z
 
 @x
