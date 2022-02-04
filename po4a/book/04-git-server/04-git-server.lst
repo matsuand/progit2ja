@@ -1,0 +1,9 @@
+sections/generating-ssh-key.asc
+sections/git-daemon.asc
+sections/git-on-a-server.asc
+sections/gitlab.asc
+sections/gitweb.asc
+sections/hosted.asc
+sections/protocols.asc
+sections/setting-up-server.asc
+sections/smart-http.asc

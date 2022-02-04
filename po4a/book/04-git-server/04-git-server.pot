@@ -1,0 +1,2211 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2022-02-04 19:16+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: book/04-git-server/sections/generating-ssh-key.asc:3
+#, no-wrap
+msgid ""
+"[[_generate_ssh_key]]\n"
+"=== Generating Your SSH Public Key\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/generating-ssh-key.asc:11
+#, no-wrap
+msgid ""
+"(((SSH keys)))\n"
+"Many Git servers authenticate using SSH public keys.\n"
+"In order to provide a public key, each user in your system must generate one "
+"if they don't already have one.\n"
+"This process is similar across all operating systems.\n"
+"First, you should check to make sure you don't already have a key.\n"
+"By default, a user's SSH keys are stored in that user's `~/.ssh` "
+"directory.\n"
+"You can easily check to see if you have a key already by going to that "
+"directory and listing the contents:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/generating-ssh-key.asc:13
+#: book/04-git-server/sections/generating-ssh-key.asc:25
+#: book/04-git-server/sections/generating-ssh-key.asc:47
+#: book/04-git-server/sections/git-daemon.asc:15
+#: book/04-git-server/sections/git-daemon.asc:28
+#: book/04-git-server/sections/git-daemon.asc:61
+#: book/04-git-server/sections/git-on-a-server.asc:18
+#: book/04-git-server/sections/git-on-a-server.asc:29
+#: book/04-git-server/sections/git-on-a-server.asc:44
+#: book/04-git-server/sections/git-on-a-server.asc:51
+#: book/04-git-server/sections/git-on-a-server.asc:61
+#: book/04-git-server/sections/gitlab.asc:98
+#: book/04-git-server/sections/gitlab.asc:105
+#: book/04-git-server/sections/gitweb.asc:17
+#: book/04-git-server/sections/gitweb.asc:28
+#: book/04-git-server/sections/gitweb.asc:38
+#: book/04-git-server/sections/gitweb.asc:54
+#: book/04-git-server/sections/protocols.asc:18
+#: book/04-git-server/sections/protocols.asc:25
+#: book/04-git-server/sections/protocols.asc:38
+#: book/04-git-server/sections/protocols.asc:98
+#: book/04-git-server/sections/protocols.asc:111
+#: book/04-git-server/sections/protocols.asc:153
+#: book/04-git-server/sections/protocols.asc:160
+#: book/04-git-server/sections/setting-up-server.asc:16
+#: book/04-git-server/sections/setting-up-server.asc:29
+#: book/04-git-server/sections/setting-up-server.asc:42
+#: book/04-git-server/sections/setting-up-server.asc:51
+#: book/04-git-server/sections/setting-up-server.asc:65
+#: book/04-git-server/sections/setting-up-server.asc:78
+#: book/04-git-server/sections/setting-up-server.asc:97
+#: book/04-git-server/sections/setting-up-server.asc:106
+#: book/04-git-server/sections/setting-up-server.asc:114
+#: book/04-git-server/sections/setting-up-server.asc:125
+#: book/04-git-server/sections/setting-up-server.asc:132
+#: book/04-git-server/sections/smart-http.asc:14
+#: book/04-git-server/sections/smart-http.asc:24
+#: book/04-git-server/sections/smart-http.asc:31
+#: book/04-git-server/sections/smart-http.asc:42
+#: book/04-git-server/sections/smart-http.asc:56
+#, no-wrap
+msgid ""
+"[source,console]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/generating-ssh-key.asc:18
+#, no-wrap
+msgid ""
+"$ cd ~/.ssh\n"
+"$ ls\n"
+"authorized_keys2  id_dsa       known_hosts\n"
+"config            id_dsa.pub\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/generating-ssh-key.asc:23
+#, no-wrap
+msgid ""
+"You're looking for a pair of files named something like `id_dsa` or `id_rsa` "
+"and a matching file with a `.pub` extension.\n"
+"The `.pub` file is your public key, and the other file is the corresponding "
+"private key.\n"
+"If you don't have these files (or you don't even have a `.ssh` directory), "
+"you can create them by running a program called `ssh-keygen`, which is "
+"provided with the SSH package on Linux/macOS systems and comes with Git for "
+"Windows:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/generating-ssh-key.asc:36
+#, no-wrap
+msgid ""
+"$ ssh-keygen -o\n"
+"Generating public/private rsa key pair.\n"
+"Enter file in which to save the key (/home/schacon/.ssh/id_rsa):\n"
+"Created directory '/home/schacon/.ssh'.\n"
+"Enter passphrase (empty for no passphrase):\n"
+"Enter same passphrase again:\n"
+"Your identification has been saved in /home/schacon/.ssh/id_rsa.\n"
+"Your public key has been saved in /home/schacon/.ssh/id_rsa.pub.\n"
+"The key fingerprint is:\n"
+"d0:82:24:8e:d7:f1:bb:9b:33:53:96:93:49:da:9b:e3 schacon@mylaptop.local\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/generating-ssh-key.asc:41
+#, no-wrap
+msgid ""
+"First it confirms where you want to save the key (`.ssh/id_rsa`), and then "
+"it asks twice for a passphrase, which you can leave empty if you don't want "
+"to type a password when you use the key.\n"
+"However, if you do use a password, make sure to add the `-o` option; it "
+"saves the private key in a format that is more resistant to brute-force "
+"password cracking than is the default format.\n"
+"You can also use the `ssh-agent` tool to prevent having to enter the "
+"password each time.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/generating-ssh-key.asc:45
+#, no-wrap
+msgid ""
+"Now, each user that does this has to send their public key to you or whoever "
+"is administrating the Git server (assuming you're using an SSH server setup "
+"that requires public keys).\n"
+"All they have to do is copy the contents of the `.pub` file and email it.\n"
+"The public keys look something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/generating-ssh-key.asc:55
+#, no-wrap
+msgid ""
+"$ cat ~/.ssh/id_rsa.pub\n"
+"ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAklOUpkDHrfHY17SbrmTIpNLTGK9Tjom/BWDSU\n"
+"GPl+nafzlHDTYW7hdI4yZ5ew18JH4JW9jbhUFrviQzM7xlELEVf4h9lFX5QVkbPppSwg0cda3\n"
+"Pbv7kOdJ/MTyBlWXFCR+HAo3FXRitBqxiX1nKhXpHAZsMciLq8V6RjsNAQwdsdMFvSlVK/7XA\n"
+"t3FaoJoAsncM1Q9x5+3V0Ww68/eIFmb1zuUFljQJKprrX88XypNDvjYNby6vw/Pb0rwert/En\n"
+"mZ+AW4OZPnTPI89ZPmVMLuayrD2cE86Z/il8b+gw3r3+1nKatmIkjn2so1d01QraTlMqVSsbx\n"
+"NrRFi9wrf+M7Q== schacon@mylaptop.local\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/generating-ssh-key.asc:57
+#, no-wrap
+msgid ""
+"For a more in-depth tutorial on creating an SSH key on multiple operating "
+"systems, see the GitHub guide on SSH keys at "
+"https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent[].\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-daemon.asc:2
+#, no-wrap
+msgid "=== Git Daemon\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-daemon.asc:7
+#, no-wrap
+msgid ""
+"(((serving repositories, git protocol)))\n"
+"Next we'll set up a daemon serving repositories using the \"`Git`\" "
+"protocol.\n"
+"This is a common choice for fast, unauthenticated access to your Git data.\n"
+"Remember that since this is not an authenticated service, anything you serve "
+"over this protocol is public within its network.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-daemon.asc:10
+#, no-wrap
+msgid ""
+"If you're running this on a server outside your firewall, it should be used "
+"only for projects that are publicly visible to the world.\n"
+"If the server you're running it on is inside your firewall, you might use it "
+"for projects that a large number of people or computers (continuous "
+"integration or build servers) have read-only access to, when you don't want "
+"to have to add an SSH key for each.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-daemon.asc:13
+#, no-wrap
+msgid ""
+"In any case, the Git protocol is relatively easy to set up.\n"
+"Basically, you need to run this command in a daemonized manner:(((git "
+"commands, daemon)))\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-daemon.asc:17
+#, no-wrap
+msgid ""
+"$ git daemon --reuseaddr --base-path=/srv/git/ /srv/git/\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-daemon.asc:21
+#, no-wrap
+msgid ""
+"The `--reuseaddr` option allows the server to restart without waiting for "
+"old connections to time out, while the `--base-path` option allows people to "
+"clone projects without specifying the entire path, and the path at the end "
+"tells the Git daemon where to look for repositories to export.\n"
+"If you're running a firewall, you'll also need to punch a hole in it at port "
+"9418 on the box you're setting this up on.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-daemon.asc:23
+#, no-wrap
+msgid ""
+"You can daemonize this process a number of ways, depending on the operating "
+"system you're running.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-daemon.asc:26
+#, no-wrap
+msgid ""
+"Since `systemd` is the most common init system among modern Linux "
+"distributions, you can use it for that purpose.\n"
+"Simply place a file in `/etc/systemd/system/git-daemon.service` with these "
+"contents:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-daemon.asc:31
+#, no-wrap
+msgid ""
+"[Unit]\n"
+"Description=Start Git Daemon\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-daemon.asc:34
+#, no-wrap
+msgid ""
+"[Service]\n"
+"ExecStart=/usr/bin/git daemon --reuseaddr --base-path=/srv/git/ /srv/git/\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-daemon.asc:37
+#, no-wrap
+msgid ""
+"Restart=always\n"
+"RestartSec=500ms\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-daemon.asc:41
+#, no-wrap
+msgid ""
+"StandardOutput=syslog\n"
+"StandardError=syslog\n"
+"SyslogIdentifier=git-daemon\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-daemon.asc:44
+#, no-wrap
+msgid ""
+"User=git\n"
+"Group=git\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-daemon.asc:47
+#, no-wrap
+msgid ""
+"[Install]\n"
+"WantedBy=multi-user.target\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-daemon.asc:52
+#, no-wrap
+msgid ""
+"You might have noticed that Git daemon is started here with `git` as both "
+"group and user.\n"
+"Modify it to fit your needs and make sure the provided user exists on the "
+"system.\n"
+"Also, check that the Git binary is indeed located at `/usr/bin/git` and "
+"change the path if necessary.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-daemon.asc:54
+#, no-wrap
+msgid ""
+"Finally, you'll run `systemctl enable git-daemon` to automatically start the "
+"service on boot, and can start and stop the service with, respectively, "
+"`systemctl start git-daemon` and `systemctl stop git-daemon`.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-daemon.asc:56
+#, no-wrap
+msgid ""
+"On other systems, you may want to use `xinetd`, a script in your `sysvinit` "
+"system, or something else -- as long as you get that command daemonized and "
+"watched somehow.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-daemon.asc:59
+#, no-wrap
+msgid ""
+"Next, you have to tell Git which repositories to allow unauthenticated Git "
+"server-based access to.\n"
+"You can do this in each repository by creating a file named "
+"`git-daemon-export-ok`.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-daemon.asc:64
+#, no-wrap
+msgid ""
+"$ cd /path/to/project.git\n"
+"$ touch git-daemon-export-ok\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-daemon.asc:66
+#, no-wrap
+msgid ""
+"The presence of that file tells Git that it's OK to serve this project "
+"without authentication.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-on-a-server.asc:3
+#, no-wrap
+msgid ""
+"[[_getting_git_on_a_server]]\n"
+"=== Getting Git on a Server\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-on-a-server.asc:5
+#, no-wrap
+msgid ""
+"Now we'll cover setting up a Git service running these protocols on your own "
+"server.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-on-a-server.asc:7
+#: book/04-git-server/sections/setting-up-server.asc:9
+#: book/04-git-server/sections/smart-http.asc:70
+#, no-wrap
+msgid ""
+"[NOTE]\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-on-a-server.asc:10
+#, no-wrap
+msgid ""
+"Here we'll be demonstrating the commands and steps needed to do basic, "
+"simplified installations on a Linux-based server, though it's also possible "
+"to run these services on macOS or Windows servers.\n"
+"Actually setting up a production server within your infrastructure will "
+"certainly entail differences in security measures or operating system tools, "
+"but hopefully this will give you the general idea of what's involved.\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-on-a-server.asc:16
+#, no-wrap
+msgid ""
+"In order to initially set up any Git server, you have to export an existing "
+"repository into a new bare repository -- a repository that doesn't contain a "
+"working directory.\n"
+"This is generally straightforward to do.\n"
+"In order to clone your repository to create a new bare repository, you run "
+"the clone command with the `--bare` option.(((git commands, clone, bare)))\n"
+"By convention, bare repository directory names end with the suffix `.git`, "
+"like so:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-on-a-server.asc:22
+#, no-wrap
+msgid ""
+"$ git clone --bare my_project my_project.git\n"
+"Cloning into bare repository 'my_project.git'...\n"
+"done.\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-on-a-server.asc:25
+#, no-wrap
+msgid ""
+"You should now have a copy of the Git directory data in your "
+"`my_project.git` directory.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-on-a-server.asc:27
+#, no-wrap
+msgid "This is roughly equivalent to something like:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-on-a-server.asc:31
+#, no-wrap
+msgid ""
+"$ cp -Rf my_project/.git my_project.git\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-on-a-server.asc:35
+#, no-wrap
+msgid ""
+"There are a couple of minor differences in the configuration file but, for "
+"your purpose, this is close to the same thing.\n"
+"It takes the Git repository by itself, without a working directory, and "
+"creates a directory specifically for it alone.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-on-a-server.asc:38
+#, no-wrap
+msgid ""
+"[[_bare_repo]]\n"
+"==== Putting the Bare Repository on a Server\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-on-a-server.asc:42
+#, no-wrap
+msgid ""
+"Now that you have a bare copy of your repository, all you need to do is put "
+"it on a server and set up your protocols.\n"
+"Let's say you've set up a server called `git.example.com` to which you have "
+"SSH access, and you want to store all your Git repositories under the "
+"`/srv/git` directory.\n"
+"Assuming that `/srv/git` exists on that server, you can set up your new "
+"repository by copying your bare repository over:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-on-a-server.asc:46
+#, no-wrap
+msgid ""
+"$ scp -r my_project.git user@git.example.com:/srv/git\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-on-a-server.asc:49
+#, no-wrap
+msgid ""
+"At this point, other users who have SSH-based read access to the `/srv/git` "
+"directory on that server can clone your repository by running:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-on-a-server.asc:53
+#, no-wrap
+msgid ""
+"$ git clone user@git.example.com:/srv/git/my_project.git\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-on-a-server.asc:56
+#, no-wrap
+msgid ""
+"If a user SSHs into a server and has write access to the "
+"`/srv/git/my_project.git` directory, they will also automatically have push "
+"access.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-on-a-server.asc:59
+#, no-wrap
+msgid ""
+"Git will automatically add group write permissions to a repository properly "
+"if you run the `git init` command with the `--shared` option.\n"
+"Note that by running this command, you will not destroy any commits, refs, "
+"etc. in the process.(((git commands, init, bare)))\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-on-a-server.asc:65
+#, no-wrap
+msgid ""
+"$ ssh user@git.example.com\n"
+"$ cd /srv/git/my_project.git\n"
+"$ git init --bare --shared\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-on-a-server.asc:69
+#, no-wrap
+msgid ""
+"You see how easy it is to take a Git repository, create a bare version, and "
+"place it on a server to which you and your collaborators have SSH access.\n"
+"Now you're ready to collaborate on the same project.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-on-a-server.asc:72
+#, no-wrap
+msgid ""
+"It's important to note that this is literally all you need to do to run a "
+"useful Git server to which several people have access -- just add SSH-able "
+"accounts on a server, and stick a bare repository somewhere that all those "
+"users have read and write access to.\n"
+"You're ready to go -- nothing else needed.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-on-a-server.asc:76
+#, no-wrap
+msgid ""
+"In the next few sections, you'll see how to expand to more sophisticated "
+"setups.\n"
+"This discussion will include not having to create user accounts for each "
+"user, adding public read access to repositories, setting up web UIs and "
+"more.\n"
+"However, keep in mind that to collaborate with a couple of people on a "
+"private project, all you _need_ is an SSH server and a bare repository.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-on-a-server.asc:78
+#, no-wrap
+msgid "==== Small Setups\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-on-a-server.asc:82
+#, no-wrap
+msgid ""
+"If you're a small outfit or are just trying out Git in your organization and "
+"have only a few developers, things can be simple for you.\n"
+"One of the most complicated aspects of setting up a Git server is user "
+"management.\n"
+"If you want some repositories to be read-only for certain users and "
+"read/write for others, access and permissions can be a bit more difficult to "
+"arrange.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-on-a-server.asc:84
+#, no-wrap
+msgid "===== SSH Access\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-on-a-server.asc:88
+#, no-wrap
+msgid ""
+"(((serving repositories, SSH)))\n"
+"If you have a server to which all your developers already have SSH access, "
+"it's generally easiest to set up your first repository there, because you "
+"have to do almost no work (as we covered in the last section).\n"
+"If you want more complex access control type permissions on your "
+"repositories, you can handle them with the normal filesystem permissions of "
+"your server's operating system.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-on-a-server.asc:91
+#, no-wrap
+msgid ""
+"If you want to place your repositories on a server that doesn't have "
+"accounts for everyone on your team for whom you want to grant write access, "
+"then you must set up SSH access for them.\n"
+"We assume that if you have a server with which to do this, you already have "
+"an SSH server installed, and that's how you're accessing the server.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-on-a-server.asc:95
+#, no-wrap
+msgid ""
+"There are a few ways you can give access to everyone on your team.\n"
+"The first is to set up accounts for everybody, which is straightforward but "
+"can be cumbersome.\n"
+"You may not want to run `adduser` (or the possible alternative `useradd`) "
+"and have to set temporary passwords for every new user.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-on-a-server.asc:99
+#, no-wrap
+msgid ""
+"A second method is to create a single 'git' user account on the machine, ask "
+"every user who is to have write access to send you an SSH public key, and "
+"add that key to the `~/.ssh/authorized_keys` file of that new 'git' "
+"account.\n"
+"At that point, everyone will be able to access that machine via the 'git' "
+"account.\n"
+"This doesn't affect the commit data in any way -- the SSH user you connect "
+"as doesn't affect the commits you've recorded.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/git-on-a-server.asc:101
+#, no-wrap
+msgid ""
+"Another way to do it is to have your SSH server authenticate from an LDAP "
+"server or some other centralized authentication source that you may already "
+"have set up.\n"
+"As long as each user can get shell access on the machine, any SSH "
+"authentication mechanism you can think of should work.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:2
+#, no-wrap
+msgid "=== GitLab\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:8
+#, no-wrap
+msgid ""
+"(((serving repositories, GitLab)))(((GitLab)))\n"
+"GitWeb is pretty simplistic though.\n"
+"If you're looking for a modern, fully featured Git server, there are several "
+"open source solutions out there that you can install instead.\n"
+"As GitLab is one of the popular ones, we'll cover installing and using it as "
+"an example.\n"
+"This is harder than the GitWeb option and will require more maintenance, but "
+"it is a fully featured option.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:10
+#, no-wrap
+msgid "==== Installation\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:14
+#, no-wrap
+msgid ""
+"GitLab is a database-backed web application, so its installation is more "
+"involved than some other Git servers.\n"
+"Fortunately, this process is well-documented and supported.\n"
+"GitLab strongly recommends installing GitLab on your server via the official "
+"Omnibus GitLab package.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:16
+#, no-wrap
+msgid "The other installation options are:\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/04-git-server/sections/gitlab.asc:21
+#, markdown-text, no-wrap
+msgid "GitLab Helm chart, for use with Kubernetes.\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/04-git-server/sections/gitlab.asc:21
+#, markdown-text, no-wrap
+msgid "Dockerized GitLab packages for use with Docker.\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/04-git-server/sections/gitlab.asc:21
+#, markdown-text, no-wrap
+msgid "From the source files.\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/04-git-server/sections/gitlab.asc:21
+#, markdown-text, no-wrap
+msgid ""
+"Cloud provider such as AWS, Google Cloud Platform, Azure, OpenShift and "
+"Digital Ocean.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:23
+#, no-wrap
+msgid ""
+"For more information read the "
+"https://gitlab.com/gitlab-org/gitlab-foss/-/blob/master/README.md[GitLab "
+"Community Edition (CE) readme].\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:25
+#, no-wrap
+msgid "==== Administration\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:30
+#, no-wrap
+msgid ""
+"GitLab's administration interface is accessed over the web.\n"
+"Simply point your browser to the hostname or IP address where GitLab is "
+"installed, and log in as the admin user.\n"
+"The default username is `admin@local.host`, and the default password is "
+"`5iveL!fe` (which you must change right away).\n"
+"After you've logged in, click the \"`Admin area`\" icon in the menu at the "
+"top right.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:34
+#, no-wrap
+msgid ""
+"[[gitlab_menu]]\n"
+".The \"`Admin area`\" item in the GitLab menu\n"
+"image::images/gitlab-menu.png[The âAdmin areaâ item in the GitLab "
+"menu]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:36
+#, no-wrap
+msgid "===== Users\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:41
+#, no-wrap
+msgid ""
+"Everybody using your GitLab server must have a user account.\n"
+"User accounts are quite simple, they mainly contain personal information "
+"attached to login data.\n"
+"Each user account has a *namespace*, which is a logical grouping of projects "
+"that belong to that user.\n"
+"If the user +jane+ had a project named +project+, that project's url would "
+"be `http://server/jane/project`.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:45
+#, no-wrap
+msgid ""
+"[[gitlab_users]]\n"
+".The GitLab user administration screen\n"
+"image::images/gitlab-users.png[The GitLab user administration screen]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:48
+#, no-wrap
+msgid ""
+"You can remove a user account in two ways:\n"
+"\"`Blocking`\" a user prevents them from logging into the GitLab instance, "
+"but all of the data under that user's namespace will be preserved, and "
+"commits signed with that user's email address will still link back to their "
+"profile.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:52
+#, no-wrap
+msgid ""
+"\"`Destroying`\" a user, on the other hand, completely removes them from the "
+"database and filesystem.\n"
+"All projects and data in their namespace is removed, and any groups they own "
+"will also be removed.\n"
+"This is obviously a much more permanent and destructive action, and you will "
+"rarely need it.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:55
+#, no-wrap
+msgid ""
+"[[_gitlab_groups_section]]\n"
+"===== Groups\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:58
+#, no-wrap
+msgid ""
+"A GitLab group is a collection of projects, along with data about how users "
+"can access those projects.\n"
+"Each group has a project namespace (the same way that users do), so if the "
+"group +training+ has a project +materials+, its url would be "
+"`http://server/training/materials`.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:62
+#, no-wrap
+msgid ""
+"[[gitlab_groups]]\n"
+".The GitLab group administration screen\n"
+"image::images/gitlab-groups.png[The GitLab group administration screen]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:66
+#, no-wrap
+msgid ""
+"Each group is associated with a number of users, each of which has a level "
+"of permissions for the group's projects and the group itself.\n"
+"These range from \"`Guest`\" (issues and chat only) to \"`Owner`\" (full "
+"control of the group, its members, and its projects).\n"
+"The types of permissions are too numerous to list here, but GitLab has a "
+"helpful link on the administration screen.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:68
+#, no-wrap
+msgid "===== Projects\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:72
+#, no-wrap
+msgid ""
+"A GitLab project roughly corresponds to a single Git repository.\n"
+"Every project belongs to a single namespace, either a user or a group.\n"
+"If the project belongs to a user, the owner of the project has direct "
+"control over who has access to the project; if the project belongs to a "
+"group, the group's user-level permissions will take effect.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:77
+#, no-wrap
+msgid ""
+"Every project has a visibility level, which controls who has read access to "
+"that project's pages and repository.\n"
+"If a project is _Private_, the project's owner must explicitly grant access "
+"to specific users.\n"
+"An _Internal_ project is visible to any logged-in user, and a _Public_ "
+"project is visible to anyone.\n"
+"Note that this controls both `git fetch` access as well as access to the web "
+"UI for that project.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:79
+#, no-wrap
+msgid "===== Hooks\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:83
+#, no-wrap
+msgid ""
+"GitLab includes support for hooks, both at a project or system level.\n"
+"For either of these, the GitLab server will perform an HTTP POST with some "
+"descriptive JSON whenever relevant events occur.\n"
+"This is a great way to connect your Git repositories and GitLab instance to "
+"the rest of your development automation, such as CI servers, chat rooms, or "
+"deployment tools.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:85
+#, no-wrap
+msgid "==== Basic Usage\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:91
+#, no-wrap
+msgid ""
+"The first thing you'll want to do with GitLab is create a new project.\n"
+"You can do this by clicking on the \"`+`\" icon on the toolbar.\n"
+"You'll be asked for the project's name, which namespace it should belong to, "
+"and what its visibility level should be.\n"
+"Most of what you specify here isn't permanent, and can be changed later "
+"through the settings interface.\n"
+"Click \"`Create Project`\", and you're done.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:96
+#, no-wrap
+msgid ""
+"Once the project exists, you'll probably want to connect it with a local Git "
+"repository.\n"
+"Each project is accessible over HTTPS or SSH, either of which can be used to "
+"configure a Git remote.\n"
+"The URLs are visible at the top of the project's home page.\n"
+"For an existing local repository, this command will create a remote named "
+"`gitlab` to the hosted location:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:100
+#, no-wrap
+msgid ""
+"$ git remote add gitlab https://server/namespace/project.git\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:103
+#, no-wrap
+msgid "If you don't have a local copy of the repository, you can simply do this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:107
+#, no-wrap
+msgid ""
+"$ git clone https://server/namespace/project.git\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:111
+#, no-wrap
+msgid ""
+"The web UI provides access to several useful views of the repository "
+"itself.\n"
+"Each project's home page shows recent activity, and links along the top will "
+"lead you to views of the project's files and commit log.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:113
+#, no-wrap
+msgid "==== Working Together\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:117
+#, no-wrap
+msgid ""
+"The simplest way of working together on a GitLab project is by giving each "
+"user direct push access to the Git repository.\n"
+"You can add a user to a project by going to the \"`Members`\" section of "
+"that project's settings, and associating the new user with an access level "
+"(the different access levels are discussed a bit in "
+"<<_gitlab_groups_section>>).\n"
+"By giving a user an access level of \"`Developer`\" or above, that user can "
+"push commits and branches directly to the repository.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:123
+#, no-wrap
+msgid ""
+"Another, more decoupled way of collaboration is by using merge requests.\n"
+"This feature enables any user that can see a project to contribute to it in "
+"a controlled way.\n"
+"Users with direct access can simply create a branch, push commits to it, and "
+"open a merge request from their branch back into `master` or any other "
+"branch.\n"
+"Users who don't have push permissions for a repository can \"`fork`\" it to "
+"create their own copy, push commits to _their_ copy, and open a merge "
+"request from their fork back to the main project.\n"
+"This model allows the owner to be in full control of what goes into the "
+"repository and when, while allowing contributions from untrusted users.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:127
+#, no-wrap
+msgid ""
+"Merge requests and issues are the main units of long-lived discussion in "
+"GitLab.\n"
+"Each merge request allows a line-by-line discussion of the proposed change "
+"(which supports a lightweight kind of code review), as well as a general "
+"overall discussion thread.\n"
+"Both can be assigned to users, or organized into milestones.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitlab.asc:129
+#, no-wrap
+msgid ""
+"This section is focused mainly on the Git-related features of GitLab, but as "
+"a mature project, it provides many other features to help your team work "
+"together, such as project wikis and system maintenance tools.\n"
+"One benefit to GitLab is that, once the server is set up and running, you'll "
+"rarely need to tweak a configuration file or access the server via SSH; most "
+"administration and general usage can be done through the in-browser "
+"interface.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitweb.asc:2
+#, no-wrap
+msgid "=== GitWeb\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitweb.asc:6
+#, no-wrap
+msgid ""
+"(((serving repositories, GitWeb)))(((GitWeb)))\n"
+"Now that you have basic read/write and read-only access to your project, you "
+"may want to set up a simple web-based visualizer.\n"
+"Git comes with a CGI script called GitWeb that is sometimes used for this.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitweb.asc:10
+#, no-wrap
+msgid ""
+"[[gitweb]]\n"
+".The GitWeb web-based user interface\n"
+"image::images/git-instaweb.png[The GitWeb web-based user interface]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitweb.asc:15
+#, no-wrap
+msgid ""
+"If you want to check out what GitWeb would look like for your project, Git "
+"comes with a command to fire up a temporary instance if you have a "
+"lightweight web server on your system like `lighttpd` or `webrick`.\n"
+"On Linux machines, `lighttpd` is often installed, so you may be able to get "
+"it to run by typing `git instaweb` in your project directory.\n"
+"If you're running a Mac, Leopard comes preinstalled with Ruby, so `webrick` "
+"may be your best bet.\n"
+"To start `instaweb` with a non-lighttpd handler, you can run it with the "
+"`--httpd` option.(((git commands, instaweb)))\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitweb.asc:21
+#, no-wrap
+msgid ""
+"$ git instaweb --httpd=webrick\n"
+"[2009-02-21 10:02:21] INFO  WEBrick 1.3.1\n"
+"[2009-02-21 10:02:21] INFO  ruby 1.8.6 (2008-03-03) [universal-darwin9.0]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitweb.asc:26
+#, no-wrap
+msgid ""
+"That starts up an HTTPD server on port 1234 and then automatically starts a "
+"web browser that opens on that page.\n"
+"It's pretty easy on your part.\n"
+"When you're done and want to shut down the server, you can run the same "
+"command with the `--stop` option:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitweb.asc:30
+#, no-wrap
+msgid ""
+"$ git instaweb --httpd=webrick --stop\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitweb.asc:36
+#, no-wrap
+msgid ""
+"If you want to run the web interface on a server all the time for your team "
+"or for an open source project you're hosting, you'll need to set up the CGI "
+"script to be served by your normal web server.\n"
+"Some Linux distributions have a `gitweb` package that you may be able to "
+"install via `apt` or `dnf`, so you may want to try that first.\n"
+"We'll walk through installing GitWeb manually very quickly.\n"
+"First, you need to get the Git source code, which GitWeb comes with, and "
+"generate the custom CGI script:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitweb.asc:48
+#, no-wrap
+msgid ""
+"$ git clone git://git.kernel.org/pub/scm/git/git.git\n"
+"$ cd git/\n"
+"$ make GITWEB_PROJECTROOT=\"/srv/git\" prefix=/usr gitweb\n"
+"    SUBDIR gitweb\n"
+"    SUBDIR ../\n"
+"make[2]: `GIT-VERSION-FILE' is up to date.\n"
+"    GEN gitweb.cgi\n"
+"    GEN static/gitweb.js\n"
+"$ sudo cp -Rf gitweb /var/www/\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitweb.asc:52
+#, no-wrap
+msgid ""
+"Notice that you have to tell the command where to find your Git repositories "
+"with the `GITWEB_PROJECTROOT` variable.\n"
+"Now, you need to make Apache use CGI for that script, for which you can add "
+"a VirtualHost:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitweb.asc:67
+#, no-wrap
+msgid ""
+"<VirtualHost *:80>\n"
+"    ServerName gitserver\n"
+"    DocumentRoot /var/www/gitweb\n"
+"    <Directory /var/www/gitweb>\n"
+"        Options +ExecCGI +FollowSymLinks +SymLinksIfOwnerMatch\n"
+"        AllowOverride All\n"
+"        order allow,deny\n"
+"        Allow from all\n"
+"        AddHandler cgi-script cgi\n"
+"        DirectoryIndex gitweb.cgi\n"
+"    </Directory>\n"
+"</VirtualHost>\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/gitweb.asc:70
+#, no-wrap
+msgid ""
+"Again, GitWeb can be served with any CGI or Perl capable web server; if you "
+"prefer to use something else, it shouldn't be difficult to set up.\n"
+"At this point, you should be able to visit `http://gitserver/` to view your "
+"repositories online.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/hosted.asc:2
+#, no-wrap
+msgid "=== Third Party Hosted Options\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/hosted.asc:6
+#, no-wrap
+msgid ""
+"If you don't want to go through all of the work involved in setting up your "
+"own Git server, you have several options for hosting your Git projects on an "
+"external dedicated hosting site.\n"
+"Doing so offers a number of advantages: a hosting site is generally quick to "
+"set up and easy to start projects on, and no server maintenance or "
+"monitoring is involved.\n"
+"Even if you set up and run your own server internally, you may still want to "
+"use a public hosting site for your open source code â it's generally "
+"easier for the open source community to find and help you with.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/hosted.asc:9
+#, no-wrap
+msgid ""
+"These days, you have a huge number of hosting options to choose from, each "
+"with different advantages and disadvantages.\n"
+"To see an up-to-date list, check out the GitHosting page on the main Git "
+"wiki at https://git.wiki.kernel.org/index.php/GitHosting[].\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/hosted.asc:10
+#, no-wrap
+msgid ""
+"We'll cover using GitHub in detail in <<ch06-github#ch06-github>>, as it is "
+"the largest Git host out there and you may need to interact with projects "
+"hosted on it in any case, but there are dozens more to choose from should "
+"you not want to set up your own Git server.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:2
+#, no-wrap
+msgid "=== The Protocols\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:5
+#, no-wrap
+msgid ""
+"Git can use four distinct protocols to transfer data: Local, HTTP, Secure "
+"Shell (SSH) and Git.\n"
+"Here we'll discuss what they are and in what basic circumstances you would "
+"want (or not want) to use them.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:7
+#, no-wrap
+msgid "==== Local Protocol\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:12
+#, no-wrap
+msgid ""
+"(((protocols, local)))\n"
+"The most basic is the _Local protocol_, in which the remote repository is in "
+"another directory on the same host.\n"
+"This is often used if everyone on your team has access to a shared "
+"filesystem such as an https://en.wikipedia.org/wiki/Network_File_System[NFS] "
+"mount, or in the less likely case that everyone logs in to the same "
+"computer.\n"
+"The latter wouldn't be ideal, because all your code repository instances "
+"would reside on the same computer, making a catastrophic loss much more "
+"likely.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:16
+#, no-wrap
+msgid ""
+"If you have a shared mounted filesystem, then you can clone, push to, and "
+"pull from a local file-based repository.\n"
+"To clone a repository like this, or to add one as a remote to an existing "
+"project, use the path to the repository as the URL.\n"
+"For example, to clone a local repository, you can run something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:20
+#, no-wrap
+msgid ""
+"$ git clone /srv/git/project.git\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:23
+#, no-wrap
+msgid "Or you can do this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:27
+#, no-wrap
+msgid ""
+"$ git clone file:///srv/git/project.git\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:34
+#, no-wrap
+msgid ""
+"Git operates slightly differently if you explicitly specify `file://` at the "
+"beginning of the URL.\n"
+"If you just specify the path, Git tries to use hardlinks or directly copy "
+"the files it needs.\n"
+"If you specify `file://`, Git fires up the processes that it normally uses "
+"to transfer data over a network, which is generally much less efficient.\n"
+"The main reason to specify the `file://` prefix is if you want a clean copy "
+"of the repository with extraneous references or objects left out -- "
+"generally after an import from another VCS or something similar (see "
+"<<ch10-git-internals#ch10-git-internals>> for maintenance tasks).\n"
+"We'll use the normal path here because doing so is almost always faster.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:36
+#, no-wrap
+msgid ""
+"To add a local repository to an existing Git project, you can run something "
+"like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:40
+#, no-wrap
+msgid ""
+"$ git remote add local_proj /srv/git/project.git\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:43
+#, no-wrap
+msgid ""
+"Then, you can push to and pull from that remote via your new remote name "
+"`local_proj` as though you were doing so over a network.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:45
+#: book/04-git-server/sections/protocols.asc:122
+#: book/04-git-server/sections/protocols.asc:167
+#: book/04-git-server/sections/protocols.asc:192
+#, no-wrap
+msgid "===== The Pros\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:50
+#, no-wrap
+msgid ""
+"The pros of file-based repositories are that they're simple and they use "
+"existing file permissions and network access.\n"
+"If you already have a shared filesystem to which your whole team has access, "
+"setting up a repository is very easy.\n"
+"You stick the bare repository copy somewhere everyone has shared access to "
+"and set the read/write permissions as you would for any other shared "
+"directory.\n"
+"We'll discuss how to export a bare repository copy for this purpose in "
+"<<ch04-git-on-the-server#_getting_git_on_a_server>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:53
+#, no-wrap
+msgid ""
+"This is also a nice option for quickly grabbing work from someone else's "
+"working repository.\n"
+"If you and a co-worker are working on the same project and they want you to "
+"check something out, running a command like `git pull /home/john/project` is "
+"often easier than them pushing to a remote server and you subsequently "
+"fetching from it.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:55
+#: book/04-git-server/sections/protocols.asc:135
+#: book/04-git-server/sections/protocols.asc:174
+#: book/04-git-server/sections/protocols.asc:198
+#, no-wrap
+msgid "===== The Cons\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:58
+#, no-wrap
+msgid ""
+"The cons of this method are that shared access is generally more difficult "
+"to set up and reach from multiple locations than basic network access.\n"
+"If you want to push from your laptop when you're at home, you have to mount "
+"the remote disk, which can be difficult and slow compared to network-based "
+"access.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:62
+#, no-wrap
+msgid ""
+"It's important to mention that this isn't necessarily the fastest option if "
+"you're using a shared mount of some kind.\n"
+"A local repository is fast only if you have fast access to the data.\n"
+"A repository on NFS is often slower than the repository over SSH on the same "
+"server, allowing Git to run off local disks on each system.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:65
+#, no-wrap
+msgid ""
+"Finally, this protocol does not protect the repository against accidental "
+"damage.\n"
+"Every user has full shell access to the \"`remote`\" directory, and there is "
+"nothing preventing them from changing or removing internal Git files and "
+"corrupting the repository.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:67
+#, no-wrap
+msgid "==== The HTTP Protocols\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:74
+#, no-wrap
+msgid ""
+"Git can communicate over HTTP using two different modes.\n"
+"Prior to Git 1.6.6, there was only one way it could do this which was very "
+"simple and generally read-only.\n"
+"In version 1.6.6, a new, smarter protocol was introduced that involved Git "
+"being able to intelligently negotiate data transfer in a manner similar to "
+"how it does over SSH.\n"
+"In the last few years, this new HTTP protocol has become very popular since "
+"it's simpler for the user and smarter about how it communicates.\n"
+"The newer version is often referred to as the _Smart_ HTTP protocol and the "
+"older way as _Dumb_ HTTP.\n"
+"We'll cover the newer Smart HTTP protocol first.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:76
+#, no-wrap
+msgid "===== Smart HTTP\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:79
+#, no-wrap
+msgid ""
+"(((protocols, smart HTTP)))\n"
+"Smart HTTP operates very similarly to the SSH or Git protocols but runs over "
+"standard HTTPS ports and can use various HTTP authentication mechanisms, "
+"meaning it's often easier on the user than something like SSH, since you can "
+"use things like username/password authentication rather than having to set "
+"up SSH keys.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:84
+#, no-wrap
+msgid ""
+"It has probably become the most popular way to use Git now, since it can be "
+"set up to both serve anonymously like the `git://` protocol, and can also be "
+"pushed over with authentication and encryption like the SSH protocol.\n"
+"Instead of having to set up different URLs for these things, you can now use "
+"a single URL for both.\n"
+"If you try to push and the repository requires authentication (which it "
+"normally should), the server can prompt for a username and password.\n"
+"The same goes for read access.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:86
+#, no-wrap
+msgid ""
+"In fact, for services like GitHub, the URL you use to view the repository "
+"online (for example, https://github.com/schacon/simplegit[]) is the same URL "
+"you can use to clone and, if you have access, push over.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:88
+#, no-wrap
+msgid "===== Dumb HTTP\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:96
+#, no-wrap
+msgid ""
+"(((protocols, dumb HTTP)))\n"
+"If the server does not respond with a Git HTTP smart service, the Git client "
+"will try to fall back to the simpler _Dumb_ HTTP protocol.\n"
+"The Dumb protocol expects the bare Git repository to be served like normal "
+"files from the web server.\n"
+"The beauty of Dumb HTTP is the simplicity of setting it up.\n"
+"Basically, all you have to do is put a bare Git repository under your HTTP "
+"document root and set up a specific `post-update` hook, and you're done (See "
+"<<ch08-customizing-git#_git_hooks>>).\n"
+"At that point, anyone who can access the web server under which you put the "
+"repository can also clone your repository.\n"
+"To allow read access to your repository over HTTP, do something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:104
+#, no-wrap
+msgid ""
+"$ cd /var/www/htdocs/\n"
+"$ git clone --bare /path/to/git_project gitproject.git\n"
+"$ cd gitproject.git\n"
+"$ mv hooks/post-update.sample hooks/post-update\n"
+"$ chmod a+x hooks/post-update\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:109
+#, no-wrap
+msgid ""
+"That's all.(((hooks, post-update)))\n"
+"The `post-update` hook that comes with Git by default runs the appropriate "
+"command (`git update-server-info`) to make HTTP fetching and cloning work "
+"properly.\n"
+"This command is run when you push to this repository (over SSH perhaps); "
+"then, other people can clone via something like:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:113
+#, no-wrap
+msgid ""
+"$ git clone https://example.com/gitproject.git\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:117
+#, no-wrap
+msgid ""
+"In this particular case, we're using the `/var/www/htdocs` path that is "
+"common for Apache setups, but you can use any static web server -- just put "
+"the bare repository in its path.\n"
+"The Git data is served as basic static files (see the "
+"<<ch10-git-internals#ch10-git-internals>> chapter for details about exactly "
+"how it's served).\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:120
+#, no-wrap
+msgid ""
+"Generally you would either choose to run a read/write Smart HTTP server or "
+"simply have the files accessible as read-only in the Dumb manner.\n"
+"It's rare to run a mix of the two services.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:124
+#, no-wrap
+msgid "We'll concentrate on the pros of the Smart version of the HTTP protocol.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:129
+#, no-wrap
+msgid ""
+"The simplicity of having a single URL for all types of access and having the "
+"server prompt only when authentication is needed makes things very easy for "
+"the end user.\n"
+"Being able to authenticate with a username and password is also a big "
+"advantage over SSH, since users don't have to generate SSH keys locally and "
+"upload their public key to the server before being able to interact with "
+"it.\n"
+"For less sophisticated users, or users on systems where SSH is less common, "
+"this is a major advantage in usability.\n"
+"It is also a very fast and efficient protocol, similar to the SSH one.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:131
+#, no-wrap
+msgid ""
+"You can also serve your repositories read-only over HTTPS, which means you "
+"can encrypt the content transfer; or you can go so far as to make the "
+"clients use specific signed SSL certificates.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:133
+#, no-wrap
+msgid ""
+"Another nice thing is that HTTP and HTTPS are such commonly used protocols "
+"that corporate firewalls are often set up to allow traffic through their "
+"ports.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:138
+#, no-wrap
+msgid ""
+"Git over HTTPS can be a little more tricky to set up compared to SSH on some "
+"servers.\n"
+"Other than that, there is very little advantage that other protocols have "
+"over Smart HTTP for serving Git content.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:142
+#, no-wrap
+msgid ""
+"If you're using HTTP for authenticated pushing, providing your credentials "
+"is sometimes more complicated than using keys over SSH.\n"
+"There are, however, several credential caching tools you can use, including "
+"Keychain access on macOS and Credential Manager on Windows, to make this "
+"pretty painless.\n"
+"Read <<ch07-git-tools#_credential_caching>> to see how to set up secure HTTP "
+"password caching on your system.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:144
+#, no-wrap
+msgid "==== The SSH Protocol\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:149
+#, no-wrap
+msgid ""
+"(((protocols, SSH)))\n"
+"A common transport protocol for Git when self-hosting is over SSH.\n"
+"This is because SSH access to servers is already set up in most places -- "
+"and if it isn't, it's easy to do.\n"
+"SSH is also an authenticated network protocol and, because it's ubiquitous, "
+"it's generally easy to set up and use.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:151
+#, no-wrap
+msgid ""
+"To clone a Git repository over SSH, you can specify an `ssh://` URL like "
+"this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:155
+#, no-wrap
+msgid ""
+"$ git clone ssh://[user@]server/project.git\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:158
+#, no-wrap
+msgid "Or you can use the shorter scp-like syntax for the SSH protocol:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:162
+#, no-wrap
+msgid ""
+"$ git clone [user@]server:project.git\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:165
+#, no-wrap
+msgid ""
+"In both cases above, if you don't specify the optional username, Git assumes "
+"the user you're currently logged in as.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:172
+#, no-wrap
+msgid ""
+"The pros of using SSH are many.\n"
+"First, SSH is relatively easy to set up -- SSH daemons are commonplace, many "
+"network admins have experience with them, and many OS distributions are set "
+"up with them or have tools to manage them.\n"
+"Next, access over SSH is secure -- all data transfer is encrypted and "
+"authenticated.\n"
+"Last, like the HTTPS, Git and Local protocols, SSH is efficient, making the "
+"data as compact as possible before transferring it.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:179
+#, no-wrap
+msgid ""
+"The negative aspect of SSH is that it doesn't support anonymous access to "
+"your Git repository.\n"
+"If you're using SSH, people _must_ have SSH access to your machine, even in "
+"a read-only capacity, which doesn't make SSH conducive to open source "
+"projects for which people might simply want to clone your repository to "
+"examine it.\n"
+"If you're using it only within your corporate network, SSH may be the only "
+"protocol you need to deal with.\n"
+"If you want to allow anonymous read-only access to your projects and also "
+"want to use SSH, you'll have to set up SSH for you to push over but "
+"something else for others to fetch from.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:181
+#, no-wrap
+msgid "==== The Git Protocol\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:190
+#, no-wrap
+msgid ""
+"(((protocols, git)))\n"
+"Finally, we have the Git protocol.\n"
+"This is a special daemon that comes packaged with Git; it listens on a "
+"dedicated port (9418) that provides a service similar to the SSH protocol, "
+"but with absolutely no authentication.\n"
+"In order for a repository to be served over the Git protocol, you must "
+"create a `git-daemon-export-ok` file -- the daemon won't serve a repository "
+"without that file in it -- but, other than that, there is no security.\n"
+"Either the Git repository is available for everyone to clone, or it isn't.\n"
+"This means that there is generally no pushing over this protocol.\n"
+"You can enable push access but, given the lack of authentication, anyone on "
+"the internet who finds your project's URL could push to that project.\n"
+"Suffice it to say that this is rare.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:196
+#, no-wrap
+msgid ""
+"The Git protocol is often the fastest network transfer protocol available.\n"
+"If you're serving a lot of traffic for a public project or serving a very "
+"large project that doesn't require user authentication for read access, it's "
+"likely that you'll want to set up a Git daemon to serve your project.\n"
+"It uses the same data-transfer mechanism as the SSH protocol but without the "
+"encryption and authentication overhead.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/protocols.asc:205
+#, no-wrap
+msgid ""
+"The downside of the Git protocol is the lack of authentication.\n"
+"It's generally undesirable for the Git protocol to be the only access to "
+"your project.\n"
+"Generally, you'll pair it with SSH or HTTPS access for the few developers "
+"who have push (write) access and have everyone else use `git://` for "
+"read-only access.\n"
+"It's also probably the most difficult protocol to set up.\n"
+"It must run its own daemon, which requires `xinetd` or `systemd` "
+"configuration or the like, which isn't always a walk in the park.\n"
+"It also requires firewall access to port 9418, which isn't a standard port "
+"that corporate firewalls always allow.\n"
+"Behind big corporate firewalls, this obscure port is commonly blocked.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/setting-up-server.asc:3
+#, no-wrap
+msgid ""
+"[[_setting_up_server]]\n"
+"=== Setting Up the Server\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/setting-up-server.asc:7
+#, no-wrap
+msgid ""
+"Let's walk through setting up SSH access on the server side.\n"
+"In this example, you'll use the `authorized_keys` method for authenticating "
+"your users.\n"
+"We also assume you're running a standard Linux distribution like Ubuntu.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/setting-up-server.asc:11
+#, no-wrap
+msgid ""
+"A good deal of what is described here can be automated by using the "
+"`ssh-copy-id` command, rather than manually copying and installing public "
+"keys.\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/setting-up-server.asc:14
+#, no-wrap
+msgid ""
+"First, you create a `git` user account and a `.ssh` directory for that "
+"user.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/setting-up-server.asc:22
+#, no-wrap
+msgid ""
+"$ sudo adduser git\n"
+"$ su git\n"
+"$ cd\n"
+"$ mkdir .ssh && chmod 700 .ssh\n"
+"$ touch .ssh/authorized_keys && chmod 600 .ssh/authorized_keys\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/setting-up-server.asc:27
+#, no-wrap
+msgid ""
+"Next, you need to add some developer SSH public keys to the "
+"`authorized_keys` file for the `git` user.\n"
+"Let's assume you have some trusted public keys and have saved them to "
+"temporary files.\n"
+"Again, the public keys look something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/setting-up-server.asc:37
+#, no-wrap
+msgid ""
+"$ cat /tmp/id_rsa.john.pub\n"
+"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCB007n/ww+ouN4gSLKssMxXnBOvf9LGt4L\n"
+"ojG6rs6hPB09j9R/T17/x4lhJA0F3FR1rP6kYBRsWj2aThGw6HXLm9/5zytK6Ztg3RPKK+4k\n"
+"Yjh6541NYsnEAZuXz0jTTyAUfrtU3Z5E003C4oxOj6H0rfIF1kKI9MAQLMdpGW1GYEIgS9Ez\n"
+"Sdfd8AcCIicTDWbqLAcU4UpkaX8KyGlLwsNuuGztobF8m72ALC/nLF6JLtPofwFBlgc+myiv\n"
+"O7TCUSBdLQlgMVOFq1I2uPWQOkOWQAHukEOmfjy2jctxSDBQ220ymjaNsHT4kgtZg2AYYgPq\n"
+"dAv8JggJICUvax2T9va5 gsg-keypair\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/setting-up-server.asc:40
+#, no-wrap
+msgid ""
+"You just append them to the `git` user's `authorized_keys` file in its "
+"`.ssh` directory:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/setting-up-server.asc:46
+#, no-wrap
+msgid ""
+"$ cat /tmp/id_rsa.john.pub >> ~/.ssh/authorized_keys\n"
+"$ cat /tmp/id_rsa.josie.pub >> ~/.ssh/authorized_keys\n"
+"$ cat /tmp/id_rsa.jessica.pub >> ~/.ssh/authorized_keys\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/setting-up-server.asc:49
+#, no-wrap
+msgid ""
+"Now, you can set up an empty repository for them by running `git init` with "
+"the `--bare` option, which initializes the repository without a working "
+"directory:(((git commands, init, bare)))\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/setting-up-server.asc:57
+#, no-wrap
+msgid ""
+"$ cd /srv/git\n"
+"$ mkdir project.git\n"
+"$ cd project.git\n"
+"$ git init --bare\n"
+"Initialized empty Git repository in /srv/git/project.git/\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/setting-up-server.asc:63
+#, no-wrap
+msgid ""
+"Then, John, Josie, or Jessica can push the first version of their project "
+"into that repository by adding it as a remote and pushing up a branch.\n"
+"Note that someone must shell onto the machine and create a bare repository "
+"every time you want to add a project.\n"
+"Let's use `gitserver` as the hostname of the server on which you've set up "
+"your `git` user and repository.\n"
+"If you're running it internally, and you set up DNS for `gitserver` to point "
+"to that server, then you can use the commands pretty much as is (assuming "
+"that `myproject` is an existing project with files in it):\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/setting-up-server.asc:73
+#, no-wrap
+msgid ""
+"# on John's computer\n"
+"$ cd myproject\n"
+"$ git init\n"
+"$ git add .\n"
+"$ git commit -m 'Initial commit'\n"
+"$ git remote add origin git@gitserver:/srv/git/project.git\n"
+"$ git push origin master\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/setting-up-server.asc:76
+#, no-wrap
+msgid ""
+"At this point, the others can clone it down and push changes back up just as "
+"easily:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/setting-up-server.asc:84
+#, no-wrap
+msgid ""
+"$ git clone git@gitserver:/srv/git/project.git\n"
+"$ cd project\n"
+"$ vim README\n"
+"$ git commit -am 'Fix for README file'\n"
+"$ git push origin master\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/setting-up-server.asc:87
+#, no-wrap
+msgid ""
+"With this method, you can quickly get a read/write Git server up and running "
+"for a handful of developers.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/setting-up-server.asc:90
+#, no-wrap
+msgid ""
+"You should note that currently all these users can also log into the server "
+"and get a shell as the `git` user.\n"
+"If you want to restrict that, you will have to change the shell to something "
+"else in the `/etc/passwd` file.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/setting-up-server.asc:95
+#, no-wrap
+msgid ""
+"You can easily restrict the `git` user account to only Git-related "
+"activities with a limited shell tool called `git-shell` that comes with "
+"Git.\n"
+"If you set this as the `git` user account's login shell, then that account "
+"can't have normal shell access to your server.\n"
+"To use this, specify `git-shell` instead of `bash` or `csh` for that "
+"account's login shell.\n"
+"To do so, you must first add the full pathname of the `git-shell` command to "
+"`/etc/shells` if it's not already there:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/setting-up-server.asc:101
+#, no-wrap
+msgid ""
+"$ cat /etc/shells   # see if git-shell is already in there. If not...\n"
+"$ which git-shell   # make sure git-shell is installed on your system.\n"
+"$ sudo -e /etc/shells  # and add the path to git-shell from last command\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/setting-up-server.asc:104
+#, no-wrap
+msgid "Now you can edit the shell for a user using `chsh <username> -s <shell>`:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/setting-up-server.asc:108
+#, no-wrap
+msgid ""
+"$ sudo chsh git -s $(which git-shell)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/setting-up-server.asc:112
+#, no-wrap
+msgid ""
+"Now, the `git` user can still use the SSH connection to push and pull Git "
+"repositories but can't shell onto the machine.\n"
+"If you try, you'll see a login rejection like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/setting-up-server.asc:119
+#, no-wrap
+msgid ""
+"$ ssh git@gitserver\n"
+"fatal: Interactive git shell is not enabled.\n"
+"hint: ~/git-shell-commands should exist and have read and execute access.\n"
+"Connection to gitserver closed.\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/setting-up-server.asc:123
+#, no-wrap
+msgid ""
+"At this point, users are still able to use SSH port forwarding to access any "
+"host the git server is able to reach.\n"
+"If you want to prevent that, you can edit the `authorized_keys` file and "
+"prepend the following options to each key you'd like to restrict:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/setting-up-server.asc:127
+#, no-wrap
+msgid ""
+"no-port-forwarding,no-X11-forwarding,no-agent-forwarding,no-pty\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/setting-up-server.asc:130
+#, no-wrap
+msgid "The result should look like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/setting-up-server.asc:141
+#, no-wrap
+msgid ""
+"$ cat ~/.ssh/authorized_keys\n"
+"no-port-forwarding,no-X11-forwarding,no-agent-forwarding,no-pty ssh-rsa\n"
+"AAAAB3NzaC1yc2EAAAADAQABAAABAQCB007n/ww+ouN4gSLKssMxXnBOvf9LGt4LojG6rs6h\n"
+"PB09j9R/T17/x4lhJA0F3FR1rP6kYBRsWj2aThGw6HXLm9/5zytK6Ztg3RPKK+4kYjh6541N\n"
+"YsnEAZuXz0jTTyAUfrtU3Z5E003C4oxOj6H0rfIF1kKI9MAQLMdpGW1GYEIgS9EzSdfd8AcC\n"
+"IicTDWbqLAcU4UpkaX8KyGlLwsNuuGztobF8m72ALC/nLF6JLtPofwFBlgc+myivO7TCUSBd\n"
+"LQlgMVOFq1I2uPWQOkOWQAHukEOmfjy2jctxSDBQ220ymjaNsHT4kgtZg2AYYgPqdAv8JggJ\n"
+"ICUvax2T9va5 gsg-keypair\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/setting-up-server.asc:144
+#, no-wrap
+msgid ""
+"no-port-forwarding,no-X11-forwarding,no-agent-forwarding,no-pty ssh-rsa\n"
+"AAAAB3NzaC1yc2EAAAADAQABAAABAQDEwENNMomTboYI+LJieaAY16qiXiH3wuvENhBG...\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/setting-up-server.asc:149
+#, no-wrap
+msgid ""
+"Now Git network commands will still work just fine but the users won't be "
+"able to get a shell.\n"
+"As the output states, you can also set up a directory in the `git` user's "
+"home directory that customizes the `git-shell` command a bit.\n"
+"For instance, you can restrict the Git commands that the server will accept "
+"or you can customize the message that users see if they try to SSH in like "
+"that.\n"
+"Run `git help shell` for more information on customizing the shell.(((git "
+"commands, help)))\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/smart-http.asc:2
+#, no-wrap
+msgid "=== Smart HTTP\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/smart-http.asc:8
+#, no-wrap
+msgid ""
+"(((serving repositories, HTTP)))\n"
+"We now have authenticated access through SSH and unauthenticated access "
+"through `git://`, but there is also a protocol that can do both at the same "
+"time.\n"
+"Setting up Smart HTTP is basically just enabling a CGI script that is "
+"provided with Git called `git-http-backend` on the server.(((git commands, "
+"\"http-backend\")))\n"
+"This CGI will read the path and headers sent by a `git fetch` or `git push` "
+"to an HTTP URL and determine if the client can communicate over HTTP (which "
+"is true for any client since version 1.6.6).\n"
+"If the CGI sees that the client is smart, it will communicate smartly with "
+"it; otherwise it will fall back to the dumb behavior (so it is backward "
+"compatible for reads with older clients).\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/smart-http.asc:12
+#, no-wrap
+msgid ""
+"Let's walk through a very basic setup.\n"
+"We'll set this up with Apache as the CGI server.\n"
+"If you don't have Apache setup, you can do so on a Linux box with something "
+"like this:(((Apache)))\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/smart-http.asc:17
+#, no-wrap
+msgid ""
+"$ sudo apt-get install apache2 apache2-utils\n"
+"$ a2enmod cgi alias env\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/smart-http.asc:20
+#, no-wrap
+msgid ""
+"This also enables the `mod_cgi`, `mod_alias`, and `mod_env` modules, which "
+"are all needed for this to work properly.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/smart-http.asc:22
+#, no-wrap
+msgid ""
+"You'll also need to set the Unix user group of the `/srv/git` directories to "
+"`www-data` so your web server can read- and write-access the repositories, "
+"because the Apache instance running the CGI script will (by default) be "
+"running as that user:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/smart-http.asc:26
+#, no-wrap
+msgid ""
+"$ chgrp -R www-data /srv/git\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/smart-http.asc:29
+#, no-wrap
+msgid ""
+"Next we need to add some things to the Apache configuration to run the "
+"`git-http-backend` as the handler for anything coming into the `/git` path "
+"of your web server.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/smart-http.asc:35
+#, no-wrap
+msgid ""
+"SetEnv GIT_PROJECT_ROOT /srv/git\n"
+"SetEnv GIT_HTTP_EXPORT_ALL\n"
+"ScriptAlias /git/ /usr/lib/git-core/git-http-backend/\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/smart-http.asc:38
+#, no-wrap
+msgid ""
+"If you leave out `GIT_HTTP_EXPORT_ALL` environment variable, then Git will "
+"only serve to unauthenticated clients the repositories with the "
+"`git-daemon-export-ok` file in them, just like the Git daemon did.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/smart-http.asc:40
+#, no-wrap
+msgid ""
+"Finally you'll want to tell Apache to allow requests to `git-http-backend` "
+"and make writes be authenticated somehow, possibly with an Auth block like "
+"this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/smart-http.asc:50
+#, no-wrap
+msgid ""
+"<Files \"git-http-backend\">\n"
+"    AuthType Basic\n"
+"    AuthName \"Git Access\"\n"
+"    AuthUserFile /srv/git/.htpasswd\n"
+"    Require expr !(%{QUERY_STRING} -strmatch '*service=git-receive-pack*' || "
+"%{REQUEST_URI} =~ m#/git-receive-pack$#)\n"
+"    Require valid-user\n"
+"</Files>\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/smart-http.asc:54
+#, no-wrap
+msgid ""
+"That will require you to create a `.htpasswd` file containing the passwords "
+"of all the valid users.\n"
+"Here is an example of adding a \"`schacon`\" user to the file:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/smart-http.asc:58
+#, no-wrap
+msgid ""
+"$ htpasswd -c /srv/git/.htpasswd schacon\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/smart-http.asc:63
+#, no-wrap
+msgid ""
+"There are tons of ways to have Apache authenticate users, you'll have to "
+"choose and implement one of them.\n"
+"This is just the simplest example we could come up with.\n"
+"You'll also almost certainly want to set this up over SSL so all this data "
+"is encrypted.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/smart-http.asc:68
+#, no-wrap
+msgid ""
+"We don't want to go too far down the rabbit hole of Apache configuration "
+"specifics, since you could well be using a different server or have "
+"different authentication needs.\n"
+"The idea is that Git comes with a CGI called `git-http-backend` that when "
+"invoked will do all the negotiation to send and receive data over HTTP.\n"
+"It does not implement any authentication itself, but that can easily be "
+"controlled at the layer of the web server that invokes it.\n"
+"You can do this with nearly any CGI-capable web server, so go with the one "
+"that you know best.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/04-git-server/sections/smart-http.asc:72
+#, no-wrap
+msgid ""
+"For more information on configuring authentication in Apache, check out the "
+"Apache docs here: https://httpd.apache.org/docs/current/howto/auth.html[]\n"
+"====\n"
+msgstr ""

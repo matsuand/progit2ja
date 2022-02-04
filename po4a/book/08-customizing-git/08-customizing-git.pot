@@ -1,0 +1,3599 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2022-02-04 19:16+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:2
+#, no-wrap
+msgid "=== Git Attributes\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:6
+#, no-wrap
+msgid ""
+"(((attributes)))\n"
+"Some of these settings can also be specified for a path, so that Git applies "
+"those settings only for a subdirectory or subset of files.\n"
+"These path-specific settings are called Git attributes and are set either in "
+"a `.gitattributes` file in one of your directories (normally the root of "
+"your project) or in the `.git/info/attributes` file if you don't want the "
+"attributes file committed with your project.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:9
+#, no-wrap
+msgid ""
+"Using attributes, you can do things like specify separate merge strategies "
+"for individual files or directories in your project, tell Git how to diff "
+"non-text files, or have Git filter content before you check it into or out "
+"of Git.\n"
+"In this section, you'll learn about some of the attributes you can set on "
+"your paths in your Git project and see a few examples of using this feature "
+"in practice.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:11
+#, no-wrap
+msgid "==== Binary Files\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:16
+#, no-wrap
+msgid ""
+"(((binary files)))\n"
+"One cool trick for which you can use Git attributes is telling Git which "
+"files are binary (in cases it otherwise may not be able to figure out) and "
+"giving Git special instructions about how to handle those files.\n"
+"For instance, some text files may be machine generated and not diffable, "
+"whereas some binary files can be diffed.\n"
+"You'll see how to tell Git which is which.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:18
+#, no-wrap
+msgid "===== Identifying Binary Files\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:24
+#, no-wrap
+msgid ""
+"Some files look like text files but for all intents and purposes are to be "
+"treated as binary data.\n"
+"For instance, Xcode projects on macOS contain a file that ends in "
+"`.pbxproj`, which is basically a JSON (plain-text JavaScript data format) "
+"dataset written out to disk by the IDE, which records your build settings "
+"and so on.\n"
+"Although it's technically a text file (because it's all UTF-8), you don't "
+"want to treat it as such because it's really a lightweight database â you "
+"can't merge the contents if two people change it, and diffs generally aren't "
+"helpful.\n"
+"The file is meant to be consumed by a machine.\n"
+"In essence, you want to treat it like a binary file.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:26
+#, no-wrap
+msgid ""
+"To tell Git to treat all `pbxproj` files as binary data, add the following "
+"line to your `.gitattributes` file:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:28
+#: book/08-customizing-git/sections/attributes.asc:57
+#: book/08-customizing-git/sections/attributes.asc:118
+#: book/08-customizing-git/sections/attributes.asc:170
+#: book/08-customizing-git/sections/attributes.asc:211
+#: book/08-customizing-git/sections/attributes.asc:254
+#: book/08-customizing-git/sections/attributes.asc:293
+#: book/08-customizing-git/sections/attributes.asc:306
+#: book/08-customizing-git/sections/attributes.asc:358
+#: book/08-customizing-git/sections/config.asc:160
+#: book/08-customizing-git/sections/config.asc:303
+#, no-wrap
+msgid ""
+"[source,ini]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:30
+#, no-wrap
+msgid ""
+"*.pbxproj binary\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:33
+#, no-wrap
+msgid ""
+"Now, Git won't try to convert or fix CRLF issues; nor will it try to compute "
+"or print a diff for changes in this file when you run `git show` or `git "
+"diff` on your project.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:35
+#, no-wrap
+msgid "===== Diffing Binary Files\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:38
+#, no-wrap
+msgid ""
+"You can also use the Git attributes functionality to effectively diff binary "
+"files.\n"
+"You do this by telling Git how to convert your binary data to a text format "
+"that can be compared via the normal diff.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:43
+#, no-wrap
+msgid ""
+"First, you'll use this technique to solve one of the most annoying problems "
+"known to humanity: version-controlling Microsoft Word documents.\n"
+"Everyone knows that Word is the most horrific editor around, but oddly, "
+"everyone still uses it.\n"
+"If you want to version-control Word documents, you can stick them in a Git "
+"repository and commit every once in a while; but what good does that do?\n"
+"If you run `git diff` normally, you only see something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:45
+#: book/08-customizing-git/sections/attributes.asc:72
+#: book/08-customizing-git/sections/attributes.asc:81
+#: book/08-customizing-git/sections/attributes.asc:93
+#: book/08-customizing-git/sections/attributes.asc:125
+#: book/08-customizing-git/sections/attributes.asc:177
+#: book/08-customizing-git/sections/attributes.asc:184
+#: book/08-customizing-git/sections/attributes.asc:218
+#: book/08-customizing-git/sections/attributes.asc:245
+#: book/08-customizing-git/sections/attributes.asc:259
+#: book/08-customizing-git/sections/attributes.asc:266
+#: book/08-customizing-git/sections/attributes.asc:311
+#: book/08-customizing-git/sections/attributes.asc:320
+#: book/08-customizing-git/sections/attributes.asc:329
+#: book/08-customizing-git/sections/attributes.asc:365
+#: book/08-customizing-git/sections/attributes.asc:372
+#: book/08-customizing-git/sections/config.asc:9
+#: book/08-customizing-git/sections/config.asc:43
+#: book/08-customizing-git/sections/config.asc:57
+#: book/08-customizing-git/sections/config.asc:86
+#: book/08-customizing-git/sections/config.asc:123
+#: book/08-customizing-git/sections/config.asc:136
+#: book/08-customizing-git/sections/config.asc:143
+#: book/08-customizing-git/sections/config.asc:174
+#: book/08-customizing-git/sections/config.asc:186
+#: book/08-customizing-git/sections/config.asc:209
+#: book/08-customizing-git/sections/config.asc:233
+#: book/08-customizing-git/sections/config.asc:257
+#: book/08-customizing-git/sections/config.asc:274
+#: book/08-customizing-git/sections/config.asc:283
+#: book/08-customizing-git/sections/config.asc:293
+#: book/08-customizing-git/sections/config.asc:316
+#: book/08-customizing-git/sections/config.asc:331
+#: book/08-customizing-git/sections/config.asc:343
+#: book/08-customizing-git/sections/config.asc:375
+#: book/08-customizing-git/sections/config.asc:400
+#: book/08-customizing-git/sections/config.asc:408
+#: book/08-customizing-git/sections/config.asc:417
+#: book/08-customizing-git/sections/config.asc:435
+#: book/08-customizing-git/sections/config.asc:443
+#: book/08-customizing-git/sections/config.asc:453
+#: book/08-customizing-git/sections/config.asc:460
+#: book/08-customizing-git/sections/config.asc:478
+#: book/08-customizing-git/sections/config.asc:492
+#: book/08-customizing-git/sections/config.asc:505
+#: book/08-customizing-git/sections/policy.asc:52
+#: book/08-customizing-git/sections/policy.asc:68
+#: book/08-customizing-git/sections/policy.asc:82
+#: book/08-customizing-git/sections/policy.asc:173
+#: book/08-customizing-git/sections/policy.asc:222
+#: book/08-customizing-git/sections/policy.asc:243
+#: book/08-customizing-git/sections/policy.asc:254
+#: book/08-customizing-git/sections/policy.asc:264
+#: book/08-customizing-git/sections/policy.asc:276
+#: book/08-customizing-git/sections/policy.asc:313
+#: book/08-customizing-git/sections/policy.asc:322
+#, no-wrap
+msgid ""
+"[source,console]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:50
+#, no-wrap
+msgid ""
+"$ git diff\n"
+"diff --git a/chapter1.docx b/chapter1.docx\n"
+"index 88839c4..4afcb7c 100644\n"
+"Binary files a/chapter1.docx and b/chapter1.docx differ\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:55
+#, no-wrap
+msgid ""
+"You can't directly compare two versions unless you check them out and scan "
+"them manually, right?\n"
+"It turns out you can do this fairly well using Git attributes.\n"
+"Put the following line in your `.gitattributes` file:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:59
+#, no-wrap
+msgid ""
+"*.docx diff=word\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:65
+#, no-wrap
+msgid ""
+"This tells Git that any file that matches this pattern (`.docx`) should use "
+"the \"`word`\" filter when you try to view a diff that contains changes.\n"
+"What is the \"`word`\" filter?\n"
+"You have to set it up.\n"
+"Here you'll configure Git to use the `docx2txt` program to convert Word "
+"documents into readable text files, which it will then diff properly.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:70
+#, no-wrap
+msgid ""
+"First, you'll need to install `docx2txt`; you can download it from "
+"https://sourceforge.net/projects/docx2txt[].\n"
+"Follow the instructions in the `INSTALL` file to put it somewhere your shell "
+"can find it.\n"
+"Next, you'll write a wrapper script to convert output to the format Git "
+"expects.\n"
+"Create a file that's somewhere in your path called `docx2txt`, and add these "
+"contents:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:75
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"docx2txt.pl \"$1\" -\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:79
+#, no-wrap
+msgid ""
+"Don't forget to `chmod a+x` that file.\n"
+"Finally, you can configure Git to use this script:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:83
+#, no-wrap
+msgid ""
+"$ git config diff.word.textconv docx2txt\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:87
+#, no-wrap
+msgid ""
+"Now Git knows that if it tries to do a diff between two snapshots, and any "
+"of the files end in `.docx`, it should run those files through the "
+"\"`word`\" filter, which is defined as the `docx2txt` program.\n"
+"This effectively makes nice text-based versions of your Word files before "
+"attempting to diff them.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:91
+#, no-wrap
+msgid ""
+"Here's an example: Chapter 1 of this book was converted to Word format and "
+"committed in a Git repository.\n"
+"Then a new paragraph was added.\n"
+"Here's what `git diff` shows:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:107
+#, no-wrap
+msgid ""
+"$ git diff\n"
+"diff --git a/chapter1.docx b/chapter1.docx\n"
+"index 0b013ca..ba25db5 100644\n"
+"--- a/chapter1.docx\n"
+"+++ b/chapter1.docx\n"
+"@@ -2,6 +2,7 @@\n"
+" This chapter will be about getting started with Git. We will begin at the "
+"beginning by explaining some background on version control tools, then move "
+"on to how to get Git running on your system and finally how to get it setup "
+"to start working with. At the end of this chapter you should understand why "
+"Git is around, why you should use it and you should be all setup to do so.\n"
+" 1.1. About Version Control\n"
+" What is \"version control\", and why should you care? Version control is a "
+"system that records changes to a file or set of files over time so that you "
+"can recall specific versions later. For the examples in this book you will "
+"use software source code as the files being version controlled, though in "
+"reality you can do this with nearly any type of file on a computer.\n"
+"+Testing: 1, 2, 3.\n"
+" If you are a graphic or web designer and want to keep every version of an "
+"image or layout (which you would most certainly want to), a Version Control "
+"System (VCS) is a very wise thing to use. It allows you to revert files back "
+"to a previous state, revert the entire project back to a previous state, "
+"compare changes over time, see who last modified something that might be "
+"causing a problem, who introduced an issue and when, and more. Using a VCS "
+"also generally means that if you screw things up or lose files, you can "
+"easily recover. In addition, you get all this for very little overhead.\n"
+" 1.1.1. Local Version Control Systems\n"
+" Many people's version-control method of choice is to copy files into "
+"another directory (perhaps a time-stamped directory, if they're "
+"clever). This approach is very common because it is so simple, but it is "
+"also incredibly error prone. It is easy to forget which directory you're in "
+"and accidentally write to the wrong file or copy over files you don't mean "
+"to.\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:111
+#, no-wrap
+msgid ""
+"Git successfully and succinctly tells us that we added the string "
+"\"`Testing: 1, 2, 3.`\", which is correct.\n"
+"It's not perfect â formatting changes wouldn't show up here â but it "
+"certainly works.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:116
+#, no-wrap
+msgid ""
+"Another interesting problem you can solve this way involves diffing image "
+"files.\n"
+"One way to do this is to run image files through a filter that extracts "
+"their EXIF information â metadata that is recorded with most image "
+"formats.\n"
+"If you download and install the `exiftool` program, you can use it to "
+"convert your images into text about the metadata, so at least the diff will "
+"show you a textual representation of any changes that happened.\n"
+"Put the following line in your `.gitattributes` file:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:120
+#, no-wrap
+msgid ""
+"*.png diff=exif\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:123
+#, no-wrap
+msgid "Configure Git to use this tool:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:127
+#, no-wrap
+msgid ""
+"$ git config diff.exif.textconv exiftool\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:130
+#, no-wrap
+msgid ""
+"If you replace an image in your project and run `git diff`, you see "
+"something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:132
+#, no-wrap
+msgid ""
+"[source,diff]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:151
+#, no-wrap
+msgid ""
+"diff --git a/image.png b/image.png\n"
+"index 88839c4..4afcb7c 100644\n"
+"--- a/image.png\n"
+"+++ b/image.png\n"
+"@@ -1,12 +1,12 @@\n"
+" ExifTool Version Number         : 7.74\n"
+"-File Size                       : 70 kB\n"
+"-File Modification Date/Time     : 2009:04:21 07:02:45-07:00\n"
+"+File Size                       : 94 kB\n"
+"+File Modification Date/Time     : 2009:04:21 07:02:43-07:00\n"
+" File Type                       : PNG\n"
+" MIME Type                       : image/png\n"
+"-Image Width                     : 1058\n"
+"-Image Height                    : 889\n"
+"+Image Width                     : 1056\n"
+"+Image Height                    : 827\n"
+" Bit Depth                       : 8\n"
+" Color Type                      : RGB with Alpha\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:154
+#, no-wrap
+msgid ""
+"You can easily see that the file size and image dimensions have both "
+"changed.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:157
+#, no-wrap
+msgid ""
+"[[_keyword_expansion]]\n"
+"==== Keyword Expansion\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:163
+#, no-wrap
+msgid ""
+"(((keyword expansion)))\n"
+"SVN- or CVS-style keyword expansion is often requested by developers used to "
+"those systems.\n"
+"The main problem with this in Git is that you can't modify a file with "
+"information about the commit after you've committed, because Git checksums "
+"the file first.\n"
+"However, you can inject text into a file when it's checked out and remove it "
+"again before it's added to a commit.\n"
+"Git attributes offers you two ways to do this.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:168
+#, no-wrap
+msgid ""
+"First, you can inject the SHA-1 checksum of a blob into an `$Id$` field in "
+"the file automatically.\n"
+"If you set this attribute on a file or set of files, then the next time you "
+"check out that branch, Git will replace that field with the SHA-1 of the "
+"blob.\n"
+"It's important to notice that it isn't the SHA-1 of the commit, but of the "
+"blob itself.\n"
+"Put the following line in your `.gitattributes` file:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:172
+#, no-wrap
+msgid ""
+"*.txt ident\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:175
+#, no-wrap
+msgid "Add an `$Id$` reference to a test file:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:179
+#, no-wrap
+msgid ""
+"$ echo '$Id$' > test.txt\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:182
+#, no-wrap
+msgid "The next time you check out this file, Git injects the SHA-1 of the blob:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:189
+#, no-wrap
+msgid ""
+"$ rm test.txt\n"
+"$ git checkout -- test.txt\n"
+"$ cat test.txt\n"
+"$Id: 42812b7653c7b88933f8a9d6cad0ca16714b9bb3 $\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:193
+#, no-wrap
+msgid ""
+"However, that result is of limited use.\n"
+"If you've used keyword substitution in CVS or Subversion, you can include a "
+"datestamp â the SHA-1 isn't all that helpful, because it's fairly random "
+"and you can't tell if one SHA-1 is older or newer than another just by "
+"looking at them.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:198
+#, no-wrap
+msgid ""
+"It turns out that you can write your own filters for doing substitutions in "
+"files on commit/checkout.\n"
+"These are called \"`clean`\" and \"`smudge`\" filters.\n"
+"In the `.gitattributes` file, you can set a filter for particular paths and "
+"then set up scripts that will process files just before they're checked out "
+"(\"`smudge`\", see <<filters_a>>) and just before they're staged "
+"(\"`clean`\", see <<filters_b>>).\n"
+"These filters can be set to do all sorts of fun things.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:202
+#, no-wrap
+msgid ""
+"[[filters_a]]\n"
+".The \"`smudge`\" filter is run on checkout\n"
+"image::images/smudge.png[The âsmudgeâ filter is run on checkout]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:206
+#, no-wrap
+msgid ""
+"[[filters_b]]\n"
+".The \"`clean`\" filter is run when files are staged\n"
+"image::images/clean.png[The âcleanâ filter is run when files are "
+"staged]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:209
+#, no-wrap
+msgid ""
+"The original commit message for this feature gives a simple example of "
+"running all your C source code through the `indent` program before "
+"committing.\n"
+"You can set it up by setting the filter attribute in your `.gitattributes` "
+"file to filter `\\*.c` files with the \"`indent`\" filter:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:213
+#, no-wrap
+msgid ""
+"*.c filter=indent\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:216
+#, no-wrap
+msgid "Then, tell Git what the \"`indent`\" filter does on smudge and clean:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:221
+#, no-wrap
+msgid ""
+"$ git config --global filter.indent.clean indent\n"
+"$ git config --global filter.indent.smudge cat\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:226
+#, no-wrap
+msgid ""
+"In this case, when you commit files that match `*.c`, Git will run them "
+"through the indent program before it stages them and then run them through "
+"the `cat` program before it checks them back out onto disk.\n"
+"The `cat` program does essentially nothing: it spits out the same data that "
+"it comes in.\n"
+"This combination effectively filters all C source code files through "
+"`indent` before committing.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:230
+#, no-wrap
+msgid ""
+"Another interesting example gets `$Date$` keyword expansion, RCS style.\n"
+"To do this properly, you need a small script that takes a filename, figures "
+"out the last commit date for this project, and inserts the date into the "
+"file.\n"
+"Here is a small Ruby script that does that:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:232
+#: book/08-customizing-git/sections/policy.asc:25
+#: book/08-customizing-git/sections/policy.asc:92
+#: book/08-customizing-git/sections/policy.asc:137
+#: book/08-customizing-git/sections/policy.asc:157
+#: book/08-customizing-git/sections/policy.asc:183
+#: book/08-customizing-git/sections/policy.asc:297
+#: book/08-customizing-git/sections/policy.asc:332
+#: book/08-customizing-git/sections/policy.asc:366
+#: book/08-customizing-git/sections/policy.asc:373
+#: book/08-customizing-git/sections/policy.asc:382
+#: book/08-customizing-git/sections/policy.asc:389
+#: book/08-customizing-git/sections/policy.asc:407
+#: book/08-customizing-git/sections/policy.asc:435
+#, no-wrap
+msgid ""
+"[source,ruby]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:237
+#, no-wrap
+msgid ""
+"#! /usr/bin/env ruby\n"
+"data = STDIN.read\n"
+"last_date = `git log --pretty=format:\"%ad\" -1`\n"
+"puts data.gsub('$Date$', '$Date: ' + last_date.to_s + '$')\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:243
+#, no-wrap
+msgid ""
+"All the script does is get the latest commit date from the `git log` "
+"command, stick that into any `$Date$` strings it sees in stdin, and print "
+"the results â it should be simple to do in whatever language you're most "
+"comfortable in.\n"
+"You can name this file `expand_date` and put it in your path.\n"
+"Now, you need to set up a filter in Git (call it `dater`) and tell it to use "
+"your `expand_date` filter to smudge the files on checkout.\n"
+"You'll use a Perl expression to clean that up on commit:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:248
+#, no-wrap
+msgid ""
+"$ git config filter.dater.smudge expand_date\n"
+"$ git config filter.dater.clean 'perl -pe "
+"\"s/\\\\\\$Date[^\\\\\\$]*\\\\\\$/\\\\\\$Date\\\\\\$/\"'\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:252
+#, no-wrap
+msgid ""
+"This Perl snippet strips out anything it sees in a `$Date$` string, to get "
+"back to where you started.\n"
+"Now that your filter is ready, you can test it by setting up a Git attribute "
+"for that file that engages the new filter and creating a file with your "
+"`$Date$` keyword:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:256
+#, no-wrap
+msgid ""
+"date*.txt filter=dater\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:261
+#, no-wrap
+msgid ""
+"$ echo '# $Date$' > date_test.txt\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:264
+#, no-wrap
+msgid ""
+"If you commit those changes and check out the file again, you see the "
+"keyword properly substituted:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:273
+#, no-wrap
+msgid ""
+"$ git add date_test.txt .gitattributes\n"
+"$ git commit -m \"Test date expansion in Git\"\n"
+"$ rm date_test.txt\n"
+"$ git checkout date_test.txt\n"
+"$ cat date_test.txt\n"
+"# $Date: Tue Apr 21 07:26:52 2009 -0700$\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:278
+#, no-wrap
+msgid ""
+"You can see how powerful this technique can be for customized "
+"applications.\n"
+"You have to be careful, though, because the `.gitattributes` file is "
+"committed and passed around with the project, but the driver (in this case, "
+"`dater`) isn't, so it won't work everywhere.\n"
+"When you design these filters, they should be able to fail gracefully and "
+"have the project still work properly.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:280
+#, no-wrap
+msgid "==== Exporting Your Repository\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:283
+#, no-wrap
+msgid ""
+"(((archiving)))\n"
+"Git attribute data also allows you to do some interesting things when "
+"exporting an archive of your project.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:285
+#, no-wrap
+msgid "===== `export-ignore`\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:288
+#, no-wrap
+msgid ""
+"You can tell Git not to export certain files or directories when generating "
+"an archive.\n"
+"If there is a subdirectory or file that you don't want to include in your "
+"archive file but that you do want checked into your project, you can "
+"determine those files via the `export-ignore` attribute.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:291
+#, no-wrap
+msgid ""
+"For example, say you have some test files in a `test/` subdirectory, and it "
+"doesn't make sense to include them in the tarball export of your project.\n"
+"You can add the following line to your Git attributes file:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:295
+#, no-wrap
+msgid ""
+"test/ export-ignore\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:298
+#, no-wrap
+msgid ""
+"Now, when you run `git archive` to create a tarball of your project, that "
+"directory won't be included in the archive.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:300
+#, no-wrap
+msgid "===== `export-subst`\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:302
+#, no-wrap
+msgid ""
+"When exporting files for deployment you can apply `git log`'s formatting and "
+"keyword-expansion processing to selected portions of files marked with the "
+"`export-subst` attribute.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:304
+#, no-wrap
+msgid ""
+"For instance, if you want to include a file named `LAST_COMMIT` in your "
+"project, and have metadata about the last commit automatically injected into "
+"it when `git archive` runs, you can for example set up your `.gitattributes` "
+"and `LAST_COMMIT` files like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:308
+#, no-wrap
+msgid ""
+"LAST_COMMIT export-subst\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:315
+#, no-wrap
+msgid ""
+"$ echo 'Last commit date: $Format:%cd by %aN$' > LAST_COMMIT\n"
+"$ git add LAST_COMMIT .gitattributes\n"
+"$ git commit -am 'adding LAST_COMMIT file for archives'\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:318
+#, no-wrap
+msgid ""
+"When you run `git archive`, the contents of the archived file will look like "
+"this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:324
+#, no-wrap
+msgid ""
+"$ git archive HEAD | tar xCf ../deployment-testing -\n"
+"$ cat ../deployment-testing/LAST_COMMIT\n"
+"Last commit date: Tue Apr 21 08:38:48 2009 -0700 by Scott Chacon\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:327
+#, no-wrap
+msgid ""
+"The substitutions can include for example the commit message and any `git "
+"notes`, and `git log` can do simple word wrapping:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:332
+#, no-wrap
+msgid ""
+"$ echo '$Format:Last commit: %h by %aN at %cd%n%+w(76,6,9)%B$' > "
+"LAST_COMMIT\n"
+"$ git commit -am 'export-subst uses git log'\\''s custom formatter\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:340
+#, no-wrap
+msgid ""
+"git archive uses git log'\\''s `pretty=format:` processor\n"
+"directly, and strips the surrounding `$Format:` and `$`\n"
+"markup from the output.\n"
+"'\n"
+"$ git archive @ | tar xfO - LAST_COMMIT\n"
+"Last commit: 312ccc8 by Jim Hill at Fri May 8 09:14:04 2015 -0700\n"
+"       export-subst uses git log's custom formatter\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:343
+#, no-wrap
+msgid ""
+"         git archive uses git log's `pretty=format:` processor directly, "
+"and\n"
+"         strips the surrounding `$Format:` and `$` markup from the output.\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:346
+#, no-wrap
+msgid ""
+"The resulting archive is suitable for deployment work, but like any exported "
+"archive it isn't suitable for further development work.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:348
+#, no-wrap
+msgid "==== Merge Strategies\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:352
+#, no-wrap
+msgid ""
+"(((merging, strategies)))\n"
+"You can also use Git attributes to tell Git to use different merge "
+"strategies for specific files in your project.\n"
+"One very useful option is to tell Git to not try to merge specific files "
+"when they have conflicts, but rather to use your side of the merge over "
+"someone else's.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:356
+#, no-wrap
+msgid ""
+"This is helpful if a branch in your project has diverged or is specialized, "
+"but you want to be able to merge changes back in from it, and you want to "
+"ignore certain files.\n"
+"Say you have a database settings file called `database.xml` that is "
+"different in two branches, and you want to merge in your other branch "
+"without messing up the database file.\n"
+"You can set up an attribute like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:360
+#, no-wrap
+msgid ""
+"database.xml merge=ours\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:363
+#, no-wrap
+msgid "And then define a dummy `ours` merge strategy with:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:367
+#, no-wrap
+msgid ""
+"$ git config --global merge.ours.driver true\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:370
+#, no-wrap
+msgid ""
+"If you merge in the other branch, instead of having merge conflicts with the "
+"`database.xml` file, you see something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:376
+#, no-wrap
+msgid ""
+"$ git merge topic\n"
+"Auto-merging database.xml\n"
+"Merge made by recursive.\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/attributes.asc:378
+#, no-wrap
+msgid "In this case, `database.xml` stays at whatever version you originally had.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:3
+#, no-wrap
+msgid ""
+"[[_git_config]]\n"
+"=== Git Configuration\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:7
+#, no-wrap
+msgid ""
+"(((git commands, config)))\n"
+"As you read briefly in <<ch01-getting-started#ch01-getting-started>>, you "
+"can specify Git configuration settings with the `git config` command.\n"
+"One of the first things you did was set up your name and email address:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:12
+#, no-wrap
+msgid ""
+"$ git config --global user.name \"John Doe\"\n"
+"$ git config --global user.email johndoe@example.com\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:15
+#, no-wrap
+msgid ""
+"Now you'll learn a few of the more interesting options that you can set in "
+"this manner to customize your Git usage.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:19
+#, no-wrap
+msgid ""
+"First, a quick review: Git uses a series of configuration files to determine "
+"non-default behavior that you may want.\n"
+"The first place Git looks for these values is in the system-wide "
+"`[path]/etc/gitconfig` file, which contains settings that are applied to "
+"every user on the system and all of their repositories.\n"
+"If you pass the option `--system` to `git config`, it reads and writes from "
+"this file specifically.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:22
+#, no-wrap
+msgid ""
+"The next place Git looks is the `~/.gitconfig` (or `~/.config/git/config`) "
+"file, which is specific to each user.\n"
+"You can make Git read and write to this file by passing the `--global` "
+"option.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:26
+#, no-wrap
+msgid ""
+"Finally, Git looks for configuration values in the configuration file in the "
+"Git directory (`.git/config`) of whatever repository you're currently "
+"using.\n"
+"These values are specific to that single repository, and represent passing "
+"the `--local` option to `git config`.\n"
+"If you don't specify which level you want to work with, this is the "
+"default.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:28
+#, no-wrap
+msgid ""
+"Each of these \"`levels`\" (system, global, local) overwrites values in the "
+"previous level, so values in `.git/config` trump those in "
+"`[path]/etc/gitconfig`, for instance.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:30
+#: book/08-customizing-git/sections/hooks.asc:28
+#, no-wrap
+msgid ""
+"[NOTE]\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:33
+#, no-wrap
+msgid ""
+"Git's configuration files are plain-text, so you can also set these values "
+"by manually editing the file and inserting the correct syntax.\n"
+"It's generally easier to run the `git config` command, though.\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:36
+#, no-wrap
+msgid "==== Basic Client Configuration\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:41
+#, no-wrap
+msgid ""
+"The configuration options recognized by Git fall into two categories: "
+"client-side and server-side.\n"
+"The majority of the options are client-side -- configuring your personal "
+"working preferences.\n"
+"Many, _many_ configuration options are supported, but a large fraction of "
+"them are useful only in certain edge cases; we'll cover just the most common "
+"and useful options here.\n"
+"If you want to see a list of all the options your version of Git recognizes, "
+"you can run:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:45
+#, no-wrap
+msgid ""
+"$ man git-config\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:49
+#, no-wrap
+msgid ""
+"This command lists all the available options in quite a bit of detail.\n"
+"You can also find this reference material at "
+"https://git-scm.com/docs/git-config[].\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:51
+#, no-wrap
+msgid "===== `core.editor`\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:55
+#, no-wrap
+msgid ""
+"((($EDITOR)))((($VISUAL, see $EDITOR)))\n"
+"By default, Git uses whatever you've set as your default text editor via one "
+"of the shell environment variables `VISUAL` or `EDITOR`, or else falls back "
+"to the `vi` editor to create and edit your commit and tag messages.\n"
+"To change that default to something else, you can use the `core.editor` "
+"setting:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:59
+#, no-wrap
+msgid ""
+"$ git config --global core.editor emacs\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:62
+#, no-wrap
+msgid ""
+"Now, no matter what is set as your default shell editor, Git will fire up "
+"Emacs to edit messages.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:64
+#, no-wrap
+msgid "===== `commit.template`\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:68
+#, no-wrap
+msgid ""
+"(((commit templates)))\n"
+"If you set this to the path of a file on your system, Git will use that file "
+"as the default initial message when you commit.\n"
+"The value in creating a custom commit template is that you can use it to "
+"remind yourself (or others) of the proper format and style when creating a "
+"commit message.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:70
+#, no-wrap
+msgid ""
+"For instance, consider a template file at `~/.gitmessage.txt` that looks "
+"like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:72
+#: book/08-customizing-git/sections/config.asc:94
+#, no-wrap
+msgid ""
+"[source,text]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:74
+#: book/08-customizing-git/sections/config.asc:96
+#, no-wrap
+msgid "Subject line (try to keep under 50 characters)\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:77
+#: book/08-customizing-git/sections/config.asc:99
+#, no-wrap
+msgid ""
+"Multi-line description of commit,\n"
+"feel free to be detailed.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:79
+#, no-wrap
+msgid ""
+"[Ticket: X]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:82
+#, no-wrap
+msgid ""
+"Note how this commit template reminds the committer to keep the subject line "
+"short (for the sake of `git log --oneline` output), to add further detail "
+"under that, and to refer to an issue or bug tracker ticket number if one "
+"exists.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:84
+#, no-wrap
+msgid ""
+"To tell Git to use it as the default message that appears in your editor "
+"when you run `git commit`, set the `commit.template` configuration value:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:89
+#, no-wrap
+msgid ""
+"$ git config --global commit.template ~/.gitmessage.txt\n"
+"$ git commit\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:92
+#, no-wrap
+msgid ""
+"Then, your editor will open to something like this for your placeholder "
+"commit message when you commit:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:112
+#, no-wrap
+msgid ""
+"[Ticket: X]\n"
+"# Please enter the commit message for your changes. Lines starting\n"
+"# with '#' will be ignored, and an empty message aborts the commit.\n"
+"# On branch master\n"
+"# Changes to be committed:\n"
+"#   (use \"git reset HEAD <file>...\" to unstage)\n"
+"#\n"
+"# modified:   lib/test.rb\n"
+"#\n"
+"~\n"
+"~\n"
+"\".git/COMMIT_EDITMSG\" 14L, 297C\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:115
+#, no-wrap
+msgid ""
+"If your team has a commit-message policy, then putting a template for that "
+"policy on your system and configuring Git to use it by default can help "
+"increase the chance of that policy being followed regularly.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:117
+#, no-wrap
+msgid "===== `core.pager`\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:121
+#, no-wrap
+msgid ""
+"(((pager)))\n"
+"This setting determines which pager is used when Git pages output such as "
+"`log` and `diff`.\n"
+"You can set it to `more` or to your favorite pager (by default, it's "
+"`less`), or you can turn it off by setting it to a blank string:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:125
+#, no-wrap
+msgid ""
+"$ git config --global core.pager ''\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:128
+#, no-wrap
+msgid ""
+"If you run that, Git will page the entire output of all commands, no matter "
+"how long they are.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:130
+#, no-wrap
+msgid "===== `user.signingkey`\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:134
+#, no-wrap
+msgid ""
+"(((GPG)))\n"
+"If you're making signed annotated tags (as discussed in "
+"<<ch07-git-tools#_signing>>), setting your GPG signing key as a "
+"configuration setting makes things easier.\n"
+"Set your key ID like so:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:138
+#, no-wrap
+msgid ""
+"$ git config --global user.signingkey <gpg-key-id>\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:141
+#, no-wrap
+msgid ""
+"Now, you can sign tags without having to specify your key every time with "
+"the `git tag` command:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:145
+#, no-wrap
+msgid ""
+"$ git tag -s <tag-name>\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:148
+#, no-wrap
+msgid "===== `core.excludesfile`\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:151
+#, no-wrap
+msgid ""
+"(((excludes)))(((.gitignore)))\n"
+"You can put patterns in your project's `.gitignore` file to have Git not see "
+"them as untracked files or try to stage them when you run `git add` on them, "
+"as discussed in <<ch02-git-basics-chapter#_ignoring>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:155
+#, no-wrap
+msgid ""
+"But sometimes you want to ignore certain files for all repositories that you "
+"work with.\n"
+"If your computer is running macOS, you're probably familiar with `.DS_Store` "
+"files.\n"
+"If your preferred editor is Emacs or Vim, you know about filenames that end "
+"with a `~` or `.swp`.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:158
+#, no-wrap
+msgid ""
+"This setting lets you write a kind of global `.gitignore` file.\n"
+"If you create a `~/.gitignore_global` file with these contents:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:164
+#, no-wrap
+msgid ""
+"*~\n"
+".*.swp\n"
+".DS_Store\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:167
+#, no-wrap
+msgid ""
+"â¦and you run `git config --global core.excludesfile ~/.gitignore_global`, "
+"Git will never again bother you about those files.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:169
+#, no-wrap
+msgid "===== `help.autocorrect`\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:172
+#, no-wrap
+msgid ""
+"(((autocorrect)))\n"
+"If you mistype a command, it shows you something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:177
+#, no-wrap
+msgid ""
+"$ git chekcout master\n"
+"git: 'chekcout' is not a git command. See 'git --help'.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:180
+#, no-wrap
+msgid ""
+"The most similar command is\n"
+"    checkout\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:184
+#, no-wrap
+msgid ""
+"Git helpfully tries to figure out what you meant, but it still refuses to do "
+"it.\n"
+"If you set `help.autocorrect` to 1, Git will actually run this command for "
+"you:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:191
+#, no-wrap
+msgid ""
+"$ git chekcout master\n"
+"WARNING: You called a Git command named 'chekcout', which does not exist.\n"
+"Continuing under the assumption that you meant 'checkout'\n"
+"in 0.1 seconds automatically...\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:196
+#, no-wrap
+msgid ""
+"Note that \"`0.1 seconds`\" business.\n"
+"`help.autocorrect` is actually an integer which represents tenths of a "
+"second.\n"
+"So if you set it to 50, Git will give you 5 seconds to change your mind "
+"before executing the autocorrected command.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:198
+#, no-wrap
+msgid "==== Colors in Git\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:202
+#, no-wrap
+msgid ""
+"(((color)))\n"
+"Git fully supports colored terminal output, which greatly aids in visually "
+"parsing command output quickly and easily.\n"
+"A number of options can help you set the coloring to your preference.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:204
+#, no-wrap
+msgid "===== `color.ui`\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:207
+#, no-wrap
+msgid ""
+"Git automatically colors most of its output, but there's a master switch if "
+"you don't like this behavior.\n"
+"To turn off all Git's colored terminal output, do this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:211
+#, no-wrap
+msgid ""
+"$ git config --global color.ui false\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:214
+#, no-wrap
+msgid ""
+"The default setting is `auto`, which colors output when it's going straight "
+"to a terminal, but omits the color-control codes when the output is "
+"redirected to a pipe or a file.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:218
+#, no-wrap
+msgid ""
+"You can also set it to `always` to ignore the difference between terminals "
+"and pipes.\n"
+"You'll rarely want this; in most scenarios, if you want color codes in your "
+"redirected output, you can instead pass a `--color` flag to the Git command "
+"to force it to use color codes.\n"
+"The default setting is almost always what you'll want.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:220
+#, no-wrap
+msgid "===== `color.*`\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:223
+#, no-wrap
+msgid ""
+"If you want to be more specific about which commands are colored and how, "
+"Git provides verb-specific coloring settings.\n"
+"Each of these can be set to `true`, `false`, or `always`:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:228
+#, no-wrap
+msgid ""
+"  color.branch\n"
+"  color.diff\n"
+"  color.interactive\n"
+"  color.status\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:231
+#, no-wrap
+msgid ""
+"In addition, each of these has subsettings you can use to set specific "
+"colors for parts of the output, if you want to override each color.\n"
+"For example, to set the meta information in your diff output to blue "
+"foreground, black background, and bold text, you can run:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:235
+#, no-wrap
+msgid ""
+"$ git config --global color.diff.meta \"blue black bold\"\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:239
+#, no-wrap
+msgid ""
+"You can set the color to any of the following values: `normal`, `black`, "
+"`red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, or `white`.\n"
+"If you want an attribute like bold in the previous example, you can choose "
+"from `bold`, `dim`, `ul` (underline), `blink`, and `reverse` (swap "
+"foreground and background).\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:242
+#, no-wrap
+msgid ""
+"[[_external_merge_tools]]\n"
+"==== External Merge and Diff Tools\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:247
+#, no-wrap
+msgid ""
+"(((mergetool)))(((difftool)))\n"
+"Although Git has an internal implementation of diff, which is what we've "
+"been showing in this book, you can set up an external tool instead.\n"
+"You can also set up a graphical merge-conflict-resolution tool instead of "
+"having to resolve conflicts manually.\n"
+"We'll demonstrate setting up the Perforce Visual Merge Tool (P4Merge) to do "
+"your diffs and merge resolutions, because it's a nice graphical tool and "
+"it's free.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:250
+#, no-wrap
+msgid ""
+"If you want to try this out, P4Merge works on all major platforms, so you "
+"should be able to do so.\n"
+"We'll use path names in the examples that work on macOS and Linux systems; "
+"for Windows, you'll have to change `/usr/local/bin` to an executable path in "
+"your environment.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:255
+#, no-wrap
+msgid ""
+"To begin, "
+"https://www.perforce.com/product/components/perforce-visual-merge-and-diff-tools[download "
+"P4Merge from Perforce].\n"
+"Next, you'll set up external wrapper scripts to run your commands.\n"
+"We'll use the macOS path for the executable; in other systems, it will be "
+"where your `p4merge` binary is installed.\n"
+"Set up a merge wrapper script named `extMerge` that calls your binary with "
+"all the arguments provided:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:261
+#, no-wrap
+msgid ""
+"$ cat /usr/local/bin/extMerge\n"
+"#!/bin/sh\n"
+"/Applications/p4merge.app/Contents/MacOS/p4merge $*\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:265
+#, no-wrap
+msgid ""
+"The diff wrapper checks to make sure seven arguments are provided and passes "
+"two of them to your merge script.\n"
+"By default, Git passes the following arguments to the diff program:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:267
+#: book/08-customizing-git/sections/policy.asc:125
+#, no-wrap
+msgid ""
+"[source]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:269
+#, no-wrap
+msgid ""
+"path old-file old-hex old-mode new-file new-hex new-mode\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:272
+#, no-wrap
+msgid ""
+"Because you only want the `old-file` and `new-file` arguments, you use the "
+"wrapper script to pass the ones you need.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:278
+#, no-wrap
+msgid ""
+"$ cat /usr/local/bin/extDiff\n"
+"#!/bin/sh\n"
+"[ $# -eq 7 ] && /usr/local/bin/extMerge \"$2\" \"$5\"\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:281
+#, no-wrap
+msgid "You also need to make sure these tools are executable:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:286
+#, no-wrap
+msgid ""
+"$ sudo chmod +x /usr/local/bin/extMerge\n"
+"$ sudo chmod +x /usr/local/bin/extDiff\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:291
+#, no-wrap
+msgid ""
+"Now you can set up your config file to use your custom merge resolution and "
+"diff tools.\n"
+"This takes a number of custom settings: `merge.tool` to tell Git what "
+"strategy to use, `mergetool.<tool>.cmd` to specify how to run the command, "
+"`mergetool.<tool>.trustExitCode` to tell Git if the exit code of that "
+"program indicates a successful merge resolution or not, and `diff.external` "
+"to tell Git what command to run for diffs.\n"
+"So, you can either run four config commands:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:299
+#, no-wrap
+msgid ""
+"$ git config --global merge.tool extMerge\n"
+"$ git config --global mergetool.extMerge.cmd \\\n"
+"  'extMerge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"'\n"
+"$ git config --global mergetool.extMerge.trustExitCode false\n"
+"$ git config --global diff.external extDiff\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:301
+#, no-wrap
+msgid "or you can edit your `~/.gitconfig` file to add these lines:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:311
+#, no-wrap
+msgid ""
+"[merge]\n"
+"  tool = extMerge\n"
+"[mergetool \"extMerge\"]\n"
+"  cmd = extMerge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"\n"
+"  trustExitCode = false\n"
+"[diff]\n"
+"  external = extDiff\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:314
+#, no-wrap
+msgid "After all this is set, if you run diff commands such as this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:318
+#, no-wrap
+msgid ""
+"$ git diff 32d1776b1^ 32d1776b1\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:321
+#, no-wrap
+msgid ""
+"Instead of getting the diff output on the command line, Git fires up "
+"P4Merge, which looks something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:324
+#, no-wrap
+msgid ""
+".P4Merge\n"
+"image::images/p4merge.png[P4Merge]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:326
+#, no-wrap
+msgid ""
+"If you try to merge two branches and subsequently have merge conflicts, you "
+"can run the command `git mergetool`; it starts P4Merge to let you resolve "
+"the conflicts through that GUI tool.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:329
+#, no-wrap
+msgid ""
+"The nice thing about this wrapper setup is that you can change your diff and "
+"merge tools easily.\n"
+"For example, to change your `extDiff` and `extMerge` tools to run the KDiff3 "
+"tool instead, all you have to do is edit your `extMerge` file:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:335
+#, no-wrap
+msgid ""
+"$ cat /usr/local/bin/extMerge\n"
+"#!/bin/sh\n"
+"/Applications/kdiff3.app/Contents/MacOS/kdiff3 $*\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:338
+#, no-wrap
+msgid ""
+"Now, Git will use the KDiff3 tool for diff viewing and merge conflict "
+"resolution.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:341
+#, no-wrap
+msgid ""
+"Git comes preset to use a number of other merge-resolution tools without "
+"your having to set up the cmd configuration.\n"
+"To see a list of the tools it supports, try this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:353
+#, no-wrap
+msgid ""
+"$ git mergetool --tool-help\n"
+"'git mergetool --tool=<tool>' may be set to one of the following:\n"
+"        emerge\n"
+"        gvimdiff\n"
+"        gvimdiff2\n"
+"        opendiff\n"
+"        p4merge\n"
+"        vimdiff\n"
+"        vimdiff2\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:367
+#, no-wrap
+msgid ""
+"The following tools are valid, but not currently available:\n"
+"        araxis\n"
+"        bc3\n"
+"        codecompare\n"
+"        deltawalker\n"
+"        diffmerge\n"
+"        diffuse\n"
+"        ecmerge\n"
+"        kdiff3\n"
+"        meld\n"
+"        tkdiff\n"
+"        tortoisemerge\n"
+"        xxdiff\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:370
+#, no-wrap
+msgid ""
+"Some of the tools listed above only work in a windowed\n"
+"environment. If run in a terminal-only session, they will fail.\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:373
+#, no-wrap
+msgid ""
+"If you're not interested in using KDiff3 for diff but rather want to use it "
+"just for merge resolution, and the kdiff3 command is in your path, then you "
+"can run:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:377
+#, no-wrap
+msgid ""
+"$ git config --global merge.tool kdiff3\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:380
+#, no-wrap
+msgid ""
+"If you run this instead of setting up the `extMerge` and `extDiff` files, "
+"Git will use KDiff3 for merge resolution and the normal Git diff tool for "
+"diffs.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:382
+#, no-wrap
+msgid "==== Formatting and Whitespace\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:387
+#, no-wrap
+msgid ""
+"(((whitespace)))\n"
+"Formatting and whitespace issues are some of the more frustrating and subtle "
+"problems that many developers encounter when collaborating, especially "
+"cross-platform.\n"
+"It's very easy for patches or other collaborated work to introduce subtle "
+"whitespace changes because editors silently introduce them, and if your "
+"files ever touch a Windows system, their line endings might be replaced.\n"
+"Git has a few configuration options to help with these issues.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:389
+#, no-wrap
+msgid "===== `core.autocrlf`\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:394
+#, no-wrap
+msgid ""
+"(((crlf)))(((line endings)))\n"
+"If you're programming on Windows and working with people who are not (or "
+"vice-versa), you'll probably run into line-ending issues at some point.\n"
+"This is because Windows uses both a carriage-return character and a linefeed "
+"character for newlines in its files, whereas macOS and Linux systems use "
+"only the linefeed character.\n"
+"This is a subtle but incredibly annoying fact of cross-platform work; many "
+"editors on Windows silently replace existing LF-style line endings with "
+"CRLF, or insert both line-ending characters when the user hits the enter "
+"key.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:398
+#, no-wrap
+msgid ""
+"Git can handle this by auto-converting CRLF line endings into LF when you "
+"add a file to the index, and vice versa when it checks out code onto your "
+"filesystem.\n"
+"You can turn on this functionality with the `core.autocrlf` setting.\n"
+"If you're on a Windows machine, set it to `true` -- this converts LF endings "
+"into CRLF when you check out code:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:402
+#, no-wrap
+msgid ""
+"$ git config --global core.autocrlf true\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:406
+#, no-wrap
+msgid ""
+"If you're on a Linux or macOS system that uses LF line endings, then you "
+"don't want Git to automatically convert them when you check out files; "
+"however, if a file with CRLF endings accidentally gets introduced, then you "
+"may want Git to fix it.\n"
+"You can tell Git to convert CRLF to LF on commit but not the other way "
+"around by setting `core.autocrlf` to input:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:410
+#, no-wrap
+msgid ""
+"$ git config --global core.autocrlf input\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:413
+#, no-wrap
+msgid ""
+"This setup should leave you with CRLF endings in Windows checkouts, but LF "
+"endings on macOS and Linux systems and in the repository.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:415
+#, no-wrap
+msgid ""
+"If you're a Windows programmer doing a Windows-only project, then you can "
+"turn off this functionality, recording the carriage returns in the "
+"repository by setting the config value to `false`:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:419
+#, no-wrap
+msgid ""
+"$ git config --global core.autocrlf false\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:422
+#, no-wrap
+msgid "===== `core.whitespace`\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:425
+#, no-wrap
+msgid ""
+"Git comes preset to detect and fix some whitespace issues.\n"
+"It can look for six primary whitespace issues -- three are enabled by "
+"default and can be turned off, and three are disabled by default but can be "
+"activated.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:427
+#, no-wrap
+msgid ""
+"The three that are turned on by default are `blank-at-eol`, which looks for "
+"spaces at the end of a line; `blank-at-eof`, which notices blank lines at "
+"the end of a file; and `space-before-tab`, which looks for spaces before "
+"tabs at the beginning of a line.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:429
+#, no-wrap
+msgid ""
+"The three that are disabled by default but can be turned on are "
+"`indent-with-non-tab`, which looks for lines that begin with spaces instead "
+"of tabs (and is controlled by the `tabwidth` option); `tab-in-indent`, which "
+"watches for tabs in the indentation portion of a line; and `cr-at-eol`, "
+"which tells Git that carriage returns at the end of lines are OK.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:433
+#, no-wrap
+msgid ""
+"You can tell Git which of these you want enabled by setting "
+"`core.whitespace` to the values you want on or off, separated by commas.\n"
+"You can disable an option by prepending a `-` in front of its name, or use "
+"the default value by leaving it out of the setting string entirely.\n"
+"For example, if you want all but `space-before-tab` to be set, you can do "
+"this (with `trailing-space` being a short-hand to cover both `blank-at-eol` "
+"and `blank-at-eof`):\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:438
+#, no-wrap
+msgid ""
+"$ git config --global core.whitespace \\\n"
+"    "
+"trailing-space,-space-before-tab,indent-with-non-tab,tab-in-indent,cr-at-eol\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:441
+#, no-wrap
+msgid "Or you can specify the customizing part only:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:446
+#, no-wrap
+msgid ""
+"$ git config --global core.whitespace \\\n"
+"    -space-before-tab,indent-with-non-tab,tab-in-indent,cr-at-eol\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:451
+#, no-wrap
+msgid ""
+"Git will detect these issues when you run a `git diff` command and try to "
+"color them so you can possibly fix them before you commit.\n"
+"It will also use these values to help you when you apply patches with `git "
+"apply`.\n"
+"When you're applying patches, you can ask Git to warn you if it's applying "
+"patches with the specified whitespace issues:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:455
+#, no-wrap
+msgid ""
+"$ git apply --whitespace=warn <patch>\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:458
+#, no-wrap
+msgid ""
+"Or you can have Git try to automatically fix the issue before applying the "
+"patch:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:462
+#, no-wrap
+msgid ""
+"$ git apply --whitespace=fix <patch>\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:466
+#, no-wrap
+msgid ""
+"These options apply to the `git rebase` command as well.\n"
+"If you've committed whitespace issues but haven't yet pushed upstream, you "
+"can run `git rebase --whitespace=fix` to have Git automatically fix "
+"whitespace issues as it's rewriting the patches.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:468
+#, no-wrap
+msgid "==== Server Configuration\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:470
+#, no-wrap
+msgid ""
+"Not nearly as many configuration options are available for the server side "
+"of Git, but there are a few interesting ones you may want to take note of.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:472
+#, no-wrap
+msgid "===== `receive.fsckObjects`\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:476
+#, no-wrap
+msgid ""
+"Git is capable of making sure every object received during a push still "
+"matches its SHA-1 checksum and points to valid objects.\n"
+"However, it doesn't do this by default; it's a fairly expensive operation, "
+"and might slow down the operation, especially on large repositories or "
+"pushes.\n"
+"If you want Git to check object consistency on every push, you can force it "
+"to do so by setting `receive.fsckObjects` to true:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:480
+#, no-wrap
+msgid ""
+"$ git config --system receive.fsckObjects true\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:483
+#, no-wrap
+msgid ""
+"Now, Git will check the integrity of your repository before each push is "
+"accepted to make sure faulty (or malicious) clients aren't introducing "
+"corrupt data.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:485
+#, no-wrap
+msgid "===== `receive.denyNonFastForwards`\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:488
+#, no-wrap
+msgid ""
+"If you rebase commits that you've already pushed and then try to push again, "
+"or otherwise try to push a commit to a remote branch that doesn't contain "
+"the commit that the remote branch currently points to, you'll be denied.\n"
+"This is generally good policy; but in the case of the rebase, you may "
+"determine that you know what you're doing and can force-update the remote "
+"branch with a `-f` flag to your push command.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:490
+#, no-wrap
+msgid "To tell Git to refuse force-pushes, set `receive.denyNonFastForwards`:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:494
+#, no-wrap
+msgid ""
+"$ git config --system receive.denyNonFastForwards true\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:498
+#, no-wrap
+msgid ""
+"The other way you can do this is via server-side receive hooks, which we'll "
+"cover in a bit.\n"
+"That approach lets you do more complex things like deny non-fast-forwards to "
+"a certain subset of users.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:500
+#, no-wrap
+msgid "===== `receive.denyDeletes`\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:503
+#, no-wrap
+msgid ""
+"One of the workarounds to the `denyNonFastForwards` policy is for the user "
+"to delete the branch and then push it back up with the new reference.\n"
+"To avoid this, set `receive.denyDeletes` to true:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:507
+#, no-wrap
+msgid ""
+"$ git config --system receive.denyDeletes true\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/config.asc:511
+#, no-wrap
+msgid ""
+"This denies any deletion of branches or tags -- no user can do it.\n"
+"To remove remote branches, you must remove the ref files from the server "
+"manually.\n"
+"There are also more interesting ways to do this on a per-user basis via "
+"ACLs, as you'll learn in "
+"<<ch08-customizing-git#_an_example_git_enforced_policy>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:3
+#, no-wrap
+msgid ""
+"[[_git_hooks]]\n"
+"=== Git Hooks\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:9
+#, no-wrap
+msgid ""
+"(((hooks)))\n"
+"Like many other Version Control Systems, Git has a way to fire off custom "
+"scripts when certain important actions occur.\n"
+"There are two groups of these hooks: client-side and server-side.\n"
+"Client-side hooks are triggered by operations such as committing and "
+"merging, while server-side hooks run on network operations such as receiving "
+"pushed commits.\n"
+"You can use these hooks for all sorts of reasons.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:11
+#, no-wrap
+msgid "==== Installing a Hook\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:17
+#, no-wrap
+msgid ""
+"The hooks are all stored in the `hooks` subdirectory of the Git directory.\n"
+"In most projects, that's `.git/hooks`.\n"
+"When you initialize a new repository with `git init`, Git populates the "
+"hooks directory with a bunch of example scripts, many of which are useful by "
+"themselves; but they also document the input values of each script.\n"
+"All the examples are written as shell scripts, with some Perl thrown in, but "
+"any properly named executable scripts will work fine â you can write them "
+"in Ruby or Python or whatever language you are familiar with.\n"
+"If you want to use the bundled hook scripts, you'll have to rename them; "
+"their file names all end with `.sample`.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:21
+#, no-wrap
+msgid ""
+"To enable a hook script, put a file in the `hooks` subdirectory of your .git "
+"directory that is named appropriately (without any extension) and is "
+"executable.\n"
+"From that point forward, it should be called.\n"
+"We'll cover most of the major hook filenames here.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:23
+#: book/08-customizing-git/sections/policy.asc:283
+#, no-wrap
+msgid "==== Client-Side Hooks\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:26
+#, no-wrap
+msgid ""
+"There are a lot of client-side hooks.\n"
+"This section splits them into committing-workflow hooks, email-workflow "
+"scripts, and everything else.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:31
+#, no-wrap
+msgid ""
+"It's important to note that client-side hooks are *not* copied when you "
+"clone a repository.\n"
+"If your intent with these scripts is to enforce a policy, you'll probably "
+"want to do that on the server side; see the example in "
+"<<ch08-customizing-git#_an_example_git_enforced_policy>>.\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:34
+#, no-wrap
+msgid "===== Committing-Workflow Hooks\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:36
+#, no-wrap
+msgid "The first four hooks have to do with the committing process.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:41
+#, no-wrap
+msgid ""
+"The `pre-commit` hook is run first, before you even type in a commit "
+"message.\n"
+"It's used to inspect the snapshot that's about to be committed, to see if "
+"you've forgotten something, to make sure tests run, or to examine whatever "
+"you need to inspect in the code.\n"
+"Exiting non-zero from this hook aborts the commit, although you can bypass "
+"it with `git commit --no-verify`.\n"
+"You can do things like check for code style (run `lint` or something "
+"equivalent), check for trailing whitespace (the default hook does exactly "
+"this), or check for appropriate documentation on new methods.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:47
+#, no-wrap
+msgid ""
+"The `prepare-commit-msg` hook is run before the commit message editor is "
+"fired up but after the default message is created.\n"
+"It lets you edit the default message before the commit author sees it.\n"
+"This hook takes a few parameters: the path to the file that holds the commit "
+"message so far, the type of commit, and the commit SHA-1 if this is an "
+"amended commit.\n"
+"This hook generally isn't useful for normal commits; rather, it's good for "
+"commits where the default message is auto-generated, such as templated "
+"commit messages, merge commits, squashed commits, and amended commits.\n"
+"You may use it in conjunction with a commit template to programmatically "
+"insert information.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:51
+#, no-wrap
+msgid ""
+"The `commit-msg` hook takes one parameter, which again is the path to a "
+"temporary file that contains the commit message written by the developer.\n"
+"If this script exits non-zero, Git aborts the commit process, so you can use "
+"it to validate your project state or commit message before allowing a commit "
+"to go through.\n"
+"In the last section of this chapter, we'll demonstrate using this hook to "
+"check that your commit message is conformant to a required pattern.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:55
+#, no-wrap
+msgid ""
+"After the entire commit process is completed, the `post-commit` hook runs.\n"
+"It doesn't take any parameters, but you can easily get the last commit by "
+"running `git log -1 HEAD`.\n"
+"Generally, this script is used for notification or something similar.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:58
+#, no-wrap
+msgid ""
+"[[_email_hooks]]\n"
+"===== Email Workflow Hooks\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:62
+#, no-wrap
+msgid ""
+"You can set up three client-side hooks for an email-based workflow.\n"
+"They're all invoked by the `git am` command, so if you aren't using that "
+"command in your workflow, you can safely skip to the next section.\n"
+"If you're taking patches over email prepared by `git format-patch`, then "
+"some of these may be helpful to you.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:67
+#, no-wrap
+msgid ""
+"The first hook that is run is `applypatch-msg`.\n"
+"It takes a single argument: the name of the temporary file that contains the "
+"proposed commit message.\n"
+"Git aborts the patch if this script exits non-zero.\n"
+"You can use this to make sure a commit message is properly formatted, or to "
+"normalize the message by having the script edit it in place.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:72
+#, no-wrap
+msgid ""
+"The next hook to run when applying patches via `git am` is "
+"`pre-applypatch`.\n"
+"Somewhat confusingly, it is run _after_ the patch is applied but before a "
+"commit is made, so you can use it to inspect the snapshot before making the "
+"commit.\n"
+"You can run tests or otherwise inspect the working tree with this script.\n"
+"If something is missing or the tests don't pass, exiting non-zero aborts the "
+"`git am` script without committing the patch.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:76
+#, no-wrap
+msgid ""
+"The last hook to run during a `git am` operation is `post-applypatch`, which "
+"runs after the commit is made.\n"
+"You can use it to notify a group or the author of the patch you pulled in "
+"that you've done so.\n"
+"You can't stop the patching process with this script.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:79
+#, no-wrap
+msgid ""
+"[[_other_client_hooks]]\n"
+"===== Other Client Hooks\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:83
+#, no-wrap
+msgid ""
+"The `pre-rebase` hook runs before you rebase anything and can halt the "
+"process by exiting non-zero.\n"
+"You can use this hook to disallow rebasing any commits that have already "
+"been pushed.\n"
+"The example `pre-rebase` hook that Git installs does this, although it makes "
+"some assumptions that may not match with your workflow.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:87
+#, no-wrap
+msgid ""
+"The `post-rewrite` hook is run by commands that replace commits, such as "
+"`git commit --amend` and `git rebase` (though not by `git filter-branch`).\n"
+"Its single argument is which command triggered the rewrite, and it receives "
+"a list of rewrites on `stdin`.\n"
+"This hook has many of the same uses as the `post-checkout` and `post-merge` "
+"hooks.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:90
+#, no-wrap
+msgid ""
+"After you run a successful `git checkout`, the `post-checkout` hook runs; "
+"you can use it to set up your working directory properly for your project "
+"environment.\n"
+"This may mean moving in large binary files that you don't want source "
+"controlled, auto-generating documentation, or something along those lines.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:94
+#, no-wrap
+msgid ""
+"The `post-merge` hook runs after a successful `merge` command.\n"
+"You can use it to restore data in the working tree that Git can't track, "
+"such as permissions data.\n"
+"This hook can likewise validate the presence of files external to Git "
+"control that you may want copied in when the working tree changes.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:98
+#, no-wrap
+msgid ""
+"The `pre-push` hook runs during `git push`, after the remote refs have been "
+"updated but before any objects have been transferred.\n"
+"It receives the name and location of the remote as parameters, and a list of "
+"to-be-updated refs through `stdin`.\n"
+"You can use it to validate a set of ref updates before a push occurs (a "
+"non-zero exit code will abort the push).\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:101
+#, no-wrap
+msgid ""
+"Git occasionally does garbage collection as part of its normal operation, by "
+"invoking `git gc --auto`.\n"
+"The `pre-auto-gc` hook is invoked just before the garbage collection takes "
+"place, and can be used to notify you that this is happening, or to abort the "
+"collection if now isn't a good time.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:103
+#, no-wrap
+msgid "==== Server-Side Hooks\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:107
+#, no-wrap
+msgid ""
+"In addition to the client-side hooks, you can use a couple of important "
+"server-side hooks as a system administrator to enforce nearly any kind of "
+"policy for your project.\n"
+"These scripts run before and after pushes to the server.\n"
+"The pre hooks can exit non-zero at any time to reject the push as well as "
+"print an error message back to the client; you can set up a push policy "
+"that's as complex as you wish.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:109
+#, no-wrap
+msgid "===== `pre-receive`\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:113
+#, no-wrap
+msgid ""
+"The first script to run when handling a push from a client is "
+"`pre-receive`.\n"
+"It takes a list of references that are being pushed from stdin; if it exits "
+"non-zero, none of them are accepted.\n"
+"You can use this hook to do things like make sure none of the updated "
+"references are non-fast-forwards, or to do access control for all the refs "
+"and files they're modifying with the push.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:115
+#, no-wrap
+msgid "===== `update`\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:120
+#, no-wrap
+msgid ""
+"The `update` script is very similar to the `pre-receive` script, except that "
+"it's run once for each branch the pusher is trying to update.\n"
+"If the pusher is trying to push to multiple branches, `pre-receive` runs "
+"only once, whereas update runs once per branch they're pushing to.\n"
+"Instead of reading from stdin, this script takes three arguments: the name "
+"of the reference (branch), the SHA-1 that reference pointed to before the "
+"push, and the SHA-1 the user is trying to push.\n"
+"If the update script exits non-zero, only that reference is rejected; other "
+"references can still be updated.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:122
+#, no-wrap
+msgid "===== `post-receive`\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:127
+#, no-wrap
+msgid ""
+"The `post-receive` hook runs after the entire process is completed and can "
+"be used to update other services or notify users.\n"
+"It takes the same stdin data as the `pre-receive` hook.\n"
+"Examples include emailing a list, notifying a continuous integration server, "
+"or updating a ticket-tracking system â you can even parse the commit "
+"messages to see if any tickets need to be opened, modified, or closed.\n"
+"This script can't stop the push process, but the client doesn't disconnect "
+"until it has completed, so be careful if you try to do anything that may "
+"take a long time.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:129
+#, no-wrap
+msgid ""
+"[TIP]\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/hooks.asc:131
+#, no-wrap
+msgid ""
+"If you're writing a script/hook that others will need to read, prefer the "
+"long versions of command-line flags; six months from now you'll thank us.\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:3
+#, no-wrap
+msgid ""
+"[[_an_example_git_enforced_policy]]\n"
+"=== An Example Git-Enforced Policy\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:7
+#, no-wrap
+msgid ""
+"(((policy example)))\n"
+"In this section, you'll use what you've learned to establish a Git workflow "
+"that checks for a custom commit message format, and allows only certain "
+"users to modify certain subdirectories in a project.\n"
+"You'll build client scripts that help the developer know if their push will "
+"be rejected and server scripts that actually enforce the policies.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:10
+#, no-wrap
+msgid ""
+"The scripts we'll show are written in Ruby; partly because of our "
+"intellectual inertia, but also because Ruby is easy to read, even if you "
+"can't necessarily write it.\n"
+"However, any language will work â all the sample hook scripts distributed "
+"with Git are in either Perl or Bash, so you can also see plenty of examples "
+"of hooks in those languages by looking at the samples.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:12
+#, no-wrap
+msgid "==== Server-Side Hook\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:15
+#, no-wrap
+msgid ""
+"All the server-side work will go into the `update` file in your `hooks` "
+"directory.\n"
+"The `update` hook runs once per branch being pushed and takes three "
+"arguments:\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/08-customizing-git/sections/policy.asc:19
+#, markdown-text, no-wrap
+msgid "The name of the reference being pushed to\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/08-customizing-git/sections/policy.asc:19
+#, markdown-text, no-wrap
+msgid "The old revision where that branch was\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/08-customizing-git/sections/policy.asc:19
+#, markdown-text, no-wrap
+msgid "The new revision being pushed\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:23
+#, no-wrap
+msgid ""
+"You also have access to the user doing the pushing if the push is being run "
+"over SSH.\n"
+"If you've allowed everyone to connect with a single user (like \"`git`\") "
+"via public-key authentication, you may have to give that user a shell "
+"wrapper that determines which user is connecting based on the public key, "
+"and set an environment variable accordingly.\n"
+"Here we'll assume the connecting user is in the `$USER` environment "
+"variable, so your update script begins by gathering all the information you "
+"need:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:27
+#: book/08-customizing-git/sections/policy.asc:334
+#: book/08-customizing-git/sections/policy.asc:409
+#, no-wrap
+msgid "#!/usr/bin/env ruby\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:32
+#, no-wrap
+msgid ""
+"$refname = ARGV[0]\n"
+"$oldrev  = ARGV[1]\n"
+"$newrev  = ARGV[2]\n"
+"$user    = ENV['USER']\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:35
+#, no-wrap
+msgid ""
+"puts \"Enforcing Policies...\"\n"
+"puts \"(#{$refname}) (#{$oldrev[0,6]}) (#{$newrev[0,6]})\"\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:39
+#, no-wrap
+msgid ""
+"Yes, those are global variables.\n"
+"Don't judge â it's easier to demonstrate this way.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:42
+#, no-wrap
+msgid ""
+"[[_enforcing_commit_message_format]]\n"
+"===== Enforcing a Specific Commit-Message Format\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:46
+#, no-wrap
+msgid ""
+"Your first challenge is to enforce that each commit message adheres to a "
+"particular format.\n"
+"Just to have a target, assume that each message has to include a string that "
+"looks like \"`ref: 1234`\" because you want each commit to link to a work "
+"item in your ticketing system.\n"
+"You must look at each commit being pushed up, see if that string is in the "
+"commit message, and, if the string is absent from any of the commits, exit "
+"non-zero so the push is rejected.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:50
+#, no-wrap
+msgid ""
+"You can get a list of the SHA-1 values of all the commits that are being "
+"pushed by taking the `$newrev` and `$oldrev` values and passing them to a "
+"Git plumbing command called `git rev-list`.\n"
+"This is basically the `git log` command, but by default it prints out only "
+"the SHA-1 values and no other information.\n"
+"So, to get a list of all the commit SHA-1s introduced between one commit "
+"SHA-1 and another, you can run something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:59
+#, no-wrap
+msgid ""
+"$ git rev-list 538c33..d14fc7\n"
+"d14fc7c847ab946ec39590d87783c69b031bdfb7\n"
+"9f585da4401b0a3999e84113824d15245c13f0be\n"
+"234071a1be950e2a8d078e6141f5cd20c1e61ad3\n"
+"dfa04c9ef3d5197182f13fb5b9b1fb7717d2222a\n"
+"17716ec0f1ff5c77eff40b7fe912f9f6cfd0e475\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:62
+#, no-wrap
+msgid ""
+"You can take that output, loop through each of those commit SHA-1s, grab the "
+"message for it, and test that message against a regular expression that "
+"looks for a pattern.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:66
+#, no-wrap
+msgid ""
+"You have to figure out how to get the commit message from each of these "
+"commits to test.\n"
+"To get the raw commit data, you can use another plumbing command called `git "
+"cat-file`.\n"
+"We'll go over all these plumbing commands in detail in "
+"<<ch10-git-internals#ch10-git-internals>>; but for now, here's what that "
+"command gives you:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:74
+#, no-wrap
+msgid ""
+"$ git cat-file commit ca82a6\n"
+"tree cfda3bf379e4f8dba8717dee55aab78aef7f4daf\n"
+"parent 085bb3bcb608e1e8451d4b2432f8ecbe6306e7e7\n"
+"author Scott Chacon <schacon@gmail.com> 1205815931 -0700\n"
+"committer Scott Chacon <schacon@gmail.com> 1240030591 -0700\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:76
+#, no-wrap
+msgid ""
+"Change the version number\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:80
+#, no-wrap
+msgid ""
+"A simple way to get the commit message from a commit when you have the SHA-1 "
+"value is to go to the first blank line and take everything after that.\n"
+"You can do so with the `sed` command on Unix systems:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:85
+#, no-wrap
+msgid ""
+"$ git cat-file commit ca82a6 | sed '1,/^$/d'\n"
+"Change the version number\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:90
+#, no-wrap
+msgid ""
+"You can use that incantation to grab the commit message from each commit "
+"that is trying to be pushed and exit if you see anything that doesn't "
+"match.\n"
+"To exit the script and reject the push, exit non-zero.\n"
+"The whole method looks like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:94
+#: book/08-customizing-git/sections/policy.asc:303
+#, no-wrap
+msgid "$regex = /\\[ref: (\\d+)\\]/\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:107
+#, no-wrap
+msgid ""
+"# enforced custom commit message format\n"
+"def check_message_format\n"
+"  missed_revs = `git rev-list #{$oldrev}..#{$newrev}`.split(\"\\n\")\n"
+"  missed_revs.each do |rev|\n"
+"    message = `git cat-file commit #{rev} | sed '1,/^$/d'`\n"
+"    if !$regex.match(message)\n"
+"      puts \"[POLICY] Your message is not formatted correctly\"\n"
+"      exit 1\n"
+"    end\n"
+"  end\n"
+"end\n"
+"check_message_format\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:110
+#, no-wrap
+msgid ""
+"Putting that in your `update` script will reject updates that contain "
+"commits that have messages that don't adhere to your rule.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:112
+#, no-wrap
+msgid "===== Enforcing a User-Based ACL System\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:117
+#, no-wrap
+msgid ""
+"Suppose you want to add a mechanism that uses an access control list (ACL) "
+"that specifies which users are allowed to push changes to which parts of "
+"your projects.\n"
+"Some people have full access, and others can only push changes to certain "
+"subdirectories or specific files.\n"
+"To enforce this, you'll write those rules to a file named `acl` that lives "
+"in your bare Git repository on the server.\n"
+"You'll have the `update` hook look at those rules, see what files are being "
+"introduced for all the commits being pushed, and determine whether the user "
+"doing the push has access to update all those files.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:121
+#, no-wrap
+msgid ""
+"The first thing you'll do is write your ACL.\n"
+"Here you'll use a format very much like the CVS ACL mechanism: it uses a "
+"series of lines, where the first field is `avail` or `unavail`, the next "
+"field is a comma-delimited list of the users to which the rule applies, and "
+"the last field is the path to which the rule applies (blank meaning open "
+"access).\n"
+"All of these fields are delimited by a pipe (`|`) character.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:123
+#, no-wrap
+msgid ""
+"In this case, you have a couple of administrators, some documentation "
+"writers with access to the `doc` directory, and one developer who only has "
+"access to the `lib` and `tests` directories, and your ACL file looks like "
+"this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:130
+#, no-wrap
+msgid ""
+"avail|nickh,pjhyett,defunkt,tpw\n"
+"avail|usinclair,cdickens,ebronte|doc\n"
+"avail|schacon|lib\n"
+"avail|schacon|tests\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:135
+#, no-wrap
+msgid ""
+"You begin by reading this data into a structure that you can use.\n"
+"In this case, to keep the example simple, you'll only enforce the `avail` "
+"directives.\n"
+"Here is a method that gives you an associative array where the key is the "
+"user name and the value is an array of paths to which the user has write "
+"access:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:152
+#, no-wrap
+msgid ""
+"def get_acl_access_data(acl_file)\n"
+"  # read in ACL data\n"
+"  acl_file = File.read(acl_file).split(\"\\n\").reject { |line| line == '' "
+"}\n"
+"  access = {}\n"
+"  acl_file.each do |line|\n"
+"    avail, users, path = line.split('|')\n"
+"    next unless avail == 'avail'\n"
+"    users.split(',').each do |user|\n"
+"      access[user] ||= []\n"
+"      access[user] << path\n"
+"    end\n"
+"  end\n"
+"  access\n"
+"end\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:155
+#, no-wrap
+msgid ""
+"On the ACL file you looked at earlier, this `get_acl_access_data` method "
+"returns a data structure that looks like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:166
+#, no-wrap
+msgid ""
+"{\"defunkt\"=>[nil],\n"
+" \"tpw\"=>[nil],\n"
+" \"nickh\"=>[nil],\n"
+" \"pjhyett\"=>[nil],\n"
+" \"schacon\"=>[\"lib\", \"tests\"],\n"
+" \"cdickens\"=>[\"doc\"],\n"
+" \"usinclair\"=>[\"doc\"],\n"
+" \"ebronte\"=>[\"doc\"]}\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:169
+#, no-wrap
+msgid ""
+"Now that you have the permissions sorted out, you need to determine what "
+"paths the commits being pushed have modified, so you can make sure the user "
+"who's pushing has access to all of them.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:171
+#, no-wrap
+msgid ""
+"You can pretty easily see what files have been modified in a single commit "
+"with the `--name-only` option to the `git log` command (mentioned briefly in "
+"<<ch02-git-basics-chapter#ch02-git-basics-chapter>>):\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:175
+#, no-wrap
+msgid "$ git log -1 --name-only --pretty=format:'' 9f585d\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:178
+#, no-wrap
+msgid ""
+"README\n"
+"lib/test.rb\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:181
+#, no-wrap
+msgid ""
+"If you use the ACL structure returned from the `get_acl_access_data` method "
+"and check it against the listed files in each of the commits, you can "
+"determine whether the user has access to push all of their commits:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:187
+#, no-wrap
+msgid ""
+"# only allows certain users to modify certain subdirectories in a project\n"
+"def check_directory_perms\n"
+"  access = get_acl_access_data('acl')\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:208
+#, no-wrap
+msgid ""
+"  # see if anyone is trying to push something they can't\n"
+"  new_commits = `git rev-list #{$oldrev}..#{$newrev}`.split(\"\\n\")\n"
+"  new_commits.each do |rev|\n"
+"    files_modified = `git log -1 --name-only --pretty=format:'' "
+"#{rev}`.split(\"\\n\")\n"
+"    files_modified.each do |path|\n"
+"      next if path.size == 0\n"
+"      has_file_access = false\n"
+"      access[$user].each do |access_path|\n"
+"        if !access_path  # user has access to everything\n"
+"           || (path.start_with? access_path) # access to this path\n"
+"          has_file_access = true\n"
+"        end\n"
+"      end\n"
+"      if !has_file_access\n"
+"        puts \"[POLICY] You do not have access to push to #{path}\"\n"
+"        exit 1\n"
+"      end\n"
+"    end\n"
+"  end\n"
+"end\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:210
+#: book/08-customizing-git/sections/policy.asc:359
+#, no-wrap
+msgid ""
+"check_directory_perms\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:214
+#, no-wrap
+msgid ""
+"You get a list of new commits being pushed to your server with `git "
+"rev-list`.\n"
+"Then, for each of those commits, you find which files are modified and make "
+"sure the user who's pushing has access to all the paths being modified.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:216
+#, no-wrap
+msgid ""
+"Now your users can't push any commits with badly formed messages or with "
+"modified files outside of their designated paths.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:218
+#, no-wrap
+msgid "===== Testing It Out\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:220
+#, no-wrap
+msgid ""
+"If you run `chmod u+x .git/hooks/update`, which is the file into which you "
+"should have put all this code, and then try to push a commit with a "
+"non-compliant message, you get something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:237
+#, no-wrap
+msgid ""
+"$ git push -f origin master\n"
+"Counting objects: 5, done.\n"
+"Compressing objects: 100% (3/3), done.\n"
+"Writing objects: 100% (3/3), 323 bytes, done.\n"
+"Total 3 (delta 1), reused 0 (delta 0)\n"
+"Unpacking objects: 100% (3/3), done.\n"
+"Enforcing Policies...\n"
+"(refs/heads/master) (8338c5) (c5b616)\n"
+"[POLICY] Your message is not formatted correctly\n"
+"error: hooks/update exited with error code 1\n"
+"error: hook declined to update refs/heads/master\n"
+"To git@gitserver:project.git\n"
+" ! [remote rejected] master -> master (hook declined)\n"
+"error: failed to push some refs to 'git@gitserver:project.git'\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:241
+#, no-wrap
+msgid ""
+"There are a couple of interesting things here.\n"
+"First, you see this where the hook starts running.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:246
+#, no-wrap
+msgid ""
+"Enforcing Policies...\n"
+"(refs/heads/master) (fb8c72) (c56860)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:250
+#, no-wrap
+msgid ""
+"Remember that you printed that out at the very beginning of your update "
+"script.\n"
+"Anything your script echoes to `stdout` will be transferred to the client.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:252
+#, no-wrap
+msgid "The next thing you'll notice is the error message.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:258
+#, no-wrap
+msgid ""
+"[POLICY] Your message is not formatted correctly\n"
+"error: hooks/update exited with error code 1\n"
+"error: hook declined to update refs/heads/master\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:262
+#, no-wrap
+msgid ""
+"The first line was printed out by you, the other two were Git telling you "
+"that the update script exited non-zero and that is what is declining your "
+"push.\n"
+"Lastly, you have this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:268
+#, no-wrap
+msgid ""
+"To git@gitserver:project.git\n"
+" ! [remote rejected] master -> master (hook declined)\n"
+"error: failed to push some refs to 'git@gitserver:project.git'\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:271
+#, no-wrap
+msgid ""
+"You'll see a remote rejected message for each reference that your hook "
+"declined, and it tells you that it was declined specifically because of a "
+"hook failure.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:274
+#, no-wrap
+msgid ""
+"Furthermore, if someone tries to edit a file they don't have access to and "
+"push a commit containing it, they will see something similar.\n"
+"For instance, if a documentation author tries to push a commit modifying "
+"something in the `lib` directory, they see:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:278
+#, no-wrap
+msgid ""
+"[POLICY] You do not have access to push to lib/test.rb\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:281
+#, no-wrap
+msgid ""
+"From now on, as long as that `update` script is there and executable, your "
+"repository will never have a commit message without your pattern in it, and "
+"your users will be sandboxed.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:286
+#, no-wrap
+msgid ""
+"The downside to this approach is the whining that will inevitably result "
+"when your users' commit pushes are rejected.\n"
+"Having their carefully crafted work rejected at the last minute can be "
+"extremely frustrating and confusing; and furthermore, they will have to edit "
+"their history to correct it, which isn't always for the faint of heart.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:291
+#, no-wrap
+msgid ""
+"The answer to this dilemma is to provide some client-side hooks that users "
+"can run to notify them when they're doing something that the server is "
+"likely to reject.\n"
+"That way, they can correct any problems before committing and before those "
+"issues become more difficult to fix.\n"
+"Because hooks aren't transferred with a clone of a project, you must "
+"distribute these scripts some other way and then have your users copy them "
+"to their `.git/hooks` directory and make them executable.\n"
+"You can distribute these hooks within the project or in a separate project, "
+"but Git won't set them up automatically.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:295
+#, no-wrap
+msgid ""
+"To begin, you should check your commit message just before each commit is "
+"recorded, so you know the server won't reject your changes due to badly "
+"formatted commit messages.\n"
+"To do this, you can add the `commit-msg` hook.\n"
+"If you have it read the message from the file passed as the first argument "
+"and compare that to the pattern, you can force Git to abort the commit if "
+"there is no match:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:301
+#, no-wrap
+msgid ""
+"#!/usr/bin/env ruby\n"
+"message_file = ARGV[0]\n"
+"message = File.read(message_file)\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:308
+#, no-wrap
+msgid ""
+"if !$regex.match(message)\n"
+"  puts \"[POLICY] Your message is not formatted correctly\"\n"
+"  exit 1\n"
+"end\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:311
+#, no-wrap
+msgid ""
+"If that script is in place (in `.git/hooks/commit-msg`) and executable, and "
+"you commit with a message that isn't properly formatted, you see this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:316
+#, no-wrap
+msgid ""
+"$ git commit -am 'Test'\n"
+"[POLICY] Your message is not formatted correctly\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:320
+#, no-wrap
+msgid ""
+"No commit was completed in that instance.\n"
+"However, if your message contains the proper pattern, Git allows you to "
+"commit:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:326
+#, no-wrap
+msgid ""
+"$ git commit -am 'Test [ref: 132]'\n"
+"[master e05c914] Test [ref: 132]\n"
+" 1 file changed, 1 insertions(+), 0 deletions(-)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:330
+#, no-wrap
+msgid ""
+"Next, you want to make sure you aren't modifying files that are outside your "
+"ACL scope.\n"
+"If your project's `.git` directory contains a copy of the ACL file you used "
+"previously, then the following `pre-commit` script will enforce those "
+"constraints for you:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:336
+#, no-wrap
+msgid "$user    = ENV['USER']\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:338
+#, no-wrap
+msgid "# [ insert acl_access_data method from above ]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:342
+#, no-wrap
+msgid ""
+"# only allows certain users to modify certain subdirectories in a project\n"
+"def check_directory_perms\n"
+"  access = get_acl_access_data('.git/acl')\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:357
+#, no-wrap
+msgid ""
+"  files_modified = `git diff-index --cached --name-only "
+"HEAD`.split(\"\\n\")\n"
+"  files_modified.each do |path|\n"
+"    next if path.size == 0\n"
+"    has_file_access = false\n"
+"    access[$user].each do |access_path|\n"
+"    if !access_path || (path.index(access_path) == 0)\n"
+"      has_file_access = true\n"
+"    end\n"
+"    if !has_file_access\n"
+"      puts \"[POLICY] You do not have access to push to #{path}\"\n"
+"      exit 1\n"
+"    end\n"
+"  end\n"
+"end\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:364
+#, no-wrap
+msgid ""
+"This is roughly the same script as the server-side part, but with two "
+"important differences.\n"
+"First, the ACL file is in a different place, because this script runs from "
+"your working directory, not from your `.git` directory.\n"
+"You have to change the path to the ACL file from this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:368
+#, no-wrap
+msgid ""
+"access = get_acl_access_data('acl')\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:371
+#, no-wrap
+msgid "to this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:375
+#, no-wrap
+msgid ""
+"access = get_acl_access_data('.git/acl')\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:380
+#, no-wrap
+msgid ""
+"The other important difference is the way you get a listing of the files "
+"that have been changed.\n"
+"Because the server-side method looks at the log of commits, and, at this "
+"point, the commit hasn't been recorded yet, you must get your file listing "
+"from the staging area instead.\n"
+"Instead of:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:384
+#, no-wrap
+msgid ""
+"files_modified = `git log -1 --name-only --pretty=format:'' #{ref}`\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:387
+#, no-wrap
+msgid "you have to use:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:391
+#, no-wrap
+msgid ""
+"files_modified = `git diff-index --cached --name-only HEAD`\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:396
+#, no-wrap
+msgid ""
+"But those are the only two differences â otherwise, the script works the "
+"same way.\n"
+"One caveat is that it expects you to be running locally as the same user you "
+"push as to the remote machine.\n"
+"If that is different, you must set the `$user` variable manually.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:399
+#, no-wrap
+msgid ""
+"One other thing we can do here is make sure the user doesn't push "
+"non-fast-forwarded references.\n"
+"To get a reference that isn't a fast-forward, you either have to rebase past "
+"a commit you've already pushed up or try pushing a different local branch up "
+"to the same remote branch.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:401
+#, no-wrap
+msgid ""
+"Presumably, the server is already configured with `receive.denyDeletes` and "
+"`receive.denyNonFastForwards` to enforce this policy, so the only accidental "
+"thing you can try to catch is rebasing commits that have already been "
+"pushed.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:405
+#, no-wrap
+msgid ""
+"Here is an example pre-rebase script that checks for that.\n"
+"It gets a list of all the commits you're about to rewrite and checks whether "
+"they exist in any of your remote references.\n"
+"If it sees one that is reachable from one of your remote references, it "
+"aborts the rebase.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:416
+#, no-wrap
+msgid ""
+"base_branch = ARGV[0]\n"
+"if ARGV[1]\n"
+"  topic_branch = ARGV[1]\n"
+"else\n"
+"  topic_branch = \"HEAD\"\n"
+"end\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:419
+#, no-wrap
+msgid ""
+"target_shas = `git rev-list "
+"#{base_branch}..#{topic_branch}`.split(\"\\n\")\n"
+"remote_refs = `git branch -r`.split(\"\\n\").map { |r| r.strip }\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:429
+#, no-wrap
+msgid ""
+"target_shas.each do |sha|\n"
+"  remote_refs.each do |remote_ref|\n"
+"    shas_pushed = `git rev-list ^#{sha}^@ refs/remotes/#{remote_ref}`\n"
+"    if shas_pushed.split(\"\\n\").include?(sha)\n"
+"      puts \"[POLICY] Commit #{sha} has already been pushed to "
+"#{remote_ref}\"\n"
+"      exit 1\n"
+"    end\n"
+"  end\n"
+"end\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:433
+#, no-wrap
+msgid ""
+"This script uses a syntax that wasn't covered in "
+"<<ch07-git-tools#_revision_selection>>.\n"
+"You get a list of commits that have already been pushed up by running "
+"this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:437
+#, no-wrap
+msgid ""
+"`git rev-list ^#{sha}^@ refs/remotes/#{remote_ref}`\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:441
+#, no-wrap
+msgid ""
+"The `SHA^@` syntax resolves to all the parents of that commit.\n"
+"You're looking for any commit that is reachable from the last commit on the "
+"remote and that isn't reachable from any parent of any of the SHA-1s you're "
+"trying to push up â meaning it's a fast-forward.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/08-customizing-git/sections/policy.asc:443
+#, no-wrap
+msgid ""
+"The main drawback to this approach is that it can be very slow and is often "
+"unnecessary â if you don't try to force the push with `-f`, the server "
+"will warn you and not accept the push.\n"
+"However, it's an interesting exercise and can in theory help you avoid a "
+"rebase that you might later have to go back and fix.\n"
+msgstr ""

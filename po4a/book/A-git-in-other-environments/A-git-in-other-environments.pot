@@ -1,0 +1,1211 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2022-02-04 19:16+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/bash.asc:2
+#, no-wrap
+msgid "=== Git in Bash\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/bash.asc:6
+#, no-wrap
+msgid ""
+"(((bash)))(((tab completion, bash)))(((shell prompts, bash)))\n"
+"If you're a Bash user, you can tap into some of your shell's features to "
+"make your experience with Git a lot friendlier.\n"
+"Git actually ships with plugins for several shells, but it's not turned on "
+"by default.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/bash.asc:10
+#, no-wrap
+msgid ""
+"First, you need to get a copy of the completions file from the source code "
+"of the Git release you're using.\n"
+"Check your version by typing `git version`, then use `git checkout "
+"tags/vX.Y.Z`, where `vX.Y.Z` corresponds to the version of Git you are "
+"using.\n"
+"Copy the `contrib/completion/git-completion.bash` file somewhere handy, like "
+"your home directory, and add this to your `.bashrc`:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/bash.asc:12
+#: book/A-git-in-other-environments/sections/bash.asc:19
+#: book/A-git-in-other-environments/sections/bash.asc:31
+#: book/A-git-in-other-environments/sections/guis.asc:26
+#: book/A-git-in-other-environments/sections/guis.asc:46
+#: book/A-git-in-other-environments/sections/zsh.asc:9
+#: book/A-git-in-other-environments/sections/zsh.asc:26
+#, no-wrap
+msgid ""
+"[source,console]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/bash.asc:14
+#, no-wrap
+msgid ""
+". ~/git-completion.bash\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/bash.asc:17
+#, no-wrap
+msgid "Once that's done, change your directory to a Git repository, and type:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/bash.asc:21
+#, no-wrap
+msgid ""
+"$ git chec<tab>\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/bash.asc:25
+#, no-wrap
+msgid ""
+"â¦and Bash will auto-complete to `git checkout`.\n"
+"This works with all of Git's subcommands, command-line parameters, and "
+"remotes and ref names where appropriate.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/bash.asc:29
+#, no-wrap
+msgid ""
+"It's also useful to customize your prompt to show information about the "
+"current directory's Git repository.\n"
+"This can be as simple or complex as you want, but there are generally a few "
+"key pieces of information that most people want, like the current branch, "
+"and the status of the working directory.\n"
+"To add these to your prompt, just copy the "
+"`contrib/completion/git-prompt.sh` file from Git's source repository to your "
+"home directory, add something like this to your `.bashrc`:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/bash.asc:35
+#, no-wrap
+msgid ""
+". ~/git-prompt.sh\n"
+"export GIT_PS1_SHOWDIRTYSTATE=1\n"
+"export PS1='\\w$(__git_ps1 \" (%s)\")\\$ '\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/bash.asc:39
+#, no-wrap
+msgid ""
+"The `\\w` means print the current working directory, the `\\$` prints the "
+"`$` part of the prompt, and `__git_ps1 \" (%s)\"` calls the function "
+"provided by `git-prompt.sh` with a formatting argument.\n"
+"Now your bash prompt will look like this when you're anywhere inside a "
+"Git-controlled project:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/bash.asc:42
+#, no-wrap
+msgid ""
+".Customized `bash` prompt\n"
+"image::images/git-bash.png[Customized `bash` prompt]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/bash.asc:43
+#, no-wrap
+msgid ""
+"Both of these scripts come with helpful documentation; take a look at the "
+"contents of `git-completion.bash` and `git-prompt.sh` for more "
+"information.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:2
+#, no-wrap
+msgid "=== Graphical Interfaces\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:7
+#, no-wrap
+msgid ""
+"(((GUIs)))(((Graphical tools)))\n"
+"Git's native environment is in the terminal.\n"
+"New features show up there first, and only at the command line is the full "
+"power of Git completely at your disposal.\n"
+"But plain text isn't the best choice for all tasks; sometimes a visual "
+"representation is what you need, and some users are much more comfortable "
+"with a point-and-click interface.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:12
+#, no-wrap
+msgid ""
+"It's important to note that different interfaces are tailored for different "
+"workflows.\n"
+"Some clients expose only a carefully curated subset of Git functionality, in "
+"order to support a specific way of working that the author considers "
+"effective.\n"
+"When viewed in this light, none of these tools can be called \"`better`\" "
+"than any of the others, they're simply more fit for their intended "
+"purpose.\n"
+"Also note that there's nothing these graphical clients can do that the "
+"command-line client can't; the command-line is still where you'll have the "
+"most power and control when working with your repositories.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:14
+#, no-wrap
+msgid "==== `gitk` and `git-gui`\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:17
+#, no-wrap
+msgid ""
+"(((git commands, gitk)))(((git commands, gui)))(((gitk)))\n"
+"When you install Git, you also get its visual tools, `gitk` and `git-gui`.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:21
+#, no-wrap
+msgid ""
+"`gitk` is a graphical history viewer.\n"
+"Think of it like a powerful GUI shell over `git log` and `git grep`.\n"
+"This is the tool to use when you're trying to find something that happened "
+"in the past, or visualize your project's history.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:24
+#, no-wrap
+msgid ""
+"Gitk is easiest to invoke from the command-line.\n"
+"Just `cd` into a Git repository, and type:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:28
+#, no-wrap
+msgid ""
+"$ gitk [git log options]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:33
+#, no-wrap
+msgid ""
+"Gitk accepts many command-line options, most of which are passed through to "
+"the underlying `git log` action.\n"
+"Probably one of the most useful is the `--all` flag, which tells gitk to "
+"show commits reachable from _any_ ref, not just HEAD.\n"
+"Gitk's interface looks like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:36
+#, no-wrap
+msgid ""
+".The `gitk` history viewer\n"
+"image::images/gitk.png[The `gitk` history viewer]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:41
+#, no-wrap
+msgid ""
+"On the top is something that looks a bit like the output of `git log "
+"--graph`; each dot represents a commit, the lines represent parent "
+"relationships, and refs are shown as colored boxes.\n"
+"The yellow dot represents HEAD, and the red dot represents changes that are "
+"yet to become a commit.\n"
+"At the bottom is a view of the selected commit; the comments and patch on "
+"the left, and a summary view on the right.\n"
+"In between is a collection of controls used for searching history.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:44
+#, no-wrap
+msgid ""
+"`git-gui`, on the other hand, is primarily a tool for crafting commits.\n"
+"It, too, is easiest to invoke from the command line:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:48
+#, no-wrap
+msgid ""
+"$ git gui\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:51
+#, no-wrap
+msgid "And it looks something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:54
+#, no-wrap
+msgid ""
+".The `git-gui` commit tool\n"
+"image::images/git-gui.png[The `git-gui` commit tool]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:57
+#, no-wrap
+msgid ""
+"On the left is the index; unstaged changes are on top, staged changes on the "
+"bottom.\n"
+"You can move entire files between the two states by clicking on their icons, "
+"or you can select a file for viewing by clicking on its name.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:60
+#, no-wrap
+msgid ""
+"At top right is the diff view, which shows the changes for the "
+"currently-selected file.\n"
+"You can stage individual hunks (or individual lines) by right-clicking in "
+"this area.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:65
+#, no-wrap
+msgid ""
+"At the bottom right is the message and action area.\n"
+"Type your message into the text box and click \"`Commit`\" to do something "
+"similar to `git commit`.\n"
+"You can also choose to amend the last commit by choosing the \"`Amend`\" "
+"radio button, which will update the \"`Staged Changes`\" area with the "
+"contents of the last commit.\n"
+"Then you can simply stage or unstage some changes, alter the commit message, "
+"and click \"`Commit`\" again to replace the old commit with a new one.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:68
+#, no-wrap
+msgid ""
+"`gitk` and `git-gui` are examples of task-oriented tools.\n"
+"Each of them is tailored for a specific purpose (viewing history and "
+"creating commits, respectively), and omit the features not necessary for "
+"that task.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:70
+#, no-wrap
+msgid "==== GitHub for macOS and Windows\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:75
+#, no-wrap
+msgid ""
+"(((GitHub for macOS)))(((GitHub for Windows)))\n"
+"GitHub has created two workflow-oriented Git clients: one for Windows, and "
+"one for macOS.\n"
+"These clients are a good example of workflow-oriented tools â rather than "
+"expose _all_ of Git's functionality, they instead focus on a curated set of "
+"commonly-used features that work well together.\n"
+"They look like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:78
+#, no-wrap
+msgid ""
+".GitHub for macOS\n"
+"image::images/github_mac.png[GitHub for macOS]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:81
+#, no-wrap
+msgid ""
+".GitHub for Windows\n"
+"image::images/github_win.png[GitHub for Windows]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:84
+#, no-wrap
+msgid ""
+"They are designed to look and work very much alike, so we'll treat them like "
+"a single product in this chapter.\n"
+"We won't be doing a detailed rundown of these tools (they have their own "
+"documentation), but a quick tour of the \"`changes`\" view (which is where "
+"you'll spend most of your time) is in order.\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/A-git-in-other-environments/sections/guis.asc:90
+#, markdown-text, no-wrap
+msgid ""
+"On the left is the list of repositories the client is tracking; you can add "
+"a repository (either by cloning or attaching locally) by clicking the "
+"\"`+`\" icon at the top of this area.\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/A-git-in-other-environments/sections/guis.asc:90
+#, markdown-text, no-wrap
+msgid ""
+"In the center is a commit-input area, which lets you input a commit message, "
+"and select which files should be included.\n"
+"On Windows, the commit history is displayed directly below this; on macOS, "
+"it's on a separate tab.\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/A-git-in-other-environments/sections/guis.asc:90
+#, markdown-text, no-wrap
+msgid ""
+"On the right is a diff view, which shows what's changed in your working "
+"directory, or which changes were included in the selected commit.\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/A-git-in-other-environments/sections/guis.asc:90
+#, markdown-text, no-wrap
+msgid ""
+"The last thing to notice is the \"`Sync`\" button at the top-right, which is "
+"the primary way you interact over the network.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:92
+#, no-wrap
+msgid ""
+"[NOTE]\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:95
+#, no-wrap
+msgid ""
+"You don't need a GitHub account to use these tools.\n"
+"While they're designed to highlight GitHub's service and recommended "
+"workflow, they will happily work with any repository, and do network "
+"operations with any Git host.\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:98
+#, no-wrap
+msgid "===== Installation\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:101
+#, no-wrap
+msgid ""
+"GitHub for Windows can be downloaded from https://windows.github.com[], and "
+"GitHub for macOS from https://mac.github.com[].\n"
+"When the applications are first run, they walk you through all the "
+"first-time Git setup, such as configuring your name and email address, and "
+"both set up sane defaults for many common configuration options, such as "
+"credential caches and CRLF behavior.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:105
+#, no-wrap
+msgid ""
+"Both are \"`evergreen`\" â updates are downloaded and installed in the "
+"background while the applications are open.\n"
+"This helpfully includes a bundled version of Git, which means you probably "
+"won't have to worry about manually updating it again.\n"
+"On Windows, the client includes a shortcut to launch PowerShell with "
+"Posh-git, which we'll talk more about later in this chapter.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:109
+#, no-wrap
+msgid ""
+"The next step is to give the tool some repositories to work with.\n"
+"The client shows you a list of the repositories you have access to on "
+"GitHub, and can clone them in one step.\n"
+"If you already have a local repository, just drag its directory from the "
+"Finder or Windows Explorer into the GitHub client window, and it will be "
+"included in the list of repositories on the left.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:111
+#, no-wrap
+msgid "===== Recommended Workflow\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:115
+#, no-wrap
+msgid ""
+"Once it's installed and configured, you can use the GitHub client for many "
+"common Git tasks.\n"
+"The intended workflow for this tool is sometimes called the \"`GitHub "
+"Flow.`\"\n"
+"We cover this in more detail in <<ch06-github#ch06-github_flow>>, but the "
+"general gist is that (a) you'll be committing to a branch, and (b) you'll be "
+"syncing up with a remote repository fairly regularly.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:118
+#, no-wrap
+msgid ""
+"Branch management is one of the areas where the two tools diverge.\n"
+"On macOS, there's a button at the top of the window for creating a new "
+"branch:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:121
+#, no-wrap
+msgid ""
+".\"`Create Branch`\" button on macOS\n"
+"image::images/branch_widget_mac.png[âCreate Branchâ button on macOS]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:123
+#, no-wrap
+msgid ""
+"On Windows, this is done by typing the new branch's name in the "
+"branch-switching widget:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:126
+#, no-wrap
+msgid ""
+".Creating a branch on Windows\n"
+"image::images/branch_widget_win.png[Creating a branch on Windows]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:130
+#, no-wrap
+msgid ""
+"Once your branch is created, making new commits is fairly straightforward.\n"
+"Make some changes in your working directory, and when you switch to the "
+"GitHub client window, it will show you which files changed.\n"
+"Enter a commit message, select the files you'd like to include, and click "
+"the \"`Commit`\" button (ctrl-enter or â-enter).\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:134
+#, no-wrap
+msgid ""
+"The main way you interact with other repositories over the network is "
+"through the \"`Sync`\" feature.\n"
+"Git internally has separate operations for pushing, fetching, merging, and "
+"rebasing, but the GitHub clients collapse all of these into one multi-step "
+"feature.\n"
+"Here's what happens when you click the Sync button:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:138
+#, no-wrap
+msgid ""
+". `git pull --rebase`.\n"
+"  If this fails because of a merge conflict, fall back to `git pull "
+"--no-rebase`.\n"
+". `git push`.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:140
+#, no-wrap
+msgid ""
+"This is the most common sequence of network commands when working in this "
+"style, so squashing them into one command saves a lot of time.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:142
+#, no-wrap
+msgid "===== Summary\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:146
+#, no-wrap
+msgid ""
+"These tools are very well-suited for the workflow they're designed for.\n"
+"Developers and non-developers alike can be collaborating on a project within "
+"minutes, and many of the best practices for this kind of workflow are baked "
+"into the tools.\n"
+"However, if your workflow is different, or you want more control over how "
+"and when network operations are done, we recommend you use another client or "
+"the command line.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:149
+#, no-wrap
+msgid "==== Other GUIs\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/guis.asc:152
+#, no-wrap
+msgid ""
+"There are a number of other graphical Git clients, and they run the gamut "
+"from specialized, single-purpose tools all the way to apps that try to "
+"expose everything Git can do.\n"
+"The official Git website has a curated list of the most popular clients at "
+"https://git-scm.com/downloads/guis[].\n"
+"A more comprehensive list is available on the Git wiki site, at "
+"https://git.wiki.kernel.org/index.php/Interfaces,_frontends,_and_tools#Graphical_Interfaces[].\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/jetbrainsides.asc:2
+#, no-wrap
+msgid "=== Git in IntelliJ / PyCharm / WebStorm / PhpStorm / RubyMine\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/jetbrainsides.asc:5
+#, no-wrap
+msgid ""
+"JetBrains IDEs (such as IntelliJ IDEA, PyCharm, WebStorm, PhpStorm, "
+"RubyMine, and others) ship with a Git Integration plugin.\n"
+"It provides a dedicated view in the IDE to work with Git and GitHub Pull "
+"Requests.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/jetbrainsides.asc:8
+#, no-wrap
+msgid ""
+".Version Control ToolWindow in JetBrains IDEs\n"
+"image::images/jb.png[Version Control ToolWindow in JetBrains IDEs]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/jetbrainsides.asc:10
+#, no-wrap
+msgid ""
+"The integration relies on the command-line git client, and requires one to "
+"be installed.\n"
+"The official documentation is available at "
+"https://www.jetbrains.com/help/idea/using-git-integration.html[].\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/powershell.asc:3
+#, no-wrap
+msgid ""
+"[[_git_powershell]]\n"
+"=== Git in PowerShell\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/powershell.asc:10
+#, no-wrap
+msgid ""
+"(((PowerShell)))(((tab completion, PowerShell)))(((shell prompts, "
+"PowerShell)))\n"
+"(((posh-git)))\n"
+"The legacy command-line terminal on Windows (`cmd.exe`) isn't really capable "
+"of a customized Git experience, but if you're using PowerShell, you're in "
+"luck.\n"
+"This also works if you're running PowerShell Core on Linux or macOS.\n"
+"A package called posh-git (https://github.com/dahlbyk/posh-git[]) provides "
+"powerful tab-completion facilities, as well as an enhanced prompt to help "
+"you stay on top of your repository status.\n"
+"It looks like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/powershell.asc:13
+#, no-wrap
+msgid ""
+".PowerShell with Posh-git\n"
+"image::images/posh-git.png[PowerShell with Posh-git]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/powershell.asc:15
+#, no-wrap
+msgid "==== Installation\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/powershell.asc:17
+#, no-wrap
+msgid "===== Prerequisites (Windows only)\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/powershell.asc:23
+#, no-wrap
+msgid ""
+"Before you're able to run PowerShell scripts on your machine, you need to "
+"set your local `ExecutionPolicy` to `RemoteSigned` (basically, anything "
+"except `Undefined` and `Restricted`).\n"
+"If you choose `AllSigned` instead of `RemoteSigned`, also local scripts "
+"(your own) need to be digitally signed in order to be executed.\n"
+"With `RemoteSigned`, only scripts having the `ZoneIdentifier` set to "
+"`Internet` (were downloaded from the web) need to be signed, others not.\n"
+"If you're an administrator and want to set it for all users on that machine, "
+"use `-Scope LocalMachine`.\n"
+"If you're a normal user, without administrative rights, you can use `-Scope "
+"CurrentUser` to set it only for you.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/powershell.asc:25
+#, no-wrap
+msgid ""
+"More about PowerShell Scopes: "
+"https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_scopes[].\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/powershell.asc:27
+#, no-wrap
+msgid ""
+"More about PowerShell ExecutionPolicy: "
+"https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy[].\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/powershell.asc:29
+#, no-wrap
+msgid ""
+"To set the value of `ExecutionPolicy` to `RemoteSigned` for all users use "
+"the next command:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/powershell.asc:31
+#: book/A-git-in-other-environments/sections/powershell.asc:42
+#: book/A-git-in-other-environments/sections/powershell.asc:51
+#: book/A-git-in-other-environments/sections/powershell.asc:67
+#: book/A-git-in-other-environments/sections/powershell.asc:78
+#, no-wrap
+msgid ""
+"[source,powershell]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/powershell.asc:33
+#, no-wrap
+msgid ""
+"> Set-ExecutionPolicy -Scope LocalMachine -ExecutionPolicy RemoteSigned "
+"-Force\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/powershell.asc:36
+#, no-wrap
+msgid "===== PowerShell Gallery\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/powershell.asc:38
+#, no-wrap
+msgid ""
+"If you have at least PowerShell 5 or PowerShell 4 with PackageManagement "
+"installed, you can use the package manager to install posh-git for you.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/powershell.asc:40
+#, no-wrap
+msgid ""
+"More information about PowerShell Gallery: "
+"https://docs.microsoft.com/en-us/powershell/scripting/gallery/overview[].\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/powershell.asc:45
+#, no-wrap
+msgid ""
+"> Install-Module posh-git -Scope CurrentUser -Force\n"
+"> Install-Module posh-git -Scope CurrentUser -AllowPrerelease -Force # Newer "
+"beta version with PowerShell Core support\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/powershell.asc:49
+#, no-wrap
+msgid ""
+"If you want to install posh-git for all users, use `-Scope AllUsers` instead "
+"and execute the command from an elevated PowerShell console.\n"
+"If the second command fails with an error like `Module 'PowerShellGet' was "
+"not installed by using Install-Module`, you'll need to run another command "
+"first:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/powershell.asc:53
+#, no-wrap
+msgid ""
+"> Install-Module PowerShellGet -Force -SkipPublisherCheck\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/powershell.asc:57
+#, no-wrap
+msgid ""
+"Then you can go back and try again.\n"
+"This happens, because the modules that ship with Windows PowerShell are "
+"signed with a different publishment certificate.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/powershell.asc:59
+#, no-wrap
+msgid "===== Update PowerShell Prompt\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/powershell.asc:65
+#, no-wrap
+msgid ""
+"To include git information in your prompt, the posh-git module needs to be "
+"imported.\n"
+"To have posh-git imported every time PowerShell starts, execute the "
+"`Add-PoshGitToProfile` command which will add the import statement into your "
+"`$profile` script.\n"
+"This script is executed everytime you open a new PowerShell console.\n"
+"Keep in mind, that there are multiple `$profile` scripts.\n"
+"E. g. one for the console and a separate one for the ISE.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/powershell.asc:70
+#, no-wrap
+msgid ""
+"> Import-Module posh-git\n"
+"> Add-PoshGitToProfile -AllHosts\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/powershell.asc:73
+#, no-wrap
+msgid "===== From Source\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/powershell.asc:76
+#, no-wrap
+msgid ""
+"Just download a posh-git release from "
+"https://github.com/dahlbyk/posh-git/releases[], and uncompress it.\n"
+"Then import the module using the full path to the `posh-git.psd1` file:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/powershell.asc:81
+#, no-wrap
+msgid ""
+"> Import-Module <path-to-uncompress-folder>\\src\\posh-git.psd1\n"
+"> Add-PoshGitToProfile -AllHosts\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/powershell.asc:84
+#, no-wrap
+msgid ""
+"This will add the proper line to your `profile.ps1` file, and posh-git will "
+"be active the next time you open PowerShell.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/powershell.asc:86
+#, no-wrap
+msgid ""
+"For a description of the Git status summary information displayed in the "
+"prompt see: "
+"https://github.com/dahlbyk/posh-git/blob/master/README.md#git-status-summary-information[]\n"
+"For more details on how to customize your posh-git prompt see: "
+"https://github.com/dahlbyk/posh-git/blob/master/README.md#customization-variables[].\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/sublimetext.asc:2
+#, no-wrap
+msgid "=== Git in Sublime Text\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/sublimetext.asc:4
+#, no-wrap
+msgid "From version 3.2 onwards, Sublime Text has git integration in the editor.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/sublimetext.asc:6
+#, no-wrap
+msgid "The features are:\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/A-git-in-other-environments/sections/sublimetext.asc:13
+#, markdown-text, no-wrap
+msgid ""
+"The sidebar will show the git status of files and folders with a "
+"badge/icon.\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/A-git-in-other-environments/sections/sublimetext.asc:13
+#, markdown-text, no-wrap
+msgid ""
+"Files and folders that are in your .gitignore file will be faded out in the "
+"sidebar.\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/A-git-in-other-environments/sections/sublimetext.asc:13
+#, markdown-text, no-wrap
+msgid ""
+"In the status bar, you can see the current git branch and how many "
+"modifications you have made.\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/A-git-in-other-environments/sections/sublimetext.asc:13
+#, markdown-text, no-wrap
+msgid "All changes to a file are now visible via markers in the gutter.\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/A-git-in-other-environments/sections/sublimetext.asc:13
+#, markdown-text, no-wrap
+msgid ""
+"You can use part of the Sublime Merge git client functionality from within "
+"Sublime Text.\n"
+"This requires that Sublime Merge is installed. See: "
+"https://www.sublimemerge.com/[].\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/sublimetext.asc:14
+#, no-wrap
+msgid ""
+"The official documentation for Sublime Text can be found here: "
+"https://www.sublimetext.com/docs/3/git_integration.html[].\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/visualstudio.asc:2
+#, no-wrap
+msgid "=== Git in Visual Studio\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/visualstudio.asc:5
+#, no-wrap
+msgid ""
+"(((Visual Studio)))\n"
+"Visual Studio has Git tooling built directly into the IDE, starting with "
+"Visual Studio 2019 version 16.8.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/visualstudio.asc:7
+#, no-wrap
+msgid "The tooling supports the following Git functionality:\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/A-git-in-other-environments/sections/visualstudio.asc:17
+#, markdown-text, no-wrap
+msgid "Create or clone a repository.\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/A-git-in-other-environments/sections/visualstudio.asc:17
+#, markdown-text, no-wrap
+msgid "Open and browse history of a repository.\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/A-git-in-other-environments/sections/visualstudio.asc:17
+#, markdown-text, no-wrap
+msgid "Create and checkout branches and tags.\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/A-git-in-other-environments/sections/visualstudio.asc:17
+#, markdown-text, no-wrap
+msgid "Stash, stage, and commit changes.\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/A-git-in-other-environments/sections/visualstudio.asc:17
+#, markdown-text, no-wrap
+msgid "Fetch, pull, push, or sync commits.\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/A-git-in-other-environments/sections/visualstudio.asc:17
+#, markdown-text, no-wrap
+msgid "Merge and rebase branches.\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/A-git-in-other-environments/sections/visualstudio.asc:17
+#, markdown-text, no-wrap
+msgid "Resolve merge conflicts.\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/A-git-in-other-environments/sections/visualstudio.asc:17
+#, markdown-text, no-wrap
+msgid "View diffs.\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/A-git-in-other-environments/sections/visualstudio.asc:17
+#, markdown-text, no-wrap
+msgid "... and more!\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/visualstudio.asc:19
+#, no-wrap
+msgid ""
+"Read the https://docs.microsoft.com/visualstudio/version-control[official "
+"documentation^] to learn more.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/visualstudiocode.asc:2
+#, no-wrap
+msgid "=== Git in Visual Studio Code\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/visualstudiocode.asc:5
+#, no-wrap
+msgid ""
+"Visual Studio Code has git support built in.\n"
+"You will need to have git version 2.0.0 (or newer) installed.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/visualstudiocode.asc:7
+#, no-wrap
+msgid "The main features are:\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/A-git-in-other-environments/sections/visualstudiocode.asc:20
+#, markdown-text, no-wrap
+msgid "See the diff of the file you are editing in the gutter.\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/A-git-in-other-environments/sections/visualstudiocode.asc:20
+#, markdown-text, no-wrap
+msgid ""
+"The Git Status Bar (lower left) shows the current branch, dirty indicators, "
+"incoming and outgoing commits.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/visualstudiocode.asc:20
+#, no-wrap
+msgid ""
+"* You can do the most common git operations from within the editor:\n"
+"** Initialize a repository.\n"
+"** Clone a repository.\n"
+"** Create branches and tags.\n"
+"** Stage and commit changes.\n"
+"** Push/pull/sync with a remote branch.\n"
+"** Resolve merge conflicts.\n"
+"** View diffs.\n"
+"* With an extension, you can also handle GitHub Pull Requests:\n"
+"  "
+"https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github[].\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/visualstudiocode.asc:21
+#, no-wrap
+msgid ""
+"The official documentation can be found here: "
+"https://code.visualstudio.com/Docs/editor/versioncontrol[].\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/zsh.asc:2
+#, no-wrap
+msgid "=== Git in Zsh\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/zsh.asc:7
+#, no-wrap
+msgid ""
+"(((zsh)))(((tab completion, zsh)))(((shell prompts, zsh)))\n"
+"Zsh also ships with a tab-completion library for Git.\n"
+"To use it, simply run `autoload -Uz compinit && compinit` in your "
+"`.zshrc`.\n"
+"Zsh's interface is a bit more powerful than Bash's:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/zsh.asc:17
+#, no-wrap
+msgid ""
+"$ git che<tab>\n"
+"check-attr        -- display gitattributes information\n"
+"check-ref-format  -- ensure that a reference name is well formed\n"
+"checkout          -- checkout branch or paths to working tree\n"
+"checkout-index    -- copy files from index to working directory\n"
+"cherry            -- find commits not merged upstream\n"
+"cherry-pick       -- apply changes introduced by some existing commits\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/zsh.asc:21
+#, no-wrap
+msgid ""
+"Ambiguous tab-completions aren't just listed; they have helpful "
+"descriptions, and you can graphically navigate the list by repeatedly "
+"hitting tab.\n"
+"This works with Git commands, their arguments, and names of things inside "
+"the repository (like refs and remotes), as well as filenames and all the "
+"other things Zsh knows how to tab-complete.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/zsh.asc:24
+#, no-wrap
+msgid ""
+"Zsh ships with a framework for getting information from version control "
+"systems, called `vcs_info`.\n"
+"To include the branch name in the prompt on the right side, add these lines "
+"to your `~/.zshrc` file:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/zsh.asc:34
+#, no-wrap
+msgid ""
+"autoload -Uz vcs_info\n"
+"precmd_vcs_info() { vcs_info }\n"
+"precmd_functions+=( precmd_vcs_info )\n"
+"setopt prompt_subst\n"
+"RPROMPT='${vcs_info_msg_0_}'\n"
+"# PROMPT='${vcs_info_msg_0_}%# '\n"
+"zstyle ':vcs_info:git:*' formats '%b'\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/zsh.asc:39
+#, no-wrap
+msgid ""
+"This results in a display of the current branch on the right-hand side of "
+"the terminal window, whenever your shell is inside a Git repository.\n"
+"The left side is supported as well, of course; just uncomment the assignment "
+"to PROMPT.\n"
+"It looks a bit like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/zsh.asc:42
+#, no-wrap
+msgid ""
+".Customized `zsh` prompt\n"
+"image::images/zsh-prompt.png[Customized `zsh` prompt]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/zsh.asc:44
+#, no-wrap
+msgid ""
+"For more information on `vcs_info`, check out its documentation in the "
+"`zshcontrib(1)` manual page, or online at "
+"http://zsh.sourceforge.net/Doc/Release/User-Contributions.html#Version-Control-Information[].\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/zsh.asc:47
+#, no-wrap
+msgid ""
+"Instead of `vcs_info`, you might prefer the prompt customization script that "
+"ships with Git, called `git-prompt.sh`; see "
+"https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh[] "
+"for details.\n"
+"`git-prompt.sh` is compatible with both Bash and Zsh.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/zsh.asc:52
+#, no-wrap
+msgid ""
+"Zsh is powerful enough that there are entire frameworks dedicated to making "
+"it better.\n"
+"One of them is called \"oh-my-zsh\", and it can be found at "
+"https://github.com/robbyrussell/oh-my-zsh[].\n"
+"oh-my-zsh's plugin system comes with powerful git tab-completion, and it has "
+"a variety of prompt \"themes\", many of which display version-control "
+"data.\n"
+"<<oh_my_zsh_git>> is just one example of what can be done with this "
+"system.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/A-git-in-other-environments/sections/zsh.asc:55
+#, no-wrap
+msgid ""
+"[[oh_my_zsh_git]]\n"
+".An example of an oh-my-zsh theme\n"
+"image::images/zsh-oh-my.png[An example of an oh-my-zsh theme]\n"
+msgstr ""

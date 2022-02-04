@@ -1,0 +1,3766 @@
+# Japanese translations for progit2
+# Copyright (C) 2022 Michio MATSUYAMA
+# This file is distributed under the same license as the progit2.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: progit2\n"
+"POT-Creation-Date: 2022-02-04 19:16+0900\n"
+"PO-Revision-Date: 2022-02-03 20:14+0900\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:2
+#, no-wrap
+msgid "=== Environment Variables\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:6
+#, no-wrap
+msgid ""
+"Git always runs inside a `bash` shell, and uses a number of shell environment variables to determine how it behaves.\n"
+"Occasionally, it comes in handy to know what these are, and how they can be used to make Git behave the way you want it to.\n"
+"This isn't an exhaustive list of all the environment variables Git pays attention to, but we'll cover the most useful.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:9
+#, no-wrap
+msgid "==== Global Behavior\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:11
+#, no-wrap
+msgid "Some of Git's general behavior as a computer program depends on environment variables.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:14
+#, no-wrap
+msgid ""
+"*`GIT_EXEC_PATH`* determines where Git looks for its sub-programs (like `git-commit`, `git-diff`, and others).\n"
+"  You can check the current setting by running `git --exec-path`.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:17
+#, no-wrap
+msgid ""
+"*`HOME`* isn't usually considered customizable (too many other things depend on it), but it's where Git looks for the global configuration file.\n"
+"  If you want a truly portable Git installation, complete with global configuration, you can override `HOME` in the portable Git's shell profile.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:20
+#, no-wrap
+msgid ""
+"*`PREFIX`* is similar, but for the system-wide configuration.\n"
+"  Git looks for this file at `$PREFIX/etc/gitconfig`.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:23
+#, no-wrap
+msgid ""
+"*`GIT_CONFIG_NOSYSTEM`*, if set, disables the use of the system-wide configuration file.\n"
+"  This is useful if your system config is interfering with your commands, but you don't have access to change or remove it.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:26
+#, no-wrap
+msgid ""
+"*`GIT_PAGER`* controls the program used to display multi-page output on the command line.\n"
+"If this is unset, `PAGER` will be used as a fallback.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:29
+#, no-wrap
+msgid ""
+"*`GIT_EDITOR`* is the editor Git will launch when the user needs to edit some text (a commit message, for example).\n"
+"If unset, `EDITOR` will be used.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:32
+#, no-wrap
+msgid "==== Repository Locations\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:34
+#, no-wrap
+msgid "Git uses several environment variables to determine how it interfaces with the current repository.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:37
+#, no-wrap
+msgid ""
+"*`GIT_DIR`* is the location of the `.git` folder.\n"
+"If this isn't specified, Git walks up the directory tree until it gets to `~` or `/`, looking for a `.git` directory at every step.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:40
+#, no-wrap
+msgid ""
+"*`GIT_CEILING_DIRECTORIES`* controls the behavior of searching for a `.git` directory.\n"
+"If you access directories that are slow to load (such as those on a tape drive, or across a slow network connection), you may want to have Git stop trying earlier than it might otherwise, especially if Git is invoked when building your shell prompt.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:43
+#, no-wrap
+msgid ""
+"*`GIT_WORK_TREE`* is the location of the root of the working directory for a non-bare repository.\n"
+"If `--git-dir` or `GIT_DIR` is specified but none of `--work-tree`, `GIT_WORK_TREE` or `core.worktree` is specified, the current working directory is regarded as the top level of your working tree.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:45
+#, no-wrap
+msgid "*`GIT_INDEX_FILE`* is the path to the index file (non-bare repositories only).\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:47
+#, no-wrap
+msgid "*`GIT_OBJECT_DIRECTORY`* can be used to specify the location of the directory that usually resides at `.git/objects`.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:50
+#, no-wrap
+msgid ""
+"*`GIT_ALTERNATE_OBJECT_DIRECTORIES`* is a colon-separated list (formatted like `/dir/one:/dir/two:â¦`) which tells Git where to check for objects if they aren't in `GIT_OBJECT_DIRECTORY`.\n"
+"If you happen to have a lot of projects with large files that have the exact same contents, this can be used to avoid storing too many copies of them.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:53
+#, no-wrap
+msgid "==== Pathspecs\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:56
+#, no-wrap
+msgid ""
+"A \"`pathspec`\" refers to how you specify paths to things in Git, including the use of wildcards.\n"
+"These are used in the `.gitignore` file, but also on the command-line (`git add *.c`).\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:60
+#, no-wrap
+msgid ""
+"*`GIT_GLOB_PATHSPECS`* and *`GIT_NOGLOB_PATHSPECS`* control the default behavior of wildcards in pathspecs.\n"
+"If `GIT_GLOB_PATHSPECS` is set to 1, wildcard characters act as wildcards (which is the default); if `GIT_NOGLOB_PATHSPECS` is set to 1, wildcard characters only match themselves, meaning something like `\\*.c` would only match a file _named_ \"`\\*.c`\", rather than any file whose name ends with `.c`.\n"
+"You can override this in individual cases by starting the pathspec with `:(glob)` or `:(literal)`, as in `:(glob)\\*.c`.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:62
+#, no-wrap
+msgid "*`GIT_LITERAL_PATHSPECS`* disables both of the above behaviors; no wildcard characters will work, and the override prefixes are disabled as well.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:64
+#, no-wrap
+msgid "*`GIT_ICASE_PATHSPECS`* sets all pathspecs to work in a case-insensitive manner.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:67
+#, no-wrap
+msgid "==== Committing\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:69
+#, no-wrap
+msgid "The final creation of a Git commit object is usually done by `git-commit-tree`, which uses these environment variables as its primary source of information, falling back to configuration values only if these aren't present.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:71
+#, no-wrap
+msgid "*`GIT_AUTHOR_NAME`* is the human-readable name in the \"`author`\" field.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:73
+#, no-wrap
+msgid "*`GIT_AUTHOR_EMAIL`* is the email for the \"`author`\" field.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:75
+#, no-wrap
+msgid "*`GIT_AUTHOR_DATE`* is the timestamp used for the \"`author`\" field.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:77
+#, no-wrap
+msgid "*`GIT_COMMITTER_NAME`* sets the human name for the \"`committer`\" field.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:79
+#, no-wrap
+msgid "*`GIT_COMMITTER_EMAIL`* is the email address for the \"`committer`\" field.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:81
+#, no-wrap
+msgid "*`GIT_COMMITTER_DATE`* is used for the timestamp in the \"`committer`\" field.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:84
+#, no-wrap
+msgid ""
+"*`EMAIL`* is the fallback email address in case the `user.email` configuration value isn't set.\n"
+"If _this_ isn't set, Git falls back to the system user and host names.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:87
+#, no-wrap
+msgid "==== Networking\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:90
+#, no-wrap
+msgid ""
+"Git uses the `curl` library to do network operations over HTTP, so *`GIT_CURL_VERBOSE`* tells Git to emit all the messages generated by that library.\n"
+"This is similar to doing `curl -v` on the command line.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:93
+#, no-wrap
+msgid ""
+"*`GIT_SSL_NO_VERIFY`* tells Git not to verify SSL certificates.\n"
+"This can sometimes be necessary if you're using a self-signed certificate to serve Git repositories over HTTPS, or you're in the middle of setting up a Git server but haven't installed a full certificate yet.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:97
+#, no-wrap
+msgid ""
+"If the data rate of an HTTP operation is lower than *`GIT_HTTP_LOW_SPEED_LIMIT`* bytes per second for longer than *`GIT_HTTP_LOW_SPEED_TIME`* seconds, Git will abort that operation.\n"
+"These values override the `http.lowSpeedLimit` and `http.lowSpeedTime` configuration values.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:100
+#, no-wrap
+msgid ""
+"*`GIT_HTTP_USER_AGENT`* sets the user-agent string used by Git when communicating over HTTP.\n"
+"The default is a value like `git/2.0.0`.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:103
+#, no-wrap
+msgid "==== Diffing and Merging\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:106
+#, no-wrap
+msgid ""
+"*`GIT_DIFF_OPTS`* is a bit of a misnomer.\n"
+"The only valid values are `-u<n>` or `--unified=<n>`, which controls the number of context lines shown in a `git diff` command.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:109
+#, no-wrap
+msgid ""
+"*`GIT_EXTERNAL_DIFF`* is used as an override for the `diff.external` configuration value.\n"
+"If it's set, Git will invoke this program when `git diff` is invoked.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:112
+#, no-wrap
+msgid ""
+"*`GIT_DIFF_PATH_COUNTER`* and *`GIT_DIFF_PATH_TOTAL`* are useful from inside the program specified by `GIT_EXTERNAL_DIFF` or `diff.external`.\n"
+"The former represents which file in a series is being diffed (starting with 1), and the latter is the total number of files in the batch.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:115
+#, no-wrap
+msgid ""
+"*`GIT_MERGE_VERBOSITY`* controls the output for the recursive merge strategy.\n"
+"The allowed values are as follows:\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/10-git-internals/sections/environment.asc:122
+#, no-wrap
+msgid "0 outputs nothing, except possibly a single error message.\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/10-git-internals/sections/environment.asc:122
+#, no-wrap
+msgid "1 shows only conflicts.\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/10-git-internals/sections/environment.asc:122
+#, no-wrap
+msgid "2 also shows file changes.\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/10-git-internals/sections/environment.asc:122
+#, no-wrap
+msgid "3 shows when files are skipped because they haven't changed.\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/10-git-internals/sections/environment.asc:122
+#, no-wrap
+msgid "4 shows all paths as they are processed.\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/10-git-internals/sections/environment.asc:122
+#, no-wrap
+msgid "5 and above show detailed debugging information.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:124
+#, no-wrap
+msgid "The default value is 2.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:126
+#, no-wrap
+msgid "==== Debugging\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:130
+#, no-wrap
+msgid ""
+"Want to _really_ know what Git is up to?\n"
+"Git has a fairly complete set of traces embedded, and all you need to do is turn them on.\n"
+"The possible values of these variables are as follows:\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/10-git-internals/sections/environment.asc:133
+#, no-wrap
+msgid "\"`true`\", \"`1`\", or \"`2`\" â the trace category is written to stderr.\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/10-git-internals/sections/environment.asc:133
+#, no-wrap
+msgid "An absolute path starting with `/` â the trace output will be written to that file.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:136
+#, no-wrap
+msgid ""
+"*`GIT_TRACE`* controls general traces, which don't fit into any specific category.\n"
+"This includes the expansion of aliases, and delegation to other sub-programs.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:138
+#: book/10-git-internals/sections/environment.asc:152
+#: book/10-git-internals/sections/environment.asc:168
+#: book/10-git-internals/sections/environment.asc:182
+#: book/10-git-internals/sections/environment.asc:204
+#: book/10-git-internals/sections/environment.asc:236
+#: book/10-git-internals/sections/maintenance.asc:17
+#: book/10-git-internals/sections/maintenance.asc:29
+#: book/10-git-internals/sections/maintenance.asc:41
+#: book/10-git-internals/sections/maintenance.asc:69
+#: book/10-git-internals/sections/maintenance.asc:81
+#: book/10-git-internals/sections/maintenance.asc:101
+#: book/10-git-internals/sections/maintenance.asc:112
+#: book/10-git-internals/sections/maintenance.asc:135
+#: book/10-git-internals/sections/maintenance.asc:150
+#: book/10-git-internals/sections/maintenance.asc:161
+#: book/10-git-internals/sections/maintenance.asc:194
+#: book/10-git-internals/sections/maintenance.asc:207
+#: book/10-git-internals/sections/maintenance.asc:219
+#: book/10-git-internals/sections/maintenance.asc:231
+#: book/10-git-internals/sections/maintenance.asc:255
+#: book/10-git-internals/sections/maintenance.asc:270
+#: book/10-git-internals/sections/maintenance.asc:279
+#: book/10-git-internals/sections/maintenance.asc:289
+#: book/10-git-internals/sections/maintenance.asc:311
+#: book/10-git-internals/sections/maintenance.asc:325
+#: book/10-git-internals/sections/maintenance.asc:342
+#: book/10-git-internals/sections/objects.asc:15
+#: book/10-git-internals/sections/objects.asc:30
+#: book/10-git-internals/sections/objects.asc:44
+#: book/10-git-internals/sections/objects.asc:58
+#: book/10-git-internals/sections/objects.asc:69
+#: book/10-git-internals/sections/objects.asc:78
+#: book/10-git-internals/sections/objects.asc:87
+#: book/10-git-internals/sections/objects.asc:97
+#: book/10-git-internals/sections/objects.asc:106
+#: book/10-git-internals/sections/objects.asc:117
+#: book/10-git-internals/sections/objects.asc:132
+#: book/10-git-internals/sections/objects.asc:143
+#: book/10-git-internals/sections/objects.asc:172
+#: book/10-git-internals/sections/objects.asc:185
+#: book/10-git-internals/sections/objects.asc:195
+#: book/10-git-internals/sections/objects.asc:203
+#: book/10-git-internals/sections/objects.asc:214
+#: book/10-git-internals/sections/objects.asc:228
+#: book/10-git-internals/sections/objects.asc:255
+#: book/10-git-internals/sections/objects.asc:271
+#: book/10-git-internals/sections/objects.asc:285
+#: book/10-git-internals/sections/objects.asc:296
+#: book/10-git-internals/sections/objects.asc:334
+#: book/10-git-internals/sections/objects.asc:362
+#: book/10-git-internals/sections/objects.asc:372
+#: book/10-git-internals/sections/objects.asc:381
+#: book/10-git-internals/sections/objects.asc:394
+#: book/10-git-internals/sections/objects.asc:403
+#: book/10-git-internals/sections/objects.asc:416
+#: book/10-git-internals/sections/packfiles.asc:6
+#: book/10-git-internals/sections/packfiles.asc:26
+#: book/10-git-internals/sections/packfiles.asc:41
+#: book/10-git-internals/sections/packfiles.asc:51
+#: book/10-git-internals/sections/packfiles.asc:59
+#: book/10-git-internals/sections/packfiles.asc:69
+#: book/10-git-internals/sections/packfiles.asc:79
+#: book/10-git-internals/sections/packfiles.asc:94
+#: book/10-git-internals/sections/packfiles.asc:106
+#: book/10-git-internals/sections/packfiles.asc:130
+#: book/10-git-internals/sections/plumbing-porcelain.asc:18
+#: book/10-git-internals/sections/refs.asc:11
+#: book/10-git-internals/sections/refs.asc:22
+#: book/10-git-internals/sections/refs.asc:29
+#: book/10-git-internals/sections/refs.asc:39
+#: book/10-git-internals/sections/refs.asc:47
+#: book/10-git-internals/sections/refs.asc:54
+#: book/10-git-internals/sections/refs.asc:82
+#: book/10-git-internals/sections/refs.asc:90
+#: book/10-git-internals/sections/refs.asc:101
+#: book/10-git-internals/sections/refs.asc:109
+#: book/10-git-internals/sections/refs.asc:118
+#: book/10-git-internals/sections/refs.asc:134
+#: book/10-git-internals/sections/refs.asc:144
+#: book/10-git-internals/sections/refs.asc:151
+#: book/10-git-internals/sections/refs.asc:159
+#: book/10-git-internals/sections/refs.asc:175
+#: book/10-git-internals/sections/refs.asc:188
+#: book/10-git-internals/sections/refs.asc:202
+#: book/10-git-internals/sections/refspec.asc:8
+#: book/10-git-internals/sections/refspec.asc:28
+#: book/10-git-internals/sections/refspec.asc:48
+#: book/10-git-internals/sections/refspec.asc:56
+#: book/10-git-internals/sections/refspec.asc:107
+#: book/10-git-internals/sections/refspec.asc:134
+#: book/10-git-internals/sections/refspec.asc:143
+#: book/10-git-internals/sections/transfer-protocols.asc:21
+#: book/10-git-internals/sections/transfer-protocols.asc:57
+#: book/10-git-internals/sections/transfer-protocols.asc:145
+#: book/10-git-internals/sections/transfer-protocols.asc:227
+#, no-wrap
+msgid ""
+"[source,console]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:146
+#, no-wrap
+msgid ""
+"$ GIT_TRACE=true git lga\n"
+"20:12:49.877982 git.c:554               trace: exec: 'git-lga'\n"
+"20:12:49.878369 run-command.c:341       trace: run_command: 'git-lga'\n"
+"20:12:49.879529 git.c:282               trace: alias expansion: lga => 'log' '--graph' '--pretty=oneline' '--abbrev-commit' '--decorate' '--all'\n"
+"20:12:49.879885 git.c:349               trace: built-in: git 'log' '--graph' '--pretty=oneline' '--abbrev-commit' '--decorate' '--all'\n"
+"20:12:49.899217 run-command.c:341       trace: run_command: 'less'\n"
+"20:12:49.899675 run-command.c:192       trace: exec: 'less'\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:150
+#, no-wrap
+msgid ""
+"*`GIT_TRACE_PACK_ACCESS`* controls tracing of packfile access.\n"
+"The first field is the packfile being accessed, the second is the offset within that file:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:163
+#, no-wrap
+msgid ""
+"$ GIT_TRACE_PACK_ACCESS=true git status\n"
+"20:10:12.081397 sha1_file.c:2088        .git/objects/pack/pack-c3fa...291e.pack 12\n"
+"20:10:12.081886 sha1_file.c:2088        .git/objects/pack/pack-c3fa...291e.pack 34662\n"
+"20:10:12.082115 sha1_file.c:2088        .git/objects/pack/pack-c3fa...291e.pack 35175\n"
+"# [â¦]\n"
+"20:10:12.087398 sha1_file.c:2088        .git/objects/pack/pack-e80e...e3d2.pack 56914983\n"
+"20:10:12.087419 sha1_file.c:2088        .git/objects/pack/pack-e80e...e3d2.pack 14303666\n"
+"On branch master\n"
+"Your branch is up-to-date with 'origin/master'.\n"
+"nothing to commit, working directory clean\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:166
+#, no-wrap
+msgid "*`GIT_TRACE_PACKET`* enables packet-level tracing for network operations.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:176
+#, no-wrap
+msgid ""
+"$ GIT_TRACE_PACKET=true git ls-remote origin\n"
+"20:15:14.867043 pkt-line.c:46           packet:          git< # service=git-upload-pack\n"
+"20:15:14.867071 pkt-line.c:46           packet:          git< 0000\n"
+"20:15:14.867079 pkt-line.c:46           packet:          git< 97b8860c071898d9e162678ea1035a8ced2f8b1f HEAD\\0multi_ack thin-pack side-band side-band-64k ofs-delta shallow no-progress include-tag multi_ack_detailed no-done symref=HEAD:refs/heads/master agent=git/2.0.4\n"
+"20:15:14.867088 pkt-line.c:46           packet:          git< 0f20ae29889d61f2e93ae00fd34f1cdb53285702 refs/heads/ab/add-interactive-show-diff-func-name\n"
+"20:15:14.867094 pkt-line.c:46           packet:          git< 36dc827bc9d17f80ed4f326de21247a5d1341fbc refs/heads/ah/doc-gitk-config\n"
+"# [â¦]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:180
+#, no-wrap
+msgid ""
+"*`GIT_TRACE_PERFORMANCE`* controls logging of performance data.\n"
+"The output shows how long each particular `git` invocation takes.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:199
+#, no-wrap
+msgid ""
+"$ GIT_TRACE_PERFORMANCE=true git gc\n"
+"20:18:19.499676 trace.c:414             performance: 0.374835000 s: git command: 'git' 'pack-refs' '--all' '--prune'\n"
+"20:18:19.845585 trace.c:414             performance: 0.343020000 s: git command: 'git' 'reflog' 'expire' '--all'\n"
+"Counting objects: 170994, done.\n"
+"Delta compression using up to 8 threads.\n"
+"Compressing objects: 100% (43413/43413), done.\n"
+"Writing objects: 100% (170994/170994), done.\n"
+"Total 170994 (delta 126176), reused 170524 (delta 125706)\n"
+"20:18:23.567927 trace.c:414             performance: 3.715349000 s: git command: 'git' 'pack-objects' '--keep-true-parents' '--honor-pack-keep' '--non-empty' '--all' '--reflog' '--unpack-unreachable=2.weeks.ago' '--local' '--delta-base-offset' '.git/objects/pack/.tmp-49190-pack'\n"
+"20:18:23.584728 trace.c:414             performance: 0.000910000 s: git command: 'git' 'prune-packed'\n"
+"20:18:23.605218 trace.c:414             performance: 0.017972000 s: git command: 'git' 'update-server-info'\n"
+"20:18:23.606342 trace.c:414             performance: 3.756312000 s: git command: 'git' 'repack' '-d' '-l' '-A' '--unpack-unreachable=2.weeks.ago'\n"
+"Checking connectivity: 170994, done.\n"
+"20:18:25.225424 trace.c:414             performance: 1.616423000 s: git command: 'git' 'prune' '--expire' '2.weeks.ago'\n"
+"20:18:25.232403 trace.c:414             performance: 0.001051000 s: git command: 'git' 'rerere' 'gc'\n"
+"20:18:25.233159 trace.c:414             performance: 6.112217000 s: git command: 'git' 'gc'\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:202
+#, no-wrap
+msgid "*`GIT_TRACE_SETUP`* shows information about what Git is discovering about the repository and environment it's interacting with.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:213
+#, no-wrap
+msgid ""
+"$ GIT_TRACE_SETUP=true git status\n"
+"20:19:47.086765 trace.c:315             setup: git_dir: .git\n"
+"20:19:47.087184 trace.c:316             setup: worktree: /Users/ben/src/git\n"
+"20:19:47.087191 trace.c:317             setup: cwd: /Users/ben/src/git\n"
+"20:19:47.087194 trace.c:318             setup: prefix: (null)\n"
+"On branch master\n"
+"Your branch is up-to-date with 'origin/master'.\n"
+"nothing to commit, working directory clean\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:216
+#, no-wrap
+msgid "==== Miscellaneous\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:221
+#, no-wrap
+msgid ""
+"*`GIT_SSH`*, if specified, is a program that is invoked instead of `ssh` when Git tries to connect to an SSH host.\n"
+"It is invoked like `$GIT_SSH [username@]host [-p <port>] <command>`.\n"
+"Note that this isn't the easiest way to customize how `ssh` is invoked; it won't support extra command-line parameters, so you'd have to write a wrapper script and set `GIT_SSH` to point to it.\n"
+"It's probably easier just to use the `~/.ssh/config` file for that.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:224
+#, no-wrap
+msgid ""
+"*`GIT_ASKPASS`* is an override for the `core.askpass` configuration value.\n"
+"This is the program invoked whenever Git needs to ask the user for credentials, which can expect a text prompt as a command-line argument, and should return the answer on `stdout` (see <<ch07-git-tools#_credential_caching>> for more on this subsystem).\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:227
+#, no-wrap
+msgid ""
+"*`GIT_NAMESPACE`* controls access to namespaced refs, and is equivalent to the `--namespace` flag.\n"
+"This is mostly useful on the server side, where you may want to store multiple forks of a single repository in one repository, only keeping the refs separate.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:231
+#, no-wrap
+msgid ""
+"*`GIT_FLUSH`* can be used to force Git to use non-buffered I/O when writing incrementally to stdout.\n"
+"A value of 1 causes Git to flush more often, a value of 0 causes all output to be buffered.\n"
+"The default value (if this variable is not set) is to choose an appropriate buffering scheme depending on the activity and the output mode.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:234
+#, no-wrap
+msgid ""
+"*`GIT_REFLOG_ACTION`* lets you specify the descriptive text written to the reflog.\n"
+"Here's an example:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/environment.asc:241
+#, no-wrap
+msgid ""
+"$ GIT_REFLOG_ACTION=\"my action\" git commit --allow-empty -m 'My message'\n"
+"[master 9e3d55a] My message\n"
+"$ git reflog -1\n"
+"9e3d55a HEAD@{0}: my action: My message\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:2
+#, no-wrap
+msgid "=== Maintenance and Data Recovery\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:5
+#, no-wrap
+msgid ""
+"Occasionally, you may have to do some cleanup â make a repository more compact, clean up an imported repository, or recover lost work.\n"
+"This section will cover some of these scenarios.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:8
+#, no-wrap
+msgid ""
+"[[_git_gc]]\n"
+"==== Maintenance\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:13
+#, no-wrap
+msgid ""
+"Occasionally, Git automatically runs a command called \"`auto gc`\".\n"
+"Most of the time, this command does nothing.\n"
+"However, if there are too many loose objects (objects not in a packfile) or too many packfiles, Git launches a full-fledged `git gc` command.\n"
+"The \"`gc`\" stands for garbage collect, and the command does a number of things: it gathers up all the loose objects and places them in packfiles, it consolidates packfiles into one big packfile, and it removes objects that aren't reachable from any commit and are a few months old.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:15
+#, no-wrap
+msgid "You can run auto gc manually as follows:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:19
+#, no-wrap
+msgid ""
+"$ git gc --auto\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:24
+#, no-wrap
+msgid ""
+"Again, this generally does nothing.\n"
+"You must have around 7,000 loose objects or more than 50 packfiles for Git to fire up a real gc command.\n"
+"You can modify these limits with the `gc.auto` and `gc.autopacklimit` config settings, respectively.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:27
+#, no-wrap
+msgid ""
+"The other thing `gc` will do is pack up your references into a single file.\n"
+"Suppose your repository contains the following branches and tags:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:35
+#, no-wrap
+msgid ""
+"$ find .git/refs -type f\n"
+".git/refs/heads/experiment\n"
+".git/refs/heads/master\n"
+".git/refs/tags/v1.0\n"
+".git/refs/tags/v1.1\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:39
+#, no-wrap
+msgid ""
+"If you run `git gc`, you'll no longer have these files in the `refs` directory.\n"
+"Git will move them for the sake of efficiency into a file named `.git/packed-refs` that looks like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:49
+#, no-wrap
+msgid ""
+"$ cat .git/packed-refs\n"
+"# pack-refs with: peeled fully-peeled\n"
+"cac0cab538b970a37ea1e769cbbde608743bc96d refs/heads/experiment\n"
+"ab1afef80fac8e34258ff41fc1b867c702daa24b refs/heads/master\n"
+"cac0cab538b970a37ea1e769cbbde608743bc96d refs/tags/v1.0\n"
+"9585191f37f7b0fb9444f35a9bf50de191beadc2 refs/tags/v1.1\n"
+"^1a410efbd13591db07496601ebc7a059dd55cfe9\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:54
+#, no-wrap
+msgid ""
+"If you update a reference, Git doesn't edit this file but instead writes a new file to `refs/heads`.\n"
+"To get the appropriate SHA-1 for a given reference, Git checks for that reference in the `refs` directory and then checks the `packed-refs` file as a fallback.\n"
+"So if you can't find a reference in the `refs` directory, it's probably in your `packed-refs` file.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:57
+#, no-wrap
+msgid ""
+"Notice the last line of the file, which begins with a `^`.\n"
+"This means the tag directly above is an annotated tag and that line is the commit that the annotated tag points to.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:60
+#, no-wrap
+msgid ""
+"[[_data_recovery]]\n"
+"==== Data Recovery\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:64
+#, no-wrap
+msgid ""
+"At some point in your Git journey, you may accidentally lose a commit.\n"
+"Generally, this happens because you force-delete a branch that had work on it, and it turns out you wanted the branch after all; or you hard-reset a branch, thus abandoning commits that you wanted something from.\n"
+"Assuming this happens, how can you get your commits back?\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:67
+#, no-wrap
+msgid ""
+"Here's an example that hard-resets the `master` branch in your test repository to an older commit and then recovers the lost commits.\n"
+"First, let's review where your repository is at this point:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:76
+#, no-wrap
+msgid ""
+"$ git log --pretty=oneline\n"
+"ab1afef80fac8e34258ff41fc1b867c702daa24b Modify repo.rb a bit\n"
+"484a59275031909e19aadb7c92262719cfcdf19a Create repo.rb\n"
+"1a410efbd13591db07496601ebc7a059dd55cfe9 Third commit\n"
+"cac0cab538b970a37ea1e769cbbde608743bc96d Second commit\n"
+"fdf4fc3344e67ab068f836878b6c4951e3b15f3d First commit\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:79
+#, no-wrap
+msgid "Now, move the `master` branch back to the middle commit:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:88
+#, no-wrap
+msgid ""
+"$ git reset --hard 1a410efbd13591db07496601ebc7a059dd55cfe9\n"
+"HEAD is now at 1a410ef Third commit\n"
+"$ git log --pretty=oneline\n"
+"1a410efbd13591db07496601ebc7a059dd55cfe9 Third commit\n"
+"cac0cab538b970a37ea1e769cbbde608743bc96d Second commit\n"
+"fdf4fc3344e67ab068f836878b6c4951e3b15f3d First commit\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:93
+#, no-wrap
+msgid ""
+"You've effectively lost the top two commits â you have no branch from which those commits are reachable.\n"
+"You need to find the latest commit SHA-1 and then add a branch that points to it.\n"
+"The trick is finding that latest commit SHA-1 â it's not like you've memorized it, right?\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:99
+#, no-wrap
+msgid ""
+"Often, the quickest way is to use a tool called `git reflog`.\n"
+"As you're working, Git silently records what your HEAD is every time you change it.\n"
+"Each time you commit or change branches, the reflog is updated.\n"
+"The reflog is also updated by the `git update-ref` command, which is another reason to use it instead of just writing the SHA-1 value to your ref files, as we covered in <<ch10-git-internals#_git_refs>>.\n"
+"You can see where you've been at any time by running `git reflog`:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:106
+#, no-wrap
+msgid ""
+"$ git reflog\n"
+"1a410ef HEAD@{0}: reset: moving to 1a410ef\n"
+"ab1afef HEAD@{1}: commit: Modify repo.rb a bit\n"
+"484a592 HEAD@{2}: commit: Create repo.rb\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:110
+#, no-wrap
+msgid ""
+"Here we can see the two commits that we have had checked out, however there is not much information here.\n"
+"To see the same information in a much more useful way, we can run `git log -g`, which will give you a normal log output for your reflog.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:119
+#, no-wrap
+msgid ""
+"$ git log -g\n"
+"commit 1a410efbd13591db07496601ebc7a059dd55cfe9\n"
+"Reflog: HEAD@{0} (Scott Chacon <schacon@gmail.com>)\n"
+"Reflog message: updating HEAD\n"
+"Author: Scott Chacon <schacon@gmail.com>\n"
+"Date:   Fri May 22 18:22:37 2009 -0700\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:121
+#, no-wrap
+msgid "\t\tThird commit\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:127
+#, no-wrap
+msgid ""
+"commit ab1afef80fac8e34258ff41fc1b867c702daa24b\n"
+"Reflog: HEAD@{1} (Scott Chacon <schacon@gmail.com>)\n"
+"Reflog message: updating HEAD\n"
+"Author: Scott Chacon <schacon@gmail.com>\n"
+"Date:   Fri May 22 18:15:24 2009 -0700\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:129
+#, no-wrap
+msgid ""
+"       Modify repo.rb a bit\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:133
+#, no-wrap
+msgid ""
+"It looks like the bottom commit is the one you lost, so you can recover it by creating a new branch at that commit.\n"
+"For example, you can start a branch named `recover-branch` at that commit (ab1afef):\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:143
+#, no-wrap
+msgid ""
+"$ git branch recover-branch ab1afef\n"
+"$ git log --pretty=oneline recover-branch\n"
+"ab1afef80fac8e34258ff41fc1b867c702daa24b Modify repo.rb a bit\n"
+"484a59275031909e19aadb7c92262719cfcdf19a Create repo.rb\n"
+"1a410efbd13591db07496601ebc7a059dd55cfe9 Third commit\n"
+"cac0cab538b970a37ea1e769cbbde608743bc96d Second commit\n"
+"fdf4fc3344e67ab068f836878b6c4951e3b15f3d First commit\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:148
+#, no-wrap
+msgid ""
+"Cool â now you have a branch named `recover-branch` that is where your `master` branch used to be, making the first two commits reachable again.\n"
+"Next, suppose your loss was for some reason not in the reflog â you can simulate that by removing `recover-branch` and deleting the reflog.\n"
+"Now the first two commits aren't reachable by anything:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:153
+#, no-wrap
+msgid ""
+"$ git branch -D recover-branch\n"
+"$ rm -Rf .git/logs/\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:159
+#, no-wrap
+msgid ""
+"Because the reflog data is kept in the `.git/logs/` directory, you effectively have no reflog.\n"
+"How can you recover that commit at this point?\n"
+"One way is to use the `git fsck` utility, which checks your database for integrity.\n"
+"If you run it with the `--full` option, it shows you all objects that aren't pointed to by another object:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:169
+#, no-wrap
+msgid ""
+"$ git fsck --full\n"
+"Checking object directories: 100% (256/256), done.\n"
+"Checking objects: 100% (18/18), done.\n"
+"dangling blob d670460b4b4aece5915caf5c68d12f560a9fe3e4\n"
+"dangling commit ab1afef80fac8e34258ff41fc1b867c702daa24b\n"
+"dangling tree aea790b9a58f6cf6f2804eeac9f0abbe9631e4c9\n"
+"dangling blob 7108f7ecb345ee9d0084193f147cdad4d2998293\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:173
+#, no-wrap
+msgid ""
+"In this case, you can see your missing commit after the string \"`dangling commit`\".\n"
+"You can recover it the same way, by adding a branch that points to that SHA-1.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:176
+#, no-wrap
+msgid ""
+"[[_removing_objects]]\n"
+"==== Removing Objects\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:181
+#, no-wrap
+msgid ""
+"There are a lot of great things about Git, but one feature that can cause issues is the fact that a `git clone` downloads the entire history of the project, including every version of every file.\n"
+"This is fine if the whole thing is source code, because Git is highly optimized to compress that data efficiently.\n"
+"However, if someone at any point in the history of your project added a single huge file, every clone for all time will be forced to download that large file, even if it was removed from the project in the very next commit.\n"
+"Because it's reachable from the history, it will always be there.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:185
+#, no-wrap
+msgid ""
+"This can be a huge problem when you're converting Subversion or Perforce repositories into Git.\n"
+"Because you don't download the whole history in those systems, this type of addition carries few consequences.\n"
+"If you did an import from another system or otherwise find that your repository is much larger than it should be, here is how you can find and remove large objects.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:189
+#, no-wrap
+msgid ""
+"*Be warned: this technique is destructive to your commit history.*\n"
+"It rewrites every commit object since the earliest tree you have to modify to remove a large file reference.\n"
+"If you do this immediately after an import, before anyone has started to base work on the commit, you're fine â otherwise, you have to notify all contributors that they must rebase their work onto your new commits.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:192
+#, no-wrap
+msgid ""
+"To demonstrate, you'll add a large file into your test repository, remove it in the next commit, find it, and remove it permanently from the repository.\n"
+"First, add a large object to your history:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:201
+#, no-wrap
+msgid ""
+"$ curl -L https://www.kernel.org/pub/software/scm/git/git-2.1.0.tar.gz > git.tgz\n"
+"$ git add git.tgz\n"
+"$ git commit -m 'Add git tarball'\n"
+"[master 7b30847] Add git tarball\n"
+" 1 file changed, 0 insertions(+), 0 deletions(-)\n"
+" create mode 100644 git.tgz\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:205
+#, no-wrap
+msgid ""
+"Oops â you didn't want to add a huge tarball to your project.\n"
+"Better get rid of it:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:214
+#, no-wrap
+msgid ""
+"$ git rm git.tgz\n"
+"rm 'git.tgz'\n"
+"$ git commit -m 'Oops - remove large tarball'\n"
+"[master dadf725] Oops - remove large tarball\n"
+" 1 file changed, 0 insertions(+), 0 deletions(-)\n"
+" delete mode 100644 git.tgz\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:217
+#, no-wrap
+msgid "Now, `gc` your database and see how much space you're using:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:226
+#, no-wrap
+msgid ""
+"$ git gc\n"
+"Counting objects: 17, done.\n"
+"Delta compression using up to 8 threads.\n"
+"Compressing objects: 100% (13/13), done.\n"
+"Writing objects: 100% (17/17), done.\n"
+"Total 17 (delta 1), reused 10 (delta 0)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:229
+#, no-wrap
+msgid "You can run the `count-objects` command to quickly see how much space you're using:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:241
+#, no-wrap
+msgid ""
+"$ git count-objects -v\n"
+"count: 7\n"
+"size: 32\n"
+"in-pack: 17\n"
+"packs: 1\n"
+"size-pack: 4868\n"
+"prune-packable: 0\n"
+"garbage: 0\n"
+"size-garbage: 0\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:247
+#, no-wrap
+msgid ""
+"The `size-pack` entry is the size of your packfiles in kilobytes, so you're using almost 5MB.\n"
+"Before the last commit, you were using closer to 2K â clearly, removing the file from the previous commit didn't remove it from your history.\n"
+"Every time anyone clones this repository, they will have to clone all 5MB just to get this tiny project, because you accidentally added a big file.\n"
+"Let's get rid of it.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:253
+#, no-wrap
+msgid ""
+"First you have to find it.\n"
+"In this case, you already know what file it is.\n"
+"But suppose you didn't; how would you identify what file or files were taking up so much space?\n"
+"If you run `git gc`, all the objects are in a packfile; you can identify the big objects by running another plumbing command called `git verify-pack` and sorting on the third field in the output, which is file size.\n"
+"You can also pipe it through the `tail` command because you're only interested in the last few largest files:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:262
+#, no-wrap
+msgid ""
+"$ git verify-pack -v .git/objects/pack/pack-29â¦69.idx \\\n"
+"  | sort -k 3 -n \\\n"
+"  | tail -3\n"
+"dadf7258d699da2c8d89b09ef6670edb7d5f91b4 commit 229 159 12\n"
+"033b4468fa6b2a9547a70d88d1bbe8bf3f9ed0d5 blob   22044 5792 4977696\n"
+"82c99a3e86bb1267b236a4b6eff7868d97489af1 blob   4975916 4976258 1438\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:268
+#, no-wrap
+msgid ""
+"The big object is at the bottom: 5MB.\n"
+"To find out what file it is, you'll use the `rev-list` command, which you used briefly in <<ch08-customizing-git#_enforcing_commit_message_format>>.\n"
+"If you pass `--objects` to `rev-list`, it lists all the commit SHA-1s and also the blob SHA-1s with the file paths associated with them.\n"
+"You can use this to find your blob's name:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:273
+#, no-wrap
+msgid ""
+"$ git rev-list --objects --all | grep 82c99a3\n"
+"82c99a3e86bb1267b236a4b6eff7868d97489af1 git.tgz\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:277
+#, no-wrap
+msgid ""
+"Now, you need to remove this file from all trees in your past.\n"
+"You can easily see what commits modified this file:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:283
+#, no-wrap
+msgid ""
+"$ git log --oneline --branches -- git.tgz\n"
+"dadf725 Oops - remove large tarball\n"
+"7b30847 Add git tarball\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:287
+#, no-wrap
+msgid ""
+"You must rewrite all the commits downstream from `7b30847` to fully remove this file from your Git history.\n"
+"To do so, you use `filter-branch`, which you used in <<ch07-git-tools#_rewriting_history>>:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:295
+#, no-wrap
+msgid ""
+"$ git filter-branch --index-filter \\\n"
+"  'git rm --ignore-unmatch --cached git.tgz' -- 7b30847^..\n"
+"Rewrite 7b30847d080183a1ab7d18fb202473b3096e9f34 (1/2)rm 'git.tgz'\n"
+"Rewrite dadf7258d699da2c8d89b09ef6670edb7d5f91b4 (2/2)\n"
+"Ref 'refs/heads/master' was rewritten\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:298
+#, no-wrap
+msgid "The `--index-filter` option is similar to the `--tree-filter` option used in <<ch07-git-tools#_rewriting_history>>, except that instead of passing a command that modifies files checked out on disk, you're modifying your staging area or index each time.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:305
+#, no-wrap
+msgid ""
+"Rather than remove a specific file with something like `rm file`, you have to remove it with `git rm --cached` â you must remove it from the index, not from disk.\n"
+"The reason to do it this way is speed â because Git doesn't have to check out each revision to disk before running your filter, the process can be much, much faster.\n"
+"You can accomplish the same task with `--tree-filter` if you want.\n"
+"The `--ignore-unmatch` option to `git rm` tells it not to error out if the pattern you're trying to remove isn't there.\n"
+"Finally, you ask `filter-branch` to rewrite your history only from the `7b30847` commit up, because you know that is where this problem started.\n"
+"Otherwise, it will start from the beginning and will unnecessarily take longer.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:309
+#, no-wrap
+msgid ""
+"Your history no longer contains a reference to that file.\n"
+"However, your reflog and a new set of refs that Git added when you did the `filter-branch` under `.git/refs/original` still do, so you have to remove them and then repack the database.\n"
+"You need to get rid of anything that has a pointer to those old commits before you repack:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:320
+#, no-wrap
+msgid ""
+"$ rm -Rf .git/refs/original\n"
+"$ rm -Rf .git/logs/\n"
+"$ git gc\n"
+"Counting objects: 15, done.\n"
+"Delta compression using up to 8 threads.\n"
+"Compressing objects: 100% (11/11), done.\n"
+"Writing objects: 100% (15/15), done.\n"
+"Total 15 (delta 1), reused 12 (delta 0)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:323
+#, no-wrap
+msgid "Let's see how much space you saved.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:335
+#, no-wrap
+msgid ""
+"$ git count-objects -v\n"
+"count: 11\n"
+"size: 4904\n"
+"in-pack: 15\n"
+"packs: 1\n"
+"size-pack: 8\n"
+"prune-packable: 0\n"
+"garbage: 0\n"
+"size-garbage: 0\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:340
+#, no-wrap
+msgid ""
+"The packed repository size is down to 8K, which is much better than 5MB.\n"
+"You can see from the size value that the big object is still in your loose objects, so it's not gone; but it won't be transferred on a push or subsequent clone, which is what is important.\n"
+"If you really wanted to, you could remove the object completely by running `git prune` with the `--expire` option:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/maintenance.asc:353
+#, no-wrap
+msgid ""
+"$ git prune --expire now\n"
+"$ git count-objects -v\n"
+"count: 0\n"
+"size: 0\n"
+"in-pack: 15\n"
+"packs: 1\n"
+"size-pack: 8\n"
+"prune-packable: 0\n"
+"garbage: 0\n"
+"size-garbage: 0\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:3
+#, no-wrap
+msgid ""
+"[[_objects]]\n"
+"=== Git Objects\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:9
+#, no-wrap
+msgid ""
+"Git is a content-addressable filesystem.\n"
+"Great.\n"
+"What does that mean?\n"
+"It means that at the core of Git is a simple key-value data store.\n"
+"What this means is that you can insert any kind of content into a Git repository, for which Git will hand you back a unique key you can use later to retrieve that content.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:11
+#, no-wrap
+msgid "As a demonstration, let's look at the plumbing command `git hash-object`, which takes some data, stores it in your `.git/objects` directory (the _object database_), and gives you back the unique key that now refers to that data object.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:13
+#, no-wrap
+msgid "First, you initialize a new Git repository and verify that there is (predictably) nothing in the `objects` directory:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:24
+#, no-wrap
+msgid ""
+"$ git init test\n"
+"Initialized empty Git repository in /tmp/test/.git/\n"
+"$ cd test\n"
+"$ find .git/objects\n"
+".git/objects\n"
+".git/objects/info\n"
+".git/objects/pack\n"
+"$ find .git/objects -type f\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:28
+#, no-wrap
+msgid ""
+"Git has initialized the `objects` directory and created `pack` and `info` subdirectories in it, but there are no regular files.\n"
+"Now, let's use `git hash-object` to create a new data object and manually store it in your new Git database:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:33
+#, no-wrap
+msgid ""
+"$ echo 'test content' | git hash-object -w --stdin\n"
+"d670460b4b4aece5915caf5c68d12f560a9fe3e4\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:38
+#, no-wrap
+msgid ""
+"In its simplest form, `git hash-object` would take the content you handed to it and merely return the unique key that _would_ be used to store it in your Git database.\n"
+"The `-w` option then tells the command to not simply return the key, but to write that object to the database.\n"
+"Finally, the `--stdin` option tells `git hash-object` to get the content to be processed from stdin; otherwise, the command would expect a filename argument at the end of the command containing the content to be used.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:42
+#, no-wrap
+msgid ""
+"The output from the above command is a 40-character checksum hash.\n"
+"This is the SHA-1 hash -- a checksum of the content you're storing plus a header, which you'll learn about in a bit.\n"
+"Now you can see how Git has stored your data:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:47
+#, no-wrap
+msgid ""
+"$ find .git/objects -type f\n"
+".git/objects/d6/70460b4b4aece5915caf5c68d12f560a9fe3e4\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:52
+#, no-wrap
+msgid ""
+"If you again examine your `objects` directory, you can see that it now contains a file for that new content.\n"
+"This is how Git stores the content initially -- as a single file per piece of content, named with the SHA-1 checksum of the content and its header.\n"
+"The subdirectory is named with the first 2 characters of the SHA-1, and the filename is the remaining 38 characters.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:56
+#, no-wrap
+msgid ""
+"Once you have content in your object database, you can examine that content with the `git cat-file` command.\n"
+"This command is sort of a Swiss army knife for inspecting Git objects.\n"
+"Passing `-p` to `cat-file` instructs the command to first figure out the type of content, then display it appropriately:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:61
+#, no-wrap
+msgid ""
+"$ git cat-file -p d670460b4b4aece5915caf5c68d12f560a9fe3e4\n"
+"test content\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:67
+#, no-wrap
+msgid ""
+"Now, you can add content to Git and pull it back out again.\n"
+"You can also do this with content in files.\n"
+"For example, you can do some simple version control on a file.\n"
+"First, create a new file and save its contents in your database:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:73
+#, no-wrap
+msgid ""
+"$ echo 'version 1' > test.txt\n"
+"$ git hash-object -w test.txt\n"
+"83baae61804e65cc73a7201a7252750c76066a30\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:76
+#, no-wrap
+msgid "Then, write some new content to the file, and save it again:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:82
+#, no-wrap
+msgid ""
+"$ echo 'version 2' > test.txt\n"
+"$ git hash-object -w test.txt\n"
+"1f7a7a472abf3dd9643fd615f6da379c4acb3e3a\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:85
+#, no-wrap
+msgid "Your object database now contains both versions of this new file (as well as the first content you stored there):\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:92
+#, no-wrap
+msgid ""
+"$ find .git/objects -type f\n"
+".git/objects/1f/7a7a472abf3dd9643fd615f6da379c4acb3e3a\n"
+".git/objects/83/baae61804e65cc73a7201a7252750c76066a30\n"
+".git/objects/d6/70460b4b4aece5915caf5c68d12f560a9fe3e4\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:95
+#, no-wrap
+msgid "At this point, you can delete your local copy of that `test.txt` file, then use Git to retrieve, from the object database, either the first version you saved:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:101
+#, no-wrap
+msgid ""
+"$ git cat-file -p 83baae61804e65cc73a7201a7252750c76066a30 > test.txt\n"
+"$ cat test.txt\n"
+"version 1\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:104
+#, no-wrap
+msgid "or the second version:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:110
+#, no-wrap
+msgid ""
+"$ git cat-file -p 1f7a7a472abf3dd9643fd615f6da379c4acb3e3a > test.txt\n"
+"$ cat test.txt\n"
+"version 2\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:115
+#, no-wrap
+msgid ""
+"But remembering the SHA-1 key for each version of your file isn't practical; plus, you aren't storing the filename in your system -- just the content.\n"
+"This object type is called a _blob_.\n"
+"You can have Git tell you the object type of any object in Git, given its SHA-1 key, with `git cat-file -t`:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:120
+#, no-wrap
+msgid ""
+"$ git cat-file -t 1f7a7a472abf3dd9643fd615f6da379c4acb3e3a\n"
+"blob\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:124
+#, no-wrap
+msgid ""
+"[[_tree_objects]]\n"
+"==== Tree Objects\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:130
+#, no-wrap
+msgid ""
+"The next type of Git object we'll examine is the _tree_, which solves the problem of storing the filename and also allows you to store a group of files together.\n"
+"Git stores content in a manner similar to a UNIX filesystem, but a bit simplified.\n"
+"All the content is stored as tree and blob objects, with trees corresponding to UNIX directory entries and blobs corresponding more or less to inodes or file contents.\n"
+"A single tree object contains one or more entries, each of which is the SHA-1 hash of a blob or subtree with its associated mode, type, and filename.\n"
+"For example, let's say you have a project where the most-recent tree looks something like:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:137
+#, no-wrap
+msgid ""
+"$ git cat-file -p master^{tree}\n"
+"100644 blob a906cb2a4a904a152e80877d4088654daad0c859      README\n"
+"100644 blob 8f94139338f9404f26296befa88755fc2598c289      Rakefile\n"
+"040000 tree 99f1a6d12cb4b6f19c8655fca46c3ecf317074e0      lib\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:141
+#, no-wrap
+msgid ""
+"The `master^{tree}` syntax specifies the tree object that is pointed to by the last commit on your `master` branch.\n"
+"Notice that the `lib` subdirectory isn't a blob but a pointer to another tree:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:146
+#, no-wrap
+msgid ""
+"$ git cat-file -p 99f1a6d12cb4b6f19c8655fca46c3ecf317074e0\n"
+"100644 blob 47c6340d6459e05787f644c2447d2595f5d3a54b      simplegit.rb\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:149
+#: book/10-git-internals/sections/objects.asc:262
+#: book/10-git-internals/sections/refspec.asc:124
+#: book/10-git-internals/sections/transfer-protocols.asc:12
+#, no-wrap
+msgid ""
+"[NOTE]\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:151
+#, no-wrap
+msgid "Depending on what shell you use, you may encounter errors when using the `master^{tree}` syntax.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:154
+#, no-wrap
+msgid ""
+"In CMD on Windows, the `^` character is used for escaping, so you have to double it to avoid this: `git cat-file -p master^^{tree}`.\n"
+"When using PowerShell, parameters using {} characters have to be quoted to avoid the parameter being parsed incorrectly: `git cat-file -p 'master^{tree}'`.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:156
+#, no-wrap
+msgid ""
+"If you're using ZSH, the `^` character is used for globbing, so you have to enclose the whole expression in quotes: `git cat-file -p \"master^{tree}\"`.\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:159
+#, no-wrap
+msgid "Conceptually, the data that Git is storing looks something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:162
+#, no-wrap
+msgid ""
+".Simple version of the Git data model\n"
+"image::images/data-model-1.png[Simple version of the Git data model]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:170
+#, no-wrap
+msgid ""
+"You can fairly easily create your own tree.\n"
+"Git normally creates a tree by taking the state of your staging area or index and writing a series of tree objects from it.\n"
+"So, to create a tree object, you first have to set up an index by staging some files.\n"
+"To create an index with a single entry -- the first version of your `test.txt` file -- you can use the plumbing command `git update-index`.\n"
+"You use this command to artificially add the earlier version of the `test.txt` file to a new staging area.\n"
+"You must pass it the `--add` option because the file doesn't yet exist in your staging area (you don't even have a staging area set up yet) and `--cacheinfo` because the file you're adding isn't in your directory but is in your database.\n"
+"Then, you specify the mode, SHA-1, and filename:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:175
+#, no-wrap
+msgid ""
+"$ git update-index --add --cacheinfo 100644 \\\n"
+"  83baae61804e65cc73a7201a7252750c76066a30 test.txt\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:180
+#, no-wrap
+msgid ""
+"In this case, you're specifying a mode of `100644`, which means it's a normal file.\n"
+"Other options are `100755`, which means it's an executable file; and `120000`, which specifies a symbolic link.\n"
+"The mode is taken from normal UNIX modes but is much less flexible -- these three modes are the only ones that are valid for files (blobs) in Git (although other modes are used for directories and submodules).\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:183
+#, no-wrap
+msgid ""
+"Now, you can use `git write-tree` to write the staging area out to a tree object.\n"
+"No `-w` option is needed -- calling this command automatically creates a tree object from the state of the index if that tree doesn't yet exist:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:190
+#, no-wrap
+msgid ""
+"$ git write-tree\n"
+"d8329fc1cc938780ffdd9f94e0d364e0ea74f579\n"
+"$ git cat-file -p d8329fc1cc938780ffdd9f94e0d364e0ea74f579\n"
+"100644 blob 83baae61804e65cc73a7201a7252750c76066a30      test.txt\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:193
+#, no-wrap
+msgid "You can also verify that this is a tree object using the same `git cat-file` command you saw earlier:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:198
+#, no-wrap
+msgid ""
+"$ git cat-file -t d8329fc1cc938780ffdd9f94e0d364e0ea74f579\n"
+"tree\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:201
+#, no-wrap
+msgid "You'll now create a new tree with the second version of `test.txt` and a new file as well:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:208
+#, no-wrap
+msgid ""
+"$ echo 'new file' > new.txt\n"
+"$ git update-index --add --cacheinfo 100644 \\\n"
+"  1f7a7a472abf3dd9643fd615f6da379c4acb3e3a test.txt\n"
+"$ git update-index --add new.txt\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:212
+#, no-wrap
+msgid ""
+"Your staging area now has the new version of `test.txt` as well as the new file `new.txt`.\n"
+"Write out that tree (recording the state of the staging area or index to a tree object) and see what it looks like:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:220
+#, no-wrap
+msgid ""
+"$ git write-tree\n"
+"0155eb4229851634a0f03eb265b69f5a2d56f341\n"
+"$ git cat-file -p 0155eb4229851634a0f03eb265b69f5a2d56f341\n"
+"100644 blob fa49b077972391ad58037050f2a75f74e3671e92      new.txt\n"
+"100644 blob 1f7a7a472abf3dd9643fd615f6da379c4acb3e3a      test.txt\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:226
+#, no-wrap
+msgid ""
+"Notice that this tree has both file entries and also that the `test.txt` SHA-1 is the \"`version 2`\" SHA-1 from earlier (`1f7a7a`).\n"
+"Just for fun, you'll add the first tree as a subdirectory into this one.\n"
+"You can read trees into your staging area by calling `git read-tree`.\n"
+"In this case, you can read an existing tree into your staging area as a subtree by using the `--prefix` option with this command:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:236
+#, no-wrap
+msgid ""
+"$ git read-tree --prefix=bak d8329fc1cc938780ffdd9f94e0d364e0ea74f579\n"
+"$ git write-tree\n"
+"3c4e9cd789d88d8d89c1073707c3585e41b0e614\n"
+"$ git cat-file -p 3c4e9cd789d88d8d89c1073707c3585e41b0e614\n"
+"040000 tree d8329fc1cc938780ffdd9f94e0d364e0ea74f579      bak\n"
+"100644 blob fa49b077972391ad58037050f2a75f74e3671e92      new.txt\n"
+"100644 blob 1f7a7a472abf3dd9643fd615f6da379c4acb3e3a      test.txt\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:240
+#, no-wrap
+msgid ""
+"If you created a working directory from the new tree you just wrote, you would get the two files in the top level of the working directory and a subdirectory named `bak` that contained the first version of the `test.txt` file.\n"
+"You can think of the data that Git contains for these structures as being like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:243
+#, no-wrap
+msgid ""
+".The content structure of your current Git data\n"
+"image::images/data-model-2.png[The content structure of your current Git data]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:246
+#, no-wrap
+msgid ""
+"[[_git_commit_objects]]\n"
+"==== Commit Objects\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:250
+#, no-wrap
+msgid ""
+"If you've done all of the above, you now have three trees that represent the different snapshots of your project that you want to track, but the earlier problem remains: you must remember all three SHA-1 values in order to recall the snapshots.\n"
+"You also don't have any information about who saved the snapshots, when they were saved, or why they were saved.\n"
+"This is the basic information that the commit object stores for you.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:253
+#, no-wrap
+msgid ""
+"To create a commit object, you call `commit-tree` and specify a single tree SHA-1 and which commit objects, if any, directly preceded it.\n"
+"Start with the first tree you wrote:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:258
+#, no-wrap
+msgid ""
+"$ echo 'First commit' | git commit-tree d8329f\n"
+"fdf4fc3344e67ab068f836878b6c4951e3b15f3d\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:266
+#, no-wrap
+msgid ""
+"You will get a different hash value because of different creation time and author data.\n"
+"Moreover, while in principle any commit object can be reproduced precisely given that data, historical details of this book's construction mean that the printed commit hashes might not correspond to the given commits.\n"
+"Replace commit and tag hashes with your own checksums further in this chapter.\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:269
+#, no-wrap
+msgid "Now you can look at your new commit object with `git cat-file`:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:276
+#, no-wrap
+msgid ""
+"$ git cat-file -p fdf4fc3\n"
+"tree d8329fc1cc938780ffdd9f94e0d364e0ea74f579\n"
+"author Scott Chacon <schacon@gmail.com> 1243040974 -0700\n"
+"committer Scott Chacon <schacon@gmail.com> 1243040974 -0700\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:278
+#, no-wrap
+msgid ""
+"First commit\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:281
+#, no-wrap
+msgid "The format for a commit object is simple: it specifies the top-level tree for the snapshot of the project at that point; the parent commits if any (the commit object described above does not have any parents); the author/committer information (which uses your `user.name` and `user.email` configuration settings and a timestamp); a blank line, and then the commit message.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:283
+#, no-wrap
+msgid "Next, you'll write the other two commit objects, each referencing the commit that came directly before it:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:290
+#, no-wrap
+msgid ""
+"$ echo 'Second commit' | git commit-tree 0155eb -p fdf4fc3\n"
+"cac0cab538b970a37ea1e769cbbde608743bc96d\n"
+"$ echo 'Third commit'  | git commit-tree 3c4e9c -p cac0cab\n"
+"1a410efbd13591db07496601ebc7a059dd55cfe9\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:294
+#, no-wrap
+msgid ""
+"Each of the three commit objects points to one of the three snapshot trees you created.\n"
+"Oddly enough, you have a real Git history now that you can view with the `git log` command, if you run it on the last commit SHA-1:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:301
+#, no-wrap
+msgid ""
+"$ git log --stat 1a410e\n"
+"commit 1a410efbd13591db07496601ebc7a059dd55cfe9\n"
+"Author: Scott Chacon <schacon@gmail.com>\n"
+"Date:   Fri May 22 18:15:24 2009 -0700\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:303
+#, no-wrap
+msgid "\tThird commit\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:306
+#, no-wrap
+msgid ""
+" bak/test.txt | 1 +\n"
+" 1 file changed, 1 insertion(+)\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:310
+#, no-wrap
+msgid ""
+"commit cac0cab538b970a37ea1e769cbbde608743bc96d\n"
+"Author: Scott Chacon <schacon@gmail.com>\n"
+"Date:   Fri May 22 18:14:29 2009 -0700\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:312
+#, no-wrap
+msgid "\tSecond commit\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:316
+#, no-wrap
+msgid ""
+" new.txt  | 1 +\n"
+" test.txt | 2 +-\n"
+" 2 files changed, 2 insertions(+), 1 deletion(-)\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:320
+#, no-wrap
+msgid ""
+"commit fdf4fc3344e67ab068f836878b6c4951e3b15f3d\n"
+"Author: Scott Chacon <schacon@gmail.com>\n"
+"Date:   Fri May 22 18:09:34 2009 -0700\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:322
+#, no-wrap
+msgid "    First commit\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:325
+#, no-wrap
+msgid ""
+" test.txt | 1 +\n"
+" 1 file changed, 1 insertion(+)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:332
+#, no-wrap
+msgid ""
+"Amazing.\n"
+"You've just done the low-level operations to build up a Git history without using any of the front end commands.\n"
+"This is essentially what Git does when you run the `git add` and `git commit` commands -- it stores blobs for the files that have changed, updates the index, writes out trees, and writes commit objects that reference the top-level trees and the commits that came immediately before them.\n"
+"These three main Git objects -- the blob, the tree, and the commit -- are initially stored as separate files in your `.git/objects` directory.\n"
+"Here are all the objects in the example directory now, commented with what they store:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:346
+#, no-wrap
+msgid ""
+"$ find .git/objects -type f\n"
+".git/objects/01/55eb4229851634a0f03eb265b69f5a2d56f341 # tree 2\n"
+".git/objects/1a/410efbd13591db07496601ebc7a059dd55cfe9 # commit 3\n"
+".git/objects/1f/7a7a472abf3dd9643fd615f6da379c4acb3e3a # test.txt v2\n"
+".git/objects/3c/4e9cd789d88d8d89c1073707c3585e41b0e614 # tree 3\n"
+".git/objects/83/baae61804e65cc73a7201a7252750c76066a30 # test.txt v1\n"
+".git/objects/ca/c0cab538b970a37ea1e769cbbde608743bc96d # commit 2\n"
+".git/objects/d6/70460b4b4aece5915caf5c68d12f560a9fe3e4 # 'test content'\n"
+".git/objects/d8/329fc1cc938780ffdd9f94e0d364e0ea74f579 # tree 1\n"
+".git/objects/fa/49b077972391ad58037050f2a75f74e3671e92 # new.txt\n"
+".git/objects/fd/f4fc3344e67ab068f836878b6c4951e3b15f3d # commit 1\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:349
+#, no-wrap
+msgid "If you follow all the internal pointers, you get an object graph something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:352
+#, no-wrap
+msgid ""
+".All the reachable objects in your Git directory\n"
+"image::images/data-model-3.png[All the reachable objects in your Git directory]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:354
+#, no-wrap
+msgid "==== Object Storage\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:358
+#, no-wrap
+msgid ""
+"We mentioned earlier that there is a header stored with every object you commit to your Git object database.\n"
+"Let's take a minute to see how Git stores its objects.\n"
+"You'll see how to store a blob object -- in this case, the string \"`what is up, doc?`\" -- interactively in the Ruby scripting language.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:360
+#, no-wrap
+msgid "You can start up interactive Ruby mode with the `irb` command:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:366
+#, no-wrap
+msgid ""
+"$ irb\n"
+">> content = \"what is up, doc?\"\n"
+"=> \"what is up, doc?\"\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:370
+#, no-wrap
+msgid ""
+"Git first constructs a header which starts by identifying the type of object -- in this case, a blob.\n"
+"To that first part of the header, Git adds a space followed by the size in bytes  of the content, and adding a final null byte:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:375
+#, no-wrap
+msgid ""
+">> header = \"blob #{content.bytesize}\\0\"\n"
+"=> \"blob 16\\u0000\"\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:379
+#, no-wrap
+msgid ""
+"Git concatenates the header and the original content and then calculates the SHA-1 checksum of that new content.\n"
+"You can calculate the SHA-1 value of a string in Ruby by including the SHA1 digest library with the `require` command and then calling `Digest::SHA1.hexdigest()` with the string:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:388
+#, no-wrap
+msgid ""
+">> store = header + content\n"
+"=> \"blob 16\\u0000what is up, doc?\"\n"
+">> require 'digest/sha1'\n"
+"=> true\n"
+">> sha1 = Digest::SHA1.hexdigest(store)\n"
+"=> \"bd9dbf5aae1a3862dd1526723246b20206e5fc37\"\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:392
+#, no-wrap
+msgid ""
+"Let's compare that to the output of `git hash-object`.\n"
+"Here we use `echo -n` to prevent adding a newline to the input.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:397
+#, no-wrap
+msgid ""
+"$ echo -n \"what is up, doc?\" | git hash-object --stdin\n"
+"bd9dbf5aae1a3862dd1526723246b20206e5fc37\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:401
+#, no-wrap
+msgid ""
+"Git compresses the new content with zlib, which you can do in Ruby with the zlib library.\n"
+"First, you need to require the library and then run `Zlib::Deflate.deflate()` on the content:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:408
+#, no-wrap
+msgid ""
+">> require 'zlib'\n"
+"=> true\n"
+">> zlib_content = Zlib::Deflate.deflate(store)\n"
+"=> \"x\\x9CK\\xCA\\xC9OR04c(\\xCFH,Q\\xC8,V(-\\xD0QH\\xC9O\\xB6\\a\\x00_\\x1C\\a\\x9D\"\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:414
+#, no-wrap
+msgid ""
+"Finally, you'll write your zlib-deflated content to an object on disk.\n"
+"You'll determine the path of the object you want to write out (the first two characters of the SHA-1 value being the subdirectory name, and the last 38 characters being the filename within that directory).\n"
+"In Ruby, you can use the `FileUtils.mkdir_p()` function to create the subdirectory if it doesn't exist.\n"
+"Then, open the file with `File.open()` and write out the previously zlib-compressed content to the file with a `write()` call on the resulting file handle:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:425
+#, no-wrap
+msgid ""
+">> path = '.git/objects/' + sha1[0,2] + '/' + sha1[2,38]\n"
+"=> \".git/objects/bd/9dbf5aae1a3862dd1526723246b20206e5fc37\"\n"
+">> require 'fileutils'\n"
+"=> true\n"
+">> FileUtils.mkdir_p(File.dirname(path))\n"
+"=> \".git/objects/bd\"\n"
+">> File.open(path, 'w') { |f| f.write zlib_content }\n"
+"=> 32\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:428
+#, no-wrap
+msgid "Let's check the content of the object using `git cat-file`:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:430
+#, no-wrap
+msgid ""
+"[source,console]\n"
+"---\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:433
+#, no-wrap
+msgid ""
+"$ git cat-file -p bd9dbf5aae1a3862dd1526723246b20206e5fc37\n"
+"what is up, doc?\n"
+"---\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:436
+#, no-wrap
+msgid "That's it â you've created a valid Git blob object.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/objects.asc:438
+#, no-wrap
+msgid ""
+"All Git objects are stored the same way, just with different types â instead of the string blob, the header will begin with commit or tree.\n"
+"Also, although the blob content can be nearly anything, the commit and tree content are very specifically formatted.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/packfiles.asc:2
+#, no-wrap
+msgid "=== Packfiles\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/packfiles.asc:4
+#, no-wrap
+msgid "If you followed all of the instructions in the example from the previous section, you should now have a test Git repository with 11 objects -- four blobs, three trees, three commits, and one tag:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/packfiles.asc:19
+#, no-wrap
+msgid ""
+"$ find .git/objects -type f\n"
+".git/objects/01/55eb4229851634a0f03eb265b69f5a2d56f341 # tree 2\n"
+".git/objects/1a/410efbd13591db07496601ebc7a059dd55cfe9 # commit 3\n"
+".git/objects/1f/7a7a472abf3dd9643fd615f6da379c4acb3e3a # test.txt v2\n"
+".git/objects/3c/4e9cd789d88d8d89c1073707c3585e41b0e614 # tree 3\n"
+".git/objects/83/baae61804e65cc73a7201a7252750c76066a30 # test.txt v1\n"
+".git/objects/95/85191f37f7b0fb9444f35a9bf50de191beadc2 # tag\n"
+".git/objects/ca/c0cab538b970a37ea1e769cbbde608743bc96d # commit 2\n"
+".git/objects/d6/70460b4b4aece5915caf5c68d12f560a9fe3e4 # 'test content'\n"
+".git/objects/d8/329fc1cc938780ffdd9f94e0d364e0ea74f579 # tree 1\n"
+".git/objects/fa/49b077972391ad58037050f2a75f74e3671e92 # new.txt\n"
+".git/objects/fd/f4fc3344e67ab068f836878b6c4951e3b15f3d # commit 1\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/packfiles.asc:24
+#, no-wrap
+msgid ""
+"Git compresses the contents of these files with zlib, and you're not storing much, so all these files collectively take up only 925 bytes.\n"
+"Now you'll add some more sizable content to the repository to demonstrate an interesting feature of Git.\n"
+"To demonstrate, we'll add the `repo.rb` file from the Grit library -- this is about a 22K source code file:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/packfiles.asc:36
+#, no-wrap
+msgid ""
+"$ curl https://raw.githubusercontent.com/mojombo/grit/master/lib/grit/repo.rb > repo.rb\n"
+"$ git checkout master\n"
+"$ git add repo.rb\n"
+"$ git commit -m 'Create repo.rb'\n"
+"[master 484a592] Create repo.rb\n"
+" 3 files changed, 709 insertions(+), 2 deletions(-)\n"
+" delete mode 100644 bak/test.txt\n"
+" create mode 100644 repo.rb\n"
+" rewrite test.txt (100%)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/packfiles.asc:39
+#, no-wrap
+msgid "If you look at the resulting tree, you can see the SHA-1 value that was calculated for your new `repo.rb` blob object:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/packfiles.asc:46
+#, no-wrap
+msgid ""
+"$ git cat-file -p master^{tree}\n"
+"100644 blob fa49b077972391ad58037050f2a75f74e3671e92      new.txt\n"
+"100644 blob 033b4468fa6b2a9547a70d88d1bbe8bf3f9ed0d5      repo.rb\n"
+"100644 blob e3f094f522629ae358806b17daf78246c27c007b      test.txt\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/packfiles.asc:49
+#, no-wrap
+msgid "You can then use `git cat-file` to see how large that object is:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/packfiles.asc:54
+#, no-wrap
+msgid ""
+"$ git cat-file -s 033b4468fa6b2a9547a70d88d1bbe8bf3f9ed0d5\n"
+"22044\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/packfiles.asc:57
+#, no-wrap
+msgid "At this point, modify that file a little, and see what happens:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/packfiles.asc:64
+#, no-wrap
+msgid ""
+"$ echo '# testing' >> repo.rb\n"
+"$ git commit -am 'Modify repo.rb a bit'\n"
+"[master 2431da6] Modify repo.rb a bit\n"
+" 1 file changed, 1 insertion(+)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/packfiles.asc:67
+#, no-wrap
+msgid "Check the tree created by that last commit, and you see something interesting:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/packfiles.asc:74
+#, no-wrap
+msgid ""
+"$ git cat-file -p master^{tree}\n"
+"100644 blob fa49b077972391ad58037050f2a75f74e3671e92      new.txt\n"
+"100644 blob b042a60ef7dff760008df33cee372b945b6e884e      repo.rb\n"
+"100644 blob e3f094f522629ae358806b17daf78246c27c007b      test.txt\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/packfiles.asc:77
+#, no-wrap
+msgid "The blob is now a different blob, which means that although you added only a single line to the end of a 400-line file, Git stored that new content as a completely new object:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/packfiles.asc:82
+#, no-wrap
+msgid ""
+"$ git cat-file -s b042a60ef7dff760008df33cee372b945b6e884e\n"
+"22054\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/packfiles.asc:86
+#, no-wrap
+msgid ""
+"You have two nearly identical 22K objects on your disk (each compressed to approximately 7K).\n"
+"Wouldn't it be nice if Git could store one of them in full but then the second object only as the delta between it and the first?\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/packfiles.asc:92
+#, no-wrap
+msgid ""
+"It turns out that it can.\n"
+"The initial format in which Git saves objects on disk is called a \"`loose`\" object format.\n"
+"However, occasionally Git packs up several of these objects into a single binary file called a \"`packfile`\" in order to save space and be more efficient.\n"
+"Git does this if you have too many loose objects around, if you run the `git gc` command manually, or if you push to a remote server.\n"
+"To see what happens, you can manually ask Git to pack up the objects by calling the `git gc` command:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/packfiles.asc:101
+#, no-wrap
+msgid ""
+"$ git gc\n"
+"Counting objects: 18, done.\n"
+"Delta compression using up to 8 threads.\n"
+"Compressing objects: 100% (14/14), done.\n"
+"Writing objects: 100% (18/18), done.\n"
+"Total 18 (delta 3), reused 0 (delta 0)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/packfiles.asc:104
+#, no-wrap
+msgid "If you look in your `objects` directory, you'll find that most of your objects are gone, and a new pair of files has appeared:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/packfiles.asc:113
+#, no-wrap
+msgid ""
+"$ find .git/objects -type f\n"
+".git/objects/bd/9dbf5aae1a3862dd1526723246b20206e5fc37\n"
+".git/objects/d6/70460b4b4aece5915caf5c68d12f560a9fe3e4\n"
+".git/objects/info/packs\n"
+".git/objects/pack/pack-978e03944f5c581011e6998cd0e9e30000905586.idx\n"
+".git/objects/pack/pack-978e03944f5c581011e6998cd0e9e30000905586.pack\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/packfiles.asc:117
+#, no-wrap
+msgid ""
+"The objects that remain are the blobs that aren't pointed to by any commit -- in this case, the \"`what is up, doc?`\" example and the \"`test content`\" example blobs you created earlier.\n"
+"Because you never added them to any commits, they're considered dangling and aren't packed up in your new packfile.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/packfiles.asc:123
+#, no-wrap
+msgid ""
+"The other files are your new packfile and an index.\n"
+"The packfile is a single file containing the contents of all the objects that were removed from your filesystem.\n"
+"The index is a file that contains offsets into that packfile so you can quickly seek to a specific object.\n"
+"What is cool is that although the objects on disk before you ran the `gc` command were collectively about 15K in size, the new packfile is only 7K.\n"
+"You've cut your disk usage by half by packing your objects.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/packfiles.asc:128
+#, no-wrap
+msgid ""
+"How does Git do this?\n"
+"When Git packs objects, it looks for files that are named and sized similarly, and stores just the deltas from one version of the file to the next.\n"
+"You can look into the packfile and see what Git did to save space.\n"
+"The `git verify-pack` plumbing command allows you to see what was packed up:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/packfiles.asc:156
+#, no-wrap
+msgid ""
+"$ git verify-pack -v .git/objects/pack/pack-978e03944f5c581011e6998cd0e9e30000905586.idx\n"
+"2431da676938450a4d72e260db3bf7b0f587bbc1 commit 223 155 12\n"
+"69bcdaff5328278ab1c0812ce0e07fa7d26a96d7 commit 214 152 167\n"
+"80d02664cb23ed55b226516648c7ad5d0a3deb90 commit 214 145 319\n"
+"43168a18b7613d1281e5560855a83eb8fde3d687 commit 213 146 464\n"
+"092917823486a802e94d727c820a9024e14a1fc2 commit 214 146 610\n"
+"702470739ce72005e2edff522fde85d52a65df9b commit 165 118 756\n"
+"d368d0ac0678cbe6cce505be58126d3526706e54 tag    130 122 874\n"
+"fe879577cb8cffcdf25441725141e310dd7d239b tree   136 136 996\n"
+"d8329fc1cc938780ffdd9f94e0d364e0ea74f579 tree   36 46 1132\n"
+"deef2e1b793907545e50a2ea2ddb5ba6c58c4506 tree   136 136 1178\n"
+"d982c7cb2c2a972ee391a85da481fc1f9127a01d tree   6 17 1314 1 \\\n"
+"  deef2e1b793907545e50a2ea2ddb5ba6c58c4506\n"
+"3c4e9cd789d88d8d89c1073707c3585e41b0e614 tree   8 19 1331 1 \\\n"
+"  deef2e1b793907545e50a2ea2ddb5ba6c58c4506\n"
+"0155eb4229851634a0f03eb265b69f5a2d56f341 tree   71 76 1350\n"
+"83baae61804e65cc73a7201a7252750c76066a30 blob   10 19 1426\n"
+"fa49b077972391ad58037050f2a75f74e3671e92 blob   9 18 1445\n"
+"b042a60ef7dff760008df33cee372b945b6e884e blob   22054 5799 1463\n"
+"033b4468fa6b2a9547a70d88d1bbe8bf3f9ed0d5 blob   9 20 7262 1 \\\n"
+"  b042a60ef7dff760008df33cee372b945b6e884e\n"
+"1f7a7a472abf3dd9643fd615f6da379c4acb3e3a blob   10 19 7282\n"
+"non delta: 15 objects\n"
+"chain length = 1: 3 objects\n"
+".git/objects/pack/pack-978e03944f5c581011e6998cd0e9e30000905586.pack: ok\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/packfiles.asc:161
+#, no-wrap
+msgid ""
+"Here, the `033b4` blob, which if you remember was the first version of your `repo.rb` file, is referencing the `b042a` blob, which was the second version of the file.\n"
+"The third column in the output is the size of the object in the pack, so you can see that `b042a` takes up 22K of the file, but that `033b4` only takes up 9 bytes.\n"
+"What is also interesting is that the second version of the file is the one that is stored intact, whereas the original version is stored as a delta -- this is because you're most likely to need faster access to the most recent version of the file.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/packfiles.asc:163
+#, no-wrap
+msgid ""
+"The really nice thing about this is that it can be repacked at any time.\n"
+"Git will occasionally repack your database automatically, always trying to save more space, but you can also manually repack at any time by running `git gc` by hand.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/plumbing-porcelain.asc:3
+#, no-wrap
+msgid ""
+"[[_plumbing_porcelain]]\n"
+"=== Plumbing and Porcelain\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/plumbing-porcelain.asc:7
+#, no-wrap
+msgid ""
+"This book covers primarily how to use Git with 30 or so subcommands such as `checkout`, `branch`, `remote`, and so on.\n"
+"But because Git was initially a toolkit for a version control system rather than a full user-friendly VCS, it has a number of subcommands that do low-level work and were designed to be chained together UNIX-style or called from scripts.\n"
+"These commands are generally referred to as Git's \"`plumbing`\" commands, while the more user-friendly commands are called \"`porcelain`\" commands.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/plumbing-porcelain.asc:11
+#, no-wrap
+msgid ""
+"As you will have noticed by now, this book's first nine chapters deal almost exclusively with porcelain commands.\n"
+"But in this chapter, you'll be dealing mostly with the lower-level plumbing commands, because they give you access to the inner workings of Git, and help demonstrate how and why Git does what it does.\n"
+"Many of these commands aren't meant to be used manually on the command line, but rather to be used as building blocks for new tools and custom scripts.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/plumbing-porcelain.asc:16
+#, no-wrap
+msgid ""
+"When you run `git init` in a new or existing directory, Git creates the `.git` directory, which is where almost everything that Git stores and manipulates is located.\n"
+"If you want to back up or clone your repository, copying this single directory elsewhere gives you nearly everything you need.\n"
+"This entire chapter basically deals with what you can see in this directory.\n"
+"Here's what a newly-initialized `.git` directory typically looks like:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/plumbing-porcelain.asc:27
+#, no-wrap
+msgid ""
+"$ ls -F1\n"
+"config\n"
+"description\n"
+"HEAD\n"
+"hooks/\n"
+"info/\n"
+"objects/\n"
+"refs/\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/plumbing-porcelain.asc:33
+#, no-wrap
+msgid ""
+"Depending on your version of Git, you may see some additional content there, but this is a fresh `git init` repository -- it's what you see by default.\n"
+"The `description` file is used only by the GitWeb program, so don't worry about it.\n"
+"The `config` file contains your project-specific configuration options, and the `info` directory keeps a global exclude file (((excludes))) for ignored patterns that you don't want to track in a `.gitignore` file.\n"
+"The `hooks` directory contains your client- or server-side hook scripts, which are discussed in detail in <<ch08-customizing-git#_git_hooks>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/plumbing-porcelain.asc:37
+#, no-wrap
+msgid ""
+"This leaves four important entries: the `HEAD` and (yet to be created) `index` files, and the `objects` and `refs` directories.\n"
+"These are the core parts of Git.\n"
+"The `objects` directory stores all the content for your database, the `refs` directory stores pointers into commit objects in that data (branches, tags, remotes and more), the `HEAD` file points to the branch you currently have checked out, and the `index` file is where Git stores your staging area information.\n"
+"You'll now look at each of these sections in detail to see how Git operates.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:3
+#, no-wrap
+msgid ""
+"[[_git_refs]]\n"
+"=== Git References\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:6
+#, no-wrap
+msgid ""
+"If you were interested in seeing the history of your repository reachable from commit, say, `1a410e`, you could run something like `git log 1a410e` to display that history, but you would still have to remember that `1a410e` is the commit you want to use as the starting point for that history.\n"
+"Instead, it would be easier if you had a file in which you could store that SHA-1 value under a simple name so you could use that simple name rather than the raw SHA-1 value.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:9
+#, no-wrap
+msgid ""
+"In Git, these simple names are called \"`references`\" or \"`refs`\"; you can find the files that contain those SHA-1 values in the `.git/refs` directory.\n"
+"In the current project, this directory contains no files, but it does contain a simple structure:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:17
+#, no-wrap
+msgid ""
+"$ find .git/refs\n"
+".git/refs\n"
+".git/refs/heads\n"
+".git/refs/tags\n"
+"$ find .git/refs -type f\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:20
+#, no-wrap
+msgid "To create a new reference that will help you remember where your latest commit is, you can technically do something as simple as this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:24
+#, no-wrap
+msgid ""
+"$ echo 1a410efbd13591db07496601ebc7a059dd55cfe9 > .git/refs/heads/master\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:27
+#, no-wrap
+msgid "Now, you can use the head reference you just created instead of the SHA-1 value in your Git commands:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:34
+#, no-wrap
+msgid ""
+"$ git log --pretty=oneline master\n"
+"1a410efbd13591db07496601ebc7a059dd55cfe9 Third commit\n"
+"cac0cab538b970a37ea1e769cbbde608743bc96d Second commit\n"
+"fdf4fc3344e67ab068f836878b6c4951e3b15f3d First commit\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:37
+#, no-wrap
+msgid "You aren't encouraged to directly edit the reference files; instead, Git provides the safer command `git update-ref` to do this if you want to update a reference:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:41
+#, no-wrap
+msgid ""
+"$ git update-ref refs/heads/master 1a410efbd13591db07496601ebc7a059dd55cfe9\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:45
+#, no-wrap
+msgid ""
+"That's basically what a branch in Git is: a simple pointer or reference to the head of a line of work.\n"
+"To create a branch back at the second commit, you can do this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:49
+#, no-wrap
+msgid ""
+"$ git update-ref refs/heads/test cac0ca\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:52
+#, no-wrap
+msgid "Your branch will contain only work from that commit down:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:58
+#, no-wrap
+msgid ""
+"$ git log --pretty=oneline test\n"
+"cac0cab538b970a37ea1e769cbbde608743bc96d Second commit\n"
+"fdf4fc3344e67ab068f836878b6c4951e3b15f3d First commit\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:61
+#, no-wrap
+msgid "Now, your Git database conceptually looks something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:64
+#, no-wrap
+msgid ""
+".Git directory objects with branch head references included\n"
+"image::images/data-model-4.png[Git directory objects with branch head references included]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:66
+#, no-wrap
+msgid "When you run commands like `git branch <branch>`, Git basically runs that `update-ref` command to add the SHA-1 of the last commit of the branch you're on into whatever new reference you want to create.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:69
+#, no-wrap
+msgid ""
+"[[ref_the_ref]]\n"
+"==== The HEAD\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:72
+#, no-wrap
+msgid ""
+"The question now is, when you run `git branch <branch>`, how does Git know the SHA-1 of the last commit?\n"
+"The answer is the HEAD file.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:75
+#, no-wrap
+msgid ""
+"Usually the HEAD file is a symbolic reference to the branch you're currently on.\n"
+"By symbolic reference, we mean that unlike a normal reference, it contains a pointer to another reference.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:78
+#, no-wrap
+msgid ""
+"However in some rare cases the HEAD file may contain the SHA-1 value of a git object.\n"
+"This happens when you checkout a tag, commit, or remote branch, which puts your repository in https://git-scm.com/docs/git-checkout#_detached_head[\"detached HEAD\"] state.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:80
+#, no-wrap
+msgid "If you look at the file, you'll normally see something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:85
+#, no-wrap
+msgid ""
+"$ cat .git/HEAD\n"
+"ref: refs/heads/master\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:88
+#, no-wrap
+msgid "If you run `git checkout test`, Git updates the file to look like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:93
+#, no-wrap
+msgid ""
+"$ cat .git/HEAD\n"
+"ref: refs/heads/test\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:96
+#, no-wrap
+msgid "When you run `git commit`, it creates the commit object, specifying the parent of that commit object to be whatever SHA-1 value the reference in HEAD points to.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:99
+#, no-wrap
+msgid ""
+"You can also manually edit this file, but again a safer command exists to do so: `git symbolic-ref`.\n"
+"You can read the value of your HEAD via this command:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:104
+#, no-wrap
+msgid ""
+"$ git symbolic-ref HEAD\n"
+"refs/heads/master\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:107
+#, no-wrap
+msgid "You can also set the value of HEAD using the same command:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:113
+#, no-wrap
+msgid ""
+"$ git symbolic-ref HEAD refs/heads/test\n"
+"$ cat .git/HEAD\n"
+"ref: refs/heads/test\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:116
+#, no-wrap
+msgid "You can't set a symbolic reference outside of the refs style:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:121
+#, no-wrap
+msgid ""
+"$ git symbolic-ref HEAD test\n"
+"fatal: Refusing to point HEAD outside of refs/\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:124
+#, no-wrap
+msgid "==== Tags\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:129
+#, no-wrap
+msgid ""
+"We just finished discussing Git's three main object types (_blobs_, _trees_ and _commits_), but there is a fourth.\n"
+"The _tag_ object is very much like a commit object -- it contains a tagger, a date, a message, and a pointer.\n"
+"The main difference is that a tag object generally points to a commit rather than a tree.\n"
+"It's like a branch reference, but it never moves -- it always points to the same commit but gives it a friendlier name.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:132
+#, no-wrap
+msgid ""
+"As discussed in <<ch02-git-basics-chapter#ch02-git-basics-chapter>>, there are two types of tags: annotated and lightweight.\n"
+"You can make a lightweight tag by running something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:136
+#, no-wrap
+msgid ""
+"$ git update-ref refs/tags/v1.0 cac0cab538b970a37ea1e769cbbde608743bc96d\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:142
+#, no-wrap
+msgid ""
+"That is all a lightweight tag is -- a reference that never moves.\n"
+"An annotated tag is more complex, however.\n"
+"If you create an annotated tag, Git creates a tag object and then writes a reference to point to it rather than directly to the commit.\n"
+"You can see this by creating an annotated tag (using the `-a` option):\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:146
+#, no-wrap
+msgid ""
+"$ git tag -a v1.1 1a410efbd13591db07496601ebc7a059dd55cfe9 -m 'Test tag'\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:149
+#, no-wrap
+msgid "Here's the object SHA-1 value it created:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:154
+#, no-wrap
+msgid ""
+"$ cat .git/refs/tags/v1.1\n"
+"9585191f37f7b0fb9444f35a9bf50de191beadc2\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:157
+#, no-wrap
+msgid "Now, run `git cat-file -p` on that SHA-1 value:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:165
+#, no-wrap
+msgid ""
+"$ git cat-file -p 9585191f37f7b0fb9444f35a9bf50de191beadc2\n"
+"object 1a410efbd13591db07496601ebc7a059dd55cfe9\n"
+"type commit\n"
+"tag v1.1\n"
+"tagger Scott Chacon <schacon@gmail.com> Sat May 23 16:48:58 2009 -0700\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:167
+#, no-wrap
+msgid ""
+"Test tag\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:173
+#, no-wrap
+msgid ""
+"Notice that the object entry points to the commit SHA-1 value that you tagged.\n"
+"Also notice that it doesn't need to point to a commit; you can tag any Git object.\n"
+"In the Git source code, for example, the maintainer has added their GPG public key as a blob object and then tagged it.\n"
+"You can view the public key by running this in a clone of the Git repository:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:177
+#, no-wrap
+msgid ""
+"$ git cat-file blob junio-gpg-pub\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:180
+#, no-wrap
+msgid "The Linux kernel repository also has a non-commit-pointing tag object -- the first tag created points to the initial tree of the import of the source code.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:182
+#, no-wrap
+msgid "==== Remotes\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:186
+#, no-wrap
+msgid ""
+"The third type of reference that you'll see is a remote reference.\n"
+"If you add a remote and push to it, Git stores the value you last pushed to that remote for each branch in the `refs/remotes` directory.\n"
+"For instance, you can add a remote called `origin` and push your `master` branch to it:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:197
+#, no-wrap
+msgid ""
+"$ git remote add origin git@github.com:schacon/simplegit-progit.git\n"
+"$ git push origin master\n"
+"Counting objects: 11, done.\n"
+"Compressing objects: 100% (5/5), done.\n"
+"Writing objects: 100% (7/7), 716 bytes, done.\n"
+"Total 7 (delta 2), reused 4 (delta 1)\n"
+"To git@github.com:schacon/simplegit-progit.git\n"
+"  a11bef0..ca82a6d  master -> master\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:200
+#, no-wrap
+msgid "Then, you can see what the `master` branch on the `origin` remote was the last time you communicated with the server, by checking the `refs/remotes/origin/master` file:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:205
+#, no-wrap
+msgid ""
+"$ cat .git/refs/remotes/origin/master\n"
+"ca82a6dff817ec66f44342007202690a93763949\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refs.asc:209
+#, no-wrap
+msgid ""
+"Remote references differ from branches (`refs/heads` references) mainly in that they're considered read-only.\n"
+"You can `git checkout` to one, but Git won't symbolically reference HEAD to one, so you'll never update it with a `commit` command.\n"
+"Git manages them as bookmarks to the last known state of where those branches were on those servers.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:3
+#, no-wrap
+msgid ""
+"[[_refspec]]\n"
+"=== The Refspec\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:6
+#, no-wrap
+msgid ""
+"Throughout this book, we've used simple mappings from remote branches to local references, but they can be more complex.\n"
+"Suppose you were following along with the last couple sections and had created a small local Git repository, and now wanted to add a _remote_ to it:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:10
+#, no-wrap
+msgid ""
+"$ git remote add origin https://github.com/schacon/simplegit-progit\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:13
+#, no-wrap
+msgid "Running the command above adds a section to your repository's `.git/config` file, specifying the name of the remote (`origin`), the URL of the remote repository, and the _refspec_ to be used for fetching:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:15
+#: book/10-git-internals/sections/refspec.asc:71
+#: book/10-git-internals/sections/refspec.asc:81
+#: book/10-git-internals/sections/refspec.asc:89
+#: book/10-git-internals/sections/refspec.asc:114
+#, no-wrap
+msgid ""
+"[source,ini]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:19
+#, no-wrap
+msgid ""
+"[remote \"origin\"]\n"
+"\turl = https://github.com/schacon/simplegit-progit\n"
+"\tfetch = +refs/heads/*:refs/remotes/origin/*\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:23
+#, no-wrap
+msgid ""
+"The format of the refspec is, first, an optional `+`, followed by `<src>:<dst>`, where `<src>` is the pattern for references on the remote side and `<dst>` is where those references will be tracked locally.\n"
+"The `+` tells Git to update the reference even if it isn't a fast-forward.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:26
+#, no-wrap
+msgid ""
+"In the default case that is automatically written by a `git remote add origin` command, Git fetches all the references under `refs/heads/` on the server and writes them to `refs/remotes/origin/` locally.\n"
+"So, if there is a `master` branch on the server, you can access the log of that branch locally via any of the following:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:32
+#, no-wrap
+msgid ""
+"$ git log origin/master\n"
+"$ git log remotes/origin/master\n"
+"$ git log refs/remotes/origin/master\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:35
+#, no-wrap
+msgid "They're all equivalent, because Git expands each of them to `refs/remotes/origin/master`.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:37
+#, no-wrap
+msgid "If you want Git instead to pull down only the `master` branch each time, and not every other branch on the remote server, you can change the fetch line to refer to that branch only:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:39
+#: book/10-git-internals/sections/transfer-protocols.asc:29
+#: book/10-git-internals/sections/transfer-protocols.asc:38
+#: book/10-git-internals/sections/transfer-protocols.asc:48
+#: book/10-git-internals/sections/transfer-protocols.asc:70
+#: book/10-git-internals/sections/transfer-protocols.asc:79
+#: book/10-git-internals/sections/transfer-protocols.asc:89
+#: book/10-git-internals/sections/transfer-protocols.asc:99
+#: book/10-git-internals/sections/transfer-protocols.asc:108
+#: book/10-git-internals/sections/transfer-protocols.asc:117
+#: book/10-git-internals/sections/transfer-protocols.asc:167
+#: book/10-git-internals/sections/transfer-protocols.asc:184
+#: book/10-git-internals/sections/transfer-protocols.asc:194
+#: book/10-git-internals/sections/transfer-protocols.asc:207
+#: book/10-git-internals/sections/transfer-protocols.asc:234
+#: book/10-git-internals/sections/transfer-protocols.asc:251
+#: book/10-git-internals/sections/transfer-protocols.asc:264
+#: book/10-git-internals/sections/transfer-protocols.asc:278
+#, no-wrap
+msgid ""
+"[source]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:41
+#, no-wrap
+msgid ""
+"fetch = +refs/heads/master:refs/remotes/origin/master\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:46
+#, no-wrap
+msgid ""
+"This is just the default refspec for `git fetch` for that remote.\n"
+"If you want to do a one-time only fetch, you can specify the specific refspec on the command line, too.\n"
+"To pull the `master` branch on the remote down to `origin/mymaster` locally, you can run:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:50
+#, no-wrap
+msgid ""
+"$ git fetch origin master:refs/remotes/origin/mymaster\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:54
+#, no-wrap
+msgid ""
+"You can also specify multiple refspecs.\n"
+"On the command line, you can pull down several branches like so:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:62
+#, no-wrap
+msgid ""
+"$ git fetch origin master:refs/remotes/origin/mymaster \\\n"
+"\t topic:refs/remotes/origin/topic\n"
+"From git@github.com:schacon/simplegit\n"
+" ! [rejected]        master     -> origin/mymaster  (non fast forward)\n"
+" * [new branch]      topic      -> origin/topic\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:66
+#, no-wrap
+msgid ""
+"In this case, the `master` branch pull was rejected because it wasn't listed as a fast-forward reference.\n"
+"You can override that by specifying the `+` in front of the refspec.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:69
+#, no-wrap
+msgid ""
+"You can also specify multiple refspecs for fetching in your configuration file.\n"
+"If you want to always fetch the `master` and `experiment` branches from the `origin` remote, add two lines:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:76
+#, no-wrap
+msgid ""
+"[remote \"origin\"]\n"
+"\turl = https://github.com/schacon/simplegit-progit\n"
+"\tfetch = +refs/heads/master:refs/remotes/origin/master\n"
+"\tfetch = +refs/heads/experiment:refs/remotes/origin/experiment\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:79
+#, no-wrap
+msgid "Since Git 2.6.0 you can use partial globs in the pattern to match multiple branches, so this works:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:83
+#, no-wrap
+msgid ""
+"fetch = +refs/heads/qa*:refs/remotes/origin/qa*\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:87
+#, no-wrap
+msgid ""
+"Even better, you can use namespaces (or directories) to accomplish the same with more structure.\n"
+"If you have a QA team that pushes a series of branches, and you want to get the `master` branch and any of the QA team's branches but nothing else, you can use a config section like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:94
+#, no-wrap
+msgid ""
+"[remote \"origin\"]\n"
+"\turl = https://github.com/schacon/simplegit-progit\n"
+"\tfetch = +refs/heads/master:refs/remotes/origin/master\n"
+"\tfetch = +refs/heads/qa/*:refs/remotes/origin/qa/*\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:97
+#, no-wrap
+msgid "If you have a complex workflow process that has a QA team pushing branches, developers pushing branches, and integration teams pushing and collaborating on remote branches, you can namespace them easily this way.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:100
+#, no-wrap
+msgid ""
+"[[_pushing_refspecs]]\n"
+"==== Pushing Refspecs\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:103
+#, no-wrap
+msgid ""
+"It's nice that you can fetch namespaced references that way, but how does the QA team get their branches into a `qa/` namespace in the first place?\n"
+"You accomplish that by using refspecs to push.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:105
+#, no-wrap
+msgid "If the QA team wants to push their `master` branch to `qa/master` on the remote server, they can run:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:109
+#, no-wrap
+msgid ""
+"$ git push origin master:refs/heads/qa/master\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:112
+#, no-wrap
+msgid "If they want Git to do that automatically each time they run `git push origin`, they can add a `push` value to their config file:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:119
+#, no-wrap
+msgid ""
+"[remote \"origin\"]\n"
+"\turl = https://github.com/schacon/simplegit-progit\n"
+"\tfetch = +refs/heads/*:refs/remotes/origin/*\n"
+"\tpush = refs/heads/master:refs/heads/qa/master\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:122
+#, no-wrap
+msgid "Again, this will cause a `git push origin` to push the local `master` branch to the remote `qa/master` branch by default.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:127
+#, no-wrap
+msgid ""
+"You cannot use the refspec to fetch from one repository and push to another one.\n"
+"For an example to do so, refer to <<ch06-github#_fetch_and_push_on_different_repositories>>.\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:130
+#, no-wrap
+msgid "==== Deleting References\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:132
+#, no-wrap
+msgid "You can also use the refspec to delete references from the remote server by running something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:136
+#, no-wrap
+msgid ""
+"$ git push origin :topic\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:139
+#, no-wrap
+msgid "Because the refspec is `<src>:<dst>`, by leaving off the `<src>` part, this basically says to make the `topic` branch on the remote nothing, which deletes it.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:141
+#, no-wrap
+msgid "Or you can use the newer syntax (available since Git v1.7.0):\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/refspec.asc:145
+#, no-wrap
+msgid ""
+"$ git push origin --delete topic\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:2
+#, no-wrap
+msgid "=== Transfer Protocols\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:5
+#, no-wrap
+msgid ""
+"Git can transfer data between two repositories in two major ways: the \"`dumb`\" protocol and the \"`smart`\" protocol.\n"
+"This section will quickly cover how these two main protocols operate.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:7
+#, no-wrap
+msgid "==== The Dumb Protocol\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:10
+#, no-wrap
+msgid ""
+"If you're setting up a repository to be served read-only over HTTP, the dumb protocol is likely what will be used.\n"
+"This protocol is called \"`dumb`\" because it requires no Git-specific code on the server side during the transport process; the fetch process is a series of HTTP `GET` requests, where the client can assume the layout of the Git repository on the server.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:16
+#, no-wrap
+msgid ""
+"The dumb protocol is fairly rarely used these days.\n"
+"It's difficult to secure or make private, so most Git hosts (both cloud-based and on-premises) will refuse to use it.\n"
+"It's generally advised to use the smart protocol, which we describe a bit further on.\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:19
+#, no-wrap
+msgid "Let's follow the `http-fetch` process for the simplegit library:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:23
+#, no-wrap
+msgid ""
+"$ git clone http://server/simplegit-progit.git\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:27
+#, no-wrap
+msgid ""
+"The first thing this command does is pull down the `info/refs` file.\n"
+"This file is written by the `update-server-info` command, which is why you need to enable that as a `post-receive` hook in order for the HTTP transport to work properly:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:32
+#, no-wrap
+msgid ""
+"=> GET info/refs\n"
+"ca82a6dff817ec66f44342007202690a93763949     refs/heads/master\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:36
+#, no-wrap
+msgid ""
+"Now you have a list of the remote references and SHA-1s.\n"
+"Next, you look for what the HEAD reference is so you know what to check out when you're finished:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:41
+#, no-wrap
+msgid ""
+"=> GET HEAD\n"
+"ref: refs/heads/master\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:46
+#, no-wrap
+msgid ""
+"You need to check out the `master` branch when you've completed the process.\n"
+"At this point, you're ready to start the walking process.\n"
+"Because your starting point is the `ca82a6` commit object you saw in the `info/refs` file, you start by fetching that:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:51
+#, no-wrap
+msgid ""
+"=> GET objects/ca/82a6dff817ec66f44342007202690a93763949\n"
+"(179 bytes of binary data)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:55
+#, no-wrap
+msgid ""
+"You get an object back â that object is in loose format on the server, and you fetched it over a static HTTP GET request.\n"
+"You can zlib-uncompress it, strip off the header, and look at the commit content:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:63
+#, no-wrap
+msgid ""
+"$ git cat-file -p ca82a6dff817ec66f44342007202690a93763949\n"
+"tree cfda3bf379e4f8dba8717dee55aab78aef7f4daf\n"
+"parent 085bb3bcb608e1e8451d4b2432f8ecbe6306e7e7\n"
+"author Scott Chacon <schacon@gmail.com> 1205815931 -0700\n"
+"committer Scott Chacon <schacon@gmail.com> 1240030591 -0700\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:65
+#, no-wrap
+msgid ""
+"Change version number\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:68
+#, no-wrap
+msgid "Next, you have two more objects to retrieve â `cfda3b`, which is the tree of content that the commit we just retrieved points to; and `085bb3`, which is the parent commit:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:73
+#, no-wrap
+msgid ""
+"=> GET objects/08/5bb3bcb608e1e8451d4b2432f8ecbe6306e7e7\n"
+"(179 bytes of data)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:77
+#, no-wrap
+msgid ""
+"That gives you your next commit object.\n"
+"Grab the tree object:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:82
+#, no-wrap
+msgid ""
+"=> GET objects/cf/da3bf379e4f8dba8717dee55aab78aef7f4daf\n"
+"(404 - Not Found)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:87
+#, no-wrap
+msgid ""
+"Oops â it looks like that tree object isn't in loose format on the server, so you get a 404 response back.\n"
+"There are a couple of reasons for this â the object could be in an alternate repository, or it could be in a packfile in this repository.\n"
+"Git checks for any listed alternates first:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:92
+#, no-wrap
+msgid ""
+"=> GET objects/info/http-alternates\n"
+"(empty file)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:97
+#, no-wrap
+msgid ""
+"If this comes back with a list of alternate URLs, Git checks for loose files and packfiles there â this is a nice mechanism for projects that are forks of one another to share objects on disk.\n"
+"However, because no alternates are listed in this case, your object must be in a packfile.\n"
+"To see what packfiles are available on this server, you need to get the `objects/info/packs` file, which contains a listing of them (also generated by `update-server-info`):\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:102
+#, no-wrap
+msgid ""
+"=> GET objects/info/packs\n"
+"P pack-816a9b2334da9953e530f27bcac22082a9f5b835.pack\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:106
+#, no-wrap
+msgid ""
+"There is only one packfile on the server, so your object is obviously in there, but you'll check the index file to make sure.\n"
+"This is also useful if you have multiple packfiles on the server, so you can see which packfile contains the object you need:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:111
+#, no-wrap
+msgid ""
+"=> GET objects/pack/pack-816a9b2334da9953e530f27bcac22082a9f5b835.idx\n"
+"(4k of binary data)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:115
+#, no-wrap
+msgid ""
+"Now that you have the packfile index, you can see if your object is in it â because the index lists the SHA-1s of the objects contained in the packfile and the offsets to those objects.\n"
+"Your object is there, so go ahead and get the whole packfile:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:120
+#, no-wrap
+msgid ""
+"=> GET objects/pack/pack-816a9b2334da9953e530f27bcac22082a9f5b835.pack\n"
+"(13k of binary data)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:125
+#, no-wrap
+msgid ""
+"You have your tree object, so you continue walking your commits.\n"
+"They're all also within the packfile you just downloaded, so you don't have to do any more requests to your server.\n"
+"Git checks out a working copy of the `master` branch that was pointed to by the HEAD reference you downloaded at the beginning.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:127
+#, no-wrap
+msgid "==== The Smart Protocol\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:131
+#, no-wrap
+msgid ""
+"The dumb protocol is simple but a bit inefficient, and it can't handle writing of data from the client to the server.\n"
+"The smart protocol is a more common method of transferring data, but it requires a process on the remote end that is intelligent about Git â it can read local data, figure out what the client has and needs, and generate a custom packfile for it.\n"
+"There are two sets of processes for transferring data: a pair for uploading data and a pair for downloading data.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:133
+#, no-wrap
+msgid "===== Uploading Data\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:137
+#, no-wrap
+msgid ""
+"(((git commands, send-pack)))(((git commands, receive-pack)))\n"
+"To upload data to a remote process, Git uses the `send-pack` and `receive-pack` processes.\n"
+"The `send-pack` process runs on the client and connects to a `receive-pack` process on the remote side.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:139
+#: book/10-git-internals/sections/transfer-protocols.asc:223
+#, no-wrap
+msgid "====== SSH\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:143
+#, no-wrap
+msgid ""
+"For example, say you run `git push origin master` in your project, and `origin` is defined as a URL that uses the SSH protocol.\n"
+"Git fires up the `send-pack` process, which initiates a connection over SSH to your server.\n"
+"It tries to run a command on the remote server via an SSH call that looks something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:151
+#, no-wrap
+msgid ""
+"$ ssh -x git@server \"git-receive-pack 'simplegit-progit.git'\"\n"
+"00a5ca82a6dff817ec66f4437202690a93763949 refs/heads/masterâ¡report-status \\\n"
+"\tdelete-refs side-band-64k quiet ofs-delta \\\n"
+"\tagent=git/2:2.1.1+github-607-gfba4028 delete-refs\n"
+"0000\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:155
+#, no-wrap
+msgid ""
+"The `git-receive-pack` command immediately responds with one line for each reference it currently has â in this case, just the `master` branch and its SHA-1.\n"
+"The first line also has a list of the server's capabilities (here, `report-status`, `delete-refs`, and some others, including the client identifier).\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:161
+#, no-wrap
+msgid ""
+"The data is transmitted in chunks.\n"
+"Each chunk starts with a 4-character hex value specifying how long the chunk is (including the 4 bytes of the length itself).\n"
+"Chunks usually contain a single line of data and a trailing linefeed.\n"
+"Your first chunk starts with 00a5, which is hexadecimal for 165, meaning the chunk is 165 bytes long.\n"
+"The next chunk is 0000, meaning the server is done with its references listing.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:165
+#, no-wrap
+msgid ""
+"Now that it knows the server's state, your `send-pack` process determines what commits it has that the server doesn't.\n"
+"For each reference that this push will update, the `send-pack` process tells the `receive-pack` process that information.\n"
+"For instance, if you're updating the `master` branch and adding an `experiment` branch, the `send-pack` response may look something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:173
+#, no-wrap
+msgid ""
+"0076ca82a6dff817ec66f44342007202690a93763949 15027957951b64cf874c3557a0f3547bd83b3ff6 \\\n"
+"\trefs/heads/master report-status\n"
+"006c0000000000000000000000000000000000000000 cdfdb42577e2506715f8cfeacdbabc092bf63e8d \\\n"
+"\trefs/heads/experiment\n"
+"0000\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:179
+#, no-wrap
+msgid ""
+"Git sends a line for each reference you're updating with the line's length, the old SHA-1, the new SHA-1, and the reference that is being updated.\n"
+"The first line also has the client's capabilities.\n"
+"The SHA-1 value of all '0's means that nothing was there before â because you're adding the experiment reference.\n"
+"If you were deleting a reference, you would see the opposite: all '0's on the right side.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:182
+#, no-wrap
+msgid ""
+"Next, the client sends a packfile of all the objects the server doesn't have yet.\n"
+"Finally, the server responds with a success (or failure) indication:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:186
+#, no-wrap
+msgid ""
+"000eunpack ok\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:189
+#: book/10-git-internals/sections/transfer-protocols.asc:259
+#, no-wrap
+msgid "====== HTTP(S)\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:192
+#, no-wrap
+msgid ""
+"This process is mostly the same over HTTP, though the handshaking is a bit different.\n"
+"The connection is initiated with this request:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:201
+#, no-wrap
+msgid ""
+"=> GET http://server/simplegit-progit.git/info/refs?service=git-receive-pack\n"
+"001f# service=git-receive-pack\n"
+"00ab6c5f0e45abd7832bf23074a333f739977c9e8188 refs/heads/masterâ¡report-status \\\n"
+"\tdelete-refs side-band-64k quiet ofs-delta \\\n"
+"\tagent=git/2:2.1.1~vmg-bitmaps-bugaloo-608-g116744e\n"
+"0000\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:205
+#, no-wrap
+msgid ""
+"That's the end of the first client-server exchange.\n"
+"The client then makes another request, this time a `POST`, with the data that `send-pack` provides.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:209
+#, no-wrap
+msgid ""
+"=> POST http://server/simplegit-progit.git/git-receive-pack\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:213
+#, no-wrap
+msgid ""
+"The `POST` request includes the `send-pack` output and the packfile as its payload.\n"
+"The server then indicates success or failure with its HTTP response.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:215
+#, no-wrap
+msgid "Keep in mind the HTTP protocol may further wrap this data inside a chunked transfer encoding.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:217
+#, no-wrap
+msgid "===== Downloading Data\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:221
+#, no-wrap
+msgid ""
+"(((git commands, fetch-pack)))(((git commands, upload-pack)))\n"
+"When you download data, the `fetch-pack` and `upload-pack` processes are involved.\n"
+"The client initiates a `fetch-pack` process that connects to an `upload-pack` process on the remote side to negotiate what data will be transferred down.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:225
+#, no-wrap
+msgid "If you're doing the fetch over SSH, `fetch-pack` runs something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:229
+#, no-wrap
+msgid ""
+"$ ssh -x git@server \"git-upload-pack 'simplegit-progit.git'\"\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:232
+#, no-wrap
+msgid "After `fetch-pack` connects, `upload-pack` sends back something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:241
+#, no-wrap
+msgid ""
+"00dfca82a6dff817ec66f44342007202690a93763949 HEADâ¡multi_ack thin-pack \\\n"
+"\tside-band side-band-64k ofs-delta shallow no-progress include-tag \\\n"
+"\tmulti_ack_detailed symref=HEAD:refs/heads/master \\\n"
+"\tagent=git/2:2.1.1+github-607-gfba4028\n"
+"003fe2409a098dc3e53539a9028a94b6224db9d6a6b6 refs/heads/master\n"
+"0000\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:245
+#, no-wrap
+msgid ""
+"This is very similar to what `receive-pack` responds with, but the capabilities are different.\n"
+"In addition, it sends back what HEAD points to (`symref=HEAD:refs/heads/master`) so the client knows what to check out if this is a clone.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:249
+#, no-wrap
+msgid ""
+"At this point, the `fetch-pack` process looks at what objects it has and responds with the objects that it needs by sending \"`want`\" and then the SHA-1 it wants.\n"
+"It sends all the objects it already has with \"`have`\" and then the SHA-1.\n"
+"At the end of this list, it writes \"`done`\" to initiate the `upload-pack` process to begin sending the packfile of the data it needs:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:256
+#, no-wrap
+msgid ""
+"003cwant ca82a6dff817ec66f44342007202690a93763949 ofs-delta\n"
+"0032have 085bb3bcb608e1e8451d4b2432f8ecbe6306e7e7\n"
+"0009done\n"
+"0000\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:262
+#, no-wrap
+msgid ""
+"The handshake for a fetch operation takes two HTTP requests.\n"
+"The first is a `GET` to the same endpoint used in the dumb protocol:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:273
+#, no-wrap
+msgid ""
+"=> GET $GIT_URL/info/refs?service=git-upload-pack\n"
+"001e# service=git-upload-pack\n"
+"00e7ca82a6dff817ec66f44342007202690a93763949 HEADâ¡multi_ack thin-pack \\\n"
+"\tside-band side-band-64k ofs-delta shallow no-progress include-tag \\\n"
+"\tmulti_ack_detailed no-done symref=HEAD:refs/heads/master \\\n"
+"\tagent=git/2:2.1.1+github-607-gfba4028\n"
+"003fca82a6dff817ec66f44342007202690a93763949 refs/heads/master\n"
+"0000\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:276
+#, no-wrap
+msgid "This is very similar to invoking `git-upload-pack` over an SSH connection, but the second exchange is performed as a separate request:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:283
+#, no-wrap
+msgid ""
+"=> POST $GIT_URL/git-upload-pack HTTP/1.0\n"
+"0032want 0a53e9ddeaddad63ad106860237bbf53411d11a7\n"
+"0032have 441b40d833fdfa93eb2908e52742248faf0ee993\n"
+"0000\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:287
+#, no-wrap
+msgid ""
+"Again, this is the same format as above.\n"
+"The response to this request indicates success or failure, and includes the packfile.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:289
+#, no-wrap
+msgid "==== Protocols Summary\n"
+msgstr ""
+
+#. type: Plain text
+#: book/10-git-internals/sections/transfer-protocols.asc:292
+#, no-wrap
+msgid ""
+"This section contains a very basic overview of the transfer protocols.\n"
+"The protocol includes many other features, such as `multi_ack` or `side-band` capabilities, but covering them is outside the scope of this book.\n"
+"We've tried to give you a sense of the general back-and-forth between client and server; if you need more knowledge than this, you'll probably want to take a look at the Git source code.\n"
+msgstr ""

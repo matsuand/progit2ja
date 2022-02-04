@@ -1,0 +1,3029 @@
+# Japanese translations for progit2
+# Copyright (C) 2022 Michio MATSUYAMA
+# This file is distributed under the same license as the progit2.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: progit2\n"
+"POT-Creation-Date: 2022-02-04 19:39+0900\n"
+"PO-Revision-Date: 2022-02-04 19:50+0900\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. type: Plain text
+#: A-git-in-other-environments.asc:4
+#, no-wrap
+msgid ""
+"[[A-git-in-other-environments]]\n"
+"[appendix]\n"
+"== Git in Other Environments\n"
+msgstr ""
+"[[A-git-in-other-environments]]\n"
+"[appendix]\n"
+"== 別環境内での Git\n"
+
+#. type: Plain text
+#: A-git-in-other-environments.asc:9
+#, no-wrap
+msgid ""
+"If you read through the whole book, you've learned a lot about how to use Git at the command line.\n"
+"You can work with local files, connect your repository to others over a network, and work effectively with others.\n"
+"But the story doesn't end there; Git is usually used as part of a larger ecosystem, and the terminal isn't always the best way to work with it.\n"
+"Now we'll take a look at some of the other kinds of environments where Git can be useful, and how other applications (including yours) work alongside Git.\n"
+msgstr ""
+
+#. type: Plain text
+#: A-git-in-other-environments.asc:11
+#, no-wrap
+msgid "include::book/A-git-in-other-environments/sections/guis.asc[]\n"
+msgstr "include::book/A-git-in-other-environments/sections/guis.asc[]\n"
+
+#. type: Plain text
+#: A-git-in-other-environments.asc:13
+#, no-wrap
+msgid "include::book/A-git-in-other-environments/sections/visualstudio.asc[]\n"
+msgstr "include::book/A-git-in-other-environments/sections/visualstudio.asc[]\n"
+
+#. type: Plain text
+#: A-git-in-other-environments.asc:15
+#, no-wrap
+msgid "include::book/A-git-in-other-environments/sections/visualstudiocode.asc[]\n"
+msgstr "include::book/A-git-in-other-environments/sections/visualstudiocode.asc[]\n"
+
+#. type: Plain text
+#: A-git-in-other-environments.asc:17
+#, no-wrap
+msgid "include::book/A-git-in-other-environments/sections/jetbrainsides.asc[]\n"
+msgstr "include::book/A-git-in-other-environments/sections/jetbrainsides.asc[]\n"
+
+#. type: Plain text
+#: A-git-in-other-environments.asc:19
+#, no-wrap
+msgid "include::book/A-git-in-other-environments/sections/sublimetext.asc[]\n"
+msgstr "include::book/A-git-in-other-environments/sections/sublimetext.asc[]\n"
+
+#. type: Plain text
+#: A-git-in-other-environments.asc:21
+#, no-wrap
+msgid "include::book/A-git-in-other-environments/sections/bash.asc[]\n"
+msgstr "include::book/A-git-in-other-environments/sections/bash.asc[]\n"
+
+#. type: Plain text
+#: A-git-in-other-environments.asc:23
+#, no-wrap
+msgid "include::book/A-git-in-other-environments/sections/zsh.asc[]\n"
+msgstr "include::book/A-git-in-other-environments/sections/zsh.asc[]\n"
+
+#. type: Plain text
+#: A-git-in-other-environments.asc:25
+#, no-wrap
+msgid "include::book/A-git-in-other-environments/sections/powershell.asc[]\n"
+msgstr "include::book/A-git-in-other-environments/sections/powershell.asc[]\n"
+
+#. type: Plain text
+#: A-git-in-other-environments.asc:27
+#: ch01-getting-started.asc:23
+#: ch02-git-basics-chapter.asc:24
+#: ch03-git-branching.asc:28
+#: ch04-git-on-the-server.asc:42
+#: ch05-distributed-git.asc:17
+#: ch06-github.asc:32
+#: ch07-git-tools.asc:38
+#: ch08-customizing-git.asc:17
+#: ch09-git-and-other-systems.asc:46
+#: ch10-git-internals.asc:35
+#, no-wrap
+msgid "=== Summary\n"
+msgstr "=== まとめ\n"
+
+#. type: Plain text
+#: A-git-in-other-environments.asc:28
+#, no-wrap
+msgid "You've learned how to harness Git's power from inside the tools that you use during your everyday work, and also how to access Git repositories from your own programs.\n"
+msgstr ""
+
+#. type: Plain text
+#: B-embedding-git-in-your-applications.asc:4
+#, no-wrap
+msgid ""
+"[[B-embedding-git-in-your-applications]]\n"
+"[appendix]\n"
+"== Embedding Git in your Applications\n"
+msgstr ""
+
+#. type: Plain text
+#: B-embedding-git-in-your-applications.asc:7
+#, no-wrap
+msgid ""
+"If your application is for developers, chances are good that it could benefit from integration with source control.\n"
+"Even non-developer applications, such as document editors, could potentially benefit from version-control features, and Git's model works very well for many different scenarios.\n"
+msgstr ""
+
+#. type: Plain text
+#: B-embedding-git-in-your-applications.asc:10
+#, no-wrap
+msgid ""
+"If you need to integrate Git with your application, you have essentially two options: spawn a shell and call the `git` command-line program, or embed a Git library into your application.\n"
+"Here we'll cover command-line integration and several of the most popular embeddable Git libraries.\n"
+msgstr ""
+
+#. type: Plain text
+#: B-embedding-git-in-your-applications.asc:12
+#, no-wrap
+msgid "include::book/B-embedding-git/sections/command-line.asc[]\n"
+msgstr "include::book/B-embedding-git/sections/command-line.asc[]\n"
+
+#. type: Plain text
+#: B-embedding-git-in-your-applications.asc:14
+#, no-wrap
+msgid "include::book/B-embedding-git/sections/libgit2.asc[]\n"
+msgstr "include::book/B-embedding-git/sections/libgit2.asc[]\n"
+
+#. type: Plain text
+#: B-embedding-git-in-your-applications.asc:16
+#, no-wrap
+msgid "include::book/B-embedding-git/sections/jgit.asc[]\n"
+msgstr "include::book/B-embedding-git/sections/jgit.asc[]\n"
+
+#. type: Plain text
+#: B-embedding-git-in-your-applications.asc:18
+#, no-wrap
+msgid "include::book/B-embedding-git/sections/go-git.asc[]\n"
+msgstr "include::book/B-embedding-git/sections/go-git.asc[]\n"
+
+#. type: Plain text
+#: B-embedding-git-in-your-applications.asc:20
+#, no-wrap
+msgid "include::book/B-embedding-git/sections/dulwich.asc[]\n"
+msgstr "include::book/B-embedding-git/sections/dulwich.asc[]\n"
+
+#. type: Plain text
+#: C-git-commands.asc:4
+#, no-wrap
+msgid ""
+"[[C-git-commands]]\n"
+"[appendix]\n"
+"== Git Commands\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:7
+#, no-wrap
+msgid ""
+"Throughout the book we have introduced dozens of Git commands and have tried hard to introduce them within something of a narrative, adding more commands to the story slowly.\n"
+"However, this leaves us with examples of usage of the commands somewhat scattered throughout the whole book.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:10
+#, no-wrap
+msgid ""
+"In this appendix, we'll go through all the Git commands we addressed throughout the book, grouped roughly by what they're used for.\n"
+"We'll talk about what each command very generally does and then point out where in the book you can find us having used it.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:12
+#, no-wrap
+msgid ""
+"[TIP]\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:17
+#, no-wrap
+msgid ""
+"You can abbreviate long options.\n"
+"For example, you can type in `git commit --a`, which acts as if you typed `git commit --amend`.\n"
+"This only works when the letters after `--` are unique for one option.\n"
+"Do use the full option when writing scripts.\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:20
+#, no-wrap
+msgid "=== Setup and Config\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:22
+#, no-wrap
+msgid "There are two commands that are used quite a lot, from the first invocations of Git to common every day tweaking and referencing, the `config` and `help` commands.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:24
+#, no-wrap
+msgid "==== git config\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:29
+#, no-wrap
+msgid ""
+"Git has a default way of doing hundreds of things.\n"
+"For a lot of these things, you can tell Git to default to doing them a different way, or set your preferences.\n"
+"This involves everything from telling Git what your name is to specific terminal color preferences or what editor you use.\n"
+"There are several files this command will read from and write to so you can set values globally or down to specific repositories.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:31
+#, no-wrap
+msgid "The `git config` command has been used in nearly every chapter of the book.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:33
+#, no-wrap
+msgid "In <<ch01-getting-started#_first_time>> we used it to specify our name, email address and editor preference before we even got started using Git.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:35
+#, no-wrap
+msgid "In <<ch02-git-basics-chapter#_git_aliases>> we showed how you could use it to create shorthand commands that expand to long option sequences so you don't have to type them every time.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:37
+#, no-wrap
+msgid "In <<ch03-git-branching#_rebasing>> we used it to make `--rebase` the default when you run `git pull`.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:39
+#, no-wrap
+msgid "In <<ch07-git-tools#_credential_caching>> we used it to set up a default store for your HTTP passwords.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:41
+#, no-wrap
+msgid "In <<ch08-customizing-git#_keyword_expansion>> we showed how to set up smudge and clean filters on content coming in and out of Git.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:43
+#, no-wrap
+msgid "Finally, basically the entirety of <<ch08-customizing-git#_git_config>> is dedicated to the command.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:46
+#, no-wrap
+msgid ""
+"[[ch_core_editor]]\n"
+"==== git config core.editor commands\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:48
+#, no-wrap
+msgid "Accompanying the configuration instructions in <<ch01-getting-started#_editor>>, many editors can be set as follows:\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:75
+#, no-wrap
+msgid ""
+".Exhaustive list of `core.editor` configuration commands\n"
+"[cols=\"1,2\",options=\"header\"]\n"
+"|==============================\n"
+"|Editor | Configuration command\n"
+"|Atom |`git config --global core.editor \"atom --wait\"`\n"
+"|BBEdit (Mac, with command line tools) |`git config --global core.editor \"bbedit -w\"`\n"
+"|Emacs |`git config --global core.editor emacs`\n"
+"|Gedit (Linux) |`git config --global core.editor \"gedit --wait --new-window\"`\n"
+"|Gvim (Windows 64-bit) |`git config --global core.editor \"'C:\\Program Files\\Vim\\vim72\\gvim.exe' --nofork '%*'\"` (Also see note below)\n"
+"|Kate (Linux) |`git config --global core.editor \"kate\"`\n"
+"|nano |`git config --global core.editor \"nano -w\"`\n"
+"|Notepad (Windows 64-bit) |`git config core.editor notepad`\n"
+"|Notepad++ (Windows 64-bit) |`git config --global core.editor \"'C:\\Program Files\\Notepad++\\notepad++.exe' -multiInst -notabbar -nosession -noPlugin\"` (Also see note below)\n"
+"|Scratch (Linux)|`git config --global core.editor \"scratch-text-editor\"`\n"
+"|Sublime Text (macOS) |`git config --global core.editor \"/Applications/Sublime\\ Text.app/Contents/SharedSupport/bin/subl --new-window --wait\"`\n"
+"|Sublime Text (Windows 64-bit) |`git config --global core.editor \"'C:\\Program Files\\Sublime Text 3\\sublime_text.exe' -w\"` (Also see note below)\n"
+"|TextEdit (macOS)|`git config --global core.editor \"open --wait-apps --new -e\"`\n"
+"|Textmate |`git config --global core.editor \"mate -w\"`\n"
+"|Textpad (Windows 64-bit) |`git config --global core.editor \"'C:\\Program Files\\TextPad 5\\TextPad.exe' -m` (Also see note below)\n"
+"|UltraEdit (Windows 64-bit) | `git config --global core.editor Uedit32`\n"
+"|Vim |`git config --global core.editor \"vim --nofork\"`\n"
+"|Visual Studio Code |`git config --global core.editor \"code --wait\"`\n"
+"|VSCodium (Free/Libre Open Source Software Binaries of VSCode) | `git config --global core.editor \"codium --wait\"`\n"
+"|WordPad |`git config --global core.editor '\"C:\\Program Files\\Windows NT\\Accessories\\wordpad.exe\"'\"`\n"
+"|Xi | `git config --global core.editor \"xi --wait\"`\n"
+"|==============================\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:77
+#, no-wrap
+msgid ""
+"[NOTE]\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:79
+#, no-wrap
+msgid ""
+"If you have a 32-bit editor on a Windows 64-bit system, the program will be installed in `C:\\Program Files (x86)\\` rather than `C:\\Program Files\\` as in the table above.\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:82
+#, no-wrap
+msgid "==== git help\n"
+msgstr "==== git help\n"
+
+#. type: Plain text
+#: C-git-commands.asc:85
+#, no-wrap
+msgid ""
+"The `git help` command is used to show you all the documentation shipped with Git about any command.\n"
+"While we're giving a rough overview of most of the more popular ones in this appendix, for a full listing of all of the possible options and flags for every command, you can always run `git help <command>`.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:87
+#, no-wrap
+msgid "We introduced the `git help` command in <<ch01-getting-started#_git_help>> and showed you how to use it to find more information about the `git shell` in <<ch04-git-on-the-server#_setting_up_server>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:90
+#, no-wrap
+msgid "=== Getting and Creating Projects\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:93
+#, no-wrap
+msgid ""
+"There are two ways to get a Git repository.\n"
+"One is to copy it from an existing repository on the network or elsewhere and the other is to create a new one in an existing directory.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:95
+#, no-wrap
+msgid "==== git init\n"
+msgstr "==== git init\n"
+
+#. type: Plain text
+#: C-git-commands.asc:97
+#, no-wrap
+msgid "To take a directory and turn it into a new Git repository so you can start version controlling it, you can simply run `git init`.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:99
+#, no-wrap
+msgid "We first introduce this in <<ch02-git-basics-chapter#_getting_a_repo>>, where we show creating a brand new repository to start working with.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:101
+#, no-wrap
+msgid "We talk briefly about how you can change the default branch name from \"`master`\" in <<ch03-git-branching#_remote_branches>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:103
+#, no-wrap
+msgid "We use this command to create an empty bare repository for a server in <<ch04-git-on-the-server#_bare_repo>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:105
+#, no-wrap
+msgid "Finally, we go through some of the details of what it actually does behind the scenes in <<ch10-git-internals#_plumbing_porcelain>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:107
+#, no-wrap
+msgid "==== git clone\n"
+msgstr "==== git clone\n"
+
+#. type: Plain text
+#: C-git-commands.asc:110
+#, no-wrap
+msgid ""
+"The `git clone` command is actually something of a wrapper around several other commands.\n"
+"It creates a new directory, goes into it and runs `git init` to make it an empty Git repository, adds a remote (`git remote add`) to the URL that you pass it (by default named `origin`), runs a `git fetch` from that remote repository and then checks out the latest commit into your working directory with `git checkout`.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:112
+#, no-wrap
+msgid "The `git clone` command is used in dozens of places throughout the book, but we'll just list a few interesting places.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:114
+#, no-wrap
+msgid "It's basically introduced and explained in <<ch02-git-basics-chapter#_git_cloning>>, where we go through a few examples.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:116
+#, no-wrap
+msgid "In <<ch04-git-on-the-server#_getting_git_on_a_server>> we look at using the `--bare` option to create a copy of a Git repository with no working directory.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:118
+#, no-wrap
+msgid "In <<ch07-git-tools#_bundling>> we use it to unbundle a bundled Git repository.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:120
+#, no-wrap
+msgid "Finally, in <<ch07-git-tools#_cloning_submodules>> we learn the `--recurse-submodules` option to make cloning a repository with submodules a little simpler.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:122
+#, no-wrap
+msgid "Though it's used in many other places through the book, these are the ones that are somewhat unique or where it is used in ways that are a little different.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:125
+#, no-wrap
+msgid "=== Basic Snapshotting\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:127
+#, no-wrap
+msgid "For the basic workflow of staging content and committing it to your history, there are only a few basic commands.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:129
+#, no-wrap
+msgid "==== git add\n"
+msgstr "==== git add\n"
+
+#. type: Plain text
+#: C-git-commands.asc:132
+#, no-wrap
+msgid ""
+"The `git add` command adds content from the working directory into the staging area (or \"`index`\") for the next commit.\n"
+"When the `git commit` command is run, by default it only looks at this staging area, so `git add` is used to craft what exactly you would like your next commit snapshot to look like.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:135
+#, no-wrap
+msgid ""
+"This command is an incredibly important command in Git and is mentioned or used dozens of times in this book.\n"
+"We'll quickly cover some of the unique uses that can be found.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:137
+#, no-wrap
+msgid "We first introduce and explain `git add` in detail in <<ch02-git-basics-chapter#_tracking_files>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:139
+#, no-wrap
+msgid "We mention how to use it to resolve merge conflicts in <<ch03-git-branching#_basic_merge_conflicts>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:141
+#, no-wrap
+msgid "We go over using it to interactively stage only specific parts of a modified file in <<ch07-git-tools#_interactive_staging>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:143
+#, no-wrap
+msgid "Finally, we emulate it at a low level in <<ch10-git-internals#_tree_objects>>, so you can get an idea of what it's doing behind the scenes.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:145
+#, no-wrap
+msgid "==== git status\n"
+msgstr "==== git status\n"
+
+#. type: Plain text
+#: C-git-commands.asc:149
+#, no-wrap
+msgid ""
+"The `git status` command will show you the different states of files in your working directory and staging area.\n"
+"Which files are modified and unstaged and which are staged but not yet committed.\n"
+"In its normal form, it also will show you some basic hints on how to move files between these stages.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:152
+#, no-wrap
+msgid ""
+"We first cover `status` in <<ch02-git-basics-chapter#_checking_status>>, both in its basic and simplified forms.\n"
+"While we use it throughout the book, pretty much everything you can do with the `git status` command is covered there.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:154
+#, no-wrap
+msgid "==== git diff\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:157
+#, no-wrap
+msgid ""
+"The `git diff` command is used when you want to see differences between any two trees.\n"
+"This could be the difference between your working environment and your staging area (`git diff` by itself), between your staging area and your last commit (`git diff --staged`), or between two commits (`git diff master branchB`).\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:159
+#, no-wrap
+msgid "We first look at the basic uses of `git diff` in <<ch02-git-basics-chapter#_git_diff_staged>>, where we show how to see what changes are staged and which are not yet staged.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:161
+#, no-wrap
+msgid "We use it to look for possible whitespace issues before committing with the `--check` option in <<ch05-distributed-git#_commit_guidelines>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:163
+#, no-wrap
+msgid "We see how to check the differences between branches more effectively with the `git diff A...B` syntax in <<ch05-distributed-git#_what_is_introduced>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:165
+#, no-wrap
+msgid "We use it to filter out whitespace differences with `-b` and how to compare different stages of conflicted files with `--theirs`, `--ours` and `--base` in <<ch07-git-tools#_advanced_merging>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:167
+#, no-wrap
+msgid "Finally, we use it to effectively compare submodule changes with `--submodule` in <<ch07-git-tools#_starting_submodules>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:169
+#, no-wrap
+msgid "==== git difftool\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:171
+#, no-wrap
+msgid "The `git difftool` command simply launches an external tool to show you the difference between two trees in case you want to use something other than the built in `git diff` command.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:173
+#, no-wrap
+msgid "We only briefly mention this in <<ch02-git-basics-chapter#_git_diff_staged>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:175
+#, no-wrap
+msgid "==== git commit\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:177
+#, no-wrap
+msgid "The `git commit` command takes all the file contents that have been staged with `git add` and records a new permanent snapshot in the database and then moves the branch pointer on the current branch up to it.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:180
+#, no-wrap
+msgid ""
+"We first cover the basics of committing in <<ch02-git-basics-chapter#_committing_changes>>.\n"
+"There we also demonstrate how to use the `-a` flag to skip the `git add` step in daily workflows and how to use the `-m` flag to pass a commit message in on the command line instead of firing up an editor.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:182
+#, no-wrap
+msgid "In <<ch02-git-basics-chapter#_undoing>> we cover using the `--amend` option to redo the most recent commit.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:184
+#, no-wrap
+msgid "In <<ch03-git-branching#_git_branches_overview>>, we go into much more detail about what `git commit` does and why it does it like that.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:186
+#, no-wrap
+msgid "We looked at how to sign commits cryptographically with the `-S` flag in <<ch07-git-tools#_signing_commits>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:188
+#, no-wrap
+msgid "Finally, we take a look at what the `git commit` command does in the background and how it's actually implemented in <<ch10-git-internals#_git_commit_objects>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:190
+#, no-wrap
+msgid "==== git reset\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:194
+#, no-wrap
+msgid ""
+"The `git reset` command is primarily used to undo things, as you can possibly tell by the verb.\n"
+"It moves around the `HEAD` pointer and optionally changes the `index` or staging area and can also optionally change the working directory if you use `--hard`.\n"
+"This final option makes it possible for this command to lose your work if used incorrectly, so make sure you understand it before using it.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:196
+#, no-wrap
+msgid "We first effectively cover the simplest use of `git reset` in <<ch02-git-basics-chapter#_unstaging>>, where we use it to unstage a file we had run `git add` on.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:198
+#, no-wrap
+msgid "We then cover it in quite some detail in <<ch07-git-tools#_git_reset>>, which is entirely devoted to explaining this command.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:200
+#, no-wrap
+msgid "We use `git reset --hard` to abort a merge in <<ch07-git-tools#_abort_merge>>, where we also use `git merge --abort`, which is a bit of a wrapper for the `git reset` command.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:202
+#, no-wrap
+msgid "==== git rm\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:205
+#, no-wrap
+msgid ""
+"The `git rm` command is used to remove files from the staging area and working directory for Git.\n"
+"It is similar to `git add` in that it stages a removal of a file for the next commit.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:207
+#, no-wrap
+msgid "We cover the `git rm` command in some detail in <<ch02-git-basics-chapter#_removing_files>>, including recursively removing files and only removing files from the staging area but leaving them in the working directory with `--cached`.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:210
+#, no-wrap
+msgid ""
+"The only other differing use of `git rm` in the book is in <<ch10-git-internals#_removing_objects>> where we briefly use and explain the `--ignore-unmatch` when running `git filter-branch`, which simply makes it not error out when the file we are trying to remove doesn't exist.\n"
+"This can be useful for scripting purposes.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:212
+#, no-wrap
+msgid "==== git mv\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:214
+#, no-wrap
+msgid "The `git mv` command is a thin convenience command to move a file and then run `git add` on the new file and `git rm` on the old file.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:216
+#, no-wrap
+msgid "We only briefly mention this command in <<ch02-git-basics-chapter#_git_mv>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:218
+#, no-wrap
+msgid "==== git clean\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:221
+#, no-wrap
+msgid ""
+"The `git clean` command is used to remove unwanted files from your working directory.\n"
+"This could include removing temporary build artifacts or merge conflict files.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:223
+#, no-wrap
+msgid "We cover many of the options and scenarios in which you might used the clean command in <<ch07-git-tools#_git_clean>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:225
+#, no-wrap
+msgid "=== Branching and Merging\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:227
+#, no-wrap
+msgid "There are just a handful of commands that implement most of the branching and merging functionality in Git.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:229
+#, no-wrap
+msgid "==== git branch\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:232
+#, no-wrap
+msgid ""
+"The `git branch` command is actually something of a branch management tool.\n"
+"It can list the branches you have, create a new branch, delete branches and rename branches.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:235
+#, no-wrap
+msgid ""
+"Most of <<ch03-git-branching#ch03-git-branching>> is dedicated to the `branch` command and it's used throughout the entire chapter.\n"
+"We first introduce it in <<ch03-git-branching#_create_new_branch>> and we go through most of its other features (listing and deleting) in <<ch03-git-branching#_branch_management>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:237
+#, no-wrap
+msgid "In <<ch03-git-branching#_tracking_branches>> we use the `git branch -u` option to set up a tracking branch.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:239
+#, no-wrap
+msgid "Finally, we go through some of what it does in the background in <<ch10-git-internals#_git_refs>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:241
+#, no-wrap
+msgid "==== git checkout\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:243
+#, no-wrap
+msgid "The `git checkout` command is used to switch branches and check content out into your working directory.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:245
+#, no-wrap
+msgid "We first encounter the command in <<ch03-git-branching#_switching_branches>> along with the `git branch` command.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:247
+#, no-wrap
+msgid "We see how to use it to start tracking branches with the `--track` flag in <<ch03-git-branching#_tracking_branches>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:249
+#, no-wrap
+msgid "We use it to reintroduce file conflicts with `--conflict=diff3` in <<ch07-git-tools#_checking_out_conflicts>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:251
+#, no-wrap
+msgid "We go into closer detail on its relationship with `git reset` in <<ch07-git-tools#_git_reset>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:253
+#, no-wrap
+msgid "Finally, we go into some implementation detail in <<ch10-git-internals#ref_the_ref>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:255
+#, no-wrap
+msgid "==== git merge\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:258
+#, no-wrap
+msgid ""
+"The `git merge` tool is used to merge one or more branches into the branch you have checked out.\n"
+"It will then advance the current branch to the result of the merge.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:261
+#, no-wrap
+msgid ""
+"The `git merge` command was first introduced in <<ch03-git-branching#_basic_branching>>.\n"
+"Though it is used in various places in the book, there are very few variations of the `merge` command -- generally just `git merge <branch>` with the name of the single branch you want to merge in.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:263
+#, no-wrap
+msgid "We covered how to do a squashed merge (where Git merges the work but pretends like it's just a new commit without recording the history of the branch you're merging in) at the very end of <<ch05-distributed-git#_public_project>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:265
+#, no-wrap
+msgid "We went over a lot about the merge process and command, including the `-Xignore-space-change` command and the `--abort` flag to abort a problem merge in <<ch07-git-tools#_advanced_merging>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:267
+#, no-wrap
+msgid "We learned how to verify signatures before merging if your project is using GPG signing in <<ch07-git-tools#_signing_commits>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:269
+#, no-wrap
+msgid "Finally, we learned about Subtree merging in <<ch07-git-tools#_subtree_merge>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:271
+#, no-wrap
+msgid "==== git mergetool\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:273
+#, no-wrap
+msgid "The `git mergetool` command simply launches an external merge helper in case you have issues with a merge in Git.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:275
+#, no-wrap
+msgid "We mention it quickly in <<ch03-git-branching#_basic_merge_conflicts>> and go into detail on how to implement your own external merge tool in <<ch08-customizing-git#_external_merge_tools>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:277
+#, no-wrap
+msgid "==== git log\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:281
+#, no-wrap
+msgid ""
+"The `git log` command is used to show the reachable recorded history of a project from the most recent commit snapshot backwards.\n"
+"By default it will only show the history of the branch you're currently on, but can be given different or even multiple heads or branches from which to traverse.\n"
+"It is also often used to show differences between two or more branches at the commit level.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:283
+#, no-wrap
+msgid "This command is used in nearly every chapter of the book to demonstrate the history of a project.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:286
+#, no-wrap
+msgid ""
+"We introduce the command and cover it in some depth in <<ch02-git-basics-chapter#_viewing_history>>.\n"
+"There we look at the `-p` and `--stat` option to get an idea of what was introduced in each commit and the `--pretty` and `--oneline` options to view the history more concisely, along with some simple date and author filtering options.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:288
+#, no-wrap
+msgid "In <<ch03-git-branching#_create_new_branch>> we use it with the `--decorate` option to easily visualize where our branch pointers are located and we also use the `--graph` option to see what divergent histories look like.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:291
+#, no-wrap
+msgid ""
+"In <<ch05-distributed-git#_private_team>> and <<ch07-git-tools#_commit_ranges>> we cover the `branchA..branchB` syntax to use the `git log` command to see what commits are unique to a branch relative to another branch.\n"
+"In <<ch07-git-tools#_commit_ranges>> we go through this fairly extensively.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:294
+#, no-wrap
+msgid ""
+"In <<ch07-git-tools#_merge_log>> and <<ch07-git-tools#_triple_dot>> we cover using the `branchA...branchB` format and the `--left-right` syntax to see what is in one branch or the other but not in both.\n"
+"In <<ch07-git-tools#_merge_log>> we also look at how to use the `--merge` option to help with merge conflict debugging as well as using the `--cc` option to look at merge commit conflicts in your history.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:296
+#, no-wrap
+msgid "In <<ch07-git-tools#_git_reflog>> we use the `-g` option to view the Git reflog through this tool instead of doing branch traversal.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:298
+#, no-wrap
+msgid "In <<ch07-git-tools#_searching>> we look at using the `-S` and `-L` options to do fairly sophisticated searches for something that happened historically in the code such as seeing the history of a function.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:300
+#, no-wrap
+msgid "In <<ch07-git-tools#_signing_commits>> we see how to use `--show-signature` to add a validation string to each commit in the `git log` output based on if it was validly signed or not.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:302
+#, no-wrap
+msgid "==== git stash\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:304
+#, no-wrap
+msgid "The `git stash` command is used to temporarily store uncommitted work in order to clean out your working directory without having to commit unfinished work on a branch.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:306
+#, no-wrap
+msgid "This is basically entirely covered in <<ch07-git-tools#_git_stashing>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:308
+#, no-wrap
+msgid "==== git tag\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:311
+#, no-wrap
+msgid ""
+"The `git tag` command is used to give a permanent bookmark to a specific point in the code history.\n"
+"Generally this is used for things like releases.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:313
+#, no-wrap
+msgid "This command is introduced and covered in detail in <<ch02-git-basics-chapter#_git_tagging>> and we use it in practice in <<ch05-distributed-git#_tagging_releases>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:315
+#, no-wrap
+msgid "We also cover how to create a GPG signed tag with the `-s` flag and verify one with the `-v` flag in <<ch07-git-tools#_signing>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:318
+#, no-wrap
+msgid "=== Sharing and Updating Projects\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:321
+#, no-wrap
+msgid ""
+"There are not very many commands in Git that access the network, nearly all of the commands operate on the local database.\n"
+"When you are ready to share your work or pull changes from elsewhere, there are a handful of commands that deal with remote repositories.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:323
+#, no-wrap
+msgid "==== git fetch\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:325
+#, no-wrap
+msgid "The `git fetch` command communicates with a remote repository and fetches down all the information that is in that repository that is not in your current one and stores it in your local database.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:327
+#, no-wrap
+msgid "We first look at this command in <<ch02-git-basics-chapter#_fetching_and_pulling>> and we continue to see examples of its use in <<ch03-git-branching#_remote_branches>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:329
+#, no-wrap
+msgid "We also use it in several of the examples in <<ch05-distributed-git#_contributing_project>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:331
+#, no-wrap
+msgid "We use it to fetch a single specific reference that is outside of the default space in <<ch06-github#_pr_refs>> and we see how to fetch from a bundle in <<ch07-git-tools#_bundling>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:333
+#, no-wrap
+msgid "We set up highly custom refspecs in order to make `git fetch` do something a little different than the default in <<ch10-git-internals#_refspec>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:335
+#, no-wrap
+msgid "==== git pull\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:337
+#, no-wrap
+msgid "The `git pull` command is basically a combination of the `git fetch` and `git merge` commands, where Git will fetch from the remote you specify and then immediately try to merge it into the branch you're on.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:339
+#, no-wrap
+msgid "We introduce it quickly in <<ch02-git-basics-chapter#_fetching_and_pulling>> and show how to see what it will merge if you run it in <<ch02-git-basics-chapter#_inspecting_remote>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:341
+#, no-wrap
+msgid "We also see how to use it to help with rebasing difficulties in <<ch03-git-branching#_rebase_rebase>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:343
+#, no-wrap
+msgid "We show how to use it with a URL to pull in changes in a one-off fashion in <<ch05-distributed-git#_checking_out_remotes>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:345
+#, no-wrap
+msgid "Finally, we very quickly mention that you can use the `--verify-signatures` option to it in order to verify that commits you are pulling have been GPG signed in <<ch07-git-tools#_signing_commits>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:347
+#, no-wrap
+msgid "==== git push\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:350
+#, no-wrap
+msgid ""
+"The `git push` command is used to communicate with another repository, calculate what your local database has that the remote one does not, and then pushes the difference into the other repository.\n"
+"It requires write access to the other repository and so normally is authenticated somehow.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:355
+#, no-wrap
+msgid ""
+"We first look at the `git push` command in <<ch02-git-basics-chapter#_pushing_remotes>>.\n"
+"Here we cover the basics of pushing a branch to a remote repository.\n"
+"In <<ch03-git-branching#_pushing_branches>> we go a little deeper into pushing specific branches and in <<ch03-git-branching#_tracking_branches>> we see how to set up tracking branches to automatically push to.\n"
+"In <<ch03-git-branching#_delete_branches>> we use the `--delete` flag to delete a branch on the server with `git push`.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:357
+#, no-wrap
+msgid "Throughout <<ch05-distributed-git#_contributing_project>> we see several examples of using `git push` to share work on branches through multiple remotes.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:359
+#, no-wrap
+msgid "We see how to use it to share tags that you have made with the `--tags` option in <<ch02-git-basics-chapter#_sharing_tags>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:361
+#, no-wrap
+msgid "In <<ch07-git-tools#_publishing_submodules>> we use the `--recurse-submodules` option to check that all of our submodules work has been published before pushing the superproject, which can be really helpful when using submodules.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:363
+#, no-wrap
+msgid "In <<ch08-customizing-git#_other_client_hooks>> we talk briefly about the `pre-push` hook, which is a script we can setup to run before a push completes to verify that it should be allowed to push.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:366
+#, no-wrap
+msgid ""
+"Finally, in <<ch10-git-internals#_pushing_refspecs>> we look at pushing with a full refspec instead of the general shortcuts that are normally used.\n"
+"This can help you be very specific about what work you wish to share.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:368
+#, no-wrap
+msgid "==== git remote\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:372
+#, no-wrap
+msgid ""
+"The `git remote` command is a management tool for your record of remote repositories.\n"
+"It allows you to save long URLs as short handles, such as \"`origin`\" so you don't have to type them out all the time.\n"
+"You can have several of these and the `git remote` command is used to add, change and delete them.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:374
+#, no-wrap
+msgid "This command is covered in detail in <<ch02-git-basics-chapter#_remote_repos>>, including listing, adding, removing and renaming them.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:376
+#, no-wrap
+msgid "It is used in nearly every subsequent chapter in the book too, but always in the standard `git remote add <name> <url>` format.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:378
+#, no-wrap
+msgid "==== git archive\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:380
+#, no-wrap
+msgid "The `git archive` command is used to create an archive file of a specific snapshot of the project.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:382
+#, no-wrap
+msgid "We use `git archive` to create a tarball of a project for sharing in <<ch05-distributed-git#_preparing_release>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:384
+#, no-wrap
+msgid "==== git submodule\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:388
+#, no-wrap
+msgid ""
+"The `git submodule` command is used to manage external repositories within a normal repositories.\n"
+"This could be for libraries or other types of shared resources.\n"
+"The `submodule` command has several sub-commands (`add`, `update`, `sync`, etc) for managing these resources.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:390
+#, no-wrap
+msgid "This command is only mentioned and entirely covered in <<ch07-git-tools#_git_submodules>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:392
+#, no-wrap
+msgid "=== Inspection and Comparison\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:394
+#, no-wrap
+msgid "==== git show\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:397
+#, no-wrap
+msgid ""
+"The `git show` command can show a Git object in a simple and human readable way.\n"
+"Normally you would use this to show the information about a tag or a commit.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:399
+#, no-wrap
+msgid "We first use it to show annotated tag information in <<ch02-git-basics-chapter#_annotated_tags>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:401
+#, no-wrap
+msgid "Later we use it quite a bit in <<ch07-git-tools#_revision_selection>> to show the commits that our various revision selections resolve to.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:403
+#, no-wrap
+msgid "One of the more interesting things we do with `git show` is in <<ch07-git-tools#_manual_remerge>> to extract specific file contents of various stages during a merge conflict.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:405
+#, no-wrap
+msgid "==== git shortlog\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:408
+#, no-wrap
+msgid ""
+"The `git shortlog` command is used to summarize the output of `git log`.\n"
+"It will take many of the same options that the `git log` command will but instead of listing out all of the commits it will present a summary of the commits grouped by author.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:410
+#, no-wrap
+msgid "We showed how to use it to create a nice changelog in <<ch05-distributed-git#_the_shortlog>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:412
+#, no-wrap
+msgid "==== git describe\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:415
+#, no-wrap
+msgid ""
+"The `git describe` command is used to take anything that resolves to a commit and produces a string that is somewhat human-readable and will not change.\n"
+"It's a way to get a description of a commit that is as unambiguous as a commit SHA-1 but more understandable.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:417
+#, no-wrap
+msgid "We use `git describe` in <<ch05-distributed-git#_build_number>> and <<ch05-distributed-git#_preparing_release>> to get a string to name our release file after.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:420
+#, no-wrap
+msgid "=== Debugging\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:423
+#, no-wrap
+msgid ""
+"Git has a couple of commands that are used to help debug an issue in your code.\n"
+"This ranges from figuring out where something was introduced to figuring out who introduced it.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:425
+#, no-wrap
+msgid "==== git bisect\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:427
+#, no-wrap
+msgid "The `git bisect` tool is an incredibly helpful debugging tool used to find which specific commit was the first one to introduce a bug or problem by doing an automatic binary search.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:429
+#, no-wrap
+msgid "It is fully covered in <<ch07-git-tools#_binary_search>> and is only mentioned in that section.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:431
+#, no-wrap
+msgid "==== git blame\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:434
+#, no-wrap
+msgid ""
+"The `git blame` command annotates the lines of any file with which commit was the last one to introduce a change to each line of the file and what person authored that commit.\n"
+"This is helpful in order to find the person to ask for more information about a specific section of your code.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:436
+#, no-wrap
+msgid "It is covered in <<ch07-git-tools#_file_annotation>> and is only mentioned in that section.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:438
+#, no-wrap
+msgid "==== git grep\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:440
+#, no-wrap
+msgid "The `git grep` command can help you find any string or regular expression in any of the files in your source code, even older versions of your project.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:442
+#, no-wrap
+msgid "It is covered in <<ch07-git-tools#_git_grep>> and is only mentioned in that section.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:444
+#, no-wrap
+msgid "=== Patching\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:447
+#, no-wrap
+msgid ""
+"A few commands in Git are centered around the concept of thinking of commits in terms of the changes they introduce, as though the commit series is a series of patches.\n"
+"These commands help you manage your branches in this manner.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:449
+#, no-wrap
+msgid "==== git cherry-pick\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:452
+#, no-wrap
+msgid ""
+"The `git cherry-pick` command is used to take the change introduced in a single Git commit and try to re-introduce it as a new commit on the branch you're currently on.\n"
+"This can be useful to only take one or two commits from a branch individually rather than merging in the branch which takes all the changes.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:454
+#, no-wrap
+msgid "Cherry picking is described and demonstrated in <<ch05-distributed-git#_rebase_cherry_pick>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:456
+#, no-wrap
+msgid "==== git rebase\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:459
+#, no-wrap
+msgid ""
+"The `git rebase` command is basically an automated `cherry-pick`.\n"
+"It determines a series of commits and then cherry-picks them one by one in the same order somewhere else.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:461
+#, no-wrap
+msgid "Rebasing is covered in detail in <<ch03-git-branching#_rebasing>>, including covering the collaborative issues involved with rebasing branches that are already public.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:463
+#, no-wrap
+msgid "We use it in practice during an example of splitting your history into two separate repositories in <<ch07-git-tools#_replace>>, using the `--onto` flag as well.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:465
+#, no-wrap
+msgid "We go through running into a merge conflict during rebasing in <<ch07-git-tools#ref_rerere>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:467
+#, no-wrap
+msgid "We also use it in an interactive scripting mode with the `-i` option in <<ch07-git-tools#_changing_multiple>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:469
+#, no-wrap
+msgid "==== git revert\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:472
+#, no-wrap
+msgid ""
+"The `git revert` command is essentially a reverse `git cherry-pick`.\n"
+"It creates a new commit that applies the exact opposite of the change introduced in the commit you're targeting, essentially undoing or reverting it.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:474
+#, no-wrap
+msgid "We use this in <<ch07-git-tools#_reverse_commit>> to undo a merge commit.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:476
+#, no-wrap
+msgid "=== Email\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:479
+#, no-wrap
+msgid ""
+"Many Git projects, including Git itself, are entirely maintained over mailing lists.\n"
+"Git has a number of tools built into it that help make this process easier, from generating patches you can easily email to applying those patches from an email box.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:481
+#, no-wrap
+msgid "==== git apply\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:484
+#, no-wrap
+msgid ""
+"The `git apply` command applies a patch created with the `git diff` or even GNU diff command.\n"
+"It is similar to what the `patch` command might do with a few small differences.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:486
+#, no-wrap
+msgid "We demonstrate using it and the circumstances in which you might do so in <<ch05-distributed-git#_patches_from_email>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:488
+#, no-wrap
+msgid "==== git am\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:491
+#, no-wrap
+msgid ""
+"The `git am` command is used to apply patches from an email inbox, specifically one that is mbox formatted.\n"
+"This is useful for receiving patches over email and applying them to your project easily.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:493
+#, no-wrap
+msgid "We covered usage and workflow around `git am` in <<ch05-distributed-git#_git_am>> including using the `--resolved`, `-i` and `-3` options.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:495
+#, no-wrap
+msgid "There are also a number of hooks you can use to help with the workflow around `git am` and they are all covered in <<ch08-customizing-git#_email_hooks>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:497
+#, no-wrap
+msgid "We also use it to apply patch formatted GitHub Pull Request changes in <<ch06-github#_email_notifications>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:499
+#, no-wrap
+msgid "==== git format-patch\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:501
+#, no-wrap
+msgid "The `git format-patch` command is used to generate a series of patches in mbox format that you can use to send to a mailing list properly formatted.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:503
+#, no-wrap
+msgid "We go through an example of contributing to a project using the `git format-patch` tool in <<ch05-distributed-git#_project_over_email>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:505
+#, no-wrap
+msgid "==== git imap-send\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:507
+#, no-wrap
+msgid "The `git imap-send` command uploads a mailbox generated with `git format-patch` into an IMAP drafts folder.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:509
+#, no-wrap
+msgid "We go through an example of contributing to a project by sending patches with the `git imap-send` tool in <<ch05-distributed-git#_project_over_email>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:511
+#, no-wrap
+msgid "==== git send-email\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:513
+#, no-wrap
+msgid "The `git send-email` command is used to send patches that are generated with `git format-patch` over email.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:515
+#, no-wrap
+msgid "We go through an example of contributing to a project by sending patches with the `git send-email` tool in <<ch05-distributed-git#_project_over_email>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:517
+#, no-wrap
+msgid "==== git request-pull\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:520
+#, no-wrap
+msgid ""
+"The `git request-pull` command is simply used to generate an example message body to email to someone.\n"
+"If you have a branch on a public server and want to let someone know how to integrate those changes without sending the patches over email, you can run this command and send the output to the person you want to pull the changes in.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:522
+#, no-wrap
+msgid "We demonstrate how to use `git request-pull` to generate a pull message in <<ch05-distributed-git#_public_project>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:524
+#, no-wrap
+msgid "=== External Systems\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:526
+#, no-wrap
+msgid "Git comes with a few commands to integrate with other version control systems.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:528
+#, no-wrap
+msgid "==== git svn\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:531
+#, no-wrap
+msgid ""
+"The `git svn` command is used to communicate with the Subversion version control system as a client.\n"
+"This means you can use Git to checkout from and commit to a Subversion server.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:533
+#, no-wrap
+msgid "This command is covered in depth in <<ch09-git-and-other-systems#_git_svn>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:535
+#, no-wrap
+msgid "==== git fast-import\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:537
+#, no-wrap
+msgid "For other version control systems or importing from nearly any format, you can use `git fast-import` to quickly map the other format to something Git can easily record.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:539
+#, no-wrap
+msgid "This command is covered in depth in <<ch09-git-and-other-systems#_custom_importer>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:541
+#, no-wrap
+msgid "=== Administration\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:543
+#, no-wrap
+msgid "If you're administering a Git repository or need to fix something in a big way, Git provides a number of administrative commands to help you out.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:545
+#, no-wrap
+msgid "==== git gc\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:547
+#, no-wrap
+msgid "The `git gc` command runs \"`garbage collection`\" on your repository, removing unnecessary files in your database and packing up the remaining files into a more efficient format.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:550
+#, no-wrap
+msgid ""
+"This command normally runs in the background for you, though you can manually run it if you wish.\n"
+"We go over some examples of this in <<ch10-git-internals#_git_gc>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:552
+#, no-wrap
+msgid "==== git fsck\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:554
+#, no-wrap
+msgid "The `git fsck` command is used to check the internal database for problems or inconsistencies.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:556
+#, no-wrap
+msgid "We only quickly use this once in <<ch10-git-internals#_data_recovery>> to search for dangling objects.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:558
+#, no-wrap
+msgid "==== git reflog\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:560
+#, no-wrap
+msgid "The `git reflog` command goes through a log of where all the heads of your branches have been as you work to find commits you may have lost through rewriting histories.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:562
+#, no-wrap
+msgid "We cover this command mainly in <<ch07-git-tools#_git_reflog>>, where we show normal usage to and how to use `git log -g` to view the same information with `git log` output.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:564
+#, no-wrap
+msgid "We also go through a practical example of recovering such a lost branch in <<ch10-git-internals#_data_recovery>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:566
+#, no-wrap
+msgid "==== git filter-branch\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:568
+#, no-wrap
+msgid "The `git filter-branch` command is used to rewrite loads of commits according to certain patterns, like removing a file everywhere or filtering the entire repository down to a single subdirectory for extracting a project.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:570
+#, no-wrap
+msgid "In <<ch07-git-tools#_removing_file_every_commit>> we explain the command and explore several different options such as `--commit-filter`, `--subdirectory-filter` and `--tree-filter`.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:572
+#, no-wrap
+msgid "In <<ch09-git-and-other-systems#_git_p4>> we use it to fix up imported external repositories.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:575
+#, no-wrap
+msgid "=== Plumbing Commands\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:577
+#, no-wrap
+msgid "There were also quite a number of lower level plumbing commands that we encountered in the book.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:579
+#, no-wrap
+msgid "The first one we encounter is `ls-remote` in <<ch06-github#_pr_refs>> which we use to look at the raw references on the server.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:581
+#, no-wrap
+msgid "We use `ls-files` in <<ch07-git-tools#_manual_remerge>>, <<ch07-git-tools#ref_rerere>> and <<ch07-git-tools#_the_index>> to take a more raw look at what your staging area looks like.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:583
+#, no-wrap
+msgid "We also mention `rev-parse` in <<ch07-git-tools#_branch_references>> to take just about any string and turn it into an object SHA-1.\n"
+msgstr ""
+
+#. type: Plain text
+#: C-git-commands.asc:585
+#, no-wrap
+msgid ""
+"However, most of the low level plumbing commands we cover are in <<ch10-git-internals#ch10-git-internals>>, which is more or less what the chapter is focused on.\n"
+"We tried to avoid use of them throughout most of the rest of the book.\n"
+msgstr ""
+
+#. type: Plain text
+#: LICENSE.asc:2
+#, no-wrap
+msgid ""
+"This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.\n"
+"To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0 or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.\n"
+msgstr ""
+
+#. type: Plain text
+#: README.asc:2
+#, no-wrap
+msgid "= Pro Git, Second Edition\n"
+msgstr ""
+
+#. type: Plain text
+#: README.asc:4
+#, no-wrap
+msgid "Welcome to the second edition of the Pro Git book.\n"
+msgstr ""
+
+#. type: Plain text
+#: README.asc:6
+#, no-wrap
+msgid "You can find this book online at: https://git-scm.com/book\n"
+msgstr ""
+
+#. type: Plain text
+#: README.asc:8
+#, no-wrap
+msgid "Like the first edition, the second edition of Pro Git is open source under a Creative Commons license.\n"
+msgstr ""
+
+#. type: Plain text
+#: README.asc:11
+#, no-wrap
+msgid ""
+"A couple of things have changed since open sourcing the first edition.\n"
+"For one, we've moved from Markdown to the amazing AsciiDoc format for the text of the book; here's an https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/[AsciiDoc quick reference].\n"
+msgstr ""
+
+#. type: Plain text
+#: README.asc:14
+#, no-wrap
+msgid ""
+"We've also moved to keeping the translations in separate repositories rather than subdirectories of the English repository.\n"
+"See link:TRANSLATING.md[the translating document] for more information.\n"
+msgstr ""
+
+#. type: Plain text
+#: README.asc:16
+#, no-wrap
+msgid "== How To Generate the Book\n"
+msgstr ""
+
+#. type: Plain text
+#: README.asc:19
+#, no-wrap
+msgid ""
+"You can generate the e-book files manually with Asciidoctor.\n"
+"If you run the following you _may_ actually get HTML, Epub, Mobi and PDF output files:\n"
+msgstr ""
+
+#. type: Plain text
+#: README.asc:20
+#: README.asc:38
+#: README.asc:44
+#: README.asc:50
+#: README.asc:56
+#, no-wrap
+msgid "----\n"
+msgstr ""
+
+#. type: Plain text
+#: README.asc:31
+#, no-wrap
+msgid ""
+"$ bundle install\n"
+"$ bundle exec rake book:build\n"
+"Converting to HTML...\n"
+" -- HTML output at progit.html\n"
+"Converting to EPub...\n"
+" -- Epub output at progit.epub\n"
+"Converting to Mobi (kf8)...\n"
+" -- Mobi output at progit.mobi\n"
+"Converting to PDF...\n"
+" -- PDF output at progit.pdf\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: README.asc:35
+#, no-wrap
+msgid ""
+"You can generate just one of the supported formats (HTML, EPUB, mobi, or PDF).\n"
+"Use one of the following commands:\n"
+msgstr ""
+
+#. type: Plain text
+#: README.asc:37
+#, no-wrap
+msgid "To generate the HTML book:\n"
+msgstr ""
+
+#. type: Plain text
+#: README.asc:40
+#, no-wrap
+msgid ""
+"$ bundle exec rake book:build_html\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: README.asc:43
+#, no-wrap
+msgid "To generate the EPUB book:\n"
+msgstr ""
+
+#. type: Plain text
+#: README.asc:46
+#, no-wrap
+msgid ""
+"$ bundle exec rake book:build_epub\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: README.asc:49
+#, no-wrap
+msgid "To generate the mobi book:\n"
+msgstr ""
+
+#. type: Plain text
+#: README.asc:52
+#, no-wrap
+msgid ""
+"$ bundle exec rake book:build_mobi\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: README.asc:55
+#, no-wrap
+msgid "To generate the PDF book:\n"
+msgstr ""
+
+#. type: Plain text
+#: README.asc:58
+#, no-wrap
+msgid ""
+"$ bundle exec rake book:build_pdf\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: README.asc:61
+#, no-wrap
+msgid "== Signaling an Issue\n"
+msgstr ""
+
+#. type: Plain text
+#: README.asc:63
+#, no-wrap
+msgid "Before signaling an issue, please check that there isn't already a similar one in the bug tracking system.\n"
+msgstr ""
+
+#. type: Plain text
+#: README.asc:66
+#, no-wrap
+msgid ""
+"Also, if this issue has been spotted on the git-scm.com site, please cross-check that it is still present in this repo.\n"
+"The issue may have already been corrected, but the changes have not been deployed yet.\n"
+msgstr ""
+
+#. type: Plain text
+#: README.asc:68
+#, no-wrap
+msgid "== Contributing\n"
+msgstr ""
+
+#. type: Plain text
+#: README.asc:69
+#, no-wrap
+msgid "If you'd like to help out by making a change, take a look at the link:CONTRIBUTING.md[contributor's guide].\n"
+msgstr ""
+
+#. type: Plain text
+#: TRANSLATION_NOTES.asc:2
+#, no-wrap
+msgid "== Translation Notes\n"
+msgstr ""
+
+#. type: Plain text
+#: TRANSLATION_NOTES.asc:5
+#, no-wrap
+msgid ""
+"After forking this repository to translate the work, this file is where the notes for coordinating the translation work would go.\n"
+"Things like standardizing on words and expressions so that the work is consistent or notes on how the contributing process is to be handled.\n"
+msgstr ""
+
+#. type: Plain text
+#: TRANSLATION_NOTES.asc:7
+#, no-wrap
+msgid "As a translation maintainer, also feel free to modify or completely rewrite the README file to contain instructions specific to your translation.\n"
+msgstr ""
+
+#. type: Plain text
+#: TRANSLATION_NOTES.asc:9
+#, no-wrap
+msgid "=== Translation Status\n"
+msgstr ""
+
+#. type: Plain text
+#: TRANSLATION_NOTES.asc:11
+#, no-wrap
+msgid ""
+"As the work is translated, please update the `status.json` file to indicate the rough percentage complete each file is.\n"
+"This will be shown on various pages to let people know how much work is left to be done.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch01-getting-started.asc:3
+#, no-wrap
+msgid ""
+"[[ch01-getting-started]]\n"
+"== Getting Started\n"
+msgstr ""
+
+#. type: Plain text
+#: ch01-getting-started.asc:7
+#, no-wrap
+msgid ""
+"This chapter will be about getting started with Git.\n"
+"We will begin by explaining some background on version control tools, then move on to how to get Git running on your system and finally how to get it set up to start working with.\n"
+"At the end of this chapter you should understand why Git is around, why you should use it and you should be all set up to do so.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch01-getting-started.asc:9
+#, no-wrap
+msgid "include::book/01-introduction/sections/about-version-control.asc[]\n"
+msgstr "include::book/01-introduction/sections/about-version-control.asc[]\n"
+
+#. type: Plain text
+#: ch01-getting-started.asc:11
+#, no-wrap
+msgid "include::book/01-introduction/sections/history.asc[]\n"
+msgstr "include::book/01-introduction/sections/history.asc[]\n"
+
+#. type: Plain text
+#: ch01-getting-started.asc:13
+#, no-wrap
+msgid "include::book/01-introduction/sections/what-is-git.asc[]\n"
+msgstr "include::book/01-introduction/sections/what-is-git.asc[]\n"
+
+#. type: Plain text
+#: ch01-getting-started.asc:15
+#, no-wrap
+msgid "include::book/01-introduction/sections/command-line.asc[]\n"
+msgstr "include::book/01-introduction/sections/command-line.asc[]\n"
+
+#. type: Plain text
+#: ch01-getting-started.asc:17
+#, no-wrap
+msgid "include::book/01-introduction/sections/installing.asc[]\n"
+msgstr "include::book/01-introduction/sections/installing.asc[]\n"
+
+#. type: Plain text
+#: ch01-getting-started.asc:19
+#, no-wrap
+msgid "include::book/01-introduction/sections/first-time-setup.asc[]\n"
+msgstr "include::book/01-introduction/sections/first-time-setup.asc[]\n"
+
+#. type: Plain text
+#: ch01-getting-started.asc:21
+#, no-wrap
+msgid "include::book/01-introduction/sections/help.asc[]\n"
+msgstr "include::book/01-introduction/sections/help.asc[]\n"
+
+#. type: Plain text
+#: ch01-getting-started.asc:26
+#, no-wrap
+msgid ""
+"You should have a basic understanding of what Git is and how it's different from any centralized version control systems you may have been using previously.\n"
+"You should also now have a working version of Git on your system that's set up with your personal identity.\n"
+"It's now time to learn some Git basics.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch02-git-basics-chapter.asc:3
+#, no-wrap
+msgid ""
+"[[ch02-git-basics-chapter]]\n"
+"== Git Basics\n"
+msgstr ""
+"[[ch02-git-basics-chapter]]\n"
+"== Git の基本\n"
+
+#. type: Plain text
+#: ch02-git-basics-chapter.asc:8
+#, no-wrap
+msgid ""
+"If you can read only one chapter to get going with Git, this is it.\n"
+"This chapter covers every basic command you need to do the vast majority of the things you'll eventually spend your time doing with Git.\n"
+"By the end of the chapter, you should be able to configure and initialize a repository, begin and stop tracking files, and stage and commit changes.\n"
+"We'll also show you how to set up Git to ignore certain files and file patterns, how to undo mistakes quickly and easily, how to browse the history of your project and view changes between commits, and how to push and pull from remote repositories.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch02-git-basics-chapter.asc:10
+#, no-wrap
+msgid "include::book/02-git-basics/sections/getting-a-repository.asc[]\n"
+msgstr "include::book/02-git-basics/sections/getting-a-repository.asc[]\n"
+
+#. type: Plain text
+#: ch02-git-basics-chapter.asc:12
+#, no-wrap
+msgid "include::book/02-git-basics/sections/recording-changes.asc[]\n"
+msgstr "include::book/02-git-basics/sections/recording-changes.asc[]\n"
+
+#. type: Plain text
+#: ch02-git-basics-chapter.asc:14
+#, no-wrap
+msgid "include::book/02-git-basics/sections/viewing-history.asc[]\n"
+msgstr "include::book/02-git-basics/sections/viewing-history.asc[]\n"
+
+#. type: Plain text
+#: ch02-git-basics-chapter.asc:16
+#, no-wrap
+msgid "include::book/02-git-basics/sections/undoing.asc[]\n"
+msgstr "include::book/02-git-basics/sections/undoing.asc[]\n"
+
+#. type: Plain text
+#: ch02-git-basics-chapter.asc:18
+#, no-wrap
+msgid "include::book/02-git-basics/sections/remotes.asc[]\n"
+msgstr "include::book/02-git-basics/sections/remotes.asc[]\n"
+
+#. type: Plain text
+#: ch02-git-basics-chapter.asc:20
+#, no-wrap
+msgid "include::book/02-git-basics/sections/tagging.asc[]\n"
+msgstr "include::book/02-git-basics/sections/tagging.asc[]\n"
+
+#. type: Plain text
+#: ch02-git-basics-chapter.asc:22
+#, no-wrap
+msgid "include::book/02-git-basics/sections/aliases.asc[]\n"
+msgstr "include::book/02-git-basics/sections/aliases.asc[]\n"
+
+#. type: Plain text
+#: ch02-git-basics-chapter.asc:26
+#, no-wrap
+msgid ""
+"At this point, you can do all the basic local Git operations -- creating or cloning a repository, making changes, staging and committing those changes, and viewing the history of all the changes the repository has been through.\n"
+"Next, we'll cover Git's killer feature: its branching model.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch03-git-branching.asc:3
+#, no-wrap
+msgid ""
+"[[ch03-git-branching]]\n"
+"== Git Branching\n"
+msgstr ""
+"[[ch03-git-branching]]\n"
+"== Git のブランチ処理\n"
+
+#. type: Plain text
+#: ch03-git-branching.asc:8
+#, no-wrap
+msgid ""
+"(((branches)))\n"
+"Nearly every VCS has some form of branching support.\n"
+"Branching means you diverge from the main line of development and continue to do work without messing with that main line.\n"
+"In many VCS tools, this is a somewhat expensive process, often requiring you to create a new copy of your source code directory, which can take a long time for large projects.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch03-git-branching.asc:14
+#, no-wrap
+msgid ""
+"Some people refer to Git's branching model as its \"`killer feature,`\" and it certainly sets Git apart in the VCS community.\n"
+"Why is it so special?\n"
+"The way Git branches is incredibly lightweight, making branching operations nearly instantaneous, and switching back and forth between branches generally just as fast.\n"
+"Unlike many other VCSs, Git encourages workflows that branch and merge often, even multiple times in a day.\n"
+"Understanding and mastering this feature gives you a powerful and unique tool and can entirely change the way that you develop.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch03-git-branching.asc:16
+#, no-wrap
+msgid "include::book/03-git-branching/sections/nutshell.asc[]\n"
+msgstr "include::book/03-git-branching/sections/nutshell.asc[]\n"
+
+#. type: Plain text
+#: ch03-git-branching.asc:18
+#, no-wrap
+msgid "include::book/03-git-branching/sections/basic-branching-and-merging.asc[]\n"
+msgstr "include::book/03-git-branching/sections/basic-branching-and-merging.asc[]\n"
+
+#. type: Plain text
+#: ch03-git-branching.asc:20
+#, no-wrap
+msgid "include::book/03-git-branching/sections/branch-management.asc[]\n"
+msgstr "include::book/03-git-branching/sections/branch-management.asc[]\n"
+
+#. type: Plain text
+#: ch03-git-branching.asc:22
+#, no-wrap
+msgid "include::book/03-git-branching/sections/workflows.asc[]\n"
+msgstr "include::book/03-git-branching/sections/workflows.asc[]\n"
+
+#. type: Plain text
+#: ch03-git-branching.asc:24
+#, no-wrap
+msgid "include::book/03-git-branching/sections/remote-branches.asc[]\n"
+msgstr "include::book/03-git-branching/sections/remote-branches.asc[]\n"
+
+#. type: Plain text
+#: ch03-git-branching.asc:26
+#, no-wrap
+msgid "include::book/03-git-branching/sections/rebasing.asc[]\n"
+msgstr "include::book/03-git-branching/sections/rebasing.asc[]\n"
+
+#. type: Plain text
+#: ch03-git-branching.asc:32
+#, no-wrap
+msgid ""
+"We've covered basic branching and merging in Git.\n"
+"You should feel comfortable creating and switching to new branches, switching between branches and merging local branches together.\n"
+"You should also be able to share your branches by pushing them to a shared server, working with others on shared branches and rebasing your branches before they are shared.\n"
+"Next, we'll cover what you'll need to run your own Git repository-hosting server.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch04-git-on-the-server.asc:3
+#, no-wrap
+msgid ""
+"[[ch04-git-on-the-server]]\n"
+"== Git on the Server\n"
+msgstr ""
+
+#. type: Plain text
+#: ch04-git-on-the-server.asc:10
+#, no-wrap
+msgid ""
+"(((serving repositories)))\n"
+"At this point, you should be able to do most of the day-to-day tasks for which you'll be using Git.\n"
+"However, in order to do any collaboration in Git, you'll need to have a remote Git repository.\n"
+"Although you can technically push changes to and pull changes from individuals' repositories, doing so is discouraged because you can fairly easily confuse what they're working on if you're not careful.\n"
+"Furthermore, you want your collaborators to be able to access the repository even if your computer is offline -- having a more reliable common repository is often useful.\n"
+"Therefore, the preferred method for collaborating with someone is to set up an intermediate repository that you both have access to, and push to and pull from that.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch04-git-on-the-server.asc:16
+#, no-wrap
+msgid ""
+"Running a Git server is fairly straightforward.\n"
+"First, you choose which protocols you want your server to support.\n"
+"The first section of this chapter will cover the available protocols and the pros and cons of each.\n"
+"The next sections will explain some typical setups using those protocols and how to get your server running with them.\n"
+"Last, we'll go over a few hosted options, if you don't mind hosting your code on someone else's server and don't want to go through the hassle of setting up and maintaining your own server.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch04-git-on-the-server.asc:18
+#, no-wrap
+msgid "If you have no interest in running your own server, you can skip to the last section of the chapter to see some options for setting up a hosted account and then move on to the next chapter, where we discuss the various ins and outs of working in a distributed source control environment.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch04-git-on-the-server.asc:22
+#, no-wrap
+msgid ""
+"A remote repository is generally a _bare repository_ -- a Git repository that has no working directory.\n"
+"Because the repository is only used as a collaboration point, there is no reason to have a snapshot checked out on disk; it's just the Git data.\n"
+"In the simplest terms, a bare repository is the contents of your project's `.git` directory and nothing else.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch04-git-on-the-server.asc:24
+#, no-wrap
+msgid "include::book/04-git-server/sections/protocols.asc[]\n"
+msgstr "include::book/04-git-server/sections/protocols.asc[]\n"
+
+#. type: Plain text
+#: ch04-git-on-the-server.asc:26
+#, no-wrap
+msgid "include::book/04-git-server/sections/git-on-a-server.asc[]\n"
+msgstr "include::book/04-git-server/sections/git-on-a-server.asc[]\n"
+
+#. type: Plain text
+#: ch04-git-on-the-server.asc:28
+#, no-wrap
+msgid "include::book/04-git-server/sections/generating-ssh-key.asc[]\n"
+msgstr "include::book/04-git-server/sections/generating-ssh-key.asc[]\n"
+
+#. type: Plain text
+#: ch04-git-on-the-server.asc:30
+#, no-wrap
+msgid "include::book/04-git-server/sections/setting-up-server.asc[]\n"
+msgstr "include::book/04-git-server/sections/setting-up-server.asc[]\n"
+
+#. type: Plain text
+#: ch04-git-on-the-server.asc:32
+#, no-wrap
+msgid "include::book/04-git-server/sections/git-daemon.asc[]\n"
+msgstr "include::book/04-git-server/sections/git-daemon.asc[]\n"
+
+#. type: Plain text
+#: ch04-git-on-the-server.asc:34
+#, no-wrap
+msgid "include::book/04-git-server/sections/smart-http.asc[]\n"
+msgstr "include::book/04-git-server/sections/smart-http.asc[]\n"
+
+#. type: Plain text
+#: ch04-git-on-the-server.asc:36
+#, no-wrap
+msgid "include::book/04-git-server/sections/gitweb.asc[]\n"
+msgstr "include::book/04-git-server/sections/gitweb.asc[]\n"
+
+#. type: Plain text
+#: ch04-git-on-the-server.asc:38
+#, no-wrap
+msgid "include::book/04-git-server/sections/gitlab.asc[]\n"
+msgstr "include::book/04-git-server/sections/gitlab.asc[]\n"
+
+#. type: Plain text
+#: ch04-git-on-the-server.asc:40
+#, no-wrap
+msgid "include::book/04-git-server/sections/hosted.asc[]\n"
+msgstr "include::book/04-git-server/sections/hosted.asc[]\n"
+
+#. type: Plain text
+#: ch04-git-on-the-server.asc:44
+#, no-wrap
+msgid "You have several options to get a remote Git repository up and running so that you can collaborate with others or share your work.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch04-git-on-the-server.asc:47
+#, no-wrap
+msgid ""
+"Running your own server gives you a lot of control and allows you to run the server within your own firewall, but such a server generally requires a fair amount of your time to set up and maintain.\n"
+"If you place your data on a hosted server, it's easy to set up and maintain; however, you have to be able to keep your code on someone else's servers, and some organizations don't allow that.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch04-git-on-the-server.asc:48
+#, no-wrap
+msgid "It should be fairly straightforward to determine which solution or combination of solutions is appropriate for you and your organization.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch05-distributed-git.asc:3
+#, no-wrap
+msgid ""
+"[[ch05-distributed-git]]\n"
+"== Distributed Git\n"
+msgstr ""
+
+#. type: Plain text
+#: ch05-distributed-git.asc:6
+#, no-wrap
+msgid ""
+"(((distributed git)))\n"
+"Now that you have a remote Git repository set up as a focal point for all the developers to share their code, and you're familiar with basic Git commands in a local workflow, you'll look at how to utilize some of the distributed workflows that Git affords you.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch05-distributed-git.asc:9
+#, no-wrap
+msgid ""
+"In this chapter, you'll see how to work with Git in a distributed environment as a contributor and an integrator.\n"
+"That is, you'll learn how to contribute code successfully to a project and make it as easy on you and the project maintainer as possible, and also how to maintain a project successfully with a number of developers contributing.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch05-distributed-git.asc:11
+#, no-wrap
+msgid "include::book/05-distributed-git/sections/distributed-workflows.asc[]\n"
+msgstr "include::book/05-distributed-git/sections/distributed-workflows.asc[]\n"
+
+#. type: Plain text
+#: ch05-distributed-git.asc:13
+#, no-wrap
+msgid "include::book/05-distributed-git/sections/contributing.asc[]\n"
+msgstr "include::book/05-distributed-git/sections/contributing.asc[]\n"
+
+#. type: Plain text
+#: ch05-distributed-git.asc:15
+#, no-wrap
+msgid "include::book/05-distributed-git/sections/maintaining.asc[]\n"
+msgstr "include::book/05-distributed-git/sections/maintaining.asc[]\n"
+
+#. type: Plain text
+#: ch05-distributed-git.asc:20
+#, no-wrap
+msgid ""
+"You should feel fairly comfortable contributing to a project in Git as well as maintaining your own project or integrating other users' contributions.\n"
+"Congratulations on being an effective Git developer!\n"
+"In the next chapter, you'll learn about how to use the largest and most popular Git hosting service, GitHub.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch06-github.asc:3
+#, no-wrap
+msgid ""
+"[[ch06-github]]\n"
+"== GitHub\n"
+msgstr ""
+"[[ch06-github]]\n"
+"== GitHub\n"
+
+#. type: Plain text
+#: ch06-github.asc:8
+#, no-wrap
+msgid ""
+"(((GitHub)))\n"
+"GitHub is the single largest host for Git repositories, and is the central point of collaboration for millions of developers and projects.\n"
+"A large percentage of all Git repositories are hosted on GitHub, and many open-source projects use it for Git hosting, issue tracking, code review, and other things.\n"
+"So while it's not a direct part of the Git open source project, there's a good chance that you'll want or need to interact with GitHub at some point while using Git professionally.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch06-github.asc:11
+#, no-wrap
+msgid ""
+"This chapter is about using GitHub effectively.\n"
+"We'll cover signing up for and managing an account, creating and using Git repositories, common workflows to contribute to projects and to accept contributions to yours, GitHub's programmatic interface and lots of little tips to make your life easier in general.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch06-github.asc:13
+#, no-wrap
+msgid "If you are not interested in using GitHub to host your own projects or to collaborate with other projects that are hosted on GitHub, you can safely skip to <<ch07-git-tools#ch07-git-tools>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch06-github.asc:16
+#, no-wrap
+msgid ""
+"[WARNING]\n"
+".Interfaces Change\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: ch06-github.asc:19
+#, no-wrap
+msgid ""
+"It's important to note that like many active websites, the UI elements in these screenshots are bound to change over time.\n"
+"Hopefully the general idea of what we're trying to accomplish here will still be there, but if you want more up to date versions of these screens, the online versions of this book may have newer screenshots.\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: ch06-github.asc:22
+#, no-wrap
+msgid "include::book/06-github/sections/1-setting-up-account.asc[]\n"
+msgstr "include::book/06-github/sections/1-setting-up-account.asc[]\n"
+
+#. type: Plain text
+#: ch06-github.asc:24
+#, no-wrap
+msgid "include::book/06-github/sections/2-contributing.asc[]\n"
+msgstr "include::book/06-github/sections/2-contributing.asc[]\n"
+
+#. type: Plain text
+#: ch06-github.asc:26
+#, no-wrap
+msgid "include::book/06-github/sections/3-maintaining.asc[]\n"
+msgstr "include::book/06-github/sections/3-maintaining.asc[]\n"
+
+#. type: Plain text
+#: ch06-github.asc:28
+#, no-wrap
+msgid "include::book/06-github/sections/4-managing-organization.asc[]\n"
+msgstr "include::book/06-github/sections/4-managing-organization.asc[]\n"
+
+#. type: Plain text
+#: ch06-github.asc:30
+#, no-wrap
+msgid "include::book/06-github/sections/5-scripting.asc[]\n"
+msgstr "include::book/06-github/sections/5-scripting.asc[]\n"
+
+#. type: Plain text
+#: ch06-github.asc:35
+#, no-wrap
+msgid ""
+"Now you're a GitHub user.\n"
+"You know how to create an account, manage an organization, create and push to repositories, contribute to other people's projects and accept contributions from others.\n"
+"In the next chapter, you'll learn more powerful tools and tips for dealing with complex situations, which will truly make you a Git master.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch07-git-tools.asc:3
+#, no-wrap
+msgid ""
+"[[ch07-git-tools]]\n"
+"== Git Tools\n"
+msgstr ""
+
+#. type: Plain text
+#: ch07-git-tools.asc:6
+#, no-wrap
+msgid ""
+"By now, you've learned most of the day-to-day commands and workflows that you need to manage or maintain a Git repository for your source code control.\n"
+"You've accomplished the basic tasks of tracking and committing files, and you've harnessed the power of the staging area and lightweight topic branching and merging.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch07-git-tools.asc:8
+#, no-wrap
+msgid "Now you'll explore a number of very powerful things that Git can do that you may not necessarily use on a day-to-day basis but that you may need at some point.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch07-git-tools.asc:10
+#, no-wrap
+msgid "include::book/07-git-tools/sections/revision-selection.asc[]\n"
+msgstr "include::book/07-git-tools/sections/revision-selection.asc[]\n"
+
+#. type: Plain text
+#: ch07-git-tools.asc:12
+#, no-wrap
+msgid "include::book/07-git-tools/sections/interactive-staging.asc[]\n"
+msgstr "include::book/07-git-tools/sections/interactive-staging.asc[]\n"
+
+#. type: Plain text
+#: ch07-git-tools.asc:14
+#, no-wrap
+msgid "include::book/07-git-tools/sections/stashing-cleaning.asc[]\n"
+msgstr "include::book/07-git-tools/sections/stashing-cleaning.asc[]\n"
+
+#. type: Plain text
+#: ch07-git-tools.asc:16
+#, no-wrap
+msgid "include::book/07-git-tools/sections/signing.asc[]\n"
+msgstr "include::book/07-git-tools/sections/signing.asc[]\n"
+
+#. type: Plain text
+#: ch07-git-tools.asc:18
+#, no-wrap
+msgid "include::book/07-git-tools/sections/searching.asc[]\n"
+msgstr "include::book/07-git-tools/sections/searching.asc[]\n"
+
+#. type: Plain text
+#: ch07-git-tools.asc:20
+#, no-wrap
+msgid "include::book/07-git-tools/sections/rewriting-history.asc[]\n"
+msgstr "include::book/07-git-tools/sections/rewriting-history.asc[]\n"
+
+#. type: Plain text
+#: ch07-git-tools.asc:22
+#, no-wrap
+msgid "include::book/07-git-tools/sections/reset.asc[]\n"
+msgstr "include::book/07-git-tools/sections/reset.asc[]\n"
+
+#. type: Plain text
+#: ch07-git-tools.asc:24
+#, no-wrap
+msgid "include::book/07-git-tools/sections/advanced-merging.asc[]\n"
+msgstr "include::book/07-git-tools/sections/advanced-merging.asc[]\n"
+
+#. type: Plain text
+#: ch07-git-tools.asc:26
+#, no-wrap
+msgid "include::book/07-git-tools/sections/rerere.asc[]\n"
+msgstr "include::book/07-git-tools/sections/rerere.asc[]\n"
+
+#. type: Plain text
+#: ch07-git-tools.asc:28
+#, no-wrap
+msgid "include::book/07-git-tools/sections/debugging.asc[]\n"
+msgstr "include::book/07-git-tools/sections/debugging.asc[]\n"
+
+#. type: Plain text
+#: ch07-git-tools.asc:30
+#, no-wrap
+msgid "include::book/07-git-tools/sections/submodules.asc[]\n"
+msgstr "include::book/07-git-tools/sections/submodules.asc[]\n"
+
+#. type: Plain text
+#: ch07-git-tools.asc:32
+#, no-wrap
+msgid "include::book/07-git-tools/sections/bundling.asc[]\n"
+msgstr "include::book/07-git-tools/sections/bundling.asc[]\n"
+
+#. type: Plain text
+#: ch07-git-tools.asc:34
+#, no-wrap
+msgid "include::book/07-git-tools/sections/replace.asc[]\n"
+msgstr "include::book/07-git-tools/sections/replace.asc[]\n"
+
+#. type: Plain text
+#: ch07-git-tools.asc:36
+#, no-wrap
+msgid "include::book/07-git-tools/sections/credentials.asc[]\n"
+msgstr "include::book/07-git-tools/sections/credentials.asc[]\n"
+
+#. type: Plain text
+#: ch07-git-tools.asc:42
+#, no-wrap
+msgid ""
+"You've seen a number of advanced tools that allow you to manipulate your commits and staging area more precisely.\n"
+"When you notice issues, you should be able to easily figure out what commit introduced them, when, and by whom.\n"
+"If you want to use subprojects in your project, you've learned how to accommodate those needs.\n"
+"At this point, you should be able to do most of the things in Git that you'll need on the command line day to day and feel comfortable doing so.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch08-customizing-git.asc:3
+#, no-wrap
+msgid ""
+"[[ch08-customizing-git]]\n"
+"== Customizing Git\n"
+msgstr ""
+
+#. type: Plain text
+#: ch08-customizing-git.asc:7
+#, no-wrap
+msgid ""
+"So far, we've covered the basics of how Git works and how to use it, and we've introduced a number of tools that Git provides to help you use it easily and efficiently.\n"
+"In this chapter, we'll see how you can make Git operate in a more customized fashion, by introducing several important configuration settings and the hooks system.\n"
+"With these tools, it's easy to get Git to work exactly the way you, your company, or your group needs it to.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch08-customizing-git.asc:9
+#, no-wrap
+msgid "include::book/08-customizing-git/sections/config.asc[]\n"
+msgstr "include::book/08-customizing-git/sections/config.asc[]\n"
+
+#. type: Plain text
+#: ch08-customizing-git.asc:11
+#, no-wrap
+msgid "include::book/08-customizing-git/sections/attributes.asc[]\n"
+msgstr "include::book/08-customizing-git/sections/attributes.asc[]\n"
+
+#. type: Plain text
+#: ch08-customizing-git.asc:13
+#, no-wrap
+msgid "include::book/08-customizing-git/sections/hooks.asc[]\n"
+msgstr "include::book/08-customizing-git/sections/hooks.asc[]\n"
+
+#. type: Plain text
+#: ch08-customizing-git.asc:15
+#, no-wrap
+msgid "include::book/08-customizing-git/sections/policy.asc[]\n"
+msgstr "include::book/08-customizing-git/sections/policy.asc[]\n"
+
+#. type: Plain text
+#: ch08-customizing-git.asc:20
+#, no-wrap
+msgid ""
+"We've covered most of the major ways that you can customize your Git client and server to best fit your workflow and projects.\n"
+"You've learned about all sorts of configuration settings, file-based attributes, and event hooks, and you've built an example policy-enforcing server.\n"
+"You should now be able to make Git fit nearly any workflow you can dream up.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch09-git-and-other-systems.asc:3
+#, no-wrap
+msgid ""
+"[[ch09-git-and-other-systems]]\n"
+"== Git and Other Systems\n"
+msgstr ""
+
+#. type: Plain text
+#: ch09-git-and-other-systems.asc:8
+#, no-wrap
+msgid ""
+"The world isn't perfect.\n"
+"Usually, you can't immediately switch every project you come in contact with to Git.\n"
+"Sometimes you're stuck on a project using another VCS, and wish it was Git.\n"
+"We'll spend the first part of this chapter learning about ways to use Git as a client when the project you're working on is hosted in a different system.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch09-git-and-other-systems.asc:11
+#, no-wrap
+msgid ""
+"At some point, you may want to convert your existing project to Git.\n"
+"The second part of this chapter covers how to migrate your project into Git from several specific systems, as well as a method that will work if no pre-built import tool exists.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch09-git-and-other-systems.asc:13
+#, no-wrap
+msgid "=== Git as a Client\n"
+msgstr ""
+
+#. type: Plain text
+#: ch09-git-and-other-systems.asc:18
+#, no-wrap
+msgid ""
+"(((Git as a client)))\n"
+"Git provides such a nice experience for developers that many people have figured out how to use it on their workstation, even if the rest of their team is using an entirely different VCS.\n"
+"There are a number of these adapters, called \"`bridges,`\" available.\n"
+"Here we'll cover the ones you're most likely to run into in the wild.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch09-git-and-other-systems.asc:20
+#, no-wrap
+msgid "include::book/09-git-and-other-scms/sections/client-svn.asc[]\n"
+msgstr "include::book/09-git-and-other-scms/sections/client-svn.asc[]\n"
+
+#. type: Plain text
+#: ch09-git-and-other-systems.asc:22
+#, no-wrap
+msgid "include::book/09-git-and-other-scms/sections/client-hg.asc[]\n"
+msgstr "include::book/09-git-and-other-scms/sections/client-hg.asc[]\n"
+
+#. type: Plain text
+#: ch09-git-and-other-systems.asc:24
+#, no-wrap
+msgid "include::book/09-git-and-other-scms/sections/client-bzr.asc[]\n"
+msgstr "include::book/09-git-and-other-scms/sections/client-bzr.asc[]\n"
+
+#. type: Plain text
+#: ch09-git-and-other-systems.asc:26
+#, no-wrap
+msgid "include::book/09-git-and-other-scms/sections/client-p4.asc[]\n"
+msgstr "include::book/09-git-and-other-scms/sections/client-p4.asc[]\n"
+
+#. type: Plain text
+#: ch09-git-and-other-systems.asc:29
+#, no-wrap
+msgid ""
+"[[_migrating]]\n"
+"=== Migrating to Git\n"
+msgstr ""
+
+#. type: Plain text
+#: ch09-git-and-other-systems.asc:34
+#, no-wrap
+msgid ""
+"(((Migrating to Git)))\n"
+"If you have an existing codebase in another VCS but you've decided to start using Git, you must migrate your project one way or another.\n"
+"This section goes over some importers for common systems, and then demonstrates how to develop your own custom importer.\n"
+"You'll learn how to import data from several of the bigger professionally used SCM systems, because they make up the majority of users who are switching, and because high-quality tools for them are easy to come by.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch09-git-and-other-systems.asc:36
+#, no-wrap
+msgid "include::book/09-git-and-other-scms/sections/import-svn.asc[]\n"
+msgstr "include::book/09-git-and-other-scms/sections/import-svn.asc[]\n"
+
+#. type: Plain text
+#: ch09-git-and-other-systems.asc:38
+#, no-wrap
+msgid "include::book/09-git-and-other-scms/sections/import-hg.asc[]\n"
+msgstr "include::book/09-git-and-other-scms/sections/import-hg.asc[]\n"
+
+#. type: Plain text
+#: ch09-git-and-other-systems.asc:40
+#, no-wrap
+msgid "include::book/09-git-and-other-scms/sections/import-bzr.asc[]\n"
+msgstr "include::book/09-git-and-other-scms/sections/import-bzr.asc[]\n"
+
+#. type: Plain text
+#: ch09-git-and-other-systems.asc:42
+#, no-wrap
+msgid "include::book/09-git-and-other-scms/sections/import-p4.asc[]\n"
+msgstr "include::book/09-git-and-other-scms/sections/import-p4.asc[]\n"
+
+#. type: Plain text
+#: ch09-git-and-other-systems.asc:44
+#, no-wrap
+msgid "include::book/09-git-and-other-scms/sections/import-custom.asc[]\n"
+msgstr "include::book/09-git-and-other-scms/sections/import-custom.asc[]\n"
+
+#. type: Plain text
+#: ch09-git-and-other-systems.asc:48
+#, no-wrap
+msgid ""
+"You should feel comfortable using Git as a client for other version-control systems, or importing nearly any existing repository into Git without losing data.\n"
+"In the next chapter, we'll cover the raw internals of Git so you can craft every single byte, if need be.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch10-git-internals.asc:3
+#, no-wrap
+msgid ""
+"[[ch10-git-internals]]\n"
+"== Git Internals\n"
+msgstr ""
+"[[ch10-git-internals]]\n"
+"== Git の内部\n"
+
+#. type: Plain text
+#: ch10-git-internals.asc:8
+#, no-wrap
+msgid ""
+"You may have skipped to this chapter from a much earlier chapter, or you may have gotten here after sequentially reading the entire book up to this point -- in either case, this is where we'll go over the inner workings and implementation of Git.\n"
+"We found that understanding this information was fundamentally important to appreciating how useful and powerful Git is, but others have argued to us that it can be confusing and unnecessarily complex for beginners.\n"
+"Thus, we've made this discussion the last chapter in the book so you could read it early or later in your learning process.\n"
+"We leave it up to you to decide.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch10-git-internals.asc:12
+#, no-wrap
+msgid ""
+"Now that you're here, let's get started.\n"
+"First, if it isn't yet clear, Git is fundamentally a content-addressable filesystem with a VCS user interface written on top of it.\n"
+"You'll learn more about what this means in a bit.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch10-git-internals.asc:15
+#, no-wrap
+msgid ""
+"In the early days of Git (mostly pre 1.5), the user interface was much more complex because it emphasized this filesystem rather than a polished VCS.\n"
+"In the last few years, the UI has been refined until it's as clean and easy to use as any system out there; however, the stereotype lingers about the early Git UI that was complex and difficult to learn.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch10-git-internals.asc:17
+#, no-wrap
+msgid "The content-addressable filesystem layer is amazingly cool, so we'll cover that first in this chapter; then, you'll learn about the transport mechanisms and the repository maintenance tasks that you may eventually have to deal with.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch10-git-internals.asc:19
+#, no-wrap
+msgid "include::book/10-git-internals/sections/plumbing-porcelain.asc[]\n"
+msgstr "include::book/10-git-internals/sections/plumbing-porcelain.asc[]\n"
+
+#. type: Plain text
+#: ch10-git-internals.asc:21
+#, no-wrap
+msgid "include::book/10-git-internals/sections/objects.asc[]\n"
+msgstr "include::book/10-git-internals/sections/objects.asc[]\n"
+
+#. type: Plain text
+#: ch10-git-internals.asc:23
+#, no-wrap
+msgid "include::book/10-git-internals/sections/refs.asc[]\n"
+msgstr "include::book/10-git-internals/sections/refs.asc[]\n"
+
+#. type: Plain text
+#: ch10-git-internals.asc:25
+#, no-wrap
+msgid "include::book/10-git-internals/sections/packfiles.asc[]\n"
+msgstr "include::book/10-git-internals/sections/packfiles.asc[]\n"
+
+#. type: Plain text
+#: ch10-git-internals.asc:27
+#, no-wrap
+msgid "include::book/10-git-internals/sections/refspec.asc[]\n"
+msgstr "include::book/10-git-internals/sections/refspec.asc[]\n"
+
+#. type: Plain text
+#: ch10-git-internals.asc:29
+#, no-wrap
+msgid "include::book/10-git-internals/sections/transfer-protocols.asc[]\n"
+msgstr "include::book/10-git-internals/sections/transfer-protocols.asc[]\n"
+
+#. type: Plain text
+#: ch10-git-internals.asc:31
+#, no-wrap
+msgid "include::book/10-git-internals/sections/maintenance.asc[]\n"
+msgstr "include::book/10-git-internals/sections/maintenance.asc[]\n"
+
+#. type: Plain text
+#: ch10-git-internals.asc:33
+#, no-wrap
+msgid "include::book/10-git-internals/sections/environment.asc[]\n"
+msgstr "include::book/10-git-internals/sections/environment.asc[]\n"
+
+#. type: Plain text
+#: ch10-git-internals.asc:39
+#, no-wrap
+msgid ""
+"At this point, you should have a pretty good understanding of what Git does in the background and, to some degree, how it's implemented.\n"
+"This chapter has covered a number of plumbing commands -- commands that are lower level and simpler than the porcelain commands you've learned about in the rest of the book.\n"
+"Understanding how Git works at a lower level should make it easier to understand why it's doing what it's doing and also to write your own tools and helper scripts to make your specific workflow work for you.\n"
+msgstr ""
+
+#. type: Plain text
+#: ch10-git-internals.asc:41
+#, no-wrap
+msgid ""
+"Git as a content-addressable filesystem is a very powerful tool that you can easily use as more than just a VCS.\n"
+"We hope you can use your newfound knowledge of Git internals to implement your own cool application of this technology and feel more comfortable using Git in more advanced ways.\n"
+msgstr ""
+
+#. type: Plain text
+#: index.asc:3
+#, no-wrap
+msgid ""
+"[#index]\n"
+"[index]\n"
+"== Index\n"
+msgstr ""
+
+#. type: Plain text
+#: progit.asc:10
+#, no-wrap
+msgid ""
+"= Pro Git\n"
+"Scott Chacon; Ben Straub\n"
+":doctype: book\n"
+":docinfo:\n"
+":toc:\n"
+":toclevels: 2\n"
+":pagenums:\n"
+":front-cover-image: image:book/cover.png[width=1050,height=1600]\n"
+":icons: font\n"
+msgstr ""
+"= Pro Git\n"
+"Scott Chacon; Ben Straub\n"
+":doctype: book\n"
+":docinfo:\n"
+":toc:\n"
+":toclevels: 2\n"
+":pagenums:\n"
+":front-cover-image: image:book/cover.png[width=1050,height=1600]\n"
+":icons: font\n"
+
+#. type: Plain text
+#: progit.asc:12
+#, no-wrap
+msgid "include::book/license.asc[]\n"
+msgstr "include::book/license.asc[]\n"
+
+#. type: Plain text
+#: progit.asc:14
+#, no-wrap
+msgid "include::book/preface_schacon.asc[]\n"
+msgstr "include::book/preface_schacon.asc[]\n"
+
+#. type: Plain text
+#: progit.asc:16
+#, no-wrap
+msgid "include::book/preface_ben.asc[]\n"
+msgstr "include::book/preface_ben.asc[]\n"
+
+#. type: Plain text
+#: progit.asc:18
+#, no-wrap
+msgid "include::book/dedication.asc[]\n"
+msgstr "include::book/dedication.asc[]\n"
+
+#. type: Plain text
+#: progit.asc:20
+#, no-wrap
+msgid "include::book/contributors.asc[]\n"
+msgstr "include::book/contributors.asc[]\n"
+
+#. type: Plain text
+#: progit.asc:22
+#, no-wrap
+msgid "include::book/introduction.asc[]\n"
+msgstr "include::book/introduction.asc[]\n"
+
+#. type: Plain text
+#: progit.asc:24
+#, no-wrap
+msgid "include::ch01-getting-started.asc[]\n"
+msgstr "include::ch01-getting-started.asc[]\n"
+
+#. type: Plain text
+#: progit.asc:26
+#, no-wrap
+msgid "include::ch02-git-basics-chapter.asc[]\n"
+msgstr "include::ch02-git-basics-chapter.asc[]\n"
+
+#. type: Plain text
+#: progit.asc:28
+#, no-wrap
+msgid "include::ch03-git-branching.asc[]\n"
+msgstr "include::ch03-git-branching.asc[]\n"
+
+#. type: Plain text
+#: progit.asc:30
+#, no-wrap
+msgid "include::ch04-git-on-the-server.asc[]\n"
+msgstr "include::ch04-git-on-the-server.asc[]\n"
+
+#. type: Plain text
+#: progit.asc:32
+#, no-wrap
+msgid "include::ch05-distributed-git.asc[]\n"
+msgstr "include::ch05-distributed-git.asc[]\n"
+
+#. type: Plain text
+#: progit.asc:34
+#, no-wrap
+msgid "include::ch06-github.asc[]\n"
+msgstr "include::ch06-github.asc[]\n"
+
+#. type: Plain text
+#: progit.asc:36
+#, no-wrap
+msgid "include::ch07-git-tools.asc[]\n"
+msgstr "include::ch07-git-tools.asc[]\n"
+
+#. type: Plain text
+#: progit.asc:38
+#, no-wrap
+msgid "include::ch08-customizing-git.asc[]\n"
+msgstr "include::ch08-customizing-git.asc[]\n"
+
+#. type: Plain text
+#: progit.asc:40
+#, no-wrap
+msgid "include::ch09-git-and-other-systems.asc[]\n"
+msgstr "include::ch09-git-and-other-systems.asc[]\n"
+
+#. type: Plain text
+#: progit.asc:42
+#, no-wrap
+msgid "include::ch10-git-internals.asc[]\n"
+msgstr "include::ch10-git-internals.asc[]\n"
+
+#. type: Plain text
+#: progit.asc:44
+#, no-wrap
+msgid "include::A-git-in-other-environments.asc[]\n"
+msgstr "include::A-git-in-other-environments.asc[]\n"
+
+#. type: Plain text
+#: progit.asc:46
+#, no-wrap
+msgid "include::B-embedding-git-in-your-applications.asc[]\n"
+msgstr "include::B-embedding-git-in-your-applications.asc[]\n"
+
+#. type: Plain text
+#: progit.asc:48
+#, no-wrap
+msgid "include::C-git-commands.asc[]\n"
+msgstr "include::C-git-commands.asc[]\n"
+
+#. type: Plain text
+#: progit.asc:49
+#, no-wrap
+msgid "ifdef::backend-pdf[include::index.asc[]]\n"
+msgstr "ifdef::backend-pdf[include::index.asc[]]\n"

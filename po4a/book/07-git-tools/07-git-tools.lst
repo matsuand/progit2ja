@@ -1,0 +1,15 @@
+sections/advanced-merging.asc
+sections/bundling.asc
+sections/credentials.asc
+sections/debugging.asc
+sections/interactive-staging.asc
+sections/replace.asc
+sections/rerere.asc
+sections/reset.asc
+sections/revision-selection.asc
+sections/rewriting-history.asc
+sections/searching.asc
+sections/signing.asc
+sections/stashing-cleaning.asc
+sections/submodules.asc
+sections/subtree-merges.asc

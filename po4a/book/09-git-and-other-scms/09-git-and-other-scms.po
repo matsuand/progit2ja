@@ -1,0 +1,4981 @@
+# Japanese translations for progit2
+# Copyright (C) 2022 Michio MATSUYAMA
+# This file is distributed under the same license as the progit2.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: progit2\n"
+"POT-Creation-Date: 2022-02-04 19:16+0900\n"
+"PO-Revision-Date: 2022-02-03 20:13+0900\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:2
+#, no-wrap
+msgid "==== Git and Bazaar\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:9
+#, no-wrap
+msgid ""
+"Among the DVCS, another famous one is http://bazaar.canonical.com[Bazaar].\n"
+"Bazaar is free and open source, and is part of the https://www.gnu.org[GNU Project].\n"
+"It behaves very differently from Git.\n"
+"Sometimes, to do the same thing as with Git, you have to use a different keyword, and some keywords that are common don't have the same meaning.\n"
+"In particular, the branch management is very different and may cause confusion, especially when someone comes from Git's universe.\n"
+"Nevertheless, it is possible to work on a Bazaar repository from a Git one.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:13
+#, no-wrap
+msgid ""
+"There are many projects that allow you to use Git as a Bazaar client.\n"
+"Here we'll use Felipe Contreras' project that you may find at https://github.com/felipec/git-remote-bzr[].\n"
+"To install it, you just have to download the file git-remote-bzr in a folder contained in your `$PATH`:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:15
+#: book/09-git-and-other-scms/sections/client-bzr.asc:34
+#: book/09-git-and-other-scms/sections/client-bzr.asc:43
+#: book/09-git-and-other-scms/sections/client-bzr.asc:53
+#: book/09-git-and-other-scms/sections/client-bzr.asc:60
+#: book/09-git-and-other-scms/sections/client-bzr.asc:67
+#: book/09-git-and-other-scms/sections/client-bzr.asc:74
+#: book/09-git-and-other-scms/sections/client-bzr.asc:110
+#: book/09-git-and-other-scms/sections/client-bzr.asc:122
+#: book/09-git-and-other-scms/sections/client-hg.asc:19
+#: book/09-git-and-other-scms/sections/client-hg.asc:30
+#: book/09-git-and-other-scms/sections/client-hg.asc:44
+#: book/09-git-and-other-scms/sections/client-hg.asc:56
+#: book/09-git-and-other-scms/sections/client-hg.asc:73
+#: book/09-git-and-other-scms/sections/client-hg.asc:103
+#: book/09-git-and-other-scms/sections/client-hg.asc:134
+#: book/09-git-and-other-scms/sections/client-hg.asc:146
+#: book/09-git-and-other-scms/sections/client-hg.asc:158
+#: book/09-git-and-other-scms/sections/client-hg.asc:179
+#: book/09-git-and-other-scms/sections/client-hg.asc:200
+#: book/09-git-and-other-scms/sections/client-hg.asc:210
+#: book/09-git-and-other-scms/sections/client-hg.asc:243
+#: book/09-git-and-other-scms/sections/client-hg.asc:260
+#: book/09-git-and-other-scms/sections/client-hg.asc:272
+#: book/09-git-and-other-scms/sections/client-hg.asc:304
+#: book/09-git-and-other-scms/sections/client-hg.asc:317
+#: book/09-git-and-other-scms/sections/client-hg.asc:354
+#: book/09-git-and-other-scms/sections/client-p4.asc:37
+#: book/09-git-and-other-scms/sections/client-p4.asc:52
+#: book/09-git-and-other-scms/sections/client-p4.asc:59
+#: book/09-git-and-other-scms/sections/client-p4.asc:82
+#: book/09-git-and-other-scms/sections/client-p4.asc:192
+#: book/09-git-and-other-scms/sections/client-p4.asc:227
+#: book/09-git-and-other-scms/sections/client-p4.asc:241
+#: book/09-git-and-other-scms/sections/client-p4.asc:265
+#: book/09-git-and-other-scms/sections/client-p4.asc:336
+#: book/09-git-and-other-scms/sections/client-p4.asc:346
+#: book/09-git-and-other-scms/sections/client-p4.asc:359
+#: book/09-git-and-other-scms/sections/client-p4.asc:369
+#: book/09-git-and-other-scms/sections/client-p4.asc:382
+#: book/09-git-and-other-scms/sections/client-p4.asc:393
+#: book/09-git-and-other-scms/sections/client-p4.asc:413
+#: book/09-git-and-other-scms/sections/client-p4.asc:434
+#: book/09-git-and-other-scms/sections/client-p4.asc:490
+#: book/09-git-and-other-scms/sections/client-p4.asc:529
+#: book/09-git-and-other-scms/sections/client-p4.asc:545
+#: book/09-git-and-other-scms/sections/client-p4.asc:566
+#: book/09-git-and-other-scms/sections/client-p4.asc:581
+#: book/09-git-and-other-scms/sections/client-p4.asc:623
+#: book/09-git-and-other-scms/sections/client-p4.asc:648
+#: book/09-git-and-other-scms/sections/client-svn.asc:37
+#: book/09-git-and-other-scms/sections/client-svn.asc:45
+#: book/09-git-and-other-scms/sections/client-svn.asc:55
+#: book/09-git-and-other-scms/sections/client-svn.asc:64
+#: book/09-git-and-other-scms/sections/client-svn.asc:84
+#: book/09-git-and-other-scms/sections/client-svn.asc:114
+#: book/09-git-and-other-scms/sections/client-svn.asc:121
+#: book/09-git-and-other-scms/sections/client-svn.asc:137
+#: book/09-git-and-other-scms/sections/client-svn.asc:151
+#: book/09-git-and-other-scms/sections/client-svn.asc:169
+#: book/09-git-and-other-scms/sections/client-svn.asc:180
+#: book/09-git-and-other-scms/sections/client-svn.asc:197
+#: book/09-git-and-other-scms/sections/client-svn.asc:218
+#: book/09-git-and-other-scms/sections/client-svn.asc:235
+#: book/09-git-and-other-scms/sections/client-svn.asc:257
+#: book/09-git-and-other-scms/sections/client-svn.asc:272
+#: book/09-git-and-other-scms/sections/client-svn.asc:294
+#: book/09-git-and-other-scms/sections/client-svn.asc:316
+#: book/09-git-and-other-scms/sections/client-svn.asc:347
+#: book/09-git-and-other-scms/sections/client-svn.asc:368
+#: book/09-git-and-other-scms/sections/client-svn.asc:392
+#: book/09-git-and-other-scms/sections/client-svn.asc:422
+#: book/09-git-and-other-scms/sections/client-svn.asc:445
+#: book/09-git-and-other-scms/sections/client-svn.asc:470
+#: book/09-git-and-other-scms/sections/import-bzr.asc:15
+#: book/09-git-and-other-scms/sections/import-bzr.asc:22
+#: book/09-git-and-other-scms/sections/import-bzr.asc:29
+#: book/09-git-and-other-scms/sections/import-bzr.asc:36
+#: book/09-git-and-other-scms/sections/import-bzr.asc:48
+#: book/09-git-and-other-scms/sections/import-bzr.asc:68
+#: book/09-git-and-other-scms/sections/import-bzr.asc:76
+#: book/09-git-and-other-scms/sections/import-bzr.asc:88
+#: book/09-git-and-other-scms/sections/import-bzr.asc:96
+#: book/09-git-and-other-scms/sections/import-bzr.asc:104
+#: book/09-git-and-other-scms/sections/import-bzr.asc:112
+#: book/09-git-and-other-scms/sections/import-bzr.asc:126
+#: book/09-git-and-other-scms/sections/import-bzr.asc:139
+#: book/09-git-and-other-scms/sections/import-bzr.asc:151
+#: book/09-git-and-other-scms/sections/import-custom.asc:18
+#: book/09-git-and-other-scms/sections/import-custom.asc:278
+#: book/09-git-and-other-scms/sections/import-custom.asc:309
+#: book/09-git-and-other-scms/sections/import-custom.asc:343
+#: book/09-git-and-other-scms/sections/import-custom.asc:363
+#: book/09-git-and-other-scms/sections/import-hg.asc:7
+#: book/09-git-and-other-scms/sections/import-hg.asc:14
+#: book/09-git-and-other-scms/sections/import-hg.asc:23
+#: book/09-git-and-other-scms/sections/import-hg.asc:60
+#: book/09-git-and-other-scms/sections/import-hg.asc:71
+#: book/09-git-and-other-scms/sections/import-hg.asc:121
+#: book/09-git-and-other-scms/sections/import-p4.asc:23
+#: book/09-git-and-other-scms/sections/import-p4.asc:37
+#: book/09-git-and-other-scms/sections/import-p4.asc:52
+#: book/09-git-and-other-scms/sections/import-p4.asc:78
+#: book/09-git-and-other-scms/sections/import-p4.asc:87
+#: book/09-git-and-other-scms/sections/import-svn.asc:24
+#: book/09-git-and-other-scms/sections/import-svn.asc:53
+#: book/09-git-and-other-scms/sections/import-svn.asc:94
+#: book/09-git-and-other-scms/sections/import-svn.asc:103
+#: book/09-git-and-other-scms/sections/import-svn.asc:113
+#: book/09-git-and-other-scms/sections/import-svn.asc:124
+#: book/09-git-and-other-scms/sections/import-svn.asc:132
+#: book/09-git-and-other-scms/sections/import-svn.asc:139
+#, no-wrap
+msgid ""
+"[source,console]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:18
+#, no-wrap
+msgid ""
+"$ wget https://raw.github.com/felipec/git-remote-bzr/master/git-remote-bzr -O ~/bin/git-remote-bzr\n"
+"$ chmod +x ~/bin/git-remote-bzr\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:22
+#, no-wrap
+msgid ""
+"You also need to have Bazaar installed.\n"
+"That's all!\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:24
+#, no-wrap
+msgid "===== Create a Git repository from a Bazaar repository\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:29
+#, no-wrap
+msgid ""
+"It is simple to use.\n"
+"It is enough to clone a Bazaar repository prefixing it by `bzr::`.\n"
+"Since Git and Bazaar both do full clones to your machine, it's possible to attach a Git clone to your local Bazaar clone, but it isn't recommended.\n"
+"It's much easier to attach your Git clone directly to the same place your Bazaar clone is attached to -- the central repository.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:32
+#, no-wrap
+msgid ""
+"Let's suppose that you worked with a remote repository which is at address `bzr+ssh://developer@mybazaarserver:myproject`.\n"
+"Then you must clone it in the following way:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:37
+#, no-wrap
+msgid ""
+"$ git clone bzr::bzr+ssh://developer@mybazaarserver:myproject myProject-Git\n"
+"$ cd myProject-Git\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:41
+#, no-wrap
+msgid ""
+"At this point, your Git repository is created but it is not compacted for optimal disk use.\n"
+"That's why you should also clean and compact your Git repository, especially if it is a big one:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:45
+#, no-wrap
+msgid ""
+"$ git gc --aggressive\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:48
+#, no-wrap
+msgid "===== Bazaar branches\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:51
+#, no-wrap
+msgid ""
+"Bazaar only allows you to clone branches, but a repository may contain several branches, and `git-remote-bzr` can clone both.\n"
+"For example, to clone a branch:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:55
+#, no-wrap
+msgid ""
+"$ git clone bzr::bzr://bzr.savannah.gnu.org/emacs/trunk emacs-trunk\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:58
+#, no-wrap
+msgid "And to clone the whole repository:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:62
+#, no-wrap
+msgid ""
+"$ git clone bzr::bzr://bzr.savannah.gnu.org/emacs emacs\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:65
+#, no-wrap
+msgid "The second command clones all the branches contained in the emacs repository; nevertheless, it is possible to point out some branches:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:69
+#, no-wrap
+msgid ""
+"$ git config remote-bzr.branches 'trunk, xwindow'\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:72
+#, no-wrap
+msgid "Some remote repositories don't allow you to list their branches, in which case you have to manually specify them, and even though you could specify the configuration in the cloning command, you may find this easier:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:79
+#, no-wrap
+msgid ""
+"$ git init emacs\n"
+"$ git remote add origin bzr::bzr://bzr.savannah.gnu.org/emacs\n"
+"$ git config remote-bzr.branches 'trunk, xwindow'\n"
+"$ git fetch\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:82
+#, no-wrap
+msgid "===== Ignore what is ignored with .bzrignore\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:86
+#, no-wrap
+msgid ""
+"Since you are working on a project managed with Bazaar, you shouldn't create a `.gitignore` file because you _may_ accidentally set it under version control and the other people working with Bazaar would be disturbed.\n"
+"The solution is to create the `.git/info/exclude` file either as a symbolic link or as a regular file.\n"
+"We'll see later on how to solve this question.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:90
+#, no-wrap
+msgid ""
+"Bazaar uses the same model as Git to ignore files, but also has two features which don't have an equivalent into Git.\n"
+"The complete description may be found in http://doc.bazaar.canonical.com/bzr.2.7/en/user-reference/ignore-help.html[the documentation].\n"
+"The two features are:\n"
+msgstr ""
+
+#. type: Bullet: '1. '
+#: book/09-git-and-other-scms/sections/client-bzr.asc:93
+#, no-wrap
+msgid "\"!!\" allows you to ignore certain file patterns even if they're specified using a \"!\" rule.\n"
+msgstr ""
+
+#. type: Bullet: '2. '
+#: book/09-git-and-other-scms/sections/client-bzr.asc:93
+#, no-wrap
+msgid "\"RE:\" at the beginning of a line allows you to specify a https://docs.python.org/3/library/re.html[Python regular expression] (Git only allows shell globs).\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:95
+#, no-wrap
+msgid "As a consequence, there are two different situations to consider:\n"
+msgstr ""
+
+#. type: Bullet: '1. '
+#: book/09-git-and-other-scms/sections/client-bzr.asc:98
+#, no-wrap
+msgid "If the `.bzrignore` file does not contain any of these two specific prefixes, then you can simply make a symbolic link to it in the repository: `ln -s .bzrignore .git/info/exclude`.\n"
+msgstr ""
+
+#. type: Bullet: '2. '
+#: book/09-git-and-other-scms/sections/client-bzr.asc:98
+#, no-wrap
+msgid "Otherwise, you must create the `.git/info/exclude` file and adapt it to ignore exactly the same files in `.bzrignore`.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:103
+#, no-wrap
+msgid ""
+"Whatever the case is, you will have to remain vigilant against any change of `.bzrignore` to make sure that the `.git/info/exclude` file always reflects `.bzrignore`.\n"
+"Indeed, if the `.bzrignore` file were to change and contained one or more lines starting with \"!!\" or \"RE:\", Git not being able to interpret these lines, you'll have to adapt your `.git/info/exclude` file to ignore the same files as the ones ignored with `.bzrignore`.\n"
+"Moreover, if the `.git/info/exclude` file was a symbolic link, you'll have to first delete the symbolic link, copy `.bzrignore` to `.git/info/exclude` and then adapt the latter.\n"
+"However, be careful with its creation because with Git it is impossible to re-include a file if a parent directory of that file is excluded.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:105
+#, no-wrap
+msgid "===== Fetch the changes of the remote repository\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:108
+#, no-wrap
+msgid ""
+"To fetch the changes of the remote, you pull changes as usually, using Git commands.\n"
+"Supposing that your changes are on the `master` branch, you merge or rebase your work on the `origin/master` branch:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:112
+#, no-wrap
+msgid ""
+"$ git pull --rebase origin\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:115
+#, no-wrap
+msgid "===== Push your work on the remote repository\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:120
+#, no-wrap
+msgid ""
+"Because Bazaar also has the concept of merge commits, there will be no problem if you push a merge commit.\n"
+"So you can work on a branch, merge the changes into `master` and push your work.\n"
+"Then, you create your branches, you test and commit your work as usual.\n"
+"You finally push your work to the Bazaar repository:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:124
+#, no-wrap
+msgid ""
+"$ git push origin master\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:127
+#, no-wrap
+msgid "===== Caveats\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:130
+#, no-wrap
+msgid ""
+"Git's remote-helpers framework has some limitations that apply.\n"
+"In particular, these commands don't work:\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/09-git-and-other-scms/sections/client-bzr.asc:134
+#, no-wrap
+msgid "git push origin :branch-to-delete (Bazaar can't accept ref deletions in this way)\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/09-git-and-other-scms/sections/client-bzr.asc:134
+#, no-wrap
+msgid "git push origin old:new (it will push `old`)\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/09-git-and-other-scms/sections/client-bzr.asc:134
+#, no-wrap
+msgid "git push --dry-run origin branch (it will push)\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:136
+#, no-wrap
+msgid "===== Summary\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-bzr.asc:138
+#, no-wrap
+msgid ""
+"Since Git's and Bazaar's models are similar, there isn't a lot of resistance when working across the boundary.\n"
+"As long as you watch out for the limitations, and are always aware that the remote repository isn't natively Git, you'll be fine.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:2
+#, no-wrap
+msgid "==== Git and Mercurial\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:8
+#, no-wrap
+msgid ""
+"(((Interoperation with other VCSs, Mercurial)))\n"
+"(((Mercurial)))\n"
+"The DVCS universe is larger than just Git.\n"
+"In fact, there are many other systems in this space, each with their own angle on how to do distributed version control correctly.\n"
+"Apart from Git, the most popular is Mercurial, and the two are very similar in many respects.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:12
+#, no-wrap
+msgid ""
+"The good news, if you prefer Git's client-side behavior but are working with a project whose source code is controlled with Mercurial, is that there's a way to use Git as a client for a Mercurial-hosted repository.\n"
+"Since the way Git talks to server repositories is through remotes, it should come as no surprise that this bridge is implemented as a remote helper.\n"
+"The project's name is git-remote-hg, and it can be found at https://github.com/felipec/git-remote-hg[].\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:14
+#, no-wrap
+msgid "===== git-remote-hg\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:17
+#, no-wrap
+msgid ""
+"First, you need to install git-remote-hg.\n"
+"This basically entails dropping its file somewhere in your path, like so:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:23
+#, no-wrap
+msgid ""
+"$ curl -o ~/bin/git-remote-hg \\\n"
+"  https://raw.githubusercontent.com/felipec/git-remote-hg/master/git-remote-hg\n"
+"$ chmod +x ~/bin/git-remote-hg\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:28
+#, no-wrap
+msgid ""
+"â¦assuming `~/bin` is in your `$PATH`.\n"
+"Git-remote-hg has one other dependency: the `mercurial` library for Python.\n"
+"If you have Python installed, this is as simple as:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:32
+#, no-wrap
+msgid ""
+"$ pip install mercurial\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:35
+#, no-wrap
+msgid "If you don't have Python installed, visit https://www.python.org/[] and get it first.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:38
+#, no-wrap
+msgid ""
+"The last thing you'll need is the Mercurial client.\n"
+"Go to https://www.mercurial-scm.org/[] and install it if you haven't already.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:42
+#, no-wrap
+msgid ""
+"Now you're ready to rock.\n"
+"All you need is a Mercurial repository you can push to.\n"
+"Fortunately, every Mercurial repository can act this way, so we'll just use the \"hello world\" repository everyone uses to learn Mercurial:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:46
+#, no-wrap
+msgid ""
+"$ hg clone http://selenic.com/repo/hello /tmp/hello\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:49
+#: book/09-git-and-other-scms/sections/client-svn.asc:78
+#, no-wrap
+msgid "===== Getting Started\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:52
+#, no-wrap
+msgid ""
+"Now that we have a suitable \"`server-side`\" repository, we can go through a typical workflow.\n"
+"As you'll see, these two systems are similar enough that there isn't much friction.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:54
+#, no-wrap
+msgid "As always with Git, first we clone:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:62
+#, no-wrap
+msgid ""
+"$ git clone hg::/tmp/hello /tmp/hello-git\n"
+"$ cd /tmp/hello-git\n"
+"$ git log --oneline --graph --decorate\n"
+"* ac7955c (HEAD, origin/master, origin/branches/default, origin/HEAD, refs/hg/origin/branches/default, refs/hg/origin/bookmarks/master, master) Create a makefile\n"
+"* 65bb417 Create a standard 'hello, world' program\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:67
+#, no-wrap
+msgid ""
+"You'll notice that working with a Mercurial repository uses the standard `git clone` command.\n"
+"That's because git-remote-hg is working at a fairly low level, using a similar mechanism to how Git's HTTP/S protocol is implemented (remote helpers).\n"
+"Since Git and Mercurial are both designed for every client to have a full copy of the repository history, this command makes a full clone, including all the project's history, and does it fairly quickly.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:71
+#, no-wrap
+msgid ""
+"The log command shows two commits, the latest of which is pointed to by a whole slew of refs.\n"
+"It turns out some of these aren't actually there.\n"
+"Let's take a look at what's actually in the `.git` directory:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:90
+#, no-wrap
+msgid ""
+"$ tree .git/refs\n"
+".git/refs\n"
+"âââ heads\n"
+"âÂ Â  âââ master\n"
+"âââ hg\n"
+"âÂ Â  âââ origin\n"
+"âÂ Â      âââ bookmarks\n"
+"âÂ Â      âÂ Â  âââ master\n"
+"âÂ Â      âââ branches\n"
+"âÂ Â          âââ default\n"
+"âââ notes\n"
+"âÂ Â  âââ hg\n"
+"âââ remotes\n"
+"âÂ Â  âââ origin\n"
+"âÂ Â      âââ HEAD\n"
+"âââ tags\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:92
+#, no-wrap
+msgid ""
+"9 directories, 5 files\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:98
+#, no-wrap
+msgid ""
+"Git-remote-hg is trying to make things more idiomatically Git-esque, but under the hood it's managing the conceptual mapping between two slightly different systems.\n"
+"The `refs/hg` directory is where the actual remote refs are stored.\n"
+"For example, the `refs/hg/origin/branches/default` is a Git ref file that contains the SHA-1 starting with \"`ac7955c`\", which is the commit that `master` points to.\n"
+"So the `refs/hg` directory is kind of like a fake `refs/remotes/origin`, but it has the added distinction between bookmarks and branches.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:101
+#, no-wrap
+msgid ""
+"The `notes/hg` file is the starting point for how git-remote-hg maps Git commit hashes to Mercurial changeset IDs.\n"
+"Let's explore a bit:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:106
+#, no-wrap
+msgid ""
+"$ cat notes/hg\n"
+"d4c10386...\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:111
+#, no-wrap
+msgid ""
+"$ git cat-file -p d4c10386...\n"
+"tree 1781c96...\n"
+"author remote-hg <> 1408066400 -0800\n"
+"committer remote-hg <> 1408066400 -0800\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:113
+#, no-wrap
+msgid "Notes for master\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:117
+#, no-wrap
+msgid ""
+"$ git ls-tree 1781c96...\n"
+"100644 blob ac9117f...\t65bb417...\n"
+"100644 blob 485e178...\tac7955c...\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:120
+#, no-wrap
+msgid ""
+"$ git cat-file -p ac9117f\n"
+"0a04b987be5ae354b710cefeba0e2d9de7ad41a9\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:125
+#, no-wrap
+msgid ""
+"So `refs/notes/hg` points to a tree, which in the Git object database is a list of other objects with names.\n"
+"`git ls-tree` outputs the mode, type, object hash, and filename for items inside a tree.\n"
+"Once we dig down to one of the tree items, we find that inside it is a blob named \"`ac9117f`\" (the SHA-1 hash of the commit pointed to by `master`), with contents \"`0a04b98`\" (which is the ID of the Mercurial changeset at the tip of the `default` branch).\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:128
+#, no-wrap
+msgid ""
+"The good news is that we mostly don't have to worry about all of this.\n"
+"The typical workflow won't be very different from working with a Git remote.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:132
+#, no-wrap
+msgid ""
+"There's one more thing we should attend to before we continue: ignores.\n"
+"Mercurial and Git use a very similar mechanism for this, but it's likely you don't want to actually commit a `.gitignore` file into a Mercurial repository.\n"
+"Fortunately, Git has a way to ignore files that's local to an on-disk repository, and the Mercurial format is compatible with Git, so you just have to copy it over:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:136
+#, no-wrap
+msgid ""
+"$ cp .hgignore .git/info/exclude\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:139
+#, no-wrap
+msgid "The `.git/info/exclude` file acts just like a `.gitignore`, but isn't included in commits.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:141
+#, no-wrap
+msgid "===== Workflow\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:144
+#, no-wrap
+msgid ""
+"Let's assume we've done some work and made some commits on the `master` branch, and you're ready to push it to the remote repository.\n"
+"Here's what our repository looks like right now:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:152
+#, no-wrap
+msgid ""
+"$ git log --oneline --graph --decorate\n"
+"* ba04a2a (HEAD, master) Update makefile\n"
+"* d25d16f Goodbye\n"
+"* ac7955c (origin/master, origin/branches/default, origin/HEAD, refs/hg/origin/branches/default, refs/hg/origin/bookmarks/master) Create a makefile\n"
+"* 65bb417 Create a standard 'hello, world' program\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:156
+#, no-wrap
+msgid ""
+"Our `master` branch is two commits ahead of `origin/master`, but those two commits exist only on our local machine.\n"
+"Let's see if anyone else has been doing important work at the same time:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:172
+#, no-wrap
+msgid ""
+"$ git fetch\n"
+"From hg::/tmp/hello\n"
+"   ac7955c..df85e87  master     -> origin/master\n"
+"   ac7955c..df85e87  branches/default -> origin/branches/default\n"
+"$ git log --oneline --graph --decorate --all\n"
+"* 7b07969 (refs/notes/hg) Notes for default\n"
+"* d4c1038 Notes for master\n"
+"* df85e87 (origin/master, origin/branches/default, origin/HEAD, refs/hg/origin/branches/default, refs/hg/origin/bookmarks/master) Add some documentation\n"
+"| * ba04a2a (HEAD, master) Update makefile\n"
+"| * d25d16f Goodbye\n"
+"|/\n"
+"* ac7955c Create a makefile\n"
+"* 65bb417 Create a standard 'hello, world' program\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:177
+#, no-wrap
+msgid ""
+"Since we used the `--all` flag, we see the \"`notes`\" refs that are used internally by git-remote-hg, but we can ignore them.\n"
+"The rest is what we expected; `origin/master` has advanced by one commit, and our history has now diverged.\n"
+"Unlike the other systems we work with in this chapter, Mercurial is capable of handling merges, so we're not going to do anything fancy.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:194
+#, no-wrap
+msgid ""
+"$ git merge origin/master\n"
+"Auto-merging hello.c\n"
+"Merge made by the 'recursive' strategy.\n"
+" hello.c | 2 +-\n"
+" 1 file changed, 1 insertion(+), 1 deletion(-)\n"
+"$ git log --oneline --graph --decorate\n"
+"*   0c64627 (HEAD, master) Merge remote-tracking branch 'origin/master'\n"
+"|\\\n"
+"| * df85e87 (origin/master, origin/branches/default, origin/HEAD, refs/hg/origin/branches/default, refs/hg/origin/bookmarks/master) Add some documentation\n"
+"* | ba04a2a Update makefile\n"
+"* | d25d16f Goodbye\n"
+"|/\n"
+"* ac7955c Create a makefile\n"
+"* 65bb417 Create a standard 'hello, world' program\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:198
+#, no-wrap
+msgid ""
+"Perfect.\n"
+"We run the tests and everything passes, so we're ready to share our work with the rest of the team:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:204
+#, no-wrap
+msgid ""
+"$ git push\n"
+"To hg::/tmp/hello\n"
+"   df85e87..0c64627  master -> master\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:208
+#, no-wrap
+msgid ""
+"That's it!\n"
+"If you take a look at the Mercurial repository, you'll see that this did what we'd expect:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:229
+#, no-wrap
+msgid ""
+"$ hg log -G --style compact\n"
+"o    5[tip]:4,2   dc8fa4f932b8   2014-08-14 19:33 -0700   ben\n"
+"|\\     Merge remote-tracking branch 'origin/master'\n"
+"| |\n"
+"| o  4   64f27bcefc35   2014-08-14 19:27 -0700   ben\n"
+"| |    Update makefile\n"
+"| |\n"
+"| o  3:1   4256fc29598f   2014-08-14 19:27 -0700   ben\n"
+"| |    Goodbye\n"
+"| |\n"
+"@ |  2   7db0b4848b3c   2014-08-14 19:30 -0700   ben\n"
+"|/     Add some documentation\n"
+"|\n"
+"o  1   82e55d328c8c   2005-08-26 01:21 -0700   mpm\n"
+"|    Create a makefile\n"
+"|\n"
+"o  0   0a04b987be5a   2005-08-26 01:20 -0700   mpm\n"
+"     Create a standard 'hello, world' program\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:232
+#, no-wrap
+msgid "The changeset numbered _2_ was made by Mercurial, and the changesets numbered _3_ and _4_ were made by git-remote-hg, by pushing commits made with Git.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:234
+#, no-wrap
+msgid "===== Branches and Bookmarks\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:237
+#, no-wrap
+msgid ""
+"Git has only one kind of branch: a reference that moves when commits are made.\n"
+"In Mercurial, this kind of a reference is called a \"`bookmark,`\" and it behaves in much the same way as a Git branch.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:241
+#, no-wrap
+msgid ""
+"Mercurial's concept of a \"`branch`\" is more heavyweight.\n"
+"The branch that a changeset is made on is recorded _with the changeset_, which means it will always be in the repository history.\n"
+"Here's an example of a commit that was made on the `develop` branch:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:251
+#, no-wrap
+msgid ""
+"$ hg log -l 1\n"
+"changeset:   6:8f65e5e02793\n"
+"branch:      develop\n"
+"tag:         tip\n"
+"user:        Ben Straub <ben@straub.cc>\n"
+"date:        Thu Aug 14 20:06:38 2014 -0700\n"
+"summary:     More documentation\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:255
+#, no-wrap
+msgid ""
+"Note the line that begins with \"`branch`\".\n"
+"Git can't really replicate this (and doesn't need to; both types of branch can be represented as a Git ref), but git-remote-hg needs to understand the difference, because Mercurial cares.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:258
+#, no-wrap
+msgid ""
+"Creating Mercurial bookmarks is as easy as creating Git branches.\n"
+"On the Git side:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:266
+#, no-wrap
+msgid ""
+"$ git checkout -b featureA\n"
+"Switched to a new branch 'featureA'\n"
+"$ git push origin featureA\n"
+"To hg::/tmp/hello\n"
+" * [new branch]      featureA -> featureA\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:270
+#, no-wrap
+msgid ""
+"That's all there is to it.\n"
+"On the Mercurial side, it looks like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:296
+#, no-wrap
+msgid ""
+"$ hg bookmarks\n"
+"   featureA                  5:bd5ac26f11f9\n"
+"$ hg log --style compact -G\n"
+"@  6[tip]   8f65e5e02793   2014-08-14 20:06 -0700   ben\n"
+"|    More documentation\n"
+"|\n"
+"o    5[featureA]:4,2   bd5ac26f11f9   2014-08-14 20:02 -0700   ben\n"
+"|\\     Merge remote-tracking branch 'origin/master'\n"
+"| |\n"
+"| o  4   0434aaa6b91f   2014-08-14 20:01 -0700   ben\n"
+"| |    update makefile\n"
+"| |\n"
+"| o  3:1   318914536c86   2014-08-14 20:00 -0700   ben\n"
+"| |    goodbye\n"
+"| |\n"
+"o |  2   f098c7f45c4f   2014-08-14 20:01 -0700   ben\n"
+"|/     Add some documentation\n"
+"|\n"
+"o  1   82e55d328c8c   2005-08-26 01:21 -0700   mpm\n"
+"|    Create a makefile\n"
+"|\n"
+"o  0   0a04b987be5a   2005-08-26 01:20 -0700   mpm\n"
+"     Create a standard 'hello, world' program\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:300
+#, no-wrap
+msgid ""
+"Note the new `[featureA]` tag on revision 5.\n"
+"These act exactly like Git branches on the Git side, with one exception: you can't delete a bookmark from the Git side (this is a limitation of remote helpers).\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:302
+#, no-wrap
+msgid "You can work on a \"`heavyweight`\" Mercurial branch also: just put a branch in the `branches` namespace:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:312
+#, no-wrap
+msgid ""
+"$ git checkout -b branches/permanent\n"
+"Switched to a new branch 'branches/permanent'\n"
+"$ vi Makefile\n"
+"$ git commit -am 'A permanent change'\n"
+"$ git push origin branches/permanent\n"
+"To hg::/tmp/hello\n"
+" * [new branch]      branches/permanent -> branches/permanent\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:315
+#, no-wrap
+msgid "Here's what that looks like on the Mercurial side:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:345
+#, no-wrap
+msgid ""
+"$ hg branches\n"
+"permanent                      7:a4529d07aad4\n"
+"develop                        6:8f65e5e02793\n"
+"default                        5:bd5ac26f11f9 (inactive)\n"
+"$ hg log -G\n"
+"o  changeset:   7:a4529d07aad4\n"
+"|  branch:      permanent\n"
+"|  tag:         tip\n"
+"|  parent:      5:bd5ac26f11f9\n"
+"|  user:        Ben Straub <ben@straub.cc>\n"
+"|  date:        Thu Aug 14 20:21:09 2014 -0700\n"
+"|  summary:     A permanent change\n"
+"|\n"
+"| @  changeset:   6:8f65e5e02793\n"
+"|/   branch:      develop\n"
+"|    user:        Ben Straub <ben@straub.cc>\n"
+"|    date:        Thu Aug 14 20:06:38 2014 -0700\n"
+"|    summary:     More documentation\n"
+"|\n"
+"o    changeset:   5:bd5ac26f11f9\n"
+"|\\   bookmark:    featureA\n"
+"| |  parent:      4:0434aaa6b91f\n"
+"| |  parent:      2:f098c7f45c4f\n"
+"| |  user:        Ben Straub <ben@straub.cc>\n"
+"| |  date:        Thu Aug 14 20:02:21 2014 -0700\n"
+"| |  summary:     Merge remote-tracking branch 'origin/master'\n"
+"[...]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:348
+#, no-wrap
+msgid "The branch name \"`permanent`\" was recorded with the changeset marked _7_.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:352
+#, no-wrap
+msgid ""
+"From the Git side, working with either of these branch styles is the same: just checkout, commit, fetch, merge, pull, and push as you normally would.\n"
+"One thing you should know is that Mercurial doesn't support rewriting history, only adding to it.\n"
+"Here's what our Mercurial repository looks like after an interactive rebase and a force-push:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:388
+#, no-wrap
+msgid ""
+"$ hg log --style compact -G\n"
+"o  10[tip]   99611176cbc9   2014-08-14 20:21 -0700   ben\n"
+"|    A permanent change\n"
+"|\n"
+"o  9   f23e12f939c3   2014-08-14 20:01 -0700   ben\n"
+"|    Add some documentation\n"
+"|\n"
+"o  8:1   c16971d33922   2014-08-14 20:00 -0700   ben\n"
+"|    goodbye\n"
+"|\n"
+"| o  7:5   a4529d07aad4   2014-08-14 20:21 -0700   ben\n"
+"| |    A permanent change\n"
+"| |\n"
+"| | @  6   8f65e5e02793   2014-08-14 20:06 -0700   ben\n"
+"| |/     More documentation\n"
+"| |\n"
+"| o    5[featureA]:4,2   bd5ac26f11f9   2014-08-14 20:02 -0700   ben\n"
+"| |\\     Merge remote-tracking branch 'origin/master'\n"
+"| | |\n"
+"| | o  4   0434aaa6b91f   2014-08-14 20:01 -0700   ben\n"
+"| | |    update makefile\n"
+"| | |\n"
+"+---o  3:1   318914536c86   2014-08-14 20:00 -0700   ben\n"
+"| |      goodbye\n"
+"| |\n"
+"| o  2   f098c7f45c4f   2014-08-14 20:01 -0700   ben\n"
+"|/     Add some documentation\n"
+"|\n"
+"o  1   82e55d328c8c   2005-08-26 01:21 -0700   mpm\n"
+"|    Create a makefile\n"
+"|\n"
+"o  0   0a04b987be5a   2005-08-26 01:20 -0700   mpm\n"
+"     Create a standard \"hello, world\" program\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:392
+#, no-wrap
+msgid ""
+"Changesets _8_, _9_, and _10_ have been created and belong to the `permanent` branch, but the old changesets are still there.\n"
+"This can be *very* confusing for your teammates who are using Mercurial, so try to avoid it.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:395
+#, no-wrap
+msgid "===== Mercurial Summary\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-hg.asc:397
+#, no-wrap
+msgid ""
+"Git and Mercurial are similar enough that working across the boundary is fairly painless.\n"
+"If you avoid changing history that's left your machine (as is generally recommended), you may not even be aware that the other end is Mercurial.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:2
+#, no-wrap
+msgid "==== Git and Perforce\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:9
+#, no-wrap
+msgid ""
+"(((Interoperation with other VCSs, Perforce)))\n"
+"(((Perforce)))\n"
+"Perforce is a very popular version-control system in corporate environments.\n"
+"It's been around since 1995, which makes it the oldest system covered in this chapter.\n"
+"As such, it's designed with the constraints of its day; it assumes you're always connected to a single central server, and only one version is kept on the local disk.\n"
+"To be sure, its features and constraints are well-suited to several specific problems, but there are lots of projects using Perforce where Git would actually work better.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:13
+#, no-wrap
+msgid ""
+"There are two options if you'd like to mix your use of Perforce and Git.\n"
+"The first one we'll cover is the \"`Git Fusion`\" bridge from the makers of Perforce, which lets you expose subtrees of your Perforce depot as read-write Git repositories.\n"
+"The second is git-p4, a client-side bridge that lets you use Git as a Perforce client, without requiring any reconfiguration of the Perforce server.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:16
+#, no-wrap
+msgid ""
+"[[_p4_git_fusion]]\n"
+"===== Git Fusion\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:19
+#, no-wrap
+msgid ""
+"(((Perforce, Git Fusion)))\n"
+"Perforce provides a product called Git Fusion (available at http://www.perforce.com/git-fusion[]), which synchronizes a Perforce server with Git repositories on the server side.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:21
+#: book/09-git-and-other-scms/sections/client-p4.asc:330
+#, no-wrap
+msgid "====== Setting Up\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:24
+#, no-wrap
+msgid ""
+"For our examples, we'll be using the easiest installation method for Git Fusion, which is downloading a virtual machine that runs the Perforce daemon and Git Fusion.\n"
+"You can get the virtual machine image from http://www.perforce.com/downloads/Perforce/20-User[], and once it's finished downloading, import it into your favorite virtualization software (we'll use VirtualBox).\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:27
+#, no-wrap
+msgid ""
+"Upon first starting the machine, it asks you to customize the password for three Linux users (`root`, `perforce`, and `git`), and provide an instance name, which can be used to distinguish this installation from others on the same network.\n"
+"When that has all completed, you'll see this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:30
+#, no-wrap
+msgid ""
+".The Git Fusion virtual machine boot screen\n"
+"image::images/git-fusion-boot.png[The Git Fusion virtual machine boot screen]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:35
+#, no-wrap
+msgid ""
+"You should take note of the IP address that's shown here, we'll be using it later on.\n"
+"Next, we'll create a Perforce user.\n"
+"Select the \"`Login`\" option at the bottom and press enter (or SSH to the machine), and log in as `root`.\n"
+"Then use these commands to create a user:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:41
+#, no-wrap
+msgid ""
+"$ p4 -p localhost:1666 -u super user -f john\n"
+"$ p4 -p localhost:1666 -u john passwd\n"
+"$ exit\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:46
+#, no-wrap
+msgid ""
+"The first one will open a VI editor to customize the user, but you can accept the defaults by typing `:wq` and hitting enter.\n"
+"The second one will prompt you to enter a password twice.\n"
+"That's all we need to do with a shell prompt, so exit out of the session.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:50
+#, no-wrap
+msgid ""
+"The next thing you'll need to do to follow along is to tell Git not to verify SSL certificates.\n"
+"The Git Fusion image comes with a certificate, but it's for a domain that won't match your virtual machine's IP address, so Git will reject the HTTPS connection.\n"
+"If this is going to be a permanent installation, consult the Perforce Git Fusion manual to install a different certificate; for our example purposes, this will suffice:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:54
+#, no-wrap
+msgid ""
+"$ export GIT_SSL_NO_VERIFY=true\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:57
+#, no-wrap
+msgid "Now we can test that everything is working.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:70
+#, no-wrap
+msgid ""
+"$ git clone https://10.0.1.254/Talkhouse\n"
+"Cloning into 'Talkhouse'...\n"
+"Username for 'https://10.0.1.254': john\n"
+"Password for 'https://john@10.0.1.254':\n"
+"remote: Counting objects: 630, done.\n"
+"remote: Compressing objects: 100% (581/581), done.\n"
+"remote: Total 630 (delta 172), reused 0 (delta 0)\n"
+"Receiving objects: 100% (630/630), 1.22 MiB | 0 bytes/s, done.\n"
+"Resolving deltas: 100% (172/172), done.\n"
+"Checking connectivity... done.\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:74
+#, no-wrap
+msgid ""
+"The virtual-machine image comes equipped with a sample project that you can clone.\n"
+"Here we're cloning over HTTPS, with the `john` user that we created above; Git asks for credentials for this connection, but the credential cache will allow us to skip this step for any subsequent requests.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:76
+#, no-wrap
+msgid "====== Fusion Configuration\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:80
+#, no-wrap
+msgid ""
+"Once you've got Git Fusion installed, you'll want to tweak the configuration.\n"
+"This is actually fairly easy to do using your favorite Perforce client; just map the `//.git-fusion` directory on the Perforce server into your workspace.\n"
+"The file structure looks like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:97
+#, no-wrap
+msgid ""
+"$ tree\n"
+".\n"
+"âââ objects\n"
+"âÂ Â  âââ repos\n"
+"âÂ Â  âÂ Â  âââ [...]\n"
+"âÂ Â  âââ trees\n"
+"âÂ Â      âââ [...]\n"
+"â\n"
+"âââ p4gf_config\n"
+"âââ repos\n"
+"âÂ Â  âââ Talkhouse\n"
+"âÂ Â      âââ p4gf_config\n"
+"âââ users\n"
+"    âââ p4gf_usermap\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:99
+#, no-wrap
+msgid ""
+"498 directories, 287 files\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:104
+#, no-wrap
+msgid ""
+"The `objects` directory is used internally by Git Fusion to map Perforce objects to Git and vice versa, you won't have to mess with anything in there.\n"
+"There's a global `p4gf_config` file in this directory, as well as one for each repository â these are the configuration files that determine how Git Fusion behaves.\n"
+"Let's take a look at the file in the root:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:106
+#: book/09-git-and-other-scms/sections/client-p4.asc:141
+#: book/09-git-and-other-scms/sections/client-p4.asc:154
+#, no-wrap
+msgid ""
+"[source,ini]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:109
+#, no-wrap
+msgid ""
+"[repo-creation]\n"
+"charset = utf8\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:120
+#, no-wrap
+msgid ""
+"[git-to-perforce]\n"
+"change-owner = author\n"
+"enable-git-branch-creation = yes\n"
+"enable-swarm-reviews = yes\n"
+"enable-git-merge-commits = yes\n"
+"enable-git-submodules = yes\n"
+"preflight-commit = none\n"
+"ignore-author-permissions = no\n"
+"read-permission-check = none\n"
+"git-merge-avoidance-after-change-num = 12107\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:124
+#, no-wrap
+msgid ""
+"[perforce-to-git]\n"
+"http-url = none\n"
+"ssh-url = none\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:130
+#, no-wrap
+msgid ""
+"[@features]\n"
+"imports = False\n"
+"chunked-push = False\n"
+"matrix2 = False\n"
+"parallel-push = False\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:133
+#, no-wrap
+msgid ""
+"[authentication]\n"
+"email-case-sensitivity = no\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:139
+#, no-wrap
+msgid ""
+"We won't go into the meanings of these flags here, but note that this is just an INI-formatted text file, much like Git uses for configuration.\n"
+"This file specifies the global options, which can then be overridden by repository-specific configuration files, like `repos/Talkhouse/p4gf_config`.\n"
+"If you open this file, you'll see a `[@repo]` section with some settings that are different from the global defaults.\n"
+"You'll also see sections that look like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:145
+#, no-wrap
+msgid ""
+"[Talkhouse-master]\n"
+"git-branch-name = master\n"
+"view = //depot/Talkhouse/main-dev/... ...\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:152
+#, no-wrap
+msgid ""
+"This is a mapping between a Perforce branch and a Git branch.\n"
+"The section can be named whatever you like, so long as the name is unique.\n"
+"`git-branch-name` lets you convert a depot path that would be cumbersome under Git to a more friendly name.\n"
+"The `view` setting controls how Perforce files are mapped into the Git repository, using the standard view mapping syntax.\n"
+"More than one mapping can be specified, like in this example:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:159
+#, no-wrap
+msgid ""
+"[multi-project-mapping]\n"
+"git-branch-name = master\n"
+"view = //depot/project1/main/... project1/...\n"
+"       //depot/project2/mainline/... project2/...\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:162
+#, no-wrap
+msgid "This way, if your normal workspace mapping includes changes in the structure of the directories, you can replicate that with a Git repository.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:167
+#, no-wrap
+msgid ""
+"The last file we'll discuss is `users/p4gf_usermap`, which maps Perforce users to Git users, and which you may not even need.\n"
+"When converting from a Perforce changeset to a Git commit, Git Fusion's default behavior is to look up the Perforce user, and use the email address and full name stored there for the author/committer field in Git.\n"
+"When converting the other way, the default is to look up the Perforce user with the email address stored in the Git commit's author field, and submit the changeset as that user (with permissions applying).\n"
+"In most cases, this behavior will do just fine, but consider the following mapping file:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:169
+#: book/09-git-and-other-scms/sections/client-p4.asc:606
+#: book/09-git-and-other-scms/sections/client-p4.asc:616
+#: book/09-git-and-other-scms/sections/import-custom.asc:131
+#: book/09-git-and-other-scms/sections/import-custom.asc:165
+#: book/09-git-and-other-scms/sections/import-hg.asc:31
+#: book/09-git-and-other-scms/sections/import-hg.asc:48
+#: book/09-git-and-other-scms/sections/import-svn.asc:16
+#: book/09-git-and-other-scms/sections/import-svn.asc:63
+#: book/09-git-and-other-scms/sections/import-svn.asc:77
+#, no-wrap
+msgid ""
+"[source]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:174
+#, no-wrap
+msgid ""
+"john john@example.com \"John Doe\"\n"
+"john johnny@appleseed.net \"John Doe\"\n"
+"bob employeeX@example.com \"Anon X. Mouse\"\n"
+"joe employeeY@example.com \"Anon Y. Mouse\"\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:180
+#, no-wrap
+msgid ""
+"Each line is of the format `<user> <email> \"<full name>\"`, and creates a single user mapping.\n"
+"The first two lines map two distinct email addresses to the same Perforce user account.\n"
+"This is useful if you've created Git commits under several different email addresses (or change email addresses), but want them to be mapped to the same Perforce user.\n"
+"When creating a Git commit from a Perforce changeset, the first line matching the Perforce user is used for Git authorship information.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:184
+#, no-wrap
+msgid ""
+"The last two lines mask Bob and Joe's actual names and email addresses from the Git commits that are created.\n"
+"This is nice if you want to open-source an internal project, but don't want to publish your employee directory to the entire world.\n"
+"Note that the email addresses and full names should be unique, unless you want all the Git commits to be attributed to a single fictional author.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:186
+#: book/09-git-and-other-scms/sections/client-p4.asc:377
+#, no-wrap
+msgid "====== Workflow\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:190
+#, no-wrap
+msgid ""
+"Perforce Git Fusion is a two-way bridge between Perforce and Git version control.\n"
+"Let's have a look at how it feels to work from the Git side.\n"
+"We'll assume we've mapped in the \"`Jam`\" project using a configuration file as shown above, which we can clone like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:215
+#, no-wrap
+msgid ""
+"$ git clone https://10.0.1.254/Jam\n"
+"Cloning into 'Jam'...\n"
+"Username for 'https://10.0.1.254': john\n"
+"Password for 'https://john@10.0.1.254':\n"
+"remote: Counting objects: 2070, done.\n"
+"remote: Compressing objects: 100% (1704/1704), done.\n"
+"Receiving objects: 100% (2070/2070), 1.21 MiB | 0 bytes/s, done.\n"
+"remote: Total 2070 (delta 1242), reused 0 (delta 0)\n"
+"Resolving deltas: 100% (1242/1242), done.\n"
+"Checking connectivity... done.\n"
+"$ git branch -a\n"
+"* master\n"
+"  remotes/origin/HEAD -> origin/master\n"
+"  remotes/origin/master\n"
+"  remotes/origin/rel2.1\n"
+"$ git log --oneline --decorate --graph --all\n"
+"* 0a38c33 (origin/rel2.1) Create Jam 2.1 release branch.\n"
+"| * d254865 (HEAD, origin/master, origin/HEAD, master) Upgrade to latest metrowerks on Beos -- the Intel one.\n"
+"| * bd2f54a Put in fix for jam's NT handle leak.\n"
+"| * c0f29e7 Fix URL in a jam doc\n"
+"| * cc644ac Radstone's lynx port.\n"
+"[...]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:221
+#, no-wrap
+msgid ""
+"The first time you do this, it may take some time.\n"
+"What's happening is that Git Fusion is converting all the applicable changesets in the Perforce history into Git commits.\n"
+"This happens locally on the server, so it's relatively fast, but if you have a lot of history, it can still take some time.\n"
+"Subsequent fetches do incremental conversion, so it'll feel more like Git's native speed.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:225
+#, no-wrap
+msgid ""
+"As you can see, our repository looks exactly like any other Git repository you might work with.\n"
+"There are three branches, and Git has helpfully created a local `master` branch that tracks `origin/master`.\n"
+"Let's do a bit of work, and create a couple of new commits:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:235
+#, no-wrap
+msgid ""
+"# ...\n"
+"$ git log --oneline --decorate --graph --all\n"
+"* cfd46ab (HEAD, master) Add documentation for new feature\n"
+"* a730d77 Whitespace\n"
+"* d254865 (origin/master, origin/HEAD) Upgrade to latest metrowerks on Beos -- the Intel one.\n"
+"* bd2f54a Put in fix for jam's NT handle leak.\n"
+"[...]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:239
+#, no-wrap
+msgid ""
+"We have two new commits.\n"
+"Now let's check if anyone else has been working:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:257
+#, no-wrap
+msgid ""
+"$ git fetch\n"
+"remote: Counting objects: 5, done.\n"
+"remote: Compressing objects: 100% (3/3), done.\n"
+"remote: Total 3 (delta 2), reused 0 (delta 0)\n"
+"Unpacking objects: 100% (3/3), done.\n"
+"From https://10.0.1.254/Jam\n"
+"   d254865..6afeb15  master     -> origin/master\n"
+"$ git log --oneline --decorate --graph --all\n"
+"* 6afeb15 (origin/master, origin/HEAD) Update copyright\n"
+"| * cfd46ab (HEAD, master) Add documentation for new feature\n"
+"| * a730d77 Whitespace\n"
+"|/\n"
+"* d254865 Upgrade to latest metrowerks on Beos -- the Intel one.\n"
+"* bd2f54a Put in fix for jam's NT handle leak.\n"
+"[...]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:263
+#, no-wrap
+msgid ""
+"It looks like someone was!\n"
+"You wouldn't know it from this view, but the `6afeb15` commit was actually created using a Perforce client.\n"
+"It just looks like another commit from Git's point of view, which is exactly the point.\n"
+"Let's see how the Perforce server deals with a merge commit:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:286
+#, no-wrap
+msgid ""
+"$ git merge origin/master\n"
+"Auto-merging README\n"
+"Merge made by the 'recursive' strategy.\n"
+" README | 2 +-\n"
+" 1 file changed, 1 insertion(+), 1 deletion(-)\n"
+"$ git push\n"
+"Counting objects: 9, done.\n"
+"Delta compression using up to 8 threads.\n"
+"Compressing objects: 100% (9/9), done.\n"
+"Writing objects: 100% (9/9), 917 bytes | 0 bytes/s, done.\n"
+"Total 9 (delta 6), reused 0 (delta 0)\n"
+"remote: Perforce: 100% (3/3) Loading commit tree into memory...\n"
+"remote: Perforce: 100% (5/5) Finding child commits...\n"
+"remote: Perforce: Running git fast-export...\n"
+"remote: Perforce: 100% (3/3) Checking commits...\n"
+"remote: Processing will continue even if connection is closed.\n"
+"remote: Perforce: 100% (3/3) Copying changelists...\n"
+"remote: Perforce: Submitting new Git commit objects to Perforce: 4\n"
+"To https://10.0.1.254/Jam\n"
+"   6afeb15..89cba2b  master -> master\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:290
+#, no-wrap
+msgid ""
+"Git thinks it worked.\n"
+"Let's take a look at the history of the `README` file from Perforce's point of view, using the revision graph feature of `p4v`:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:293
+#, no-wrap
+msgid ""
+".Perforce revision graph resulting from Git push\n"
+"image::images/git-fusion-perforce-graph.png[Perforce revision graph resulting from Git push]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:298
+#, no-wrap
+msgid ""
+"If you've never seen this view before, it may seem confusing, but it shows the same concepts as a graphical viewer for Git history.\n"
+"We're looking at the history of the `README` file, so the directory tree at top left only shows that file as it surfaces in various branches.\n"
+"At top right, we have a visual graph of how different revisions of the file are related, and the big-picture view of this graph is at bottom right.\n"
+"The rest of the view is given to the details view for the selected revision (`2` in this case).\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:302
+#, no-wrap
+msgid ""
+"One thing to notice is that the graph looks exactly like the one in Git's history.\n"
+"Perforce didn't have a named branch to store the `1` and `2` commits, so it made an \"`anonymous`\" branch in the `.git-fusion` directory to hold it.\n"
+"This will also happen for named Git branches that don't correspond to a named Perforce branch (and you can later map them to a Perforce branch using the configuration file).\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:304
+#, no-wrap
+msgid "Most of this happens behind the scenes, but the end result is that one person on a team can be using Git, another can be using Perforce, and neither of them will know about the other's choice.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:306
+#, no-wrap
+msgid "====== Git-Fusion Summary\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:312
+#, no-wrap
+msgid ""
+"If you have (or can get) access to your Perforce server, Git Fusion is a great way to make Git and Perforce talk to each other.\n"
+"There's a bit of configuration involved, but the learning curve isn't very steep.\n"
+"This is one of the few sections in this chapter where cautions about using Git's full power will not appear.\n"
+"That's not to say that Perforce will be happy with everything you throw at it â if you try to rewrite history that's already been pushed, Git Fusion will reject it â but Git Fusion tries very hard to feel native.\n"
+"You can even use Git submodules (though they'll look strange to Perforce users), and merge branches (this will be recorded as an integration on the Perforce side).\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:314
+#, no-wrap
+msgid "If you can't convince the administrator of your server to set up Git Fusion, there is still a way to use these tools together.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:317
+#, no-wrap
+msgid ""
+"[[_git_p4_client]]\n"
+"===== Git-p4\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:322
+#, no-wrap
+msgid ""
+"(((git commands, p4)))\n"
+"Git-p4 is a two-way bridge between Git and Perforce.\n"
+"It runs entirely inside your Git repository, so you won't need any kind of access to the Perforce server (other than user credentials, of course).\n"
+"Git-p4 isn't as flexible or complete a solution as Git Fusion, but it does allow you to do most of what you'd want to do without being invasive to the server environment.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:324
+#, no-wrap
+msgid ""
+"[NOTE]\n"
+"======\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:327
+#, no-wrap
+msgid ""
+"You'll need the `p4` tool somewhere in your `PATH` to work with git-p4.\n"
+"As of this writing, it is freely available at http://www.perforce.com/downloads/Perforce/20-User[].\n"
+"======\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:332
+#, no-wrap
+msgid "For example purposes, we'll be running the Perforce server from the Git Fusion OVA as shown above, but we'll bypass the Git Fusion server and go directly to the Perforce version control.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:334
+#, no-wrap
+msgid "In order to use the `p4` command-line client (which git-p4 depends on), you'll need to set a couple of environment variables:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:339
+#, no-wrap
+msgid ""
+"$ export P4PORT=10.0.1.254:1666\n"
+"$ export P4USER=john\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:342
+#, no-wrap
+msgid "====== Getting Started\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:344
+#, no-wrap
+msgid "As with anything in Git, the first command is to clone:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:351
+#, no-wrap
+msgid ""
+"$ git p4 clone //depot/www/live www-shallow\n"
+"Importing from //depot/www/live into www-shallow\n"
+"Initialized empty Git repository in /private/tmp/www-shallow/.git/\n"
+"Doing initial import of //depot/www/live/ from revision #head into refs/remotes/p4/master\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:355
+#, no-wrap
+msgid ""
+"This creates what in Git terms is a \"`shallow`\" clone; only the very latest Perforce revision is imported into Git; remember, Perforce isn't designed to give every revision to every user.\n"
+"This is enough to use Git as a Perforce client, but for other purposes it's not enough.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:357
+#, no-wrap
+msgid "Once it's finished, we have a fully-functional Git repository:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:363
+#, no-wrap
+msgid ""
+"$ cd myproject\n"
+"$ git log --oneline --all --graph --decorate\n"
+"* 70eaf78 (HEAD, p4/master, p4/HEAD, master) Initial import of //depot/www/live/ from the state at revision #head\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:367
+#, no-wrap
+msgid ""
+"Note how there's a \"`p4`\" remote for the Perforce server, but everything else looks like a standard clone.\n"
+"Actually, that's a bit misleading; there isn't actually a remote there.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:371
+#, no-wrap
+msgid ""
+"$ git remote -v\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:375
+#, no-wrap
+msgid ""
+"No remotes exist in this repository at all.\n"
+"Git-p4 has created some refs to represent the state of the server, and they look like remote refs to `git log`, but they're not managed by Git itself, and you can't push to them.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:380
+#, no-wrap
+msgid ""
+"Okay, let's do some work.\n"
+"Let's assume you've made some progress on a very important feature, and you're ready to show it to the rest of your team.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:387
+#, no-wrap
+msgid ""
+"$ git log --oneline --all --graph --decorate\n"
+"* 018467c (HEAD, master) Change page title\n"
+"* c0fb617 Update link\n"
+"* 70eaf78 (p4/master, p4/HEAD) Initial import of //depot/www/live/ from the state at revision #head\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:391
+#, no-wrap
+msgid ""
+"We've made two new commits that we're ready to submit to the Perforce server.\n"
+"Let's check if anyone else was working today:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:406
+#, no-wrap
+msgid ""
+"$ git p4 sync\n"
+"git p4 sync\n"
+"Performing incremental import into refs/remotes/p4/master git branch\n"
+"Depot paths: //depot/www/live/\n"
+"Import destination: refs/remotes/p4/master\n"
+"Importing revision 12142 (100%)\n"
+"$ git log --oneline --all --graph --decorate\n"
+"* 75cd059 (p4/master, p4/HEAD) Update copyright\n"
+"| * 018467c (HEAD, master) Change page title\n"
+"| * c0fb617 Update link\n"
+"|/\n"
+"* 70eaf78 Initial import of //depot/www/live/ from the state at revision #head\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:411
+#, no-wrap
+msgid ""
+"Looks like they were, and `master` and `p4/master` have diverged.\n"
+"Perforce's branching system is _nothing_ like Git's, so submitting merge commits doesn't make any sense.\n"
+"Git-p4 recommends that you rebase your commits, and even comes with a shortcut to do so:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:424
+#, no-wrap
+msgid ""
+"$ git p4 rebase\n"
+"Performing incremental import into refs/remotes/p4/master git branch\n"
+"Depot paths: //depot/www/live/\n"
+"No changes to import!\n"
+"Rebasing the current branch onto remotes/p4/master\n"
+"First, rewinding head to replay your work on top of it...\n"
+"Applying: Update link\n"
+"Applying: Change page title\n"
+" index.html | 2 +-\n"
+" 1 file changed, 1 insertion(+), 1 deletion(-)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:428
+#, no-wrap
+msgid ""
+"You can probably tell from the output, but `git p4 rebase` is a shortcut for `git p4 sync` followed by `git rebase p4/master`.\n"
+"It's a bit smarter than that, especially when working with multiple branches, but this is a good approximation.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:432
+#, no-wrap
+msgid ""
+"Now our history is linear again, and we're ready to contribute our changes back to Perforce.\n"
+"The `git p4 submit` command will try to create a new Perforce revision for every Git commit between `p4/master` and `master`.\n"
+"Running it drops us into our favorite editor, and the contents of the file look something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:449
+#, no-wrap
+msgid ""
+"# A Perforce Change Specification.\n"
+"#\n"
+"#  Change:      The change number. 'new' on a new changelist.\n"
+"#  Date:        The date this specification was last modified.\n"
+"#  Client:      The client on which the changelist was created.  Read-only.\n"
+"#  User:        The user who created the changelist.\n"
+"#  Status:      Either 'pending' or 'submitted'. Read-only.\n"
+"#  Type:        Either 'public' or 'restricted'. Default is 'public'.\n"
+"#  Description: Comments about the changelist.  Required.\n"
+"#  Jobs:        What opened jobs are to be closed by this changelist.\n"
+"#               You may delete jobs from this list.  (New changelists only.)\n"
+"#  Files:       What opened files from the default changelist are to be added\n"
+"#               to this changelist.  You may delete files from this list.\n"
+"#               (New changelists only.)\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:451
+#, no-wrap
+msgid "Change:  new\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:453
+#, no-wrap
+msgid "Client:  john_bens-mbp_8487\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:455
+#, no-wrap
+msgid "User: john\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:457
+#, no-wrap
+msgid "Status:  new\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:460
+#, no-wrap
+msgid ""
+"Description:\n"
+"   Update link\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:463
+#, no-wrap
+msgid ""
+"Files:\n"
+"   //depot/www/live/index.html   # edit\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:480
+#, no-wrap
+msgid ""
+"######## git author ben@straub.cc does not match your p4 account.\n"
+"######## Use option --preserve-user to modify authorship.\n"
+"######## Variable git-p4.skipUserNameCheck hides this message.\n"
+"######## everything below this line is just the diff #######\n"
+"--- //depot/www/live/index.html  2014-08-31 18:26:05.000000000 0000\n"
+"+++ /Users/ben/john_bens-mbp_8487/john_bens-mbp_8487/depot/www/live/index.html   2014-08-31 18:26:05.000000000 0000\n"
+"@@ -60,7 +60,7 @@\n"
+" </td>\n"
+" <td valign=top>\n"
+" Source and documentation for\n"
+"-<a href=\"http://www.perforce.com/jam/jam.html\">\n"
+"+<a href=\"jam.html\">\n"
+" Jam/MR</a>,\n"
+" a software build tool.\n"
+" </td>\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:485
+#, no-wrap
+msgid ""
+"This is mostly the same content you'd see by running `p4 submit`, except the stuff at the end which git-p4 has helpfully included.\n"
+"Git-p4 tries to honor your Git and Perforce settings individually when it has to provide a name for a commit or changeset, but in some cases you want to override it.\n"
+"For example, if the Git commit you're importing was written by a contributor who doesn't have a Perforce user account, you may still want the resulting changeset to look like they wrote it (and not you).\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:488
+#, no-wrap
+msgid ""
+"Git-p4 has helpfully imported the message from the Git commit as the content for this Perforce changeset, so all we have to do is save and quit, twice (once for each commit).\n"
+"The resulting shell output will look something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:521
+#, no-wrap
+msgid ""
+"$ git p4 submit\n"
+"Perforce checkout for depot path //depot/www/live/ located at /Users/ben/john_bens-mbp_8487/john_bens-mbp_8487/depot/www/live/\n"
+"Synchronizing p4 checkout...\n"
+"... - file(s) up-to-date.\n"
+"Applying dbac45b Update link\n"
+"//depot/www/live/index.html#4 - opened for edit\n"
+"Change 12143 created with 1 open file(s).\n"
+"Submitting change 12143.\n"
+"Locking 1 files ...\n"
+"edit //depot/www/live/index.html#5\n"
+"Change 12143 submitted.\n"
+"Applying 905ec6a Change page title\n"
+"//depot/www/live/index.html#5 - opened for edit\n"
+"Change 12144 created with 1 open file(s).\n"
+"Submitting change 12144.\n"
+"Locking 1 files ...\n"
+"edit //depot/www/live/index.html#6\n"
+"Change 12144 submitted.\n"
+"All commits applied!\n"
+"Performing incremental import into refs/remotes/p4/master git branch\n"
+"Depot paths: //depot/www/live/\n"
+"Import destination: refs/remotes/p4/master\n"
+"Importing revision 12144 (100%)\n"
+"Rebasing the current branch onto remotes/p4/master\n"
+"First, rewinding head to replay your work on top of it...\n"
+"$ git log --oneline --all --graph --decorate\n"
+"* 775a46f (HEAD, p4/master, p4/HEAD, master) Change page title\n"
+"* 05f1ade Update link\n"
+"* 75cd059 Update copyright\n"
+"* 70eaf78 Initial import of //depot/www/live/ from the state at revision #head\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:524
+#, no-wrap
+msgid "The result is as though we just did a `git push`, which is the closest analogy to what actually did happen.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:527
+#, no-wrap
+msgid ""
+"Note that during this process every Git commit is turned into a Perforce changeset; if you want to squash them down into a single changeset, you can do that with an interactive rebase before running `git p4 submit`.\n"
+"Also note that the SHA-1 hashes of all the commits that were submitted as changesets have changed; this is because git-p4 adds a line to the end of each commit it converts:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:534
+#, no-wrap
+msgid ""
+"$ git log -1\n"
+"commit 775a46f630d8b46535fc9983cf3ebe6b9aa53145\n"
+"Author: John Doe <john@example.com>\n"
+"Date:   Sun Aug 31 10:31:44 2014 -0800\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:536
+#, no-wrap
+msgid "    Change page title\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:538
+#, no-wrap
+msgid ""
+"    [git-p4: depot-paths = \"//depot/www/live/\": change = 12144]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:543
+#, no-wrap
+msgid ""
+"What happens if you try to submit a merge commit?\n"
+"Let's give it a try.\n"
+"Here's the situation we've gotten ourselves into:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:558
+#, no-wrap
+msgid ""
+"$ git log --oneline --all --graph --decorate\n"
+"* 3be6fd8 (HEAD, master) Correct email address\n"
+"*   1dcbf21 Merge remote-tracking branch 'p4/master'\n"
+"|\\\n"
+"| * c4689fc (p4/master, p4/HEAD) Grammar fix\n"
+"* | cbacd0a Table borders: yes please\n"
+"* | b4959b6 Trademark\n"
+"|/\n"
+"* 775a46f Change page title\n"
+"* 05f1ade Update link\n"
+"* 75cd059 Update copyright\n"
+"* 70eaf78 Initial import of //depot/www/live/ from the state at revision #head\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:564
+#, no-wrap
+msgid ""
+"The Git and Perforce history diverge after 775a46f.\n"
+"The Git side has two commits, then a merge commit with the Perforce head, then another commit.\n"
+"We're going to try to submit these on top of a single changeset on the Perforce side.\n"
+"Let's see what would happen if we tried to submit now:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:574
+#, no-wrap
+msgid ""
+"$ git p4 submit -n\n"
+"Perforce checkout for depot path //depot/www/live/ located at /Users/ben/john_bens-mbp_8487/john_bens-mbp_8487/depot/www/live/\n"
+"Would synchronize p4 checkout in /Users/ben/john_bens-mbp_8487/john_bens-mbp_8487/depot/www/live/\n"
+"Would apply\n"
+"  b4959b6 Trademark\n"
+"  cbacd0a Table borders: yes please\n"
+"  3be6fd8 Correct email address\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:579
+#, no-wrap
+msgid ""
+"The `-n` flag is short for `--dry-run`, which tries to report what would happen if the submit command were run for real.\n"
+"In this case, it looks like we'd be creating three Perforce changesets, which correspond to the three non-merge commits that don't yet exist on the Perforce server.\n"
+"That sounds like exactly what we want, let's see how it turns out:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:593
+#, no-wrap
+msgid ""
+"$ git p4 submit\n"
+"[â¦]\n"
+"$ git log --oneline --all --graph --decorate\n"
+"* dadbd89 (HEAD, p4/master, p4/HEAD, master) Correct email address\n"
+"* 1b79a80 Table borders: yes please\n"
+"* 0097235 Trademark\n"
+"* c4689fc Grammar fix\n"
+"* 775a46f Change page title\n"
+"* 05f1ade Update link\n"
+"* 75cd059 Update copyright\n"
+"* 70eaf78 Initial import of //depot/www/live/ from the state at revision #head\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:598
+#, no-wrap
+msgid ""
+"Our history became linear, just as though we had rebased before submitting (which is in fact exactly what happened).\n"
+"This means you can be free to create, work on, throw away, and merge branches on the Git side without fear that your history will somehow become incompatible with Perforce.\n"
+"If you can rebase it, you can contribute it to a Perforce server.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:601
+#, no-wrap
+msgid ""
+"[[_git_p4_branches]]\n"
+"====== Branching\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:604
+#, no-wrap
+msgid ""
+"If your Perforce project has multiple branches, you're not out of luck; git-p4 can handle that in a way that makes it feel like Git.\n"
+"Let's say your Perforce depot is laid out like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:611
+#, no-wrap
+msgid ""
+"//depot\n"
+"  âââ project\n"
+"      âââ main\n"
+"      âââ dev\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:614
+#, no-wrap
+msgid "And let's say you have a `dev` branch, which has a view spec that looks like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:618
+#, no-wrap
+msgid ""
+"//depot/project/main/... //depot/project/dev/...\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:621
+#, no-wrap
+msgid "Git-p4 can automatically detect that situation and do the right thing:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:629
+#, no-wrap
+msgid ""
+"$ git p4 clone --detect-branches //depot/project@all\n"
+"Importing from //depot/project@all into project\n"
+"Initialized empty Git repository in /private/tmp/project/.git/\n"
+"Importing revision 20 (50%)\n"
+"    Importing new branch project/dev\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:639
+#, no-wrap
+msgid ""
+"    Resuming with change 20\n"
+"Importing revision 22 (100%)\n"
+"Updated branches: main dev\n"
+"$ cd project; git log --oneline --all --graph --decorate\n"
+"* eae77ae (HEAD, p4/master, p4/HEAD, master) main\n"
+"| * 10d55fb (p4/project/dev) dev\n"
+"| * a43cfae Populate //depot/project/main/... //depot/project/dev/....\n"
+"|/\n"
+"* 2b83451 Project init\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:643
+#, no-wrap
+msgid ""
+"Note the \"`@all`\" specifier in the depot path; that tells git-p4 to clone not just the latest changeset for that subtree, but all changesets that have ever touched those paths.\n"
+"This is closer to Git's concept of a clone, but if you're working on a project with a long history, it could take a while.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:646
+#, no-wrap
+msgid ""
+"The `--detect-branches` flag tells git-p4 to use Perforce's branch specs to map the branches to Git refs.\n"
+"If these mappings aren't present on the Perforce server (which is a perfectly valid way to use Perforce), you can tell git-p4 what the branch mappings are, and you get the same result:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:654
+#, no-wrap
+msgid ""
+"$ git init project\n"
+"Initialized empty Git repository in /tmp/project/.git/\n"
+"$ cd project\n"
+"$ git config git-p4.branchList main:dev\n"
+"$ git clone --detect-branches //depot/project@all .\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:657
+#, no-wrap
+msgid "Setting the `git-p4.branchList` configuration variable to `main:dev` tells git-p4 that \"`main`\" and \"`dev`\" are both branches, and the second one is a child of the first one.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:660
+#, no-wrap
+msgid ""
+"If we now `git checkout -b dev p4/project/dev` and make some commits, git-p4 is smart enough to target the right branch when we do `git p4 submit`.\n"
+"Unfortunately, git-p4 can't mix shallow clones and multiple branches; if you have a huge project and want to work on more than one branch, you'll have to `git p4 clone` once for each branch you want to submit to.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:664
+#, no-wrap
+msgid ""
+"For creating or integrating branches, you'll have to use a Perforce client.\n"
+"Git-p4 can only sync and submit to existing branches, and it can only do it one linear changeset at a time.\n"
+"If you merge two branches in Git and try to submit the new changeset, all that will be recorded is a bunch of file changes; the metadata about which branches are involved in the integration will be lost.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:666
+#, no-wrap
+msgid "===== Git and Perforce Summary\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:670
+#, no-wrap
+msgid ""
+"Git-p4 makes it possible to use a Git workflow with a Perforce server, and it's pretty good at it.\n"
+"However, it's important to remember that Perforce is in charge of the source, and you're only using Git to work locally.\n"
+"Just be really careful about sharing Git commits; if you have a remote that other people use, don't push any commits that haven't already been submitted to the Perforce server.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-p4.asc:671
+#, no-wrap
+msgid "If you want to freely mix the use of Perforce and Git as clients for source control, and you can convince the server administrator to install it, Git Fusion makes using Git a first-class version-control client for a Perforce server.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:3
+#, no-wrap
+msgid ""
+"[[_git_svn]]\n"
+"==== Git and Subversion\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:8
+#, no-wrap
+msgid ""
+"(((Subversion)))(((Interoperation with other VCSs, Subversion)))\n"
+"A large fraction of open source development projects and a good number of corporate projects use Subversion to manage their source code.\n"
+"It's been around for more than a decade, and for most of that time was the _de facto_ VCS choice for open-source projects.\n"
+"It's also very similar in many ways to CVS, which was the big boy of the source-control world before that.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:15
+#, no-wrap
+msgid ""
+"(((git commands, svn)))(((git-svn)))\n"
+"One of Git's great features is a bidirectional bridge to Subversion called `git svn`.\n"
+"This tool allows you to use Git as a valid client to a Subversion server, so you can use all the local features of Git and then push to a Subversion server as if you were using Subversion locally.\n"
+"This means you can do local branching and merging, use the staging area, use rebasing and cherry-picking, and so on, while your collaborators continue to work in their dark and ancient ways.\n"
+"It's a good way to sneak Git into the corporate environment and help your fellow developers become more efficient while you lobby to get the infrastructure changed to support Git fully.\n"
+"The Subversion bridge is the gateway drug to the DVCS world.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:17
+#, no-wrap
+msgid "===== `git svn`\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:20
+#, no-wrap
+msgid ""
+"The base command in Git for all the Subversion bridging commands is `git svn`.\n"
+"It takes quite a few commands, so we'll show the most common while going through a few simple workflows.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:23
+#, no-wrap
+msgid ""
+"It's important to note that when you're using `git svn`, you're interacting with Subversion, which is a system that works very differently from Git.\n"
+"Although you *can* do local branching and merging, it's generally best to keep your history as linear as possible by rebasing your work, and avoiding doing things like simultaneously interacting with a Git remote repository.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:27
+#, no-wrap
+msgid ""
+"Don't rewrite your history and try to push again, and don't push to a parallel Git repository to collaborate with fellow Git developers at the same time.\n"
+"Subversion can have only a single linear history, and confusing it is very easy.\n"
+"If you're working with a team, and some are using SVN and others are using Git, make sure everyone is using the SVN server to collaborate â doing so will make your life easier.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:29
+#, no-wrap
+msgid "===== Setting Up\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:33
+#, no-wrap
+msgid ""
+"To demonstrate this functionality, you need a typical SVN repository that you have write access to.\n"
+"If you want to copy these examples, you'll have to make a writeable copy of an SVN test repository.\n"
+"In order to do that easily, you can use a tool called `svnsync` that comes with Subversion.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:35
+#, no-wrap
+msgid "To follow along, you first need to create a new local Subversion repository:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:40
+#, no-wrap
+msgid ""
+"$ mkdir /tmp/test-svn\n"
+"$ svnadmin create /tmp/test-svn\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:43
+#, no-wrap
+msgid "Then, enable all users to change revprops â the easy way is to add a `pre-revprop-change` script that always exits 0:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:50
+#, no-wrap
+msgid ""
+"$ cat /tmp/test-svn/hooks/pre-revprop-change\n"
+"#!/bin/sh\n"
+"exit 0;\n"
+"$ chmod +x /tmp/test-svn/hooks/pre-revprop-change\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:53
+#, no-wrap
+msgid "You can now sync this project to your local machine by calling `svnsync init` with the to and from repositories.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:58
+#, no-wrap
+msgid ""
+"$ svnsync init file:///tmp/test-svn \\\n"
+"  http://your-svn-server.example.org/svn/\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:62
+#, no-wrap
+msgid ""
+"This sets up the properties to run the sync.\n"
+"You can then clone the code by running:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:72
+#, no-wrap
+msgid ""
+"$ svnsync sync file:///tmp/test-svn\n"
+"Committed revision 1.\n"
+"Copied properties for revision 1.\n"
+"Transmitting file data .............................[...]\n"
+"Committed revision 2.\n"
+"Copied properties for revision 2.\n"
+"[â¦]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:76
+#, no-wrap
+msgid ""
+"Although this operation may take only a few minutes, if you try to copy the original repository to another remote repository instead of a local one, the process will take nearly an hour, even though there are fewer than 100 commits.\n"
+"Subversion has to clone one revision at a time and then push it back into another repository â it's ridiculously inefficient, but it's the only easy way to do this.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:82
+#, no-wrap
+msgid ""
+"Now that you have a Subversion repository to which you have write access, you can go through a typical workflow.\n"
+"You'll start with the `git svn clone` command, which imports an entire Subversion repository into a local Git repository.\n"
+"Remember that if you're importing from a real hosted Subversion repository, you should replace the `\\file:///tmp/test-svn` here with the URL of your Subversion repository:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:101
+#, no-wrap
+msgid ""
+"$ git svn clone file:///tmp/test-svn -T trunk -b branches -t tags\n"
+"Initialized empty Git repository in /private/tmp/progit/test-svn/.git/\n"
+"r1 = dcbfb5891860124cc2e8cc616cded42624897125 (refs/remotes/origin/trunk)\n"
+"    A\tm4/acx_pthread.m4\n"
+"    A\tm4/stl_hash.m4\n"
+"    A\tjava/src/test/java/com/google/protobuf/UnknownFieldSetTest.java\n"
+"    A\tjava/src/test/java/com/google/protobuf/WireFormatTest.java\n"
+"â¦\n"
+"r75 = 556a3e1e7ad1fde0a32823fc7e4d046bcfd86dae (refs/remotes/origin/trunk)\n"
+"Found possible branch point: file:///tmp/test-svn/trunk => file:///tmp/test-svn/branches/my-calc-branch, 75\n"
+"Found branch parent: (refs/remotes/origin/my-calc-branch) 556a3e1e7ad1fde0a32823fc7e4d046bcfd86dae\n"
+"Following parent with do_switch\n"
+"Successfully followed parent\n"
+"r76 = 0fb585761df569eaecd8146c71e58d70147460a2 (refs/remotes/origin/my-calc-branch)\n"
+"Checked out HEAD:\n"
+"  file:///tmp/test-svn/trunk r75\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:107
+#, no-wrap
+msgid ""
+"This runs the equivalent of two commands â `git svn init` followed by `git svn fetch` â on the URL you provide.\n"
+"This can take a while.\n"
+"If, for example, the test project has only about 75 commits and the codebase isn't that big, Git nevertheless must check out each version, one at a time, and commit it individually.\n"
+"For a project with hundreds or thousands of commits, this can literally take hours or even days to finish.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:112
+#, no-wrap
+msgid ""
+"The `-T trunk -b branches -t tags` part tells Git that this Subversion repository follows the basic branching and tagging conventions.\n"
+"If you name your trunk, branches, or tags differently, you can change these options.\n"
+"Because this is so common, you can replace this entire part with `-s`, which means standard layout and implies all those options.\n"
+"The following command is equivalent:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:116
+#, no-wrap
+msgid ""
+"$ git svn clone file:///tmp/test-svn -s\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:119
+#, no-wrap
+msgid "At this point, you should have a valid Git repository that has imported your branches and tags:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:130
+#, no-wrap
+msgid ""
+"$ git branch -a\n"
+"* master\n"
+"  remotes/origin/my-calc-branch\n"
+"  remotes/origin/tags/2.0.2\n"
+"  remotes/origin/tags/release-2.0.1\n"
+"  remotes/origin/tags/release-2.0.2\n"
+"  remotes/origin/tags/release-2.0.2rc1\n"
+"  remotes/origin/trunk\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:135
+#, no-wrap
+msgid ""
+"Note how this tool manages Subversion tags as remote refs.\n"
+"(((git commands, show-ref)))\n"
+"Let's take a closer look with the Git plumbing command `show-ref`:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:146
+#, no-wrap
+msgid ""
+"$ git show-ref\n"
+"556a3e1e7ad1fde0a32823fc7e4d046bcfd86dae refs/heads/master\n"
+"0fb585761df569eaecd8146c71e58d70147460a2 refs/remotes/origin/my-calc-branch\n"
+"bfd2d79303166789fc73af4046651a4b35c12f0b refs/remotes/origin/tags/2.0.2\n"
+"285c2b2e36e467dd4d91c8e3c0c0e1750b3fe8ca refs/remotes/origin/tags/release-2.0.1\n"
+"cbda99cb45d9abcb9793db1d4f70ae562a969f1e refs/remotes/origin/tags/release-2.0.2\n"
+"a9f074aa89e826d6f9d30808ce5ae3ffe711feda refs/remotes/origin/tags/release-2.0.2rc1\n"
+"556a3e1e7ad1fde0a32823fc7e4d046bcfd86dae refs/remotes/origin/trunk\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:149
+#, no-wrap
+msgid "Git doesn't do this when it clones from a Git server; here's what a repository with tags looks like after a fresh clone:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:159
+#, no-wrap
+msgid ""
+"$ git show-ref\n"
+"c3dcbe8488c6240392e8a5d7553bbffcb0f94ef0 refs/remotes/origin/master\n"
+"32ef1d1c7cc8c603ab78416262cc421b80a8c2df refs/remotes/origin/branch-1\n"
+"75f703a3580a9b81ead89fe1138e6da858c5ba18 refs/remotes/origin/branch-2\n"
+"23f8588dde934e8f33c263c6d8359b2ae095f863 refs/tags/v0.1.0\n"
+"7064938bd5e7ef47bfd79a685a62c1e2649e2ce7 refs/tags/v0.2.0\n"
+"6dcb09b5b57875f334f61aebed695e2e4193db5e refs/tags/v1.0.0\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:162
+#, no-wrap
+msgid "Git fetches the tags directly into `refs/tags`, rather than treating them remote branches.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:164
+#, no-wrap
+msgid "===== Committing Back to Subversion\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:167
+#, no-wrap
+msgid ""
+"Now that you have a working directory, you can do some work on the project and push your commits back upstream, using Git effectively as an SVN client.\n"
+"If you edit one of the files and commit it, you have a commit that exists in Git locally that doesn't exist on the Subversion server:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:173
+#, no-wrap
+msgid ""
+"$ git commit -am 'Adding git-svn instructions to the README'\n"
+"[master 4af61fd] Adding git-svn instructions to the README\n"
+" 1 file changed, 5 insertions(+)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:178
+#, no-wrap
+msgid ""
+"Next, you need to push your change upstream.\n"
+"Notice how this changes the way you work with Subversion â you can do several commits offline and then push them all at once to the Subversion server.\n"
+"To push to a Subversion server, you run the `git svn dcommit` command:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:189
+#, no-wrap
+msgid ""
+"$ git svn dcommit\n"
+"Committing to file:///tmp/test-svn/trunk ...\n"
+"    M\tREADME.txt\n"
+"Committed r77\n"
+"    M\tREADME.txt\n"
+"r77 = 95e0222ba6399739834380eb10afcd73e0670bc5 (refs/remotes/origin/trunk)\n"
+"No changes between 4af61fd05045e07598c553167e0f31c84fd6ffe1 and refs/remotes/origin/trunk\n"
+"Resetting to the latest refs/remotes/origin/trunk\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:195
+#, no-wrap
+msgid ""
+"This takes all the commits you've made on top of the Subversion server code, does a Subversion commit for each, and then rewrites your local Git commit to include a unique identifier.\n"
+"This is important because it means that all the SHA-1 checksums for your commits change.\n"
+"Partly for this reason, working with Git-based remote versions of your projects concurrently with a Subversion server isn't a good idea.\n"
+"If you look at the last commit, you can see the new `git-svn-id` that was added:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:202
+#, no-wrap
+msgid ""
+"$ git log -1\n"
+"commit 95e0222ba6399739834380eb10afcd73e0670bc5\n"
+"Author: ben <ben@0b684db3-b064-4277-89d1-21af03df0a68>\n"
+"Date:   Thu Jul 24 03:08:36 2014 +0000\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:204
+#, no-wrap
+msgid "    Adding git-svn instructions to the README\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:206
+#, no-wrap
+msgid ""
+"    git-svn-id: file:///tmp/test-svn/trunk@77 0b684db3-b064-4277-89d1-21af03df0a68\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:210
+#, no-wrap
+msgid ""
+"Notice that the SHA-1 checksum that originally started with `4af61fd` when you committed now begins with `95e0222`.\n"
+"If you want to push to both a Git server and a Subversion server, you have to push (`dcommit`) to the Subversion server first, because that action changes your commit data.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:212
+#, no-wrap
+msgid "===== Pulling in New Changes\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:216
+#, no-wrap
+msgid ""
+"If you're working with other developers, then at some point one of you will push, and then the other one will try to push a change that conflicts.\n"
+"That change will be rejected until you merge in their work.\n"
+"In `git svn`, it looks like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:221
+#, no-wrap
+msgid ""
+"$ git svn dcommit\n"
+"Committing to file:///tmp/test-svn/trunk ...\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:230
+#, no-wrap
+msgid ""
+"ERROR from SVN:\n"
+"Transaction is out of date: File '/trunk/README.txt' is out of date\n"
+"W: d5837c4b461b7c0e018b49d12398769d2bfc240a and refs/remotes/origin/trunk differ, using rebase:\n"
+":100644 100644 f414c433af0fd6734428cf9d2a9fd8ba00ada145 c80b6127dd04f5fcda218730ddf3a2da4eb39138 M\tREADME.txt\n"
+"Current branch master is up to date.\n"
+"ERROR: Not all changes have been committed into SVN, however the committed\n"
+"ones (if any) seem to be successfully integrated into the working tree.\n"
+"Please see the above messages for details.\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:233
+#, no-wrap
+msgid "To resolve this situation, you can run `git svn rebase`, which pulls down any changes on the server that you don't have yet and rebases any work you have on top of what is on the server:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:238
+#, no-wrap
+msgid ""
+"$ git svn rebase\n"
+"Committing to file:///tmp/test-svn/trunk ...\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:252
+#, no-wrap
+msgid ""
+"ERROR from SVN:\n"
+"Transaction is out of date: File '/trunk/README.txt' is out of date\n"
+"W: eaa029d99f87c5c822c5c29039d19111ff32ef46 and refs/remotes/origin/trunk differ, using rebase:\n"
+":100644 100644 65536c6e30d263495c17d781962cfff12422693a b34372b25ccf4945fe5658fa381b075045e7702a M\tREADME.txt\n"
+"First, rewinding head to replay your work on top of it...\n"
+"Applying: update foo\n"
+"Using index info to reconstruct a base tree...\n"
+"M\tREADME.txt\n"
+"Falling back to patching base and 3-way merge...\n"
+"Auto-merging README.txt\n"
+"ERROR: Not all changes have been committed into SVN, however the committed\n"
+"ones (if any) seem to be successfully integrated into the working tree.\n"
+"Please see the above messages for details.\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:255
+#, no-wrap
+msgid "Now, all your work is on top of what is on the Subversion server, so you can successfully `dcommit`:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:266
+#, no-wrap
+msgid ""
+"$ git svn dcommit\n"
+"Committing to file:///tmp/test-svn/trunk ...\n"
+"    M\tREADME.txt\n"
+"Committed r85\n"
+"    M\tREADME.txt\n"
+"r85 = 9c29704cc0bbbed7bd58160cfb66cb9191835cd8 (refs/remotes/origin/trunk)\n"
+"No changes between 5762f56732a958d6cfda681b661d2a239cc53ef5 and refs/remotes/origin/trunk\n"
+"Resetting to the latest refs/remotes/origin/trunk\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:270
+#, no-wrap
+msgid ""
+"Note that unlike Git, which requires you to merge upstream work you don't yet have locally before you can push, `git svn` makes you do that only if the changes conflict (much like how Subversion works).\n"
+"If someone else pushes a change to one file and then you push a change to another file, your `dcommit` will work fine:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:284
+#, no-wrap
+msgid ""
+"$ git svn dcommit\n"
+"Committing to file:///tmp/test-svn/trunk ...\n"
+"    M\tconfigure.ac\n"
+"Committed r87\n"
+"    M\tautogen.sh\n"
+"r86 = d8450bab8a77228a644b7dc0e95977ffc61adff7 (refs/remotes/origin/trunk)\n"
+"    M\tconfigure.ac\n"
+"r87 = f3653ea40cb4e26b6281cec102e35dcba1fe17c4 (refs/remotes/origin/trunk)\n"
+"W: a0253d06732169107aa020390d9fefd2b1d92806 and refs/remotes/origin/trunk differ, using rebase:\n"
+":100755 100755 efa5a59965fbbb5b2b0a12890f1b351bb5493c18 e757b59a9439312d80d5d43bb65d4a7d0389ed6d M\tautogen.sh\n"
+"First, rewinding head to replay your work on top of it...\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:289
+#, no-wrap
+msgid ""
+"This is important to remember, because the outcome is a project state that didn't exist on either of your computers when you pushed.\n"
+"If the changes are incompatible but don't conflict, you may get issues that are difficult to diagnose.\n"
+"This is different than using a Git server â in Git, you can fully test the state on your client system before publishing it, whereas in SVN, you can't ever be certain that the states immediately before commit and after commit are identical.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:292
+#, no-wrap
+msgid ""
+"You should also run this command to pull in changes from the Subversion server, even if you're not ready to commit yourself.\n"
+"You can run `git svn fetch` to grab the new data, but `git svn rebase` does the fetch and then updates your local commits.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:300
+#, no-wrap
+msgid ""
+"$ git svn rebase\n"
+"    M\tautogen.sh\n"
+"r88 = c9c5f83c64bd755368784b444bc7a0216cc1e17b (refs/remotes/origin/trunk)\n"
+"First, rewinding head to replay your work on top of it...\n"
+"Fast-forwarded master to refs/remotes/origin/trunk.\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:305
+#, no-wrap
+msgid ""
+"Running `git svn rebase` every once in a while makes sure your code is always up to date.\n"
+"You need to be sure your working directory is clean when you run this, though.\n"
+"If you have local changes, you must either stash your work or temporarily commit it before running `git svn rebase` â otherwise, the command will stop if it sees that the rebase will result in a merge conflict.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:307
+#, no-wrap
+msgid "===== Git Branching Issues\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:311
+#, no-wrap
+msgid ""
+"When you've become comfortable with a Git workflow, you'll likely create topic branches, do work on them, and then merge them in.\n"
+"If you're pushing to a Subversion server via `git svn`, you may want to rebase your work onto a single branch each time instead of merging branches together.\n"
+"The reason to prefer rebasing is that Subversion has a linear history and doesn't deal with merges like Git does, so `git svn` follows only the first parent when converting the snapshots into Subversion commits.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:314
+#, no-wrap
+msgid ""
+"Suppose your history looks like the following: you created an `experiment` branch, did two commits, and then merged them back into `master`.\n"
+"When you `dcommit`, you see output like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:331
+#, no-wrap
+msgid ""
+"$ git svn dcommit\n"
+"Committing to file:///tmp/test-svn/trunk ...\n"
+"    M\tCHANGES.txt\n"
+"Committed r89\n"
+"    M\tCHANGES.txt\n"
+"r89 = 89d492c884ea7c834353563d5d913c6adf933981 (refs/remotes/origin/trunk)\n"
+"    M\tCOPYING.txt\n"
+"    M\tINSTALL.txt\n"
+"Committed r90\n"
+"    M\tINSTALL.txt\n"
+"    M\tCOPYING.txt\n"
+"r90 = cb522197870e61467473391799148f6721bcf9a0 (refs/remotes/origin/trunk)\n"
+"No changes between 71af502c214ba13123992338569f4669877f55fd and refs/remotes/origin/trunk\n"
+"Resetting to the latest refs/remotes/origin/trunk\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:334
+#, no-wrap
+msgid "Running `dcommit` on a branch with merged history works fine, except that when you look at your Git project history, it hasn't rewritten either of the commits you made on the `experiment` branch â instead, all those changes appear in the SVN version of the single merge commit.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:336
+#, no-wrap
+msgid "When someone else clones that work, all they see is the merge commit with all the work squashed into it, as though you ran `git merge --squash`; they don't see the commit data about where it came from or when it was committed.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:338
+#, no-wrap
+msgid "===== Subversion Branching\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:341
+#, no-wrap
+msgid ""
+"Branching in Subversion isn't the same as branching in Git; if you can avoid using it much, that's probably best.\n"
+"However, you can create and commit to branches in Subversion using `git svn`.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:343
+#, no-wrap
+msgid "===== Creating a New SVN Branch\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:345
+#, no-wrap
+msgid "To create a new branch in Subversion, you run `git svn branch [new-branch]`:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:355
+#, no-wrap
+msgid ""
+"$ git svn branch opera\n"
+"Copying file:///tmp/test-svn/trunk at r90 to file:///tmp/test-svn/branches/opera...\n"
+"Found possible branch point: file:///tmp/test-svn/trunk => file:///tmp/test-svn/branches/opera, 90\n"
+"Found branch parent: (refs/remotes/origin/opera) cb522197870e61467473391799148f6721bcf9a0\n"
+"Following parent with do_switch\n"
+"Successfully followed parent\n"
+"r91 = f1b64a3855d3c8dd84ee0ef10fa89d27f1584302 (refs/remotes/origin/opera)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:359
+#, no-wrap
+msgid ""
+"This does the equivalent of the `svn copy trunk branches/opera` command in Subversion and operates on the Subversion server.\n"
+"It's important to note that it doesn't check you out into that branch; if you commit at this point, that commit will go to `trunk` on the server, not `opera`.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:361
+#, no-wrap
+msgid "===== Switching Active Branches\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:363
+#, no-wrap
+msgid "Git figures out what branch your dcommits go to by looking for the tip of any of your Subversion branches in your history â you should have only one, and it should be the last one with a `git-svn-id` in your current branch history.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:366
+#, no-wrap
+msgid ""
+"If you want to work on more than one branch simultaneously, you can set up local branches to `dcommit` to specific Subversion branches by starting them at the imported Subversion commit for that branch.\n"
+"If you want an `opera` branch that you can work on separately, you can run:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:370
+#, no-wrap
+msgid ""
+"$ git branch opera remotes/origin/opera\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:374
+#, no-wrap
+msgid ""
+"Now, if you want to merge your `opera` branch into `trunk` (your `master` branch), you can do so with a normal `git merge`.\n"
+"But you need to provide a descriptive commit message (via `-m`), or the merge will say \"`Merge branch opera`\" instead of something useful.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:381
+#, no-wrap
+msgid ""
+"Remember that although you're using `git merge` to do this operation, and the merge likely will be much easier than it would be in Subversion (because Git will automatically detect the appropriate merge base for you), this isn't a normal Git merge commit.\n"
+"You have to push this data back to a Subversion server that can't handle a commit that tracks more than one parent; so, after you push it up, it will look like a single commit that squashed in all the work of another branch under a single commit.\n"
+"After you merge one branch into another, you can't easily go back and continue working on that branch, as you normally can in Git.\n"
+"The `dcommit` command that you run erases any information that says what branch was merged in, so subsequent merge-base calculations will be wrong â the `dcommit` makes your `git merge` result look like you ran `git merge --squash`.\n"
+"Unfortunately, there's no good way to avoid this situation â Subversion can't store this information, so you'll always be crippled by its limitations while you're using it as your server.\n"
+"To avoid issues, you should delete the local branch (in this case, `opera`) after you merge it into trunk.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:383
+#, no-wrap
+msgid "===== Subversion Commands\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:386
+#, no-wrap
+msgid ""
+"The `git svn` toolset provides a number of commands to help ease the transition to Git by providing some functionality that's similar to what you had in Subversion.\n"
+"Here are a few commands that give you what Subversion used to.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:388
+#, no-wrap
+msgid "====== SVN Style History\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:390
+#, no-wrap
+msgid "If you're used to Subversion and want to see your history in SVN output style, you can run `git svn log` to view your commit history in SVN formatting:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:394
+#, no-wrap
+msgid ""
+"$ git svn log\n"
+"------------------------------------------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:396
+#, no-wrap
+msgid "r87 | schacon | 2014-05-02 16:07:37 -0700 (Sat, 02 May 2014) | 2 lines\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:398
+#, no-wrap
+msgid "autogen change\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:399
+#: book/09-git-and-other-scms/sections/client-svn.asc:404
+#, no-wrap
+msgid "------------------------------------------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:401
+#, no-wrap
+msgid "r86 | schacon | 2014-05-02 16:00:21 -0700 (Sat, 02 May 2014) | 2 lines\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:403
+#, no-wrap
+msgid "Merge branch 'experiment'\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:406
+#, no-wrap
+msgid "r85 | schacon | 2014-05-02 16:00:09 -0700 (Sat, 02 May 2014) | 2 lines\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:408
+#, no-wrap
+msgid ""
+"updated the changelog\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:415
+#, no-wrap
+msgid ""
+"You should know two important things about `git svn log`.\n"
+"First, it works offline, unlike the real `svn log` command, which asks the Subversion server for the data.\n"
+"Second, it only shows you commits that have been committed up to the Subversion server.\n"
+"Local Git commits that you haven't dcommited don't show up; neither do commits that people have made to the Subversion server in the meantime.\n"
+"It's more like the last known state of the commits on the Subversion server.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:417
+#, no-wrap
+msgid "====== SVN Annotation\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:420
+#, no-wrap
+msgid ""
+"Much as the `git svn log` command simulates the `svn log` command offline, you can get the equivalent of `svn annotate` by running `git svn blame [FILE]`.\n"
+"The output looks like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:436
+#, no-wrap
+msgid ""
+"$ git svn blame README.txt\n"
+" 2   temporal Protocol Buffers - Google's data interchange format\n"
+" 2   temporal Copyright 2008 Google Inc.\n"
+" 2   temporal http://code.google.com/apis/protocolbuffers/\n"
+" 2   temporal\n"
+"22   temporal C++ Installation - Unix\n"
+"22   temporal =======================\n"
+" 2   temporal\n"
+"79    schacon Committing in git-svn.\n"
+"78    schacon\n"
+" 2   temporal To build and install the C++ Protocol Buffer runtime and the Protocol\n"
+" 2   temporal Buffer compiler (protoc) execute the following:\n"
+" 2   temporal\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:439
+#, no-wrap
+msgid "Again, it doesn't show commits that you did locally in Git or that have been pushed to Subversion in the meantime.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:441
+#, no-wrap
+msgid "====== SVN Server Information\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:443
+#, no-wrap
+msgid "You can also get the same sort of information that `svn info` gives you by running `git svn info`:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:457
+#, no-wrap
+msgid ""
+"$ git svn info\n"
+"Path: .\n"
+"URL: https://schacon-test.googlecode.com/svn/trunk\n"
+"Repository Root: https://schacon-test.googlecode.com/svn\n"
+"Repository UUID: 4c93b258-373f-11de-be05-5f7a86268029\n"
+"Revision: 87\n"
+"Node Kind: directory\n"
+"Schedule: normal\n"
+"Last Changed Author: schacon\n"
+"Last Changed Rev: 87\n"
+"Last Changed Date: 2009-05-02 16:07:37 -0700 (Sat, 02 May 2009)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:460
+#, no-wrap
+msgid "This is like `blame` and `log` in that it runs offline and is up to date only as of the last time you communicated with the Subversion server.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:462
+#, no-wrap
+msgid "====== Ignoring What Subversion Ignores\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:466
+#, no-wrap
+msgid ""
+"If you clone a Subversion repository that has `svn:ignore` properties set anywhere, you'll likely want to set corresponding `.gitignore` files so you don't accidentally commit files that you shouldn't.\n"
+"`git svn` has two commands to help with this issue.\n"
+"The first is `git svn create-ignore`, which automatically creates corresponding `.gitignore` files for you so your next commit can include them.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:468
+#, no-wrap
+msgid "The second command is `git svn show-ignore`, which prints to stdout the lines you need to put in a `.gitignore` file so you can redirect the output into your project exclude file:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:472
+#, no-wrap
+msgid ""
+"$ git svn show-ignore > .git/info/exclude\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:476
+#, no-wrap
+msgid ""
+"That way, you don't litter the project with `.gitignore` files.\n"
+"This is a good option if you're the only Git user on a Subversion team, and your teammates don't want `.gitignore` files in the project.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:478
+#, no-wrap
+msgid "===== Git-Svn Summary\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:482
+#, no-wrap
+msgid ""
+"The `git svn` tools are useful if you're stuck with a Subversion server, or are otherwise in a development environment that necessitates running a Subversion server.\n"
+"You should consider it crippled Git, however, or you'll hit issues in translation that may confuse you and your collaborators.\n"
+"To stay out of trouble, try to follow these guidelines:\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/09-git-and-other-scms/sections/client-svn.asc:488
+#, no-wrap
+msgid ""
+"Keep a linear Git history that doesn't contain merge commits made by `git merge`.\n"
+"Rebase any work you do outside of your mainline branch back onto it; don't merge it in.\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/09-git-and-other-scms/sections/client-svn.asc:488
+#, no-wrap
+msgid ""
+"Don't set up and collaborate on a separate Git server.\n"
+"Possibly have one to speed up clones for new developers, but don't push anything to it that doesn't have a `git-svn-id` entry.\n"
+"You may even want to add a `pre-receive` hook that checks each commit message for a `git-svn-id` and rejects pushes that contain commits without it.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/client-svn.asc:490
+#, no-wrap
+msgid ""
+"If you follow those guidelines, working with a Subversion server can be more bearable.\n"
+"However, if it's possible to move to a real Git server, doing so can gain your team a lot more.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:3
+#, no-wrap
+msgid ""
+"==== Bazaar\n"
+"(((Bazaar)))(((Importing, from Bazaar)))\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:6
+#, no-wrap
+msgid ""
+"Bazaar is a DVCS tool much like Git, and as a result it's pretty straightforward to convert a Bazaar repository into a Git one.\n"
+"To accomplish this, you'll need to import the `bzr-fastimport` plugin.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:8
+#, no-wrap
+msgid "===== Getting the bzr-fastimport plugin\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:11
+#, no-wrap
+msgid ""
+"The procedure for installing the fastimport plugin is different on UNIX-like operating systems and on Windows.\n"
+"In the first case, the simplest is to install the `bzr-fastimport` package that will install all the required dependencies.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:13
+#, no-wrap
+msgid "For example, with Debian and derived, you would do the following:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:17
+#, no-wrap
+msgid ""
+"$ sudo apt-get install bzr-fastimport\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:20
+#, no-wrap
+msgid "With RHEL, you would do the following:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:24
+#, no-wrap
+msgid ""
+"$ sudo yum install bzr-fastimport\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:27
+#, no-wrap
+msgid "With Fedora, since release 22, the new package manager is dnf:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:31
+#, no-wrap
+msgid ""
+"$ sudo dnf install bzr-fastimport\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:34
+#, no-wrap
+msgid "If the package is not available, you may install it as a plugin:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:42
+#, no-wrap
+msgid ""
+"$ mkdir --parents ~/.bazaar/plugins     # creates the necessary folders for the plugins\n"
+"$ cd ~/.bazaar/plugins\n"
+"$ bzr branch lp:bzr-fastimport fastimport   # imports the fastimport plugin\n"
+"$ cd fastimport\n"
+"$ sudo python setup.py install --record=files.txt   # installs the plugin\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:46
+#, no-wrap
+msgid ""
+"For this plugin to work, you'll also need the `fastimport` Python module.\n"
+"You can check whether it is present or not and install it with the following commands:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:54
+#, no-wrap
+msgid ""
+"$ python -c \"import fastimport\"\n"
+"Traceback (most recent call last):\n"
+"  File \"<string>\", line 1, in <module>\n"
+"ImportError: No module named fastimport\n"
+"$ pip install fastimport\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:57
+#, no-wrap
+msgid "If it is not available, you can download it at address https://pypi.python.org/pypi/fastimport/.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:60
+#, no-wrap
+msgid ""
+"In the second case (on Windows), `bzr-fastimport` is automatically installed with the standalone version and the default installation (let all the checkboxes checked).\n"
+"So in this case you have nothing to do.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:62
+#, no-wrap
+msgid "At this point, the way to import a Bazaar repository differs according to that you have a single branch or you are working with a repository that has several branches.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:64
+#, no-wrap
+msgid "===== Project with a single branch\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:66
+#, no-wrap
+msgid "Now `cd` in the directory that contains your Bazaar repository and initialize the Git repository:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:71
+#, no-wrap
+msgid ""
+"$ cd /path/to/the/bzr/repository\n"
+"$ git init\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:74
+#, no-wrap
+msgid "Now, you can simply export your Bazaar repository and convert it into a Git repository using the following command:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:78
+#, no-wrap
+msgid ""
+"$ bzr fast-export --plain . | git fast-import\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:81
+#, no-wrap
+msgid "Depending on the size of the project, your Git repository is built in a lapse from a few seconds to a few minutes.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:83
+#, no-wrap
+msgid "===== Case of a project with a main branch and a working branch\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:86
+#, no-wrap
+msgid ""
+"You can also import a Bazaar repository that contains branches.\n"
+"Let us suppose that you have two branches: one represents the main branch (myProject.trunk), the other one is the working branch (myProject.work).\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:91
+#, no-wrap
+msgid ""
+"$ ls\n"
+"myProject.trunk myProject.work\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:94
+#, no-wrap
+msgid "Create the Git repository and `cd` into it:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:99
+#, no-wrap
+msgid ""
+"$ git init git-repo\n"
+"$ cd git-repo\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:102
+#, no-wrap
+msgid "Pull the `master` branch into git:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:107
+#, no-wrap
+msgid ""
+"$ bzr fast-export --export-marks=../marks.bzr ../myProject.trunk | \\\n"
+"git fast-import --export-marks=../marks.git\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:110
+#, no-wrap
+msgid "Pull the working branch into Git:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:115
+#, no-wrap
+msgid ""
+"$ bzr fast-export --marks=../marks.bzr --git-branch=work ../myProject.work | \\\n"
+"git fast-import --import-marks=../marks.git --export-marks=../marks.git\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:119
+#, no-wrap
+msgid ""
+"Now `git branch` shows you the `master` branch as well as the `work` branch.\n"
+"Check the logs to make sure they're complete and get rid of the `marks.bzr` and `marks.git` files.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:121
+#, no-wrap
+msgid "===== Synchronizing the staging area\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:124
+#, no-wrap
+msgid ""
+"Whatever the number of branches you had and the import method you used, your staging area is not synchronized with `HEAD`, and with the import of several branches, your working directory is not synchronized either.\n"
+"This situation is easily solved by the following command:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:128
+#, no-wrap
+msgid ""
+"$ git reset --hard HEAD\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:131
+#, no-wrap
+msgid "===== Ignoring the files that were ignored with .bzrignore\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:135
+#, no-wrap
+msgid ""
+"Now let's have a look at the files to ignore.\n"
+"The first thing to do is to rename `.bzrignore` into `.gitignore`.\n"
+"If the `.bzrignore` file contains one or several lines starting with \"!!\" or \"RE:\", you'll have to modify it and perhaps create several `.gitignore` files in order to ignore exactly the same files that Bazaar was ignoring.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:137
+#, no-wrap
+msgid "Finally, you will have to create a commit that contains this modification for the migration:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:143
+#, no-wrap
+msgid ""
+"$ git mv .bzrignore .gitignore\n"
+"$ # modify .gitignore if needed\n"
+"$ git commit -am 'Migration from Bazaar to Git'\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:146
+#, no-wrap
+msgid "===== Sending your repository to the server\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:149
+#, no-wrap
+msgid ""
+"Here we are!\n"
+"Now you can push the repository onto its new home server:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:155
+#, no-wrap
+msgid ""
+"$ git remote add origin git@my-git-server:mygitrepository.git\n"
+"$ git push origin --all\n"
+"$ git push origin --tags\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-bzr.asc:157
+#, no-wrap
+msgid "Your Git repository is ready to use.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:3
+#, no-wrap
+msgid ""
+"[[_custom_importer]]\n"
+"==== A Custom Importer\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:12
+#, no-wrap
+msgid ""
+"(((git commands, fast-import)))\n"
+"(((Importing, from others)))\n"
+"If your system isn't one of the above, you should look for an importer online â quality importers are available for many other systems, including CVS, Clear Case, Visual Source Safe, even a directory of archives.\n"
+"If none of these tools works for you, you have a more obscure tool, or you otherwise need a more custom importing process, you should use `git fast-import`.\n"
+"This command reads simple instructions from stdin to write specific Git data.\n"
+"It's much easier to create Git objects this way than to run the raw Git commands or try to write the raw objects (see <<ch10-git-internals#ch10-git-internals>> for more information).\n"
+"This way, you can write an import script that reads the necessary information out of the system you're importing from and prints straightforward instructions to stdout.\n"
+"You can then run this program and pipe its output through `git fast-import`.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:16
+#, no-wrap
+msgid ""
+"To quickly demonstrate, you'll write a simple importer.\n"
+"Suppose you work in `current`, you back up your project by occasionally copying the directory into a time-stamped `back_YYYY_MM_DD` backup directory, and you want to import this into Git.\n"
+"Your directory structure looks like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:25
+#, no-wrap
+msgid ""
+"$ ls /opt/import_from\n"
+"back_2014_01_02\n"
+"back_2014_01_04\n"
+"back_2014_01_14\n"
+"back_2014_02_03\n"
+"current\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:31
+#, no-wrap
+msgid ""
+"In order to import a Git directory, you need to review how Git stores its data.\n"
+"As you may remember, Git is fundamentally a linked list of commit objects that point to a snapshot of content.\n"
+"All you have to do is tell `fast-import` what the content snapshots are, what commit data points to them, and the order they go in.\n"
+"Your strategy will be to go through the snapshots one at a time and create commits with the contents of each directory, linking each commit back to the previous one.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:35
+#, no-wrap
+msgid ""
+"As we did in <<ch08-customizing-git#_an_example_git_enforced_policy>>, we'll write this in Ruby, because it's what we generally work with and it tends to be easy to read.\n"
+"You can write this example pretty easily in anything you're familiar with â it just needs to print the appropriate information to `stdout`.\n"
+"And, if you are running on Windows, this means you'll need to take special care to not introduce carriage returns at the end your lines â `git fast-import` is very particular about just wanting line feeds (LF) not the carriage return line feeds (CRLF) that Windows uses.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:39
+#, no-wrap
+msgid ""
+"To begin, you'll change into the target directory and identify every subdirectory, each of which is a snapshot that you want to import as a commit.\n"
+"You'll change into each subdirectory and print the commands necessary to export it.\n"
+"Your basic main loop looks like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:41
+#: book/09-git-and-other-scms/sections/import-custom.asc:62
+#: book/09-git-and-other-scms/sections/import-custom.asc:70
+#: book/09-git-and-other-scms/sections/import-custom.asc:85
+#: book/09-git-and-other-scms/sections/import-custom.asc:92
+#: book/09-git-and-other-scms/sections/import-custom.asc:108
+#: book/09-git-and-other-scms/sections/import-custom.asc:117
+#: book/09-git-and-other-scms/sections/import-custom.asc:139
+#: book/09-git-and-other-scms/sections/import-custom.asc:150
+#: book/09-git-and-other-scms/sections/import-custom.asc:175
+#: book/09-git-and-other-scms/sections/import-custom.asc:188
+#: book/09-git-and-other-scms/sections/import-custom.asc:199
+#: book/09-git-and-other-scms/sections/import-custom.asc:209
+#, no-wrap
+msgid ""
+"[source,ruby]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:43
+#, no-wrap
+msgid "last_mark = nil\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:48
+#, no-wrap
+msgid ""
+"# loop through the directories\n"
+"Dir.chdir(ARGV[0]) do\n"
+"  Dir.glob(\"*\").each do |dir|\n"
+"    next if File.file?(dir)\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:55
+#, no-wrap
+msgid ""
+"    # move into the target directory\n"
+"    Dir.chdir(dir) do\n"
+"      last_mark = print_export(dir, last_mark)\n"
+"    end\n"
+"  end\n"
+"end\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:60
+#, no-wrap
+msgid ""
+"You run `print_export` inside each directory, which takes the manifest and mark of the previous snapshot and returns the manifest and mark of this one; that way, you can link them properly.\n"
+"\"`Mark`\" is the `fast-import` term for an identifier you give to a commit; as you create commits, you give each one a mark that you can use to link to it from other commits.\n"
+"So, the first thing to do in your `print_export` method is generate a mark from the directory name:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:64
+#, no-wrap
+msgid ""
+"mark = convert_dir_to_mark(dir)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:68
+#, no-wrap
+msgid ""
+"You'll do this by creating an array of directories and using the index value as the mark, because a mark must be an integer.\n"
+"Your method looks like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:78
+#, no-wrap
+msgid ""
+"$marks = []\n"
+"def convert_dir_to_mark(dir)\n"
+"  if !$marks.include?(dir)\n"
+"    $marks << dir\n"
+"  end\n"
+"  ($marks.index(dir) + 1).to_s\n"
+"end\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:83
+#, no-wrap
+msgid ""
+"Now that you have an integer representation of your commit, you need a date for the commit metadata.\n"
+"Because the date is expressed in the name of the directory, you'll parse it out.\n"
+"The next line in your `print_export` file is:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:87
+#, no-wrap
+msgid ""
+"date = convert_dir_to_date(dir)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:90
+#, no-wrap
+msgid "where `convert_dir_to_date` is defined as:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:102
+#, no-wrap
+msgid ""
+"def convert_dir_to_date(dir)\n"
+"  if dir == 'current'\n"
+"    return Time.now().to_i\n"
+"  else\n"
+"    dir = dir.gsub('back_', '')\n"
+"    (year, month, day) = dir.split('_')\n"
+"    return Time.local(year, month, day).to_i\n"
+"  end\n"
+"end\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:106
+#, no-wrap
+msgid ""
+"That returns an integer value for the date of each directory.\n"
+"The last piece of meta-information you need for each commit is the committer data, which you hardcode in a global variable:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:110
+#, no-wrap
+msgid ""
+"$author = 'John Doe <john@example.com>'\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:115
+#, no-wrap
+msgid ""
+"Now you're ready to begin printing out the commit data for your importer.\n"
+"The initial information states that you're defining a commit object and what branch it's on, followed by the mark you've generated, the committer information and commit message, and then the previous commit, if any.\n"
+"The code looks like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:124
+#, no-wrap
+msgid ""
+"# print the import information\n"
+"puts 'commit refs/heads/master'\n"
+"puts 'mark :' + mark\n"
+"puts \"committer #{$author} #{date} -0700\"\n"
+"export_data('imported from ' + dir)\n"
+"puts 'from :' + last_mark if last_mark\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:129
+#, no-wrap
+msgid ""
+"You hardcode the time zone (-0700) because doing so is easy.\n"
+"If you're importing from another system, you must specify the time zone as an offset.\n"
+"The commit message must be expressed in a special format:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:133
+#, no-wrap
+msgid ""
+"data (size)\\n(contents)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:137
+#, no-wrap
+msgid ""
+"The format consists of the word data, the size of the data to be read, a newline, and finally the data.\n"
+"Because you need to use the same format to specify the file contents later, you create a helper method, `export_data`:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:143
+#, no-wrap
+msgid ""
+"def export_data(string)\n"
+"  print \"data #{string.size}\\n#{string}\"\n"
+"end\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:148
+#, no-wrap
+msgid ""
+"All that's left is to specify the file contents for each snapshot.\n"
+"This is easy, because you have each one in a directory â you can print out the `deleteall` command followed by the contents of each file in the directory.\n"
+"Git will then record each snapshot appropriately:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:156
+#, no-wrap
+msgid ""
+"puts 'deleteall'\n"
+"Dir.glob(\"**/*\").each do |file|\n"
+"  next if !File.file?(file)\n"
+"  inline_data(file)\n"
+"end\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:161
+#, no-wrap
+msgid ""
+"Note:  Because many systems think of their revisions as changes from one commit to another, fast-import can also take commands with each commit to specify which files have been added, removed, or modified and what the new contents are.\n"
+"You could calculate the differences between snapshots and provide only this data, but doing so is more complex â you may as well give Git all the data and let it figure it out.\n"
+"If this is better suited to your data, check the `fast-import` man page for details about how to provide your data in this manner.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:163
+#, no-wrap
+msgid "The format for listing the new file contents or specifying a modified file with the new contents is as follows:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:169
+#, no-wrap
+msgid ""
+"M 644 inline path/to/file\n"
+"data (size)\n"
+"(file contents)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:173
+#, no-wrap
+msgid ""
+"Here, 644 is the mode (if you have executable files, you need to detect and specify 755 instead), and inline says you'll list the contents immediately after this line.\n"
+"Your `inline_data` method looks like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:181
+#, no-wrap
+msgid ""
+"def inline_data(file, code = 'M', mode = '644')\n"
+"  content = File.read(file)\n"
+"  puts \"#{code} #{mode} inline #{file}\"\n"
+"  export_data(content)\n"
+"end\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:184
+#, no-wrap
+msgid "You reuse the `export_data` method you defined earlier, because it's the same as the way you specified your commit message data.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:186
+#, no-wrap
+msgid "The last thing you need to do is to return the current mark so it can be passed to the next iteration:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:190
+#, no-wrap
+msgid ""
+"return mark\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:193
+#: book/09-git-and-other-scms/sections/import-p4.asc:28
+#: book/09-git-and-other-scms/sections/import-svn.asc:34
+#: book/09-git-and-other-scms/sections/import-svn.asc:45
+#, no-wrap
+msgid ""
+"[NOTE]\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:197
+#, no-wrap
+msgid ""
+"If you are running on Windows you'll need to make sure that you add one extra step.\n"
+"As mentioned before, Windows uses CRLF for new line characters while `git fast-import` expects only LF.\n"
+"To get around this problem and make `git fast-import` happy, you need to tell ruby to use LF instead of CRLF:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:201
+#, no-wrap
+msgid ""
+"$stdout.binmode\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:202
+#, no-wrap
+msgid "====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:206
+#, no-wrap
+msgid ""
+"That's it.\n"
+"Here's the script in its entirety:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:211
+#, no-wrap
+msgid "#!/usr/bin/env ruby\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:214
+#, no-wrap
+msgid ""
+"$stdout.binmode\n"
+"$author = \"John Doe <john@example.com>\"\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:222
+#, no-wrap
+msgid ""
+"$marks = []\n"
+"def convert_dir_to_mark(dir)\n"
+"    if !$marks.include?(dir)\n"
+"        $marks << dir\n"
+"    end\n"
+"    ($marks.index(dir)+1).to_s\n"
+"end\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:232
+#, no-wrap
+msgid ""
+"def convert_dir_to_date(dir)\n"
+"    if dir == 'current'\n"
+"        return Time.now().to_i\n"
+"    else\n"
+"        dir = dir.gsub('back_', '')\n"
+"        (year, month, day) = dir.split('_')\n"
+"        return Time.local(year, month, day).to_i\n"
+"    end\n"
+"end\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:236
+#, no-wrap
+msgid ""
+"def export_data(string)\n"
+"    print \"data #{string.size}\\n#{string}\"\n"
+"end\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:242
+#, no-wrap
+msgid ""
+"def inline_data(file, code='M', mode='644')\n"
+"    content = File.read(file)\n"
+"    puts \"#{code} #{mode} inline #{file}\"\n"
+"    export_data(content)\n"
+"end\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:246
+#, no-wrap
+msgid ""
+"def print_export(dir, last_mark)\n"
+"    date = convert_dir_to_date(dir)\n"
+"    mark = convert_dir_to_mark(dir)\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:252
+#, no-wrap
+msgid ""
+"    puts 'commit refs/heads/master'\n"
+"    puts \"mark :#{mark}\"\n"
+"    puts \"committer #{$author} #{date} -0700\"\n"
+"    export_data(\"imported from #{dir}\")\n"
+"    puts \"from :#{last_mark}\" if last_mark\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:260
+#, no-wrap
+msgid ""
+"    puts 'deleteall'\n"
+"    Dir.glob(\"**/*\").each do |file|\n"
+"        next if !File.file?(file)\n"
+"        inline_data(file)\n"
+"    end\n"
+"    mark\n"
+"end\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:266
+#, no-wrap
+msgid ""
+"# Loop through the directories\n"
+"last_mark = nil\n"
+"Dir.chdir(ARGV[0]) do\n"
+"    Dir.glob(\"*\").each do |dir|\n"
+"        next if File.file?(dir)\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:273
+#, no-wrap
+msgid ""
+"        # move into the target directory\n"
+"        Dir.chdir(dir) do\n"
+"            last_mark = print_export(dir, last_mark)\n"
+"        end\n"
+"    end\n"
+"end\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:276
+#, no-wrap
+msgid "If you run this script, you'll get content that looks something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:288
+#, no-wrap
+msgid ""
+"$ ruby import.rb /opt/import_from\n"
+"commit refs/heads/master\n"
+"mark :1\n"
+"committer John Doe <john@example.com> 1388649600 -0700\n"
+"data 29\n"
+"imported from back_2014_01_02deleteall\n"
+"M 644 inline README.md\n"
+"data 28\n"
+"# Hello\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:299
+#, no-wrap
+msgid ""
+"This is my readme.\n"
+"commit refs/heads/master\n"
+"mark :2\n"
+"committer John Doe <john@example.com> 1388822400 -0700\n"
+"data 29\n"
+"imported from back_2014_01_04from :1\n"
+"deleteall\n"
+"M 644 inline main.rb\n"
+"data 34\n"
+"#!/bin/env ruby\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:303
+#, no-wrap
+msgid ""
+"puts \"Hey there\"\n"
+"M 644 inline README.md\n"
+"(...)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:307
+#, no-wrap
+msgid ""
+"To run the importer, pipe this output through `git fast-import` while in the Git directory you want to import into.\n"
+"You can create a new directory and then run `git init` in it for a starting point, and then run your script:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:314
+#, no-wrap
+msgid ""
+"$ git init\n"
+"Initialized empty Git repository in /opt/import_to/.git/\n"
+"$ ruby import.rb /opt/import_from | git fast-import\n"
+"git-fast-import statistics:\n"
+"---------------------------------------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:327
+#, no-wrap
+msgid ""
+"Alloc'd objects:       5000\n"
+"Total objects:           13 (         6 duplicates                  )\n"
+"      blobs  :            5 (         4 duplicates          3 deltas of          5 attempts)\n"
+"      trees  :            4 (         1 duplicates          0 deltas of          4 attempts)\n"
+"      commits:            4 (         1 duplicates          0 deltas of          0 attempts)\n"
+"      tags   :            0 (         0 duplicates          0 deltas of          0 attempts)\n"
+"Total branches:           1 (         1 loads     )\n"
+"      marks:           1024 (         5 unique    )\n"
+"      atoms:              2\n"
+"Memory total:          2344 KiB\n"
+"       pools:          2110 KiB\n"
+"     objects:           234 KiB\n"
+"---------------------------------------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:335
+#, no-wrap
+msgid ""
+"pack_report: getpagesize()            =       4096\n"
+"pack_report: core.packedGitWindowSize = 1073741824\n"
+"pack_report: core.packedGitLimit      = 8589934592\n"
+"pack_report: pack_used_ctr            =         10\n"
+"pack_report: pack_mmap_calls          =          5\n"
+"pack_report: pack_open_windows        =          2 /          2\n"
+"pack_report: pack_mapped              =       1457 /       1457\n"
+"---------------------------------------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:336
+#, no-wrap
+msgid "----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:341
+#, no-wrap
+msgid ""
+"As you can see, when it completes successfully, it gives you a bunch of statistics about what it accomplished.\n"
+"In this case, you imported 13 objects total for 4 commits into 1 branch.\n"
+"Now, you can run `git log` to see your new history:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:348
+#, no-wrap
+msgid ""
+"$ git log -2\n"
+"commit 3caa046d4aac682a55867132ccdfbe0d3fdee498\n"
+"Author: John Doe <john@example.com>\n"
+"Date:   Tue Jul 29 19:39:04 2014 -0700\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:350
+#, no-wrap
+msgid "    imported from current\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:354
+#, no-wrap
+msgid ""
+"commit 4afc2b945d0d3c8cd00556fbe2e8224569dc9def\n"
+"Author: John Doe <john@example.com>\n"
+"Date:   Mon Feb 3 01:00:00 2014 -0700\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:356
+#, no-wrap
+msgid ""
+"    imported from back_2014_02_03\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:361
+#, no-wrap
+msgid ""
+"There you go â a nice, clean Git repository.\n"
+"It's important to note that nothing is checked out â you don't have any files in your working directory at first.\n"
+"To get them, you must reset your branch to where `master` is now:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:369
+#, no-wrap
+msgid ""
+"$ ls\n"
+"$ git reset --hard master\n"
+"HEAD is now at 3caa046 imported from current\n"
+"$ ls\n"
+"README.md main.rb\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-custom.asc:372
+#, no-wrap
+msgid ""
+"You can do a lot more with the `fast-import` tool â handle different modes, binary data, multiple branches and merging, tags, progress indicators, and more.\n"
+"A number of examples of more complex scenarios are available in the `contrib/fast-import` directory of the Git source code.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-hg.asc:2
+#, no-wrap
+msgid "==== Mercurial\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-hg.asc:5
+#, no-wrap
+msgid ""
+"(((Mercurial)))(((Importing, from Mercurial)))\n"
+"Since Mercurial and Git have fairly similar models for representing versions, and since Git is a bit more flexible, converting a repository from Mercurial to Git is fairly straightforward, using a tool called \"hg-fast-export\", which you'll need a copy of:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-hg.asc:9
+#, no-wrap
+msgid ""
+"$ git clone https://github.com/frej/fast-export.git\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-hg.asc:12
+#, no-wrap
+msgid "The first step in the conversion is to get a full clone of the Mercurial repository you want to convert:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-hg.asc:16
+#, no-wrap
+msgid ""
+"$ hg clone <remote repo URL> /tmp/hg-repo\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-hg.asc:21
+#, no-wrap
+msgid ""
+"The next step is to create an author mapping file.\n"
+"Mercurial is a bit more forgiving than Git for what it will put in the author field for changesets, so this is a good time to clean house.\n"
+"Generating this is a one-line command in a `bash` shell:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-hg.asc:26
+#, no-wrap
+msgid ""
+"$ cd /tmp/hg-repo\n"
+"$ hg log | grep user: | sort | uniq | sed 's/user: *//' > ../authors\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-hg.asc:29
+#, no-wrap
+msgid "This will take a few seconds, depending on how long your project's history is, and afterwards the `/tmp/authors` file will look something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-hg.asc:38
+#, no-wrap
+msgid ""
+"bob\n"
+"bob@localhost\n"
+"bob <bob@company.com>\n"
+"bob jones <bob <AT> company <DOT> com>\n"
+"Bob Jones <bob@company.com>\n"
+"Joe Smith <joe@company.com>\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-hg.asc:46
+#, no-wrap
+msgid ""
+"In this example, the same person (Bob) has created changesets under four different names, one of which actually looks correct, and one of which would be completely invalid for a Git commit.\n"
+"Hg-fast-export lets us fix this by turning each line into a rule: `\"<input>\"=\"<output>\"`, mapping an `<input>` to an `<output>`.\n"
+"Inside the `<input>` and `<output>` strings, all escape sequences understood by the python `string_escape` encoding are supported.\n"
+"If the author mapping file does not contain a matching `<input>`, that author will be sent on to Git unmodified.\n"
+"If all the usernames look fine, we won't need this file at all.\n"
+"In this example, we want our file to look like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-hg.asc:53
+#, no-wrap
+msgid ""
+"\"bob\"=\"Bob Jones <bob@company.com>\"\n"
+"\"bob@localhost\"=\"Bob Jones <bob@company.com>\"\n"
+"\"bob <bob@company.com>\"=\"Bob Jones <bob@company.com>\"\n"
+"\"bob jones <bob <AT> company <DOT> com>\"=\"Bob Jones <bob@company.com>\"\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-hg.asc:56
+#, no-wrap
+msgid "The same kind of mapping file can be used to rename branches and tags when the Mercurial name is not allowed by Git.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-hg.asc:58
+#, no-wrap
+msgid "The next step is to create our new Git repository, and run the export script:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-hg.asc:64
+#, no-wrap
+msgid ""
+"$ git init /tmp/converted\n"
+"$ cd /tmp/converted\n"
+"$ /tmp/fast-export/hg-fast-export.sh -r /tmp/hg-repo -A /tmp/authors\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-hg.asc:69
+#, no-wrap
+msgid ""
+"The `-r` flag tells hg-fast-export where to find the Mercurial repository we want to convert, and the `-A` flag tells it where to find the author-mapping file (branch and tag mapping files are specified by the `-B` and `-T` flags respectively).\n"
+"The script parses Mercurial changesets and converts them into a script for Git's \"fast-import\" feature (which we'll discuss in detail a bit later on).\n"
+"This takes a bit (though it's _much_ faster than it would be over the network), and the output is fairly verbose:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-hg.asc:88
+#, no-wrap
+msgid ""
+"$ /tmp/fast-export/hg-fast-export.sh -r /tmp/hg-repo -A /tmp/authors\n"
+"Loaded 4 authors\n"
+"master: Exporting full revision 1/22208 with 13/0/0 added/changed/removed files\n"
+"master: Exporting simple delta revision 2/22208 with 1/1/0 added/changed/removed files\n"
+"master: Exporting simple delta revision 3/22208 with 0/1/0 added/changed/removed files\n"
+"[â¦]\n"
+"master: Exporting simple delta revision 22206/22208 with 0/4/0 added/changed/removed files\n"
+"master: Exporting simple delta revision 22207/22208 with 0/2/0 added/changed/removed files\n"
+"master: Exporting thorough delta revision 22208/22208 with 3/213/0 added/changed/removed files\n"
+"Exporting tag [0.4c] at [hg r9] [git :10]\n"
+"Exporting tag [0.4d] at [hg r16] [git :17]\n"
+"[â¦]\n"
+"Exporting tag [3.1-rc] at [hg r21926] [git :21927]\n"
+"Exporting tag [3.1] at [hg r21973] [git :21974]\n"
+"Issued 22315 commands\n"
+"git-fast-import statistics:\n"
+"---------------------------------------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-hg.asc:101
+#, no-wrap
+msgid ""
+"Alloc'd objects:     120000\n"
+"Total objects:       115032 (    208171 duplicates                  )\n"
+"      blobs  :        40504 (    205320 duplicates      26117 deltas of      39602 attempts)\n"
+"      trees  :        52320 (      2851 duplicates      47467 deltas of      47599 attempts)\n"
+"      commits:        22208 (         0 duplicates          0 deltas of          0 attempts)\n"
+"      tags   :            0 (         0 duplicates          0 deltas of          0 attempts)\n"
+"Total branches:         109 (         2 loads     )\n"
+"      marks:        1048576 (     22208 unique    )\n"
+"      atoms:           1952\n"
+"Memory total:          7860 KiB\n"
+"       pools:          2235 KiB\n"
+"     objects:          5625 KiB\n"
+"---------------------------------------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-hg.asc:109
+#, no-wrap
+msgid ""
+"pack_report: getpagesize()            =       4096\n"
+"pack_report: core.packedGitWindowSize = 1073741824\n"
+"pack_report: core.packedGitLimit      = 8589934592\n"
+"pack_report: pack_used_ctr            =      90430\n"
+"pack_report: pack_mmap_calls          =      46771\n"
+"pack_report: pack_open_windows        =          1 /          1\n"
+"pack_report: pack_mapped              =  340852700 /  340852700\n"
+"---------------------------------------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-hg.asc:114
+#, no-wrap
+msgid ""
+"$ git shortlog -sn\n"
+"   369  Bob Jones\n"
+"   365  Joe Smith\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-hg.asc:119
+#, no-wrap
+msgid ""
+"That's pretty much all there is to it.\n"
+"All of the Mercurial tags have been converted to Git tags, and Mercurial branches and bookmarks have been converted to Git branches.\n"
+"Now you're ready to push the repository up to its new server-side home:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-hg.asc:124
+#, no-wrap
+msgid ""
+"$ git remote add origin git@my-git-server:myrepository.git\n"
+"$ git push origin --all\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-p4.asc:3
+#, no-wrap
+msgid ""
+"[[_perforce_import]]\n"
+"==== Perforce\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-p4.asc:7
+#, no-wrap
+msgid ""
+"(((Perforce)))(((Importing, from Perforce)))\n"
+"The next system you'll look at importing from is Perforce.\n"
+"As we discussed above, there are two ways to let Git and Perforce talk to each other: git-p4 and Perforce Git Fusion.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-p4.asc:9
+#, no-wrap
+msgid "===== Perforce Git Fusion\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-p4.asc:14
+#, no-wrap
+msgid ""
+"Git Fusion makes this process fairly painless.\n"
+"Just configure your project settings, user mappings, and branches using a configuration file (as discussed in <<_p4_git_fusion>>), and clone the repository.\n"
+"Git Fusion leaves you with what looks like a native Git repository, which is then ready to push to a native Git host if you desire.\n"
+"You could even use Perforce as your Git host if you like.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-p4.asc:17
+#, no-wrap
+msgid ""
+"[[_git_p4]]\n"
+"===== Git-p4\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-p4.asc:21
+#, no-wrap
+msgid ""
+"Git-p4 can also act as an import tool.\n"
+"As an example, we'll import the Jam project from the Perforce Public Depot.\n"
+"To set up your client, you must export the P4PORT environment variable to point to the Perforce depot:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-p4.asc:25
+#, no-wrap
+msgid ""
+"$ export P4PORT=public.perforce.com:1666\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-p4.asc:31
+#, no-wrap
+msgid ""
+"In order to follow along, you'll need a Perforce depot to connect with.\n"
+"We'll be using the public depot at public.perforce.com for our examples, but you can use any depot you have access to.\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-p4.asc:35
+#, no-wrap
+msgid ""
+"(((git commands, p4)))\n"
+"Run the `git p4 clone` command to import the Jam project from the Perforce server, supplying the depot and project path and the path into which you want to import the project:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-p4.asc:43
+#, no-wrap
+msgid ""
+"$ git-p4 clone //guest/perforce_software/jam@all p4import\n"
+"Importing from //guest/perforce_software/jam@all into p4import\n"
+"Initialized empty Git repository in /private/tmp/p4import/.git/\n"
+"Import destination: refs/remotes/p4/master\n"
+"Importing revision 9957 (100%)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-p4.asc:47
+#, no-wrap
+msgid ""
+"This particular project has only one branch, but if you have branches that are configured with branch views (or just a set of directories), you can use the `--detect-branches` flag to `git p4 clone` to import all the project's branches as well.\n"
+"See <<_git_p4_branches>> for a bit more detail on this.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-p4.asc:50
+#, no-wrap
+msgid ""
+"At this point you're almost done.\n"
+"If you go to the `p4import` directory and run `git log`, you can see your imported work:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-p4.asc:57
+#, no-wrap
+msgid ""
+"$ git log -2\n"
+"commit e5da1c909e5db3036475419f6379f2c73710c4e6\n"
+"Author: giles <giles@giles@perforce.com>\n"
+"Date:   Wed Feb 8 03:13:27 2012 -0800\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-p4.asc:59
+#: book/09-git-and-other-scms/sections/import-p4.asc:94
+#, no-wrap
+msgid "    Correction to line 355; change </UL> to </OL>.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-p4.asc:61
+#, no-wrap
+msgid "    [git-p4: depot-paths = \"//public/jam/src/\": change = 8068]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-p4.asc:65
+#, no-wrap
+msgid ""
+"commit aa21359a0a135dda85c50a7f7cf249e4f7b8fd98\n"
+"Author: kwirth <kwirth@perforce.com>\n"
+"Date:   Tue Jul 7 01:35:51 2009 -0800\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-p4.asc:67
+#, no-wrap
+msgid "    Fix spelling error on Jam doc page (cummulative -> cumulative).\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-p4.asc:69
+#, no-wrap
+msgid ""
+"    [git-p4: depot-paths = \"//public/jam/src/\": change = 7304]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-p4.asc:76
+#, no-wrap
+msgid ""
+"You can see that `git-p4` has left an identifier in each commit message.\n"
+"It's fine to keep that identifier there, in case you need to reference the Perforce change number later.\n"
+"However, if you'd like to remove the identifier, now is the time to do so â before you start doing work on the new repository.\n"
+"(((git commands, filter-branch)))\n"
+"You can use `git filter-branch` to remove the identifier strings en masse:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-p4.asc:82
+#, no-wrap
+msgid ""
+"$ git filter-branch --msg-filter 'sed -e \"/^\\[git-p4:/d\"'\n"
+"Rewrite e5da1c909e5db3036475419f6379f2c73710c4e6 (125/125)\n"
+"Ref 'refs/heads/master' was rewritten\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-p4.asc:85
+#, no-wrap
+msgid "If you run `git log`, you can see that all the SHA-1 checksums for the commits have changed, but the `git-p4` strings are no longer in the commit messages:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-p4.asc:92
+#, no-wrap
+msgid ""
+"$ git log -2\n"
+"commit b17341801ed838d97f7800a54a6f9b95750839b7\n"
+"Author: giles <giles@giles@perforce.com>\n"
+"Date:   Wed Feb 8 03:13:27 2012 -0800\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-p4.asc:98
+#, no-wrap
+msgid ""
+"commit 3e68c2e26cd89cb983eb52c024ecdfba1d6b3fff\n"
+"Author: kwirth <kwirth@perforce.com>\n"
+"Date:   Tue Jul 7 01:35:51 2009 -0800\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-p4.asc:100
+#, no-wrap
+msgid ""
+"    Fix spelling error on Jam doc page (cummulative -> cumulative).\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-p4.asc:102
+#, no-wrap
+msgid "Your import is ready to push up to your new Git server.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:2
+#, no-wrap
+msgid "==== Subversion\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:7
+#, no-wrap
+msgid ""
+"(((Subversion)))\n"
+"(((Importing, from Subversion)))\n"
+"If you read the previous section about using `git svn`, you can easily use those instructions to `git svn clone` a repository; then, stop using the Subversion server, push to a new Git server, and start using that.\n"
+"If you want the history, you can accomplish that as quickly as you can pull the data out of the Subversion server (which may take a while).\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:14
+#, no-wrap
+msgid ""
+"However, the import isn't perfect; and because it will take so long, you may as well do it right.\n"
+"The first problem is the author information.\n"
+"In Subversion, each person committing has a user on the system who is recorded in the commit information.\n"
+"The examples in the previous section show `schacon` in some places, such as the `blame` output and the `git svn log`.\n"
+"If you want to map this to better Git author data, you need a mapping from the Subversion users to the Git authors.\n"
+"Create a file called `users.txt` that has this mapping in a format like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:19
+#, no-wrap
+msgid ""
+"schacon = Scott Chacon <schacon@geemail.com>\n"
+"selse = Someo Nelse <selse@geemail.com>\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:22
+#, no-wrap
+msgid "To get a list of the author names that SVN uses, you can run this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:27
+#, no-wrap
+msgid ""
+"$ svn log --xml --quiet | grep author | sort -u | \\\n"
+"  perl -pe 's/.*>(.*?)<.*/$1 = /'\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:32
+#, no-wrap
+msgid ""
+"That generates the log output in XML format, then keeps only the lines with author information, discards duplicates, strips out the XML tags.\n"
+"Obviously this only works on a machine with `grep`, `sort`, and `perl` installed.\n"
+"Then, redirect that output into your `users.txt` file so you can add the equivalent Git user data next to each entry.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:37
+#, no-wrap
+msgid ""
+"If you're trying this on a Windows machine, this is the point where you'll run into trouble.\n"
+"Microsoft have provided some good advice and samples at https://docs.microsoft.com/en-us/azure/devops/repos/git/perform-migration-from-svn-to-git[].\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:43
+#, no-wrap
+msgid ""
+"You can provide this file to `git svn` to help it map the author data more accurately.\n"
+"You can also tell `git svn` not to include the metadata that Subversion normally imports, by passing `--no-metadata` to the `clone` or `init` command.\n"
+"The metadata includes a `git-svn-id` inside each commit message that Git will generate during import.\n"
+"This can bloat your Git log and might make it a bit unclear.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:48
+#, no-wrap
+msgid ""
+"You need to keep the metadata when you want to mirror commits made in the Git repository back into the original SVN repository.\n"
+"If you don't want the synchronization in your commit log, feel free to omit the `--no-metadata` parameter.\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:51
+#, no-wrap
+msgid "This makes your `import` command look like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:57
+#, no-wrap
+msgid ""
+"$ git svn clone http://my-project.googlecode.com/svn/ \\\n"
+"      --authors-file=users.txt --no-metadata --prefix \"\" -s my_project\n"
+"$ cd my_project\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:61
+#, no-wrap
+msgid ""
+"Now you should have a nicer Subversion import in your `my_project` directory.\n"
+"Instead of commits that look like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:67
+#, no-wrap
+msgid ""
+"commit 37efa680e8473b615de980fa935944215428a35a\n"
+"Author: schacon <schacon@4c93b258-373f-11de-be05-5f7a86268029>\n"
+"Date:   Sun May 3 00:12:22 2009 +0000\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:69
+#, no-wrap
+msgid "    fixed install - go to trunk\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:72
+#, no-wrap
+msgid ""
+"    git-svn-id: https://my-project.googlecode.com/svn/trunk@94 4c93b258-373f-11de-\n"
+"    be05-5f7a86268029\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:75
+#, no-wrap
+msgid "they look like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:81
+#, no-wrap
+msgid ""
+"commit 03a8785f44c8ea5cdb0e8834b7c8e6c469be2ff2\n"
+"Author: Scott Chacon <schacon@geemail.com>\n"
+"Date:   Sun May 3 00:12:22 2009 +0000\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:83
+#, no-wrap
+msgid ""
+"    fixed install - go to trunk\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:86
+#, no-wrap
+msgid "Not only does the Author field look a lot better, but the `git-svn-id` is no longer there, either.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:90
+#, no-wrap
+msgid ""
+"You should also do a bit of post-import cleanup.\n"
+"For one thing, you should clean up the weird references that `git svn` set up.\n"
+"First you'll move the tags so they're actual tags rather than strange remote branches, and then you'll move the rest of the branches so they're local.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:92
+#, no-wrap
+msgid "To move the tags to be proper Git tags, run:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:96
+#, no-wrap
+msgid ""
+"$ for t in $(git for-each-ref --format='%(refname:short)' refs/remotes/tags); do git tag ${t/tags\\//} $t && git branch -D -r $t; done\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:99
+#, no-wrap
+msgid "This takes the references that were remote branches that started with `refs/remotes/tags/` and makes them real (lightweight) tags.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:101
+#, no-wrap
+msgid "Next, move the rest of the references under `refs/remotes` to be local branches:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:105
+#, no-wrap
+msgid ""
+"$ for b in $(git for-each-ref --format='%(refname:short)' refs/remotes); do git branch $b refs/remotes/$b && git branch -D -r $b; done\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:111
+#, no-wrap
+msgid ""
+"It may happen that you'll see some extra branches which are suffixed by `@xxx` (where xxx is a number), while in Subversion you only see one branch.\n"
+"This is actually a Subversion feature called \"`peg-revisions`\", which is something that Git simply has no syntactical counterpart for.\n"
+"Hence, `git svn` simply adds the svn version number to the branch name just in the same way as you would have written it in svn to address the peg-revision of that branch.\n"
+"If you do not care anymore about the peg-revisions, simply remove them:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:115
+#, no-wrap
+msgid ""
+"$ for p in $(git for-each-ref --format='%(refname:short)' | grep @); do git branch -D $p; done\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:118
+#, no-wrap
+msgid "Now all the old branches are real Git branches and all the old tags are real Git tags.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:122
+#, no-wrap
+msgid ""
+"There's one last thing to clean up.\n"
+"Unfortunately, `git svn` creates an extra branch named `trunk`, which maps to Subversion's default branch, but the `trunk` ref points to the same place as `master`.\n"
+"Since `master` is more idiomatically Git, here's how to remove the extra branch:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:126
+#, no-wrap
+msgid ""
+"$ git branch -d trunk\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:130
+#, no-wrap
+msgid ""
+"The last thing to do is add your new Git server as a remote and push to it.\n"
+"Here is an example of adding your server as a remote:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:134
+#, no-wrap
+msgid ""
+"$ git remote add origin git@my-git-server:myrepository.git\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:137
+#, no-wrap
+msgid "Because you want all your branches and tags to go up, you can now run this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:142
+#, no-wrap
+msgid ""
+"$ git push origin --all\n"
+"$ git push origin --tags\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/09-git-and-other-scms/sections/import-svn.asc:144
+#, no-wrap
+msgid "All your branches and tags should be on your new Git server in a nice, clean import.\n"
+msgstr ""

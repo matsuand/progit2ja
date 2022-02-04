@@ -1,0 +1,3093 @@
+# Japanese translations for progit2
+# Copyright (C) 2022 Michio MATSUYAMA
+# This file is distributed under the same license as the progit2.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: progit2\n"
+"POT-Creation-Date: 2022-02-04 19:16+0900\n"
+"PO-Revision-Date: 2022-02-03 20:12+0900\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:3
+#, no-wrap
+msgid ""
+"[[_contributing_project]]\n"
+"=== Contributing to a Project\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:8
+#, no-wrap
+msgid ""
+"(((contributing)))\n"
+"The main difficulty with describing how to contribute to a project are the numerous variations on how to do that.\n"
+"Because Git is very flexible, people can and do work together in many ways, and it's problematic to describe how you should contribute -- every project is a bit different.\n"
+"Some of the variables involved are active contributor count, chosen workflow, your commit access, and possibly the external contribution method.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:15
+#, no-wrap
+msgid ""
+"The first variable is active contributor count -- how many users are actively contributing code to this project, and how often?\n"
+"In many instances, you'll have two or three developers with a few commits a day, or possibly less for somewhat dormant projects.\n"
+"For larger companies or projects, the number of developers could be in the thousands, with hundreds or thousands of commits coming in each day.\n"
+"This is important because with more and more developers, you run into more issues with making sure your code applies cleanly or can be easily merged.\n"
+"Changes you submit may be rendered obsolete or severely broken by work that is merged in while you were working or while your changes were waiting to be approved or applied.\n"
+"How can you keep your code consistently up to date and your commits valid?\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:22
+#, no-wrap
+msgid ""
+"The next variable is the workflow in use for the project.\n"
+"Is it centralized, with each developer having equal write access to the main codeline?\n"
+"Does the project have a maintainer or integration manager who checks all the patches?\n"
+"Are all the patches peer-reviewed and approved?\n"
+"Are you involved in that process?\n"
+"Is a lieutenant system in place, and do you have to submit your work to them first?\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:29
+#, no-wrap
+msgid ""
+"The next variable is your commit access.\n"
+"The workflow required in order to contribute to a project is much different if you have write access to the project than if you don't.\n"
+"If you don't have write access, how does the project prefer to accept contributed work?\n"
+"Does it even have a policy?\n"
+"How much work are you contributing at a time?\n"
+"How often do you contribute?\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:32
+#, no-wrap
+msgid ""
+"All these questions can affect how you contribute effectively to a project and what workflows are preferred or available to you.\n"
+"We'll cover aspects of each of these in a series of use cases, moving from simple to more complex; you should be able to construct the specific workflows you need in practice from these examples.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:35
+#, no-wrap
+msgid ""
+"[[_commit_guidelines]]\n"
+"==== Commit Guidelines\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:39
+#, no-wrap
+msgid ""
+"Before we start looking at the specific use cases, here's a quick note about commit messages.\n"
+"Having a good guideline for creating commits and sticking to it makes working with Git and collaborating with others a lot easier.\n"
+"The Git project provides a document that lays out a number of good tips for creating commits from which to submit patches -- you can read it in the Git source code in the `Documentation/SubmittingPatches` file.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:43
+#, no-wrap
+msgid ""
+"(((git commands, diff, check)))\n"
+"First, your submissions should not contain any whitespace errors.\n"
+"Git provides an easy way to check for this -- before you commit, run `git diff --check`, which identifies possible whitespace errors and lists them for you.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:46
+#, no-wrap
+msgid ""
+".Output of `git diff --check`\n"
+"image::images/git-diff-check.png[Output of `git diff --check`]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:48
+#, no-wrap
+msgid "If you run that command before committing, you can tell if you're about to commit whitespace issues that may annoy other developers.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:54
+#, no-wrap
+msgid ""
+"Next, try to make each commit a logically separate changeset.\n"
+"If you can, try to make your changes digestible -- don't code for a whole weekend on five different issues and then submit them all as one massive commit on Monday.\n"
+"Even if you don't commit during the weekend, use the staging area on Monday to split your work into at least one commit per issue, with a useful message per commit.\n"
+"If some of the changes modify the same file, try to use `git add --patch` to partially stage files (covered in detail in <<ch07-git-tools#_interactive_staging>>).\n"
+"The project snapshot at the tip of the branch is identical whether you do one commit or five, as long as all the changes are added at some point, so try to make things easier on your fellow developers when they have to review your changes.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:57
+#, no-wrap
+msgid ""
+"This approach also makes it easier to pull out or revert one of the changesets if you need to later.\n"
+"<<ch07-git-tools#_rewriting_history>> describes a number of useful Git tricks for rewriting history and interactively staging files -- use these tools to help craft a clean and understandable history before sending the work to someone else.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:64
+#, no-wrap
+msgid ""
+"The last thing to keep in mind is the commit message.\n"
+"Getting in the habit of creating quality commit messages makes using and collaborating with Git a lot easier.\n"
+"As a general rule, your messages should start with a single line that's no more than about 50 characters and that describes the changeset concisely, followed by a blank line, followed by a more detailed explanation.\n"
+"The Git project requires that the more detailed explanation include your motivation for the change and contrast its implementation with previous behavior -- this is a good guideline to follow.\n"
+"Write your commit message in the imperative: \"Fix bug\" and not \"Fixed bug\" or \"Fixes bug.\"\n"
+"Here is a template you can follow, which we've lightly adapted from one https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html[originally written by Tim Pope]:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:66
+#: book/05-distributed-git/sections/contributing.asc:771
+#, no-wrap
+msgid ""
+"[source,text]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:68
+#, no-wrap
+msgid "Capitalized, short (50 chars or less) summary\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:75
+#, no-wrap
+msgid ""
+"More detailed explanatory text, if necessary.  Wrap it to about 72\n"
+"characters or so.  In some contexts, the first line is treated as the\n"
+"subject of an email and the rest of the text as the body.  The blank\n"
+"line separating the summary from the body is critical (unless you omit\n"
+"the body entirely); tools like rebase will confuse you if you run the\n"
+"two together.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:79
+#, no-wrap
+msgid ""
+"Write your commit message in the imperative: \"Fix bug\" and not \"Fixed bug\"\n"
+"or \"Fixes bug.\"  This convention matches up with commit messages generated\n"
+"by commands like git merge and git revert.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:81
+#, no-wrap
+msgid "Further paragraphs come after blank lines.\n"
+msgstr ""
+
+#. type: Bullet: '- '
+#: book/05-distributed-git/sections/contributing.asc:83
+#, no-wrap
+msgid "Bullet points are okay, too\n"
+msgstr ""
+
+#. type: Bullet: '- '
+#: book/05-distributed-git/sections/contributing.asc:86
+#, no-wrap
+msgid ""
+"Typically a hyphen or asterisk is used for the bullet, followed by a\n"
+"single space, with blank lines in between, but conventions vary here\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:88
+#, no-wrap
+msgid ""
+"- Use a hanging indent\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:92
+#, no-wrap
+msgid ""
+"If all your commit messages follow this model, things will be much easier for you and the developers with whom you collaborate.\n"
+"The Git project has well-formatted commit messages -- try running `git log --no-merges` there to see what a nicely-formatted project-commit history looks like.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:95
+#, no-wrap
+msgid ""
+"[NOTE]\n"
+".Do as we say, not as we do.\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:97
+#, no-wrap
+msgid "For the sake of brevity, many of the examples in this book don't have nicely-formatted commit messages like this; instead, we simply use the `-m` option to `git commit`.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:99
+#, no-wrap
+msgid ""
+"In short, do as we say, not as we do.\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:103
+#, no-wrap
+msgid ""
+"[[_private_team]]\n"
+"==== Private Small Team\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:108
+#, no-wrap
+msgid ""
+"(((contributing, private small team)))\n"
+"The simplest setup you're likely to encounter is a private project with one or two other developers.\n"
+"\"`Private,`\" in this context, means closed-source -- not accessible to the outside world.\n"
+"You and the other developers all have push access to the repository.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:114
+#, no-wrap
+msgid ""
+"In this environment, you can follow a workflow similar to what you might do when using Subversion or another centralized system.\n"
+"You still get the advantages of things like offline committing and vastly simpler branching and merging, but the workflow can be very similar; the main difference is that merges happen client-side rather than on the server at commit time.\n"
+"Let's see what it might look like when two developers start to work together with a shared repository.\n"
+"The first developer, John, clones the repository, makes a change, and commits locally.\n"
+"The protocol messages have been replaced with `...` in these examples to shorten them somewhat.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:116
+#: book/05-distributed-git/sections/contributing.asc:131
+#: book/05-distributed-git/sections/contributing.asc:146
+#: book/05-distributed-git/sections/contributing.asc:162
+#: book/05-distributed-git/sections/contributing.asc:178
+#: book/05-distributed-git/sections/contributing.asc:193
+#: book/05-distributed-git/sections/contributing.asc:208
+#: book/05-distributed-git/sections/contributing.asc:229
+#: book/05-distributed-git/sections/contributing.asc:247
+#: book/05-distributed-git/sections/contributing.asc:267
+#: book/05-distributed-git/sections/contributing.asc:278
+#: book/05-distributed-git/sections/contributing.asc:291
+#: book/05-distributed-git/sections/contributing.asc:307
+#: book/05-distributed-git/sections/contributing.asc:342
+#: book/05-distributed-git/sections/contributing.asc:356
+#: book/05-distributed-git/sections/contributing.asc:368
+#: book/05-distributed-git/sections/contributing.asc:378
+#: book/05-distributed-git/sections/contributing.asc:399
+#: book/05-distributed-git/sections/contributing.asc:409
+#: book/05-distributed-git/sections/contributing.asc:421
+#: book/05-distributed-git/sections/contributing.asc:436
+#: book/05-distributed-git/sections/contributing.asc:446
+#: book/05-distributed-git/sections/contributing.asc:458
+#: book/05-distributed-git/sections/contributing.asc:471
+#: book/05-distributed-git/sections/contributing.asc:513
+#: book/05-distributed-git/sections/contributing.asc:532
+#: book/05-distributed-git/sections/contributing.asc:544
+#: book/05-distributed-git/sections/contributing.asc:556
+#: book/05-distributed-git/sections/contributing.asc:581
+#: book/05-distributed-git/sections/contributing.asc:600
+#: book/05-distributed-git/sections/contributing.asc:650
+#: book/05-distributed-git/sections/contributing.asc:664
+#: book/05-distributed-git/sections/contributing.asc:675
+#: book/05-distributed-git/sections/contributing.asc:732
+#: book/05-distributed-git/sections/contributing.asc:758
+#: book/05-distributed-git/sections/maintaining.asc:18
+#: book/05-distributed-git/sections/maintaining.asc:25
+#: book/05-distributed-git/sections/maintaining.asc:45
+#: book/05-distributed-git/sections/maintaining.asc:59
+#: book/05-distributed-git/sections/maintaining.asc:81
+#: book/05-distributed-git/sections/maintaining.asc:97
+#: book/05-distributed-git/sections/maintaining.asc:107
+#: book/05-distributed-git/sections/maintaining.asc:128
+#: book/05-distributed-git/sections/maintaining.asc:143
+#: book/05-distributed-git/sections/maintaining.asc:155
+#: book/05-distributed-git/sections/maintaining.asc:171
+#: book/05-distributed-git/sections/maintaining.asc:193
+#: book/05-distributed-git/sections/maintaining.asc:213
+#: book/05-distributed-git/sections/maintaining.asc:234
+#: book/05-distributed-git/sections/maintaining.asc:255
+#: book/05-distributed-git/sections/maintaining.asc:272
+#: book/05-distributed-git/sections/maintaining.asc:281
+#: book/05-distributed-git/sections/maintaining.asc:289
+#: book/05-distributed-git/sections/maintaining.asc:390
+#: book/05-distributed-git/sections/maintaining.asc:417
+#: book/05-distributed-git/sections/maintaining.asc:437
+#: book/05-distributed-git/sections/maintaining.asc:449
+#: book/05-distributed-git/sections/maintaining.asc:461
+#: book/05-distributed-git/sections/maintaining.asc:469
+#: book/05-distributed-git/sections/maintaining.asc:477
+#: book/05-distributed-git/sections/maintaining.asc:492
+#: book/05-distributed-git/sections/maintaining.asc:514
+#: book/05-distributed-git/sections/maintaining.asc:524
+#: book/05-distributed-git/sections/maintaining.asc:539
+#, no-wrap
+msgid ""
+"[source,console]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:126
+#, no-wrap
+msgid ""
+"# John's Machine\n"
+"$ git clone john@githost:simplegit.git\n"
+"Cloning into 'simplegit'...\n"
+"...\n"
+"$ cd simplegit/\n"
+"$ vim lib/simplegit.rb\n"
+"$ git commit -am 'Remove invalid default value'\n"
+"[master 738ee87] Remove invalid default value\n"
+" 1 files changed, 1 insertions(+), 1 deletions(-)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:129
+#, no-wrap
+msgid "The second developer, Jessica, does the same thing -- clones the repository and commits a change:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:141
+#, no-wrap
+msgid ""
+"# Jessica's Machine\n"
+"$ git clone jessica@githost:simplegit.git\n"
+"Cloning into 'simplegit'...\n"
+"...\n"
+"$ cd simplegit/\n"
+"$ vim TODO\n"
+"$ git commit -am 'Add reset task'\n"
+"[master fbff5bc] Add reset task\n"
+" 1 files changed, 1 insertions(+), 0 deletions(-)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:144
+#, no-wrap
+msgid "Now, Jessica pushes her work to the server, which works just fine:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:152
+#, no-wrap
+msgid ""
+"# Jessica's Machine\n"
+"$ git push origin master\n"
+"...\n"
+"To jessica@githost:simplegit.git\n"
+"   1edee6b..fbff5bc  master -> master\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:158
+#, no-wrap
+msgid ""
+"The last line of the output above shows a useful return message from the push operation.\n"
+"The basic format is `<oldref>..<newref> fromref -> toref`, where `oldref` means the old reference, `newref` means the new reference, `fromref` is the name of the local reference being pushed, and `toref` is the name of the remote reference being updated.\n"
+"You'll see similar output like this below in the discussions, so having a basic idea of the meaning will help in understanding the various states of the repositories.\n"
+"More details are available in the documentation for https://git-scm.com/docs/git-push[git-push].\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:160
+#, no-wrap
+msgid "Continuing with this example, shortly afterwards, John makes some changes, commits them to his local repository, and tries to push them to the same server:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:168
+#, no-wrap
+msgid ""
+"# John's Machine\n"
+"$ git push origin master\n"
+"To john@githost:simplegit.git\n"
+" ! [rejected]        master -> master (non-fast forward)\n"
+"error: failed to push some refs to 'john@githost:simplegit.git'\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:174
+#, no-wrap
+msgid ""
+"In this case, John's push fails because of Jessica's earlier push of _her_ changes.\n"
+"This is especially important to understand if you're used to Subversion, because you'll notice that the two developers didn't edit the same file.\n"
+"Although Subversion automatically does such a merge on the server if different files are edited, with Git, you must _first_ merge the commits locally.\n"
+"In other words, John must first fetch Jessica's upstream changes and merge them into his local repository before he will be allowed to push.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:176
+#, no-wrap
+msgid "As a first step, John fetches Jessica's work (this only _fetches_ Jessica's upstream work, it does not yet merge it into John's work):\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:183
+#, no-wrap
+msgid ""
+"$ git fetch origin\n"
+"...\n"
+"From john@githost:simplegit\n"
+" + 049d078...fbff5bc master     -> origin/master\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:186
+#, no-wrap
+msgid "At this point, John's local repository looks something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:189
+#, no-wrap
+msgid ""
+".John's divergent history\n"
+"image::images/small-team-1.png[John's divergent history]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:191
+#, no-wrap
+msgid "Now John can merge Jessica's work that he fetched into his own local work:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:198
+#, no-wrap
+msgid ""
+"$ git merge origin/master\n"
+"Merge made by the 'recursive' strategy.\n"
+" TODO |    1 +\n"
+" 1 files changed, 1 insertions(+), 0 deletions(-)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:201
+#, no-wrap
+msgid "As long as that local merge goes smoothly, John's updated history will now look like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:204
+#, no-wrap
+msgid ""
+".John's repository after merging `origin/master`\n"
+"image::images/small-team-2.png[John's repository after merging `origin/master`]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:206
+#, no-wrap
+msgid "At this point, John might want to test this new code to make sure none of Jessica's work affects any of his and, as long as everything seems fine, he can finally push the new merged work up to the server:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:213
+#, no-wrap
+msgid ""
+"$ git push origin master\n"
+"...\n"
+"To john@githost:simplegit.git\n"
+"   fbff5bc..72bbc59  master -> master\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:216
+#, no-wrap
+msgid "In the end, John's commit history will look like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:219
+#, no-wrap
+msgid ""
+".John's history after pushing to the `origin` server\n"
+"image::images/small-team-3.png[John's history after pushing to the `origin` server]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:222
+#, no-wrap
+msgid ""
+"In the meantime, Jessica has created a new topic branch called `issue54`, and made three commits to that branch.\n"
+"She hasn't fetched John's changes yet, so her commit history looks like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:225
+#, no-wrap
+msgid ""
+".Jessica's topic branch\n"
+"image::images/small-team-4.png[Jessica's topic branch]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:227
+#, no-wrap
+msgid "Suddenly, Jessica learns that John has pushed some new work to the server and she wants to take a look at it, so she can fetch all new content from the server that she does not yet have with:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:235
+#, no-wrap
+msgid ""
+"# Jessica's Machine\n"
+"$ git fetch origin\n"
+"...\n"
+"From jessica@githost:simplegit\n"
+"   fbff5bc..72bbc59  master     -> origin/master\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:239
+#, no-wrap
+msgid ""
+"That pulls down the work John has pushed up in the meantime.\n"
+"Jessica's history now looks like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:242
+#, no-wrap
+msgid ""
+".Jessica's history after fetching John's changes\n"
+"image::images/small-team-5.png[Jessica's history after fetching John's changes]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:245
+#, no-wrap
+msgid ""
+"Jessica thinks her topic branch is ready, but she wants to know what part of John's fetched work she has to merge into her work so that she can push.\n"
+"She runs `git log` to find out:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:252
+#, no-wrap
+msgid ""
+"$ git log --no-merges issue54..origin/master\n"
+"commit 738ee872852dfaa9d6634e0dea7a324040193016\n"
+"Author: John Smith <jsmith@example.com>\n"
+"Date:   Fri May 29 16:01:27 2009 -0700\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:254
+#, no-wrap
+msgid ""
+"   Remove invalid default value\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:258
+#, no-wrap
+msgid ""
+"The `issue54..origin/master` syntax is a log filter that asks Git to display only those commits that are on the latter branch (in this case `origin/master`) that are not on the first branch (in this case `issue54`).\n"
+"We'll go over this syntax in detail in <<ch07-git-tools#_commit_ranges>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:261
+#, no-wrap
+msgid ""
+"From the above output, we can see that there is a single commit that John has made that Jessica has not merged into her local work.\n"
+"If she merges `origin/master`, that is the single commit that will modify her local work.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:263
+#, no-wrap
+msgid "Now, Jessica can merge her topic work into her `master` branch, merge John's work (`origin/master`) into her `master` branch, and then push back to the server again.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:265
+#, no-wrap
+msgid "First (having committed all of the work on her `issue54` topic branch), Jessica switches back to her `master` branch in preparation for integrating all this work:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:271
+#, no-wrap
+msgid ""
+"$ git checkout master\n"
+"Switched to branch 'master'\n"
+"Your branch is behind 'origin/master' by 2 commits, and can be fast-forwarded.\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:276
+#, no-wrap
+msgid ""
+"Jessica can merge either `origin/master` or `issue54` first -- they're both upstream, so the order doesn't matter.\n"
+"The end snapshot should be identical no matter which order she chooses; only the history will be different.\n"
+"She chooses to merge the `issue54` branch  first:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:285
+#, no-wrap
+msgid ""
+"$ git merge issue54\n"
+"Updating fbff5bc..4af4298\n"
+"Fast forward\n"
+" README           |    1 +\n"
+" lib/simplegit.rb |    6 +++++-\n"
+" 2 files changed, 6 insertions(+), 1 deletions(-)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:289
+#, no-wrap
+msgid ""
+"No problems occur; as you can see it was a simple fast-forward merge.\n"
+"Jessica now completes the local merging process by merging John's earlier fetched work that is sitting in the `origin/master` branch:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:297
+#, no-wrap
+msgid ""
+"$ git merge origin/master\n"
+"Auto-merging lib/simplegit.rb\n"
+"Merge made by the 'recursive' strategy.\n"
+" lib/simplegit.rb |    2 +-\n"
+" 1 files changed, 1 insertions(+), 1 deletions(-)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:300
+#, no-wrap
+msgid "Everything merges cleanly, and Jessica's history now looks like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:303
+#, no-wrap
+msgid ""
+".Jessica's history after merging John's changes\n"
+"image::images/small-team-6.png[Jessica's history after merging John's changes]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:305
+#, no-wrap
+msgid "Now `origin/master` is reachable from Jessica's `master` branch, so she should be able to successfully push (assuming John hasn't pushed even more changes in the meantime):\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:312
+#, no-wrap
+msgid ""
+"$ git push origin master\n"
+"...\n"
+"To jessica@githost:simplegit.git\n"
+"   72bbc59..8059c15  master -> master\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:315
+#, no-wrap
+msgid "Each developer has committed a few times and merged each other's work successfully.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:318
+#, no-wrap
+msgid ""
+".Jessica's history after pushing all changes back to the server\n"
+"image::images/small-team-7.png[Jessica's history after pushing all changes back to the server]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:323
+#, no-wrap
+msgid ""
+"That is one of the simplest workflows.\n"
+"You work for a while (generally in a topic branch), and merge that work into your `master` branch when it's ready to be integrated.\n"
+"When you want to share that work, you fetch and merge your `master` from `origin/master` if it has changed, and finally push to the `master` branch on the server.\n"
+"The general sequence is something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:326
+#, no-wrap
+msgid ""
+".General sequence of events for a simple multiple-developer Git workflow\n"
+"image::images/small-team-flow.png[General sequence of events for a simple multiple-developer Git workflow]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:328
+#, no-wrap
+msgid "==== Private Managed Team\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:332
+#, no-wrap
+msgid ""
+"(((contributing, private managed team)))\n"
+"In this next scenario, you'll look at contributor roles in a larger private group.\n"
+"You'll learn how to work in an environment where small groups collaborate on features, after which those team-based contributions are integrated by another party.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:336
+#, no-wrap
+msgid ""
+"Let's say that John and Jessica are working together on one feature (call this \"`featureA`\"), while Jessica and a third developer, Josie, are working on a second (say, \"`featureB`\").\n"
+"In this case, the company is using a type of integration-manager workflow where the work of the individual groups is integrated only by certain engineers, and the `master` branch of the main repo can be updated only by those engineers.\n"
+"In this scenario, all work is done in team-based branches and pulled together by the integrators later.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:340
+#, no-wrap
+msgid ""
+"Let's follow Jessica's workflow as she works on her two features, collaborating in parallel with two different developers in this environment.\n"
+"Assuming she already has her repository cloned, she decides to work on `featureA` first.\n"
+"She creates a new branch for the feature and does some work on it there:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:350
+#, no-wrap
+msgid ""
+"# Jessica's Machine\n"
+"$ git checkout -b featureA\n"
+"Switched to a new branch 'featureA'\n"
+"$ vim lib/simplegit.rb\n"
+"$ git commit -am 'Add limit to log function'\n"
+"[featureA 3300904] Add limit to log function\n"
+" 1 files changed, 1 insertions(+), 1 deletions(-)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:354
+#, no-wrap
+msgid ""
+"At this point, she needs to share her work with John, so she pushes her `featureA` branch commits up to the server.\n"
+"Jessica doesn't have push access to the `master` branch -- only the integrators do -- so she has to push to another branch in order to collaborate with John:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:361
+#, no-wrap
+msgid ""
+"$ git push -u origin featureA\n"
+"...\n"
+"To jessica@githost:simplegit.git\n"
+" * [new branch]      featureA -> featureA\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:366
+#, no-wrap
+msgid ""
+"Jessica emails John to tell him that she's pushed some work into a branch named `featureA` and he can look at it now.\n"
+"While she waits for feedback from John, Jessica decides to start working on `featureB` with Josie.\n"
+"To begin, she starts a new feature branch, basing it off the server's `master` branch:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:373
+#, no-wrap
+msgid ""
+"# Jessica's Machine\n"
+"$ git fetch origin\n"
+"$ git checkout -b featureB origin/master\n"
+"Switched to a new branch 'featureB'\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:376
+#, no-wrap
+msgid "Now, Jessica makes a couple of commits on the `featureB` branch:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:387
+#, no-wrap
+msgid ""
+"$ vim lib/simplegit.rb\n"
+"$ git commit -am 'Make ls-tree function recursive'\n"
+"[featureB e5b0fdc] Make ls-tree function recursive\n"
+" 1 files changed, 1 insertions(+), 1 deletions(-)\n"
+"$ vim lib/simplegit.rb\n"
+"$ git commit -am 'Add ls-files'\n"
+"[featureB 8512791] Add ls-files\n"
+" 1 files changed, 5 insertions(+), 0 deletions(-)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:390
+#, no-wrap
+msgid "Jessica's repository now looks like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:393
+#, no-wrap
+msgid ""
+".Jessica's initial commit history\n"
+"image::images/managed-team-1.png[Jessica's initial commit history]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:397
+#, no-wrap
+msgid ""
+"She's ready to push her work, but gets an email from Josie that a branch with some initial \"`featureB`\" work on it was already pushed to the server as the `featureBee` branch.\n"
+"Jessica needs to merge those changes with her own before she can push her work to the server.\n"
+"Jessica first fetches Josie's changes with `git fetch`:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:404
+#, no-wrap
+msgid ""
+"$ git fetch origin\n"
+"...\n"
+"From jessica@githost:simplegit\n"
+" * [new branch]      featureBee -> origin/featureBee\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:407
+#, no-wrap
+msgid "Assuming Jessica is still on her checked-out `featureB` branch, she can now merge Josie's work into that branch with `git merge`:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:415
+#, no-wrap
+msgid ""
+"$ git merge origin/featureBee\n"
+"Auto-merging lib/simplegit.rb\n"
+"Merge made by the 'recursive' strategy.\n"
+" lib/simplegit.rb |    4 ++++\n"
+" 1 files changed, 4 insertions(+), 0 deletions(-)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:419
+#, no-wrap
+msgid ""
+"At this point, Jessica wants to push all of this merged \"`featureB`\" work back to the server, but she doesn't want to simply push her own `featureB` branch.\n"
+"Rather, since Josie has already started an upstream `featureBee` branch, Jessica wants to push to _that_ branch, which she does with:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:426
+#, no-wrap
+msgid ""
+"$ git push -u origin featureB:featureBee\n"
+"...\n"
+"To jessica@githost:simplegit.git\n"
+"   fba9af8..cd685d1  featureB -> featureBee\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:431
+#, no-wrap
+msgid ""
+"This is called a _refspec_.\n"
+"See <<ch10-git-internals#_refspec>> for a more detailed discussion of Git refspecs and different things you can do with them.\n"
+"Also notice the `-u` flag; this is short for `--set-upstream`, which configures the branches for easier pushing and pulling later.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:434
+#, no-wrap
+msgid ""
+"Suddenly, Jessica gets email from John, who tells her he's pushed some changes to the `featureA` branch on which they are collaborating, and he asks Jessica to take a look at them.\n"
+"Again, Jessica runs a simple `git fetch` to fetch _all_ new content from the server, including (of course) John's latest work:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:441
+#, no-wrap
+msgid ""
+"$ git fetch origin\n"
+"...\n"
+"From jessica@githost:simplegit\n"
+"   3300904..aad881d  featureA   -> origin/featureA\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:444
+#, no-wrap
+msgid "Jessica can display the log of John's new work by comparing the content of the newly-fetched `featureA` branch with her local copy of the same branch:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:451
+#, no-wrap
+msgid ""
+"$ git log featureA..origin/featureA\n"
+"commit aad881d154acdaeb2b6b18ea0e827ed8a6d671e6\n"
+"Author: John Smith <jsmith@example.com>\n"
+"Date:   Fri May 29 19:57:33 2009 -0700\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:453
+#, no-wrap
+msgid ""
+"    Increase log output to 30 from 25\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:456
+#, no-wrap
+msgid "If Jessica likes what she sees, she can merge John's new work into her local `featureA` branch with:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:466
+#, no-wrap
+msgid ""
+"$ git checkout featureA\n"
+"Switched to branch 'featureA'\n"
+"$ git merge origin/featureA\n"
+"Updating 3300904..aad881d\n"
+"Fast forward\n"
+" lib/simplegit.rb |   10 +++++++++-\n"
+"1 files changed, 9 insertions(+), 1 deletions(-)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:469
+#, no-wrap
+msgid "Finally, Jessica might want to make a couple minor changes to all that merged content, so she is free to make those changes, commit them to her local `featureA` branch, and push the end result back to the server:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:479
+#, no-wrap
+msgid ""
+"$ git commit -am 'Add small tweak to merged content'\n"
+"[featureA 774b3ed] Add small tweak to merged content\n"
+" 1 files changed, 1 insertions(+), 1 deletions(-)\n"
+"$ git push\n"
+"...\n"
+"To jessica@githost:simplegit.git\n"
+"   3300904..774b3ed  featureA -> featureA\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:482
+#, no-wrap
+msgid "Jessica's commit history now looks something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:485
+#, no-wrap
+msgid ""
+".Jessica's history after committing on a feature branch\n"
+"image::images/managed-team-2.png[Jessica's history after committing on a feature branch]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:488
+#, no-wrap
+msgid ""
+"At some point, Jessica, Josie, and John inform the integrators that the `featureA` and `featureBee` branches on the server are ready for integration into the mainline.\n"
+"After the integrators merge these branches into the mainline, a fetch will bring down the new merge commit, making the history look like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:491
+#, no-wrap
+msgid ""
+".Jessica's history after merging both her topic branches\n"
+"image::images/managed-team-3.png[Jessica's history after merging both her topic branches]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:495
+#, no-wrap
+msgid ""
+"Many groups switch to Git because of this ability to have multiple teams working in parallel, merging the different lines of work late in the process.\n"
+"The ability of smaller subgroups of a team to collaborate via remote branches without necessarily having to involve or impede the entire team is a huge benefit of Git.\n"
+"The sequence for the workflow you saw here is something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:498
+#, no-wrap
+msgid ""
+".Basic sequence of this managed-team workflow\n"
+"image::images/managed-team-flow.png[Basic sequence of this managed-team workflow]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:501
+#, no-wrap
+msgid ""
+"[[_public_project]]\n"
+"==== Forked Public Project\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:508
+#, no-wrap
+msgid ""
+"(((contributing, public small project)))\n"
+"Contributing to public projects is a bit different.\n"
+"Because you don't have the permissions to directly update branches on the project, you have to get the work to the maintainers some other way.\n"
+"This first example describes contributing via forking on Git hosts that support easy forking.\n"
+"Many hosting sites support this (including GitHub, BitBucket, repo.or.cz, and others), and many project maintainers expect this style of contribution.\n"
+"The next section deals with projects that prefer to accept contributed patches via email.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:511
+#, no-wrap
+msgid ""
+"First, you'll probably want to clone the main repository, create a topic branch for the patch or patch series you're planning to contribute, and do your work there.\n"
+"The sequence looks basically like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:521
+#, no-wrap
+msgid ""
+"$ git clone <url>\n"
+"$ cd project\n"
+"$ git checkout -b featureA\n"
+"  ... work ...\n"
+"$ git commit\n"
+"  ... work ...\n"
+"$ git commit\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:524
+#: book/05-distributed-git/sections/distributed-workflows.asc:90
+#, no-wrap
+msgid ""
+"[NOTE]\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:526
+#, no-wrap
+msgid ""
+"You may want to use `rebase -i` to squash your work down to a single commit, or rearrange the work in the commits to make the patch easier for the maintainer to review -- see <<ch07-git-tools#_rewriting_history>> for more information about interactive rebasing.\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:530
+#, no-wrap
+msgid ""
+"When your branch work is finished and you're ready to contribute it back to the maintainers, go to the original project page and click the \"`Fork`\" button, creating your own writable fork of the project.\n"
+"You then need to add this repository URL as a new remote of your local repository; in this example, let's call it `myfork`:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:534
+#, no-wrap
+msgid ""
+"$ git remote add myfork <url>\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:540
+#, no-wrap
+msgid ""
+"You then need to push your new work to this repository.\n"
+"It's easiest to push the topic branch you're working on to your forked repository, rather than merging that work into your `master` branch and pushing that.\n"
+"The reason is that if your work isn't accepted or is cherry-picked, you don't have to rewind your `master` branch (the Git `cherry-pick` operation is covered in more detail in <<ch05-distributed-git#_rebase_cherry_pick>>).\n"
+"If the maintainers `merge`, `rebase`, or `cherry-pick` your work, you'll eventually get it back via pulling from their repository anyhow.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:542
+#, no-wrap
+msgid "In any event, you can push your work with:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:546
+#, no-wrap
+msgid ""
+"$ git push -u myfork featureA\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:551
+#, no-wrap
+msgid ""
+"(((git commands, request-pull)))\n"
+"Once your work has been pushed to your fork of the repository, you need to notify the maintainers of the original project that you have work you'd like them to merge.\n"
+"This is often called a _pull request_, and you typically generate such a request either via the website -- GitHub has its own \"`Pull Request`\" mechanism that we'll go over in <<ch06-github#ch06-github>> -- or you can run the `git request-pull` command and email the subsequent output to the project maintainer manually.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:554
+#, no-wrap
+msgid ""
+"The `git request-pull` command takes the base branch into which you want your topic branch pulled and the Git repository URL you want them to pull from, and produces a summary of all the changes you're asking to be pulled.\n"
+"For instance, if Jessica wants to send John a pull request, and she's done two commits on the topic branch she just pushed, she can run this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:561
+#, no-wrap
+msgid ""
+"$ git request-pull origin/master myfork\n"
+"The following changes since commit 1edee6b1d61823a2de3b09c160d7080b8d1b3a40:\n"
+"Jessica Smith (1):\n"
+"        Create new function\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:563
+#, no-wrap
+msgid "are available in the git repository at:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:565
+#, no-wrap
+msgid "  git://githost/simplegit.git featureA\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:569
+#, no-wrap
+msgid ""
+"Jessica Smith (2):\n"
+"      Add limit to log function\n"
+"      Increase log output to 30 from 25\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:572
+#, no-wrap
+msgid ""
+" lib/simplegit.rb |   10 +++++++++-\n"
+" 1 files changed, 9 insertions(+), 1 deletions(-)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:575
+#, no-wrap
+msgid "This output can be sent to the maintainer -- it tells them where the work was branched from, summarizes the commits, and identifies from where the new work is to be pulled.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:579
+#, no-wrap
+msgid ""
+"On a project for which you're not the maintainer, it's generally easier to have a branch like `master` always track `origin/master` and to do your work in topic branches that you can easily discard if they're rejected.\n"
+"Having work themes isolated into topic branches also makes it easier for you to rebase your work if the tip of the main repository has moved in the meantime and your commits no longer apply cleanly.\n"
+"For example, if you want to submit a second topic of work to the project, don't continue working on the topic branch you just pushed up -- start over from the main repository's `master` branch:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:589
+#, no-wrap
+msgid ""
+"$ git checkout -b featureB origin/master\n"
+"  ... work ...\n"
+"$ git commit\n"
+"$ git push myfork featureB\n"
+"$ git request-pull origin/master myfork\n"
+"  ... email generated request pull to maintainer ...\n"
+"$ git fetch origin\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:592
+#, no-wrap
+msgid "Now, each of your topics is contained within a silo -- similar to a patch queue -- that you can rewrite, rebase, and modify without the topics interfering or interdepending on each other, like so:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:595
+#, no-wrap
+msgid ""
+".Initial commit history with `featureB` work\n"
+"image::images/public-small-1.png[Initial commit history with `featureB` work]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:598
+#, no-wrap
+msgid ""
+"Let's say the project maintainer has pulled in a bunch of other patches and tried your first branch, but it no longer cleanly merges.\n"
+"In this case, you can try to rebase that branch on top of `origin/master`, resolve the conflicts for the maintainer, and then resubmit your changes:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:604
+#, no-wrap
+msgid ""
+"$ git checkout featureA\n"
+"$ git rebase origin/master\n"
+"$ git push -f myfork featureA\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:607
+#, no-wrap
+msgid "This rewrites your history to now look like <<psp_b>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:611
+#, no-wrap
+msgid ""
+"[[psp_b]]\n"
+".Commit history after `featureA` work\n"
+"image::images/public-small-2.png[Commit history after `featureA` work]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:614
+#, no-wrap
+msgid ""
+"Because you rebased the branch, you have to specify the `-f` to your push command in order to be able to replace the `featureA` branch on the server with a commit that isn't a descendant of it.\n"
+"An alternative would be to push this new work to a different branch on the server (perhaps called `featureAv2`).\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:618
+#, no-wrap
+msgid ""
+"Let's look at one more possible scenario: the maintainer has looked at work in your second branch and likes the concept but would like you to change an implementation detail.\n"
+"You'll also take this opportunity to move the work to be based off the project's current `master` branch.\n"
+"You start a new branch based off the current `origin/master` branch, squash the `featureB` changes there, resolve any conflicts, make the implementation change, and then push that as a new branch:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:621
+#, no-wrap
+msgid ""
+"(((git commands, merge, squash)))\n"
+"[source,console]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:627
+#, no-wrap
+msgid ""
+"$ git checkout -b featureBv2 origin/master\n"
+"$ git merge --squash featureB\n"
+"  ... change implementation ...\n"
+"$ git commit\n"
+"$ git push myfork featureBv2\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:632
+#, no-wrap
+msgid ""
+"The `--squash` option takes all the work on the merged branch and squashes it into one changeset producing the repository state as if a real merge happened, without actually making a merge commit.\n"
+"This means your future commit will have one parent only and allows you to introduce all the changes from another branch and then make more changes before recording the new commit.\n"
+"Also the `--no-commit` option can be useful to delay the merge commit in case of the default merge process.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:634
+#, no-wrap
+msgid "At this point, you can notify the maintainer that you've made the requested changes, and that they can find those changes in your `featureBv2` branch.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:637
+#, no-wrap
+msgid ""
+".Commit history after `featureBv2` work\n"
+"image::images/public-small-3.png[Commit history after `featureBv2` work]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:640
+#, no-wrap
+msgid ""
+"[[_project_over_email]]\n"
+"==== Public Project over Email\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:644
+#, no-wrap
+msgid ""
+"(((contributing, public large project)))\n"
+"Many projects have established procedures for accepting patches -- you'll need to check the specific rules for each project, because they will differ.\n"
+"Since there are several older, larger projects which accept patches via a developer mailing list, we'll go over an example of that now.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:648
+#, no-wrap
+msgid ""
+"The workflow is similar to the previous use case -- you create topic branches for each patch series you work on.\n"
+"The difference is how you submit them to the project.\n"
+"Instead of forking the project and pushing to your own writable version, you generate email versions of each commit series and email them to the developer mailing list:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:656
+#, no-wrap
+msgid ""
+"$ git checkout -b topicA\n"
+"  ... work ...\n"
+"$ git commit\n"
+"  ... work ...\n"
+"$ git commit\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:662
+#, no-wrap
+msgid ""
+"(((git commands, format-patch)))\n"
+"Now you have two commits that you want to send to the mailing list.\n"
+"You use `git format-patch` to generate the mbox-formatted files that you can email to the list -- it turns each commit into an email message with the first line of the commit message as the subject and the rest of the message plus the patch that the commit introduces as the body.\n"
+"The nice thing about this is that applying a patch from an email generated with `format-patch` preserves all the commit information properly.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:668
+#, no-wrap
+msgid ""
+"$ git format-patch -M origin/master\n"
+"0001-add-limit-to-log-function.patch\n"
+"0002-increase-log-output-to-30-from-25.patch\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:673
+#, no-wrap
+msgid ""
+"The `format-patch` command prints out the names of the patch files it creates.\n"
+"The `-M` switch tells Git to look for renames.\n"
+"The files end up looking like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:681
+#, no-wrap
+msgid ""
+"$ cat 0001-add-limit-to-log-function.patch\n"
+"From 330090432754092d704da8e76ca5c05c198e71a8 Mon Sep 17 00:00:00 2001\n"
+"From: Jessica Smith <jessica@example.com>\n"
+"Date: Sun, 6 Apr 2008 10:17:23 -0700\n"
+"Subject: [PATCH 1/2] Add limit to log function\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:683
+#, no-wrap
+msgid "Limit log functionality to the first 20\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:684
+#, no-wrap
+msgid "---\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:687
+#, no-wrap
+msgid ""
+" lib/simplegit.rb |    2 +-\n"
+" 1 files changed, 1 insertions(+), 1 deletions(-)\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:694
+#, no-wrap
+msgid ""
+"diff --git a/lib/simplegit.rb b/lib/simplegit.rb\n"
+"index 76f47bc..f9815f1 100644\n"
+"--- a/lib/simplegit.rb\n"
+"+++ b/lib/simplegit.rb\n"
+"@@ -14,7 +14,7 @@ class SimpleGit\n"
+"   end\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:699
+#, no-wrap
+msgid ""
+"   def log(treeish = 'master')\n"
+"-    command(\"git log #{treeish}\")\n"
+"+    command(\"git log -n 20 #{treeish}\")\n"
+"   end\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:701
+#, no-wrap
+msgid ""
+"   def ls_tree(treeish = 'master')\n"
+"--\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:703
+#, no-wrap
+msgid ""
+"2.1.0\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:707
+#, no-wrap
+msgid ""
+"You can also edit these patch files to add more information for the email list that you don't want to show up in the commit message.\n"
+"If you add text between the `---` line and the beginning of the patch (the `diff --git` line), the developers can read it, but that content is ignored by the patching process.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:712
+#, no-wrap
+msgid ""
+"To email this to a mailing list, you can either paste the file into your email program or send it via a command-line program.\n"
+"Pasting the text often causes formatting issues, especially with \"`smarter`\" clients that don't preserve newlines and other whitespace appropriately.\n"
+"Luckily, Git provides a tool to help you send properly formatted patches via IMAP, which may be easier for you.\n"
+"We'll demonstrate how to send a patch via Gmail, which happens to be the email agent we know best; you can read detailed instructions for a number of mail programs at the end of the aforementioned `Documentation/SubmittingPatches` file in the Git source code.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:716
+#, no-wrap
+msgid ""
+"(((git commands, config)))(((email)))\n"
+"First, you need to set up the imap section in your `~/.gitconfig` file.\n"
+"You can set each value separately with a series of `git config` commands, or you can add them manually, but in the end your config file should look something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:718
+#: book/05-distributed-git/sections/contributing.asc:747
+#, no-wrap
+msgid ""
+"[source,ini]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:726
+#, no-wrap
+msgid ""
+"[imap]\n"
+"  folder = \"[Gmail]/Drafts\"\n"
+"  host = imaps://imap.gmail.com\n"
+"  user = user@gmail.com\n"
+"  pass = YX]8g76G_2^sFbd\n"
+"  port = 993\n"
+"  sslverify = false\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:730
+#, no-wrap
+msgid ""
+"If your IMAP server doesn't use SSL, the last two lines probably aren't necessary, and the host value will be `imap://` instead of `imaps://`.\n"
+"When that is set up, you can use `git imap-send` to place the patch series in the Drafts folder of the specified IMAP server:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:739
+#, no-wrap
+msgid ""
+"$ cat *.patch |git imap-send\n"
+"Resolving imap.gmail.com... ok\n"
+"Connecting to [74.125.142.109]:993... ok\n"
+"Logging in...\n"
+"sending 2 messages\n"
+"100% (2/2) done\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:742
+#, no-wrap
+msgid "At this point, you should be able to go to your Drafts folder, change the To field to the mailing list you're sending the patch to, possibly CC the maintainer or person responsible for that section, and send it off.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:745
+#, no-wrap
+msgid ""
+"You can also send the patches through an SMTP server.\n"
+"As before, you can set each value separately with a series of `git config` commands, or you can add them manually in the sendemail section in your `~/.gitconfig` file:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:753
+#, no-wrap
+msgid ""
+"[sendemail]\n"
+"  smtpencryption = tls\n"
+"  smtpserver = smtp.gmail.com\n"
+"  smtpuser = user@gmail.com\n"
+"  smtpserverport = 587\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:756
+#, no-wrap
+msgid "After this is done, you can use `git send-email` to send your patches:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:766
+#, no-wrap
+msgid ""
+"$ git send-email *.patch\n"
+"0001-add-limit-to-log-function.patch\n"
+"0002-increase-log-output-to-30-from-25.patch\n"
+"Who should the emails appear to be from? [Jessica Smith <jessica@example.com>]\n"
+"Emails will be sent from: Jessica Smith <jessica@example.com>\n"
+"Who should the emails be sent to? jessica@example.com\n"
+"Message-ID to be used as In-Reply-To for the first email? y\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:769
+#, no-wrap
+msgid "Then, Git spits out a bunch of log information looking something like this for each patch you're sending:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:784
+#, no-wrap
+msgid ""
+"(mbox) Adding cc: Jessica Smith <jessica@example.com> from\n"
+"  \\line 'From: Jessica Smith <jessica@example.com>'\n"
+"OK. Log says:\n"
+"Sendmail: /usr/sbin/sendmail -i jessica@example.com\n"
+"From: Jessica Smith <jessica@example.com>\n"
+"To: jessica@example.com\n"
+"Subject: [PATCH 1/2] Add limit to log function\n"
+"Date: Sat, 30 May 2009 13:29:15 -0700\n"
+"Message-Id: <1243715356-61726-1-git-send-email-jessica@example.com>\n"
+"X-Mailer: git-send-email 1.6.2.rc1.20.g8c5b.dirty\n"
+"In-Reply-To: <y>\n"
+"References: <y>\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:786
+#, no-wrap
+msgid ""
+"Result: OK\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:789
+#, no-wrap
+msgid ""
+"[TIP]\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:791
+#, no-wrap
+msgid ""
+"For help on configuring your system and email, more tips and tricks, and a sandbox to send a trial patch via email, go to https://git-send-email.io[git-send-email.io^].\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:794
+#, no-wrap
+msgid "==== Summary\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:800
+#, no-wrap
+msgid ""
+"In this section, we covered multiple workflows, and talked about the differences between working as part of a small team on closed-source projects vs contributing to a big public project.\n"
+"You know to check for white-space errors before committing, and can write a great commit message.\n"
+"You learned how to format patches, and e-mail them to a developer mailing list.\n"
+"Dealing with merges was also covered in the context of the different workflows.\n"
+"You are now well prepared to collaborate on any project.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/contributing.asc:802
+#, no-wrap
+msgid ""
+"Next, you'll see how to work the other side of the coin: maintaining a Git project.\n"
+"You'll learn how to be a benevolent dictator or integration manager.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/distributed-workflows.asc:2
+#, no-wrap
+msgid "=== Distributed Workflows\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/distributed-workflows.asc:9
+#, no-wrap
+msgid ""
+"(((workflows)))\n"
+"In contrast with Centralized Version Control Systems (CVCSs), the distributed nature of Git allows you to be far more flexible in how developers collaborate on projects.\n"
+"In centralized systems, every developer is a node working more or less equally with a central hub.\n"
+"In Git, however, every developer is potentially both a node and a hub; that is, every developer can both contribute code to other repositories and maintain a public repository on which others can base their work and which they can contribute to.\n"
+"This presents a vast range of workflow possibilities for your project and/or your team, so we'll cover a few common paradigms that take advantage of this flexibility.\n"
+"We'll go over the strengths and possible weaknesses of each design; you can choose a single one to use, or you can mix and match features from each.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/distributed-workflows.asc:11
+#, no-wrap
+msgid "==== Centralized Workflow\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/distributed-workflows.asc:16
+#, no-wrap
+msgid ""
+"(((workflows, centralized)))\n"
+"In centralized systems, there is generally a single collaboration model -- the centralized workflow.\n"
+"One central hub, or _repository_, can accept code, and everyone synchronizes their work with it.\n"
+"A number of developers are nodes -- consumers of that hub -- and synchronize with that centralized location.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/distributed-workflows.asc:19
+#, no-wrap
+msgid ""
+".Centralized workflow\n"
+"image::images/centralized_workflow.png[Centralized workflow]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/distributed-workflows.asc:23
+#, no-wrap
+msgid ""
+"This means that if two developers clone from the hub and both make changes, the first developer to push their changes back up can do so with no problems.\n"
+"The second developer must merge in the first one's work before pushing changes up, so as not to overwrite the first developer's changes.\n"
+"This concept is as true in Git as it is in Subversion(((Subversion))) (or any CVCS), and this model works perfectly well in Git.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/distributed-workflows.asc:26
+#, no-wrap
+msgid ""
+"If you are already comfortable with a centralized workflow in your company or team, you can easily continue using that workflow with Git.\n"
+"Simply set up a single repository, and give everyone on your team push access; Git won't let users overwrite each other.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/distributed-workflows.asc:32
+#, no-wrap
+msgid ""
+"Say John and Jessica both start working at the same time.\n"
+"John finishes his change and pushes it to the server.\n"
+"Then Jessica tries to push her changes, but the server rejects them.\n"
+"She is told that she's trying to push non-fast-forward changes and that she won't be able to do so until she fetches and merges.\n"
+"This workflow is attractive to a lot of people because it's a paradigm that many are familiar and comfortable with.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/distributed-workflows.asc:35
+#, no-wrap
+msgid ""
+"This is also not limited to small teams.\n"
+"With Git's branching model, it's possible for hundreds of developers to successfully work on a single project through dozens of branches simultaneously.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/distributed-workflows.asc:38
+#, no-wrap
+msgid ""
+"[[_integration_manager]]\n"
+"==== Integration-Manager Workflow\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/distributed-workflows.asc:46
+#, no-wrap
+msgid ""
+"(((workflows, integration manager)))\n"
+"Because Git allows you to have multiple remote repositories, it's possible to have a workflow where each developer has write access to their own public repository and read access to everyone else's.\n"
+"This scenario often includes a canonical repository that represents the \"`official`\" project.\n"
+"To contribute to that project, you create your own public clone of the project and push your changes to it.\n"
+"Then, you can send a request to the maintainer of the main project to pull in your changes.\n"
+"The maintainer can then add your repository as a remote, test your changes locally, merge them into their branch, and push back to their repository.\n"
+"The process works as follows (see <<wfdiag_b>>):\n"
+msgstr ""
+
+#. type: Bullet: '1.  '
+#: book/05-distributed-git/sections/distributed-workflows.asc:53
+#, no-wrap
+msgid "The project maintainer pushes to their public repository.\n"
+msgstr ""
+
+#. type: Bullet: '2.  '
+#: book/05-distributed-git/sections/distributed-workflows.asc:53
+#, no-wrap
+msgid "A contributor clones that repository and makes changes.\n"
+msgstr ""
+
+#. type: Bullet: '3.  '
+#: book/05-distributed-git/sections/distributed-workflows.asc:53
+#, no-wrap
+msgid "The contributor pushes to their own public copy.\n"
+msgstr ""
+
+#. type: Bullet: '4.  '
+#: book/05-distributed-git/sections/distributed-workflows.asc:53
+#, no-wrap
+msgid "The contributor sends the maintainer an email asking them to pull changes.\n"
+msgstr ""
+
+#. type: Bullet: '5.  '
+#: book/05-distributed-git/sections/distributed-workflows.asc:53
+#, no-wrap
+msgid "The maintainer adds the contributor's repository as a remote and merges locally.\n"
+msgstr ""
+
+#. type: Bullet: '6.  '
+#: book/05-distributed-git/sections/distributed-workflows.asc:53
+#, no-wrap
+msgid "The maintainer pushes merged changes to the main repository.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/distributed-workflows.asc:57
+#, no-wrap
+msgid ""
+"[[wfdiag_b]]\n"
+".Integration-manager workflow\n"
+"image::images/integration-manager.png[Integration-manager workflow]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/distributed-workflows.asc:62
+#, no-wrap
+msgid ""
+"(((forking)))\n"
+"This is a very common workflow with hub-based tools like GitHub or GitLab, where it's easy to fork a project and push your changes into your fork for everyone to see.\n"
+"One of the main advantages of this approach is that you can continue to work, and the maintainer of the main repository can pull in your changes at any time.\n"
+"Contributors don't have to wait for the project to incorporate their changes -- each party can work at their own pace.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/distributed-workflows.asc:64
+#, no-wrap
+msgid "==== Dictator and Lieutenants Workflow\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/distributed-workflows.asc:72
+#, no-wrap
+msgid ""
+"(((workflows, dictator and lieutenants)))\n"
+"This is a variant of a multiple-repository workflow.\n"
+"It's generally used by huge projects with hundreds of collaborators; one famous example is the Linux kernel.\n"
+"Various integration managers are in charge of certain parts of the repository; they're called _lieutenants_.\n"
+"All the lieutenants have one integration manager known as the benevolent dictator.\n"
+"The benevolent dictator pushes from their directory to a reference repository from which all the collaborators need to pull.\n"
+"The process works like this (see <<wfdiag_c>>):\n"
+msgstr ""
+
+#. type: Bullet: '1.  '
+#: book/05-distributed-git/sections/distributed-workflows.asc:78
+#, no-wrap
+msgid ""
+"Regular developers work on their topic branch and rebase their work on top of `master`.\n"
+"The `master` branch is that of the reference repository to which the dictator pushes.\n"
+msgstr ""
+
+#. type: Bullet: '2.  '
+#: book/05-distributed-git/sections/distributed-workflows.asc:78
+#, no-wrap
+msgid "Lieutenants merge the developers' topic branches into their `master` branch.\n"
+msgstr ""
+
+#. type: Bullet: '3.  '
+#: book/05-distributed-git/sections/distributed-workflows.asc:78
+#, no-wrap
+msgid "The dictator merges the lieutenants' `master` branches into the dictator's `master` branch.\n"
+msgstr ""
+
+#. type: Bullet: '4.  '
+#: book/05-distributed-git/sections/distributed-workflows.asc:78
+#, no-wrap
+msgid "Finally, the dictator pushes that `master` branch to the reference repository so the other developers can rebase on it.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/distributed-workflows.asc:82
+#, no-wrap
+msgid ""
+"[[wfdiag_c]]\n"
+".Benevolent dictator workflow\n"
+"image::images/benevolent-dictator.png[Benevolent dictator workflow]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/distributed-workflows.asc:85
+#, no-wrap
+msgid ""
+"This kind of workflow isn't common, but can be useful in very big projects, or in highly hierarchical environments.\n"
+"It allows the project leader (the dictator) to delegate much of the work and collect large subsets of code at multiple points before integrating them.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/distributed-workflows.asc:88
+#, no-wrap
+msgid ""
+"[[_patterns_for_managing_source_code_branches]]\n"
+"==== Patterns for Managing Source Code Branches\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/distributed-workflows.asc:94
+#, no-wrap
+msgid ""
+"Martin Fowler has made a guide \"Patterns for Managing Source Code Branches\".\n"
+"This guide covers all the common Git workflows, and explains how/when to use them.\n"
+"There's also a section comparing high and low integration frequencies.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/distributed-workflows.asc:96
+#, no-wrap
+msgid ""
+"https://martinfowler.com/articles/branching-patterns.html\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/distributed-workflows.asc:99
+#, no-wrap
+msgid "==== Workflows Summary\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/distributed-workflows.asc:102
+#, no-wrap
+msgid ""
+"These are some commonly used workflows that are possible with a distributed system like Git, but you can see that many variations are possible to suit your particular real-world workflow.\n"
+"Now that you can (hopefully) determine which workflow combination may work for you, we'll cover some more specific examples of how to accomplish the main roles that make up the different flows.\n"
+"In the next section, you'll learn about a few common patterns for contributing to a project.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:2
+#, no-wrap
+msgid "=== Maintaining a Project\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:7
+#, no-wrap
+msgid ""
+"(((maintaining a project)))\n"
+"In addition to knowing how to contribute effectively to a project, you'll likely need to know how to maintain one.\n"
+"This can consist of accepting and applying patches generated via `format-patch` and emailed to you, or integrating changes in remote branches for repositories you've added as remotes to your project.\n"
+"Whether you maintain a canonical repository or want to help by verifying or approving patches, you need to know how to accept work in a way that is clearest for other contributors and sustainable by you over the long run.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:9
+#, no-wrap
+msgid "==== Working in Topic Branches\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:16
+#, no-wrap
+msgid ""
+"(((branches, topic)))\n"
+"When you're thinking of integrating new work, it's generally a good idea to try it out in a _topic branch_ -- a temporary branch specifically made to try out that new work.\n"
+"This way, it's easy to tweak a patch individually and leave it if it's not working until you have time to come back to it.\n"
+"If you create a simple branch name based on the theme of the work you're going to try, such as `ruby_client` or something similarly descriptive, you can easily remember it if you have to abandon it for a while and come back later.\n"
+"The maintainer of the Git project tends to namespace these branches as well -- such as `sc/ruby_client`, where `sc` is short for the person who contributed the work.\n"
+"As you'll remember, you can create the branch based off your `master` branch like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:20
+#, no-wrap
+msgid ""
+"$ git branch sc/ruby_client master\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:23
+#, no-wrap
+msgid "Or, if you want to also switch to it immediately, you can use the `checkout -b` option:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:27
+#, no-wrap
+msgid ""
+"$ git checkout -b sc/ruby_client master\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:30
+#, no-wrap
+msgid "Now you're ready to add the contributed work that you received into this topic branch and determine if you want to merge it into your longer-term branches.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:33
+#, no-wrap
+msgid ""
+"[[_patches_from_email]]\n"
+"==== Applying Patches from Email\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:37
+#, no-wrap
+msgid ""
+"(((email, applying patches from)))\n"
+"If you receive a patch over email that you need to integrate into your project, you need to apply the patch in your topic branch to evaluate it.\n"
+"There are two ways to apply an emailed patch: with `git apply` or with `git am`.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:39
+#, no-wrap
+msgid "===== Applying a Patch with apply\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:43
+#, no-wrap
+msgid ""
+"(((git commands, apply)))\n"
+"If you received the patch from someone who generated it with `git diff` or some variation of the Unix `diff` command (which is not recommended; see the next section), you can apply it with the `git apply` command.\n"
+"Assuming you saved the patch at `/tmp/patch-ruby-client.patch`, you can apply the patch like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:47
+#, no-wrap
+msgid ""
+"$ git apply /tmp/patch-ruby-client.patch\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:55
+#, no-wrap
+msgid ""
+"This modifies the files in your working directory.\n"
+"It's almost identical to running a `patch -p1` command to apply the patch, although it's more paranoid and accepts fewer fuzzy matches than patch.\n"
+"It also handles file adds, deletes, and renames if they're described in the `git diff` format, which `patch` won't do.\n"
+"Finally, `git apply` is an \"`apply all or abort all`\" model where either everything is applied or nothing is, whereas `patch` can partially apply patchfiles, leaving your working directory in a weird state.\n"
+"`git apply` is overall much more conservative than `patch`.\n"
+"It won't create a commit for you -- after running it, you must stage and commit the changes introduced manually.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:57
+#, no-wrap
+msgid "You can also use `git apply` to see if a patch applies cleanly before you try actually applying it -- you can run `git apply --check` with the patch:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:63
+#, no-wrap
+msgid ""
+"$ git apply --check 0001-see-if-this-helps-the-gem.patch\n"
+"error: patch failed: ticgit.gemspec:1\n"
+"error: ticgit.gemspec: patch does not apply\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:67
+#, no-wrap
+msgid ""
+"If there is no output, then the patch should apply cleanly.\n"
+"This command also exits with a non-zero status if the check fails, so you can use it in scripts if you want.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:70
+#, no-wrap
+msgid ""
+"[[_git_am]]\n"
+"===== Applying a Patch with `am`\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:75
+#, no-wrap
+msgid ""
+"(((git commands, am)))\n"
+"If the contributor is a Git user and was good enough to use the `format-patch` command to generate their patch, then your job is easier because the patch contains author information and a commit message for you.\n"
+"If you can, encourage your contributors to use `format-patch` instead of `diff` to generate patches for you.\n"
+"You should only have to use `git apply` for legacy patches and things like that.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:79
+#, no-wrap
+msgid ""
+"To apply a patch generated by `format-patch`, you use `git am` (the command is named `am` as it is used to \"apply a series of patches from a mailbox\").\n"
+"Technically, `git am` is built to read an mbox file, which is a simple, plain-text format for storing one or more email messages in one text file.\n"
+"It looks something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:86
+#, no-wrap
+msgid ""
+"From 330090432754092d704da8e76ca5c05c198e71a8 Mon Sep 17 00:00:00 2001\n"
+"From: Jessica Smith <jessica@example.com>\n"
+"Date: Sun, 6 Apr 2008 10:17:23 -0700\n"
+"Subject: [PATCH 1/2] Add limit to log function\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:88
+#, no-wrap
+msgid ""
+"Limit log functionality to the first 20\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:93
+#, no-wrap
+msgid ""
+"This is the beginning of the output of the `git format-patch` command that you saw in the previous section; it also represents a valid mbox email format.\n"
+"If someone has emailed you the patch properly using `git send-email`, and you download that into an mbox format, then you can point `git am` to that mbox file, and it will start applying all the patches it sees.\n"
+"If you run a mail client that can save several emails out in mbox format, you can save entire patch series into a file and then use `git am` to apply them one at a time.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:95
+#, no-wrap
+msgid "However, if someone uploaded a patch file generated via `git format-patch` to a ticketing system or something similar, you can save the file locally and then pass that file saved on your disk to `git am` to apply it:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:100
+#, no-wrap
+msgid ""
+"$ git am 0001-limit-log-function.patch\n"
+"Applying: Add limit to log function\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:105
+#, no-wrap
+msgid ""
+"You can see that it applied cleanly and automatically created the new commit for you.\n"
+"The author information is taken from the email's `From` and `Date` headers, and the message of the commit is taken from the `Subject` and body (before the patch) of the email.\n"
+"For example, if this patch was applied from the mbox example above, the commit generated would look something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:114
+#, no-wrap
+msgid ""
+"$ git log --pretty=fuller -1\n"
+"commit 6c5e70b984a60b3cecd395edd5b48a7575bf58e0\n"
+"Author:     Jessica Smith <jessica@example.com>\n"
+"AuthorDate: Sun Apr 6 10:17:23 2008 -0700\n"
+"Commit:     Scott Chacon <schacon@gmail.com>\n"
+"CommitDate: Thu Apr 9 09:19:06 2009 -0700\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:116
+#, no-wrap
+msgid "   Add limit to log function\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:118
+#, no-wrap
+msgid ""
+"   Limit log functionality to the first 20\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:122
+#, no-wrap
+msgid ""
+"The `Commit` information indicates the person who applied the patch and the time it was applied.\n"
+"The `Author` information is the individual who originally created the patch and when it was originally created.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:126
+#, no-wrap
+msgid ""
+"But it's possible that the patch won't apply cleanly.\n"
+"Perhaps your main branch has diverged too far from the branch the patch was built from, or the patch depends on another patch you haven't applied yet.\n"
+"In that case, the `git am` process will fail and ask you what you want to do:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:137
+#, no-wrap
+msgid ""
+"$ git am 0001-see-if-this-helps-the-gem.patch\n"
+"Applying: See if this helps the gem\n"
+"error: patch failed: ticgit.gemspec:1\n"
+"error: ticgit.gemspec: patch does not apply\n"
+"Patch failed at 0001.\n"
+"When you have resolved this problem run \"git am --resolved\".\n"
+"If you would prefer to skip this patch, instead run \"git am --skip\".\n"
+"To restore the original branch and stop patching run \"git am --abort\".\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:141
+#, no-wrap
+msgid ""
+"This command puts conflict markers in any files it has issues with, much like a conflicted merge or rebase operation.\n"
+"You solve this issue much the same way -- edit the file to resolve the conflict, stage the new file, and then run `git am --resolved` to continue to the next patch:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:148
+#, no-wrap
+msgid ""
+"$ (fix the file)\n"
+"$ git add ticgit.gemspec\n"
+"$ git am --resolved\n"
+"Applying: See if this helps the gem\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:153
+#, no-wrap
+msgid ""
+"If you want Git to try a bit more intelligently to resolve the conflict, you can pass a `-3` option to it, which makes Git attempt a three-way merge.\n"
+"This option isn't on by default because it doesn't work if the commit the patch says it was based on isn't in your repository.\n"
+"If you do have that commit -- if the patch was based on a public commit -- then the `-3` option is generally much smarter about applying a conflicting patch:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:163
+#, no-wrap
+msgid ""
+"$ git am -3 0001-see-if-this-helps-the-gem.patch\n"
+"Applying: See if this helps the gem\n"
+"error: patch failed: ticgit.gemspec:1\n"
+"error: ticgit.gemspec: patch does not apply\n"
+"Using index info to reconstruct a base tree...\n"
+"Falling back to patching base and 3-way merge...\n"
+"No changes -- Patch already applied.\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:167
+#, no-wrap
+msgid ""
+"In this case, without the `-3` option the patch would have been considered as a conflict.\n"
+"Since the `-3` option was used the patch applied cleanly.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:169
+#, no-wrap
+msgid "If you're applying a number of patches from an mbox, you can also run the `am` command in interactive mode, which stops at each patch it finds and asks if you want to apply it:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:174
+#, no-wrap
+msgid ""
+"$ git am -3 -i mbox\n"
+"Commit Body is:\n"
+"--------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:176
+#, no-wrap
+msgid ""
+"See if this helps the gem\n"
+"--------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:178
+#, no-wrap
+msgid ""
+"Apply? [y]es/[n]o/[e]dit/[v]iew patch/[a]ccept all\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:181
+#, no-wrap
+msgid "This is nice if you have a number of patches saved, because you can view the patch first if you don't remember what it is, or not apply the patch if you've already done so.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:183
+#, no-wrap
+msgid "When all the patches for your topic are applied and committed into your branch, you can choose whether and how to integrate them into a longer-running branch.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:186
+#, no-wrap
+msgid ""
+"[[_checking_out_remotes]]\n"
+"==== Checking Out Remote Branches\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:189
+#, no-wrap
+msgid ""
+"(((branches, remote)))\n"
+"If your contribution came from a Git user who set up their own repository, pushed a number of changes into it, and then sent you the URL to the repository and the name of the remote branch the changes are in, you can add them as a remote and do merges locally.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:191
+#, no-wrap
+msgid "For instance, if Jessica sends you an email saying that she has a great new feature in the `ruby-client` branch of her repository, you can test it by adding the remote and checking out that branch locally:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:197
+#, no-wrap
+msgid ""
+"$ git remote add jessica git://github.com/jessica/myproject.git\n"
+"$ git fetch jessica\n"
+"$ git checkout -b rubyclient jessica/ruby-client\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:200
+#, no-wrap
+msgid "If she emails you again later with another branch containing another great feature, you could directly `fetch` and `checkout` because you already have the remote setup.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:205
+#, no-wrap
+msgid ""
+"This is most useful if you're working with a person consistently.\n"
+"If someone only has a single patch to contribute once in a while, then accepting it over email may be less time consuming than requiring everyone to run their own server and having to continually add and remove remotes to get a few patches.\n"
+"You're also unlikely to want to have hundreds of remotes, each for someone who contributes only a patch or two.\n"
+"However, scripts and hosted services may make this easier -- it depends largely on how you develop and how your contributors develop.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:208
+#, no-wrap
+msgid ""
+"The other advantage of this approach is that you get the history of the commits as well.\n"
+"Although you may have legitimate merge issues, you know where in your history their work is based; a proper three-way merge is the default rather than having to supply a `-3` and hope the patch was generated off a public commit to which you have access.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:211
+#, no-wrap
+msgid ""
+"If you aren't working with a person consistently but still want to pull from them in this way, you can provide the URL of the remote repository to the `git pull` command.\n"
+"This does a one-time pull and doesn't save the URL as a remote reference:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:218
+#, no-wrap
+msgid ""
+"$ git pull https://github.com/onetimeguy/project\n"
+"From https://github.com/onetimeguy/project\n"
+" * branch            HEAD       -> FETCH_HEAD\n"
+"Merge made by the 'recursive' strategy.\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:222
+#, no-wrap
+msgid ""
+"[[_what_is_introduced]]\n"
+"==== Determining What Is Introduced\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:227
+#, no-wrap
+msgid ""
+"(((branches, diffing)))\n"
+"Now you have a topic branch that contains contributed work.\n"
+"At this point, you can determine what you'd like to do with it.\n"
+"This section revisits a couple of commands so you can see how you can use them to review exactly what you'll be introducing if you merge this into your main branch.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:232
+#, no-wrap
+msgid ""
+"It's often helpful to get a review of all the commits that are in this branch but that aren't in your `master` branch.\n"
+"You can exclude commits in the `master` branch by adding the `--not` option before the branch name.\n"
+"This does the same thing as the `master..contrib` format that we used earlier.\n"
+"For example, if your contributor sends you two patches and you create a branch called `contrib` and applied those patches there, you can run this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:239
+#, no-wrap
+msgid ""
+"$ git log contrib --not master\n"
+"commit 5b6235bd297351589efc4d73316f0a68d484f118\n"
+"Author: Scott Chacon <schacon@gmail.com>\n"
+"Date:   Fri Oct 24 09:53:59 2008 -0700\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:241
+#, no-wrap
+msgid "    See if this helps the gem\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:245
+#, no-wrap
+msgid ""
+"commit 7482e0d16d04bea79d0dba8988cc78df655f16a0\n"
+"Author: Scott Chacon <schacon@gmail.com>\n"
+"Date:   Mon Oct 22 19:38:36 2008 -0700\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:247
+#, no-wrap
+msgid ""
+"    Update gemspec to hopefully work better\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:250
+#, no-wrap
+msgid "To see what changes each commit introduces, remember that you can pass the `-p` option to `git log` and it will append the diff introduced to each commit.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:253
+#, no-wrap
+msgid ""
+"To see a full diff of what would happen if you were to merge this topic branch with another branch, you may have to use a weird trick to get the correct results.\n"
+"You may think to run this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:257
+#, no-wrap
+msgid ""
+"$ git diff master\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:263
+#, no-wrap
+msgid ""
+"This command gives you a diff, but it may be misleading.\n"
+"If your `master` branch has moved forward since you created the topic branch from it, then you'll get seemingly strange results.\n"
+"This happens because Git directly compares the snapshots of the last commit of the topic branch you're on and the snapshot of the last commit on the `master` branch.\n"
+"For example, if you've added a line in a file on the `master` branch, a direct comparison of the snapshots will look like the topic branch is going to remove that line.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:265
+#, no-wrap
+msgid "If `master` is a direct ancestor of your topic branch, this isn't a problem; but if the two histories have diverged, the diff will look like you're adding all the new stuff in your topic branch and removing everything unique to the `master` branch.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:268
+#, no-wrap
+msgid ""
+"What you really want to see are the changes added to the topic branch -- the work you'll introduce if you merge this branch with `master`.\n"
+"You do that by having Git compare the last commit on your topic branch with the first common ancestor it has with the `master` branch.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:270
+#, no-wrap
+msgid "Technically, you can do that by explicitly figuring out the common ancestor and then running your diff on it:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:276
+#, no-wrap
+msgid ""
+"$ git merge-base contrib master\n"
+"36c7dba2c95e6bbb78dfa822519ecfec6e1ca649\n"
+"$ git diff 36c7db\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:279
+#, no-wrap
+msgid "or, more concisely:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:283
+#, no-wrap
+msgid ""
+"$ git diff $(git merge-base contrib master)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:287
+#, no-wrap
+msgid ""
+"However, neither of those is particularly convenient, so Git provides another shorthand for doing the same thing: the triple-dot syntax.\n"
+"In the context of the `git diff` command, you can put three periods after another branch to do a `diff` between the last commit of the branch you're on and its common ancestor with another branch:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:291
+#, no-wrap
+msgid ""
+"$ git diff master...contrib\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:295
+#, no-wrap
+msgid ""
+"This command shows you only the work your current topic branch has introduced since its common ancestor with `master`.\n"
+"That is a very useful syntax to remember.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:297
+#, no-wrap
+msgid "==== Integrating Contributed Work\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:302
+#, no-wrap
+msgid ""
+"(((integrating work)))\n"
+"When all the work in your topic branch is ready to be integrated into a more mainline branch, the question is how to do it.\n"
+"Furthermore, what overall workflow do you want to use to maintain your project?\n"
+"You have a number of choices, so we'll cover a few of them.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:304
+#, no-wrap
+msgid "===== Merging Workflows\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:309
+#, no-wrap
+msgid ""
+"(((workflows, merging)))\n"
+"One basic workflow is to simply merge all that work directly into your `master` branch.\n"
+"In this scenario, you have a `master` branch that contains basically stable code.\n"
+"When you have work in a topic branch that you think you've completed, or work that someone else has contributed and you've verified, you merge it into your master branch, delete that just-merged topic branch, and repeat.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:311
+#, no-wrap
+msgid "For instance, if we have a repository with work in two branches named `ruby_client` and `php_client` that looks like <<merwf_a>>, and we merge `ruby_client` followed by `php_client`, your history will end up looking like <<merwf_b>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:315
+#, no-wrap
+msgid ""
+"[[merwf_a]]\n"
+".History with several topic branches\n"
+"image::images/merging-workflows-1.png[History with several topic branches]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:319
+#, no-wrap
+msgid ""
+"[[merwf_b]]\n"
+".After a topic branch merge\n"
+"image::images/merging-workflows-2.png[After a topic branch merge]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:321
+#, no-wrap
+msgid "That is probably the simplest workflow, but it can possibly be problematic if you're dealing with larger or more stable projects where you want to be really careful about what you introduce.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:326
+#, no-wrap
+msgid ""
+"If you have a more important project, you might want to use a two-phase merge cycle.\n"
+"In this scenario, you have two long-running branches, `master` and `develop`, in which you determine that `master` is updated only when a very stable release is cut and all new code is integrated into the `develop` branch.\n"
+"You regularly push both of these branches to the public repository.\n"
+"Each time you have a new topic branch to merge in (<<merwf_c>>), you merge it into `develop` (<<merwf_d>>); then, when you tag a release, you fast-forward `master` to wherever the now-stable `develop` branch is (<<merwf_e>>).\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:330
+#, no-wrap
+msgid ""
+"[[merwf_c]]\n"
+".Before a topic branch merge\n"
+"image::images/merging-workflows-3.png[Before a topic branch merge]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:334
+#, no-wrap
+msgid ""
+"[[merwf_d]]\n"
+".After a topic branch merge\n"
+"image::images/merging-workflows-4.png[After a topic branch merge]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:338
+#, no-wrap
+msgid ""
+"[[merwf_e]]\n"
+".After a project release\n"
+"image::images/merging-workflows-5.png[After a topic branch release]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:342
+#, no-wrap
+msgid ""
+"This way, when people clone your project's repository, they can either check out `master` to build the latest stable version and keep up to date on that easily, or they can check out `develop`, which is the more cutting-edge content.\n"
+"You can also extend this concept by having an `integrate` branch where all the work is merged together.\n"
+"Then, when the codebase on that branch is stable and passes tests, you merge it into a `develop` branch; and when that has proven itself stable for a while, you fast-forward your `master` branch.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:344
+#, no-wrap
+msgid "===== Large-Merging Workflows\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:350
+#, no-wrap
+msgid ""
+"(((workflows, \"merging (large)\")))\n"
+"The Git project has four long-running branches: `master`, `next`, and `seen` (formerly 'pu' -- proposed updates) for new work, and `maint` for maintenance backports.\n"
+"When new work is introduced by contributors, it's collected into topic branches in the maintainer's repository in a manner similar to what we've described (see <<merwf_f>>).\n"
+"At this point, the topics are evaluated to determine whether they're safe and ready for consumption or whether they need more work.\n"
+"If they're safe, they're merged into `next`, and that branch is pushed up so everyone can try the topics integrated together.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:354
+#, no-wrap
+msgid ""
+"[[merwf_f]]\n"
+".Managing a complex series of parallel contributed topic branches\n"
+"image::images/large-merges-1.png[Managing a complex series of parallel contributed topic branches]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:359
+#, no-wrap
+msgid ""
+"If the topics still need work, they're merged into `seen` instead.\n"
+"When it's determined that they're totally stable, the topics are re-merged into `master`.\n"
+"The `next` and `seen` branches are then rebuilt from the `master`.\n"
+"This means `master` almost always moves forward, `next` is rebased occasionally, and `seen` is rebased even more often:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:362
+#, no-wrap
+msgid ""
+".Merging contributed topic branches into long-term integration branches\n"
+"image::images/large-merges-2.png[Merging contributed topic branches into long-term integration branches]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:368
+#, no-wrap
+msgid ""
+"When a topic branch has finally been merged into `master`, it's removed from the repository.\n"
+"The Git project also has a `maint` branch that is forked off from the last release to provide backported patches in case a maintenance release is required.\n"
+"Thus, when you clone the Git repository, you have four branches that you can check out to evaluate the project in different stages of development, depending on how cutting edge you want to be or how you want to contribute; and the maintainer has a structured workflow to help them vet new contributions.\n"
+"The Git project's workflow is specialized.\n"
+"To clearly understand this you could check out the https://github.com/git/git/blob/master/Documentation/howto/maintain-git.txt[Git Maintainer's guide].\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:371
+#, no-wrap
+msgid ""
+"[[_rebase_cherry_pick]]\n"
+"===== Rebasing and Cherry-Picking Workflows\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:376
+#, no-wrap
+msgid ""
+"(((workflows, rebasing and cherry-picking)))\n"
+"Other maintainers prefer to rebase or cherry-pick contributed work on top of their `master` branch, rather than merging it in, to keep a mostly linear history.\n"
+"When you have work in a topic branch and have determined that you want to integrate it, you move to that branch and run the rebase command to rebuild the changes on top of your current `master` (or `develop`, and so on) branch.\n"
+"If that works well, you can fast-forward your `master` branch, and you'll end up with a linear project history.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:383
+#, no-wrap
+msgid ""
+"(((git commands, cherry-pick)))\n"
+"The other way to move introduced work from one branch to another is to cherry-pick it.\n"
+"A cherry-pick in Git is like a rebase for a single commit.\n"
+"It takes the patch that was introduced in a commit and tries to reapply it on the branch you're currently on.\n"
+"This is useful if you have a number of commits on a topic branch and you want to integrate only one of them, or if you only have one commit on a topic branch and you'd prefer to cherry-pick it rather than run rebase.\n"
+"For example, suppose you have a project that looks like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:386
+#, no-wrap
+msgid ""
+".Example history before a cherry-pick\n"
+"image::images/rebasing-1.png[Example history before a cherry-pick]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:388
+#, no-wrap
+msgid "If you want to pull commit `e43a6` into your `master` branch, you can run:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:395
+#, no-wrap
+msgid ""
+"$ git cherry-pick e43a6\n"
+"Finished one cherry-pick.\n"
+"[master]: created a0a41a9: \"More friendly message when locking the index fails.\"\n"
+" 3 files changed, 17 insertions(+), 3 deletions(-)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:399
+#, no-wrap
+msgid ""
+"This pulls the same change introduced in `e43a6`, but you get a new commit SHA-1 value, because the date applied is different.\n"
+"Now your history looks like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:402
+#, no-wrap
+msgid ""
+".History after cherry-picking a commit on a topic branch\n"
+"image::images/rebasing-2.png[History after cherry-picking a commit on a topic branch]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:404
+#, no-wrap
+msgid "Now you can remove your topic branch and drop the commits you didn't want to pull in.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:406
+#, no-wrap
+msgid "===== Rerere\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:409
+#, no-wrap
+msgid ""
+"(((git commands, rerere)))(((rerere)))\n"
+"If you're doing lots of merging and rebasing, or you're maintaining a long-lived topic branch, Git has a feature called \"`rerere`\" that can help.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:412
+#, no-wrap
+msgid ""
+"Rerere stands for \"`reuse recorded resolution`\" -- it's a way of shortcutting manual conflict resolution.\n"
+"When rerere is enabled, Git will keep a set of pre- and post-images from successful merges, and if it notices that there's a conflict that looks exactly like one you've already fixed, it'll just use the fix from last time, without bothering you with it.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:415
+#, no-wrap
+msgid ""
+"This feature comes in two parts: a configuration setting and a command.\n"
+"The configuration setting is `rerere.enabled`, and it's handy enough to put in your global config:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:419
+#, no-wrap
+msgid ""
+"$ git config --global rerere.enabled true\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:422
+#, no-wrap
+msgid "Now, whenever you do a merge that resolves conflicts, the resolution will be recorded in the cache in case you need it in the future.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:427
+#, no-wrap
+msgid ""
+"If you need to, you can interact with the rerere cache using the `git rerere` command.\n"
+"When it's invoked alone, Git checks its database of resolutions and tries to find a match with any current merge conflicts and resolve them (although this is done automatically if `rerere.enabled` is set to `true`).\n"
+"There are also subcommands to see what will be recorded, to erase specific resolution from the cache, and to clear the entire cache.\n"
+"We will cover rerere in more detail in <<ch07-git-tools#ref_rerere>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:430
+#, no-wrap
+msgid ""
+"[[_tagging_releases]]\n"
+"==== Tagging Your Releases\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:435
+#, no-wrap
+msgid ""
+"(((tags)))(((tags, signing)))\n"
+"When you've decided to cut a release, you'll probably want to assign a tag so you can re-create that release at any point going forward.\n"
+"You can create a new tag as discussed in <<ch02-git-basics-chapter#ch02-git-basics-chapter>>.\n"
+"If you decide to sign the tag as the maintainer, the tagging may look something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:442
+#, no-wrap
+msgid ""
+"$ git tag -s v1.5 -m 'my signed 1.5 tag'\n"
+"You need a passphrase to unlock the secret key for\n"
+"user: \"Scott Chacon <schacon@gmail.com>\"\n"
+"1024-bit DSA key, ID F721C45A, created 2009-02-09\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:447
+#, no-wrap
+msgid ""
+"If you do sign your tags, you may have the problem of distributing the public PGP key used to sign your tags.\n"
+"The maintainer of the Git project has solved this issue by including their public key as a blob in the repository and then adding a tag that points directly to that content.\n"
+"To do this, you can figure out which key you want by running `gpg --list-keys`:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:452
+#, no-wrap
+msgid ""
+"$ gpg --list-keys\n"
+"/Users/schacon/.gnupg/pubring.gpg\n"
+"---------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:456
+#, no-wrap
+msgid ""
+"pub   1024D/F721C45A 2009-02-09 [expires: 2010-02-09]\n"
+"uid                  Scott Chacon <schacon@gmail.com>\n"
+"sub   2048g/45D02282 2009-02-09 [expires: 2010-02-09]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:459
+#, no-wrap
+msgid "Then, you can directly import the key into the Git database by exporting it and piping that through `git hash-object`, which writes a new blob with those contents into Git and gives you back the SHA-1 of the blob:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:464
+#, no-wrap
+msgid ""
+"$ gpg -a --export F721C45A | git hash-object -w --stdin\n"
+"659ef797d181633c87ec71ac3f9ba29fe5775b92\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:467
+#, no-wrap
+msgid "Now that you have the contents of your key in Git, you can create a tag that points directly to it by specifying the new SHA-1 value that the `hash-object` command gave you:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:471
+#, no-wrap
+msgid ""
+"$ git tag -a maintainer-pgp-pub 659ef797d181633c87ec71ac3f9ba29fe5775b92\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:475
+#, no-wrap
+msgid ""
+"If you run `git push --tags`, the `maintainer-pgp-pub` tag will be shared with everyone.\n"
+"If anyone wants to verify a tag, they can directly import your PGP key by pulling the blob directly out of the database and importing it into GPG:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:479
+#, no-wrap
+msgid ""
+"$ git show maintainer-pgp-pub | gpg --import\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:483
+#, no-wrap
+msgid ""
+"They can use that key to verify all your signed tags.\n"
+"Also, if you include instructions in the tag message, running `git show <tag>` will let you give the end user more specific instructions about tag verification.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:486
+#, no-wrap
+msgid ""
+"[[_build_number]]\n"
+"==== Generating a Build Number\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:490
+#, no-wrap
+msgid ""
+"(((build numbers)))(((git commands, describe)))\n"
+"Because Git doesn't have monotonically increasing numbers like 'v123' or the equivalent to go with each commit, if you want to have a human-readable name to go with a commit, you can run `git describe` on that commit.\n"
+"In response, Git generates a string consisting of the name of the most recent tag earlier than that commit, followed by the number of commits since that tag, followed finally by a partial SHA-1 value of the commit being described (prefixed with the letter \"g\" meaning Git):\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:495
+#, no-wrap
+msgid ""
+"$ git describe master\n"
+"v1.6.2-rc1-20-g8c5b85c\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:500
+#, no-wrap
+msgid ""
+"This way, you can export a snapshot or build and name it something understandable to people.\n"
+"In fact, if you build Git from source code cloned from the Git repository, `git --version` gives you something that looks like this.\n"
+"If you're describing a commit that you have directly tagged, it gives you simply the tag name.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:504
+#, no-wrap
+msgid ""
+"By default, the `git describe` command requires annotated tags (tags created with the `-a` or `-s` flag); if you want to take advantage of lightweight (non-annotated) tags as well, add the `--tags` option to the command.\n"
+"You can also use this string as the target of a `git checkout` or `git show` command, although it relies on the abbreviated SHA-1 value at the end, so it may not be valid forever.\n"
+"For instance, the Linux kernel recently jumped from 8 to 10 characters to ensure SHA-1 object uniqueness, so older `git describe` output names were invalidated.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:507
+#, no-wrap
+msgid ""
+"[[_preparing_release]]\n"
+"==== Preparing a Release\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:512
+#, no-wrap
+msgid ""
+"(((releasing)))(((git commands, archive)))\n"
+"Now you want to release a build.\n"
+"One of the things you'll want to do is create an archive of the latest snapshot of your code for those poor souls who don't use Git.\n"
+"The command to do this is `git archive`:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:518
+#, no-wrap
+msgid ""
+"$ git archive master --prefix='project/' | gzip > `git describe master`.tar.gz\n"
+"$ ls *.tar.gz\n"
+"v1.6.2-rc1-20-g8c5b85c.tar.gz\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:522
+#, no-wrap
+msgid ""
+"If someone opens that tarball, they get the latest snapshot of your project under a `project` directory.\n"
+"You can also create a zip archive in much the same way, but by passing the `--format=zip` option to `git archive`:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:526
+#, no-wrap
+msgid ""
+"$ git archive master --prefix='project/' --format=zip > `git describe master`.zip\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:529
+#, no-wrap
+msgid "You now have a nice tarball and a zip archive of your project release that you can upload to your website or email to people.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:532
+#, no-wrap
+msgid ""
+"[[_the_shortlog]]\n"
+"==== The Shortlog\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:537
+#, no-wrap
+msgid ""
+"(((git commands, shortlog)))\n"
+"It's time to email your mailing list of people who want to know what's happening in your project.\n"
+"A nice way of quickly getting a sort of changelog of what has been added to your project since your last release or email is to use the `git shortlog` command.\n"
+"It summarizes all the commits in the range you give it; for example, the following gives you a summary of all the commits since your last release, if your last release was named v1.0.1:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:548
+#, no-wrap
+msgid ""
+"$ git shortlog --no-merges master --not v1.0.1\n"
+"Chris Wanstrath (6):\n"
+"      Add support for annotated tags to Grit::Tag\n"
+"      Add packed-refs annotated tag support.\n"
+"      Add Grit::Commit#to_patch\n"
+"      Update version and History.txt\n"
+"      Remove stray `puts`\n"
+"      Make ls_tree ignore nils\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:554
+#, no-wrap
+msgid ""
+"Tom Preston-Werner (4):\n"
+"      fix dates in history\n"
+"      dynamic version method\n"
+"      Version bump to 1.0.2\n"
+"      Regenerated gemspec for version 1.0.2\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/05-distributed-git/sections/maintaining.asc:556
+#, no-wrap
+msgid "You get a clean summary of all the commits since v1.0.1, grouped by author, that you can email to your list.\n"
+msgstr ""

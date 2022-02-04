@@ -1,0 +1,3893 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2022-02-04 19:16+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: book/06-github/sections/1-setting-up-account.asc:2
+#, no-wrap
+msgid "=== Account Setup and Configuration\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/1-setting-up-account.asc:6
+#, no-wrap
+msgid ""
+"(((GitHub, user accounts)))\n"
+"The first thing you need to do is set up a free user account.\n"
+"Simply visit https://github.com[], choose a user name that isn't already "
+"taken, provide an email address and a password, and click the big green "
+"\"`Sign up for GitHub`\" button.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/1-setting-up-account.asc:9
+#, no-wrap
+msgid ""
+".The GitHub sign-up form\n"
+"image::images/signup.png[The GitHub sign-up form]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/1-setting-up-account.asc:13
+#, no-wrap
+msgid ""
+"The next thing you'll see is the pricing page for upgraded plans, but it's "
+"safe to ignore this for now.\n"
+"GitHub will send you an email to verify the address you provided.\n"
+"Go ahead and do this; it's pretty important (as we'll see later).\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/1-setting-up-account.asc:15
+#: book/06-github/sections/1-setting-up-account.asc:46
+#: book/06-github/sections/2-contributing.asc:12
+#: book/06-github/sections/2-contributing.asc:143
+#: book/06-github/sections/2-contributing.asc:471
+#: book/06-github/sections/3-maintaining.asc:34
+#, no-wrap
+msgid ""
+"[NOTE]\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/1-setting-up-account.asc:17
+#, no-wrap
+msgid ""
+"GitHub provides almost all of its functionality with free accounts, except "
+"some advanced features.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/1-setting-up-account.asc:20
+#, no-wrap
+msgid ""
+"GitHub's paid plans include advanced tools and features as well as increased "
+"limits for free services, but we won't be covering those in this book.\n"
+"To get more information about available plans and their comparison, visit "
+"https://github.com/pricing[].\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/1-setting-up-account.asc:24
+#, no-wrap
+msgid ""
+"Clicking the Octocat logo at the top-left of the screen will take you to "
+"your dashboard page.\n"
+"You're now ready to use GitHub.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/1-setting-up-account.asc:26
+#, no-wrap
+msgid "==== SSH Access\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/1-setting-up-account.asc:30
+#, no-wrap
+msgid ""
+"(((SSH keys, with GitHub)))\n"
+"As of right now, you're fully able to connect with Git repositories using "
+"the `https://` protocol, authenticating with the username and password you "
+"just set up.\n"
+"However, to simply clone public projects, you don't even need to sign up - "
+"the account we just created comes into play when we fork projects and push "
+"to our forks a bit later.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/1-setting-up-account.asc:34
+#, no-wrap
+msgid ""
+"If you'd like to use SSH remotes, you'll need to configure a public key.\n"
+"If you don't already have one, see "
+"<<ch04-git-on-the-server#_generate_ssh_key>>.\n"
+"Open up your account settings using the link at the top-right of the "
+"window:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/1-setting-up-account.asc:37
+#, no-wrap
+msgid ""
+".The \"`Account settings`\" link\n"
+"image::images/account-settings.png[The âAccount settingsâ link]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/1-setting-up-account.asc:39
+#, no-wrap
+msgid "Then select the \"`SSH keys`\" section along the left-hand side.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/1-setting-up-account.asc:42
+#, no-wrap
+msgid ""
+".The \"`SSH keys`\" link.\n"
+"image::images/ssh-keys.png[The âSSH keysâ link]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/1-setting-up-account.asc:44
+#, no-wrap
+msgid ""
+"From there, click the \"`Add an SSH key`\" button, give your key a name, "
+"paste the contents of your `~/.ssh/id_rsa.pub` (or whatever you named it) "
+"public-key file into the text area, and click \"`Add key`\".\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/1-setting-up-account.asc:49
+#, no-wrap
+msgid ""
+"Be sure to name your SSH key something you can remember.\n"
+"You can name each of your keys (e.g. \"My Laptop\" or \"Work Account\") so "
+"that if you need to revoke a key later, you can easily tell which one you're "
+"looking for.\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/1-setting-up-account.asc:53
+#, no-wrap
+msgid ""
+"[[_personal_avatar]]\n"
+"==== Your Avatar\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/1-setting-up-account.asc:56
+#, no-wrap
+msgid ""
+"Next, if you wish, you can replace the avatar that is generated for you with "
+"an image of your choosing.\n"
+"First go to the \"`Profile`\" tab (above the SSH Keys tab) and click "
+"\"`Upload new picture`\".\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/1-setting-up-account.asc:59
+#, no-wrap
+msgid ""
+".The \"`Profile`\" link\n"
+"image::images/your-profile.png[The âProfileâ link]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/1-setting-up-account.asc:61
+#, no-wrap
+msgid ""
+"We'll choose a copy of the Git logo that is on our hard drive and then we "
+"get a chance to crop it.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/1-setting-up-account.asc:64
+#, no-wrap
+msgid ""
+".Crop your avatar\n"
+"image::images/avatar-crop.png[Crop your uploaded avatar]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/1-setting-up-account.asc:66
+#, no-wrap
+msgid ""
+"Now anywhere you interact on the site, people will see your avatar next to "
+"your username.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/1-setting-up-account.asc:68
+#, no-wrap
+msgid ""
+"If you happen to have uploaded an avatar to the popular Gravatar service "
+"(often used for Wordpress accounts), that avatar will be used by default and "
+"you don't need to do this step.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/1-setting-up-account.asc:70
+#, no-wrap
+msgid "==== Your Email Addresses\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/1-setting-up-account.asc:73
+#, no-wrap
+msgid ""
+"The way that GitHub maps your Git commits to your user is by email "
+"address.\n"
+"If you use multiple email addresses in your commits and you want GitHub to "
+"link them up properly, you need to add all the email addresses you have used "
+"to the Emails section of the admin section.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/1-setting-up-account.asc:77
+#, no-wrap
+msgid ""
+"[[_add_email_addresses]]\n"
+".Add email addresses\n"
+"image::images/email-settings.png[Add all your email addresses]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/1-setting-up-account.asc:83
+#, no-wrap
+msgid ""
+"In <<_add_email_addresses>> we can see some of the different states that are "
+"possible.\n"
+"The top address is verified and set as the primary address, meaning that is "
+"where you'll get any notifications and receipts.\n"
+"The second address is verified and so can be set as the primary if you wish "
+"to switch them.\n"
+"The final address is unverified, meaning that you can't make it your primary "
+"address.\n"
+"If GitHub sees any of these in commit messages in any repository on the "
+"site, it will be linked to your user now.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/1-setting-up-account.asc:85
+#, no-wrap
+msgid "==== Two Factor Authentication\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/1-setting-up-account.asc:89
+#, no-wrap
+msgid ""
+"Finally, for extra security, you should definitely set up Two-factor "
+"Authentication or \"`2FA`\".\n"
+"Two-factor Authentication is an authentication mechanism that is becoming "
+"more and more popular recently to mitigate the risk of your account being "
+"compromised if your password is stolen somehow.\n"
+"Turning it on will make GitHub ask you for two different methods of "
+"authentication, so that if one of them is compromised, an attacker will not "
+"be able to access your account.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/1-setting-up-account.asc:91
+#, no-wrap
+msgid ""
+"You can find the Two-factor Authentication setup under the Security tab of "
+"your Account settings.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/1-setting-up-account.asc:94
+#, no-wrap
+msgid ""
+".2FA in the Security Tab\n"
+"image::images/2fa-1.png[2FA in the Security Tab]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/1-setting-up-account.asc:96
+#, no-wrap
+msgid ""
+"If you click on the \"`Set up two-factor authentication`\" button, it will "
+"take you to a configuration page where you can choose to use a phone app to "
+"generate your secondary code (a \"`time based one-time password`\"), or you "
+"can have GitHub send you a code via SMS each time you need to log in.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/1-setting-up-account.asc:97
+#, no-wrap
+msgid ""
+"After you choose which method you prefer and follow the instructions for "
+"setting up 2FA, your account will then be a little more secure and you will "
+"have to provide a code in addition to your password whenever you log into "
+"GitHub.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:2
+#, no-wrap
+msgid "=== Contributing to a Project\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:4
+#, no-wrap
+msgid ""
+"Now that our account is set up, let's walk through some details that could "
+"be useful in helping you contribute to an existing project.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:6
+#, no-wrap
+msgid "==== Forking Projects\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:10
+#, no-wrap
+msgid ""
+"(((forking)))\n"
+"If you want to contribute to an existing project to which you don't have "
+"push access, you can \"`fork`\" the project.\n"
+"When you \"`fork`\" a project, GitHub will make a copy of the project that "
+"is entirely yours; it lives in your namespace, and you can push to it.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:15
+#, no-wrap
+msgid ""
+"Historically, the term \"`fork`\" has been somewhat negative in context, "
+"meaning that someone took an open source project in a different direction, "
+"sometimes creating a competing project and splitting the contributors.\n"
+"In GitHub, a \"`fork`\" is simply the same project in your own namespace, "
+"allowing you to make changes to a project publicly as a way to contribute in "
+"a more open manner.\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:20
+#, no-wrap
+msgid ""
+"This way, projects don't have to worry about adding users as collaborators "
+"to give them push access.\n"
+"People can fork a project, push to it, and contribute their changes back to "
+"the original repository by creating what's called a Pull Request, which "
+"we'll cover next.\n"
+"This opens up a discussion thread with code review, and the owner and the "
+"contributor can then communicate about the change until the owner is happy "
+"with it, at which point the owner can merge it in.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:22
+#, no-wrap
+msgid ""
+"To fork a project, visit the project page and click the \"`Fork`\" button at "
+"the top-right of the page.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:25
+#, no-wrap
+msgid ""
+".The \"`Fork`\" button\n"
+"image::images/forkbutton.png[The âForkâ button]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:27
+#, no-wrap
+msgid ""
+"After a few seconds, you'll be taken to your new project page, with your own "
+"writeable copy of the code.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:31
+#, no-wrap
+msgid ""
+"[[ch06-github_flow]]\n"
+"==== The GitHub Flow\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:36
+#, no-wrap
+msgid ""
+"(((GitHub, Flow)))\n"
+"GitHub is designed around a particular collaboration workflow, centered on "
+"Pull Requests.\n"
+"This flow works whether you're collaborating with a tightly-knit team in a "
+"single shared repository, or a globally-distributed company or network of "
+"strangers contributing to a project through dozens of forks.\n"
+"It is centered on the <<ch03-git-branching#_topic_branch>> workflow covered "
+"in <<ch03-git-branching#ch03-git-branching>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:38
+#, no-wrap
+msgid "Here's how it generally works:\n"
+msgstr ""
+
+#. type: Bullet: '1. '
+#: book/06-github/sections/2-contributing.asc:47
+#, markdown-text, no-wrap
+msgid "Fork the project.\n"
+msgstr ""
+
+#. type: Bullet: '2. '
+#: book/06-github/sections/2-contributing.asc:47
+#, markdown-text, no-wrap
+msgid "Create a topic branch from `master`.\n"
+msgstr ""
+
+#. type: Bullet: '3. '
+#: book/06-github/sections/2-contributing.asc:47
+#, markdown-text, no-wrap
+msgid "Make some commits to improve the project.\n"
+msgstr ""
+
+#. type: Bullet: '4. '
+#: book/06-github/sections/2-contributing.asc:47
+#, markdown-text, no-wrap
+msgid "Push this branch to your GitHub project.\n"
+msgstr ""
+
+#. type: Bullet: '5. '
+#: book/06-github/sections/2-contributing.asc:47
+#, markdown-text, no-wrap
+msgid "Open a Pull Request on GitHub.\n"
+msgstr ""
+
+#. type: Bullet: '6. '
+#: book/06-github/sections/2-contributing.asc:47
+#, markdown-text, no-wrap
+msgid "Discuss, and optionally continue committing.\n"
+msgstr ""
+
+#. type: Bullet: '7. '
+#: book/06-github/sections/2-contributing.asc:47
+#, markdown-text, no-wrap
+msgid "The project owner merges or closes the Pull Request.\n"
+msgstr ""
+
+#. type: Bullet: '8. '
+#: book/06-github/sections/2-contributing.asc:47
+#, markdown-text, no-wrap
+msgid "Sync the updated master back to your fork.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:49
+#, no-wrap
+msgid ""
+"This is basically the Integration Manager workflow covered in "
+"<<ch05-distributed-git#_integration_manager>>, but instead of using email to "
+"communicate and review changes, teams use GitHub's web based tools.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:51
+#, no-wrap
+msgid ""
+"Let's walk through an example of proposing a change to an open source "
+"project hosted on GitHub using this flow.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:53
+#, no-wrap
+msgid ""
+"[TIP]\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:57
+#, no-wrap
+msgid ""
+"You can use the official *GitHub CLI* tool instead of the GitHub web "
+"interface for most things.\n"
+"The tool can be used on Windows, MacOS, and Linux systems.\n"
+"Go to the https://cli.github.com/[GitHub CLI homepage] for installation "
+"instructions and the manual.\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:60
+#, no-wrap
+msgid "===== Creating a Pull Request\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:62
+#, no-wrap
+msgid ""
+"Tony is looking for code to run on his Arduino programmable microcontroller "
+"and has found a great program file on GitHub at "
+"https://github.com/schacon/blink[].\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:65
+#, no-wrap
+msgid ""
+".The project we want to contribute to\n"
+"image::images/blink-01-start.png[The project we want to contribute to]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:69
+#, no-wrap
+msgid ""
+"The only problem is that the blinking rate is too fast.\n"
+"We think it's much nicer to wait 3 seconds instead of 1 in between each "
+"state change.\n"
+"So let's improve the program and submit it back to the project as a proposed "
+"change.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:73
+#, no-wrap
+msgid ""
+"First, we click the 'Fork' button as mentioned earlier to get our own copy "
+"of the project.\n"
+"Our user name here is \"`tonychacon`\" so our copy of this project is at "
+"`https://github.com/tonychacon/blink` and that's where we can edit it.\n"
+"We will clone it locally, create a topic branch, make the code change and "
+"finally push that change back up to GitHub.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:75
+#: book/06-github/sections/2-contributing.asc:248
+#: book/06-github/sections/2-contributing.asc:508
+#: book/06-github/sections/2-contributing.asc:522
+#: book/06-github/sections/2-contributing.asc:538
+#: book/06-github/sections/3-maintaining.asc:91
+#: book/06-github/sections/3-maintaining.asc:134
+#: book/06-github/sections/3-maintaining.asc:158
+#: book/06-github/sections/3-maintaining.asc:197
+#: book/06-github/sections/3-maintaining.asc:210
+#, no-wrap
+msgid ""
+"[source,console]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:78
+#, no-wrap
+msgid ""
+"$ git clone https://github.com/tonychacon/blink <1>\n"
+"Cloning into 'blink'...\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:82
+#, no-wrap
+msgid ""
+"$ cd blink\n"
+"$ git checkout -b slow-blink <2>\n"
+"Switched to a new branch 'slow-blink'\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:86
+#, no-wrap
+msgid ""
+"$ sed -i '' 's/1000/3000/' blink.ino (macOS) <3>\n"
+"# If you're on a Linux system, do this instead:\n"
+"# $ sed -i 's/1000/3000/' blink.ino <3>\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:100
+#, no-wrap
+msgid ""
+"$ git diff --word-diff <4>\n"
+"diff --git a/blink.ino b/blink.ino\n"
+"index 15b9911..a6cc5a5 100644\n"
+"--- a/blink.ino\n"
+"+++ b/blink.ino\n"
+"@@ -18,7 +18,7 @@ void setup() {\n"
+"// the loop routine runs over and over again forever:\n"
+"void loop() {\n"
+"  digitalWrite(led, HIGH);   // turn the LED on (HIGH is the voltage "
+"level)\n"
+"  [-delay(1000);-]{+delay(3000);+}               // wait for a second\n"
+"  digitalWrite(led, LOW);    // turn the LED off by making the voltage LOW\n"
+"  [-delay(1000);-]{+delay(3000);+}               // wait for a second\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:104
+#, no-wrap
+msgid ""
+"$ git commit -a -m 'Change delay to 3 seconds' <5>\n"
+"[slow-blink 5ca509d] Change delay to 3 seconds\n"
+" 1 file changed, 2 insertions(+), 2 deletions(-)\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:115
+#, no-wrap
+msgid ""
+"$ git push origin slow-blink <6>\n"
+"Username for 'https://github.com': tonychacon\n"
+"Password for 'https://tonychacon@github.com':\n"
+"Counting objects: 5, done.\n"
+"Delta compression using up to 8 threads.\n"
+"Compressing objects: 100% (3/3), done.\n"
+"Writing objects: 100% (3/3), 340 bytes | 0 bytes/s, done.\n"
+"Total 3 (delta 1), reused 0 (delta 0)\n"
+"To https://github.com/tonychacon/blink\n"
+" * [new branch]      slow-blink -> slow-blink\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:123
+#, no-wrap
+msgid ""
+"<1> Clone our fork of the project locally.\n"
+"<2> Create a descriptive topic branch.\n"
+"<3> Make our change to the code.\n"
+"<4> Check that the change is good.\n"
+"<5> Commit our change to the topic branch.\n"
+"<6> Push our new topic branch back up to our GitHub fork.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:125
+#, no-wrap
+msgid ""
+"Now if we go back to our fork on GitHub, we can see that GitHub noticed that "
+"we pushed a new topic branch up and presents us with a big green button to "
+"check out our changes and open a Pull Request to the original project.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:127
+#, no-wrap
+msgid ""
+"You can alternatively go to the \"`Branches`\" page at "
+"`\\https://github.com/<user>/<project>/branches` to locate your branch and "
+"open a new Pull Request from there.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:130
+#, no-wrap
+msgid ""
+".Pull Request button\n"
+"image::images/blink-02-pr.png[Pull Request button]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:134
+#, no-wrap
+msgid ""
+"(((GitHub, pull requests)))\n"
+"If we click that green button, we'll see a screen that asks us to give our "
+"Pull Request a title and description.\n"
+"It is almost always worthwhile to put some effort into this, since a good "
+"description helps the owner of the original project determine what you were "
+"trying to do, whether your proposed changes are correct, and whether "
+"accepting the changes would improve the original project.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:136
+#, no-wrap
+msgid ""
+"We also see a list of the commits in our topic branch that are \"`ahead`\" "
+"of the `master` branch (in this case, just the one) and a unified diff of "
+"all the changes that will be made should this branch get merged by the "
+"project owner.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:139
+#, no-wrap
+msgid ""
+".Pull Request creation page\n"
+"image::images/blink-03-pull-request-open.png[Pull Request creation]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:141
+#, no-wrap
+msgid ""
+"When you hit the 'Create pull request' button on this screen, the owner of "
+"the project you forked will get a notification that someone is suggesting a "
+"change and will link to a page that has all of this information on it.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:146
+#, no-wrap
+msgid ""
+"Though Pull Requests are used commonly for public projects like this when "
+"the contributor has a complete change ready to be made, it's also often used "
+"in internal projects _at the beginning_ of the development cycle.\n"
+"Since you can keep pushing to the topic branch even *after* the Pull Request "
+"is opened, it's often opened early and used as a way to iterate on work as a "
+"team within a context, rather than opened at the very end of the process.\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:149
+#, no-wrap
+msgid "===== Iterating on a Pull Request\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:152
+#, no-wrap
+msgid ""
+"At this point, the project owner can look at the suggested change and merge "
+"it, reject it or comment on it.\n"
+"Let's say that he likes the idea, but would prefer a slightly longer time "
+"for the light to be off than on.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:155
+#, no-wrap
+msgid ""
+"Where this conversation may take place over email in the workflows presented "
+"in <<ch05-distributed-git#ch05-distributed-git>>, on GitHub this happens "
+"online.\n"
+"The project owner can review the unified diff and leave a comment by "
+"clicking on any of the lines.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:158
+#, no-wrap
+msgid ""
+".Comment on a specific line of code in a Pull Request\n"
+"image::images/blink-04-pr-comment.png[PR line comment]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:161
+#, no-wrap
+msgid ""
+"Once the maintainer makes this comment, the person who opened the Pull "
+"Request (and indeed, anyone else watching the repository) will get a "
+"notification.\n"
+"We'll go over customizing this later, but if he had email notifications "
+"turned on, Tony would get an email like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:165
+#, no-wrap
+msgid ""
+"[[_email_notification]]\n"
+".Comments sent as email notifications\n"
+"image::images/blink-04-email.png[Email notification]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:169
+#, no-wrap
+msgid ""
+"Anyone can also leave general comments on the Pull Request.\n"
+"In <<_pr_discussion>> we can see an example of the project owner both "
+"commenting on a line of code and then leaving a general comment in the "
+"discussion section.\n"
+"You can see that the code comments are brought into the conversation as "
+"well.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:173
+#, no-wrap
+msgid ""
+"[[_pr_discussion]]\n"
+".Pull Request discussion page\n"
+"image::images/blink-05-general-comment.png[PR discussion page]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:178
+#, no-wrap
+msgid ""
+"Now the contributor can see what they need to do in order to get their "
+"change accepted.\n"
+"Luckily this is very straightforward.\n"
+"Where over email you may have to re-roll your series and resubmit it to the "
+"mailing list, with GitHub you simply commit to the topic branch again and "
+"push, which will automatically update the Pull Request.\n"
+"In <<_pr_final>> you can also see that the old code comment has been "
+"collapsed in the updated Pull Request, since it was made on a line that has "
+"since been changed.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:180
+#, no-wrap
+msgid ""
+"Adding commits to an existing Pull Request doesn't trigger a notification, "
+"so once Tony has pushed his corrections he decides to leave a comment to "
+"inform the project owner that he made the requested change.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:184
+#, no-wrap
+msgid ""
+"[[_pr_final]]\n"
+".Pull Request final\n"
+"image::images/blink-06-final.png[PR final]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:188
+#, no-wrap
+msgid ""
+"An interesting thing to notice is that if you click on the \"`Files "
+"Changed`\" tab on this Pull Request, you'll get the \"`unified`\" diff -- "
+"that is, the total aggregate difference that would be introduced to your "
+"main branch if this topic branch was merged in.\n"
+"In `git diff` terms, it basically automatically shows you `git diff "
+"master...<branch>` for the branch this Pull Request is based on.\n"
+"See <<ch05-distributed-git#_what_is_introduced>> for more about this type of "
+"diff.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:192
+#, no-wrap
+msgid ""
+"The other thing you'll notice is that GitHub checks to see if the Pull "
+"Request merges cleanly and provides a button to do the merge for you on the "
+"server.\n"
+"This button only shows up if you have write access to the repository and a "
+"trivial merge is possible.\n"
+"If you click it GitHub will perform a \"`non-fast-forward`\" merge, meaning "
+"that even if the merge *could* be a fast-forward, it will still create a "
+"merge commit.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:195
+#, no-wrap
+msgid ""
+"If you would prefer, you can simply pull the branch down and merge it "
+"locally.\n"
+"If you merge this branch into the `master` branch and push it to GitHub, the "
+"Pull Request will automatically be closed.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:198
+#, no-wrap
+msgid ""
+"This is the basic workflow that most GitHub projects use.\n"
+"Topic branches are created, Pull Requests are opened on them, a discussion "
+"ensues, possibly more work is done on the branch and eventually the request "
+"is either closed or merged.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:201
+#, no-wrap
+msgid ""
+"[NOTE]\n"
+".Not Only Forks\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:205
+#, no-wrap
+msgid ""
+"It's important to note that you can also open a Pull Request between two "
+"branches in the same repository.\n"
+"If you're working on a feature with someone and you both have write access "
+"to the project, you can push a topic branch to the repository and open a "
+"Pull Request on it to the `master` branch of that same project to initiate "
+"the code review and discussion process.\n"
+"No forking necessary.\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:208
+#, no-wrap
+msgid "==== Advanced Pull Requests\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:210
+#, no-wrap
+msgid ""
+"Now that we've covered the basics of contributing to a project on GitHub, "
+"let's cover a few interesting tips and tricks about Pull Requests so you can "
+"be more effective in using them.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:212
+#, no-wrap
+msgid "===== Pull Requests as Patches\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:215
+#, no-wrap
+msgid ""
+"It's important to understand that many projects don't really think of Pull "
+"Requests as queues of perfect patches that should apply cleanly in order, as "
+"most mailing list-based projects think of patch series contributions.\n"
+"Most GitHub projects think about Pull Request branches as iterative "
+"conversations around a proposed change, culminating in a unified diff that "
+"is applied by merging.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:219
+#, no-wrap
+msgid ""
+"This is an important distinction, because generally the change is suggested "
+"before the code is thought to be perfect, which is far more rare with "
+"mailing list based patch series contributions.\n"
+"This enables an earlier conversation with the maintainers so that arriving "
+"at the proper solution is more of a community effort.\n"
+"When code is proposed with a Pull Request and the maintainers or community "
+"suggest a change, the patch series is generally not re-rolled, but instead "
+"the difference is pushed as a new commit to the branch, moving the "
+"conversation forward with the context of the previous work intact.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:224
+#, no-wrap
+msgid ""
+"For instance, if you go back and look again at <<_pr_final>>, you'll notice "
+"that the contributor did not rebase his commit and send another Pull "
+"Request.\n"
+"Instead they added new commits and pushed them to the existing branch.\n"
+"This way if you go back and look at this Pull Request in the future, you can "
+"easily find all of the context of why decisions were made.\n"
+"Pushing the \"`Merge`\" button on the site purposefully creates a merge "
+"commit that references the Pull Request so that it's easy to go back and "
+"research the original conversation if necessary.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:226
+#, no-wrap
+msgid "===== Keeping up with Upstream\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:229
+#, no-wrap
+msgid ""
+"If your Pull Request becomes out of date or otherwise doesn't merge cleanly, "
+"you will want to fix it so the maintainer can easily merge it.\n"
+"GitHub will test this for you and let you know at the bottom of every Pull "
+"Request if the merge is trivial or not.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:233
+#, no-wrap
+msgid ""
+"[[_pr_fail]]\n"
+".Pull Request does not merge cleanly\n"
+"image::images/pr-01-fail.png[PR merge failure]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:235
+#, no-wrap
+msgid ""
+"If you see something like <<_pr_fail>>, you'll want to fix your branch so "
+"that it turns green and the maintainer doesn't have to do extra work.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:238
+#, no-wrap
+msgid ""
+"You have two main options in order to do this.\n"
+"You can either rebase your branch on top of whatever the target branch is "
+"(normally the `master` branch of the repository you forked), or you can "
+"merge the target branch into your branch.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:241
+#, no-wrap
+msgid ""
+"Most developers on GitHub will choose to do the latter, for the same reasons "
+"we just went over in the previous section.\n"
+"What matters is the history and the final merge, so rebasing isn't getting "
+"you much other than a slightly cleaner history and in return is *far* more "
+"difficult and error prone.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:243
+#, no-wrap
+msgid ""
+"If you want to merge in the target branch to make your Pull Request "
+"mergeable, you would add the original repository as a new remote, fetch from "
+"it, merge the main branch of that repository into your topic branch, fix any "
+"issues and finally push it back up to the same branch you opened the Pull "
+"Request on.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:246
+#, no-wrap
+msgid ""
+"For example, let's say that in the \"`tonychacon`\" example we were using "
+"before, the original author made a change that would create a conflict in "
+"the Pull Request.\n"
+"Let's go through those steps.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:250
+#, no-wrap
+msgid "$ git remote add upstream https://github.com/schacon/blink <1>\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:258
+#, no-wrap
+msgid ""
+"$ git fetch upstream <2>\n"
+"remote: Counting objects: 3, done.\n"
+"remote: Compressing objects: 100% (3/3), done.\n"
+"Unpacking objects: 100% (3/3), done.\n"
+"remote: Total 3 (delta 0), reused 0 (delta 0)\n"
+"From https://github.com/schacon/blink\n"
+" * [new branch]      master     -> upstream/master\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:263
+#, no-wrap
+msgid ""
+"$ git merge upstream/master <3>\n"
+"Auto-merging blink.ino\n"
+"CONFLICT (content): Merge conflict in blink.ino\n"
+"Automatic merge failed; fix conflicts and then commit the result.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:269
+#, no-wrap
+msgid ""
+"$ vim blink.ino <4>\n"
+"$ git add blink.ino\n"
+"$ git commit\n"
+"[slow-blink 3c8d735] Merge remote-tracking branch 'upstream/master' \\\n"
+"    into slower-blink\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:278
+#, no-wrap
+msgid ""
+"$ git push origin slow-blink <5>\n"
+"Counting objects: 6, done.\n"
+"Delta compression using up to 8 threads.\n"
+"Compressing objects: 100% (6/6), done.\n"
+"Writing objects: 100% (6/6), 682 bytes | 0 bytes/s, done.\n"
+"Total 6 (delta 2), reused 0 (delta 0)\n"
+"To https://github.com/tonychacon/blink\n"
+"   ef4725c..3c8d735  slower-blink -> slow-blink\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:285
+#, no-wrap
+msgid ""
+"<1> Add the original repository as a remote named `upstream`.\n"
+"<2> Fetch the newest work from that remote.\n"
+"<3> Merge the main branch of that repository into your topic branch.\n"
+"<4> Fix the conflict that occurred.\n"
+"<5> Push back up to the same topic branch.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:287
+#, no-wrap
+msgid ""
+"Once you do that, the Pull Request will be automatically updated and "
+"re-checked to see if it merges cleanly.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:291
+#, no-wrap
+msgid ""
+"[[_pr_merge_fix]]\n"
+".Pull Request now merges cleanly\n"
+"image::images/pr-02-merge-fix.png[PR fixed]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:294
+#, no-wrap
+msgid ""
+"One of the great things about Git is that you can do that continuously.\n"
+"If you have a very long-running project, you can easily merge from the "
+"target branch over and over again and only have to deal with conflicts that "
+"have arisen since the last time that you merged, making the process very "
+"manageable.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:298
+#, no-wrap
+msgid ""
+"If you absolutely wish to rebase the branch to clean it up, you can "
+"certainly do so, but it is highly encouraged to not force push over the "
+"branch that the Pull Request is already opened on.\n"
+"If other people have pulled it down and done more work on it, you run into "
+"all of the issues outlined in <<ch03-git-branching#_rebase_peril>>.\n"
+"Instead, push the rebased branch to a new branch on GitHub and open a brand "
+"new Pull Request referencing the old one, then close the original.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:300
+#, no-wrap
+msgid "===== References\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:303
+#, no-wrap
+msgid ""
+"Your next question may be \"`How do I reference the old Pull Request?`\".\n"
+"It turns out there are many, many ways to reference other things almost "
+"anywhere you can write in GitHub.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:309
+#, no-wrap
+msgid ""
+"Let's start with how to cross-reference another Pull Request or an Issue.\n"
+"All Pull Requests and Issues are assigned numbers and they are unique within "
+"the project.\n"
+"For example, you can't have Pull Request +#3+ _and_ Issue +#3+.\n"
+"If you want to reference any Pull Request or Issue from any other one, you "
+"can simply put `+#<num>+` in any comment or description.\n"
+"You can also be more specific if the Issue or Pull request lives somewhere "
+"else; write `username#<num>` if you're referring to an Issue or Pull Request "
+"in a fork of the repository you're in, or `username/repo#<num>` to reference "
+"something in another repository.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:314
+#, no-wrap
+msgid ""
+"Let's look at an example.\n"
+"Say we rebased the branch in the previous example, created a new pull "
+"request for it, and now we want to reference the old pull request from the "
+"new one.\n"
+"We also want to reference an issue in the fork of the repository and an "
+"issue in a completely different project.\n"
+"We can fill out the description just like <<_pr_references>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:318
+#, no-wrap
+msgid ""
+"[[_pr_references]]\n"
+".Cross references in a Pull Request\n"
+"image::images/mentions-01-syntax.png[PR references]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:320
+#, no-wrap
+msgid ""
+"When we submit this pull request, we'll see all of that rendered like "
+"<<_pr_references_render>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:324
+#, no-wrap
+msgid ""
+"[[_pr_references_render]]\n"
+".Cross references rendered in a Pull Request\n"
+"image::images/mentions-02-render.png[PR references rendered]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:326
+#, no-wrap
+msgid ""
+"Notice that the full GitHub URL we put in there was shortened to just the "
+"information needed.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:330
+#, no-wrap
+msgid ""
+"Now if Tony goes back and closes out the original Pull Request, we can see "
+"that by mentioning it in the new one, GitHub has automatically created a "
+"trackback event in the Pull Request timeline.\n"
+"This means that anyone who visits this Pull Request and sees that it is "
+"closed can easily link back to the one that superseded it.\n"
+"The link will look something like <<_pr_closed>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:334
+#, no-wrap
+msgid ""
+"[[_pr_closed]]\n"
+".Link back to the new Pull Request in the closed Pull Request timeline\n"
+"image::images/mentions-03-closed.png[PR closed]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:338
+#, no-wrap
+msgid ""
+"In addition to issue numbers, you can also reference a specific commit by "
+"SHA-1.\n"
+"You have to specify a full 40 character SHA-1, but if GitHub sees that in a "
+"comment, it will link directly to the commit.\n"
+"Again, you can reference commits in forks or other repositories in the same "
+"way you did with issues.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:340
+#, no-wrap
+msgid "==== GitHub Flavored Markdown\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:344
+#, no-wrap
+msgid ""
+"Linking to other Issues is just the beginning of interesting things you can "
+"do with almost any text box on GitHub.\n"
+"In  Issue and Pull Request descriptions, comments, code comments and more, "
+"you can use what is called \"`GitHub Flavored Markdown`\".\n"
+"Markdown is like writing in plain text but which is rendered richly.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:346
+#, no-wrap
+msgid ""
+"See <<_example_markdown>> for an example of how comments or text can be "
+"written and then rendered using Markdown.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:350
+#, no-wrap
+msgid ""
+"[[_example_markdown]]\n"
+".An example of GitHub Flavored Markdown as written and as rendered\n"
+"image::images/markdown-01-example.png[Example Markdown]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:353
+#, no-wrap
+msgid ""
+"The GitHub flavor of Markdown adds more things you can do beyond the basic "
+"Markdown syntax.\n"
+"These can all be really useful when creating useful Pull Request or Issue "
+"comments or descriptions.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:355
+#, no-wrap
+msgid "===== Task Lists\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:359
+#, no-wrap
+msgid ""
+"The first really useful GitHub specific Markdown feature, especially for use "
+"in Pull Requests, is the Task List.\n"
+"A task list is a list of checkboxes of things you want to get done.\n"
+"Putting them into an Issue or Pull Request normally indicates things that "
+"you want to get done before you consider the item complete.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:361
+#, no-wrap
+msgid "You can create a task list like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:363
+#: book/06-github/sections/2-contributing.asc:398
+#: book/06-github/sections/2-contributing.asc:423
+#: book/06-github/sections/2-contributing.asc:451
+#: book/06-github/sections/2-contributing.asc:497
+#, no-wrap
+msgid ""
+"[source,text]\n"
+"----\n"
+msgstr ""
+
+#. type: Bullet: '- '
+#: book/06-github/sections/2-contributing.asc:367
+#, markdown-text, no-wrap
+msgid "[X] Write the code\n"
+msgstr ""
+
+#. type: Bullet: '- '
+#: book/06-github/sections/2-contributing.asc:367
+#, markdown-text, no-wrap
+msgid "[ ] Write all the tests\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:367
+#, no-wrap
+msgid ""
+"- [ ] Document the code\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:370
+#, no-wrap
+msgid ""
+"If we include this in the description of our Pull Request or Issue, we'll "
+"see it rendered like <<_eg_task_lists>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:374
+#, no-wrap
+msgid ""
+"[[_eg_task_lists]]\n"
+".Task lists rendered in a Markdown comment\n"
+"image::images/markdown-02-tasks.png[Example Task List]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:377
+#, no-wrap
+msgid ""
+"This is often used in Pull Requests to indicate what all you would like to "
+"get done on the branch before the Pull Request will be ready to merge.\n"
+"The really cool part is that you can simply click the checkboxes to update "
+"the comment -- you don't have to edit the Markdown directly to check tasks "
+"off.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:382
+#, no-wrap
+msgid ""
+"What's more, GitHub will look for task lists in your Issues and Pull "
+"Requests and show them as metadata on the pages that list them out.\n"
+"For example, if you have a Pull Request with tasks and you look at the "
+"overview page of all Pull Requests, you can see how far done it is.\n"
+"This helps people break down Pull Requests into subtasks and helps other "
+"people track the progress of the branch.\n"
+"You can see an example of this in <<_task_list_progress>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:386
+#, no-wrap
+msgid ""
+"[[_task_list_progress]]\n"
+".Task list summary in the Pull Request list\n"
+"image::images/markdown-03-task-summary.png[Example Task List]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:388
+#, no-wrap
+msgid ""
+"These are incredibly useful when you open a Pull Request early and use it to "
+"track your progress through the implementation of the feature.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:390
+#, no-wrap
+msgid "===== Code Snippets\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:394
+#, no-wrap
+msgid ""
+"You can also add code snippets to comments.\n"
+"This is especially useful if you want to present something that you _could_ "
+"try to do before actually implementing it as a commit on your branch.\n"
+"This is also often used to add example code of what is not working or what "
+"this Pull Request could implement.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:396
+#, no-wrap
+msgid "To add a snippet of code you have to \"`fence`\" it in backticks.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:405
+#, no-wrap
+msgid ""
+"```java\n"
+"for(int i=0 ; i < 5 ; i++)\n"
+"{\n"
+"   System.out.println(\"i is : \" + i);\n"
+"}\n"
+"```\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:409
+#, no-wrap
+msgid ""
+"If you add a language name like we did there with 'java', GitHub will also "
+"try to syntax highlight the snippet.\n"
+"In the case of the above example, it would end up rendering like "
+"<<_md_code>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:413
+#, no-wrap
+msgid ""
+"[[_md_code]]\n"
+".Rendered fenced code example\n"
+"image::images/markdown-04-fenced-code.png[Rendered fenced code]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:415
+#, no-wrap
+msgid "===== Quoting\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:419
+#, no-wrap
+msgid ""
+"If you're responding to a small part of a long comment, you can selectively "
+"quote out of the other comment by preceding the lines with the `>` "
+"character.\n"
+"In fact, this is so common and so useful that there is a keyboard shortcut "
+"for it.\n"
+"If you highlight text in a comment that you want to directly reply to and "
+"hit the `r` key, it will quote that text in the comment box for you.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:421
+#, no-wrap
+msgid "The quotes look something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:426
+#, no-wrap
+msgid ""
+"> Whether 'tis Nobler in the mind to suffer\n"
+"> The Slings and Arrows of outrageous Fortune,\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:428
+#, no-wrap
+msgid ""
+"How big are these slings and in particular, these arrows?\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:431
+#, no-wrap
+msgid "Once rendered, the comment will look like <<_md_quote>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:435
+#, no-wrap
+msgid ""
+"[[_md_quote]]\n"
+".Rendered quoting example\n"
+"image::images/markdown-05-quote.png[Rendered quoting]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:437
+#, no-wrap
+msgid "===== Emoji\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:442
+#, no-wrap
+msgid ""
+"Finally, you can also use emoji in your comments.\n"
+"This is actually used quite extensively in comments you see on many GitHub "
+"Issues and Pull Requests.\n"
+"There is even an emoji helper in GitHub.\n"
+"If you are typing a comment and you start with a `:` character, an "
+"autocompleter will help you find what you're looking for.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:446
+#, no-wrap
+msgid ""
+"[[_md_emoji_auto]]\n"
+".Emoji autocompleter in action\n"
+"image::images/markdown-06-emoji-complete.png[Emoji autocompleter]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:449
+#, no-wrap
+msgid ""
+"Emojis take the form of `:<name>:` anywhere in the comment.\n"
+"For instance, you could write something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:453
+#, no-wrap
+msgid "I :eyes: that :bug: and I :cold_sweat:.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:455
+#, no-wrap
+msgid ":trophy: for :microscope: it.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:457
+#, no-wrap
+msgid ":+1: and :sparkles: on this :ship:, it's :fire::poop:!\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:459
+#, no-wrap
+msgid ""
+":clap::tada::panda_face:\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:462
+#, no-wrap
+msgid "When rendered, it would look something like <<_md_emoji>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:466
+#, no-wrap
+msgid ""
+"[[_md_emoji]]\n"
+".Heavy emoji commenting\n"
+"image::images/markdown-07-emoji.png[Emoji]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:468
+#, no-wrap
+msgid ""
+"Not that this is incredibly useful, but it does add an element of fun and "
+"emotion to a medium that is otherwise hard to convey emotion in.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:474
+#, no-wrap
+msgid ""
+"There are actually quite a number of web services that make use of emoji "
+"characters these days.\n"
+"A great cheat sheet to reference to find emoji that expresses what you want "
+"to say can be found at:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:476
+#, no-wrap
+msgid ""
+"https://www.webfx.com/tools/emoji-cheat-sheet/\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:479
+#, no-wrap
+msgid "===== Images\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:482
+#, no-wrap
+msgid ""
+"This isn't technically GitHub Flavored Markdown, but it is incredibly "
+"useful.\n"
+"In addition to adding Markdown image links to comments, which can be "
+"difficult to find and embed URLs for, GitHub allows you to drag and drop "
+"images into text areas to embed them.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:486
+#, no-wrap
+msgid ""
+"[[_md_drag]]\n"
+".Drag and drop images to upload them and auto-embed them\n"
+"image::images/markdown-08-drag-drop.png[Drag and drop images]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:489
+#, no-wrap
+msgid ""
+"If you look at <<_md_drag>>, you can see a small \"`Parsed as Markdown`\" "
+"hint above the text area.\n"
+"Clicking on that will give you a full cheat sheet of everything you can do "
+"with Markdown on GitHub.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:492
+#, no-wrap
+msgid ""
+"[[_fetch_and_push_on_different_repositories]]\n"
+"==== Keep your GitHub public repository up-to-date\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:495
+#, no-wrap
+msgid ""
+"Once you've forked a GitHub repository, your repository (your \"fork\") "
+"exists independently from the original.\n"
+"In particular, when the original repository has new commits, GitHub informs "
+"you by a message like:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:499
+#, no-wrap
+msgid ""
+"This branch is 5 commits behind progit:master.\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:503
+#, no-wrap
+msgid ""
+"But your GitHub repository will never be automatically updated by GitHub; "
+"this is something that you must do yourself.\n"
+"Fortunately, this is very easy to do.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:506
+#, no-wrap
+msgid ""
+"One possibility to do this requires no configuration.\n"
+"For example, if you forked from `https://github.com/progit/progit2.git`, you "
+"can keep your `master` branch up-to-date like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:512
+#, no-wrap
+msgid ""
+"$ git checkout master <1>\n"
+"$ git pull https://github.com/progit/progit2.git <2>\n"
+"$ git push origin master <3>\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:517
+#, no-wrap
+msgid ""
+"<1> If you were on another branch, return to `master`.\n"
+"<2> Fetch changes from `https://github.com/progit/progit2.git` and merge "
+"them into `master`.\n"
+"<3> Push your `master` branch to `origin`.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:520
+#, no-wrap
+msgid ""
+"This works, but it is a little tedious having to spell out the fetch URL "
+"every time.\n"
+"You can automate this work with a bit of configuration:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:527
+#, no-wrap
+msgid ""
+"$ git remote add progit https://github.com/progit/progit2.git <1>\n"
+"$ git fetch progit <2>\n"
+"$ git branch --set-upstream-to=progit/master master <3>\n"
+"$ git config --local remote.pushDefault origin <4>\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:534
+#, no-wrap
+msgid ""
+"<1> Add the source repository and give it a name.\n"
+"    Here, I have chosen to call it `progit`.\n"
+"<2> Get a reference on progit's branches, in particular `master`.\n"
+"<3> Set your `master` branch to fetch from the `progit` remote.\n"
+"<4> Define the default push repository to `origin`.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:536
+#, no-wrap
+msgid "Once this is done, the workflow becomes much simpler:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:542
+#, no-wrap
+msgid ""
+"$ git checkout master <1>\n"
+"$ git pull <2>\n"
+"$ git push <3>\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:547
+#, no-wrap
+msgid ""
+"<1> If you were on another branch, return to `master`.\n"
+"<2> Fetch changes from `progit` and merge changes into `master`.\n"
+"<3> Push your `master` branch to `origin`.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/2-contributing.asc:550
+#, no-wrap
+msgid ""
+"This approach can be useful, but it's not without downsides.\n"
+"Git will happily do this work for you silently, but it won't warn you if you "
+"make a commit to `master`, pull from `progit`, then push to `origin` -- all "
+"of those operations are valid with this setup.\n"
+"So you'll have to take care never to commit directly to `master`, since that "
+"branch effectively belongs to the upstream repository.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:3
+#, no-wrap
+msgid ""
+"[[_maintaining_gh_project]]\n"
+"=== Maintaining a Project\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:5
+#, no-wrap
+msgid ""
+"Now that we're comfortable contributing to a project, let's look at the "
+"other side: creating, maintaining and administering your own project.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:7
+#, no-wrap
+msgid "==== Creating a New Repository\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:10
+#, no-wrap
+msgid ""
+"Let's create a new repository to share our project code with.\n"
+"Start by clicking the \"`New repository`\" button on the right-hand side of "
+"the dashboard, or from the `+` button in the top toolbar next to your "
+"username as seen in <<_new_repo_dropdown>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:13
+#, no-wrap
+msgid ""
+".The \"`Your repositories`\" area\n"
+"image::images/newrepo.png[The âYour repositoriesâ area]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:17
+#, no-wrap
+msgid ""
+"[[_new_repo_dropdown]]\n"
+".The \"`New repository`\" dropdown\n"
+"image::images/new-repo.png[The ânew repositoryâ dropdown]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:19
+#, no-wrap
+msgid "This takes you to the \"`new repository`\" form:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:22
+#, no-wrap
+msgid ""
+".The \"`new repository`\" form\n"
+"image::images/newrepoform.png[The ânew repositoryâ form]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:25
+#, no-wrap
+msgid ""
+"All you really have to do here is provide a project name; the rest of the "
+"fields are completely optional.\n"
+"For now, just click the \"`Create Repository`\" button, and boom â you "
+"have a new repository on GitHub, named `<user>/<project_name>`.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:28
+#, no-wrap
+msgid ""
+"Since you have no code there yet, GitHub will show you instructions for how "
+"to create a brand-new Git repository, or connect an existing Git project.\n"
+"We won't belabor this here; if you need a refresher, check out "
+"<<ch02-git-basics-chapter#ch02-git-basics-chapter>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:32
+#, no-wrap
+msgid ""
+"Now that your project is hosted on GitHub, you can give the URL to anyone "
+"you want to share your project with.\n"
+"Every project on GitHub is accessible over HTTPS as "
+"`\\https://github.com/<user>/<project_name>`, and over SSH as "
+"`\\git@github.com:<user>/<project_name>`.\n"
+"Git can fetch from and push to both of these URLs, but they are "
+"access-controlled based on the credentials of the user connecting to them.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:38
+#, no-wrap
+msgid ""
+"It is often preferable to share the HTTPS based URL for a public project, "
+"since the user does not have to have a GitHub account to access it for "
+"cloning.\n"
+"Users will have to have an account and an uploaded SSH key to access your "
+"project if you give them the SSH URL.\n"
+"The HTTPS one is also exactly the same URL they would paste into a browser "
+"to view the project there.\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:41
+#, no-wrap
+msgid "==== Adding Collaborators\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:45
+#, no-wrap
+msgid ""
+"If you're working with other people who you want to give commit access to, "
+"you need to add them as \"`collaborators`\".\n"
+"If Ben, Jeff, and Louise all sign up for accounts on GitHub, and you want to "
+"give them push access to your repository, you can add them to your "
+"project.\n"
+"Doing so will give them \"`push`\" access, which means they have both read "
+"and write access to the project and Git repository.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:47
+#, no-wrap
+msgid "Click the \"`Settings`\" link at the bottom of the right-hand sidebar.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:50
+#, no-wrap
+msgid ""
+".The repository settings link\n"
+"image::images/reposettingslink.png[The repository settings link]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:55
+#, no-wrap
+msgid ""
+"Then select \"`Collaborators`\" from the menu on the left-hand side.\n"
+"Then, just type a username into the box, and click \"`Add collaborator.`\"\n"
+"You can repeat this as many times as you like to grant access to everyone "
+"you like.\n"
+"If you need to revoke access, just click the \"`X`\" on the right-hand side "
+"of their row.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:58
+#, no-wrap
+msgid ""
+".Repository collaborators\n"
+"image::images/collaborators.png[The repository collaborators box]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:60
+#, no-wrap
+msgid "==== Managing Pull Requests\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:62
+#, no-wrap
+msgid ""
+"Now that you have a project with some code in it and maybe even a few "
+"collaborators who also have push access, let's go over what to do when you "
+"get a Pull Request yourself.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:65
+#, no-wrap
+msgid ""
+"Pull Requests can either come from a branch in a fork of your repository or "
+"they can come from another branch in the same repository.\n"
+"The only difference is that the ones in a fork are often from people where "
+"you can't push to their branch and they can't push to yours, whereas with "
+"internal Pull Requests generally both parties can access the branch.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:67
+#, no-wrap
+msgid ""
+"For these examples, let's assume you are \"`tonychacon`\" and you've created "
+"a new Arduino code project named \"`fade`\".\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:70
+#, no-wrap
+msgid ""
+"[[_email_notifications]]\n"
+"===== Email Notifications\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:73
+#, no-wrap
+msgid ""
+"Someone comes along and makes a change to your code and sends you a Pull "
+"Request.\n"
+"You should get an email notifying you about the new Pull Request and it "
+"should look something like <<_email_pr>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:77
+#, no-wrap
+msgid ""
+"[[_email_pr]]\n"
+".Email notification of a new Pull Request\n"
+"image::images/maint-01-email.png[Pull Request email notification]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:82
+#, no-wrap
+msgid ""
+"There are a few things to notice about this email.\n"
+"It will give you a small diffstat -- a list of files that have changed in "
+"the Pull Request and by how much.\n"
+"It gives you a link to the Pull Request on GitHub.\n"
+"It also gives you a few URLs that you can use from the command line.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:86
+#, no-wrap
+msgid ""
+"If you notice the line that says `git pull <url> patch-1`, this is a simple "
+"way to merge in a remote branch without having to add a remote.\n"
+"We went over this quickly in "
+"<<ch05-distributed-git#_checking_out_remotes>>.\n"
+"If you wish, you can create and switch to a topic branch and then run this "
+"command to merge in the Pull Request changes.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:89
+#, no-wrap
+msgid ""
+"The other interesting URLs are the `.diff` and `.patch` URLs, which as you "
+"may guess, provide unified diff and patch versions of the Pull Request.\n"
+"You could technically merge in the Pull Request work with something like "
+"this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:93
+#, no-wrap
+msgid ""
+"$ curl https://github.com/tonychacon/fade/pull/1.patch | git am\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:96
+#, no-wrap
+msgid "===== Collaborating on the Pull Request\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:99
+#, no-wrap
+msgid ""
+"As we covered in <<ch06-github#ch06-github_flow>>, you can now have a "
+"conversation with the person who opened the Pull Request.\n"
+"You can comment on specific lines of code, comment on whole commits or "
+"comment on the entire Pull Request itself, using GitHub Flavored Markdown "
+"everywhere.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:102
+#, no-wrap
+msgid ""
+"Every time someone else comments on the Pull Request you will continue to "
+"get email notifications so you know there is activity happening.\n"
+"They will each have a link to the Pull Request where the activity is "
+"happening and you can also directly respond to the email to comment on the "
+"Pull Request thread.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:105
+#, no-wrap
+msgid ""
+".Responses to emails are included in the thread\n"
+"image::images/maint-03-email-resp.png[Email response]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:107
+#, no-wrap
+msgid ""
+"Once the code is in a place you like and want to merge it in, you can either "
+"pull the code down and merge it locally, either with the `git pull <url> "
+"<branch>` syntax we saw earlier, or by adding the fork as a remote and "
+"fetching and merging.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:112
+#, no-wrap
+msgid ""
+"If the merge is trivial, you can also just hit the \"`Merge`\" button on the "
+"GitHub site.\n"
+"This will do a \"`non-fast-forward`\" merge, creating a merge commit even if "
+"a fast-forward merge was possible.\n"
+"This means that no matter what, every time you hit the merge button, a merge "
+"commit is created.\n"
+"As you can see in <<_merge_button>>, GitHub gives you all of this "
+"information if you click the hint link.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:116
+#, no-wrap
+msgid ""
+"[[_merge_button]]\n"
+".Merge button and instructions for merging a Pull Request manually\n"
+"image::images/maint-02-merge.png[Merge button]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:118
+#, no-wrap
+msgid ""
+"If you decide you don't want to merge it, you can also just close the Pull "
+"Request and the person who opened it will be notified.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:121
+#, no-wrap
+msgid ""
+"[[_pr_refs]]\n"
+"===== Pull Request Refs\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:124
+#, no-wrap
+msgid ""
+"If you're dealing with a *lot* of Pull Requests and don't want to add a "
+"bunch of remotes or do one time pulls every time, there is a neat trick that "
+"GitHub allows you to do.\n"
+"This is a bit of an advanced trick and we'll go over the details of this a "
+"bit more in <<ch10-git-internals#_refspec>>, but it can be pretty useful.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:127
+#, no-wrap
+msgid ""
+"GitHub actually advertises the Pull Request branches for a repository as "
+"sort of pseudo-branches on the server.\n"
+"By default you don't get them when you clone, but they are there in an "
+"obscured way and you can access them pretty easily.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:130
+#, no-wrap
+msgid ""
+"To demonstrate this, we're going to use a low-level command (often referred "
+"to as a \"`plumbing`\" command, which we'll read about more in "
+"<<ch10-git-internals#_plumbing_porcelain>>) called `ls-remote`.\n"
+"This command is generally not used in day-to-day Git operations but it's "
+"useful to show us what references are present on the server.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:132
+#, no-wrap
+msgid ""
+"If we run this command against the \"`blink`\" repository we were using "
+"earlier, we will get a list of all the branches and tags and other "
+"references in the repository.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:144
+#, no-wrap
+msgid ""
+"$ git ls-remote https://github.com/schacon/blink\n"
+"10d539600d86723087810ec636870a504f4fee4d\tHEAD\n"
+"10d539600d86723087810ec636870a504f4fee4d\trefs/heads/master\n"
+"6a83107c62950be9453aac297bb0193fd743cd6e\trefs/pull/1/head\n"
+"afe83c2d1a70674c9505cc1d8b7d380d5e076ed3\trefs/pull/1/merge\n"
+"3c8d735ee16296c242be7a9742ebfbc2665adec1\trefs/pull/2/head\n"
+"15c9f4f80973a2758462ab2066b6ad9fe8dcf03d\trefs/pull/2/merge\n"
+"a5a7751a33b7e86c5e9bb07b26001bb17d775d1a\trefs/pull/4/head\n"
+"31a45fc257e8433c8d8804e3e848cf61c9d3166c\trefs/pull/4/merge\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:147
+#, no-wrap
+msgid ""
+"Of course, if you're in your repository and you run `git ls-remote origin` "
+"or whatever remote you want to check, it will show you something similar to "
+"this.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:150
+#, no-wrap
+msgid ""
+"If the repository is on GitHub and you have any Pull Requests that have been "
+"opened, you'll get these references that are prefixed with `refs/pull/`.\n"
+"These are basically branches, but since they're not under `refs/heads/` you "
+"don't get them normally when you clone or fetch from the server -- the "
+"process of fetching ignores them normally.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:154
+#, no-wrap
+msgid ""
+"There are two references per Pull Request - the one that ends in `/head` "
+"points to exactly the same commit as the last commit in the Pull Request "
+"branch.\n"
+"So if someone opens a Pull Request in our repository and their branch is "
+"named `bug-fix` and it points to commit `a5a775`, then in *our* repository "
+"we will not have a `bug-fix` branch (since that's in their fork), but we "
+"_will_ have `pull/<pr#>/head` that points to `a5a775`.\n"
+"This means that we can pretty easily pull down every Pull Request branch in "
+"one go without having to add a bunch of remotes.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:156
+#, no-wrap
+msgid "Now, you could do something like fetching the reference directly.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:162
+#, no-wrap
+msgid ""
+"$ git fetch origin refs/pull/958/head\n"
+"From https://github.com/libgit2/libgit2\n"
+" * branch            refs/pull/958/head -> FETCH_HEAD\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:168
+#, no-wrap
+msgid ""
+"This tells Git, \"`Connect to the `origin` remote, and download the ref "
+"named `refs/pull/958/head`.`\"\n"
+"Git happily obeys, and downloads everything you need to construct that ref, "
+"and puts a pointer to the commit you want under `.git/FETCH_HEAD`.\n"
+"You can follow that up with `git merge FETCH_HEAD` into a branch you want to "
+"test it in, but that merge commit message looks a bit weird.\n"
+"Also, if you're reviewing a *lot* of pull requests, this gets tedious.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:172
+#, no-wrap
+msgid ""
+"There's also a way to fetch _all_ of the pull requests, and keep them up to "
+"date whenever you connect to the remote.\n"
+"Open up `.git/config` in your favorite editor, and look for the `origin` "
+"remote.\n"
+"It should look a bit like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:174
+#: book/06-github/sections/3-maintaining.asc:186
+#, no-wrap
+msgid ""
+"[source,ini]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:178
+#, no-wrap
+msgid ""
+"[remote \"origin\"]\n"
+"    url = https://github.com/libgit2/libgit2\n"
+"    fetch = +refs/heads/*:refs/remotes/origin/*\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:184
+#, no-wrap
+msgid ""
+"That line that begins with `fetch =` is a \"`refspec.`\"\n"
+"It's a way of mapping names on the remote with names in your local `.git` "
+"directory.\n"
+"This particular one tells Git, \"the things on the remote that are under "
+"`refs/heads` should go in my local repository under "
+"`refs/remotes/origin`.\"\n"
+"You can modify this section to add another refspec:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:191
+#, no-wrap
+msgid ""
+"[remote \"origin\"]\n"
+"    url = https://github.com/libgit2/libgit2.git\n"
+"    fetch = +refs/heads/*:refs/remotes/origin/*\n"
+"    fetch = +refs/pull/*/head:refs/remotes/origin/pr/*\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:195
+#, no-wrap
+msgid ""
+"That last line tells Git, \"`All the refs that look like "
+"`refs/pull/123/head` should be stored locally like "
+"`refs/remotes/origin/pr/123`.`\"\n"
+"Now, if you save that file, and do a `git fetch`:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:204
+#, no-wrap
+msgid ""
+"$ git fetch\n"
+"# â¦\n"
+" * [new ref]         refs/pull/1/head -> origin/pr/1\n"
+" * [new ref]         refs/pull/2/head -> origin/pr/2\n"
+" * [new ref]         refs/pull/4/head -> origin/pr/4\n"
+"# â¦\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:208
+#, no-wrap
+msgid ""
+"Now all of the remote pull requests are represented locally with refs that "
+"act much like tracking branches; they're read-only, and they update when you "
+"do a fetch.\n"
+"This makes it super easy to try the code from a pull request locally:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:215
+#, no-wrap
+msgid ""
+"$ git checkout pr/2\n"
+"Checking out files: 100% (3769/3769), done.\n"
+"Branch pr/2 set up to track remote branch pr/2 from origin.\n"
+"Switched to a new branch 'pr/2'\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:220
+#, no-wrap
+msgid ""
+"The eagle-eyed among you would note the `head` on the end of the remote "
+"portion of the refspec.\n"
+"There's also a `refs/pull/#/merge` ref on the GitHub side, which represents "
+"the commit that would result if you push the \"`merge`\" button on the "
+"site.\n"
+"This can allow you to test the merge before even hitting the button.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:223
+#, no-wrap
+msgid "===== Pull Requests on Pull Requests\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:226
+#, no-wrap
+msgid ""
+"Not only can you open Pull Requests that target the main or `master` branch, "
+"you can actually open a Pull Request targeting any branch in the network.\n"
+"In fact, you can even target another Pull Request.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:228
+#, no-wrap
+msgid ""
+"If you see a Pull Request that is moving in the right direction and you have "
+"an idea for a change that depends on it or you're not sure is a good idea, "
+"or you just don't have push access to the target branch, you can open a Pull "
+"Request directly to it.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:231
+#, no-wrap
+msgid ""
+"When you go to open a Pull Request, there is a box at the top of the page "
+"that specifies which branch you're requesting to pull to and which you're "
+"requesting to pull from.\n"
+"If you hit the \"`Edit`\" button at the right of that box you can change not "
+"only the branches but also which fork.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:235
+#, no-wrap
+msgid ""
+"[[_pr_targets]]\n"
+".Manually change the Pull Request target fork and branch\n"
+"image::images/maint-04-target.png[PR targets]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:237
+#, no-wrap
+msgid ""
+"Here you can fairly easily specify to merge your new branch into another "
+"Pull Request or another fork of the project.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:239
+#, no-wrap
+msgid "==== Mentions and Notifications\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:241
+#, no-wrap
+msgid ""
+"GitHub also has a pretty nice notifications system built in that can come in "
+"handy when you have questions or need feedback from specific individuals or "
+"teams.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:243
+#, no-wrap
+msgid ""
+"In any comment you can start typing a `@` character and it will begin to "
+"autocomplete with the names and usernames of people who are collaborators or "
+"contributors in the project.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:246
+#, no-wrap
+msgid ""
+".Start typing @ to mention someone\n"
+"image::images/maint-05-mentions.png[Mentions]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:248
+#, no-wrap
+msgid ""
+"You can also mention a user who is not in that dropdown, but often the "
+"autocompleter can make it faster.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:252
+#, no-wrap
+msgid ""
+"Once you post a comment with a user mention, that user will be notified.\n"
+"This means that this can be a really effective way of pulling people into "
+"conversations rather than making them poll.\n"
+"Very often in  Pull Requests on GitHub people will pull in other people on "
+"their teams or in their company to review an Issue or Pull Request.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:256
+#, no-wrap
+msgid ""
+"If someone gets mentioned on a Pull Request or Issue, they will be "
+"\"`subscribed`\" to it and will continue getting notifications any time some "
+"activity occurs on it.\n"
+"You will also be subscribed to something if you opened it, if you're "
+"watching the repository or if you comment on something.\n"
+"If you no longer wish to receive notifications, there is an "
+"\"`Unsubscribe`\" button on the page you can click to stop receiving updates "
+"on it.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:259
+#, no-wrap
+msgid ""
+".Unsubscribe from an Issue or Pull Request\n"
+"image::images/maint-06-unsubscribe.png[Unsubscribe]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:261
+#, no-wrap
+msgid "===== The Notifications Page\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:264
+#, no-wrap
+msgid ""
+"When we mention \"`notifications`\" here with respect to GitHub, we mean a "
+"specific way that GitHub tries to get in touch with you when events happen "
+"and there are a few different ways you can configure them.\n"
+"If you go to the \"`Notification center`\" tab from the settings page, you "
+"can see some of the options you have.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:267
+#, no-wrap
+msgid ""
+".Notification center options\n"
+"image::images/maint-07-notifications.png[Notification center]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:269
+#, no-wrap
+msgid ""
+"The two choices are to get notifications over \"`Email`\" and over \"`Web`\" "
+"and you can choose either, neither or both for when you actively participate "
+"in things and for activity on repositories you are watching.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:271
+#, no-wrap
+msgid "====== Web Notifications\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:274
+#, no-wrap
+msgid ""
+"Web notifications only exist on GitHub and you can only check them on "
+"GitHub.\n"
+"If you have this option selected in your preferences and a notification is "
+"triggered for you, you will see a small blue dot over your notifications "
+"icon at the top of your screen as seen in <<_not_center>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:278
+#, no-wrap
+msgid ""
+"[[_not_center]]\n"
+".Notification center\n"
+"image::images/maint-08-notifications-page.png[Notification center]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:283
+#, no-wrap
+msgid ""
+"If you click on that, you will see a list of all the items you have been "
+"notified about, grouped by project.\n"
+"You can filter to the notifications of a specific project by clicking on its "
+"name in the left hand sidebar.\n"
+"You can also acknowledge the notification by clicking the checkmark icon "
+"next to any notification, or acknowledge _all_ of the notifications in a "
+"project by clicking the checkmark at the top of the group.\n"
+"There is also a mute button next to each checkmark that you can click to not "
+"receive any further notifications on that item.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:286
+#, no-wrap
+msgid ""
+"All of these tools are very useful for handling large numbers of "
+"notifications.\n"
+"Many GitHub power users will simply turn off email notifications entirely "
+"and manage all of their notifications through this screen.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:288
+#, no-wrap
+msgid "====== Email Notifications\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:293
+#, no-wrap
+msgid ""
+"Email notifications are the other way you can handle notifications through "
+"GitHub.\n"
+"If you have this turned on you will get emails for each notification.\n"
+"We saw examples of this in <<_email_notification>> and <<_email_pr>>.\n"
+"The emails will also be threaded properly, which is nice if you're using a "
+"threading email client.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:295
+#, no-wrap
+msgid ""
+"There is also a fair amount of metadata embedded in the headers of the "
+"emails that GitHub sends you, which can be really helpful for setting up "
+"custom filters and rules.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:297
+#, no-wrap
+msgid ""
+"For instance, if we look at the actual email headers sent to Tony in the "
+"email shown in <<_email_pr>>, we will see the following among the "
+"information sent:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:299
+#, no-wrap
+msgid ""
+"[source,mbox]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:309
+#, no-wrap
+msgid ""
+"To: tonychacon/fade <fade@noreply.github.com>\n"
+"Message-ID: <tonychacon/fade/pull/1@github.com>\n"
+"Subject: [fade] Wait longer to see the dimming effect better (#1)\n"
+"X-GitHub-Recipient: tonychacon\n"
+"List-ID: tonychacon/fade <fade.tonychacon.github.com>\n"
+"List-Archive: https://github.com/tonychacon/fade\n"
+"List-Post: <mailto:reply+i-4XXX@reply.github.com>\n"
+"List-Unsubscribe: <mailto:unsub+i-XXX@reply.github.com>,...\n"
+"X-GitHub-Recipient-Address: tchacon@example.com\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:314
+#, no-wrap
+msgid ""
+"There are a couple of interesting things here.\n"
+"If you want to highlight or re-route emails to this particular project or "
+"even Pull Request, the information in `Message-ID` gives you all the data in "
+"`<user>/<project>/<type>/<id>` format.\n"
+"If this were an issue, for example, the `<type>` field would have been "
+"\"`issues`\" rather than \"`pull`\".\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:317
+#, no-wrap
+msgid ""
+"The `List-Post` and `List-Unsubscribe` fields mean that if you have a mail "
+"client that understands those, you can easily post to the list or "
+"\"`Unsubscribe`\" from the thread.\n"
+"That would be essentially the same as clicking the \"`mute`\" button on the "
+"web version of the notification or \"`Unsubscribe`\" on the Issue or Pull "
+"Request page itself.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:319
+#, no-wrap
+msgid ""
+"It's also worth noting that if you have both email and web notifications "
+"enabled and you read the email version of the notification, the web version "
+"will be marked as read as well if you have images allowed in your mail "
+"client.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:321
+#, no-wrap
+msgid "==== Special Files\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:323
+#, no-wrap
+msgid ""
+"There are a couple of special files that GitHub will notice if they are "
+"present in your repository.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:325
+#, no-wrap
+msgid "==== README\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:329
+#, no-wrap
+msgid ""
+"The first is the `README` file, which can be of nearly any format that "
+"GitHub recognizes as prose.\n"
+"For example, it could be `README`, `README.md`, `README.asciidoc`, etc.\n"
+"If GitHub sees a README file in your source, it will render it on the "
+"landing page of the project.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:332
+#, no-wrap
+msgid ""
+"Many teams use this file to hold all the relevant project information for "
+"someone who might be new to the repository or project.\n"
+"This generally includes things like:\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/06-github/sections/3-maintaining.asc:338
+#, markdown-text, no-wrap
+msgid "What the project is for\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/06-github/sections/3-maintaining.asc:338
+#, markdown-text, no-wrap
+msgid "How to configure and install it\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/06-github/sections/3-maintaining.asc:338
+#, markdown-text, no-wrap
+msgid "An example of how to use it or get it running\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/06-github/sections/3-maintaining.asc:338
+#, markdown-text, no-wrap
+msgid "The license that the project is offered under\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/06-github/sections/3-maintaining.asc:338
+#, markdown-text, no-wrap
+msgid "How to contribute to it\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:340
+#, no-wrap
+msgid ""
+"Since GitHub will render this file, you can embed images or links in it for "
+"added ease of understanding.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:342
+#, no-wrap
+msgid "==== CONTRIBUTING\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:345
+#, no-wrap
+msgid ""
+"The other special file that GitHub recognizes is the `CONTRIBUTING` file.\n"
+"If you have a file named `CONTRIBUTING` with any file extension, GitHub will "
+"show <<_contrib_file>> when anyone starts opening a Pull Request.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:349
+#, no-wrap
+msgid ""
+"[[_contrib_file]]\n"
+".Opening a Pull Request when a CONTRIBUTING file exists\n"
+"image::images/maint-09-contrib.png[Contributing notice]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:352
+#, no-wrap
+msgid ""
+"The idea here is that you can specify specific things you want or don't want "
+"in a Pull Request sent to your project.\n"
+"This way people may actually read the guidelines before opening the Pull "
+"Request.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:354
+#, no-wrap
+msgid "==== Project Administration\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:356
+#, no-wrap
+msgid ""
+"Generally there are not a lot of administrative things you can do with a "
+"single project, but there are a couple of items that might be of interest.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:358
+#, no-wrap
+msgid "===== Changing the Default Branch\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:360
+#, no-wrap
+msgid ""
+"If you are using a branch other than \"`master`\" as your default branch "
+"that you want people to open Pull Requests on or see by default, you can "
+"change that in your repository's settings page under the \"`Options`\" "
+"tab.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:364
+#, no-wrap
+msgid ""
+"[[_default_branch]]\n"
+".Change the default branch for a project\n"
+"image::images/maint-10-default-branch.png[Default branch]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:366
+#, no-wrap
+msgid ""
+"Simply change the default branch in the dropdown and that will be the "
+"default for all major operations from then on, including which branch is "
+"checked out by default when someone clones the repository.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:368
+#, no-wrap
+msgid "===== Transferring a Project\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:370
+#, no-wrap
+msgid ""
+"If you would like to transfer a project to another user or an organization "
+"in GitHub, there is a \"`Transfer ownership`\" option at the bottom of the "
+"same \"`Options`\" tab of your repository settings page that allows you to "
+"do this.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:374
+#, no-wrap
+msgid ""
+"[[_transfer_project]]\n"
+".Transfer a project to another GitHub user or Organization\n"
+"image::images/maint-11-transfer.png[Transfer]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:376
+#, no-wrap
+msgid ""
+"This is helpful if you are abandoning a project and someone wants to take it "
+"over, or if your project is getting bigger and want to move it into an "
+"organization.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/3-maintaining.asc:378
+#, no-wrap
+msgid ""
+"Not only does this move the repository along with all its watchers and stars "
+"to another place, it also sets up a redirect from your URL to the new "
+"place.\n"
+"It will also redirect clones and fetches from Git, not just web requests.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/4-managing-organization.asc:3
+#, no-wrap
+msgid ""
+"[[ch06-github_orgs]]\n"
+"=== Managing an organization\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/4-managing-organization.asc:9
+#, no-wrap
+msgid ""
+"(((GitHub, organizations)))\n"
+"In addition to single-user accounts, GitHub has what are called "
+"Organizations.\n"
+"Like personal accounts, Organizational accounts have a namespace where all "
+"their projects exist, but many other things are different.\n"
+"These accounts represent a group of people with shared ownership of "
+"projects, and there are many tools to manage subgroups of those people.\n"
+"Normally these accounts are used for Open Source groups (such as \"`perl`\" "
+"or \"`rails`\") or companies (such as \"`google`\" or \"`twitter`\").\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/4-managing-organization.asc:11
+#, no-wrap
+msgid "==== Organization Basics\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/4-managing-organization.asc:13
+#, no-wrap
+msgid ""
+"An organization is pretty easy to create; just click on the \"`+`\" icon at "
+"the top-right of any GitHub page, and select \"`New organization`\" from the "
+"menu.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/4-managing-organization.asc:16
+#, no-wrap
+msgid ""
+".The \"`New organization`\" menu item\n"
+"image::images/neworg.png[The âNew organizationâ menu item]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/4-managing-organization.asc:19
+#, no-wrap
+msgid ""
+"First you'll need to name your organization and provide an email address for "
+"a main point of contact for the group.\n"
+"Then you can invite other users to be co-owners of the account if you want "
+"to.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/4-managing-organization.asc:22
+#, no-wrap
+msgid ""
+"Follow these steps and you'll soon be the owner of a brand-new "
+"organization.\n"
+"Like personal accounts, organizations are free if everything you plan to "
+"store there will be open source.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/4-managing-organization.asc:26
+#, no-wrap
+msgid ""
+"As an owner in an organization, when you fork a repository, you'll have the "
+"choice of forking it to your organization's namespace.\n"
+"When you create new repositories you can create them either under your "
+"personal account or under any of the organizations that you are an owner "
+"in.\n"
+"You also automatically \"`watch`\" any new repository created under these "
+"organizations.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/4-managing-organization.asc:29
+#, no-wrap
+msgid ""
+"Just like in <<_personal_avatar>>, you can upload an avatar for your "
+"organization to personalize it a bit.\n"
+"Also just like personal accounts, you have a landing page for the "
+"organization that lists all of your repositories and can be viewed by other "
+"people.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/4-managing-organization.asc:31
+#, no-wrap
+msgid ""
+"Now let's cover some of the things that are a bit different with an "
+"organizational account.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/4-managing-organization.asc:33
+#, no-wrap
+msgid "==== Teams\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/4-managing-organization.asc:35
+#, no-wrap
+msgid ""
+"Organizations are associated with individual people by way of teams, which "
+"are simply a grouping of individual user accounts and repositories within "
+"the organization and what kind of access those people have in those "
+"repositories.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/4-managing-organization.asc:39
+#, no-wrap
+msgid ""
+"For example, say your company has three repositories: `frontend`, `backend`, "
+"and `deployscripts`.\n"
+"You'd want your HTML/CSS/JavaScript developers to have access to `frontend` "
+"and maybe `backend`, and your Operations people to have access to `backend` "
+"and `deployscripts`.\n"
+"Teams make this easy, without having to manage the collaborators for every "
+"individual repository.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/4-managing-organization.asc:41
+#, no-wrap
+msgid ""
+"The Organization page shows you a simple dashboard of all the repositories, "
+"users and teams that are under this organization.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/4-managing-organization.asc:45
+#, no-wrap
+msgid ""
+"[[_org_page]]\n"
+".The Organization page\n"
+"image::images/orgs-01-page.png[The Organization page]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/4-managing-organization.asc:50
+#, no-wrap
+msgid ""
+"To manage your Teams, you can click on the Teams sidebar on the right hand "
+"side of the page in <<_org_page>>.\n"
+"This will bring you to a page you can use to add members to the team, add "
+"repositories to the team or manage the settings and access control levels "
+"for the team.\n"
+"Each team can have read only, read/write or administrative access to the "
+"repositories.\n"
+"You can change that level by clicking the \"`Settings`\" button in "
+"<<_team_page>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/4-managing-organization.asc:54
+#, no-wrap
+msgid ""
+"[[_team_page]]\n"
+".The Team page\n"
+"image::images/orgs-02-teams.png[The Team page]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/4-managing-organization.asc:56
+#, no-wrap
+msgid ""
+"When you invite someone to a team, they will get an email letting them know "
+"they've been invited.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/4-managing-organization.asc:59
+#, no-wrap
+msgid ""
+"Additionally, team `@mentions` (such as `@acmecorp/frontend`) work much the "
+"same as they do with individual users, except that *all* members of the team "
+"are then subscribed to the thread.\n"
+"This is useful if you want the attention from someone on a team, but you "
+"don't know exactly who to ask.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/4-managing-organization.asc:62
+#, no-wrap
+msgid ""
+"A user can belong to any number of teams, so don't limit yourself to only "
+"access-control teams.\n"
+"Special-interest teams like `ux`, `css`, or `refactoring` are useful for "
+"certain kinds of questions, and others like `legal` and `colorblind` for an "
+"entirely different kind.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/4-managing-organization.asc:64
+#, no-wrap
+msgid "==== Audit Log\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/4-managing-organization.asc:67
+#, no-wrap
+msgid ""
+"Organizations also give owners access to all the information about what went "
+"on under the organization.\n"
+"You can go to the 'Audit Log' tab and see what events have happened at an "
+"organization level, who did them and where in the world they were done.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/4-managing-organization.asc:71
+#, no-wrap
+msgid ""
+"[[_the_audit_log]]\n"
+".The Audit log\n"
+"image::images/orgs-03-audit.png[The Audit log]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/4-managing-organization.asc:72
+#, no-wrap
+msgid ""
+"You can also filter down to specific types of events, specific places or "
+"specific people.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:2
+#, no-wrap
+msgid "=== Scripting GitHub\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:4
+#, no-wrap
+msgid ""
+"So now we've covered all of the major features and workflows of GitHub, but "
+"any large group or project will have customizations they may want to make or "
+"external services they may want to integrate.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:7
+#, no-wrap
+msgid ""
+"Luckily for us, GitHub is really quite hackable in many ways.\n"
+"In this section we'll cover how to use the GitHub hooks system and its API "
+"to make GitHub work how we want it to.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:9
+#, no-wrap
+msgid "==== Services and Hooks\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:11
+#, no-wrap
+msgid ""
+"The Hooks and Services section of GitHub repository administration is the "
+"easiest way to have GitHub interact with external systems.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:13
+#, no-wrap
+msgid "===== Services\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:17
+#, no-wrap
+msgid ""
+"First we'll take a look at Services.\n"
+"Both the Hooks and Services integrations can be found in the Settings "
+"section of your repository, where we previously looked at adding "
+"Collaborators and changing the default branch of your project.\n"
+"Under the \"`Webhooks and Services`\" tab you will see something like "
+"<<_services_hooks>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:21
+#, no-wrap
+msgid ""
+"[[_services_hooks]]\n"
+".Services and Hooks configuration section\n"
+"image::images/scripting-01-services.png[Services and hooks]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:26
+#, no-wrap
+msgid ""
+"There are dozens of services you can choose from, most of them integrations "
+"into other commercial and open source systems.\n"
+"Most of them are for Continuous Integration services, bug and issue "
+"trackers, chat room systems and documentation systems.\n"
+"We'll walk through setting up a very simple one, the Email hook.\n"
+"If you choose \"`email`\" from the \"`Add Service`\" dropdown, you'll get a "
+"configuration screen like <<_service_config>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:30
+#, no-wrap
+msgid ""
+"[[_service_config]]\n"
+".Email service configuration\n"
+"image::images/scripting-02-email-service.png[Email service]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:33
+#, no-wrap
+msgid ""
+"In this case, if we hit the \"`Add service`\" button, the email address we "
+"specified will get an email every time someone pushes to the repository.\n"
+"Services can listen for lots of different types of events, but most only "
+"listen for push events and then do something with that data.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:36
+#, no-wrap
+msgid ""
+"If there is a system you are using that you would like to integrate with "
+"GitHub, you should check here to see if there is an existing service "
+"integration available.\n"
+"For example, if you're using Jenkins to run tests on your codebase, you can "
+"enable the Jenkins builtin service integration to kick off a test run every "
+"time someone pushes to your repository.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:38
+#, no-wrap
+msgid "===== Hooks\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:42
+#, no-wrap
+msgid ""
+"If you need something more specific or you want to integrate with a service "
+"or site that is not included in this list, you can instead use the more "
+"generic hooks system.\n"
+"GitHub repository hooks are pretty simple.\n"
+"You specify a URL and GitHub will post an HTTP payload to that URL on any "
+"event you want.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:44
+#, no-wrap
+msgid ""
+"Generally the way this works is you can setup a small web service to listen "
+"for a GitHub hook payload and then do something with the data when it is "
+"received.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:47
+#, no-wrap
+msgid ""
+"To enable a hook, you click the \"`Add webhook`\" button in "
+"<<_services_hooks>>.\n"
+"This will bring you to a page that looks like <<_web_hook>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:51
+#, no-wrap
+msgid ""
+"[[_web_hook]]\n"
+".Web hook configuration\n"
+"image::images/scripting-03-webhook.png[Web hook]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:55
+#, no-wrap
+msgid ""
+"The configuration for a web hook is pretty simple.\n"
+"In most cases you simply enter a URL and a secret key and hit \"`Add "
+"webhook`\".\n"
+"There are a few options for which events you want GitHub to send you a "
+"payload for -- the default is to only get a payload for the `push` event, "
+"when someone pushes new code to any branch of your repository.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:58
+#, no-wrap
+msgid ""
+"Let's see a small example of a web service you may set up to handle a web "
+"hook.\n"
+"We'll use the Ruby web framework Sinatra since it's fairly concise and you "
+"should be able to easily see what we're doing.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:61
+#, no-wrap
+msgid ""
+"Let's say we want to get an email if a specific person pushes to a specific "
+"branch of our project modifying a specific file.\n"
+"We could fairly easily do that with code like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:63
+#: book/06-github/sections/5-scripting.asc:237
+#, no-wrap
+msgid ""
+"[source,ruby]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:67
+#, no-wrap
+msgid ""
+"require 'sinatra'\n"
+"require 'json'\n"
+"require 'mail'\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:70
+#, no-wrap
+msgid ""
+"post '/payload' do\n"
+"  push = JSON.parse(request.body.read) # parse the JSON\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:74
+#, no-wrap
+msgid ""
+"  # gather the data we're looking for\n"
+"  pusher = push[\"pusher\"][\"name\"]\n"
+"  branch = push[\"ref\"]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:80
+#, no-wrap
+msgid ""
+"  # get a list of all the files touched\n"
+"  files = push[\"commits\"].map do |commit|\n"
+"    commit['added'] + commit['modified'] + commit['removed']\n"
+"  end\n"
+"  files = files.flatten.uniq\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:85
+#, no-wrap
+msgid ""
+"  # check for our criteria\n"
+"  if pusher == 'schacon' &&\n"
+"     branch == 'ref/heads/special-branch' &&\n"
+"     files.include?('special-file.txt')\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:94
+#, no-wrap
+msgid ""
+"    Mail.deliver do\n"
+"      from     'tchacon@example.com'\n"
+"      to       'tchacon@example.com'\n"
+"      subject  'Scott Changed the File'\n"
+"      body     \"ALARM\"\n"
+"    end\n"
+"  end\n"
+"end\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:98
+#, no-wrap
+msgid ""
+"Here we're taking the JSON payload that GitHub delivers us and looking up "
+"who pushed it, what branch they pushed to and what files were touched in all "
+"the commits that were pushed.\n"
+"Then we check that against our criteria and send an email if it matches.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:103
+#, no-wrap
+msgid ""
+"In order to develop and test something like this, you have a nice developer "
+"console in the same screen where you set the hook up.\n"
+"You can see the last few deliveries that GitHub has tried to make for that "
+"webhook.\n"
+"For each hook you can dig down into when it was delivered, if it was "
+"successful and the body and headers for both the request and the response.\n"
+"This makes it incredibly easy to test and debug your hooks.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:107
+#, no-wrap
+msgid ""
+"[[_web_hook_debug]]\n"
+".Web hook debugging information\n"
+"image::images/scripting-04-webhook-debug.png[Webhook debug]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:109
+#, no-wrap
+msgid ""
+"The other great feature of this is that you can redeliver any of the "
+"payloads to test your service easily.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:111
+#, no-wrap
+msgid ""
+"For more information on how to write webhooks and all the different event "
+"types you can listen for, go to the GitHub Developer documentation at "
+"https://developer.github.com/webhooks/[].\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:113
+#, no-wrap
+msgid "==== The GitHub API\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:117
+#, no-wrap
+msgid ""
+"(((GitHub, API)))\n"
+"Services and hooks give you a way to receive push notifications about events "
+"that happen on your repositories, but what if you need more information "
+"about these events?\n"
+"What if you need to automate something like adding collaborators or labeling "
+"issues?\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:121
+#, no-wrap
+msgid ""
+"This is where the GitHub API comes in handy.\n"
+"GitHub has tons of API endpoints for doing nearly anything you can do on the "
+"website in an automated fashion.\n"
+"In this section we'll learn how to authenticate and connect to the API, how "
+"to comment on an issue and how to change the status of a Pull Request "
+"through the API.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:123
+#, no-wrap
+msgid "==== Basic Usage\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:127
+#, no-wrap
+msgid ""
+"The most basic thing you can do is a simple GET request on an endpoint that "
+"doesn't require authentication.\n"
+"This could be a user or read-only information on an open source project.\n"
+"For example, if we want to know more about a user named \"`schacon`\", we "
+"can run something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:129
+#: book/06-github/sections/5-scripting.asc:148
+#: book/06-github/sections/5-scripting.asc:197
+#, no-wrap
+msgid ""
+"[source,javascript]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:142
+#, no-wrap
+msgid ""
+"$ curl https://api.github.com/users/schacon\n"
+"{\n"
+"  \"login\": \"schacon\",\n"
+"  \"id\": 70,\n"
+"  \"avatar_url\": \"https://avatars.githubusercontent.com/u/70\",\n"
+"# â¦\n"
+"  \"name\": \"Scott Chacon\",\n"
+"  \"company\": \"GitHub\",\n"
+"  \"following\": 19,\n"
+"  \"created_at\": \"2008-01-27T17:19:28Z\",\n"
+"  \"updated_at\": \"2014-06-10T02:37:23Z\"\n"
+"}\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:146
+#, no-wrap
+msgid ""
+"There are tons of endpoints like this to get information about "
+"organizations, projects, issues, commits -- just about anything you can "
+"publicly see on GitHub.\n"
+"You can even use the API to render arbitrary Markdown or find a `.gitignore` "
+"template.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:153
+#, no-wrap
+msgid ""
+"$ curl https://api.github.com/gitignore/templates/Java\n"
+"{\n"
+"  \"name\": \"Java\",\n"
+"  \"source\": \"*.class\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:156
+#, no-wrap
+msgid ""
+"# Mobile Tools for Java (J2ME)\n"
+".mtj.tmp/\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:161
+#, no-wrap
+msgid ""
+"# Package Files #\n"
+"*.jar\n"
+"*.war\n"
+"*.ear\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:166
+#, no-wrap
+msgid ""
+"# virtual machine crash logs, see "
+"https://www.java.com/en/download/help/error_hotspot.xml\n"
+"hs_err_pid*\n"
+"\"\n"
+"}\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:170
+#, no-wrap
+msgid "==== Commenting on an Issue\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:172
+#, no-wrap
+msgid ""
+"However, if you want to do an action on the website such as comment on an "
+"Issue or Pull Request or if you want to view or interact with private "
+"content, you'll need to authenticate.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:176
+#, no-wrap
+msgid ""
+"There are several ways to authenticate.\n"
+"You can use basic authentication with just your username and password, but "
+"generally it's a better idea to use a personal access token.\n"
+"You can generate this from the \"`Applications`\" tab of your settings "
+"page.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:180
+#, no-wrap
+msgid ""
+"[[_access_token]]\n"
+".Generate your access token from the \"`Applications`\" tab of your settings "
+"page\n"
+"image::images/scripting-05-access-token.png[Access Token]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:183
+#, no-wrap
+msgid ""
+"It will ask you which scopes you want for this token and a description.\n"
+"Make sure to use a good description so you feel comfortable removing the "
+"token when your script or application is no longer used.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:187
+#, no-wrap
+msgid ""
+"GitHub will only show you the token once, so be sure to copy it.\n"
+"You can now use this to authenticate in your script instead of using a "
+"username and password.\n"
+"This is nice because you can limit the scope of what you want to do and the "
+"token is revocable.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:191
+#, no-wrap
+msgid ""
+"This also has the added advantage of increasing your rate limit.\n"
+"Without authenticating, you will be limited to 60 requests per hour.\n"
+"If you authenticate you can make up to 5,000 requests per hour.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:195
+#, no-wrap
+msgid ""
+"So let's use it to make a comment on one of our issues.\n"
+"Let's say we want to leave a comment on a specific issue, Issue #6.\n"
+"To do so we have to do an HTTP POST request to "
+"`repos/<user>/<repo>/issues/<num>/comments` with the token we just generated "
+"as an Authorization header.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:216
+#, no-wrap
+msgid ""
+"$ curl -H \"Content-Type: application/json\" \\\n"
+"       -H \"Authorization: token TOKEN\" \\\n"
+"       --data '{\"body\":\"A new comment, :+1:\"}' \\\n"
+"       https://api.github.com/repos/schacon/blink/issues/6/comments\n"
+"{\n"
+"  \"id\": 58322100,\n"
+"  \"html_url\": "
+"\"https://github.com/schacon/blink/issues/6#issuecomment-58322100\",\n"
+"  ...\n"
+"  \"user\": {\n"
+"    \"login\": \"tonychacon\",\n"
+"    \"id\": 7874698,\n"
+"    \"avatar_url\": "
+"\"https://avatars.githubusercontent.com/u/7874698?v=2\",\n"
+"    \"type\": \"User\",\n"
+"  },\n"
+"  \"created_at\": \"2014-10-08T07:48:19Z\",\n"
+"  \"updated_at\": \"2014-10-08T07:48:19Z\",\n"
+"  \"body\": \"A new comment, :+1:\"\n"
+"}\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:219
+#, no-wrap
+msgid ""
+"Now if you go to that issue, you can see the comment that we just "
+"successfully posted as in <<_api_comment>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:223
+#, no-wrap
+msgid ""
+"[[_api_comment]]\n"
+".A comment posted from the GitHub API\n"
+"image::images/scripting-06-comment.png[API Comment]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:225
+#, no-wrap
+msgid ""
+"You can use the API to do just about anything you can do on the website -- "
+"creating and setting milestones, assigning people to Issues and Pull "
+"Requests, creating and changing labels, accessing commit data, creating new "
+"commits and branches, opening, closing or merging Pull Requests, creating "
+"and editing teams, commenting on lines of code in a Pull Request, searching "
+"the site and on and on.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:227
+#, no-wrap
+msgid "==== Changing the Status of a Pull Request\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:230
+#, no-wrap
+msgid ""
+"There is one final example we'll look at since it's really useful if you're "
+"working with Pull Requests.\n"
+"Each commit can have one or more statuses associated with it and there is an "
+"API to add and query that status.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:233
+#, no-wrap
+msgid ""
+"Most of the Continuous Integration and testing services make use of this API "
+"to react to pushes by testing the code that was pushed, and then report back "
+"if that commit has passed all the tests.\n"
+"You could also use this to check if the commit message is properly "
+"formatted, if the submitter followed all your contribution guidelines, if "
+"the commit was validly signed -- any number of things.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:235
+#, no-wrap
+msgid ""
+"Let's say you set up a webhook on your repository that hits a small web "
+"service that checks for a `Signed-off-by` string in the commit message.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:241
+#, no-wrap
+msgid ""
+"require 'httparty'\n"
+"require 'sinatra'\n"
+"require 'json'\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:245
+#, no-wrap
+msgid ""
+"post '/payload' do\n"
+"  push = JSON.parse(request.body.read) # parse the JSON\n"
+"  repo_name = push['repository']['full_name']\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:248
+#, no-wrap
+msgid ""
+"  # look through each commit message\n"
+"  push[\"commits\"].each do |commit|\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:257
+#, no-wrap
+msgid ""
+"    # look for a Signed-off-by string\n"
+"    if /Signed-off-by/.match commit['message']\n"
+"      state = 'success'\n"
+"      description = 'Successfully signed off!'\n"
+"    else\n"
+"      state = 'failure'\n"
+"      description = 'No signoff found.'\n"
+"    end\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:261
+#, no-wrap
+msgid ""
+"    # post status to GitHub\n"
+"    sha = commit[\"id\"]\n"
+"    status_url = "
+"\"https://api.github.com/repos/#{repo_name}/statuses/#{sha}\"\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:277
+#, no-wrap
+msgid ""
+"    status = {\n"
+"      \"state\"       => state,\n"
+"      \"description\" => description,\n"
+"      \"target_url\"  => \"http://example.com/how-to-signoff\",\n"
+"      \"context\"     => \"validate/signoff\"\n"
+"    }\n"
+"    HTTParty.post(status_url,\n"
+"      :body => status.to_json,\n"
+"      :headers => {\n"
+"        'Content-Type'  => 'application/json',\n"
+"        'User-Agent'    => 'tonychacon/signoff',\n"
+"        'Authorization' => \"token #{ENV['TOKEN']}\" }\n"
+"    )\n"
+"  end\n"
+"end\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:281
+#, no-wrap
+msgid ""
+"Hopefully this is fairly simple to follow.\n"
+"In this web hook handler we look through each commit that was just pushed, "
+"we look for the string 'Signed-off-by' in the commit message and finally we "
+"POST via HTTP to the `/repos/<user>/<repo>/statuses/<commit_sha>` API "
+"endpoint with the status.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:284
+#, no-wrap
+msgid ""
+"In this case you can send a state ('success', 'failure', 'error'), a "
+"description of what happened, a target URL the user can go to for more "
+"information and a \"`context`\" in case there are multiple statuses for a "
+"single commit.\n"
+"For example, a testing service may provide a status and a validation service "
+"like this may also provide a status -- the \"`context`\" field is how "
+"they're differentiated.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:286
+#, no-wrap
+msgid ""
+"If someone opens a new Pull Request on GitHub and this hook is set up, you "
+"may see something like <<_commit_status>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:290
+#, no-wrap
+msgid ""
+"[[_commit_status]]\n"
+".Commit status via the API\n"
+"image::images/scripting-07-status.png[Commit status]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:294
+#, no-wrap
+msgid ""
+"You can now see a little green check mark next to the commit that has a "
+"\"`Signed-off-by`\" string in the message and a red cross through the one "
+"where the author forgot to sign off.\n"
+"You can also see that the Pull Request takes the status of the last commit "
+"on the branch and warns you if it is a failure.\n"
+"This is really useful if you're using this API for test results so you don't "
+"accidentally merge something where the last commit is failing tests.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:296
+#, no-wrap
+msgid "==== Octokit\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:300
+#, no-wrap
+msgid ""
+"Though we've been doing nearly everything through `curl` and simple HTTP "
+"requests in these examples, several open-source libraries exist that make "
+"this API available in a more idiomatic way.\n"
+"At the time of this writing, the supported languages include Go, "
+"Objective-C, Ruby, and .NET.\n"
+"Check out https://github.com/octokit[] for more information on these, as "
+"they handle much of the HTTP for you.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/06-github/sections/5-scripting.asc:302
+#, no-wrap
+msgid ""
+"Hopefully these tools can help you customize and modify GitHub to work "
+"better for your specific workflows.\n"
+"For complete documentation on the entire API as well as guides for common "
+"tasks, check out https://developer.github.com[].\n"
+msgstr ""

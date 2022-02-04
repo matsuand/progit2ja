@@ -1,0 +1,4099 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2022-02-04 19:16+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: book/02-git-basics/sections/aliases.asc:3
+#, no-wrap
+msgid ""
+"[[_git_aliases]]\n"
+"=== Git Aliases\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/aliases.asc:7
+#, no-wrap
+msgid ""
+"(((aliases)))\n"
+"Before we move on to the next chapter, we want to introduce a feature that "
+"can make your Git experience simpler, easier, and more familiar: aliases.\n"
+"For clarity's sake, we won't be using them anywhere else in this book, but "
+"if you go on to use Git with any regularity, aliases are something you "
+"should know about.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/aliases.asc:11
+#, no-wrap
+msgid ""
+"Git doesn't automatically infer your command if you type it in partially.\n"
+"If you don't want to type the entire text of each of the Git commands, you "
+"can easily set up an alias for each command using `git config`.(((git "
+"commands, config)))\n"
+"Here are a couple of examples you may want to set up:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/aliases.asc:13
+#: book/02-git-basics/sections/aliases.asc:27
+#: book/02-git-basics/sections/aliases.asc:34
+#: book/02-git-basics/sections/aliases.asc:43
+#: book/02-git-basics/sections/aliases.asc:50
+#: book/02-git-basics/sections/aliases.asc:68
+#: book/02-git-basics/sections/getting-a-repository.asc:35
+#: book/02-git-basics/sections/getting-a-repository.asc:47
+#: book/02-git-basics/sections/getting-a-repository.asc:69
+#: book/02-git-basics/sections/getting-a-repository.asc:79
+#: book/02-git-basics/sections/recording-changes.asc:26
+#: book/02-git-basics/sections/recording-changes.asc:43
+#: book/02-git-basics/sections/recording-changes.asc:68
+#: book/02-git-basics/sections/recording-changes.asc:75
+#: book/02-git-basics/sections/recording-changes.asc:97
+#: book/02-git-basics/sections/recording-changes.asc:121
+#: book/02-git-basics/sections/recording-changes.asc:140
+#: book/02-git-basics/sections/recording-changes.asc:167
+#: book/02-git-basics/sections/recording-changes.asc:186
+#: book/02-git-basics/sections/recording-changes.asc:209
+#: book/02-git-basics/sections/recording-changes.asc:282
+#: book/02-git-basics/sections/recording-changes.asc:301
+#: book/02-git-basics/sections/recording-changes.asc:326
+#: book/02-git-basics/sections/recording-changes.asc:344
+#: book/02-git-basics/sections/recording-changes.asc:365
+#: book/02-git-basics/sections/recording-changes.asc:381
+#: book/02-git-basics/sections/recording-changes.asc:418
+#: book/02-git-basics/sections/recording-changes.asc:463
+#: book/02-git-basics/sections/recording-changes.asc:485
+#: book/02-git-basics/sections/recording-changes.asc:515
+#: book/02-git-basics/sections/recording-changes.asc:532
+#: book/02-git-basics/sections/recording-changes.asc:554
+#: book/02-git-basics/sections/recording-changes.asc:562
+#: book/02-git-basics/sections/recording-changes.asc:572
+#: book/02-git-basics/sections/recording-changes.asc:590
+#: book/02-git-basics/sections/recording-changes.asc:598
+#: book/02-git-basics/sections/recording-changes.asc:612
+#: book/02-git-basics/sections/remotes.asc:26
+#: book/02-git-basics/sections/remotes.asc:42
+#: book/02-git-basics/sections/remotes.asc:52
+#: book/02-git-basics/sections/remotes.asc:79
+#: book/02-git-basics/sections/remotes.asc:94
+#: book/02-git-basics/sections/remotes.asc:114
+#: book/02-git-basics/sections/remotes.asc:150
+#: book/02-git-basics/sections/remotes.asc:166
+#: book/02-git-basics/sections/remotes.asc:189
+#: book/02-git-basics/sections/remotes.asc:221
+#: book/02-git-basics/sections/remotes.asc:234
+#: book/02-git-basics/sections/tagging.asc:15
+#: book/02-git-basics/sections/tagging.asc:28
+#: book/02-git-basics/sections/tagging.asc:68
+#: book/02-git-basics/sections/tagging.asc:82
+#: book/02-git-basics/sections/tagging.asc:107
+#: book/02-git-basics/sections/tagging.asc:121
+#: book/02-git-basics/sections/tagging.asc:136
+#: book/02-git-basics/sections/tagging.asc:155
+#: book/02-git-basics/sections/tagging.asc:162
+#: book/02-git-basics/sections/tagging.asc:193
+#: book/02-git-basics/sections/tagging.asc:208
+#: book/02-git-basics/sections/tagging.asc:233
+#: book/02-git-basics/sections/tagging.asc:244
+#: book/02-git-basics/sections/tagging.asc:255
+#: book/02-git-basics/sections/tagging.asc:264
+#: book/02-git-basics/sections/tagging.asc:294
+#: book/02-git-basics/sections/undoing.asc:13
+#: book/02-git-basics/sections/undoing.asc:26
+#: book/02-git-basics/sections/undoing.asc:59
+#: book/02-git-basics/sections/undoing.asc:74
+#: book/02-git-basics/sections/undoing.asc:112
+#: book/02-git-basics/sections/undoing.asc:124
+#: book/02-git-basics/sections/undoing.asc:168
+#: book/02-git-basics/sections/undoing.asc:183
+#: book/02-git-basics/sections/undoing.asc:208
+#: book/02-git-basics/sections/undoing.asc:220
+#: book/02-git-basics/sections/viewing-history.asc:11
+#: book/02-git-basics/sections/viewing-history.asc:18
+#: book/02-git-basics/sections/viewing-history.asc:49
+#: book/02-git-basics/sections/viewing-history.asc:98
+#: book/02-git-basics/sections/viewing-history.asc:140
+#: book/02-git-basics/sections/viewing-history.asc:151
+#: book/02-git-basics/sections/viewing-history.asc:191
+#: book/02-git-basics/sections/viewing-history.asc:238
+#: book/02-git-basics/sections/viewing-history.asc:259
+#: book/02-git-basics/sections/viewing-history.asc:268
+#: book/02-git-basics/sections/viewing-history.asc:291
+#, no-wrap
+msgid ""
+"[source,console]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/aliases.asc:18
+#, no-wrap
+msgid ""
+"$ git config --global alias.co checkout\n"
+"$ git config --global alias.br branch\n"
+"$ git config --global alias.ci commit\n"
+"$ git config --global alias.st status\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/aliases.asc:22
+#, no-wrap
+msgid ""
+"This means that, for example, instead of typing `git commit`, you just need "
+"to type `git ci`.\n"
+"As you go on using Git, you'll probably use other commands frequently as "
+"well; don't hesitate to create new aliases.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/aliases.asc:25
+#, no-wrap
+msgid ""
+"This technique can also be very useful in creating commands that you think "
+"should exist.\n"
+"For example, to correct the usability problem you encountered with unstaging "
+"a file, you can add your own unstage alias to Git:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/aliases.asc:29
+#, no-wrap
+msgid ""
+"$ git config --global alias.unstage 'reset HEAD --'\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/aliases.asc:32
+#, no-wrap
+msgid "This makes the following two commands equivalent:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/aliases.asc:37
+#, no-wrap
+msgid ""
+"$ git unstage fileA\n"
+"$ git reset HEAD -- fileA\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/aliases.asc:41
+#, no-wrap
+msgid ""
+"This seems a bit clearer.\n"
+"It's also common to add a `last` command, like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/aliases.asc:45
+#, no-wrap
+msgid ""
+"$ git config --global alias.last 'log -1 HEAD'\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/aliases.asc:48
+#, no-wrap
+msgid "This way, you can see the last commit easily:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/aliases.asc:55
+#, no-wrap
+msgid ""
+"$ git last\n"
+"commit 66938dae3329c7aebe598c2246a8e6af90d04646\n"
+"Author: Josh Goebel <dreamer3@example.com>\n"
+"Date:   Tue Aug 26 19:48:51 2008 +0800\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/aliases.asc:57
+#, no-wrap
+msgid "    Test for current head\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/aliases.asc:59
+#, no-wrap
+msgid ""
+"    Signed-off-by: Scott Chacon <schacon@example.com>\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/aliases.asc:66
+#, no-wrap
+msgid ""
+"As you can tell, Git simply replaces the new command with whatever you alias "
+"it for.\n"
+"However, maybe you want to run an external command, rather than a Git "
+"subcommand.\n"
+"In that case, you start the command with a `!` character.\n"
+"This is useful if you write your own tools that work with a Git "
+"repository.\n"
+"We can demonstrate by aliasing `git visual` to run `gitk`:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/aliases.asc:70
+#, no-wrap
+msgid ""
+"$ git config --global alias.visual '!gitk'\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/getting-a-repository.asc:3
+#, no-wrap
+msgid ""
+"[[_getting_a_repo]]\n"
+"=== Getting a Git Repository\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/getting-a-repository.asc:5
+#, no-wrap
+msgid "You typically obtain a Git repository in one of two ways:\n"
+msgstr ""
+
+#. type: Bullet: '1. '
+#: book/02-git-basics/sections/getting-a-repository.asc:8
+#, markdown-text, no-wrap
+msgid ""
+"You can take a local directory that is currently not under version control, "
+"and turn it into a Git repository, or\n"
+msgstr ""
+
+#. type: Bullet: '2. '
+#: book/02-git-basics/sections/getting-a-repository.asc:8
+#, markdown-text, no-wrap
+msgid "You can _clone_ an existing Git repository from elsewhere.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/getting-a-repository.asc:10
+#, no-wrap
+msgid ""
+"In either case, you end up with a Git repository on your local machine, "
+"ready for work.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/getting-a-repository.asc:12
+#, no-wrap
+msgid "==== Initializing a Repository in an Existing Directory\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/getting-a-repository.asc:15
+#, no-wrap
+msgid ""
+"If you have a project directory that is currently not under version control "
+"and you want to start controlling it with Git, you first need to go to that "
+"project's directory.\n"
+"If you've never done this, it looks a little different depending on which "
+"system you're running:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/getting-a-repository.asc:18
+#, no-wrap
+msgid ""
+"for Linux:\n"
+"[source,console]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/getting-a-repository.asc:20
+#, no-wrap
+msgid ""
+"$ cd /home/user/my_project\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/getting-a-repository.asc:23
+#, no-wrap
+msgid ""
+"for macOS:\n"
+"[source,console]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/getting-a-repository.asc:25
+#, no-wrap
+msgid ""
+"$ cd /Users/user/my_project\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/getting-a-repository.asc:28
+#, no-wrap
+msgid ""
+"for Windows:\n"
+"[source,console]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/getting-a-repository.asc:30
+#, no-wrap
+msgid ""
+"$ cd C:/Users/user/my_project\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/getting-a-repository.asc:33
+#, no-wrap
+msgid "and type:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/getting-a-repository.asc:37
+#, no-wrap
+msgid ""
+"$ git init\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/getting-a-repository.asc:42
+#, no-wrap
+msgid ""
+"This creates a new subdirectory named `.git` that contains all of your "
+"necessary repository files -- a Git repository skeleton.\n"
+"At this point, nothing in your project is tracked yet.\n"
+"See <<ch10-git-internals#ch10-git-internals>> for more information about "
+"exactly what files are contained in the `.git` directory you just "
+"created.(((git commands, init)))\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/getting-a-repository.asc:45
+#, no-wrap
+msgid ""
+"If you want to start version-controlling existing files (as opposed to an "
+"empty directory), you should probably begin tracking those files and do an "
+"initial commit.\n"
+"You can accomplish that with a few `git add` commands that specify the files "
+"you want to track, followed by a `git commit`:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/getting-a-repository.asc:51
+#, no-wrap
+msgid ""
+"$ git add *.c\n"
+"$ git add LICENSE\n"
+"$ git commit -m 'Initial project version'\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/getting-a-repository.asc:55
+#, no-wrap
+msgid ""
+"We'll go over what these commands do in just a minute.\n"
+"At this point, you have a Git repository with tracked files and an initial "
+"commit.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/getting-a-repository.asc:58
+#, no-wrap
+msgid ""
+"[[_git_cloning]]\n"
+"==== Cloning an Existing Repository\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/getting-a-repository.asc:64
+#, no-wrap
+msgid ""
+"If you want to get a copy of an existing Git repository -- for example, a "
+"project you'd like to contribute to -- the command you need is `git "
+"clone`.\n"
+"If you're familiar with other VCSs such as Subversion, you'll notice that "
+"the command is \"clone\" and not \"checkout\".\n"
+"This is an important distinction -- instead of getting just a working copy, "
+"Git receives a full copy of nearly all data that the server has.\n"
+"Every version of every file for the history of the project is pulled down by "
+"default when you run `git clone`.\n"
+"In fact, if your server disk gets corrupted, you can often use nearly any of "
+"the clones on any client to set the server back to the state it was in when "
+"it was cloned (you may lose some server-side hooks and such, but all the "
+"versioned data would be there -- see "
+"<<ch04-git-on-the-server#_getting_git_on_a_server>> for more details).\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/getting-a-repository.asc:67
+#, no-wrap
+msgid ""
+"You clone a repository with `git clone <url>`.(((git commands, clone)))\n"
+"For example, if you want to clone the Git linkable library called `libgit2`, "
+"you can do so like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/getting-a-repository.asc:71
+#, no-wrap
+msgid ""
+"$ git clone https://github.com/libgit2/libgit2\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/getting-a-repository.asc:75
+#, no-wrap
+msgid ""
+"That creates a directory named `libgit2`, initializes a `.git` directory "
+"inside it, pulls down all the data for that repository, and checks out a "
+"working copy of the latest version.\n"
+"If you go into the new `libgit2` directory that was just created, you'll see "
+"the project files in there, ready to be worked on or used.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/getting-a-repository.asc:77
+#, no-wrap
+msgid ""
+"If you want to clone the repository into a directory named something other "
+"than `libgit2`, you can specify the new directory name as an additional "
+"argument:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/getting-a-repository.asc:81
+#, no-wrap
+msgid ""
+"$ git clone https://github.com/libgit2/libgit2 mylibgit\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/getting-a-repository.asc:84
+#, no-wrap
+msgid ""
+"That command does the same thing as the previous one, but the target "
+"directory is called `mylibgit`.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/getting-a-repository.asc:87
+#, no-wrap
+msgid ""
+"Git has a number of different transfer protocols you can use.\n"
+"The previous example uses the `https://` protocol, but you may also see "
+"`git://` or `user@server:path/to/repo.git`, which uses the SSH transfer "
+"protocol.\n"
+"<<ch04-git-on-the-server#_getting_git_on_a_server>> will introduce all of "
+"the available options the server can set up to access your Git repository "
+"and the pros and cons of each.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:2
+#, no-wrap
+msgid "=== Recording Changes to the Repository\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:5
+#, no-wrap
+msgid ""
+"At this point, you should have a _bona fide_ Git repository on your local "
+"machine, and a checkout or _working copy_ of all of its files in front of "
+"you.\n"
+"Typically, you'll want to start making changes and committing snapshots of "
+"those changes into your repository each time the project reaches a state you "
+"want to record.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:9
+#, no-wrap
+msgid ""
+"Remember that each file in your working directory can be in one of two "
+"states: _tracked_ or _untracked_.\n"
+"Tracked files are files that were in the last snapshot, as well as any newly "
+"staged files; they can be unmodified, modified, or staged.\n"
+"In short, tracked files are files that Git knows about.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:12
+#, no-wrap
+msgid ""
+"Untracked files are everything else -- any files in your working directory "
+"that were not in your last snapshot and are not in your staging area.\n"
+"When you first clone a repository, all of your files will be tracked and "
+"unmodified because Git just checked them out and you haven't edited "
+"anything.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:15
+#, no-wrap
+msgid ""
+"As you edit files, Git sees them as modified, because you've changed them "
+"since your last commit.\n"
+"As you work, you selectively stage these modified files and then commit all "
+"those staged changes, and the cycle repeats.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:18
+#, no-wrap
+msgid ""
+".The lifecycle of the status of your files\n"
+"image::images/lifecycle.png[The lifecycle of the status of your files]\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:21
+#, no-wrap
+msgid ""
+"[[_checking_status]]\n"
+"==== Checking the Status of Your Files\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:24
+#, no-wrap
+msgid ""
+"The main tool you use to determine which files are in which state is the "
+"`git status` command.(((git commands, status)))\n"
+"If you run this command directly after a clone, you should see something "
+"like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:31
+#, no-wrap
+msgid ""
+"$ git status\n"
+"On branch master\n"
+"Your branch is up-to-date with 'origin/master'.\n"
+"nothing to commit, working tree clean\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:38
+#, no-wrap
+msgid ""
+"This means you have a clean working directory; in other words, none of your "
+"tracked files are modified.\n"
+"Git also doesn't see any untracked files, or they would be listed here.\n"
+"Finally, the command tells you which branch you're on and informs you that "
+"it has not diverged from the same branch on the server.\n"
+"For now, that branch is always `master`, which is the default; you won't "
+"worry about it here.\n"
+"<<ch03-git-branching#ch03-git-branching>> will go over branches and "
+"references in detail.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:41
+#, no-wrap
+msgid ""
+"Let's say you add a new file to your project, a simple `README` file.\n"
+"If the file didn't exist before, and you run `git status`, you see your "
+"untracked file like so:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:50
+#, no-wrap
+msgid ""
+"$ echo 'My Project' > README\n"
+"$ git status\n"
+"On branch master\n"
+"Your branch is up-to-date with 'origin/master'.\n"
+"Untracked files:\n"
+"  (use \"git add <file>...\" to include in what will be committed)\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:52
+#, no-wrap
+msgid "    README\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:54
+#, no-wrap
+msgid ""
+"nothing added to commit but untracked files present (use \"git add\" to "
+"track)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:60
+#, no-wrap
+msgid ""
+"You can see that your new `README` file is untracked, because it's under the "
+"\"`Untracked files`\" heading in your status output.\n"
+"Untracked basically means that Git sees a file you didn't have in the "
+"previous snapshot (commit), and which hasn't yet been staged; Git won't "
+"start including it in your commit snapshots until you explicitly tell it to "
+"do so.\n"
+"It does this so you don't accidentally begin including generated binary "
+"files or other files that you did not mean to include.\n"
+"You do want to start including `README`, so let's start tracking the file.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:63
+#, no-wrap
+msgid ""
+"[[_tracking_files]]\n"
+"==== Tracking New Files\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:66
+#, no-wrap
+msgid ""
+"In order to begin tracking a new file, you use the command `git add`.(((git "
+"commands, add)))\n"
+"To begin tracking the `README` file, you can run this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:70
+#, no-wrap
+msgid ""
+"$ git add README\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:73
+#, no-wrap
+msgid ""
+"If you run your status command again, you can see that your `README` file is "
+"now tracked and staged to be committed:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:81
+#, no-wrap
+msgid ""
+"$ git status\n"
+"On branch master\n"
+"Your branch is up-to-date with 'origin/master'.\n"
+"Changes to be committed:\n"
+"  (use \"git restore --staged <file>...\" to unstage)\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:83
+#: book/02-git-basics/sections/recording-changes.asc:105
+#, no-wrap
+msgid "    new file:   README\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:84
+#: book/02-git-basics/sections/recording-changes.asc:112
+#: book/02-git-basics/sections/recording-changes.asc:132
+#: book/02-git-basics/sections/recording-changes.asc:157
+#: book/02-git-basics/sections/undoing.asc:133
+#: book/02-git-basics/sections/undoing.asc:177
+#: book/02-git-basics/sections/undoing.asc:196
+#: book/02-git-basics/sections/undoing.asc:214
+#: book/02-git-basics/sections/undoing.asc:228
+#, no-wrap
+msgid "----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:90
+#, no-wrap
+msgid ""
+"You can tell that it's staged because it's under the \"`Changes to be "
+"committed`\" heading.\n"
+"If you commit at this point, the version of the file at the time you ran "
+"`git add` is what will be in the subsequent historical snapshot.\n"
+"You may recall that when you ran `git init` earlier, you then ran `git add "
+"<files>` -- that was to begin tracking files in your directory.(((git "
+"commands, init)))(((git commands, add)))\n"
+"The `git add` command takes a path name for either a file or a directory; if "
+"it's a directory, the command adds all the files in that directory "
+"recursively.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:92
+#, no-wrap
+msgid "==== Staging Modified Files\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:95
+#, no-wrap
+msgid ""
+"Let's change a file that was already tracked.\n"
+"If you change a previously tracked file called `CONTRIBUTING.md` and then "
+"run your `git status` command again, you get something that looks like "
+"this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:103
+#: book/02-git-basics/sections/recording-changes.asc:288
+#, no-wrap
+msgid ""
+"$ git status\n"
+"On branch master\n"
+"Your branch is up-to-date with 'origin/master'.\n"
+"Changes to be committed:\n"
+"  (use \"git reset HEAD <file>...\" to unstage)\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:109
+#: book/02-git-basics/sections/recording-changes.asc:154
+#: book/02-git-basics/sections/recording-changes.asc:294
+#: book/02-git-basics/sections/recording-changes.asc:358
+#: book/02-git-basics/sections/undoing.asc:88
+#: book/02-git-basics/sections/undoing.asc:116
+#, no-wrap
+msgid ""
+"Changes not staged for commit:\n"
+"  (use \"git add <file>...\" to update what will be committed)\n"
+"  (use \"git checkout -- <file>...\" to discard changes in working "
+"directory)\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:111
+#: book/02-git-basics/sections/recording-changes.asc:156
+#: book/02-git-basics/sections/recording-changes.asc:354
+#: book/02-git-basics/sections/recording-changes.asc:494
+#, no-wrap
+msgid "    modified:   CONTRIBUTING.md\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:119
+#, no-wrap
+msgid ""
+"The `CONTRIBUTING.md` file appears under a section named \"`Changes not "
+"staged for commit`\" -- which means that a file that is tracked has been "
+"modified in the working directory but not yet staged.\n"
+"To stage it, you run the `git add` command.\n"
+"`git add` is a multipurpose command -- you use it to begin tracking new "
+"files, to stage files, and to do other things like marking merge-conflicted "
+"files as resolved.\n"
+"It may be helpful to think of it more as \"`add precisely this content to "
+"the next commit`\" rather than \"`add this file to the project`\".(((git "
+"commands, add)))\n"
+"Let's run `git add` now to stage the `CONTRIBUTING.md` file, and then run "
+"`git status` again:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:128
+#: book/02-git-basics/sections/recording-changes.asc:174
+#, no-wrap
+msgid ""
+"$ git add CONTRIBUTING.md\n"
+"$ git status\n"
+"On branch master\n"
+"Your branch is up-to-date with 'origin/master'.\n"
+"Changes to be committed:\n"
+"  (use \"git reset HEAD <file>...\" to unstage)\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:131
+#: book/02-git-basics/sections/recording-changes.asc:150
+#, no-wrap
+msgid ""
+"    new file:   README\n"
+"    modified:   CONTRIBUTING.md\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:138
+#, no-wrap
+msgid ""
+"Both files are staged and will go into your next commit.\n"
+"At this point, suppose you remember one little change that you want to make "
+"in `CONTRIBUTING.md` before you commit it.\n"
+"You open it again and make that change, and you're ready to commit.\n"
+"However, let's run `git status` one more time:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:147
+#, no-wrap
+msgid ""
+"$ vim CONTRIBUTING.md\n"
+"$ git status\n"
+"On branch master\n"
+"Your branch is up-to-date with 'origin/master'.\n"
+"Changes to be committed:\n"
+"  (use \"git reset HEAD <file>...\" to unstage)\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:165
+#, no-wrap
+msgid ""
+"What the heck?\n"
+"Now `CONTRIBUTING.md` is listed as both staged _and_ unstaged.\n"
+"How is that possible?\n"
+"It turns out that Git stages a file exactly as it is when you run the `git "
+"add` command.\n"
+"If you commit now, the version of `CONTRIBUTING.md` as it was when you last "
+"ran the `git add` command is how it will go into the commit, not the version "
+"of the file as it looks in your working directory when you run `git "
+"commit`.\n"
+"If you modify a file after you run `git add`, you have to run `git add` "
+"again to stage the latest version of the file:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:177
+#, no-wrap
+msgid ""
+"    new file:   README\n"
+"    modified:   CONTRIBUTING.md\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:180
+#, no-wrap
+msgid "==== Short Status\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:184
+#, no-wrap
+msgid ""
+"While the `git status` output is pretty comprehensive, it's also quite "
+"wordy.\n"
+"Git also has a short status flag so you can see your changes in a more "
+"compact way.\n"
+"If you run `git status -s` or `git status --short` you get a far more "
+"simplified output from the command:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:193
+#, no-wrap
+msgid ""
+"$ git status -s\n"
+" M README\n"
+"MM Rakefile\n"
+"A  lib/git.rb\n"
+"M  lib/simplegit.rb\n"
+"?? LICENSE.txt\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:199
+#, no-wrap
+msgid ""
+"New files that aren't tracked have a `??` next to them, new files that have "
+"been added to the staging area have an `A`, modified files have an `M` and "
+"so on.\n"
+"There are two columns to the output -- the left-hand column indicates the "
+"status of the staging area and the right-hand column indicates the status of "
+"the working tree.\n"
+"So for example in that output, the `README` file is modified in the working "
+"directory but not yet staged, while the `lib/simplegit.rb` file is modified "
+"and staged.\n"
+"The `Rakefile` was modified, staged and then modified again, so there are "
+"changes to it that are both staged and unstaged.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:202
+#, no-wrap
+msgid ""
+"[[_ignoring]]\n"
+"==== Ignoring Files\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:207
+#, no-wrap
+msgid ""
+"Often, you'll have a class of files that you don't want Git to automatically "
+"add or even show you as being untracked.\n"
+"These are generally automatically generated files such as log files or files "
+"produced by your build system.\n"
+"In such cases, you can create a file listing patterns to match them named "
+"`.gitignore`.(((ignoring files)))\n"
+"Here is an example `.gitignore` file:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:213
+#, no-wrap
+msgid ""
+"$ cat .gitignore\n"
+"*.[oa]\n"
+"*~\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:219
+#, no-wrap
+msgid ""
+"The first line tells Git to ignore any files ending in \"`.o`\" or \"`.a`\" "
+"-- object and archive files that may be the product of building your code.\n"
+"The second line tells Git to ignore all files whose names end with a tilde "
+"(`~`), which is used by many text editors such as Emacs to mark temporary "
+"files.\n"
+"You may also include a log, tmp, or pid directory; automatically generated "
+"documentation; and so on.\n"
+"Setting up a `.gitignore` file for your new repository before you get going "
+"is generally a good idea so you don't accidentally commit files that you "
+"really don't want in your Git repository.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:221
+#, no-wrap
+msgid ""
+"The rules for the patterns you can put in the `.gitignore` file are as "
+"follows:\n"
+msgstr ""
+
+#. type: Bullet: '*  '
+#: book/02-git-basics/sections/recording-changes.asc:227
+#, markdown-text, no-wrap
+msgid "Blank lines or lines starting with `#` are ignored.\n"
+msgstr ""
+
+#. type: Bullet: '*  '
+#: book/02-git-basics/sections/recording-changes.asc:227
+#, markdown-text, no-wrap
+msgid ""
+"Standard glob patterns work, and will be applied recursively throughout the "
+"entire working tree.\n"
+msgstr ""
+
+#. type: Bullet: '*  '
+#: book/02-git-basics/sections/recording-changes.asc:227
+#, markdown-text, no-wrap
+msgid "You can start patterns with a forward slash (`/`) to avoid recursivity.\n"
+msgstr ""
+
+#. type: Bullet: '*  '
+#: book/02-git-basics/sections/recording-changes.asc:227
+#, markdown-text, no-wrap
+msgid "You can end patterns with a forward slash (`/`) to specify a directory.\n"
+msgstr ""
+
+#. type: Bullet: '*  '
+#: book/02-git-basics/sections/recording-changes.asc:227
+#, markdown-text, no-wrap
+msgid "You can negate a pattern by starting it with an exclamation point (`!`).\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:231
+#, no-wrap
+msgid ""
+"Glob patterns are like simplified regular expressions that shells use.\n"
+"An asterisk (`\\*`) matches zero or more characters; `[abc]` matches any "
+"character inside the brackets (in this case a, b, or c); a question mark "
+"(`?`) matches a single character; and brackets enclosing characters "
+"separated by a hyphen (`[0-9]`) matches any character between them (in this "
+"case 0 through 9).\n"
+"You can also use two asterisks to match nested directories; `a/**/z` would "
+"match `a/z`, `a/b/z`, `a/b/c/z`, and so on.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:233
+#, no-wrap
+msgid "Here is another example `.gitignore` file:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:235
+#: book/02-git-basics/sections/recording-changes.asc:432
+#, no-wrap
+msgid ""
+"[source]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:238
+#, no-wrap
+msgid ""
+"# ignore all .a files\n"
+"*.a\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:241
+#, no-wrap
+msgid ""
+"# but do track lib.a, even though you're ignoring .a files above\n"
+"!lib.a\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:244
+#, no-wrap
+msgid ""
+"# only ignore the TODO file in the current directory, not subdir/TODO\n"
+"/TODO\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:247
+#, no-wrap
+msgid ""
+"# ignore all files in any directory named build\n"
+"build/\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:250
+#, no-wrap
+msgid ""
+"# ignore doc/notes.txt, but not doc/server/arch.txt\n"
+"doc/*.txt\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:253
+#, no-wrap
+msgid ""
+"# ignore all .pdf files in the doc/ directory and any of its "
+"subdirectories\n"
+"doc/**/*.pdf\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:256
+#, no-wrap
+msgid ""
+"[TIP]\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:258
+#, no-wrap
+msgid ""
+"GitHub maintains a fairly comprehensive list of good `.gitignore` file "
+"examples for dozens of projects and languages at "
+"https://github.com/github/gitignore[] if you want a starting point for your "
+"project.\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:261
+#: book/02-git-basics/sections/recording-changes.asc:425
+#: book/02-git-basics/sections/recording-changes.asc:453
+#: book/02-git-basics/sections/remotes.asc:131
+#: book/02-git-basics/sections/undoing.asc:35
+#: book/02-git-basics/sections/undoing.asc:43
+#: book/02-git-basics/sections/viewing-history.asc:248
+#, no-wrap
+msgid ""
+"[NOTE]\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:266
+#, no-wrap
+msgid ""
+"In the simple case, a repository might have a single `.gitignore` file in "
+"its root directory, which applies recursively to the entire repository.\n"
+"However, it is also possible to have additional `.gitignore` files in "
+"subdirectories.\n"
+"The rules in these nested `.gitignore` files apply only to the files under "
+"the directory where they are located.\n"
+"The Linux kernel source repository has 206 `.gitignore` files.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:268
+#, no-wrap
+msgid ""
+"It is beyond the scope of this book to get into the details of multiple "
+"`.gitignore` files; see `man gitignore` for the details.\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:272
+#, no-wrap
+msgid ""
+"[[_git_diff_staged]]\n"
+"==== Viewing Your Staged and Unstaged Changes\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:277
+#, no-wrap
+msgid ""
+"If the `git status` command is too vague for you -- you want to know exactly "
+"what you changed, not just which files were changed -- you can use the `git "
+"diff` command.(((git commands, diff)))\n"
+"We'll cover `git diff` in more detail later, but you'll probably use it most "
+"often to answer these two questions: What have you changed but not yet "
+"staged?\n"
+"And what have you staged that you are about to commit?\n"
+"Although `git status` answers those questions very generally by listing the "
+"file names, `git diff` shows you the exact lines added and removed -- the "
+"patch, as it were.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:280
+#, no-wrap
+msgid ""
+"Let's say you edit and stage the `README` file again and then edit the "
+"`CONTRIBUTING.md` file without staging it.\n"
+"If you run your `git status` command, you once again see something like "
+"this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:290
+#, no-wrap
+msgid "    modified:   README\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:296
+#: book/02-git-basics/sections/recording-changes.asc:360
+#: book/02-git-basics/sections/undoing.asc:90
+#: book/02-git-basics/sections/undoing.asc:118
+#, no-wrap
+msgid ""
+"    modified:   CONTRIBUTING.md\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:299
+#, no-wrap
+msgid ""
+"To see what you've changed but not yet staged, type `git diff` with no other "
+"arguments:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:314
+#, no-wrap
+msgid ""
+"$ git diff\n"
+"diff --git a/CONTRIBUTING.md b/CONTRIBUTING.md\n"
+"index 8ebb991..643e24f 100644\n"
+"--- a/CONTRIBUTING.md\n"
+"+++ b/CONTRIBUTING.md\n"
+"@@ -65,7 +65,8 @@ branch directly, things can get messy.\n"
+" Please include a nice description of your changes when you submit your "
+"PR;\n"
+" if we have to read the whole diff to figure out why you're contributing\n"
+" in the first place, you're less likely to get feedback and have your "
+"change\n"
+"-merged in.\n"
+"+merged in. Also, split your changes into comprehensive chunks if your patch "
+"is\n"
+"+longer than a dozen lines.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:317
+#: book/02-git-basics/sections/recording-changes.asc:397
+#, no-wrap
+msgid ""
+" If you are starting to work on a particular area, feel free to submit a "
+"PR\n"
+" that highlights your work in progress (and note in the PR title that it's\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:321
+#, no-wrap
+msgid ""
+"That command compares what is in your working directory with what is in your "
+"staging area.\n"
+"The result tells you the changes you've made that you haven't yet staged.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:324
+#, no-wrap
+msgid ""
+"If you want to see what you've staged that will go into your next commit, "
+"you can use `git diff --staged`.\n"
+"This command compares your staged changes to your last commit:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:335
+#, no-wrap
+msgid ""
+"$ git diff --staged\n"
+"diff --git a/README b/README\n"
+"new file mode 100644\n"
+"index 0000000..03902a1\n"
+"--- /dev/null\n"
+"+++ b/README\n"
+"@@ -0,0 +1 @@\n"
+"+My Project\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:339
+#, no-wrap
+msgid ""
+"It's important to note that `git diff` by itself doesn't show all changes "
+"made since your last commit -- only changes that are still unstaged.\n"
+"If you've staged all of your changes, `git diff` will give you no output.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:342
+#, no-wrap
+msgid ""
+"For another example, if you stage the `CONTRIBUTING.md` file and then edit "
+"it, you can use `git diff` to see the changes in the file that are staged "
+"and the changes that are unstaged.\n"
+"If our environment looks like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:352
+#, no-wrap
+msgid ""
+"$ git add CONTRIBUTING.md\n"
+"$ echo '# test line' >> CONTRIBUTING.md\n"
+"$ git status\n"
+"On branch master\n"
+"Your branch is up-to-date with 'origin/master'.\n"
+"Changes to be committed:\n"
+"  (use \"git reset HEAD <file>...\" to unstage)\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:363
+#, no-wrap
+msgid "Now you can use `git diff` to see what is still unstaged:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:373
+#, no-wrap
+msgid ""
+"$ git diff\n"
+"diff --git a/CONTRIBUTING.md b/CONTRIBUTING.md\n"
+"index 643e24f..87f08c8 100644\n"
+"--- a/CONTRIBUTING.md\n"
+"+++ b/CONTRIBUTING.md\n"
+"@@ -119,3 +119,4 @@ at the\n"
+" ## Starter Projects\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:376
+#, no-wrap
+msgid ""
+" See our [projects "
+"list](https://github.com/libgit2/libgit2/blob/development/PROJECTS.md).\n"
+"+# test line\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:379
+#, no-wrap
+msgid ""
+"and `git diff --cached` to see what you've staged so far (`--staged` and "
+"`--cached` are synonyms):\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:394
+#, no-wrap
+msgid ""
+"$ git diff --cached\n"
+"diff --git a/CONTRIBUTING.md b/CONTRIBUTING.md\n"
+"index 8ebb991..643e24f 100644\n"
+"--- a/CONTRIBUTING.md\n"
+"+++ b/CONTRIBUTING.md\n"
+"@@ -65,7 +65,8 @@ branch directly, things can get messy.\n"
+" Please include a nice description of your changes when you submit your "
+"PR;\n"
+" if we have to read the whole diff to figure out why you're contributing\n"
+" in the first place, you're less likely to get feedback and have your "
+"change\n"
+"-merged in.\n"
+"+merged in. Also, split your changes into comprehensive chunks if your patch "
+"is\n"
+"+longer than a dozen lines.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:401
+#, no-wrap
+msgid ""
+"[NOTE]\n"
+".Git Diff in an External Tool\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:406
+#, no-wrap
+msgid ""
+"We will continue to use the `git diff` command in various ways throughout "
+"the rest of the book.\n"
+"There is another way to look at these diffs if you prefer a graphical or "
+"external diff viewing program instead.\n"
+"If you run `git difftool` instead of `git diff`, you can view any of these "
+"diffs in software like emerge, vimdiff and many more (including commercial "
+"products).\n"
+"Run `git difftool --tool-help` to see what is available on your system.\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:410
+#, no-wrap
+msgid ""
+"[[_committing_changes]]\n"
+"==== Committing Your Changes\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:416
+#, no-wrap
+msgid ""
+"Now that your staging area is set up the way you want it, you can commit "
+"your changes.\n"
+"Remember that anything that is still unstaged -- any files you have created "
+"or modified that you haven't run `git add` on since you edited them -- won't "
+"go into this commit.\n"
+"They will stay as modified files on your disk.\n"
+"In this case, let's say that the last time you ran `git status`, you saw "
+"that everything was staged, so you're ready to commit your changes.(((git "
+"commands, status)))\n"
+"The simplest way to commit is to type `git commit`:(((git commands, "
+"commit)))\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:420
+#, no-wrap
+msgid ""
+"$ git commit\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:423
+#, no-wrap
+msgid "Doing so launches your editor of choice.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:427
+#, no-wrap
+msgid ""
+"This is set by your shell's `EDITOR` environment variable -- usually vim or "
+"emacs, although you can configure it with whatever you want using the `git "
+"config --global core.editor` command as you saw in "
+"<<ch01-getting-started#ch01-getting-started>>.(((editor, changing "
+"default)))(((git commands, config)))\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:430
+#, no-wrap
+msgid "The editor displays the following text (this example is a Vim screen):\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:447
+#, no-wrap
+msgid ""
+"# Please enter the commit message for your changes. Lines starting\n"
+"# with '#' will be ignored, and an empty message aborts the commit.\n"
+"# On branch master\n"
+"# Your branch is up-to-date with 'origin/master'.\n"
+"#\n"
+"# Changes to be committed:\n"
+"#\tnew file:   README\n"
+"#\tmodified:   CONTRIBUTING.md\n"
+"#\n"
+"~\n"
+"~\n"
+"~\n"
+"\".git/COMMIT_EDITMSG\" 9L, 283C\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:451
+#, no-wrap
+msgid ""
+"You can see that the default commit message contains the latest output of "
+"the `git status` command commented out and one empty line on top.\n"
+"You can remove these comments and type your commit message, or you can leave "
+"them there to help you remember what you're committing.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:456
+#, no-wrap
+msgid ""
+"For an even more explicit reminder of what you've modified, you can pass the "
+"`-v` option to `git commit`.\n"
+"Doing so also puts the diff of your change in the editor so you can see "
+"exactly what changes you're committing.\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:459
+#, no-wrap
+msgid ""
+"When you exit the editor, Git creates your commit with that commit message "
+"(with the comments and diff stripped out).\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:461
+#, no-wrap
+msgid ""
+"Alternatively, you can type your commit message inline with the `commit` "
+"command by specifying it after a `-m` flag, like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:468
+#, no-wrap
+msgid ""
+"$ git commit -m \"Story 182: fix benchmarks for speed\"\n"
+"[master 463dc4f] Story 182: fix benchmarks for speed\n"
+" 2 files changed, 2 insertions(+)\n"
+" create mode 100644 README\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:472
+#, no-wrap
+msgid ""
+"Now you've created your first commit!\n"
+"You can see that the commit has given you some output about itself: which "
+"branch you committed to (`master`), what SHA-1 checksum the commit has "
+"(`463dc4f`), how many files were changed, and statistics about lines added "
+"and removed in the commit.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:476
+#, no-wrap
+msgid ""
+"Remember that the commit records the snapshot you set up in your staging "
+"area.\n"
+"Anything you didn't stage is still sitting there modified; you can do "
+"another commit to add it to your history.\n"
+"Every time you perform a commit, you're recording a snapshot of your project "
+"that you can revert to or compare to later.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:478
+#, no-wrap
+msgid "==== Skipping the Staging Area\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:483
+#, no-wrap
+msgid ""
+"(((staging area, skipping)))\n"
+"Although it can be amazingly useful for crafting commits exactly how you "
+"want them, the staging area is sometimes a bit more complex than you need in "
+"your workflow.\n"
+"If you want to skip the staging area, Git provides a simple shortcut.\n"
+"Adding the `-a` option to the `git commit` command makes Git automatically "
+"stage every file that is already tracked before doing the commit, letting "
+"you skip the `git add` part:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:492
+#, no-wrap
+msgid ""
+"$ git status\n"
+"On branch master\n"
+"Your branch is up-to-date with 'origin/master'.\n"
+"Changes not staged for commit:\n"
+"  (use \"git add <file>...\" to update what will be committed)\n"
+"  (use \"git checkout -- <file>...\" to discard changes in working "
+"directory)\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:499
+#, no-wrap
+msgid ""
+"no changes added to commit (use \"git add\" and/or \"git commit -a\")\n"
+"$ git commit -a -m 'Add new benchmarks'\n"
+"[master 83e38c7] Add new benchmarks\n"
+" 1 file changed, 5 insertions(+), 0 deletions(-)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:504
+#, no-wrap
+msgid ""
+"Notice how you don't have to run `git add` on the `CONTRIBUTING.md` file in "
+"this case before you commit.\n"
+"That's because the `-a` flag includes all changed files.\n"
+"This is convenient, but be careful; sometimes this flag will cause you to "
+"include unwanted changes.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:507
+#, no-wrap
+msgid ""
+"[[_removing_files]]\n"
+"==== Removing Files\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:511
+#, no-wrap
+msgid ""
+"(((files, removing)))\n"
+"To remove a file from Git, you have to remove it from your tracked files "
+"(more accurately, remove it from your staging area) and then commit.\n"
+"The `git rm` command does that, and also removes the file from your working "
+"directory so you don't see it as an untracked file the next time around.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:513
+#, no-wrap
+msgid ""
+"If you simply remove the file from your working directory, it shows up under "
+"the \"`Changes not staged for commit`\" (that is, _unstaged_) area of your "
+"`git status` output:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:523
+#, no-wrap
+msgid ""
+"$ rm PROJECTS.md\n"
+"$ git status\n"
+"On branch master\n"
+"Your branch is up-to-date with 'origin/master'.\n"
+"Changes not staged for commit:\n"
+"  (use \"git add/rm <file>...\" to update what will be committed)\n"
+"  (use \"git checkout -- <file>...\" to discard changes in working "
+"directory)\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:525
+#, no-wrap
+msgid "        deleted:    PROJECTS.md\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:527
+#, no-wrap
+msgid ""
+"no changes added to commit (use \"git add\" and/or \"git commit -a\")\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:530
+#, no-wrap
+msgid "Then, if you run `git rm`, it stages the file's removal:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:540
+#, no-wrap
+msgid ""
+"$ git rm PROJECTS.md\n"
+"rm 'PROJECTS.md'\n"
+"$ git status\n"
+"On branch master\n"
+"Your branch is up-to-date with 'origin/master'.\n"
+"Changes to be committed:\n"
+"  (use \"git reset HEAD <file>...\" to unstage)\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:542
+#, no-wrap
+msgid ""
+"    deleted:    PROJECTS.md\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:547
+#, no-wrap
+msgid ""
+"The next time you commit, the file will be gone and no longer tracked.\n"
+"If you modified the file or had already added it to the staging area, you "
+"must force the removal with the `-f` option.\n"
+"This is a safety feature to prevent accidental removal of data that hasn't "
+"yet been recorded in a snapshot and that can't be recovered from Git.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:552
+#, no-wrap
+msgid ""
+"Another useful thing you may want to do is to keep the file in your working "
+"tree but remove it from your staging area.\n"
+"In other words, you may want to keep the file on your hard drive but not "
+"have Git track it anymore.\n"
+"This is particularly useful if you forgot to add something to your "
+"`.gitignore` file and accidentally staged it, like a large log file or a "
+"bunch of `.a` compiled files.\n"
+"To do this, use the `--cached` option:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:556
+#, no-wrap
+msgid ""
+"$ git rm --cached README\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:560
+#, no-wrap
+msgid ""
+"You can pass files, directories, and file-glob patterns to the `git rm` "
+"command.\n"
+"That means you can do things such as:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:564
+#, no-wrap
+msgid ""
+"$ git rm log/\\*.log\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:570
+#, no-wrap
+msgid ""
+"Note the backslash (`\\`) in front of the `*`.\n"
+"This is necessary because Git does its own filename expansion in addition to "
+"your shell's filename expansion.\n"
+"This command removes all files that have the `.log` extension in the `log/` "
+"directory.\n"
+"Or, you can do something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:574
+#, no-wrap
+msgid ""
+"$ git rm \\*~\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:577
+#, no-wrap
+msgid "This command removes all files whose names end with a `~`.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:580
+#, no-wrap
+msgid ""
+"[[_git_mv]]\n"
+"==== Moving Files\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:585
+#, no-wrap
+msgid ""
+"(((files, moving)))\n"
+"Unlike many other VCSs, Git doesn't explicitly track file movement.\n"
+"If you rename a file in Git, no metadata is stored in Git that tells it you "
+"renamed the file.\n"
+"However, Git is pretty smart about figuring that out after the fact -- we'll "
+"deal with detecting file movement a bit later.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:588
+#, no-wrap
+msgid ""
+"Thus it's a bit confusing that Git has a `mv` command.\n"
+"If you want to rename a file in Git, you can run something like:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:592
+#, no-wrap
+msgid ""
+"$ git mv file_from file_to\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:596
+#, no-wrap
+msgid ""
+"and it works fine.\n"
+"In fact, if you run something like this and look at the status, you'll see "
+"that Git considers it a renamed file:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:605
+#, no-wrap
+msgid ""
+"$ git mv README.md README\n"
+"$ git status\n"
+"On branch master\n"
+"Your branch is up-to-date with 'origin/master'.\n"
+"Changes to be committed:\n"
+"  (use \"git reset HEAD <file>...\" to unstage)\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:607
+#, no-wrap
+msgid ""
+"    renamed:    README.md -> README\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:610
+#, no-wrap
+msgid "However, this is equivalent to running something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:616
+#, no-wrap
+msgid ""
+"$ mv README.md README\n"
+"$ git rm README.md\n"
+"$ git add README\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/recording-changes.asc:620
+#, no-wrap
+msgid ""
+"Git figures out that it's a rename implicitly, so it doesn't matter if you "
+"rename a file that way or with the `mv` command.\n"
+"The only real difference is that `git mv` is one command instead of three -- "
+"it's a convenience function.\n"
+"More importantly, you can use any tool you like to rename a file, and "
+"address the add/rm later, before you commit.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:3
+#, no-wrap
+msgid ""
+"[[_remote_repos]]\n"
+"=== Working with Remotes\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:10
+#, no-wrap
+msgid ""
+"To be able to collaborate on any Git project, you need to know how to manage "
+"your remote repositories.\n"
+"Remote repositories are versions of your project that are hosted on the "
+"Internet or network somewhere.\n"
+"You can have several of them, each of which generally is either read-only or "
+"read/write for you.\n"
+"Collaborating with others involves managing these remote repositories and "
+"pushing and pulling data to and from them when you need to share work.\n"
+"Managing remote repositories includes knowing how to add remote "
+"repositories, remove remotes that are no longer valid, manage various remote "
+"branches and define them as being tracked or not, and more.\n"
+"In this section, we'll cover some of these remote-management skills.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:13
+#, no-wrap
+msgid ""
+"[NOTE]\n"
+".Remote repositories can be on your local machine.\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:17
+#, no-wrap
+msgid ""
+"It is entirely possible that you can be working with a \"`remote`\" "
+"repository that is, in fact, on the same host you are.\n"
+"The word \"`remote`\" does not necessarily imply that the repository is "
+"somewhere else on the network or Internet, only that it is elsewhere.\n"
+"Working with such a remote repository would still involve all the standard "
+"pushing, pulling and fetching operations as with any other remote.\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:20
+#, no-wrap
+msgid "==== Showing Your Remotes\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:24
+#, no-wrap
+msgid ""
+"To see which remote servers you have configured, you can run the `git "
+"remote` command.(((git commands, remote)))\n"
+"It lists the shortnames of each remote handle you've specified.\n"
+"If you've cloned your repository, you should at least see `origin` -- that "
+"is the default name Git gives to the server you cloned from:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:37
+#, no-wrap
+msgid ""
+"$ git clone https://github.com/schacon/ticgit\n"
+"Cloning into 'ticgit'...\n"
+"remote: Reusing existing pack: 1857, done.\n"
+"remote: Total 1857 (delta 0), reused 0 (delta 0)\n"
+"Receiving objects: 100% (1857/1857), 374.35 KiB | 268.00 KiB/s, done.\n"
+"Resolving deltas: 100% (772/772), done.\n"
+"Checking connectivity... done.\n"
+"$ cd ticgit\n"
+"$ git remote\n"
+"origin\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:40
+#, no-wrap
+msgid ""
+"You can also specify `-v`, which shows you the URLs that Git has stored for "
+"the shortname to be used when reading and writing to that remote:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:46
+#, no-wrap
+msgid ""
+"$ git remote -v\n"
+"origin\thttps://github.com/schacon/ticgit (fetch)\n"
+"origin\thttps://github.com/schacon/ticgit (push)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:50
+#, no-wrap
+msgid ""
+"If you have more than one remote, the command lists them all.\n"
+"For example, a repository with multiple remotes for working with several "
+"collaborators might look something like this.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:65
+#, no-wrap
+msgid ""
+"$ cd grit\n"
+"$ git remote -v\n"
+"bakkdoor  https://github.com/bakkdoor/grit (fetch)\n"
+"bakkdoor  https://github.com/bakkdoor/grit (push)\n"
+"cho45     https://github.com/cho45/grit (fetch)\n"
+"cho45     https://github.com/cho45/grit (push)\n"
+"defunkt   https://github.com/defunkt/grit (fetch)\n"
+"defunkt   https://github.com/defunkt/grit (push)\n"
+"koke      git://github.com/koke/grit.git (fetch)\n"
+"koke      git://github.com/koke/grit.git (push)\n"
+"origin    git@github.com:mojombo/grit.git (fetch)\n"
+"origin    git@github.com:mojombo/grit.git (push)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:69
+#, no-wrap
+msgid ""
+"This means we can pull contributions from any of these users pretty "
+"easily.\n"
+"We may additionally have permission to push to one or more of these, though "
+"we can't tell that here.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:71
+#, no-wrap
+msgid ""
+"Notice that these remotes use a variety of protocols; we'll cover more about "
+"this in <<ch04-git-on-the-server#_getting_git_on_a_server>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:73
+#, no-wrap
+msgid "==== Adding Remote Repositories\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:77
+#, no-wrap
+msgid ""
+"We've mentioned and given some demonstrations of how the `git clone` command "
+"implicitly adds the `origin` remote for you.\n"
+"Here's how to add a new remote explicitly.(((git commands, remote)))\n"
+"To add a new remote Git repository as a shortname you can reference easily, "
+"run `git remote add <shortname> <url>`:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:88
+#, no-wrap
+msgid ""
+"$ git remote\n"
+"origin\n"
+"$ git remote add pb https://github.com/paulboone/ticgit\n"
+"$ git remote -v\n"
+"origin\thttps://github.com/schacon/ticgit (fetch)\n"
+"origin\thttps://github.com/schacon/ticgit (push)\n"
+"pb\thttps://github.com/paulboone/ticgit (fetch)\n"
+"pb\thttps://github.com/paulboone/ticgit (push)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:92
+#, no-wrap
+msgid ""
+"Now you can use the string `pb` on the command line in lieu of the whole "
+"URL.\n"
+"For example, if you want to fetch all the information that Paul has but that "
+"you don't yet have in your repository, you can run `git fetch pb`:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:103
+#, no-wrap
+msgid ""
+"$ git fetch pb\n"
+"remote: Counting objects: 43, done.\n"
+"remote: Compressing objects: 100% (36/36), done.\n"
+"remote: Total 43 (delta 10), reused 31 (delta 5)\n"
+"Unpacking objects: 100% (43/43), done.\n"
+"From https://github.com/paulboone/ticgit\n"
+" * [new branch]      master     -> pb/master\n"
+" * [new branch]      ticgit     -> pb/ticgit\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:107
+#, no-wrap
+msgid ""
+"Paul's `master` branch is now accessible locally as `pb/master` -- you can "
+"merge it into one of your branches, or you can check out a local branch at "
+"that point if you want to inspect it.\n"
+"We'll go over what branches are and how to use them in much more detail in "
+"<<ch03-git-branching#ch03-git-branching>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:110
+#, no-wrap
+msgid ""
+"[[_fetching_and_pulling]]\n"
+"==== Fetching and Pulling from Your Remotes\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:112
+#, no-wrap
+msgid ""
+"As you just saw, to get data from your remote projects, you can run:(((git "
+"commands, fetch)))\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:116
+#, no-wrap
+msgid ""
+"$ git fetch <remote>\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:120
+#, no-wrap
+msgid ""
+"The command goes out to that remote project and pulls down all the data from "
+"that remote project that you don't have yet.\n"
+"After you do this, you should have references to all the branches from that "
+"remote, which you can merge in or inspect at any time.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:125
+#, no-wrap
+msgid ""
+"If you clone a repository, the command automatically adds that remote "
+"repository under the name \"`origin`\".\n"
+"So, `git fetch origin` fetches any new work that has been pushed to that "
+"server since you cloned (or last fetched from) it.\n"
+"It's important to note that the `git fetch` command only downloads the data "
+"to your local repository -- it doesn't automatically merge it with any of "
+"your work or modify what you're currently working on.\n"
+"You have to merge it manually into your work when you're ready.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:129
+#, no-wrap
+msgid ""
+"If your current branch is set up to track a remote branch (see the next "
+"section and <<ch03-git-branching#ch03-git-branching>> for more information), "
+"you can use the `git pull` command to automatically fetch and then merge "
+"that remote branch into your current branch.(((git commands, pull)))\n"
+"This may be an easier or more comfortable workflow for you; and by default, "
+"the `git clone` command automatically sets up your local `master` branch to "
+"track the remote `master` branch (or whatever the default branch is called) "
+"on the server you cloned from.\n"
+"Running `git pull` generally fetches data from the server you originally "
+"cloned from and automatically tries to merge it into the code you're "
+"currently working on.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:134
+#, no-wrap
+msgid ""
+"From git version 2.27 onward, `git pull` will give a warning if the "
+"`pull.rebase` variable is not set.\n"
+"Git will keep warning you until you set the variable.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:137
+#, no-wrap
+msgid ""
+"If you want the default behavior of git (fast-forward if possible, else "
+"create a merge commit):\n"
+"`git config --global pull.rebase \"false\"`\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:140
+#, no-wrap
+msgid ""
+"If you want to rebase when pulling:\n"
+"`git config --global pull.rebase \"true\"`\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:144
+#, no-wrap
+msgid ""
+"[[_pushing_remotes]]\n"
+"==== Pushing to Your Remotes\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:148
+#, no-wrap
+msgid ""
+"When you have your project at a point that you want to share, you have to "
+"push it upstream.\n"
+"The command for this is simple: `git push <remote> <branch>`.(((git "
+"commands, push)))\n"
+"If you want to push your `master` branch to your `origin` server (again, "
+"cloning generally sets up both of those names for you automatically), then "
+"you can run this to push any commits you've done back up to the server:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:152
+#, no-wrap
+msgid ""
+"$ git push origin master\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:158
+#, no-wrap
+msgid ""
+"This command works only if you cloned from a server to which you have write "
+"access and if nobody has pushed in the meantime.\n"
+"If you and someone else clone at the same time and they push upstream and "
+"then you push upstream, your push will rightly be rejected.\n"
+"You'll have to fetch their work first and incorporate it into yours before "
+"you'll be allowed to push.\n"
+"See <<ch03-git-branching#ch03-git-branching>> for more detailed information "
+"on how to push to remote servers.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:161
+#, no-wrap
+msgid ""
+"[[_inspecting_remote]]\n"
+"==== Inspecting a Remote\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:164
+#, no-wrap
+msgid ""
+"If you want to see more information about a particular remote, you can use "
+"the `git remote show <remote>` command.(((git commands, remote)))\n"
+"If you run this command with a particular shortname, such as `origin`, you "
+"get something like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:179
+#, no-wrap
+msgid ""
+"$ git remote show origin\n"
+"* remote origin\n"
+"  Fetch URL: https://github.com/schacon/ticgit\n"
+"  Push  URL: https://github.com/schacon/ticgit\n"
+"  HEAD branch: master\n"
+"  Remote branches:\n"
+"    master                               tracked\n"
+"    dev-branch                           tracked\n"
+"  Local branch configured for 'git pull':\n"
+"    master merges with remote master\n"
+"  Local ref configured for 'git push':\n"
+"    master pushes to master (up to date)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:184
+#, no-wrap
+msgid ""
+"It lists the URL for the remote repository as well as the tracking branch "
+"information.\n"
+"The command helpfully tells you that if you're on the `master` branch and "
+"you run `git pull`, it will automatically merge the remote's `master` branch "
+"into the local one after it has been fetched.\n"
+"It also lists all the remote references it has pulled down.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:187
+#, no-wrap
+msgid ""
+"That is a simple example you're likely to encounter.\n"
+"When you're using Git more heavily, however, you may see much more "
+"information from `git remote show`:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:210
+#, no-wrap
+msgid ""
+"$ git remote show origin\n"
+"* remote origin\n"
+"  URL: https://github.com/my-org/complex-project\n"
+"  Fetch URL: https://github.com/my-org/complex-project\n"
+"  Push  URL: https://github.com/my-org/complex-project\n"
+"  HEAD branch: master\n"
+"  Remote branches:\n"
+"    master                           tracked\n"
+"    dev-branch                       tracked\n"
+"    markdown-strip                   tracked\n"
+"    issue-43                         new (next fetch will store in "
+"remotes/origin)\n"
+"    issue-45                         new (next fetch will store in "
+"remotes/origin)\n"
+"    refs/remotes/origin/issue-11     stale (use 'git remote prune' to "
+"remove)\n"
+"  Local branches configured for 'git pull':\n"
+"    dev-branch merges with remote dev-branch\n"
+"    master     merges with remote master\n"
+"  Local refs configured for 'git push':\n"
+"    dev-branch                     pushes to dev-branch                     "
+"(up to date)\n"
+"    markdown-strip                 pushes to markdown-strip                 "
+"(up to date)\n"
+"    master                         pushes to master                         "
+"(up to date)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:214
+#, no-wrap
+msgid ""
+"This command shows which branch is automatically pushed to when you run `git "
+"push` while on certain branches.\n"
+"It also shows you which remote branches on the server you don't yet have, "
+"which remote branches you have that have been removed from the server, and "
+"multiple local branches that are able to merge automatically with their "
+"remote-tracking branch when you run `git pull`.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:216
+#, no-wrap
+msgid "==== Renaming and Removing Remotes\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:219
+#, no-wrap
+msgid ""
+"You can run `git remote rename` to change a remote's shortname.(((git "
+"commands, remote)))\n"
+"For instance, if you want to rename `pb` to `paul`, you can do so with `git "
+"remote rename`:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:226
+#, no-wrap
+msgid ""
+"$ git remote rename pb paul\n"
+"$ git remote\n"
+"origin\n"
+"paul\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:230
+#, no-wrap
+msgid ""
+"It's worth mentioning that this changes all your remote-tracking branch "
+"names, too.\n"
+"What used to be referenced at `pb/master` is now at `paul/master`.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:232
+#, no-wrap
+msgid ""
+"If you want to remove a remote for some reason -- you've moved the server or "
+"are no longer using a particular mirror, or perhaps a contributor isn't "
+"contributing anymore -- you can either use `git remote remove` or `git "
+"remote rm`:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:238
+#, no-wrap
+msgid ""
+"$ git remote remove paul\n"
+"$ git remote\n"
+"origin\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/remotes.asc:240
+#, no-wrap
+msgid ""
+"Once you delete the reference to a remote this way, all remote-tracking "
+"branches and configuration settings associated with that remote are also "
+"deleted.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:3
+#, no-wrap
+msgid ""
+"[[_git_tagging]]\n"
+"=== Tagging\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:8
+#, no-wrap
+msgid ""
+"(((tags)))\n"
+"Like most VCSs, Git has the ability to tag specific points in a repository's "
+"history as being important.\n"
+"Typically, people use this functionality to mark release points (`v1.0`, "
+"`v2.0` and so on).\n"
+"In this section, you'll learn how to list existing tags, how to create and "
+"delete tags, and what the different types of tags are.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:10
+#, no-wrap
+msgid "==== Listing Your Tags\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:13
+#, no-wrap
+msgid ""
+"Listing the existing tags in Git is straightforward.\n"
+"Just type `git tag` (with optional `-l` or `--list`):(((git commands, "
+"tag)))\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:19
+#, no-wrap
+msgid ""
+"$ git tag\n"
+"v1.0\n"
+"v2.0\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:22
+#, no-wrap
+msgid ""
+"This command lists the tags in alphabetical order; the order in which they "
+"are displayed has no real importance.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:26
+#, no-wrap
+msgid ""
+"You can also search for tags that match a particular pattern.\n"
+"The Git source repo, for instance, contains more than 500 tags.\n"
+"If you're interested only in looking at the 1.8.5 series, you can run "
+"this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:40
+#, no-wrap
+msgid ""
+"$ git tag -l \"v1.8.5*\"\n"
+"v1.8.5\n"
+"v1.8.5-rc0\n"
+"v1.8.5-rc1\n"
+"v1.8.5-rc2\n"
+"v1.8.5-rc3\n"
+"v1.8.5.1\n"
+"v1.8.5.2\n"
+"v1.8.5.3\n"
+"v1.8.5.4\n"
+"v1.8.5.5\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:44
+#, no-wrap
+msgid ""
+"[NOTE]\n"
+".Listing tag wildcards requires `-l` or `--list` option\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:46
+#, no-wrap
+msgid ""
+"If you want just the entire list of tags, running the command `git tag` "
+"implicitly assumes you want a listing and provides one; the use of `-l` or "
+"`--list` in this case is optional.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:48
+#, no-wrap
+msgid ""
+"If, however, you're supplying a wildcard pattern to match tag names, the use "
+"of `-l` or `--list` is mandatory.\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:51
+#, no-wrap
+msgid "==== Creating Tags\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:53
+#, no-wrap
+msgid "Git supports two types of tags: _lightweight_ and _annotated_.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:55
+#, no-wrap
+msgid ""
+"A lightweight tag is very much like a branch that doesn't change -- it's "
+"just a pointer to a specific commit.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:59
+#, no-wrap
+msgid ""
+"Annotated tags, however, are stored as full objects in the Git database.\n"
+"They're checksummed; contain the tagger name, email, and date; have a "
+"tagging message; and can be signed and verified with GNU Privacy Guard "
+"(GPG).\n"
+"It's generally recommended that you create annotated tags so you can have "
+"all this information; but if you want a temporary tag or for some reason "
+"don't want to keep the other information, lightweight tags are available "
+"too.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:62
+#, no-wrap
+msgid ""
+"[[_annotated_tags]]\n"
+"==== Annotated Tags\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:66
+#, no-wrap
+msgid ""
+"(((tags, annotated)))\n"
+"Creating an annotated tag in Git is simple.\n"
+"The easiest way is to specify `-a` when you run the `tag` command:(((git "
+"commands, tag)))\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:74
+#, no-wrap
+msgid ""
+"$ git tag -a v1.4 -m \"my version 1.4\"\n"
+"$ git tag\n"
+"v0.1\n"
+"v1.3\n"
+"v1.4\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:78
+#, no-wrap
+msgid ""
+"The `-m` specifies a tagging message, which is stored with the tag.\n"
+"If you don't specify a message for an annotated tag, Git launches your "
+"editor so you can type it in.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:80
+#, no-wrap
+msgid ""
+"You can see the tag data along with the commit that was tagged by using the "
+"`git show` command:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:87
+#, no-wrap
+msgid ""
+"$ git show v1.4\n"
+"tag v1.4\n"
+"Tagger: Ben Straub <ben@straub.cc>\n"
+"Date:   Sat May 3 20:19:12 2014 -0700\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:89
+#, no-wrap
+msgid "my version 1.4\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:93
+#, no-wrap
+msgid ""
+"commit ca82a6dff817ec66f44342007202690a93763949\n"
+"Author: Scott Chacon <schacon@gee-mail.com>\n"
+"Date:   Mon Mar 17 21:52:11 2008 -0700\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:95
+#: book/02-git-basics/sections/tagging.asc:128
+#, no-wrap
+msgid ""
+"    Change version number\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:98
+#, no-wrap
+msgid ""
+"That shows the tagger information, the date the commit was tagged, and the "
+"annotation message before showing the commit information.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:100
+#, no-wrap
+msgid "==== Lightweight Tags\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:105
+#, no-wrap
+msgid ""
+"(((tags, lightweight)))\n"
+"Another way to tag commits is with a lightweight tag.\n"
+"This is basically the commit checksum stored in a file -- no other "
+"information is kept.\n"
+"To create a lightweight tag, don't supply any of the `-a`, `-s`, or `-m` "
+"options, just provide a tag name:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:115
+#, no-wrap
+msgid ""
+"$ git tag v1.4-lw\n"
+"$ git tag\n"
+"v0.1\n"
+"v1.3\n"
+"v1.4\n"
+"v1.4-lw\n"
+"v1.5\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:119
+#, no-wrap
+msgid ""
+"This time, if you run `git show` on the tag, you don't see the extra tag "
+"information.(((git commands, show)))\n"
+"The command just shows the commit:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:126
+#, no-wrap
+msgid ""
+"$ git show v1.4-lw\n"
+"commit ca82a6dff817ec66f44342007202690a93763949\n"
+"Author: Scott Chacon <schacon@gee-mail.com>\n"
+"Date:   Mon Mar 17 21:52:11 2008 -0700\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:131
+#, no-wrap
+msgid "==== Tagging Later\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:134
+#, no-wrap
+msgid ""
+"You can also tag commits after you've moved past them.\n"
+"Suppose your commit history looks like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:148
+#, no-wrap
+msgid ""
+"$ git log --pretty=oneline\n"
+"15027957951b64cf874c3557a0f3547bd83b3ff6 Merge branch 'experiment'\n"
+"a6b4c97498bd301d84096da251c98a07c7723e65 Create write support\n"
+"0d52aaab4479697da7686c15f77a3d64d9165190 One more thing\n"
+"6d52a271eda8725415634dd79daabbc4d9b6008e Merge branch 'experiment'\n"
+"0b7434d86859cc7b8c3d5e1dddfed66ff742fcbc Add commit function\n"
+"4682c3261057305bdd616e23b64b0857d832627b Add todo file\n"
+"166ae0c4d3f420721acbb115cc33848dfcc2121a Create write support\n"
+"9fceb02d0ae598e95dc970b74767f19372d61af8 Update rakefile\n"
+"964f16d36dfccde844893cac5b347e7b3d44abbc Commit the todo\n"
+"8a5cbc430f1a9c3d00faaeffd07798508422908a Update readme\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:153
+#, no-wrap
+msgid ""
+"Now, suppose you forgot to tag the project at v1.2, which was at the "
+"\"`Update rakefile`\" commit.\n"
+"You can add it after the fact.\n"
+"To tag that commit, you specify the commit checksum (or part of it) at the "
+"end of the command:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:157
+#, no-wrap
+msgid ""
+"$ git tag -a v1.2 9fceb02\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:160
+#, no-wrap
+msgid "You can see that you've tagged the commit:(((git commands, tag)))\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:170
+#, no-wrap
+msgid ""
+"$ git tag\n"
+"v0.1\n"
+"v1.2\n"
+"v1.3\n"
+"v1.4\n"
+"v1.4-lw\n"
+"v1.5\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:175
+#, no-wrap
+msgid ""
+"$ git show v1.2\n"
+"tag v1.2\n"
+"Tagger: Scott Chacon <schacon@gee-mail.com>\n"
+"Date:   Mon Feb 9 15:32:16 2009 -0800\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:180
+#, no-wrap
+msgid ""
+"version 1.2\n"
+"commit 9fceb02d0ae598e95dc970b74767f19372d61af8\n"
+"Author: Magnus Chacon <mchacon@gee-mail.com>\n"
+"Date:   Sun Apr 27 20:43:35 2008 -0700\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:183
+#, no-wrap
+msgid ""
+"    Update rakefile\n"
+"...\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:187
+#, no-wrap
+msgid ""
+"[[_sharing_tags]]\n"
+"==== Sharing Tags\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:191
+#, no-wrap
+msgid ""
+"By default, the `git push` command doesn't transfer tags to remote "
+"servers.(((git commands, push)))\n"
+"You will have to explicitly push tags to a shared server after you have "
+"created them.\n"
+"This process is just like sharing remote branches -- you can run `git push "
+"origin <tagname>`.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:202
+#, no-wrap
+msgid ""
+"$ git push origin v1.5\n"
+"Counting objects: 14, done.\n"
+"Delta compression using up to 8 threads.\n"
+"Compressing objects: 100% (12/12), done.\n"
+"Writing objects: 100% (14/14), 2.05 KiB | 0 bytes/s, done.\n"
+"Total 14 (delta 3), reused 0 (delta 0)\n"
+"To git@github.com:schacon/simplegit.git\n"
+" * [new tag]         v1.5 -> v1.5\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:206
+#, no-wrap
+msgid ""
+"If you have a lot of tags that you want to push up at once, you can also use "
+"the `--tags` option to the `git push` command.\n"
+"This will transfer all of your tags to the remote server that are not "
+"already there.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:216
+#, no-wrap
+msgid ""
+"$ git push origin --tags\n"
+"Counting objects: 1, done.\n"
+"Writing objects: 100% (1/1), 160 bytes | 0 bytes/s, done.\n"
+"Total 1 (delta 0), reused 0 (delta 0)\n"
+"To git@github.com:schacon/simplegit.git\n"
+" * [new tag]         v1.4 -> v1.4\n"
+" * [new tag]         v1.4-lw -> v1.4-lw\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:219
+#, no-wrap
+msgid ""
+"Now, when someone else clones or pulls from your repository, they will get "
+"all your tags as well.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:222
+#, no-wrap
+msgid ""
+"[NOTE]\n"
+".`git push` pushes both types of tags\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:225
+#, no-wrap
+msgid ""
+"`git push <remote> --tags` will push both lightweight and annotated tags.\n"
+"There is currently no option to push only lightweight tags, but if you use "
+"`git push <remote> --follow-tags` only annotated tags will be pushed to the "
+"remote.\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:228
+#, no-wrap
+msgid "==== Deleting Tags\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:231
+#, no-wrap
+msgid ""
+"To delete a tag on your local repository, you can use `git tag -d "
+"<tagname>`.\n"
+"For example, we could remove our lightweight tag above as follows:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:236
+#, no-wrap
+msgid ""
+"$ git tag -d v1.4-lw\n"
+"Deleted tag 'v1.4-lw' (was e7d5add)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:240
+#, no-wrap
+msgid ""
+"Note that this does not remove the tag from any remote servers.\n"
+"There are two common variations for deleting a tag from a remote server.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:242
+#, no-wrap
+msgid "The first variation is `git push <remote> :refs/tags/<tagname>`:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:248
+#, no-wrap
+msgid ""
+"$ git push origin :refs/tags/v1.4-lw\n"
+"To /git@github.com:schacon/simplegit.git\n"
+" - [deleted]         v1.4-lw\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:251
+#, no-wrap
+msgid ""
+"The way to interpret the above is to read it as the null value before the "
+"colon is being pushed to the remote tag name, effectively deleting it.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:253
+#, no-wrap
+msgid "The second (and more intuitive) way to delete a remote tag is with:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:257
+#, no-wrap
+msgid ""
+"$ git push origin --delete <tagname>\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:260
+#, no-wrap
+msgid "==== Checking out Tags\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:262
+#, no-wrap
+msgid ""
+"If you want to view the versions of files a tag is pointing to, you can do a "
+"`git checkout` of that tag, although this puts your repository in "
+"\"`detached HEAD`\" state, which has some ill side effects:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:267
+#, no-wrap
+msgid ""
+"$ git checkout v2.0.0\n"
+"Note: switching to 'v2.0.0'.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:271
+#, no-wrap
+msgid ""
+"You are in 'detached HEAD' state. You can look around, make experimental\n"
+"changes and commit them, and you can discard any commits you make in this\n"
+"state without impacting any branches by performing another checkout.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:274
+#, no-wrap
+msgid ""
+"If you want to create a new branch to retain commits you create, you may\n"
+"do so (now or later) by using -c with the switch command. Example:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:276
+#, no-wrap
+msgid "  git switch -c <new-branch-name>\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:278
+#, no-wrap
+msgid "Or undo this operation with:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:280
+#, no-wrap
+msgid "  git switch -\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:282
+#, no-wrap
+msgid ""
+"Turn off this advice by setting config variable advice.detachedHead to "
+"false\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:284
+#, no-wrap
+msgid ""
+"HEAD is now at 99ada87... Merge pull request #89 from "
+"schacon/appendix-final\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:288
+#, no-wrap
+msgid ""
+"$ git checkout v2.0-beta-0.1\n"
+"Previous HEAD position was 99ada87... Merge pull request #89 from "
+"schacon/appendix-final\n"
+"HEAD is now at df3f601... Add atlas.json and cover image\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:292
+#, no-wrap
+msgid ""
+"In \"`detached HEAD`\" state, if you make changes and then create a commit, "
+"the tag will stay the same, but your new commit won't belong to any branch "
+"and will be unreachable, except by the exact commit hash.\n"
+"Thus, if you need to make changes -- say you're fixing a bug on an older "
+"version, for instance -- you will generally want to create a branch:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:297
+#, no-wrap
+msgid ""
+"$ git checkout -b version2 v2.0.0\n"
+"Switched to a new branch 'version2'\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/tagging.asc:299
+#, no-wrap
+msgid ""
+"If you do this and make a commit, your `version2` branch will be slightly "
+"different than your `v2.0.0` tag since it will move forward with your new "
+"changes, so do be careful.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:3
+#, no-wrap
+msgid ""
+"[[_undoing]]\n"
+"=== Undoing Things\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:8
+#, no-wrap
+msgid ""
+"At any stage, you may want to undo something.\n"
+"Here, we'll review a few basic tools for undoing changes that you've made.\n"
+"Be careful, because you can't always undo some of these undos.\n"
+"This is one of the few areas in Git where you may lose some work if you do "
+"it wrong.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:11
+#, no-wrap
+msgid ""
+"One of the common undos takes place when you commit too early and possibly "
+"forget to add some files, or you mess up your commit message.\n"
+"If you want to redo that commit, make the additional changes you forgot, "
+"stage them, and commit again using the `--amend` option:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:15
+#, no-wrap
+msgid ""
+"$ git commit --amend\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:19
+#, no-wrap
+msgid ""
+"This command takes your staging area and uses it for the commit.\n"
+"If you've made no changes since your last commit (for instance, you run this "
+"command immediately after your previous commit), then your snapshot will "
+"look exactly the same, and all you'll change is your commit message.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:22
+#, no-wrap
+msgid ""
+"The same commit-message editor fires up, but it already contains the message "
+"of your previous commit.\n"
+"You can edit the message the same as always, but it overwrites your previous "
+"commit.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:24
+#, no-wrap
+msgid ""
+"As an example, if you commit and then realize you forgot to stage the "
+"changes in a file you wanted to add to this commit, you can do something "
+"like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:30
+#, no-wrap
+msgid ""
+"$ git commit -m 'Initial commit'\n"
+"$ git add forgotten_file\n"
+"$ git commit --amend\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:33
+#, no-wrap
+msgid ""
+"You end up with a single commit -- the second commit replaces the results of "
+"the first.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:38
+#, no-wrap
+msgid ""
+"It's important to understand that when you're amending your last commit, "
+"you're not so much fixing it as _replacing_ it entirely with a new, improved "
+"commit that pushes the old commit out of the way and puts the new commit in "
+"its place.\n"
+"Effectively, it's as if the previous commit never happened, and it won't "
+"show up in your repository history.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:40
+#, no-wrap
+msgid ""
+"The obvious value to amending commits is to make minor improvements to your "
+"last commit, without cluttering your repository history with commit messages "
+"of the form, \"`Oops, forgot to add a file`\" or \"`Darn, fixing a typo in "
+"last commit`\".\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:47
+#, no-wrap
+msgid ""
+"Only amend commits that are still local and have not been pushed "
+"somewhere.\n"
+"Amending previously pushed commits and force pushing the branch will cause "
+"problems for your collaborators.\n"
+"For more on what happens when you do this and how to recover if you're on "
+"the receiving end read <<_rebase_peril>>.\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:51
+#, no-wrap
+msgid ""
+"[[_unstaging]]\n"
+"==== Unstaging a Staged File\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:57
+#, no-wrap
+msgid ""
+"The next two sections demonstrate how to work with your staging area and "
+"working directory changes.\n"
+"The nice part is that the command you use to determine the state of those "
+"two areas also reminds you how to undo changes to them.\n"
+"For example, let's say you've changed two files and want to commit them as "
+"two separate changes, but you accidentally type `git add *` and stage them "
+"both.\n"
+"How can you unstage one of the two?\n"
+"The `git status` command reminds you:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:65
+#, no-wrap
+msgid ""
+"$ git add *\n"
+"$ git status\n"
+"On branch master\n"
+"Changes to be committed:\n"
+"  (use \"git reset HEAD <file>...\" to unstage)\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:68
+#, no-wrap
+msgid ""
+"    renamed:    README.md -> README\n"
+"    modified:   CONTRIBUTING.md\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:72
+#, no-wrap
+msgid ""
+"Right below the \"`Changes to be committed`\" text, it says use `git reset "
+"HEAD <file>...` to unstage.\n"
+"So, let's use that advice to unstage the `CONTRIBUTING.md` file:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:82
+#, no-wrap
+msgid ""
+"$ git reset HEAD CONTRIBUTING.md\n"
+"Unstaged changes after reset:\n"
+"M\tCONTRIBUTING.md\n"
+"$ git status\n"
+"On branch master\n"
+"Changes to be committed:\n"
+"  (use \"git reset HEAD <file>...\" to unstage)\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:84
+#: book/02-git-basics/sections/undoing.asc:132
+#, no-wrap
+msgid "    renamed:    README.md -> README\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:94
+#, no-wrap
+msgid ""
+"The command is a bit strange, but it works.\n"
+"The `CONTRIBUTING.md` file is modified but once again unstaged.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:96
+#, no-wrap
+msgid ""
+"[NOTE]\n"
+"=====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:99
+#, no-wrap
+msgid ""
+"It's true that `git reset` can be a dangerous command, especially if you "
+"provide the `--hard` flag.\n"
+"However, in the scenario described above, the file in your working directory "
+"is not touched, so it's relatively safe.\n"
+"=====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:103
+#, no-wrap
+msgid ""
+"For now this magic invocation is all you need to know about the `git reset` "
+"command.\n"
+"We'll go into much more detail about what `reset` does and how to master it "
+"to do really interesting things in <<ch07-git-tools#_git_reset>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:105
+#, no-wrap
+msgid "==== Unmodifying a Modified File\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:110
+#: book/02-git-basics/sections/undoing.asc:206
+#, no-wrap
+msgid ""
+"What if you realize that you don't want to keep your changes to the "
+"`CONTRIBUTING.md` file?\n"
+"How can you easily unmodify it -- revert it back to what it looked like when "
+"you last committed (or initially cloned, or however you got it into your "
+"working directory)?\n"
+"Luckily, `git status` tells you how to do that, too.\n"
+"In the last example output, the unstaged area looks like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:122
+#: book/02-git-basics/sections/undoing.asc:218
+#, no-wrap
+msgid ""
+"It tells you pretty explicitly how to discard the changes you've made.\n"
+"Let's do what it says:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:130
+#, no-wrap
+msgid ""
+"$ git checkout -- CONTRIBUTING.md\n"
+"$ git status\n"
+"On branch master\n"
+"Changes to be committed:\n"
+"  (use \"git reset HEAD <file>...\" to unstage)\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:136
+#, no-wrap
+msgid "You can see that the changes have been reverted.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:138
+#: book/02-git-basics/sections/undoing.asc:231
+#, no-wrap
+msgid ""
+"[IMPORTANT]\n"
+"=====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:142
+#, no-wrap
+msgid ""
+"It's important to understand that `git checkout \\-- <file>` is a dangerous "
+"command.\n"
+"Any local changes you made to that file are gone -- Git just replaced that "
+"file with the last staged or committed version.\n"
+"Don't ever use this command unless you absolutely know that you don't want "
+"those unsaved local changes.\n"
+"=====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:145
+#, no-wrap
+msgid ""
+"If you would like to keep the changes you've made to that file but still "
+"need to get it out of the way for now, we'll go over stashing and branching "
+"in <<ch03-git-branching#ch03-git-branching>>; these are generally better "
+"ways to go.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:149
+#, no-wrap
+msgid ""
+"Remember, anything that is _committed_ in Git can almost always be "
+"recovered.\n"
+"Even commits that were on branches that were deleted or commits that were "
+"overwritten with an `--amend` commit can be recovered (see "
+"<<ch10-git-internals#_data_recovery>> for data recovery).\n"
+"However, anything you lose that was never committed is likely never to be "
+"seen again.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:152
+#, no-wrap
+msgid ""
+"[[undoing_git_restore]]\n"
+"==== Undoing things with git restore\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:156
+#, no-wrap
+msgid ""
+"Git version 2.23.0 introduced a new command: `git restore`.\n"
+"It's basically an alternative to `git reset` which we just covered.\n"
+"From Git version 2.23.0 onwards, Git will use `git restore` instead of `git "
+"reset` for many undo operations.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:158
+#, no-wrap
+msgid ""
+"Let's retrace our steps, and undo things with `git restore` instead of `git "
+"reset`.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:160
+#, no-wrap
+msgid "===== Unstaging a Staged File with git restore\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:166
+#, no-wrap
+msgid ""
+"The next two sections demonstrate how to work with your staging area and "
+"working directory changes with `git restore`.\n"
+"The nice part is that the command you use to determine the state of those "
+"two areas also reminds you how to undo changes to them.\n"
+"For example, let's say you've changed two files and want to commit them as "
+"two separate changes, but you accidentally type `git add *` and stage them "
+"both.\n"
+"How can you unstage one of the two?\n"
+"The `git status` command reminds you:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:176
+#, no-wrap
+msgid ""
+"$ git add *\n"
+"$ git status\n"
+"On branch master\n"
+"Changes to be committed:\n"
+"  (use \"git restore --staged <file>...\" to unstage)\n"
+"\tmodified:   CONTRIBUTING.md\n"
+"\trenamed:    README.md -> README\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:181
+#, no-wrap
+msgid ""
+"Right below the \"`Changes to be committed`\" text, it says use `git restore "
+"--staged <file>...` to unstage.\n"
+"So, let's use that advice to unstage the `CONTRIBUTING.md` file:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:190
+#, no-wrap
+msgid ""
+"$ git restore --staged CONTRIBUTING.md\n"
+"$ git status\n"
+"On branch master\n"
+"Changes to be committed:\n"
+"  (use \"git restore --staged <file>...\" to unstage)\n"
+"\trenamed:    README.md -> README\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:195
+#: book/02-git-basics/sections/undoing.asc:213
+#, no-wrap
+msgid ""
+"Changes not staged for commit:\n"
+"  (use \"git add <file>...\" to update what will be committed)\n"
+"  (use \"git restore <file>...\" to discard changes in working directory)\n"
+"\tmodified:   CONTRIBUTING.md\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:199
+#, no-wrap
+msgid "The `CONTRIBUTING.md` file is modified but once again unstaged.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:201
+#, no-wrap
+msgid "===== Unmodifying a Modified File with git restore\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:227
+#, no-wrap
+msgid ""
+"$ git restore CONTRIBUTING.md\n"
+"$ git status\n"
+"On branch master\n"
+"Changes to be committed:\n"
+"  (use \"git restore --staged <file>...\" to unstage)\n"
+"\trenamed:    README.md -> README\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/undoing.asc:235
+#, no-wrap
+msgid ""
+"It's important to understand that `git restore <file>` is a dangerous "
+"command.\n"
+"Any local changes you made to that file are gone -- Git just replaced that "
+"file with the last staged or committed version.\n"
+"Don't ever use this command unless you absolutely know that you don't want "
+"those unsaved local changes.\n"
+"=====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:3
+#, no-wrap
+msgid ""
+"[[_viewing_history]]\n"
+"=== Viewing the Commit History\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:6
+#, no-wrap
+msgid ""
+"After you have created several commits, or if you have cloned a repository "
+"with an existing commit history, you'll probably want to look back to see "
+"what has happened.\n"
+"The most basic and powerful tool to do this is the `git log` command.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:9
+#, no-wrap
+msgid ""
+"These examples use a very simple project called \"`simplegit`\".\n"
+"To get the project, run:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:13
+#, no-wrap
+msgid ""
+"$ git clone https://github.com/schacon/simplegit-progit\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:16
+#, no-wrap
+msgid ""
+"When you run `git log` in this project, you should get output that looks "
+"something like this:(((git commands, log)))\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:23
+#, no-wrap
+msgid ""
+"$ git log\n"
+"commit ca82a6dff817ec66f44342007202690a93763949\n"
+"Author: Scott Chacon <schacon@gee-mail.com>\n"
+"Date:   Mon Mar 17 21:52:11 2008 -0700\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:25
+#: book/02-git-basics/sections/viewing-history.asc:56
+#: book/02-git-basics/sections/viewing-history.asc:105
+#, no-wrap
+msgid "    Change version number\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:29
+#: book/02-git-basics/sections/viewing-history.asc:74
+#: book/02-git-basics/sections/viewing-history.asc:112
+#, no-wrap
+msgid ""
+"commit 085bb3bcb608e1e8451d4b2432f8ecbe6306e7e7\n"
+"Author: Scott Chacon <schacon@gee-mail.com>\n"
+"Date:   Sat Mar 15 16:40:33 2008 -0700\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:31
+#: book/02-git-basics/sections/viewing-history.asc:76
+#: book/02-git-basics/sections/viewing-history.asc:114
+#, no-wrap
+msgid "    Remove unnecessary test\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:35
+#: book/02-git-basics/sections/viewing-history.asc:121
+#, no-wrap
+msgid ""
+"commit a11bef06a3f659402fe7563abf99ad00de2209e6\n"
+"Author: Scott Chacon <schacon@gee-mail.com>\n"
+"Date:   Sat Mar 15 10:31:28 2008 -0700\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:37
+#, no-wrap
+msgid ""
+"    Initial commit\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:41
+#, no-wrap
+msgid ""
+"By default, with no arguments, `git log` lists the commits made in that "
+"repository in reverse chronological order; that is, the most recent commits "
+"show up first.\n"
+"As you can see, this command lists each commit with its SHA-1 checksum, the "
+"author's name and email, the date written, and the commit message.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:44
+#, no-wrap
+msgid ""
+"A huge number and variety of options to the `git log` command are available "
+"to show you exactly what you're looking for.\n"
+"Here, we'll show you some of the most popular.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:47
+#, no-wrap
+msgid ""
+"One of the more helpful options is `-p` or `--patch`, which shows the "
+"difference (the _patch_ output) introduced in each commit.\n"
+"You can also limit the number of log entries displayed, such as using `-2` "
+"to show only the last two entries.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:54
+#, no-wrap
+msgid ""
+"$ git log -p -2\n"
+"commit ca82a6dff817ec66f44342007202690a93763949\n"
+"Author: Scott Chacon <schacon@gee-mail.com>\n"
+"Date:   Mon Mar 17 21:52:11 2008 -0700\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:70
+#, no-wrap
+msgid ""
+"diff --git a/Rakefile b/Rakefile\n"
+"index a874b73..8f94139 100644\n"
+"--- a/Rakefile\n"
+"+++ b/Rakefile\n"
+"@@ -5,7 +5,7 @@ require 'rake/gempackagetask'\n"
+" spec = Gem::Specification.new do |s|\n"
+"     s.platform  =   Gem::Platform::RUBY\n"
+"     s.name      =   \"simplegit\"\n"
+"-    s.version   =   \"0.1.0\"\n"
+"+    s.version   =   \"0.1.1\"\n"
+"     s.author    =   \"Scott Chacon\"\n"
+"     s.email     =   \"schacon@gee-mail.com\"\n"
+"     s.summary   =   \"A simple gem for using Git in Ruby code.\"\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:83
+#, no-wrap
+msgid ""
+"diff --git a/lib/simplegit.rb b/lib/simplegit.rb\n"
+"index a0a60ae..47c6340 100644\n"
+"--- a/lib/simplegit.rb\n"
+"+++ b/lib/simplegit.rb\n"
+"@@ -18,8 +18,3 @@ class SimpleGit\n"
+"     end\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:85
+#, no-wrap
+msgid ""
+" end\n"
+"-\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:90
+#, no-wrap
+msgid ""
+"-if $0 == __FILE__\n"
+"-  git = SimpleGit.new\n"
+"-  puts git.show\n"
+"-end\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:96
+#, no-wrap
+msgid ""
+"This option displays the same information but with a diff directly following "
+"each entry.\n"
+"This is very helpful for code review or to quickly browse what happened "
+"during a series of commits that a collaborator has added.\n"
+"You can also use a series of summarizing options with `git log`.\n"
+"For example, if you want to see some abbreviated stats for each commit, you "
+"can use the `--stat` option:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:103
+#, no-wrap
+msgid ""
+"$ git log --stat\n"
+"commit ca82a6dff817ec66f44342007202690a93763949\n"
+"Author: Scott Chacon <schacon@gee-mail.com>\n"
+"Date:   Mon Mar 17 21:52:11 2008 -0700\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:108
+#, no-wrap
+msgid ""
+" Rakefile | 2 +-\n"
+" 1 file changed, 1 insertion(+), 1 deletion(-)\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:117
+#, no-wrap
+msgid ""
+" lib/simplegit.rb | 5 -----\n"
+" 1 file changed, 5 deletions(-)\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:123
+#, no-wrap
+msgid "    Initial commit\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:128
+#, no-wrap
+msgid ""
+" README           |  6 ++++++\n"
+" Rakefile         | 23 +++++++++++++++++++++++\n"
+" lib/simplegit.rb | 25 +++++++++++++++++++++++++\n"
+" 3 files changed, 54 insertions(+)\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:132
+#, no-wrap
+msgid ""
+"As you can see, the `--stat` option prints below each commit entry a list of "
+"modified files, how many files were changed, and how many lines in those "
+"files were added and removed.\n"
+"It also puts a summary of the information at the end.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:138
+#, no-wrap
+msgid ""
+"Another really useful option is `--pretty`.\n"
+"This option changes the log output to formats other than the default.\n"
+"A few prebuilt option values are available for you to use.\n"
+"The `oneline` value for this option prints each commit on a single line, "
+"which is useful if you're looking at a lot of commits.\n"
+"In addition, the `short`, `full`, and `fuller` values show the output in "
+"roughly the same format but with less or more information, respectively:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:145
+#, no-wrap
+msgid ""
+"$ git log --pretty=oneline\n"
+"ca82a6dff817ec66f44342007202690a93763949 Change version number\n"
+"085bb3bcb608e1e8451d4b2432f8ecbe6306e7e7 Remove unnecessary test\n"
+"a11bef06a3f659402fe7563abf99ad00de2209e6 Initial commit\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:149
+#, no-wrap
+msgid ""
+"The most interesting option value is `format`, which allows you to specify "
+"your own log output format.\n"
+"This is especially useful when you're generating output for machine parsing "
+"-- because you specify the format explicitly, you know it won't change with "
+"updates to Git:(((log formatting)))\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:156
+#, no-wrap
+msgid ""
+"$ git log --pretty=format:\"%h - %an, %ar : %s\"\n"
+"ca82a6d - Scott Chacon, 6 years ago : Change version number\n"
+"085bb3b - Scott Chacon, 6 years ago : Remove unnecessary test\n"
+"a11bef0 - Scott Chacon, 6 years ago : Initial commit\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:159
+#, no-wrap
+msgid ""
+"<<pretty_format>> lists some of the more useful specifiers that `format` "
+"takes.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:181
+#, no-wrap
+msgid ""
+"[[pretty_format]]\n"
+".Useful specifiers for `git log --pretty=format`\n"
+"[cols=\"1,4\",options=\"header\"]\n"
+"|================================\n"
+"| Specifier | Description of Output\n"
+"| `%H`      | Commit hash\n"
+"| `%h`      | Abbreviated commit hash\n"
+"| `%T`      | Tree hash\n"
+"| `%t`      | Abbreviated tree hash\n"
+"| `%P`      | Parent hashes\n"
+"| `%p`      | Abbreviated parent hashes\n"
+"| `%an`     | Author name\n"
+"| `%ae`     | Author email\n"
+"| `%ad`     | Author date (format respects the --date=option)\n"
+"| `%ar`     | Author date, relative\n"
+"| `%cn`     | Committer name\n"
+"| `%ce`     | Committer email\n"
+"| `%cd`     | Committer date\n"
+"| `%cr`     | Committer date, relative\n"
+"| `%s`      | Subject\n"
+"|================================\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:186
+#, no-wrap
+msgid ""
+"You may be wondering what the difference is between _author_ and "
+"_committer_.\n"
+"The author is the person who originally wrote the work, whereas the "
+"committer is the person who last applied the work.\n"
+"So, if you send in a patch to a project and one of the core members applies "
+"the patch, both of you get credit -- you as the author, and the core member "
+"as the committer.\n"
+"We'll cover this distinction a bit more in "
+"<<ch05-distributed-git#ch05-distributed-git>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:189
+#, no-wrap
+msgid ""
+"The `oneline` and `format` option values are particularly useful with "
+"another `log` option called `--graph`.\n"
+"This option adds a nice little ASCII graph showing your branch and merge "
+"history:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:203
+#, no-wrap
+msgid ""
+"$ git log --pretty=format:\"%h %s\" --graph\n"
+"* 2d3acf9 Ignore errors from SIGCHLD on trap\n"
+"*  5e3ee11 Merge branch 'master' of git://github.com/dustin/grit\n"
+"|\\\n"
+"| * 420eac9 Add method for getting the current branch\n"
+"* | 30e367c Timeout code and tests\n"
+"* | 5a09431 Add timeout protection to grit\n"
+"* | e1193f8 Support for heads with slashes in them\n"
+"|/\n"
+"* d6016bc Require time for xmlschema\n"
+"*  11d191e Merge branch 'defunkt' into local\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:206
+#, no-wrap
+msgid ""
+"This type of output will become more interesting as we go through branching "
+"and merging in the next chapter.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:209
+#, no-wrap
+msgid ""
+"Those are only some simple output-formatting options to `git log` -- there "
+"are many more.\n"
+"<<log_options>> lists the options we've covered so far, as well as some "
+"other common formatting options that may be useful, along with how they "
+"change the output of the log command.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:226
+#, no-wrap
+msgid ""
+"[[log_options]]\n"
+".Common options to `git log`\n"
+"[cols=\"1,4\",options=\"header\"]\n"
+"|================================\n"
+"| Option            | Description\n"
+"| `-p`              | Show the patch introduced with each commit.\n"
+"| `--stat`          | Show statistics for files modified in each commit.\n"
+"| `--shortstat`     | Display only the changed/insertions/deletions line "
+"from the --stat command.\n"
+"| `--name-only`     | Show the list of files modified after the commit "
+"information.\n"
+"| `--name-status`   | Show the list of files affected with "
+"added/modified/deleted information as well.\n"
+"| `--abbrev-commit` | Show only the first few characters of the SHA-1 "
+"checksum instead of all 40.\n"
+"| `--relative-date` | Display the date in a relative format (for example, "
+"\"`2 weeks ago`\") instead of using the full date format.\n"
+"| `--graph`         | Display an ASCII graph of the branch and merge history "
+"beside the log output.\n"
+"| `--pretty`        | Show commits in an alternate format. Option values "
+"include oneline, short, full, fuller, and format (where you specify your own "
+"format).\n"
+"| `--oneline`       | Shorthand for `--pretty=oneline --abbrev-commit` used "
+"together.\n"
+"|================================\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:228
+#, no-wrap
+msgid "==== Limiting Log Output\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:233
+#, no-wrap
+msgid ""
+"In addition to output-formatting options, `git log` takes a number of useful "
+"limiting options; that is, options that let you show only a subset of "
+"commits.\n"
+"You've seen one such option already -- the `-2` option, which displays only "
+"the last two commits.\n"
+"In fact, you can do `-<n>`, where `n` is any integer to show the last `n` "
+"commits.\n"
+"In reality, you're unlikely to use that often, because Git by default pipes "
+"all output through a pager so you see only one page of log output at a "
+"time.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:236
+#, no-wrap
+msgid ""
+"However, the time-limiting options such as `--since` and `--until` are very "
+"useful.\n"
+"For example, this command gets the list of commits made in the last two "
+"weeks:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:240
+#, no-wrap
+msgid ""
+"$ git log --since=2.weeks\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:243
+#, no-wrap
+msgid ""
+"This command works with lots of formats -- you can specify a specific date "
+"like `\"2008-01-15\"`, or a relative date such as `\"2 years 1 day 3 minutes "
+"ago\"`.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:246
+#, no-wrap
+msgid ""
+"You can also filter the list to commits that match some search criteria.\n"
+"The `--author` option allows you to filter on a specific author, and the "
+"`--grep` option lets you search for keywords in the commit messages.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:253
+#, no-wrap
+msgid ""
+"You can specify more than one instance of both the `--author` and `--grep` "
+"search criteria, which\n"
+"will limit the commit output to commits that match _any_ of the `--author` "
+"patterns and _any_\n"
+"of the `--grep` patterns; however, adding the `--all-match` option further "
+"limits the output to\n"
+"just those commits that match _all_ `--grep` patterns.\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:257
+#, no-wrap
+msgid ""
+"Another really helpful filter is the `-S` option (colloquially referred to "
+"as Git's \"`pickaxe`\" option), which takes a string and shows only those "
+"commits that changed the number of occurrences of that string.\n"
+"For instance, if you wanted to find the last commit that added or removed a "
+"reference to a specific function, you could call:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:261
+#, no-wrap
+msgid ""
+"$ git log -S function_name\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:266
+#, no-wrap
+msgid ""
+"The last really useful option to pass to `git log` as a filter is a path.\n"
+"If you specify a directory or file name, you can limit the log output to "
+"commits that introduced a change to those files.\n"
+"This is always the last option and is generally preceded by double dashes "
+"(`--`) to separate the paths from the options:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:270
+#, no-wrap
+msgid ""
+"$ git log -- path/to/file\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:273
+#, no-wrap
+msgid ""
+"In <<limit_options>> we'll list these and a few other common options for "
+"your reference.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:287
+#, no-wrap
+msgid ""
+"[[limit_options]]\n"
+".Options to limit the output of `git log`\n"
+"[cols=\"2,4\",options=\"header\"]\n"
+"|================================\n"
+"| Option                | Description\n"
+"| `-<n>`                | Show only the last n commits\n"
+"| `--since`, `--after`  | Limit the commits to those made after the "
+"specified date.\n"
+"| `--until`, `--before` | Limit the commits to those made before the "
+"specified date.\n"
+"| `--author`            | Only show commits in which the author entry "
+"matches the specified string.\n"
+"| `--committer`         | Only show commits in which the committer entry "
+"matches the specified string.\n"
+"| `--grep`              | Only show commits with a commit message containing "
+"the string\n"
+"| `-S`                  | Only show commits adding or removing code matching "
+"the string\n"
+"|================================\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:289
+#, no-wrap
+msgid ""
+"For example, if you want to see which commits modifying test files in the "
+"Git source code history were committed by Junio Hamano in the month of "
+"October 2008 and are not merge commits, you can run something like "
+"this:(((log filtering)))\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:300
+#, no-wrap
+msgid ""
+"$ git log --pretty=\"%h - %s\" --author='Junio C Hamano' "
+"--since=\"2008-10-01\" \\\n"
+"   --before=\"2008-11-01\" --no-merges -- t/\n"
+"5610e3b - Fix testcase failure when extended attributes are in use\n"
+"acd3b9e - Enhance hold_lock_file_for_{update,append}() API\n"
+"f563754 - demonstrate breakage of detached checkout with symbolic link "
+"HEAD\n"
+"d1a43f2 - reset --hard/read-tree --reset -u: remove unmerged new paths\n"
+"51a94af - Fix \"checkout --track -b newbranch\" on detached HEAD\n"
+"b0ad11e - pull: allow \"git pull origin $something:$current_branch\" into an "
+"unborn branch\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:303
+#, no-wrap
+msgid ""
+"Of the nearly 40,000 commits in the Git source code history, this command "
+"shows the 6 that match those criteria.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:306
+#, no-wrap
+msgid ""
+"[TIP]\n"
+".Preventing the display of merge commits\n"
+"====\n"
+msgstr ""
+
+#. type: Plain text
+#: book/02-git-basics/sections/viewing-history.asc:309
+#, no-wrap
+msgid ""
+"Depending on the workflow used in your repository, it's possible that a "
+"sizable percentage of the commits in your log history are just merge "
+"commits, which typically aren't very informative.\n"
+"To prevent the display of merge commits cluttering up your log history, "
+"simply add the log option `--no-merges`.\n"
+"====\n"
+msgstr ""

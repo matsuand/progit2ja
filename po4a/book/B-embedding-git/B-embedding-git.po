@@ -1,0 +1,1242 @@
+# Japanese translations for progit2
+# Copyright (C) 2022 Michio MATSUYAMA
+# This file is distributed under the same license as the progit2.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: progit2\n"
+"POT-Creation-Date: 2022-02-04 19:16+0900\n"
+"PO-Revision-Date: 2022-02-03 20:14+0900\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. type: Plain text
+#: book/B-embedding-git/sections/command-line.asc:2
+#, no-wrap
+msgid "=== Command-line Git\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/command-line.asc:7
+#, no-wrap
+msgid ""
+"One option is to spawn a shell process and use the Git command-line tool to do the work.\n"
+"This has the benefit of being canonical, and all of Git's features are supported.\n"
+"This also happens to be fairly easy, as most runtime environments have a relatively simple facility for invoking a process with command-line arguments.\n"
+"However, this approach does have some downsides.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/command-line.asc:10
+#, no-wrap
+msgid ""
+"One is that all the output is in plain text.\n"
+"This means that you'll have to parse Git's occasionally-changing output format to read progress and result information, which can be inefficient and error-prone.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/command-line.asc:13
+#, no-wrap
+msgid ""
+"Another is the lack of error recovery.\n"
+"If a repository is corrupted somehow, or the user has a malformed configuration value, Git will simply refuse to perform many operations.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/command-line.asc:16
+#, no-wrap
+msgid ""
+"Yet another is process management.\n"
+"Git requires you to maintain a shell environment on a separate process, which can add unwanted complexity.\n"
+"Trying to coordinate many of these processes (especially when potentially accessing the same repository from several processes) can be quite a challenge.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/dulwich.asc:2
+#, no-wrap
+msgid "=== Dulwich\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/dulwich.asc:8
+#, no-wrap
+msgid ""
+"(((Dulwich)))(((Python)))\n"
+"There is also a pure-Python Git implementation - Dulwich.\n"
+"The project is hosted under https://www.dulwich.io/\n"
+"It aims to provide an interface to git repositories (both local and remote) that doesn't call out to git directly but instead uses pure Python.\n"
+"It has an optional C extensions though, that significantly improve the performance.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/dulwich.asc:10
+#, no-wrap
+msgid "Dulwich follows git design and separate two basic levels of API: plumbing and porcelain.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/dulwich.asc:12
+#, no-wrap
+msgid "Here is an example of using the lower level API to access the commit message of the last commit:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/dulwich.asc:14
+#: book/B-embedding-git/sections/dulwich.asc:31
+#, no-wrap
+msgid ""
+"[source, python]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/dulwich.asc:19
+#, no-wrap
+msgid ""
+"from dulwich.repo import Repo\n"
+"r = Repo('.')\n"
+"r.head()\n"
+"# '57fbe010446356833a6ad1600059d80b1e731e15'\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/dulwich.asc:23
+#, no-wrap
+msgid ""
+"c = r[r.head()]\n"
+"c\n"
+"# <Commit 015fc1267258458901a94d228e39f0a378370466>\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/dulwich.asc:26
+#, no-wrap
+msgid ""
+"c.message\n"
+"# 'Add note about encoding.\\n'\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/dulwich.asc:29
+#, no-wrap
+msgid "To print a commit log using high-level porcelain API, one can use:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/dulwich.asc:34
+#, no-wrap
+msgid ""
+"from dulwich import porcelain\n"
+"porcelain.log('.', max_entries=1)\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/dulwich.asc:38
+#, no-wrap
+msgid ""
+"#commit: 57fbe010446356833a6ad1600059d80b1e731e15\n"
+"#Author: Jelmer VernooÄ³ <jelmer@jelmer.uk>\n"
+"#Date:   Sat Apr 29 2017 23:57:34 +0000\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/dulwich.asc:42
+#: book/B-embedding-git/sections/go-git.asc:81
+#: book/B-embedding-git/sections/jgit.asc:154
+#: book/B-embedding-git/sections/libgit2.asc:234
+#, no-wrap
+msgid "==== Further Reading\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/dulwich.asc:43
+#, no-wrap
+msgid "The API documentation, tutorial, and many examples of how to do specific tasks with Dulwich are available on the official website https://www.dulwich.io[].\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/go-git.asc:2
+#, no-wrap
+msgid "=== go-git\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/go-git.asc:7
+#, no-wrap
+msgid ""
+"(((go-git)))(((Go)))\n"
+"In case you want to integrate Git into a service written in Golang, there also is a pure Go library implementation.\n"
+"This implementation does not have any native dependencies and thus is not prone to manual memory management errors.\n"
+"It is also transparent for the standard Golang performance analysis tooling like CPU, Memory profilers, race detector, etc.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/go-git.asc:9
+#, no-wrap
+msgid "go-git is focused on extensibility, compatibility and supports most of the plumbing APIs, which is documented at https://github.com/go-git/go-git/blob/master/COMPATIBILITY.md[].\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/go-git.asc:11
+#, no-wrap
+msgid "Here is a basic example of using Go APIs:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/go-git.asc:13
+#: book/B-embedding-git/sections/go-git.asc:25
+#: book/B-embedding-git/sections/go-git.asc:47
+#: book/B-embedding-git/sections/go-git.asc:62
+#, no-wrap
+msgid ""
+"[source, go]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/go-git.asc:15
+#, no-wrap
+msgid "import \"github.com/go-git/go-git/v5\"\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/go-git.asc:20
+#, no-wrap
+msgid ""
+"r, err := git.PlainClone(\"/tmp/foo\", false, &git.CloneOptions{\n"
+"    URL:      \"https://github.com/go-git/go-git\",\n"
+"    Progress: os.Stdout,\n"
+"})\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/go-git.asc:23
+#, no-wrap
+msgid "As soon as you have a `Repository` instance, you can access information and perform mutations on it:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/go-git.asc:28
+#, no-wrap
+msgid ""
+"// retrieves the branch pointed by HEAD\n"
+"ref, err := r.Head()\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/go-git.asc:31
+#, no-wrap
+msgid ""
+"// get the commit object, pointed by ref\n"
+"commit, err := r.CommitObject(ref.Hash())\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/go-git.asc:34
+#, no-wrap
+msgid ""
+"// retrieves the commit history\n"
+"history, err := commit.History()\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/go-git.asc:39
+#, no-wrap
+msgid ""
+"// iterates over the commits and print each\n"
+"for _, c := range history {\n"
+"    fmt.Println(c)\n"
+"}\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/go-git.asc:42
+#: book/B-embedding-git/sections/libgit2.asc:112
+#, no-wrap
+msgid "==== Advanced Functionality\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/go-git.asc:45
+#, no-wrap
+msgid ""
+"go-git has few notable advanced features, one of which is a pluggable storage system, which is similar to Libgit2 backends.\n"
+"The default implementation is in-memory storage, which is very fast.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/go-git.asc:51
+#, no-wrap
+msgid ""
+"r, err := git.Clone(memory.NewStorage(), nil, &git.CloneOptions{\n"
+"    URL: \"https://github.com/go-git/go-git\",\n"
+"})\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/go-git.asc:55
+#, no-wrap
+msgid ""
+"Pluggable storage provides many interesting options.\n"
+"For instance, https://github.com/go-git/go-git/tree/master/_examples/storage[] allows you to store references, objects, and configuration in an Aerospike database.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/go-git.asc:58
+#, no-wrap
+msgid ""
+"Another feature is a flexible filesystem abstraction.\n"
+"Using https://pkg.go.dev/github.com/go-git/go-billy/v5?tab=doc#Filesystem[] it is easy to store all the files in different way i.e by packing all of them to a single archive on disk or by keeping them all in-memory.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/go-git.asc:60
+#, no-wrap
+msgid "Another advanced use-case includes a fine-tunable HTTP client, such as the one found at https://github.com/go-git/go-git/blob/master/_examples/custom_http/main.go[].\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/go-git.asc:72
+#, no-wrap
+msgid ""
+"customClient := &http.Client{\n"
+"    Transport: &http.Transport{ // accept any certificate (might be useful for testing)\n"
+"        TLSClientConfig: &tls.Config{InsecureSkipVerify: true},\n"
+"    },\n"
+"    Timeout: 15 * time.Second,  // 15 second timeout\n"
+"        CheckRedirect: func(req *http.Request, via []*http.Request) error {\n"
+"        return http.ErrUseLastResponse // don't follow redirect\n"
+"    },\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/go-git.asc:75
+#, no-wrap
+msgid ""
+"// Override http(s) default protocol to use our custom client\n"
+"client.InstallProtocol(\"https\", githttp.NewClient(customClient))\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/go-git.asc:78
+#, no-wrap
+msgid ""
+"// Clone repository using the new client if the protocol is https://\n"
+"r, err := git.Clone(memory.NewStorage(), nil, &git.CloneOptions{URL: url})\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/go-git.asc:83
+#, no-wrap
+msgid ""
+"A full treatment of go-git's capabilities is outside the scope of this book.\n"
+"If you want more information on go-git, there's API documentation at https://pkg.go.dev/github.com/go-git/go-git/v5[], and a set of usage examples at https://github.com/go-git/go-git/tree/master/_examples[].\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:2
+#, no-wrap
+msgid "=== JGit\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:7
+#, no-wrap
+msgid ""
+"(((jgit)))(((Java)))\n"
+"If you want to use Git from within a Java program, there is a fully featured Git library called JGit.\n"
+"JGit is a relatively full-featured implementation of Git written natively in Java, and is widely used in the Java community.\n"
+"The JGit project is under the Eclipse umbrella, and its home can be found at https://www.eclipse.org/jgit/[].\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:9
+#, no-wrap
+msgid "==== Getting Set Up\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:12
+#, no-wrap
+msgid ""
+"There are a number of ways to connect your project with JGit and start writing code against it.\n"
+"Probably the easiest is to use Maven â the integration is accomplished by adding the following snippet to the `<dependencies>` tag in your pom.xml file:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:14
+#, no-wrap
+msgid ""
+"[source,xml]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:20
+#, no-wrap
+msgid ""
+"<dependency>\n"
+"    <groupId>org.eclipse.jgit</groupId>\n"
+"    <artifactId>org.eclipse.jgit</artifactId>\n"
+"    <version>3.5.0.201409260305-r</version>\n"
+"</dependency>\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:24
+#, no-wrap
+msgid ""
+"The `version` will most likely have advanced by the time you read this; check https://mvnrepository.com/artifact/org.eclipse.jgit/org.eclipse.jgit[] for updated repository information.\n"
+"Once this step is done, Maven will automatically acquire and use the JGit libraries that you'll need.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:27
+#, no-wrap
+msgid ""
+"If you would rather manage the binary dependencies yourself, pre-built JGit binaries are available from https://www.eclipse.org/jgit/download[].\n"
+"You can build them into your project by running a command like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:29
+#, no-wrap
+msgid ""
+"[source,console]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:32
+#, no-wrap
+msgid ""
+"javac -cp .:org.eclipse.jgit-3.5.0.201409260305-r.jar App.java\n"
+"java -cp .:org.eclipse.jgit-3.5.0.201409260305-r.jar App\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:35
+#, no-wrap
+msgid "==== Plumbing\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:38
+#, no-wrap
+msgid ""
+"JGit has two basic levels of API: plumbing and porcelain.\n"
+"The terminology for these comes from Git itself, and JGit is divided into roughly the same kinds of areas: porcelain APIs are a friendly front-end for common user-level actions (the sorts of things a normal user would use the Git command-line tool for), while the plumbing APIs are for interacting with low-level repository objects directly.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:41
+#, no-wrap
+msgid ""
+"The starting point for most JGit sessions is the `Repository` class, and the first thing you'll want to do is create an instance of it.\n"
+"For a filesystem-based repository (yes, JGit allows for other storage models), this is accomplished using `FileRepositoryBuilder`:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:43
+#: book/B-embedding-git/sections/jgit.asc:62
+#: book/B-embedding-git/sections/jgit.asc:124
+#: book/B-embedding-git/sections/jgit.asc:134
+#, no-wrap
+msgid ""
+"[source,java]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:48
+#, no-wrap
+msgid ""
+"// Create a new repository\n"
+"Repository newlyCreatedRepo = FileRepositoryBuilder.create(\n"
+"    new File(\"/tmp/new_repo/.git\"));\n"
+"newlyCreatedRepo.create();\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:53
+#, no-wrap
+msgid ""
+"// Open an existing repository\n"
+"Repository existingRepo = new FileRepositoryBuilder()\n"
+"    .setGitDir(new File(\"my_repo/.git\"))\n"
+"    .build();\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:57
+#, no-wrap
+msgid ""
+"The builder has a fluent API for providing all the things it needs to find a Git repository, whether or not your program knows exactly where it's located.\n"
+"It can use environment variables (`.readEnvironment()`), start from a place in the working directory and search (`.setWorkTree(â¦).findGitDir()`), or just open a known `.git` directory as above.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:60
+#, no-wrap
+msgid ""
+"Once you have a `Repository` instance, you can do all sorts of things with it.\n"
+"Here's a quick sampling:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:65
+#, no-wrap
+msgid ""
+"// Get a reference\n"
+"Ref master = repo.getRef(\"master\");\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:68
+#, no-wrap
+msgid ""
+"// Get the object the reference points to\n"
+"ObjectId masterTip = master.getObjectId();\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:71
+#, no-wrap
+msgid ""
+"// Rev-parse\n"
+"ObjectId obj = repo.resolve(\"HEAD^{tree}\");\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:75
+#, no-wrap
+msgid ""
+"// Load raw object contents\n"
+"ObjectLoader loader = repo.open(masterTip);\n"
+"loader.copyTo(System.out);\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:80
+#, no-wrap
+msgid ""
+"// Create a branch\n"
+"RefUpdate createBranch1 = repo.updateRef(\"refs/heads/branch1\");\n"
+"createBranch1.setNewObjectId(masterTip);\n"
+"createBranch1.update();\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:85
+#, no-wrap
+msgid ""
+"// Delete a branch\n"
+"RefUpdate deleteBranch1 = repo.updateRef(\"refs/heads/branch1\");\n"
+"deleteBranch1.setForceUpdate(true);\n"
+"deleteBranch1.delete();\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:89
+#, no-wrap
+msgid ""
+"// Config\n"
+"Config cfg = repo.getConfig();\n"
+"String name = cfg.getString(\"user\", null, \"name\");\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:92
+#, no-wrap
+msgid "There's quite a bit going on here, so let's go through it one section at a time.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:97
+#, no-wrap
+msgid ""
+"The first line gets a pointer to the `master` reference.\n"
+"JGit automatically grabs the _actual_ `master` ref, which lives at `refs/heads/master`, and returns an object that lets you fetch information about the reference.\n"
+"You can get the name (`.getName()`), and either the target object of a direct reference (`.getObjectId()`) or the reference pointed to by a symbolic ref (`.getTarget()`).\n"
+"Ref objects are also used to represent tag refs and objects, so you can ask if the tag is \"`peeled,`\" meaning that it points to the final target of a (potentially long) string of tag objects.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:101
+#, no-wrap
+msgid ""
+"The second line gets the target of the `master` reference, which is returned as an ObjectId instance.\n"
+"ObjectId represents the SHA-1 hash of an object, which might or might not exist in Git's object database.\n"
+"The third line is similar, but shows how JGit handles the rev-parse syntax (for more on this, see <<ch07-git-tools#_branch_references>>); you can pass any object specifier that Git understands, and JGit will return either a valid ObjectId for that object, or `null`.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:105
+#, no-wrap
+msgid ""
+"The next two lines show how to load the raw contents of an object.\n"
+"In this example, we call `ObjectLoader.copyTo()` to stream the contents of the object directly to stdout, but ObjectLoader also has methods to read the type and size of an object, as well as return it as a byte array.\n"
+"For large objects (where `.isLarge()` returns `true`), you can call `.openStream()` to get an InputStream-like object that can read the raw object data without pulling it all into memory at once.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:110
+#, no-wrap
+msgid ""
+"The next few lines show what it takes to create a new branch.\n"
+"We create a RefUpdate instance, configure some parameters, and call `.update()` to trigger the change.\n"
+"Directly following this is the code to delete that same branch.\n"
+"Note that `.setForceUpdate(true)` is required for this to work; otherwise the `.delete()` call will return `REJECTED`, and nothing will happen.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:113
+#, no-wrap
+msgid ""
+"The last example shows how to fetch the `user.name` value from the Git configuration files.\n"
+"This Config instance uses the repository we opened earlier for local configuration, but will automatically detect the global and system configuration files and read values from them as well.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:117
+#, no-wrap
+msgid ""
+"This is only a small sampling of the full plumbing API; there are many more methods and classes available.\n"
+"Also not shown here is the way JGit handles errors, which is through the use of exceptions.\n"
+"JGit APIs sometimes throw standard Java exceptions (such as `IOException`), but there are a host of JGit-specific exception types that are provided as well (such as `NoRemoteRepositoryException`, `CorruptObjectException`, and `NoMergeBaseException`).\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:119
+#, no-wrap
+msgid "==== Porcelain\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:122
+#, no-wrap
+msgid ""
+"The plumbing APIs are rather complete, but it can be cumbersome to string them together to achieve common goals, like adding a file to the index, or making a new commit.\n"
+"JGit provides a higher-level set of APIs to help out with this, and the entry point to these APIs is the `Git` class:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:128
+#, no-wrap
+msgid ""
+"Repository repo;\n"
+"// construct repo...\n"
+"Git git = new Git(repo);\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:132
+#, no-wrap
+msgid ""
+"The Git class has a nice set of high-level _builder_-style methods that can be used to construct some pretty complex behavior.\n"
+"Let's take a look at an example -- doing something like `git ls-remote`:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:145
+#, no-wrap
+msgid ""
+"CredentialsProvider cp = new UsernamePasswordCredentialsProvider(\"username\", \"p4ssw0rd\");\n"
+"Collection<Ref> remoteRefs = git.lsRemote()\n"
+"    .setCredentialsProvider(cp)\n"
+"    .setRemote(\"origin\")\n"
+"    .setTags(true)\n"
+"    .setHeads(false)\n"
+"    .call();\n"
+"for (Ref ref : remoteRefs) {\n"
+"    System.out.println(ref.getName() + \" -> \" + ref.getObjectId().name());\n"
+"}\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:150
+#, no-wrap
+msgid ""
+"This is a common pattern with the Git class; the methods return a command object that lets you chain method calls to set parameters, which are executed when you call `.call()`.\n"
+"In this case, we're asking the `origin` remote for tags, but not heads.\n"
+"Also notice the use of a `CredentialsProvider` object for authentication.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:152
+#, no-wrap
+msgid "Many other commands are available through the Git class, including but not limited to `add`, `blame`, `commit`, `clean`, `push`, `rebase`, `revert`, and `reset`.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/jgit.asc:157
+#, no-wrap
+msgid ""
+"This is only a small sampling of JGit's full capabilities.\n"
+"If you're interested and want to learn more, here's where to look for information and inspiration:\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/B-embedding-git/sections/jgit.asc:160
+#, no-wrap
+msgid ""
+"The official JGit API documentation can be found at https://www.eclipse.org/jgit/documentation[].\n"
+"These are standard Javadoc, so your favorite JVM IDE will be able to install them locally, as well.\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/B-embedding-git/sections/jgit.asc:160
+#, no-wrap
+msgid "The JGit Cookbook at https://github.com/centic9/jgit-cookbook[] has many examples of how to do specific tasks with JGit.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:2
+#, no-wrap
+msgid "=== Libgit2\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:7
+#, no-wrap
+msgid ""
+"(((libgit2)))(((\"C\")))\n"
+"Another option at your disposal is to use Libgit2.\n"
+"Libgit2 is a dependency-free implementation of Git, with a focus on having a nice API for use within other programs.\n"
+"You can find it at https://libgit2.org[].\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:10
+#, no-wrap
+msgid ""
+"First, let's take a look at what the C API looks like.\n"
+"Here's a whirlwind tour:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:12
+#: book/B-embedding-git/sections/libgit2.asc:122
+#: book/B-embedding-git/sections/libgit2.asc:148
+#, no-wrap
+msgid ""
+"[source,c]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:16
+#, no-wrap
+msgid ""
+"// Open a repository\n"
+"git_repository *repo;\n"
+"int error = git_repository_open(&repo, \"/path/to/repository\");\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:21
+#, no-wrap
+msgid ""
+"// Dereference HEAD to a commit\n"
+"git_object *head_commit;\n"
+"error = git_revparse_single(&head_commit, repo, \"HEAD^{commit}\");\n"
+"git_commit *commit = (git_commit*)head_commit;\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:27
+#, no-wrap
+msgid ""
+"// Print some of the commit's properties\n"
+"printf(\"%s\", git_commit_message(commit));\n"
+"const git_signature *author = git_commit_author(commit);\n"
+"printf(\"%s <%s>\\n\", author->name, author->email);\n"
+"const git_oid *tree_id = git_commit_tree_id(commit);\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:31
+#, no-wrap
+msgid ""
+"// Cleanup\n"
+"git_commit_free(commit);\n"
+"git_repository_free(repo);\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:37
+#, no-wrap
+msgid ""
+"The first couple of lines open a Git repository.\n"
+"The `git_repository` type represents a handle to a repository with a cache in memory.\n"
+"This is the simplest method, for when you know the exact path to a repository's working directory or `.git` folder.\n"
+"There's also the `git_repository_open_ext` which includes options for searching, `git_clone` and friends for making a local clone of a remote repository, and `git_repository_init` for creating an entirely new repository.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:42
+#, no-wrap
+msgid ""
+"The second chunk of code uses rev-parse syntax (see <<ch07-git-tools#_branch_references>> for more on this) to get the commit that HEAD eventually points to.\n"
+"The type returned is a `git_object` pointer, which represents something that exists in the Git object database for a repository.\n"
+"`git_object` is actually a \"`parent`\" type for several different kinds of objects; the memory layout for each of the \"`child`\" types is the same as for `git_object`, so you can safely cast to the right one.\n"
+"In this case, `git_object_type(commit)` would return `GIT_OBJ_COMMIT`, so it's safe to cast to a `git_commit` pointer.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:45
+#, no-wrap
+msgid ""
+"The next chunk shows how to access the commit's properties.\n"
+"The last line here uses a `git_oid` type; this is Libgit2's representation for a SHA-1 hash.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:47
+#, no-wrap
+msgid "From this sample, a couple of patterns have started to emerge:\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/B-embedding-git/sections/libgit2.asc:53
+#, no-wrap
+msgid ""
+"If you declare a pointer and pass a reference to it into a Libgit2 call, that call will probably return an integer error code.\n"
+"A `0` value indicates success; anything less is an error.\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/B-embedding-git/sections/libgit2.asc:53
+#, no-wrap
+msgid "If Libgit2 populates a pointer for you, you're responsible for freeing it.\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/B-embedding-git/sections/libgit2.asc:53
+#, no-wrap
+msgid "If Libgit2 returns a `const` pointer from a call, you don't have to free it, but it will become invalid when the object it belongs to is freed.\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: book/B-embedding-git/sections/libgit2.asc:53
+#, no-wrap
+msgid "Writing C is a bit painful.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:58
+#, no-wrap
+msgid ""
+"(((Ruby)))\n"
+"That last one means it isn't very probable that you'll be writing C when using Libgit2.\n"
+"Fortunately, there are a number of language-specific bindings available that make it fairly easy to work with Git repositories from your specific language and environment.\n"
+"Let's take a look at the above example written using the Ruby bindings for Libgit2, which are named Rugged, and can be found at https://github.com/libgit2/rugged[].\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:60
+#: book/B-embedding-git/sections/libgit2.asc:74
+#, no-wrap
+msgid ""
+"[source,ruby]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:66
+#, no-wrap
+msgid ""
+"repo = Rugged::Repository.new('path/to/repository')\n"
+"commit = repo.head.target\n"
+"puts commit.message\n"
+"puts \"#{commit.author[:name]} <#{commit.author[:email]}>\"\n"
+"tree = commit.tree\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:72
+#, no-wrap
+msgid ""
+"As you can see, the code is much less cluttered.\n"
+"Firstly, Rugged uses exceptions; it can raise things like `ConfigError` or `ObjectError` to signal error conditions.\n"
+"Secondly, there's no explicit freeing of resources, since Ruby is garbage-collected.\n"
+"Let's take a look at a slightly more complicated example: crafting a commit from scratch\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:76
+#, no-wrap
+msgid "blob_id = repo.write(\"Blob contents\", :blob) # <1>\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:80
+#, no-wrap
+msgid ""
+"index = repo.index\n"
+"index.read_tree(repo.head.target.tree)\n"
+"index.add(:path => 'newfile.txt', :oid => blob_id) # <2>\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:86
+#, no-wrap
+msgid ""
+"sig = {\n"
+"    :email => \"bob@example.com\",\n"
+"    :name => \"Bob User\",\n"
+"    :time => Time.now,\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:96
+#, no-wrap
+msgid ""
+"commit_id = Rugged::Commit.create(repo,\n"
+"    :tree => index.write_tree(repo), # <3>\n"
+"    :author => sig,\n"
+"    :committer => sig, # <4>\n"
+"    :message => \"Add newfile.txt\", # <5>\n"
+"    :parents => repo.empty? ? [] : [ repo.head.target ].compact, # <6>\n"
+"    :update_ref => 'HEAD', # <7>\n"
+")\n"
+"commit = repo.lookup(commit_id) # <8>\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:107
+#, no-wrap
+msgid ""
+"<1> Create a new blob, which contains the contents of a new file.\n"
+"<2> Populate the index with the head commit's tree, and add the new file at the path `newfile.txt`.\n"
+"<3> This creates a new tree in the ODB, and uses it for the new commit.\n"
+"<4> We use the same signature for both the author and committer fields.\n"
+"<5> The commit message.\n"
+"<6> When creating a commit, you have to specify the new commit's parents.\n"
+"    This uses the tip of HEAD for the single parent.\n"
+"<7> Rugged (and Libgit2) can optionally update a reference when making a commit.\n"
+"<8> The return value is the SHA-1 hash of a new commit object, which you can then use to get a `Commit` object.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:110
+#, no-wrap
+msgid ""
+"The Ruby code is nice and clean, but since Libgit2 is doing the heavy lifting, this code will run pretty fast, too.\n"
+"If you're not a rubyist, we touch on some other bindings in <<_libgit2_bindings>>.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:116
+#, no-wrap
+msgid ""
+"Libgit2 has a couple of capabilities that are outside the scope of core Git.\n"
+"One example is pluggability: Libgit2 allows you to provide custom \"`backends`\" for several types of operation, so you can store things in a different way than stock Git does.\n"
+"Libgit2 allows custom backends for configuration, ref storage, and the object database, among other things.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:120
+#, no-wrap
+msgid ""
+"Let's take a look at how this works.\n"
+"The code below is borrowed from the set of backend examples provided by the Libgit2 team (which can be found at https://github.com/libgit2/libgit2-backends[]).\n"
+"Here's how a custom backend for the object database is set up:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:125
+#, no-wrap
+msgid ""
+"git_odb *odb;\n"
+"int error = git_odb_new(&odb); // <1>\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:128
+#, no-wrap
+msgid ""
+"git_odb_backend *my_backend;\n"
+"error = git_odb_backend_mine(&my_backend, /*â¦*/); // <2>\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:130
+#, no-wrap
+msgid "error = git_odb_add_backend(odb, my_backend, 1); // <3>\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:134
+#, no-wrap
+msgid ""
+"git_repository *repo;\n"
+"error = git_repository_open(&repo, \"some-path\");\n"
+"error = git_repository_set_odb(repo, odb); // <4>\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:137
+#, no-wrap
+msgid "_Note that errors are captured, but not handled. We hope your code is better than ours._\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:142
+#, no-wrap
+msgid ""
+"<1> Initialize an empty object database (ODB) \"`frontend,`\" which will act as a container for the \"`backends`\" which are the ones doing the real work.\n"
+"<2> Initialize a custom ODB backend.\n"
+"<3> Add the backend to the frontend.\n"
+"<4> Open a repository, and set it to use our ODB to look up objects.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:146
+#, no-wrap
+msgid ""
+"But what is this `git_odb_backend_mine` thing?\n"
+"Well, that's the constructor for your own ODB implementation, and you can do whatever you want in there, so long as you fill in the `git_odb_backend` structure properly.\n"
+"Here's what it _could_ look like:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:151
+#, no-wrap
+msgid ""
+"typedef struct {\n"
+"    git_odb_backend parent;\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:155
+#, no-wrap
+msgid ""
+"    // Some other stuff\n"
+"    void *custom_context;\n"
+"} my_backend_struct;\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:159
+#, no-wrap
+msgid ""
+"int git_odb_backend_mine(git_odb_backend **backend_out, /*â¦*/)\n"
+"{\n"
+"    my_backend_struct *backend;\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:161
+#, no-wrap
+msgid "    backend = calloc(1, sizeof (my_backend_struct));\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:163
+#, no-wrap
+msgid "    backend->custom_context = â¦;\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:168
+#, no-wrap
+msgid ""
+"    backend->parent.read = &my_backend__read;\n"
+"    backend->parent.read_prefix = &my_backend__read_prefix;\n"
+"    backend->parent.read_header = &my_backend__read_header;\n"
+"    // â¦\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:170
+#, no-wrap
+msgid "    *backend_out = (git_odb_backend *) backend;\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:173
+#, no-wrap
+msgid ""
+"    return GIT_SUCCESS;\n"
+"}\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:177
+#, no-wrap
+msgid ""
+"The subtlest constraint here is that `my_backend_struct`'s first member must be a `git_odb_backend` structure; this ensures that the memory layout is what the Libgit2 code expects it to be.\n"
+"The rest of it is arbitrary; this structure can be as large or small as you need it to be.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:180
+#, no-wrap
+msgid ""
+"The initialization function allocates some memory for the structure, sets up the custom context, and then fills in the members of the `parent` structure that it supports.\n"
+"Take a look at the `include/git2/sys/odb_backend.h` file in the Libgit2 source for a complete set of call signatures; your particular use case will help determine which of these you'll want to support.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:183
+#, no-wrap
+msgid ""
+"[[_libgit2_bindings]]\n"
+"==== Other Bindings\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:188
+#, no-wrap
+msgid ""
+"Libgit2 has bindings for many languages.\n"
+"Here we show a small example using a few of the more complete bindings packages as of this writing; libraries exist for many other languages, including C++, Go, Node.js, Erlang, and the JVM, all in various stages of maturity.\n"
+"The official collection of bindings can be found by browsing the repositories at https://github.com/libgit2[].\n"
+"The code we'll write will return the commit message from the commit eventually pointed to by HEAD (sort of like `git log -1`).\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:190
+#, no-wrap
+msgid "===== LibGit2Sharp\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:195
+#, no-wrap
+msgid ""
+"(((.NET)))(((C#)))(((Mono)))\n"
+"If you're writing a .NET or Mono application, LibGit2Sharp (https://github.com/libgit2/libgit2sharp[]) is what you're looking for.\n"
+"The bindings are written in C#, and great care has been taken to wrap the raw Libgit2 calls with native-feeling CLR APIs.\n"
+"Here's what our example program looks like:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:197
+#, no-wrap
+msgid ""
+"[source,csharp]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:199
+#, no-wrap
+msgid ""
+"new Repository(@\"C:\\path\\to\\repo\").Head.Tip.Message;\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:202
+#, no-wrap
+msgid "For desktop Windows applications, there's even a NuGet package that will help you get started quickly.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:204
+#, no-wrap
+msgid "===== objective-git\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:209
+#, no-wrap
+msgid ""
+"(((Apple)))(((Objective-C)))(((Cocoa)))\n"
+"If your application is running on an Apple platform, you're likely using Objective-C as your implementation language.\n"
+"Objective-Git (https://github.com/libgit2/objective-git[]) is the name of the Libgit2 bindings for that environment.\n"
+"The example program looks like this:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:211
+#, no-wrap
+msgid ""
+"[source,objc]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:215
+#, no-wrap
+msgid ""
+"GTRepository *repo =\n"
+"    [[GTRepository alloc] initWithURL:[NSURL fileURLWithPath: @\"/path/to/repo\"] error:NULL];\n"
+"NSString *msg = [[[repo headReferenceWithError:NULL] resolvedTarget] message];\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:218
+#, no-wrap
+msgid "Objective-git is fully interoperable with Swift, so don't fear if you've left Objective-C behind.\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:220
+#, no-wrap
+msgid "===== pygit2\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:224
+#, no-wrap
+msgid ""
+"(((Python)))\n"
+"The bindings for Libgit2 in Python are called Pygit2, and can be found at https://www.pygit2.org[].\n"
+"Our example program:\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:226
+#, no-wrap
+msgid ""
+"[source,python]\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:231
+#, no-wrap
+msgid ""
+"pygit2.Repository(\"/path/to/repo\") # open repository\n"
+"    .head                          # get the current branch\n"
+"    .peel(pygit2.Commit)           # walk down to the commit\n"
+"    .message                       # read the message\n"
+"----\n"
+msgstr ""
+
+#. type: Plain text
+#: book/B-embedding-git/sections/libgit2.asc:237
+#, no-wrap
+msgid ""
+"Of course, a full treatment of Libgit2's capabilities is outside the scope of this book.\n"
+"If you want more information on Libgit2 itself, there's API documentation at https://libgit2.github.com/libgit2[], and a set of guides at https://libgit2.github.com/docs[].\n"
+"For the other bindings, check the bundled README and tests; there are often small tutorials and pointers to further reading there.\n"
+msgstr ""
