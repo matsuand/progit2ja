@@ -2907,6 +2907,13 @@ msgstr ""
 ":pagenums:\n"
 ":front-cover-image: image:book/cover.png[width=1050,height=1600]\n"
 ":icons: font\n"
+":figure-caption: 図\n"
+":important-caption: 重要\n"
+":note-caption: 情報\n"
+":table-caption: 表\n"
+":tip-caption: ヒント\n"
+":toc-title: もくじ\n"
+":warning-caption: 警告\n"
 
 #. type: Plain text
 #: progit.asc:12

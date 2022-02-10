@@ -571,7 +571,10 @@ uninstall-am:
 all: $(top_srcdir)/docs/progit.html
 
 $(top_srcdir)/docs/progit.html: po4a
-	@rbenv exec asciidoctor progit.asc -o $@
+	@rbenv exec asciidoctor \
+	  --attribute lang="ja" \
+	  --attribute stylesheet="$(top_srcdir)/po4a/asciidoctor.css" \
+	  progit.asc -o $@
 po4a: po4a_stamp
 
 po4a_stamp: $(srcdir)/$(THIS).po $(srcdir)/$(THIS).pot $(THIS).cfg
